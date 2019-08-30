@@ -28,5 +28,13 @@
   "jest": {
     "preset": "react-native"
   },
-  "optionalDependencies": {}
-}
+  "optionalDependencies": {
+    
+  },
+  "rnpm": {
+    "assets": [
+  "./assets/fonts/"
+    ]
+  }
+  }
+  

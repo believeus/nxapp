@@ -43,6 +43,13 @@
 		2655FC6F62484A82A1196D3A /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C16833B7F7E46408CAD55BE /* libRNGestureHandler.a */; };
 		4317B717342F4246919A4C4B /* libRNGestureHandler-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AEEDCE9289B44EA18BFE5195 /* libRNGestureHandler-tvOS.a */; };
 		3C20CEB336BC4F60BBCD8E6D /* libRNCWebView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B20EE088CFA54A8DBCEF74B4 /* libRNCWebView.a */; };
+		E391BCA85FCE42A5A7043C03 /* NotoSansHans-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B68E639219B34778B7D17CED /* NotoSansHans-Black.otf */; };
+		D8243C02E5CA407CB6152979 /* NotoSansHans-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 14A16512C4CF4D09829CF3B7 /* NotoSansHans-Bold.otf */; };
+		15E676932E7D48719A8EAD14 /* NotoSansHans-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFCF0884A164005934D87A9 /* NotoSansHans-DemiLight.otf */; };
+		B395555A2DD94F9588FDF52C /* NotoSansHans-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E17710FF7E54C69835F6A5E /* NotoSansHans-Light.otf */; };
+		9754790F688C44B4BA84C95B /* NotoSansHans-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 5FD1F50AA6AC4E08BB912627 /* NotoSansHans-Medium.otf */; };
+		D74420DC48944F3EADC1A880 /* NotoSansHans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0428F2A10D4A4627958DD013 /* NotoSansHans-Regular.otf */; };
+		6B605002C9154BE18F0AFAA0 /* NotoSansHans-Thin-Windows.otf in Resources */ = {isa = PBXBuildFile; fileRef = E0DB1F1F0B3D427687D2CB3A /* NotoSansHans-Thin-Windows.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -357,6 +364,13 @@
 		AEEDCE9289B44EA18BFE5195 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; name = "libRNGestureHandler-tvOS.a"; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		ED060B7F68D648608A634A9C /* RNCWebView.xcodeproj */ = {isa = PBXFileReference; name = "RNCWebView.xcodeproj"; path = "../node_modules/react-native-webview/ios/RNCWebView.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		B20EE088CFA54A8DBCEF74B4 /* libRNCWebView.a */ = {isa = PBXFileReference; name = "libRNCWebView.a"; path = "libRNCWebView.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		B68E639219B34778B7D17CED /* NotoSansHans-Black.otf */ = {isa = PBXFileReference; name = "NotoSansHans-Black.otf"; path = "../assets/fonts/NotoSansHans-Black.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		14A16512C4CF4D09829CF3B7 /* NotoSansHans-Bold.otf */ = {isa = PBXFileReference; name = "NotoSansHans-Bold.otf"; path = "../assets/fonts/NotoSansHans-Bold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7CFCF0884A164005934D87A9 /* NotoSansHans-DemiLight.otf */ = {isa = PBXFileReference; name = "NotoSansHans-DemiLight.otf"; path = "../assets/fonts/NotoSansHans-DemiLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3E17710FF7E54C69835F6A5E /* NotoSansHans-Light.otf */ = {isa = PBXFileReference; name = "NotoSansHans-Light.otf"; path = "../assets/fonts/NotoSansHans-Light.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5FD1F50AA6AC4E08BB912627 /* NotoSansHans-Medium.otf */ = {isa = PBXFileReference; name = "NotoSansHans-Medium.otf"; path = "../assets/fonts/NotoSansHans-Medium.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0428F2A10D4A4627958DD013 /* NotoSansHans-Regular.otf */ = {isa = PBXFileReference; name = "NotoSansHans-Regular.otf"; path = "../assets/fonts/NotoSansHans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E0DB1F1F0B3D427687D2CB3A /* NotoSansHans-Thin-Windows.otf */ = {isa = PBXFileReference; name = "NotoSansHans-Thin-Windows.otf"; path = "../assets/fonts/NotoSansHans-Thin-Windows.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -603,6 +617,7 @@
 				00E356EF1AD99517003FC87E /* nxappTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				AFDE97CA1B61461EBB13DFD4 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -628,6 +643,21 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		AFDE97CA1B61461EBB13DFD4 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				B68E639219B34778B7D17CED /* NotoSansHans-Black.otf */,
+				14A16512C4CF4D09829CF3B7 /* NotoSansHans-Bold.otf */,
+				7CFCF0884A164005934D87A9 /* NotoSansHans-DemiLight.otf */,
+				3E17710FF7E54C69835F6A5E /* NotoSansHans-Light.otf */,
+				5FD1F50AA6AC4E08BB912627 /* NotoSansHans-Medium.otf */,
+				0428F2A10D4A4627958DD013 /* NotoSansHans-Regular.otf */,
+				E0DB1F1F0B3D427687D2CB3A /* NotoSansHans-Thin-Windows.otf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -1075,6 +1105,13 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				E391BCA85FCE42A5A7043C03 /* NotoSansHans-Black.otf in Resources */,
+				D8243C02E5CA407CB6152979 /* NotoSansHans-Bold.otf in Resources */,
+				15E676932E7D48719A8EAD14 /* NotoSansHans-DemiLight.otf in Resources */,
+				B395555A2DD94F9588FDF52C /* NotoSansHans-Light.otf in Resources */,
+				9754790F688C44B4BA84C95B /* NotoSansHans-Medium.otf in Resources */,
+				D74420DC48944F3EADC1A880 /* NotoSansHans-Regular.otf in Resources */,
+				6B605002C9154BE18F0AFAA0 /* NotoSansHans-Thin-Windows.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
