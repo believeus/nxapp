@@ -103,13 +103,14 @@ export default MainActivity = createBottomTabNavigator({
         navigationOptions: ({navigation}) => ({
             title: navigation.state.routeName,
             headerStyle: {backgroundColor: '#fff',},
-            headerTintColor: color.activeBarText,
-            headerTitleStyle: {fontWeight: 'bold',},
+            headerTintColor: "#0071BC",
+            headerStyle: {height: 48, backgroundColor: '#0071BC'},
         }),
 
    });
-//导航条上的内容展示
+//导航条上的内容展示 TouchableOpacity 
 MainActivity.navigationOptions = ({navigation}) => {
+    
     let {routeName} = navigation.state.routes[navigation.state.index];
     // You can do whatever you like here to pick the title based on the route name
     let headerTitle = routeName;

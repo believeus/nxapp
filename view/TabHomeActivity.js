@@ -5,6 +5,8 @@ import StackHomeActivity from './StackHomeActivity';
 
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
+  
+    
     constructor(props) {
         super(props);
     }

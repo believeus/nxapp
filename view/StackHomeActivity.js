@@ -18,6 +18,15 @@ export const RootStack = createStackNavigator(
     },
     {
         initialRouteName: 'Main',
+        defaultNavigationOptions: {
+            headerStyle: {
+            backgroundColor: '#0071BC',
+            },
+            headerTintColor: '#fff',
+            headerTitleStyle: {
+            fontWeight: 'bold',
+            },
+            },
     }
 );
 export default createAppContainer(RootStack);

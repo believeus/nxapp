@@ -7,11 +7,13 @@
     "test": "jest"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "hermesvm": "^0.1.1",
     "react": "^16.8.6",
     "react-native": "^0.60.0",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-tab-navigator": "^0.3.4",
+    "react-native-webview": "^6.11.0",
     "react-navigation": "^3.12.1"
   },
   "devDependencies": {
