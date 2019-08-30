@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image } from 'react-native';
-import TabNavigator from 'react-native-tab-navigator';
-import AutoHeightWebView from 'react-native-autoheight-webview';
+import { Platform, StyleSheet, Text, View, Image ,Button} from 'react-native';
 
 type Props = {};
 export default class HomeActivity extends Component<Props> {
@@ -9,9 +7,15 @@ export default class HomeActivity extends Component<Props> {
         super(props);
     }
 
+
     render() {
+        const navigate=this.props.navigation;//此处可以自定义跳转属性
         return (
-           <View><Text>Home</Text></View>
+            <View>
+                <Text>HomeActivity Screen</Text>
+                <Button  title="About View" onPress={()=>navigate.push("About")}></Button>
+           </View>
+           
         );
     }
 }
