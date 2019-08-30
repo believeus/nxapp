@@ -120,7 +120,7 @@ MainActivity.navigationOptions = ({navigation}) => {
 
 
 
-const styles = StyleSheet.create({
+const styles = StyleSheet.create({ 
     iconStyle:{
         width:Platform.OS === 'ios' ? 30 :25,
         height:Platform.OS === 'ios' ? 30 :25
