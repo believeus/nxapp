@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+</head>
+
+<body onload="resize()">
+    <div style="width: 100%;height: 100%">
+        <div style=" margin: 0 auto;width: 95%;height: 100%;">
+            <video id="my-video" class="video-js" controls preload="auto" style="width: 100%;height: 100%;"  data-setup="{}">
+                <source
+                    src="https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4"
+                    type="video/mp4">
+
+            </video>
+        </div>
+    </div>
+</body>
+<script>
+    var resize = function () {
+        if (!document.fullscreenElement && // alternative standard method  
+            !document.mozFullScreenElement && !document.webkitFullscreenElement) {// current working methods  
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            } else if (document.documentElement.mozRequestFullScreen) {
+                document.documentElement.mozRequestFullScreen();
+            } else if (document.documentElement.webkitRequestFullscreen) {
+                document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+            }
+        } else {
+            if (document.cancelFullScreen) {
+                document.cancelFullScreen();
+            } else if (document.mozCancelFullScreen) {
+                document.mozCancelFullScreen();
+            } else if (document.webkitCancelFullScreen) {
+                document.webkitCancelFullScreen();
+            }
+        }
+    }  
+</script>
+
+</html>
