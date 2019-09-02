@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Button, fontFamil, ScrollView, TouchableOpacity } from 'react-native';
 
 
-type Props = {};
-export default class CenterActivity extends Component<Props> {
+
+export default class CenterActivity extends Component {
     constructor(props) {
         super(props);
     }
@@ -22,13 +22,13 @@ export default class CenterActivity extends Component<Props> {
                             <Image style={{ height: "100%", width: '100%' }} resizeMode="contain" source={require("../image/icons/user-logo.png")}></Image></View>
                         <View style={{ flexDirection: 'row' }}>
                             <View style={{ width: '25%', height: 25, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => navigate.push("About")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", paddingLeft: 15, fontFamily: 'NotoSansHans-Light' }}>login</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", paddingLeft: 15, fontFamily: 'NotoSansHans-Light' }}>login</Text></TouchableOpacity>
                             </View>
                             <View style={{ width: '1%', height: 25, justifyContent: 'center' }}>
                                 <Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center" }}>|</Text>
                             </View>
                             <View style={{ width: '25%', height: 25, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => navigate.push("About")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
                             </View>
                         </View>
                     </View>
