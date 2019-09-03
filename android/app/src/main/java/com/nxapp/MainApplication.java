@@ -3,6 +3,8 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.learnium.RNDeviceInfo.RNDeviceInfo;
+import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.reactnativecommunity.slider.ReactSliderPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
 import com.github.yamill.orientation.OrientationPackage;
@@ -33,6 +35,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNDeviceInfo(),
+            new RNI18nPackage(),
             new ReactSliderPackage(),
             new LinearGradientPackage(),
             new OrientationPackage(),
@@ -40,7 +44,7 @@ public class MainApplication extends Application implements ReactApplication {
             new KCKeepAwakePackage(),
             new ReactVideoPackage(),
             new RNCWebViewPackage(),
-              new RNGestureHandlerPackage()
+            new RNGestureHandlerPackage()
       );
     }
 

@@ -73,6 +73,10 @@
 		0921E095C39F4DB196E20A87 /* libRCTOrientation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A3A91CB4134E95A4F6D9CD /* libRCTOrientation.a */; };
 		D30DA9ED42A149BCA9ACEFF0 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4157CAD4C564198A011FA5C /* libBVLinearGradient.a */; };
 		2A77F93341EC45A5AF9D5DED /* libRNCSlider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD06A2C32D5417CBF8F15E3 /* libRNCSlider.a */; };
+		B3BEC730838E4A8FB2E2551B /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4730282DE4DC7BA0AC522 /* libRNI18n.a */; };
+		91EEBF1106334C8A929D5746 /* libRNI18n-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EEED9ADDB3E4414897ADC709 /* libRNI18n-tvOS.a */; };
+		D2B643A781E14AF78F81EF99 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44246A2C4134422483696C2B /* libRNDeviceInfo.a */; };
+		DC55A8933CBD49B283F30E56 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888C16C14FEE40AEAD1A0DD6 /* libRNDeviceInfo-tvOS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -423,6 +427,12 @@
 		E4157CAD4C564198A011FA5C /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		18298863328F4EBABD2C2C33 /* RNCSlider.xcodeproj */ = {isa = PBXFileReference; name = "RNCSlider.xcodeproj"; path = "../node_modules/@react-native-community/slider/ios/RNCSlider.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		DCD06A2C32D5417CBF8F15E3 /* libRNCSlider.a */ = {isa = PBXFileReference; name = "libRNCSlider.a"; path = "libRNCSlider.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		D23D74E74C5F43648BF5C7DD /* RNI18n.xcodeproj */ = {isa = PBXFileReference; name = "RNI18n.xcodeproj"; path = "../node_modules/react-native-i18n/ios/RNI18n.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		D7B4730282DE4DC7BA0AC522 /* libRNI18n.a */ = {isa = PBXFileReference; name = "libRNI18n.a"; path = "libRNI18n.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		EEED9ADDB3E4414897ADC709 /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; name = "libRNI18n-tvOS.a"; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		B669E16AEAB24CF8AD03C31F /* RNDeviceInfo.xcodeproj */ = {isa = PBXFileReference; name = "RNDeviceInfo.xcodeproj"; path = "../node_modules/react-native-device-info/ios/RNDeviceInfo.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		44246A2C4134422483696C2B /* libRNDeviceInfo.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo.a"; path = "libRNDeviceInfo.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		888C16C14FEE40AEAD1A0DD6 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo-tvOS.a"; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -460,6 +470,8 @@
 				0921E095C39F4DB196E20A87 /* libRCTOrientation.a in Frameworks */,
 				D30DA9ED42A149BCA9ACEFF0 /* libBVLinearGradient.a in Frameworks */,
 				2A77F93341EC45A5AF9D5DED /* libRNCSlider.a in Frameworks */,
+				B3BEC730838E4A8FB2E2551B /* libRNI18n.a in Frameworks */,
+				D2B643A781E14AF78F81EF99 /* libRNDeviceInfo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,6 +491,8 @@
 				1907701ABA484CAE8BC3E49F /* libRNGestureHandler-tvOS.a in Frameworks */,
 				4317B717342F4246919A4C4B /* libRNGestureHandler-tvOS.a in Frameworks */,
 				445D4C2D8771407E9FB51AE9 /* libRNVectorIcons-tvOS.a in Frameworks */,
+				91EEBF1106334C8A929D5746 /* libRNI18n-tvOS.a in Frameworks */,
+				DC55A8933CBD49B283F30E56 /* libRNDeviceInfo-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -661,6 +675,8 @@
 				46C5C1F0A8E74ABBB9FEF10C /* RCTOrientation.xcodeproj */,
 				3DA1F3E296ED4E0E82C298E8 /* BVLinearGradient.xcodeproj */,
 				18298863328F4EBABD2C2C33 /* RNCSlider.xcodeproj */,
+				D23D74E74C5F43648BF5C7DD /* RNI18n.xcodeproj */,
+				B669E16AEAB24CF8AD03C31F /* RNDeviceInfo.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1353,6 +1369,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1366,6 +1386,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Debug;
@@ -1397,6 +1419,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1410,6 +1436,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Release;
@@ -1442,6 +1470,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Debug;
@@ -1473,6 +1503,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Release;
@@ -1512,6 +1544,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1525,6 +1561,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Debug;
@@ -1564,6 +1602,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1577,6 +1619,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Release;
@@ -1615,6 +1659,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1628,6 +1676,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Debug;
@@ -1666,6 +1716,10 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1679,6 +1733,8 @@
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-linear-gradient\BVLinearGradient",
 					"$(SRCROOT)/..\node_modules\@react-native-community\slider\ios",
+					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
+					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 				);
 			};
 			name = Release;

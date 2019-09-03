@@ -14,7 +14,9 @@
     "react": "^16.8.6",
     "react-native": "^0.60.0",
     "react-native-af-video-player": "github:JijoBose/react-native-af-video-player#master",
+    "react-native-device-info": "^2.3.2",
     "react-native-gesture-handler": "^1.4.1",
+    "react-native-i18n": "^2.0.15",
     "react-native-keep-awake": "^4.0.0",
     "react-native-linear-gradient": "^2.5.6",
     "react-native-modal-dropdown": "^0.6.2",
@@ -31,12 +33,12 @@
   "devDependencies": {
     "@babel/core": "^7.0.0",
     "@babel/runtime": "^7.3.4",
+    "@react-native-community/slider": "^2.0.0",
     "babel-jest": "^24.5.0",
     "hermes-engine": "^0.1.1",
     "jest": "^24.5.0",
     "metro-react-native-babel-preset": "^0.53.1",
-    "react-test-renderer": "16.8.3",
-    "@react-native-community/slider": "^2.0.0"
+    "react-test-renderer": "16.8.3"
   },
   "jest": {
     "preset": "react-native"

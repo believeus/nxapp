@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image } from 'react-native';
-
+import { I18n  } from '../locales/i18n';
 
 type Props = {};
 export default class AboutActivity extends Component<Props> {
@@ -9,9 +9,8 @@ export default class AboutActivity extends Component<Props> {
     }
 
     render() {
-        //const navigator=this.props.navitation;//此处可以自定义跳转属性
         return (
-           <View><Text>About</Text></View>
+          <Text>{I18n.t('TabHomeActivity.name')}</Text>
         );
     }
 }

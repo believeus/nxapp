@@ -1,0 +1,13 @@
+{
+    "TabHomeActivity": {
+        "name": "中文"
+    },
+    "LoginActivity": {
+        "email": "邮箱",
+        "password": "密码",
+        "login": "登陆"
+    },
+    "user_profile": {
+        "title": "Your Profile"
+    }
+}

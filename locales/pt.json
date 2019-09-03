@@ -1,0 +1,14 @@
+{
+    "TabHomeActivity": {
+        "name": "Olá."
+    },
+    "LoginActivity": {
+        "email": "Email",
+        "password": "Password",
+        "login": "login"
+    },
+
+    "user_profile": {
+        "title": "Your Profile"
+    }
+}
