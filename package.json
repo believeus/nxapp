@@ -17,6 +17,7 @@
     "react-native-af-video-player": "github:JijoBose/react-native-af-video-player#master",
     "react-native-device-info": "^2.3.2",
     "react-native-elements": "^1.1.0",
+    "react-native-f2chart": "^1.1.0",
     "react-native-gesture-handler": "^1.4.1",
     "react-native-i18n": "^2.0.15",
     "react-native-keep-awake": "^4.0.0",

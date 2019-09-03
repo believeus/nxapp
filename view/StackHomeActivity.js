@@ -6,7 +6,7 @@ import AboutActivity from './AboutActivity';
 import MainActivity from './MainActivity';
 import LoginActivity from './LoginActivity';
 import RegisterActivity from './RegisterActivity';
-
+import LifeStyleChartActivity from './LifeStyleChartActivity';
 
 export const RootStack = createStackNavigator(
     {
@@ -21,6 +21,9 @@ export const RootStack = createStackNavigator(
        },
        Register:{
            screen:RegisterActivity
+       },
+       LifeStyleChart:{
+           screen:LifeStyleChartActivity
        }
     },
     {

@@ -5162,6 +5162,11 @@ react-native-device-info@^2.3.2:
   resolved "https://registry.npm.taobao.org/react-native-device-info/download/react-native-device-info-2.3.2.tgz#db2b8f135aaf2515583e367ab791dcc7d2f0d14c"
   integrity sha1-2yuPE1qvJRVYPjZ6t5Hcx9Lw0Uw=
 
+react-native-f2chart@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npm.taobao.org/react-native-f2chart/download/react-native-f2chart-1.1.0.tgz#6d23cb1aca05dd66c7555cd0ba133cc1c97ffdc3"
+  integrity sha1-bSPLGsoF3WbHVVzQuhM8wcl//cM=
+
 react-native-gesture-handler@^1.4.1:
   version "1.4.1"
   resolved "https://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.4.1.tgz#c38d9e57637b95e221722a79f2bafac62e3aeb21"

@@ -57,7 +57,8 @@ export default class TabHomeActivity extends Component<Props> {
                         navigator={this.props.navigator}
                     />
 
-                </View>
+                </View> 
+                <Button title="LifeStyleChart" onPress={() => navigate.push("LifeStyleChart")}></Button>
                 <Slider
                     style={{ width: 300, height: 50 }}
                     minimumValue={0}
