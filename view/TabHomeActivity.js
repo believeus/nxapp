@@ -24,29 +24,28 @@ export default class TabHomeActivity extends Component<Props> {
         const navigate = this.props.navigation;
         return (
             <ScrollView>
-                <Text>{I18n.t('TabHomeActivity.name')}</Text>
-                <View style={{ width: "100%", height: 300 }}>
-                    <Swiper
-                        height={300}//组件高度
-                        horizontal={true}//水平轮播
-                        paginationStyle={{ bottom: 10 }}
-                        showsButtons={true}
-                        loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
-                        autoplay={true}>
-                        <View style={{ width: '100%', height: 360 }}>
-                            <Image style={{ width: '100%', height: 360 }} source={require('../image/enpic/index1.jpg')} resizeMode="cover" />
-                        </View>
-                        <View style={{ width: '100%', height: 360 }}>
-                            <Image style={{ width: '100%', height: 360 }} source={require('../image/enpic/index2.jpg')} resizeMode="cover" />
-                        </View>
-                        <View style={{ width: '100%', height: 360 }}>
-                            <Image style={{ width: '100%', height: 360 }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
-                        </View>
-                    </Swiper >
-                    <Text>HomeActivity Screenyyy</Text>
-                    <Button title="About View" onPress={() => navigate.push("About")}></Button>
-                </View>
-                
+
+                <View style={{width:"100%",height:370}}>
+                <Swiper
+                    height={340}//组件高度
+                    horizontal={true}//水平轮播
+                    paginationStyle={{ bottom: 10 }}
+                    showsButtons={true}
+                    loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
+                    autoplay={true}>
+                    <View style={{ width: '100%', height: 310}}>
+                        <Image style={{width:'100%',height:310}} source={require('../image/enpic/index1.jpg')}  resizeMode="center" />
+                    </View>
+                    <View style={{ width: '100%', height: 310}}>
+                        <Image style={{width:'100%',height:310}} source={require('../image/enpic/index2.jpg')} resizeMode="center" />
+                    </View>
+                    <View style={{ width: '100%', height: 310}}>
+                        <Image style={{width:'100%',height:310}} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
+                    </View>
+                </Swiper >
+                <Text>HomeActivity Screenyyy</Text>
+                <Button title="About View" onPress={() => navigate.push("About")}></Button>
+            </View>
                 <View style={{ flex: 1, justifyContent: 'center' }}>
                     <Button title="click me to About View" onPress={() => navigate.push("About")}></Button>
                     <VideoPlayer
