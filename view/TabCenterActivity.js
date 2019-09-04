@@ -28,7 +28,9 @@ export default class CenterActivity extends Component {
                                 <Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center" }}>|</Text>
                             </View>
                             <View style={{ width: '25%', height: 25, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
+                                <TouchableOpacity onPress={() => navigate.push("Register")}>
+                                    <Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>

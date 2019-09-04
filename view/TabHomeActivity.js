@@ -43,9 +43,14 @@ export default class TabHomeActivity extends Component<Props> {
                         <Image style={{width:'100%',height:310}} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
                     </View>
                 </Swiper >
-                <Text>HomeActivity Screenyyy</Text>
-                <Button title="About View" onPress={() => navigate.push("About")}></Button>
             </View>
+                <View>
+                    <View></View>
+                    <View></View>
+                    <View></View>
+                    <View></View>
+                </View>
+
                 <View style={{ flex: 1, justifyContent: 'center' }}>
                     <Button title="click me to About View" onPress={() => navigate.push("About")}></Button>
                     <VideoPlayer

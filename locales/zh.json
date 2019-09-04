@@ -1,12 +1,19 @@
 {
     "TabHomeActivity": {
-        "name": "中文"
+        "name": "主页"
     },
     "LoginActivity": {
-        "email": "邮箱",
-        "password": "密码",
-        "login": "登陆"
+        "name": "Login",
+        "email":"Email",
+        "passowrd":"Password",
+        "login":"Login"
+       
     },
+    "ForgetActivity": {
+        "name": "Retrive Password",
+
+    },
+
     "user_profile": {
         "title": "Your Profile"
     }

@@ -1,11 +1,22 @@
 {
     "TabHomeActivity": {
-        "name": "en",
+        "name": "Home"
     },
     "LoginActivity": {
-        "email": "Email",
-        "password": "Password",
-        "login": "login"
+        "name": "Login",
+        "email":"Email",
+        "passowrd":"Password",
+        "login":"Login",
+        "link":"Register"
+       
+    },
+    "ForgetActivity": {
+        "name": "Reset Password",
+        "title":"Reset Password",
+        "link":"By clicking the button below, A link to reset your password will be sent to your email.",
+        "btn":"Reset password",
+        "link2":"Login to your account"
+
     },
 
     "user_profile": {

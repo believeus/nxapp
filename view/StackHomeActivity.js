@@ -5,38 +5,42 @@ import HomeActivity from './HomeActivity';
 import AboutActivity from './AboutActivity';
 import MainActivity from './MainActivity';
 import LoginActivity from './LoginActivity';
+import ForgetActivity from './ForgetActivity';
 import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
 
 export const RootStack = createStackNavigator(
     {
-        Main:{  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
-            screen:MainActivity //此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
+        Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
+            screen: MainActivity //此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
         },
-        About:{
-            screen:AboutActivity
+        About: {
+            screen: AboutActivity
         },
-       Login:{
-           screen:LoginActivity
-       },
-       Register:{
-           screen:RegisterActivity
-       },
-       LifeStyleChart:{
-           screen:LifeStyleChartActivity
-       }
+        Login: {
+            screen: LoginActivity
+        },
+        Register: {
+            screen: RegisterActivity
+        },
+        LifeStyleChart: {
+            screen: LifeStyleChartActivity
+        },
+        Forget: {
+            screen: ForgetActivity
+        },
     },
     {
         initialRouteName: 'Main',
         defaultNavigationOptions: {
             headerStyle: {
-            backgroundColor: '#0071BC',
+                backgroundColor: '#0071BC',
             },
             headerTintColor: '#fff',
             headerTitleStyle: {
-            fontWeight: 'bold',
+                fontWeight: 'bold',
             },
-            },
+        },
     }
 );
 export default createAppContainer(RootStack);

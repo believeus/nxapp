@@ -72,7 +72,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
 
                     <View style={{ height: 350 }}>
                         <Slider minimumValue={0} maximumValue={20} step={2}  
-                                 maximumTrackImage={require('../image/s-left.png')}
+                             
                                 style={{height:30,borderColor:'#ff0000',borderWidth:1 }} 
                                 onValueChange={(value)=>{this.setState({value:value});console.log(this.state.value)}} onSlidingComplete={(value)=>{this.setState({value:value})}}
                             />

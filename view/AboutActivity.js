@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image } from 'react-native';
-import { I18n  } from '../locales/i18n';
+import { I18n } from '../locales/i18n';
 
 type Props = {};
 export default class AboutActivity extends Component<Props> {
@@ -10,7 +10,9 @@ export default class AboutActivity extends Component<Props> {
 
     render() {
         return (
-          <Text>{I18n.t('TabHomeActivity.name')}</Text>
+            <ScrollView>
+                <Text>{I18n.t('TabHomeActivity.name')}</Text>
+            </ScrollView>
         );
     }
 }
