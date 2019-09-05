@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, Slider } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
 import Chart from "react-native-f2chart";
+import MotionSlider from 'react-native-motion-slider';
+import { I18n } from '../locales/i18n';
 import data from './data.json'
 
 type Props = {};
 export default class LifeStyleChartActivity extends Component<Props> {
     static navigationOptions = {
-        title: 'Life Style Questionnaire',
+        title: I18n.t("LifeStyleChartActivity.name"),
     };
     constructor(props) {
         super(props);
-        this.state={
-            value:0
+        this.state = {
+            value: 0
         };
 
     }
@@ -67,19 +69,26 @@ export default class LifeStyleChartActivity extends Component<Props> {
 `;
 
         return (
-            <ScrollView style={styles.container}>
                 <View>
-
-                    <View style={{ height: 350 }}>
-                        <Slider minimumValue={0} maximumValue={20} step={2}  
-                             
-                                style={{height:30,borderColor:'#ff0000',borderWidth:1 }} 
-                                onValueChange={(value)=>{this.setState({value:value});console.log(this.state.value)}} onSlidingComplete={(value)=>{this.setState({value:value})}}
-                            />
+                    <View style={{ height: 300 }}>
+                        <MotionSlider
+                            title={'how are you'}
+                            min={0}
+                            max={4}
+                            height={25}
+                            value={0}
+                            width={350}
+                            borderRadius={5}
+                            units={''}
+                            backgroundColor={['rgb(146, 208, 80)', 'rgb(255, 0, 0)']}
+                            onValueChanged={(value) => console.log(value)}
+                            onPressIn={() => console.log('Pressed in')}
+                            onPressOut={() => console.log('Pressed out')}
+                            onDrag={() => console.log('Dragging')}
+                        />
                         <Chart initScript={initScript(data)} />
                     </View>
                 </View>
-            </ScrollView>
         );
     }
 }

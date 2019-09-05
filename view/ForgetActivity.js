@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import { I18n } from '../locales/i18n';
-import { Platform, StyleSheet, Text, View, Image, fontFamily, TextInput, TouchableOpacity, Alert, FetchResult, AppRegistry } from 'react-native';
+import { Platform, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
 
 
 type Props = {};
 export default class ForgetActivity extends Component<Props> {
     static navigationOptions = {
-        title: "Reset Password"
+        title: I18n.t("ForgetActivity.name"),
     };
     constructor(props) {
         super(props);
     }
 
     render() {
-        const navigate = this.props.navigation;//此处可以自定义跳转属性
+        const navigate =this.props.navigation;
         return (
             <ScrollView>
                 <View>
@@ -21,10 +21,10 @@ export default class ForgetActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center' }}>
                         <View style={{ height: 50 }}></View>
                         <View style={{ alignItems: 'flex-start', justifyContent: 'flex-start' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>{I18n.t('ForgetActivity.title')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>{I18n.t('ForgetActivity.resetPwd')}</Text>
                         </View>
                         <View style={{ height: 40, alignItems: 'flex-start', fontSize: 14, justifyContent: 'flex-start' }} >
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#f05a25', lineHeight: 20 }}>{I18n.t('ForgetActivity.link')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#f05a25', lineHeight: 20 }}>{I18n.t('ForgetActivity.resetPwd')}</Text>
                         </View>
                         <View style={{ alignItems: 'center', height: 70, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
