@@ -26,18 +26,6 @@ export default MainActivity = createBottomTabNavigator({
             )
         }
     },
-
-    SHOPPING:{
-        screen:TabMallActivity,
-        navigationOptions:{
-            //tab 的属性
-            tabBarLabel:'SHOPPING',
-            tabBarIcon:({tintColor, focused}) =>(
-            focused ?<Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle}/>:<Image source={require("../image/tab/ic1_tab_mall.png")}style={styles.iconStyle}/>
-            )
-        }
-    },
-
     ABOUT:{
         screen:TabAboutActivity,
         navigationOptions:{
@@ -57,6 +45,18 @@ export default MainActivity = createBottomTabNavigator({
             )
         }
     },
+    SHOPPING:{
+        screen:TabMallActivity,
+        navigationOptions:{
+            //tab 的属性
+            tabBarLabel:'SHOPPING',
+            tabBarIcon:({tintColor, focused}) =>(
+            focused ?<Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle}/>:<Image source={require("../image/tab/ic1_tab_mall.png")}style={styles.iconStyle}/>
+            )
+        }
+    },
+
+   
 
     EPICENTER:{
         screen:TabCenterActivity,

@@ -14,10 +14,12 @@
         "passwordNull":"Please enter your password",
         "login":"Login",
         "register":"Register",
-        "unregister":"Email invalid",
-        "unactive":"Email not active",
-        "pwdFail":"Password invalid",
-        "netFail":"Network unlinkable",
+        "Invalid":{
+            "Email":"Email invalid",
+            "PWD":"Password invalid",
+            "NetFail":"Network unlinkable",
+            "unactive":"Email not active"
+        },   
         "ForgetPwd":"Forget Password?"
        
     },
