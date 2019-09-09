@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, Button } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import HomeActivity from './HomeActivity';
 import AboutActivity from './AboutActivity';
@@ -8,6 +8,7 @@ import LoginActivity from './LoginActivity';
 import ForgetActivity from './ForgetActivity';
 import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
+import { I18n } from '../locales/i18n';
 
 export const RootStack = createStackNavigator(
     {
@@ -40,7 +41,13 @@ export const RootStack = createStackNavigator(
             headerTitleStyle: {
                 fontWeight: 'bold',
             },
-        },
+            // headerRight: (
+            //     <View style={{ width: 100, height: 50,justifyContent:"center",alignItems:"center" }}>
+            //         <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")}/>
+            //         <Text style={{color:"#fff"}}>{I18n.t('StackHomeActivity.vistor')}</Text>
+            //     </View>
+            // )
+        }
     }
 );
 export default createAppContainer(RootStack);

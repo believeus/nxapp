@@ -11,12 +11,17 @@ import { getLanguages } from 'react-native-i18n'
 import { colors } from 'react-native-elements';
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
+    static navigationOptions={
+        headerRight: (
+            <View style={{ width: 100, height: 50,justifyContent:"center",alignItems:"center" }}>
+                <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")}/>
+                <Text style={{color:"#fff"}}>Hello</Text>
+            </View>
+        )
+       
+    }
     constructor(props) {
         super(props);
-        //判断当前系统语言
-        getLanguages().then(languages => {
-            console.log(languages); // ['en-US', 'en']
-        });
 
     }
 

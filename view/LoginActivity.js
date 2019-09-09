@@ -6,6 +6,8 @@ import { I18n } from '../locales/i18n';
 import Input from "react-native-input-validation"
 import md5 from "react-native-md5";
 import { NavigationActions, StackActions } from 'react-navigation';
+import Session from '../storage/Session';
+
 
 type Props = {};
 export default class LoginActivity extends Component<Props> {
@@ -20,18 +22,14 @@ export default class LoginActivity extends Component<Props> {
         if (!this.isValid) { Toast.show(I18n.t("LoginActivity.mailboxformatFail"), { duration: 7000, position: Toast.positions.CENTER }); return }
         if (!this.state.email) { Toast.show(I18n.t("LoginActivity.mailboxNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
         if (!this.state.password) { Toast.show(I18n.t("LoginActivity.passwordNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
-        fetch("http://192.168.1.102:8080/user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password))
+        fetch("http://192.168.0.114:8080/user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password))
             .then((response) => response.json())
             .then((sessionuser) => {
                 if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                 else {
                     if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                    //将数据保存在storege中
-                    storage.save({
-                        key: 'sessionuser',
-                        data: sessionuser
-                    });
+                    Session.save("sessionuser",sessionuser);
                     //React-Navigation跳转并清除路由记录（重置）
                     const resetAction = StackActions.reset({
                         index: 0,

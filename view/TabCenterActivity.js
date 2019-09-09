@@ -1,65 +1,60 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Button, fontFamil, ScrollView, TouchableOpacity } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import Session from '../storage/Session';
 
 
 export default class CenterActivity extends Component {
+    static navigationOptions = ({ navigation }) => {
+
+    };
     constructor(props) {
         super(props);
-        this.state = { visual: true };
-        //load 读取
-        storage.load({
-            key: 'sessionuser'
-        }).then(sessionuser => {
-            // 如果找到数据，则在then方法中返回
-            this.sessionuser = sessionuser;
-            this.setState({ visual: false });
-            console.info(this.state.visual)
-        }).catch(err => {
-            // 如果没有找到数据且没有sync方法，
-            // 或者有其他异常，则在catch中返回
-            console.warn(err.message);
-            switch (err.name) {
-                case 'NotFoundError':
-                    // TODO;
-                    break;
-                case 'ExpiredError':
-                    // TODO
-                    break;
-            }
-        })
+        let _oThis = this
+        this.state = { user: null };
+
+
+    }
+    //因为Session.load方法异步的,所以可以给sate设置值，设置之后，页面渲染会根据sata中的值变化而变化
+    componentDidMount() {
+        Session.load("sessionuser").then((user) => {
+            this.setState({ user: user });
+        });
 
     }
 
-    render() {
 
+    render() {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             //borderColor:"grey",borderWidth:1
             //alignItems:'center' 左右居中
             <ScrollView>
                 <View>
-
                     <View style={{ backgroundColor: '#0071bc', height: 180, alignItems: 'center', fontWeight: 'bold' }}>
                         <View style={{ width: "100%", height: 20 }}></View>
                         <View style={{ height: 60, width: '100%' }}>
-                            <Image style={{ height: "100%", width: '100%' }} resizeMode="contain" source={require("../image/icons/user-logo.png")}></Image></View>
-                        {this.state.visual == true ?
-                            <View style={{ flexDirection: 'row' }}>
-                                <View style={{ width: '25%', height: 25, justifyContent: 'center' }}>
-                                    <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", paddingLeft: 15, fontFamily: 'NotoSansHans-Light' }}>login</Text></TouchableOpacity>
+                            {this.state.user == null ?
+                                <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/ic_unlogin.png")}></Image>
+                                :
+                                <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/ic_login.png")}></Image>
+                            }
+                            {this.state.user == null ?
+                                <View style={{alignSelf:"center"}}>
+                                    <View style={{ width: '30%', height: 25, justifyContent: 'center',alignItems:"center" }}>
+                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center",fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
+                                    </View>
+                                    <View style={{ width: '30%', height: 25, justifyContent: 'center' }}>
+                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center",fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
+                                    </View>
                                 </View>
-                                <View style={{ width: '1%', height: 25, justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center" }}>|</Text>
+                                
+                                :
+                                <View style={{ width: '100%', height: 25, justifyContent: 'center',alignItems:"center" }}>
+                                    <Text style={{ color: "#fff", fontSize: 22 }}>{this.state.user.nickname}</Text>
                                 </View>
-                                <View style={{ width: '25%', height: 25, justifyContent: 'center' }}>
-                                    <TouchableOpacity onPress={() => navigate.push("Register")}>
-                                        <Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text>
-                                    </TouchableOpacity>
-                                </View>
-                            </View>
-                            : <View><Text style={{ color: "white", fontSize: 24 }}>{this.sessionuser.nickname}</Text></View>
-                        }
+                            }
+                        </View>
                     </View>
 
                     <TouchableOpacity onPress={() => navigate.push("About")}>
@@ -142,15 +137,16 @@ export default class CenterActivity extends Component {
                             </View>
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity 
+                    {this.state.user != null ?
+                    <TouchableOpacity
                         onPress={() => {
-                                storage.remove({ key: 'sessionuser' });
-                                const resetAction = StackActions.reset({
-                                    index: 0,
-                                    actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                                });
-                                this.props.navigation.dispatch(resetAction);
-                            }
+                            Session.logout();
+                            const resetAction = StackActions.reset({
+                                index: 0,
+                                actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                            });
+                            this.props.navigation.dispatch(resetAction);
+                        }
                         }>
                         <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                             <View style={{ width: "100%", height: 20 }}></View>
@@ -167,6 +163,8 @@ export default class CenterActivity extends Component {
                             </View>
                         </View>
                     </TouchableOpacity>
+                    :null
+                    }
                 </View>
             </ScrollView>
         );

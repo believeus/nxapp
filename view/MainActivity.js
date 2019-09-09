@@ -4,81 +4,83 @@ import TabHomeActivity from './TabHomeActivity';
 import TabMallActivity from './TabMallActivity';
 import TabAboutActivity from './TabAboutActivity';
 import TabCenterActivity from './TabCenterActivity';
-import {createAppContainer, createBottomTabNavigator} from 'react-navigation';
+import { createAppContainer, createBottomTabNavigator } from 'react-navigation';
 
 export default MainActivity = createBottomTabNavigator({
-    Home:{
-        screen:TabHomeActivity,
-        navigationOptions:{
+    Home: {
+        screen: TabHomeActivity,
+        navigationOptions: () => {
             //tab 的属性的属性
-            tabBarLabel:'HOME',
-            tabBarIcon:({tintColor, focused}) => (
-               focused ?
-                <Image
-                    source={require("../image/tab/ic2_tab_home.png")}
-                    style={styles.iconStyle}
-                />
-                :
-                <Image
-                source={require("../image/tab/ic1_tab_home.png")}
-                    style={styles.iconStyle}
-                />
-            )
+           return {
+                tabBarLabel: 'HOME',
+                tabBarIcon: ({ tintColor, focused }) => (
+                        focused ?
+                            <Image
+                                source={require("../image/tab/ic2_tab_home.png")}
+                                style={styles.iconStyle}
+                            />
+                            :
+                            <Image
+                                source={require("../image/tab/ic1_tab_home.png")}
+                                style={styles.iconStyle}
+                            />
+                    )
+            }
         }
     },
-    ABOUT:{
-        screen:TabAboutActivity,
-        navigationOptions:{
-               //tab 属性
-            tabBarLabel:'ABOUT',
-            tabBarIcon:({tintColor, focused}) =>(
-            focused ?
-                <Image
-                source={require("../image/tab/ic2_tab_about.png")} 
-                    style={styles.iconStyle}
-                />
-                :
-                <Image
-                source={require("../image/tab/ic1_tab_about.png")} 
-                    style={styles.iconStyle}
-                />
-            )
-        }
-    },
-    SHOPPING:{
-        screen:TabMallActivity,
-        navigationOptions:{
-            //tab 的属性
-            tabBarLabel:'SHOPPING',
-            tabBarIcon:({tintColor, focused}) =>(
-            focused ?<Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle}/>:<Image source={require("../image/tab/ic1_tab_mall.png")}style={styles.iconStyle}/>
-            )
-        }
-    },
-
-   
-
-    EPICENTER:{
-        screen:TabCenterActivity,
-        navigationOptions:{
+    ABOUT: {
+        screen: TabAboutActivity,
+        navigationOptions: {
             //tab 属性
-            tabBarLabel:'EPICENTER',
-            tabBarIcon:({tintColor, focused}) =>(
-            focused ?
-                <Image
-                     source={require("../image/tab/ic2_tab_user.png")}
-                    style={styles.iconStyle}
-                />
-                :
-                <Image
-                source={require("../image/tab/ic1_tab_user.png")}
-                    style={styles.iconStyle}
-                />
+            tabBarLabel: 'ABOUT',
+            tabBarIcon: ({ tintColor, focused }) => (
+                focused ?
+                    <Image
+                        source={require("../image/tab/ic2_tab_about.png")}
+                        style={styles.iconStyle}
+                    />
+                    :
+                    <Image
+                        source={require("../image/tab/ic1_tab_about.png")}
+                        style={styles.iconStyle}
+                    />
+            )
+        }
+    },
+    SHOPPING: {
+        screen: TabMallActivity,
+        navigationOptions: {
+            //tab 的属性
+            tabBarLabel: 'SHOPPING',
+            tabBarIcon: ({ tintColor, focused }) => (
+                focused ? <Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle} /> : <Image source={require("../image/tab/ic1_tab_mall.png")} style={styles.iconStyle} />
+            )
+        }
+    },
+
+
+
+    EPICENTER: {
+        screen: TabCenterActivity,
+        navigationOptions: {
+            //tab 属性
+            tabBarLabel: 'EPICENTER',
+            tabBarIcon: ({ tintColor, focused }) => (
+                focused ?
+                    <Image
+                        source={require("../image/tab/ic2_tab_user.png")}
+                        style={styles.iconStyle}
+                    />
+                    :
+                    <Image
+                        source={require("../image/tab/ic1_tab_user.png")}
+                        style={styles.iconStyle}
+                    />
             )
 
         }
     },
-    },
+},
     {
         //设置TabNavigator的位置
         tabBarPosition: 'bottom',
@@ -89,7 +91,7 @@ export default MainActivity = createBottomTabNavigator({
         //按 back 键是否跳转到第一个Tab(首页)， none 为不跳转
         backBehavior: "none",
         //进入App的首页
-        initialRouteName:'Home',
+        initialRouteName: 'Home',
         //设置Tab标签的属性
         tabBarOptions: {
             //Android属性
@@ -100,18 +102,18 @@ export default MainActivity = createBottomTabNavigator({
             activeTintColor: '#0071BC',//label和icon的前景色 活跃状态下（选中）
             inactiveTintColor: 'gray',//label和icon的前景色 活跃状态下（未选中）
         },
-        navigationOptions: ({navigation}) => ({
+        navigationOptions: ({ navigation }) => ({
             title: navigation.state.routeName,
-            headerStyle: {backgroundColor: '#fff',},
+            headerStyle: { backgroundColor: '#fff', },
             headerTintColor: "#0071BC",
-            headerStyle: {height: 48, backgroundColor: '#0071BC'},
+            headerStyle: { height: 48, backgroundColor: '#0071BC' },
         }),
 
-   });
+    });
 //导航条上的内容展示 TouchableOpacity 
-MainActivity.navigationOptions = ({navigation}) => {
-    
-    let {routeName} = navigation.state.routes[navigation.state.index];
+MainActivity.navigationOptions = ({ navigation }) => {
+
+    let { routeName } = navigation.state.routes[navigation.state.index];
     // You can do whatever you like here to pick the title based on the route name
     let headerTitle = routeName;
     return {
@@ -121,9 +123,9 @@ MainActivity.navigationOptions = ({navigation}) => {
 
 
 
-const styles = StyleSheet.create({ 
-    iconStyle:{
-        width:Platform.OS === 'ios' ? 30 :25,
-        height:Platform.OS === 'ios' ? 30 :25
+const styles = StyleSheet.create({
+    iconStyle: {
+        width: Platform.OS === 'ios' ? 30 : 25,
+        height: Platform.OS === 'ios' ? 30 : 25
     },
 });
