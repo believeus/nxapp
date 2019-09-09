@@ -16,7 +16,7 @@ I18n.defaultLocale = 'en';
 I18n.fallbacks = true;
 I18n.translations = {
     'en':en,
-    'fr':fr,
+    'fr':fr, 
     'ru':ru,
     'pt':pt,
     'zh-Hans': zh,

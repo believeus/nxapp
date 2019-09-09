@@ -4,6 +4,8 @@ import { Platform, StyleSheet, Text, View, Image, Alert, TextInput, TouchableOpa
 import Toast from 'react-native-root-toast';
 import { I18n } from '../locales/i18n';
 import Input from "react-native-input-validation"
+import md5 from "react-native-md5";
+import { NavigationActions, StackActions } from 'react-navigation';
 
 type Props = {};
 export default class LoginActivity extends Component<Props> {
@@ -15,17 +17,32 @@ export default class LoginActivity extends Component<Props> {
         this.state = {};
     }
     login() {
-        if(!this.state.email){Toast.show(I18n.t("LoginActivity.mailboxNull"), { duration: 1500, position: Toast.positions.CENTER });return}
-        if(!this.state.password){Toast.show(I18n.t("LoginActivity.passwordNull"), { duration: 1500, position: Toast.positions.CENTER });return}
-        fetch("http://192.168.0.109:8080/user/login.jhtml?email="+this.state.email+"&password="+this.state.password)
-            .then((data) => data.text())        // json方式解析，如果是text就是 response.text()
-            .then((data) => {   // 获取到的数据处理
-                if (data == "success") { this.navigate.push("Main") }
+        if (!this.isValid) { Toast.show(I18n.t("LoginActivity.mailboxformatFail"), { duration: 7000, position: Toast.positions.CENTER }); return }
+        if (!this.state.email) { Toast.show(I18n.t("LoginActivity.mailboxNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
+        if (!this.state.password) { Toast.show(I18n.t("LoginActivity.passwordNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
+        fetch("http://192.168.1.102:8080/user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password))
+            .then((response) => response.json())
+            .then((sessionuser) => {
+                if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                 else {
-                    Toast.show(I18n.t("LoginActivity." + data), { duration: 2000, position: Toast.positions.CENTER });
+                    if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                    if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                    //将数据保存在storege中
+                    storage.save({
+                        key: 'sessionuser',
+                        data: sessionuser
+                    });
+                    //React-Navigation跳转并清除路由记录（重置）
+                    const resetAction = StackActions.reset({
+                        index: 0,
+                        actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                    });
+                    this.props.navigation.dispatch(resetAction);
+
                 }
-            }).catch((error) => {     // 错误处理  
-                Toast.show(I18n.t("LoginActivity.netFail"), { duration: 2000, position: Toast.positions.CENTER });
+            }).catch((error) => {
+                console.info(error)
+                Toast.show(I18n.t("LoginActivity.Invalid.NetFail"), { duration: 5000, position: Toast.positions.CENTER })
             }).done();
 
     }
@@ -43,7 +60,7 @@ export default class LoginActivity extends Component<Props> {
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>Login</Text>
                         </View>
 
-                        <View style={{height: 45, alignContent: 'center', marginTop: 20 }}>
+                        <View style={{ height: 45, alignContent: 'center', marginTop: 20 }}>
                             <Input style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,
@@ -51,10 +68,10 @@ export default class LoginActivity extends Component<Props> {
                                 borderColor: '#b3b3b3',
                                 fontSize: 16,
                             }}
-                                errorInputContainerStyle={{ borderColor:'#FF0000', borderWidth: 2,borderRadius:10} }
+                                errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
                                 placeholder="Email" validator="email"
-                                onValidatorExecuted={isValid => console.log(isValid)}
+                                onValidatorExecuted={isValid => this.isValid = isValid}
                                 validatorExecutionDelay={100}
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />

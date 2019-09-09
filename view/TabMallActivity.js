@@ -3,11 +3,9 @@ import { Platform, StyleSheet, Text, View, Image, Button,Modal,TouchableOpacity}
 import {WebView} from 'react-native-webview'
 import { TextInput } from 'react-native-gesture-handler';
 
-
 type Props = {};
 export default class MallActivity extends Component<Props> {
     
-   
     constructor(props) {
         super(props);
         this.state = {
