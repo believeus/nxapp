@@ -24,7 +24,7 @@ export default class ForgetActivity extends Component<Props> {
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>{I18n.t('ForgetActivity.resetPwd')}</Text>
                         </View>
                         <View style={{ height: 40, alignItems: 'flex-start', fontSize: 14, justifyContent: 'flex-start' }} >
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#f05a25', lineHeight: 20 }}>{I18n.t('ForgetActivity.resetPwd')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#f05a25', lineHeight: 20 }}>{I18n.t('ForgetActivity.link')}</Text>
                         </View>
                         <View style={{ alignItems: 'center', height: 70, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
