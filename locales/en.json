@@ -9,7 +9,7 @@
         "name": "About us",
     },
     "LoginActivity": {
-        "name": "Login",
+        "name": "User login",
         "email":"Email",
         "passowrd":"Password",
         "mailboxformatFail":"The mailbox format is incorrect",
@@ -25,6 +25,9 @@
         },   
         "ForgetPwd":"Forget Password?"
        
+    },
+    "RegisterActivity":{
+        "name": "User register",
     },
     "ForgetActivity": {
         "name":"Reset Password",

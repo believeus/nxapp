@@ -11,17 +11,13 @@ import { getLanguages } from 'react-native-i18n'
 import { colors } from 'react-native-elements';
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
-    static navigationOptions={
-        headerRight: (
-            <View style={{ width: 100, height: 50,justifyContent:"center",alignItems:"center" }}>
-                <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")}/>
-                <Text style={{color:"#fff"}}>Hello</Text>
-            </View>
-        )
-       
+    static navigationOptions = {
+
+
     }
     constructor(props) {
         super(props);
+        this.waiting=true;
 
     }
 
@@ -57,30 +53,29 @@ export default class TabHomeActivity extends Component<Props> {
                     </Swiper >
                 </View>
                 <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
-                        <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='center'  >
+                    <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='center'  >
 
-                            <View style={{ width: '90%', alignSelf: 'center', height: 299, marginTop: 34, zIndex: 999 }}>
-                                <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', borderWidth: 1, flexDirection: 'row' }}>
-                                    <Text onPress={() => this.navigate.push("Forget")} style={{ borderWidth: 1, height: 128, width: '32%' }}></Text>
-                                    <View style={{ height: 128, width: '36%', borderWidth: 1, alignSelf: 'center' }}>
-
-                                        <Text onPress={() => this.navigate.push("Forget")} style={{ height: 56, marginTop: 80 }}></Text>
-                                    </View>
-                                    <Text onPress={() => this.navigate.push("Forget")} style={{ borderWidth: 1, height: 128, width: '32%', }}></Text>
+                        <View style={{ width: '90%', alignSelf: 'center', height: 299, marginTop: 34, zIndex: 999 }}>
+                            <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
+                                <Text onPress={() => {  this.navigate.push("Forget");}}style={{ bheight: 128, width: '32%' }}></Text>
+                                <View  style={{ height: 128, width: '36%', alignSelf: 'center' }}>
+                                    <Text onPress={()=>{this.navigate.push("LifeStyleChart")}} style={{ height: 56, marginTop: 80 }}></Text>
                                 </View>
-                                <View style={{ heigh: 128, justifyContent: 'space-around', borderWidth: 1, flexDirection: 'row', zIndex: 0 }}>
-                                    <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
-                                        <View style={{ height: 138, width: '33%' }}></View>
-                                    </TouchableOpacity>
-                                    <View style={{ height: 138, width: '33%' }}>
-                                        <View style={{ height: '40%', borderRadius: 50, marginBottom: 50 }}></View>
-                                    </View>
-                                    <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
-                                        <View style={{ height: 138, width: '33%' }}></View>
-                                    </TouchableOpacity>
-                                </View>
+                                <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%', }}></Text>
                             </View>
-                        </ImageBackground>
+                            <View style={{ heigh: 128, justifyContent: 'space-around', flexDirection: 'row', zIndex: 0 }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("About")}>
+                                    <View style={{ height: 138, width: '33%' }}></View>
+                                </TouchableOpacity>
+                                <View style={{ height: 138, width: '33%' }}>
+                                    <View style={{ height: '40%', borderRadius: 50, marginBottom: 50 }}></View>
+                                </View>
+                                <TouchableOpacity onPress={() => this.navigate.push("About")}>
+                                    <View style={{ height: 138, width: '33%' }}></View>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
+                    </ImageBackground>
                 </View>
                 <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#f0f0f0', paddingBottom: 30 }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#333333', fontSize: 26, marginLeft: 20, marginBottom: 15 }}>Related Video</Text>
@@ -88,7 +83,7 @@ export default class TabHomeActivity extends Component<Props> {
                         style={{ width: "100%", height: 250 }}
                         paused={true}
                         fullscreen={true}
-                        poster={'https://app.beijingepidial.com/static/images/ted.png'} //poster必须是url从互联网访问的形式
+                        poster={'http://192.168.0.114:8080/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
                         source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                         navigator={this.props.navigator}
                     />

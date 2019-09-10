@@ -4,6 +4,7 @@ import Chart from "react-native-f2chart";
 import MotionSlider from 'react-native-motion-slider';
 import { I18n } from '../locales/i18n';
 import data from './data.json'
+import Slider from "rn-vertical-slider-gradient";
 
 type Props = {};
 export default class LifeStyleChartActivity extends Component<Props> {
@@ -69,26 +70,43 @@ export default class LifeStyleChartActivity extends Component<Props> {
 `;
 
         return (
-                <View>
-                    <View style={{ height: 300 }}>
-                        <MotionSlider
-                            title={'how are you'}
+            <View>
+                <View style={{ height: 300, flexDirection: "row", width: "100%" }}>
+                    <Chart style={{ width: "95%", height: 300 }} initScript={initScript(data)} />
+                    <View style={{ height: 285, width: "5%" }}>
+                        <Slider
+                            value={2}
+                            disabled={false}
                             min={0}
                             max={4}
-                            height={25}
-                            value={0}
-                            width={350}
+                            onChange={(value: number) => {
+                                // console.log("CHANGE", value);
+                            }}
+                            onComplete={(value: number) => {
+                                // console.log("COMPLETE", value);
+                            }}
+                            width={30}
+                            height={285}
+                            step={1}
                             borderRadius={5}
-                            units={''}
-                            backgroundColor={['rgb(146, 208, 80)', 'rgb(255, 0, 0)']}
-                            onValueChanged={(value) => console.log(value)}
-                            onPressIn={() => console.log('Pressed in')}
-                            onPressOut={() => console.log('Pressed out')}
-                            onDrag={() => console.log('Dragging')}
+                            ballIndicatorWidth={25}
+                            minimumTrackTintColor={[
+                                "#2ecc71",
+                                "#27ae60",
+                                "#f1c40f",
+                                "#f39c12",
+                                "#d35400",
+                                "#c0392b"
+                            ]}
+                            maximumTrackTintColor="#ecf0f1"
+                            showBallIndicator
+                            ballIndicatorPosition={-30}
+                            ballIndicatorColor={"#0071BC"}
+                            ballIndicatorTextColor={"white"}
                         />
-                        <Chart initScript={initScript(data)} />
                     </View>
                 </View>
+            </View>
         );
     }
 }

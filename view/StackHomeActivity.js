@@ -8,7 +8,7 @@ import LoginActivity from './LoginActivity';
 import ForgetActivity from './ForgetActivity';
 import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
-import { I18n } from '../locales/i18n';
+import LoginIcon from './LoginIcon';
 
 export const RootStack = createStackNavigator(
     {
@@ -33,20 +33,21 @@ export const RootStack = createStackNavigator(
     },
     {
         initialRouteName: 'Main',
-        defaultNavigationOptions: {
-            headerStyle: {
-                backgroundColor: '#0071BC',
-            },
-            headerTintColor: '#fff',
-            headerTitleStyle: {
-                fontWeight: 'bold',
-            },
-            // headerRight: (
-            //     <View style={{ width: 100, height: 50,justifyContent:"center",alignItems:"center" }}>
-            //         <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")}/>
-            //         <Text style={{color:"#fff"}}>{I18n.t('StackHomeActivity.vistor')}</Text>
-            //     </View>
-            // )
+        defaultNavigationOptions: ({ navigation, screenProps }) => {
+            return ({
+                headerStyle: {
+                    backgroundColor: '#0071BC',
+                },
+                headerTintColor: '#fff',
+                headerTitleStyle: {
+                    fontWeight: 'bold',
+                },
+                //每一个screen组件中都自动具有了navigation属性
+                //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
+                //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
+                //所以需要在此处添加 navigation={navigation}，那么LoginIcon中的pros就能有navigation这个对象了
+                headerRight: <LoginIcon navigation={navigation} />
+            })
         }
     }
 );

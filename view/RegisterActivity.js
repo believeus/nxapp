@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, fontFamily, TextInput, ScrollView, TouchableOpacity, Alert, FetchResult, AppRegistry } from 'react-native';
 import ModalDropdown from 'react-native-modal-dropdown';
 import { CheckBox } from 'native-base';
+import { I18n } from '../locales/i18n';
 
 type Props = {};
 export default class RegisterActivity extends Component<Props> {
@@ -9,7 +10,12 @@ export default class RegisterActivity extends Component<Props> {
         super(props);
         this.state = { checked: true };
     }
-
+    static navigationOptions= ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("RegisterActivity.name"),
+            headerRight: null
+        })
+    }
     render() {
         //const navigator=this.props.navitation;//此处可以自定义跳转属性
         return (
