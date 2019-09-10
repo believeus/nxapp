@@ -1,6 +1,6 @@
 {
-    "StackHomeActivity":{
-        "vistor":"vistor"
+    "LoginIcon":{
+        "message":"Hi:Guest"
     },
     "TabHomeActivity": {
         "name": "Home"

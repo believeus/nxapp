@@ -57,6 +57,7 @@ export default class LoginIcon extends Component<Props> {
                                     :
                                     <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
                                         <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")} />
+                                        <Text style={{ color: 'white' }}>{I18n.t('LoginIcon.message')}</Text>
                                     </View>
                                 }
                             </View>

@@ -40,71 +40,75 @@ export default class CenterActivity extends Component {
                                 <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/ic_login.png")}></Image>
                             }
                             {this.state.user == null ?
-                                <View style={{alignSelf:"center"}}>
-                                    <View style={{ width: '30%', height: 25, justifyContent: 'center',alignItems:"center" }}>
-                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center",fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
+                                <View style={{ alignSelf: "center" }}>
+                                    <View style={{ width: '30%', height: 25, justifyContent: 'center', alignItems: "center" }}>
+                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
                                     </View>
                                     <View style={{ width: '30%', height: 25, justifyContent: 'center' }}>
-                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center",fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
+                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
                                     </View>
                                 </View>
-                                
+
                                 :
-                                <View style={{ width: '100%', height: 25, justifyContent: 'center',alignItems:"center" }}>
+                                <View style={{ width: '100%', height: 25, justifyContent: 'center', alignItems: "center" }}>
                                     <Text style={{ color: "#fff", fontSize: 22 }}>{this.state.user.nickname}</Text>
                                 </View>
                             }
                         </View>
                     </View>
+                    {this.state.user != null ?
+                        <TouchableOpacity onPress={() => navigate.push("About")}>
+                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
+                                <View style={{ width: "100%", height: 20 }}></View>
+                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
+                                    <View style={{ height: 40, width: '25%', justifyContent: "center" }}>
+                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc3.png")}></Image>
+                                    </View>
+                                    <View style={{ height: 20, width: '50%', }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}> Questionnaire</Text>
+                                    </View>
+                                    <View style={{ height: 20, width: '20%', }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity> : null}
+                    {this.state.user != null ?
+                        <TouchableOpacity onPress={() => navigate.push("About")}>
+                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
+                                <View style={{ width: "100%", height: 20 }}></View>
+                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
+                                    <View style={{ height: 40, width: '25%', }}>
+                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc4.png")}></Image>
+                                    </View>
+                                    <View style={{ height: 20, width: '50%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>My Report</Text>
+                                    </View>
+                                    <View style={{ height: 20, width: '20%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity>
+                        : null}
+                    {this.state.user != null ?
+                        <TouchableOpacity onPress={() => navigate.push("About")}>
+                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
+                                <View style={{ width: "100%", height: 20 }}></View>
+                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
+                                    <View style={{ height: 40, width: '25%', }}>
+                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc5.png")}></Image>
+                                    </View>
+                                    <View style={{ height: 20, width: '50%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>Order Record</Text>
+                                    </View>
+                                    <View style={{ height: 20, width: '20%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    </View>
+                                </View>
+                            </View>
+                        </TouchableOpacity> : null}
 
-                    <TouchableOpacity onPress={() => navigate.push("About")}>
-                        <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                            <View style={{ width: "100%", height: 20 }}></View>
-                            <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                <View style={{ height: 40, width: '25%', justifyContent: "center" }}>
-                                    <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc3.png")}></Image>
-                                </View>
-                                <View style={{ height: 20, width: '50%', }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}> Questionnaire</Text>
-                                </View>
-                                <View style={{ height: 20, width: '20%', }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigate.push("About")}>
-                        <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                            <View style={{ width: "100%", height: 20 }}></View>
-                            <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                <View style={{ height: 40, width: '25%', }}>
-                                    <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc4.png")}></Image>
-                                </View>
-                                <View style={{ height: 20, width: '50%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>My Report</Text>
-                                </View>
-                                <View style={{ height: 20, width: '20%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={() => navigate.push("About")}>
-                        <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                            <View style={{ width: "100%", height: 20 }}></View>
-                            <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                <View style={{ height: 40, width: '25%', }}>
-                                    <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc5.png")}></Image>
-                                </View>
-                                <View style={{ height: 20, width: '50%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>Order Record</Text>
-                                </View>
-                                <View style={{ height: 20, width: '20%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
-                                </View>
-                            </View>
-                        </View>
-                    </TouchableOpacity>
                     <TouchableOpacity onPress={() => navigate.push("About")}>
                         <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                             <View style={{ width: "100%", height: 20 }}></View>
@@ -138,32 +142,32 @@ export default class CenterActivity extends Component {
                         </View>
                     </TouchableOpacity>
                     {this.state.user != null ?
-                    <TouchableOpacity
-                        onPress={() => {
-                            Session.logout();
-                            const resetAction = StackActions.reset({
-                                index: 0,
-                                actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                            });
-                            this.props.navigation.dispatch(resetAction);
-                        }
-                        }>
-                        <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
-                            <View style={{ width: "100%", height: 20 }}></View>
-                            <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
-                                <View style={{ height: 40, width: '25%', }}>
-                                    <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc7.png")}></Image>
-                                </View>
-                                <View style={{ height: 20, width: '50%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>Log Out</Text>
-                                </View>
-                                <View style={{ height: 20, width: '20%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                        <TouchableOpacity
+                            onPress={() => {
+                                Session.logout();
+                                const resetAction = StackActions.reset({
+                                    index: 0,
+                                    actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                                });
+                                this.props.navigation.dispatch(resetAction);
+                            }
+                            }>
+                            <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", justifyContent: 'center', borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
+                                <View style={{ width: "100%", height: 20 }}></View>
+                                <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>
+                                    <View style={{ height: 40, width: '25%', }}>
+                                        <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/icons/uc7.png")}></Image>
+                                    </View>
+                                    <View style={{ height: 20, width: '50%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>Log Out</Text>
+                                    </View>
+                                    <View style={{ height: 20, width: '20%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    </View>
                                 </View>
                             </View>
-                        </View>
-                    </TouchableOpacity>
-                    :null
+                        </TouchableOpacity>
+                        : null
                     }
                 </View>
             </ScrollView>
