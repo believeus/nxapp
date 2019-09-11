@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
-import Chart from "react-native-f2chart";
-import MotionSlider from 'react-native-motion-slider';
+import { ECharts } from "react-native-echarts-wrapper";
 import { I18n } from '../locales/i18n';
-import data from './data.json'
 import Slider from "rn-vertical-slider-gradient";
 
 type Props = {};
@@ -23,70 +21,39 @@ export default class LifeStyleChartActivity extends Component<Props> {
     render() {
 
         const navigate = this.props.navigation;//此处可以自定义跳转属性
-        const initScript = data => `
-(function(){
-    chart =  new F2.Chart({
-        id: 'chart',
-        pixelRatio: window.devicePixelRatio,
-    });
-    chart.source(${JSON.stringify(data)}, {
-    value: {
-    tickCount: 5,
-    min: 0
-    },
-    date: {
-    type: 'timeCat',
-    range: [0, 1],
-    tickCount: 3
-    }
-    });
-    chart.tooltip({
-    custom: true,
-    showXTip: true,
-    showYTip: true,
-    snap: true,
-    onChange: function(obj) {
-        window.postMessage(stringify(obj))
-    },
-    crosshairsType: 'xy',
-    crosshairsStyle: {
-    lineDash: [2]
-    }
-    });
-    chart.axis('date', {
-    label: function label(text, index, total) {
-    var textCfg = {};
-    if (index === 0) {
-        textCfg.textAlign = 'left';
-    } else if (index === total - 1) {
-        textCfg.textAlign = 'right';
-    }
-    return textCfg;
-    }
-    });
-    chart.line().position('date*value');
-    chart.render();
-})();
-`;
-
+        let option = {
+            xAxis: {
+                type: "category",
+                data: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+            },
+            yAxis: {
+                type: "value"
+            },
+            series: [
+                {
+                    data: [820, 932, 901, 934, 1290, 1330, 1320],
+                    type: "line"
+                }
+            ]
+        };
         return (
             <View>
                 <View style={{ height: 300, flexDirection: "row", width: "100%" }}>
-                    <Chart style={{ width: "95%", height: 300 }} initScript={initScript(data)} />
-                    <View style={{ height: 285, width: "5%" }}>
+                    <ECharts option={option}/>
+                    <View style={{ height: 250, width: "5%" }}>
                         <Slider
                             value={2}
                             disabled={false}
                             min={0}
                             max={4}
-                            onChange={(value: number) => {
+                            onChange={(value) => {
                                 // console.log("CHANGE", value);
                             }}
-                            onComplete={(value: number) => {
+                            onComplete={(value) => {
                                 // console.log("COMPLETE", value);
                             }}
                             width={30}
-                            height={285}
+                            height={250}
                             step={1}
                             borderRadius={5}
                             ballIndicatorWidth={25}

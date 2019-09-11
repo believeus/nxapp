@@ -2250,6 +2250,13 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
+echarts@3.2.3:
+  version "3.2.3"
+  resolved "https://registry.npm.taobao.org/echarts/download/echarts-3.2.3.tgz#4f01e15bfda3352fcd8ef9049f13d8448971a258"
+  integrity sha1-TwHhW/2jNS/NjvkEnxPYRIlxolg=
+  dependencies:
+    zrender "^3.1.3"
+
 ee-first@1.1.1:
   version "1.1.1"
   resolved "http://registry.npm.taobao.org/ee-first/download/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
@@ -4681,6 +4688,13 @@ native-base@^2.13.5:
     react-tween-state "^0.1.5"
     tween-functions "^1.0.1"
 
+native-echarts@^0.5.0:
+  version "0.5.0"
+  resolved "https://registry.npm.taobao.org/native-echarts/download/native-echarts-0.5.0.tgz#611382db27e48ae66cfda733cdf06b85a10b8abc"
+  integrity sha1-YROC2yfkiuZs/aczzfBrhaELirw=
+  dependencies:
+    echarts "3.2.3"
+
 natural-compare@^1.4.0:
   version "1.4.0"
   resolved "http://registry.npm.taobao.org/natural-compare/download/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
@@ -5464,6 +5478,14 @@ react-native-easy-grid@0.2.2:
   dependencies:
     lodash "^4.17.15"
 
+react-native-echarts-wrapper@^1.4.5:
+  version "1.4.5"
+  resolved "https://registry.npm.taobao.org/react-native-echarts-wrapper/download/react-native-echarts-wrapper-1.4.5.tgz#523dcdcade13897f26994a3cd861147f772a1476"
+  integrity sha1-Uj3Nyt4TiX8mmUo82GEUf3cqFHY=
+  dependencies:
+    prop-types "^15.7.2"
+    react-native-webview "^5.7.0"
+
 react-native-elements@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npm.taobao.org/react-native-elements/download/react-native-elements-1.1.0.tgz#f99bcda4459a886f3ab4591c684c099d37aedf2b"
@@ -5548,6 +5570,11 @@ react-native-orientation@^3.1.3:
   version "3.1.3"
   resolved "https://registry.npm.taobao.org/react-native-orientation/download/react-native-orientation-3.1.3.tgz#d45803841fe94b6cce9acbe904fd5ca191a3711e"
   integrity sha1-1FgDhB/pS2zOmsvpBP1coZGjcR4=
+
+react-native-popup-menu@^0.15.6:
+  version "0.15.6"
+  resolved "https://registry.npm.taobao.org/react-native-popup-menu/download/react-native-popup-menu-0.15.6.tgz#ebf885c289028e330dd66d887e685a8b0c2de970"
+  integrity sha1-6/iFwokCjjMN1m2Ifmhaiwwt6XA=
 
 react-native-ratings@^6.3.0:
   version "6.4.0"
@@ -5683,10 +5710,10 @@ react-native-video@^5.0.0:
     prop-types "^15.5.10"
     shaka-player "^2.4.4"
 
-react-native-webview@^6.11.0:
-  version "6.11.1"
-  resolved "https://registry.npm.taobao.org/react-native-webview/download/react-native-webview-6.11.1.tgz#51fab0838ef9bdf3efd0d3f27147dddda5119f94"
-  integrity sha1-Ufqwg475vfPv0NPycUfd3aURn5Q=
+react-native-webview@5.12.1, react-native-webview@^5.7.0:
+  version "5.12.1"
+  resolved "https://registry.npm.taobao.org/react-native-webview/download/react-native-webview-5.12.1.tgz#5e2b124e9087d64fc40040d911c10ee5744b5d4d"
+  integrity sha1-XisSTpCH1k/EAEDZEcEO5XRLXU0=
   dependencies:
     escape-string-regexp "1.0.5"
     invariant "2.2.4"
@@ -6112,6 +6139,11 @@ rimraf@~2.2.6:
   version "2.2.8"
   resolved "http://registry.npm.taobao.org/rimraf/download/rimraf-2.2.8.tgz#e439be2aaee327321952730f99a8929e4fc50582"
   integrity sha1-5Dm+Kq7jJzIZUnMPmaiSnk/FBYI=
+
+rn-vertical-slider-gradient@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.npm.taobao.org/rn-vertical-slider-gradient/download/rn-vertical-slider-gradient-1.0.3.tgz#e9cf7b3f468bb74d618df524018d5002ae531326"
+  integrity sha1-6c97P0aLt01hjfUkAY1QAq5TEyY=
 
 rsvp@^4.8.4:
   version "4.8.4"
@@ -7250,3 +7282,8 @@ yargs@^9.0.0:
     which-module "^2.0.0"
     y18n "^3.2.1"
     yargs-parser "^7.0.0"
+
+zrender@^3.1.3:
+  version "3.7.4"
+  resolved "https://registry.npm.taobao.org/zrender/download/zrender-3.7.4.tgz?cache=0&sync_timestamp=1567175890863&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fzrender%2Fdownload%2Fzrender-3.7.4.tgz#f847d53948481ef6d42906d1ea9aeec7acbefdf2"
+  integrity sha1-+EfVOUhIHvbUKQbR6prux6y+/fI=

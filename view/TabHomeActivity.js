@@ -62,6 +62,7 @@ export default class TabHomeActivity extends Component<Props> {
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around',  flexDirection: 'row' }}>
                                 <Text onPress={() => this.navigate.push("Forget")} style={{ height: 128, width: '32%' }}></Text>
+
                                 <View  style={{ height: 128, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={()=>{this.navigate.push("LifeStyleChart")}} style={{ height: 56, marginTop: 80 }}></Text>
                                 </View>
