@@ -4,9 +4,11 @@
     },
     "TabHomeActivity": {
         "name": "Home"
+
+
     },
     "AboutActivity":{
-        "name": "About us",
+        "name": "About us"
     },
     "LoginActivity": {
         "name": "User login",

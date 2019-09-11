@@ -12,7 +12,12 @@ import { colors } from 'react-native-elements';
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = {
-
+        headerRight: (
+            <View style={{ width: 100, height: 50, justifyContent: "center", alignItems: "center" }}>
+                <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")} />
+                <Text style={{ color: "#fff" }}>Hello</Text>
+            </View>
+        )
 
     }
     constructor(props) {
@@ -54,25 +59,20 @@ export default class TabHomeActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
                     <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='center'  >
-
-                        <View style={{ width: '90%', alignSelf: 'center', height: 299, marginTop: 34, zIndex: 999 }}>
-                            <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <Text onPress={() => {  this.navigate.push("Forget");}}style={{ bheight: 128, width: '32%' }}></Text>
+                        <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
+                            <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around',  flexDirection: 'row' }}>
+                                <Text onPress={() => this.navigate.push("Forget")} style={{ height: 128, width: '32%' }}></Text>
                                 <View  style={{ height: 128, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={()=>{this.navigate.push("LifeStyleChart")}} style={{ height: 56, marginTop: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%', }}></Text>
+                                <Text onPress={() => this.navigate.push("Forget")} style={{ height: 128, width: '32%', }}></Text>
                             </View>
-                            <View style={{ heigh: 128, justifyContent: 'space-around', flexDirection: 'row', zIndex: 0 }}>
-                                <TouchableOpacity onPress={() => this.navigate.push("About")}>
-                                    <View style={{ height: 138, width: '33%' }}></View>
-                                </TouchableOpacity>
-                                <View style={{ height: 138, width: '33%' }}>
-                                    <View style={{ height: '40%', borderRadius: 50, marginBottom: 50 }}></View>
+                            <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around',  flexDirection: 'row' }}>
+                                <Text onPress={() => this.navigate.push("Forget")} style={{  height: 141, width: '32%' }}></Text>
+                                <View style={{ height: 141, width: '36%',  alignSelf: 'center' }}>
+                                    <Text onPress={() => this.navigate.push("Forget")} style={{ height: 56, marginBottom: 80 }}></Text>
                                 </View>
-                                <TouchableOpacity onPress={() => this.navigate.push("About")}>
-                                    <View style={{ height: 138, width: '33%' }}></View>
-                                </TouchableOpacity>
+                                <Text onPress={() => this.navigate.push("Forget")} style={{  height: 141, width: '32%', }}></Text>
                             </View>
                         </View>
                     </ImageBackground>
@@ -119,11 +119,13 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>Biological Age Detection 2.0 &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
                             </View>
-                            <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
-                                <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
+
+                            <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
-                                </View>
-                            </TouchableOpacity>
+                                </TouchableOpacity>
+                            </View>
+
                         </View>
                         <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
                             <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>Learn  More &gt;</Text>
@@ -176,11 +178,13 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>SAM-e &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
                             </View>
-                            <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
-                                <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
+
+                            <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
+                                <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
-                                </View>
-                            </TouchableOpacity>
+                                </TouchableOpacity>
+                            </View>
+
                         </View>
                         <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
                             <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>Learn  More &gt;</Text>
