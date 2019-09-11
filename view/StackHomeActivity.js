@@ -9,6 +9,7 @@ import ForgetActivity from './ForgetActivity';
 import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
 import LoginIcon from './LoginIcon';
+import DnaReportActivity from './DnaReportActivity';
 
 export const RootStack = createStackNavigator(
     {
@@ -30,6 +31,9 @@ export const RootStack = createStackNavigator(
         Forget: {
             screen: ForgetActivity
         },
+        DnaReport:{
+            screen:DnaReportActivity
+        }
     },
     {
         initialRouteName: 'Main',

@@ -7,6 +7,7 @@ import Input from "react-native-input-validation"
 import md5 from "react-native-md5";
 import { NavigationActions, StackActions } from 'react-navigation';
 import Session from '../storage/Session';
+import data from '../appdata'
 
 
 type Props = {};
@@ -26,29 +27,27 @@ export default class LoginActivity extends Component<Props> {
         if (!this.isValid) { Toast.show(I18n.t("LoginActivity.mailboxformatFail"), { duration: 7000, position: Toast.positions.CENTER }); return }
         if (!this.state.email) { Toast.show(I18n.t("LoginActivity.mailboxNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
         if (!this.state.password) { Toast.show(I18n.t("LoginActivity.passwordNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
-        let url = "http://192.168.0.113:8080/user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
-        try {
-            let sessionuser = await fetch(url)
-            if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-            else {
-                if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                Session.save("sessionuser", sessionuser);
-                //React-Navigation跳转并清除路由记录（重置）
-                const resetAction = StackActions.reset({
-                    index: 0,
-                    actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                });
-                this.props.navigation.dispatch(resetAction);
+        let url = data.url+"user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
+        fetch(url).then(res => res.json())
+            .then(sessionuser => {
+                if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                else {
+                    if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                    if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                    Session.save("sessionuser", sessionuser);
+                    //React-Navigation跳转并清除路由记录（重置）
+                    const resetAction = StackActions.reset({
+                        index: 0,
+                        actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                    });
+                    this.props.navigation.dispatch(resetAction);
 
-            }
-        } catch (error) {
-            console.info(error)
-            Toast.show(I18n.t("LoginActivity.Invalid.NetFail"), { duration: 5000, position: Toast.positions.CENTER })
-        }
-
-
-
+                }
+            })
+            .catch((e) => {
+                console.info(e)
+                Toast.show(I18n.t("LoginActivity.Invalid.NetFail"), { duration: 5000, position: Toast.positions.CENTER })
+            })
     }
     render() {
         this.navigate = this.props.navigation;

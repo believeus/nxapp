@@ -8,7 +8,7 @@ import Slider from '@react-native-community/slider';
 import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
 import { getLanguages } from 'react-native-i18n'
-import { colors } from 'react-native-elements';
+import Session from '../storage/Session';
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = {
@@ -22,10 +22,14 @@ export default class TabHomeActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.waiting=true;
-
+        this.state = { user: null };
     }
-
+    //因为Session.load方法异步的,所以可以给sate设置值，设置之后，页面渲染会根据sata中的值变化而变化
+    componentDidMount() {
+        Session.load("sessionuser").then((user) => {
+            this.setState({ user: user });
+        });
+    }
     render() {
         this.navigate = this.props.navigation;
         return (
@@ -41,16 +45,15 @@ export default class TabHomeActivity extends Component<Props> {
                         autoplay={true}>
                         <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
                             <View style={{ width: '100%', height: 310 }}>
-
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index1.jpg')} resizeMode="center" />
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("DnaReport")}>
                             <View style={{ width: '100%', height: 310 }}>
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode="center" />
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("DnaReport")}>
                             <View style={{ width: '100%', height: 310 }}>
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
                             </View>
@@ -60,20 +63,21 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
                     <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='center'  >
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
-                            <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around',  flexDirection: 'row' }}>
+                            <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <Text onPress={() => this.navigate.push("Forget")} style={{ height: 128, width: '32%' }}></Text>
 
-                                <View  style={{ height: 128, width: '36%', alignSelf: 'center' }}>
-                                    <Text onPress={()=>{this.navigate.push("LifeStyleChart")}} style={{ height: 56, marginTop: 80 }}></Text>
+                                <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
+                                    <Text onPress={() => { this.navigate.push("LifeStyleChart") }} style={{ height: 56, marginTop: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => this.navigate.push("Forget")} style={{ height: 128, width: '32%', }}></Text>
+                                <Text onPress={() => { }} style={{ height: 128, width: '32%', }}></Text>
                             </View>
-                            <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around',  flexDirection: 'row' }}>
-                                <Text onPress={() => this.navigate.push("Forget")} style={{  height: 141, width: '32%' }}></Text>
-                                <View style={{ height: 141, width: '36%',  alignSelf: 'center' }}>
-                                    <Text onPress={() => this.navigate.push("Forget")} style={{ height: 56, marginBottom: 80 }}></Text>
+                            <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
+                                <Text onPress={() => { }} style={{ height: 141, width: '32%' }}></Text>
+                                <View style={{ height: 141, width: '36%', alignSelf: 'center' }}>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("DnaReport") }}
+                                        style={{ height: 56, marginBottom: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => this.navigate.push("Forget")} style={{  height: 141, width: '32%', }}></Text>
+                                <Text onPress={() => this.navigate.push("Forget")} style={{ height: 141, width: '32%', }}></Text>
                             </View>
                         </View>
                     </ImageBackground>
