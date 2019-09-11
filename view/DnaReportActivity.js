@@ -1,58 +1,50 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, Container } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
-
+import Session from '../storage/Session';
+import { I18n } from '../locales/i18n';
 
 type Props = {};
 export default class DnaReportActivity extends Component<Props> {
+    static navigationOptions = {
+        title: I18n.t("DnaReportActivity.name"),
+    };
     constructor(props) {
         super(props);
         this.state = { user: null };
     }
 
+    componentDidMount() {
+        Session.load("sessionuser").then((user) => {
+            this.setState({ user: user });
+        });
 
+    }
     render() {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
-        var option = {
-            tooltip: {
-                trigger: 'axis',
-                showDelay: 0,
-                formatter: function (params) {
-                    if (params.value.length > 1) {
-                        return params.seriesName + ' :<br/>' + params.value[0] + 'age   ' + params.value[1] + ' Age ';
-                    } else {
-                        return params.seriesName + ' :<br/>' + params.name + ' : ' + params.value + ' Age';
-                    }
-                },
-                axisPointer: {
-                    show: true,
-                    type: 'cross',
-                    lineStyle: {
-                        type: 'dashed',
-                        width: 1
-                    }
-                }
-            },
+        let option = {
             legend: {
                 data: ['Chronological Age<Biological Age', 'Chronological Age>Biological Age']
             },
             xAxis: [{
-                name: '',
+                name: 'Chronological Age',
                 type: 'value',
-                nameLocation: 'end',
+                nameLocation: 'middle',
+                nameGap:"25",
                 scale: true,
+                nameTextStyle:{color:"#0071BC"},
                 axisLabel: {
                     formatter: '{value}'
                 }
             }],
             yAxis: [{
-                name: ' ',
-                nameLocation: 'end',
-                position: 'left',
-                nameGap: 60,
+                name: 'Biological Age',
+                nameLocation: 'middle',
+                nameGap: 22,
                 nameRotate: 90,
                 type: 'value',
                 scale: true,
+                nameTextStyle:{color:"#0071BC"},
                 axisLabel: {
                     formatter: '{value}'
                 }
@@ -135,11 +127,9 @@ export default class DnaReportActivity extends Component<Props> {
 
         return (
 
-            <ScrollView style={styles.container}>
-                <View style={{ height: 300, flexDirection: "row", width: "100%" }}>
-                    <ECharts option={option} />
-                </View>
-            </ScrollView>
+            <View  style={{ height: 300, flexDirection: "row", width: "100%" }}>
+                <ECharts option={option} />
+            </View>
         );
     }
 }

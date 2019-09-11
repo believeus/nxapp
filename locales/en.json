@@ -43,7 +43,10 @@
         
     },
     "LifeStyleChartActivity":{
-        "name":"Life Style Questionnaire"
+        "name":"Life Style Questionnaire",
+    },
+    "DnaReportActivity":{
+        "name":"Chronological age",
     },
     "user_profile": {
         "title": "Your Profile"
