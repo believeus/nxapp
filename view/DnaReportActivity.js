@@ -11,7 +11,6 @@ export default class DnaReportActivity extends Component<Props> {
     };
     constructor(props) {
         super(props);
-        this.state = { user: null };
     }
 
     componentDidMount() {
