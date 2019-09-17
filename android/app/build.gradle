@@ -74,7 +74,10 @@ import com.android.build.OutputFile
 
 project.ext.react = [
     entryFile: "index.js",
-    enableHermes: true
+    enableHermes: true,
+    hermesCommand: "../../node_modules/hermesvm/%OS-BIN%/hermes",
+    bundleInBeta: true,
+    devDisabledInBeta: true
 ]
 
 
@@ -167,6 +170,9 @@ android {
 def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 dependencies {
+    implementation project(':react-native-paypal-wrapper')
+    implementation project(':react-native-paypal-lib')
+    implementation project(':react-native-paypal')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-device-info')
     implementation project(':react-native-i18n')
@@ -183,6 +189,8 @@ dependencies {
     implementation 'com.android.support:design:27.1.0'
     //implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:0.60.5"  // From node_modules
+    implementation "com.braintreepayments.api:braintree:2.17.0" //for paypal payment
+    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
@@ -198,7 +206,3 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
-project.ext.react = [
-  bundleInBeta: true,
-  devDisabledInBeta: true
-];

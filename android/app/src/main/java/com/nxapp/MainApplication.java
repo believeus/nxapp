@@ -3,6 +3,9 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.taessina.paypal.RNPaypalWrapperPackage;
+import com.reactlibrary.RNPaypalPackage;
+
 
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
 import com.learnium.RNDeviceInfo.RNDeviceInfo;
@@ -38,6 +41,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new RNPaypalWrapperPackage(),
+            new RNPaypalPackage(),
             new AsyncStoragePackage(),
             new RNDeviceInfo(),
             new RNI18nPackage(),

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, ImageBackground, TouchableOpacity, Container, StatusBar, ImageComponent } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity} from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
 import StackHomeActivity from './StackHomeActivity';
 import Swiper from 'react-native-swiper';

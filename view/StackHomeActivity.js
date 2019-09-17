@@ -10,7 +10,7 @@ import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
 import LoginIcon from './LoginIcon';
 import DnaReportActivity from './DnaReportActivity';
-
+import PaymentActivity from './PaymentActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -33,6 +33,9 @@ export const RootStack = createStackNavigator(
         },
         DnaReport:{
             screen:DnaReportActivity
+        },
+        Payment:{
+            screen:PaymentActivity
         }
     },
     {

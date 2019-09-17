@@ -78,6 +78,8 @@
 		D2B643A781E14AF78F81EF99 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44246A2C4134422483696C2B /* libRNDeviceInfo.a */; };
 		DC55A8933CBD49B283F30E56 /* libRNDeviceInfo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 888C16C14FEE40AEAD1A0DD6 /* libRNDeviceInfo-tvOS.a */; };
 		9FB4FDC7CAC146F687D994A2 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3D3518C0E94DBAA477D42D /* libRNCAsyncStorage.a */; };
+		6B1E3090C0E34BB595B1492E /* libRNPaypal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8014ACC244D81ABDA7608 /* libRNPaypal.a */; };
+		185514E5EC8541C19941F328 /* libRNPaypalWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F6A07579604132BA33F84C /* libRNPaypalWrapper.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -436,6 +438,10 @@
 		888C16C14FEE40AEAD1A0DD6 /* libRNDeviceInfo-tvOS.a */ = {isa = PBXFileReference; name = "libRNDeviceInfo-tvOS.a"; path = "libRNDeviceInfo-tvOS.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		637BB26B85584AD6B90764BB /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; name = "RNCAsyncStorage.xcodeproj"; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		3F3D3518C0E94DBAA477D42D /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; name = "libRNCAsyncStorage.a"; path = "libRNCAsyncStorage.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		817CDA2F36F247B7BE7E69F7 /* RNPaypal.xcodeproj */ = {isa = PBXFileReference; name = "RNPaypal.xcodeproj"; path = "../node_modules/react-native-paypal/ios/RNPaypal.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		F3F8014ACC244D81ABDA7608 /* libRNPaypal.a */ = {isa = PBXFileReference; name = "libRNPaypal.a"; path = "libRNPaypal.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */ = {isa = PBXFileReference; name = "RNPaypalWrapper.xcodeproj"; path = "../node_modules/react-native-paypal-wrapper/ios/RNPaypalWrapper.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		B2F6A07579604132BA33F84C /* libRNPaypalWrapper.a */ = {isa = PBXFileReference; name = "libRNPaypalWrapper.a"; path = "libRNPaypalWrapper.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -476,6 +482,8 @@
 				B3BEC730838E4A8FB2E2551B /* libRNI18n.a in Frameworks */,
 				D2B643A781E14AF78F81EF99 /* libRNDeviceInfo.a in Frameworks */,
 				9FB4FDC7CAC146F687D994A2 /* libRNCAsyncStorage.a in Frameworks */,
+				6B1E3090C0E34BB595B1492E /* libRNPaypal.a in Frameworks */,
+				185514E5EC8541C19941F328 /* libRNPaypalWrapper.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -682,6 +690,8 @@
 				D23D74E74C5F43648BF5C7DD /* RNI18n.xcodeproj */,
 				B669E16AEAB24CF8AD03C31F /* RNDeviceInfo.xcodeproj */,
 				637BB26B85584AD6B90764BB /* RNCAsyncStorage.xcodeproj */,
+				817CDA2F36F247B7BE7E69F7 /* RNPaypal.xcodeproj */,
+				FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1364,6 +1374,8 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nxapp.app/nxapp";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1380,6 +1392,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Debug;
@@ -1401,6 +1415,8 @@
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/nxapp.app/nxapp";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1417,6 +1433,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Release;
@@ -1452,6 +1470,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Debug;
@@ -1486,6 +1506,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Release;
@@ -1515,6 +1537,8 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1531,6 +1555,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Debug;
@@ -1560,6 +1586,8 @@
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1576,6 +1604,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Release;
@@ -1604,6 +1634,8 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1620,6 +1652,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Debug;
@@ -1648,6 +1682,8 @@
 				TVOS_DEPLOYMENT_TARGET = 10.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1664,6 +1700,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-i18n\ios",
 					"$(SRCROOT)/..\node_modules\react-native-device-info\ios\RNDeviceInfo",
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
+					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
+					"$(SRCROOT)/../**",
 				);
 			};
 			name = Release;

@@ -1,0 +1,15 @@
+﻿/****************************************************************
+ *																*		
+ * 						      代码库							*
+ *                        www.dmaku.com							*
+ *       		  努力创建完善、持续更新插件以及模板			*
+ * 																*
+****************************************************************/
+body{background:#fff;color:#D5D6E2;font-family:"Microsoft YaHei","Segoe UI","Lucida Grande",Helvetica,Arial,sans-serif}
+*{margin:0;margin:0}
+.dmaku-container{margin:0 auto;text-align:center;overflow:hidden}
+.dmaku-header{padding:3em 190px 2em;letter-spacing:-1px;text-align:center}
+.dmaku-header h1{color:#404d5b;font-weight:600;font-size:2em;line-height:1;margin-bottom:0;font-family:"Segoe UI","Lucida Grande",Helvetica,Arial,"Microsoft YaHei",FreeSans,Arimo,"Droid Sans","wenquanyi micro hei","Hiragino Sans GB","Hiragino Sans GB W3","FontAwesome",sans-serif}
+.dmaku-content{min-height:60vh;height:60vh;font-size:150%;padding:1em 0}
+.bgcolor-3{background:#e8e8e8}
+*,*:after,*:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
