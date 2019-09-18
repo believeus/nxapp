@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, Container } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
+
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
+
 
 type Props = {};
 export default class DnaReportActivity extends Component<Props> {
@@ -11,6 +13,7 @@ export default class DnaReportActivity extends Component<Props> {
     };
     constructor(props) {
         super(props);
+        this.state = { barcode: '' };
     }
 
     componentDidMount() {
@@ -29,9 +32,9 @@ export default class DnaReportActivity extends Component<Props> {
                 name: 'Chronological Age',
                 type: 'value',
                 nameLocation: 'middle',
-                nameGap:"25",
+                nameGap: "25",
                 scale: true,
-                nameTextStyle:{color:"#0071BC"},
+                nameTextStyle: { color: "#0071BC" },
                 axisLabel: {
                     formatter: '{value}'
                 }
@@ -43,7 +46,7 @@ export default class DnaReportActivity extends Component<Props> {
                 nameRotate: 90,
                 type: 'value',
                 scale: true,
-                nameTextStyle:{color:"#0071BC"},
+                nameTextStyle: { color: "#0071BC" },
                 axisLabel: {
                     formatter: '{value}'
                 }
@@ -126,9 +129,50 @@ export default class DnaReportActivity extends Component<Props> {
 
         return (
 
-            <View  style={{ height: 300, flexDirection: "row", width: "100%" }}>
-                <ECharts option={option} />
-            </View>
+            <ScrollView>
+                <View style={{ width: "100%" }}>
+                    <View style={{ width: "100%", height: 10 }}></View>
+                    <View style={{ width: "100%", alignItems: "center" }}>
+                        <View style={{ height: 35, flexDirection: "row", width: "90%" }}>
+                            <TextInput
+                                style={{ width: "75%", height: 35, borderColor: '#0071BC', borderWidth: 1 }}
+                                onChangeText={(barcode) => this.setState({ barcode })}
+                                placeholder={"Your barcode"}
+                                value={this.state.barcode}
+                            />
+                            {this.state.barcode == "" ?
+                                <View style={{ width: "15%", height: 35 }} >
+                                    <TouchableOpacity onPress={() => {
+                                        navigate.push("Scanner", {
+                                            barcode: this.state.barcode,
+                                            callback: (data) => {
+                                                this.setState({ barcode: data })
+                                            }
+                                        })
+                                    }}>
+                                        <Image style={{ width: "100%", height: 35 }} resizeMode="center" source={require("../image/scan.png")}></Image>
+                                    </TouchableOpacity>
+                                </View>
+                                :
+                                <TouchableOpacity onPress={() => { }}>
+                                    <View style={{ width: "15%", height: 35 }} >
+                                        <Image style={{ width: "100%", height: "100%" }} resizeMode="center" source={require("../image/report.png")}></Image>
+                                    </View>
+                                </TouchableOpacity>
+                            }
+
+
+
+                        </View>
+
+                    </View>
+
+                    <View style={{ height: 10, width: "100%" }}></View>
+                    <View style={{ height: 300, width: "100%" }}>
+                        <ECharts option={option} />
+                    </View>
+                </View>
+            </ScrollView>
         );
     }
 }

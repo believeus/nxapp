@@ -3,6 +3,7 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.reactnativecomponent.barcode.RCTCapturePackage;
 import com.taessina.paypal.RNPaypalWrapperPackage;
 import com.reactlibrary.RNPaypalPackage;
 
@@ -30,8 +31,7 @@ import java.util.List;
 
 
 public class MainApplication extends Application implements ReactApplication {
-
-  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
+  private  ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
@@ -41,6 +41,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new RCTCapturePackage(),
             new RNPaypalWrapperPackage(),
             new RNPaypalPackage(),
             new AsyncStoragePackage(),
@@ -62,6 +63,10 @@ public class MainApplication extends Application implements ReactApplication {
       return "index";
     }
   };
+
+  public void setReactNativeHost(ReactNativeHost reactNativeHost) {
+      mReactNativeHost = reactNativeHost;
+  }
 
   @Override
   public ReactNativeHost getReactNativeHost() {

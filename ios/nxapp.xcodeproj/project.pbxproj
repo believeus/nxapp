@@ -80,6 +80,7 @@
 		9FB4FDC7CAC146F687D994A2 /* libRNCAsyncStorage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F3D3518C0E94DBAA477D42D /* libRNCAsyncStorage.a */; };
 		6B1E3090C0E34BB595B1492E /* libRNPaypal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F3F8014ACC244D81ABDA7608 /* libRNPaypal.a */; };
 		185514E5EC8541C19941F328 /* libRNPaypalWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F6A07579604132BA33F84C /* libRNPaypalWrapper.a */; };
+		FE33386980B541E7B2783DBD /* libRCTBarcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB95C82516B48DDABB784A4 /* libRCTBarcode.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -442,6 +443,8 @@
 		F3F8014ACC244D81ABDA7608 /* libRNPaypal.a */ = {isa = PBXFileReference; name = "libRNPaypal.a"; path = "libRNPaypal.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */ = {isa = PBXFileReference; name = "RNPaypalWrapper.xcodeproj"; path = "../node_modules/react-native-paypal-wrapper/ios/RNPaypalWrapper.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		B2F6A07579604132BA33F84C /* libRNPaypalWrapper.a */ = {isa = PBXFileReference; name = "libRNPaypalWrapper.a"; path = "libRNPaypalWrapper.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		3F42DF89083F4EBFB32431A3 /* RCTBarCode.xcodeproj */ = {isa = PBXFileReference; name = "RCTBarCode.xcodeproj"; path = "../node_modules/react-native-smart-barcode/ios/RCTBarcode/RCTBarCode.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		7EB95C82516B48DDABB784A4 /* libRCTBarcode.a */ = {isa = PBXFileReference; name = "libRCTBarcode.a"; path = "libRCTBarcode.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +487,7 @@
 				9FB4FDC7CAC146F687D994A2 /* libRNCAsyncStorage.a in Frameworks */,
 				6B1E3090C0E34BB595B1492E /* libRNPaypal.a in Frameworks */,
 				185514E5EC8541C19941F328 /* libRNPaypalWrapper.a in Frameworks */,
+				FE33386980B541E7B2783DBD /* libRCTBarcode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -692,6 +696,7 @@
 				637BB26B85584AD6B90764BB /* RNCAsyncStorage.xcodeproj */,
 				817CDA2F36F247B7BE7E69F7 /* RNPaypal.xcodeproj */,
 				FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */,
+				3F42DF89083F4EBFB32431A3 /* RCTBarCode.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1376,6 +1381,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1394,6 +1400,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Debug;
@@ -1417,6 +1424,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1435,6 +1443,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Release;
@@ -1472,6 +1481,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Debug;
@@ -1508,6 +1518,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Release;
@@ -1539,6 +1550,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1557,6 +1569,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Debug;
@@ -1588,6 +1601,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1606,6 +1620,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Release;
@@ -1636,6 +1651,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1654,6 +1670,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Debug;
@@ -1684,6 +1701,7 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1702,6 +1720,7 @@
 					"$(SRCROOT)/..\node_modules\@react-native-community\async-storage\ios",
 					"$(SRCROOT)/..\node_modules\react-native-paypal\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 				);
 			};
 			name = Release;
