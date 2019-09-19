@@ -11,14 +11,18 @@ export default class GoodsItem extends Component<Props> {
             size: 1,
             check: false,
         }
+        this.props.size=1
 
     }
+    
     itemAdd() {
         this.setState({ size: this.state.size + 1 })
+        this.props.size=this.state.size
     }
     itemMin() {
         if (this.state.size == 1) { return }
         this.setState({ size: this.state.size - 1 })
+        this.props.size=this.state.size
     }
     render() {
 
@@ -38,7 +42,7 @@ export default class GoodsItem extends Component<Props> {
                             <Image style={{ width: 62, height: 67, alignSelf: 'center' }} source={this.props.imgpath} resizeMode='center' />
                         </View>
                         <View style={{ width: '43%' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', height: 34, width: 200, color: '#0071bc' }}>{this.props.title}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', height: 34, width: 200,fontSize:16, color: '#0071bc' }}>{this.props.title}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', height: 23, width: 178, fontSize: 12, lineHeight: 26 }}>{this.props.intro}</Text>
                             <View style={{ width: 78, height: 23, flexDirection: 'row' }}>
                                 <Text style={{ height: 23, fontFamily: 'NotoSansHans-Light', lineHeight: 31, textAlign: 'center', textDecorationLine: 'line-through' }}>{this.props.oldprice}</Text>
