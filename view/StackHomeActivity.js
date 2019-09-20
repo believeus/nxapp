@@ -14,7 +14,8 @@ import ScannerAcitivity from './ScannerAcitivity'
 import ConfirmActivity from './ConfirmActivity';
 import TabMallActivity from './TabMallActivity';
 import LoginIcon from './LoginIcon';
-
+import MoreProActivity from './MoreProActivity';
+import CheckActivity from './CheckActivity';
 
 export const RootStack = createStackNavigator(
     {
@@ -24,11 +25,17 @@ export const RootStack = createStackNavigator(
         About: {
             screen: AboutActivity
         },
-        Mall:{
-            screen:TabMallActivity
+        Mall: {
+            screen: TabMallActivity
         },
-        Confirm:{
-            screen:ConfirmActivity
+        MorePro: {
+            screen: MoreProActivity
+        },
+        Check: {
+            screen: CheckActivity
+        },
+        Confirm: {
+            screen: ConfirmActivity
         },
         Login: {
             screen: LoginActivity
@@ -42,14 +49,14 @@ export const RootStack = createStackNavigator(
         Forget: {
             screen: ForgetActivity
         },
-        DnaReport:{
-            screen:DnaReportActivity
+        DnaReport: {
+            screen: DnaReportActivity
         },
-        Payment:{
-            screen:PaymentActivity
+        Payment: {
+            screen: PaymentActivity
         },
-        Scanner:{
-            screen:ScannerAcitivity
+        Scanner: {
+            screen: ScannerAcitivity
         }
     },
     {
