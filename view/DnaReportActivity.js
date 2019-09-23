@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
-import PopupDialog, { SlideAnimation } from 'react-native-popup-dialog';
 import data from '../appdata'
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';

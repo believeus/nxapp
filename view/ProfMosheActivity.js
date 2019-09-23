@@ -3,9 +3,9 @@ import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, 
 import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
 type Props = {};
-export default class TabAboutActivity extends Component<Props> {
+export default class ProfMosheActivity extends Component<Props> {
     static navigationOptions = {
-        name: I18n.t("TabAboutActivity.name"),
+        name: I18n.t("ProfMosheActivity.name"),
     };
     constructor(props) {
         super(props);
@@ -24,17 +24,12 @@ export default class TabAboutActivity extends Component<Props> {
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, }}>| Science Team</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                        <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au2.png")}></Image>
-                    </TouchableOpacity>
-
+                    <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au2.png")}></Image>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, }}>| DNA Methylation</Text>
-                    <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                        <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au3.png")}></Image>
-                    </TouchableOpacity>
+                    <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au3.png")}></Image>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>

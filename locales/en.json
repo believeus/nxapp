@@ -43,12 +43,24 @@
         
     },
     "LifeStyleChartActivity":{
-        "name":"Life Style Questionnaire",
+        "name":"Life Style Questionnaire"
     },
     "DnaReportActivity":{
-        "name":"Chronological age",
+        "name":"Chronological age"
     },
     "user_profile": {
         "title": "Your Profile"
+    },
+    "CompanyActivity":{
+        "name":"Company Introduction"
+    },
+    "TabAboutActivity":{
+        "name":"About us"
+    },
+    "ScienceteamActivity":{
+        "name":"Our Science team"
+    },
+    "ProfMosheActivity":{
+        "name":"Prof. Moshe"
     }
 }

@@ -7,7 +7,7 @@ import Swiper from 'react-native-swiper';
 import Slider from '@react-native-community/slider';
 import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
-import { getLanguages } from 'react-native-i18n'
+import { getLanguages } from 'react-native-i18n';
 import Session from '../storage/Session';
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
