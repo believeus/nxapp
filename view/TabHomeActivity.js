@@ -289,7 +289,11 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                     </View>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 16,textDecorationLine:'underline', }}>Disclaimer</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 14,lineHeight:16 }}>The epiAging test is not intended to be health 
+                    information or medical data or to be used to screen, diagnose, treat, prevent or assess risk of any disease or condition. The epiAging service is an epigenetic age determination based on assessment of DNA methylation in your DNA. We are not collecting genetic data. The test is available for individuals 21 years of age or older. This service has not been cleared or approved by U. S. Food and Drug Administration.
+                     </Text>
+                     <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}> @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
                 </View>
             </ScrollView >
 
