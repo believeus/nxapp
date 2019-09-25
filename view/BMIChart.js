@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Modal, Button, TouchableOpacity } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
-import Input from "react-native-input-validation"
+import InputSpinner from "react-native-input-spinner";
 import { WebView } from 'react-native-webview'
 import Session from '../storage/Session';
 import data from '../appdata'
@@ -14,6 +14,7 @@ export default class BMIChart extends Component<Props> {
         super(props);
         this.state = {
             display: false,
+            bmiwebview: false,
             score: 0.5,
             option: {
                 tooltip: {
@@ -101,28 +102,110 @@ export default class BMIChart extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
+                {this.state.bmiwebview == true ?
+                    <Modal animationType='slide' transparent={false} visible={this.state.bmiwebview} onRequestClose={() => { this.setState({ bmiwebview: true }) }}>
+                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: "https://www.nhlbi.nih.gov/health/educational/lose_wt/BMI/bmicalc.htm" }} />
+                        <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
+                            <TouchableOpacity style={{ width: "100%", height: "100%" }}>
+                                <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ bmiwebview: false }) } }} />
+                            </TouchableOpacity>
+                        </View>
+                    </Modal> : null
+                }
                 <View style={{ width: "100%", alignItems: "center" }}>
                     {this.props.title ? <View style={{ width: "90%", height: 25 }}><Text style={{ fontSize: 18, fontWeight: "bold" }}>{this.props.title}</Text></View> : null}
                     {this.props.refTitle ? <View style={{ width: "90%", height: 25 }}><TouchableOpacity onPress={() => { this.setState({ display: true }) }}><Text style={{ fontSize: 14, color: "#0071BC", textDecorationLine: "underline" }}>{this.props.refTitle}</Text></TouchableOpacity></View> : null}
                     {this.props.desc ? this.props.desc : null}
                 </View>
 
-                <View style={{ width: "100%", height: 50, alignItems: "center" }}>
-                    <View style={{ width: "90%", height: "100%", }}>
-                        <Input
-                            style={{
-                                height: 25, width: '100%',
-                                borderWidth: 1,
-                                borderColor: '#b3b3b3',
-                                fontSize: 16,
-                                paddingVertical: 0
+                <View style={{ width: "100%", height: 40, alignItems: "center" }}>
+                    <View style={{ width: "100%", height: 10 }}></View>
+                    <View style={{ width: "90%", height: "100%", flexDirection: "row" }}>
+                        <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>Height(cm):</Text></View>
+                        <View style={{ width: "30%", height: 20 }}>
+                            <InputSpinner
+                                inputStyle={{ paddingVertical: 0 }}
+                                showBorder={true}
+                                fontSize={16}
+                                rounded={false}
+                                height={25}
+                                max={220}
+                                min={0}
+                                step={1}
+                                color={"#a0a0a0"}
+                                value={165}
+                                onChange={(height) => {
+                                    this.setState({ height })
+                                    let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=height&value=" + height + "&utime=" + new Date().getTime();
+                                    fetch(url).then(res => res.text()).then((data) => {
+                                        console.info(this.state.weight + "--" + this.state.height)
+                                        if (this.state.weight && this.state.height) {
+                                            let bmivalue = this.state.weight / (this.state.height * this.state.height * 100)
+                                            let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
+                                            fetch(url).then(res => res.text()).then((data) => {
+                                                if (data == "success") {
+                                                    this.load();
+                                                }
+                                            })
 
-                            }}
-                            placeholder="height" validator="numeric"
-                            value={this.state.value}
-                            onChangeText={(text) => { this.setState({ value: text }) }} />
+                                        }
+                                    }).catch(function (error) {
+                                        console.log('There has been a problem with your fetch operation: ' + error.message);
+                                    });
+
+                                }}
+                            />
+                        </View>
                     </View>
-
+                </View>
+                <View style={{ width: "100%", height: 40, alignItems: "center" }}>
+                    <View style={{ width: "100%", height: 10 }}></View>
+                    <View style={{ width: "90%", height: "100%", flexDirection: "row" }}>
+                        <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>Weight(kg):</Text></View>
+                        <View style={{ width: "30%", height: 20 }}>
+                            <InputSpinner
+                                inputStyle={{ paddingVertical: 0 }}
+                                showBorder={true}
+                                fontSize={16}
+                                rounded={false}
+                                height={25}
+                                max={220}
+                                min={1}
+                                step={1}
+                                color={"#a0a0a0"}
+                                value={50}
+                                onChange={(weight) => {
+                                    this.setState({ weight })
+                                    let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=weight&value=" + weight + "&utime=" + new Date().getTime();
+                                    fetch(url).then(res => res.text()).then((data) => {
+                                        console.info(this.state.weight + "--" + this.state.height)
+                                        if (this.state.weight && this.state.height) {
+                                            let bmivalue = this.state.weight / (this.state.height * this.state.height * 100)
+                                            let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
+                                            fetch(url).then(res => res.text()).then((data) => {
+                                                if (data == "success") {
+                                                    this.load();
+                                                }
+                                            })
+                                        }
+                                    }).catch(function (error) {
+                                        console.log('There has been a problem with your fetch operation: ' + error.message);
+                                    });
+                                }}
+                            />
+                        </View>
+                    </View>
+                </View>
+                <View style={{ width: "100%", alignItems: "center" }}>
+                    <View style={{ width: "90%" }}>
+                        <Text style={{ fontSize: 12 }}>BMI[Body Mass Index=weight(kg)/(height(m)▪height(m))]</Text>
+                        <TouchableOpacity onPress={() => { this.setState({ bmiwebview: true }) }}><Text style={{ fontSize: 12, color: "#0071BC", textDecorationLine: "underline" }}>Source: National Heart,Lung,and Blood Institute</Text></TouchableOpacity>
+                        <Text style={{ fontSize: 12, fontWeight: "bold" }}>Recommendation: </Text>
+                        <Text style={{ fontSize: 12 }}>Underweight: BMI &gt; 18.5kg/(m▪m)</Text>
+                        <Text style={{ fontSize: 12 }}>Normal weight: BMI 18.5 – 25 kg/(m▪m)</Text>
+                        <Text style={{ fontSize: 12 }}>Overweight: BMI 25 – 30 kg/(m▪m)</Text>
+                        <Text style={{ fontSize: 12 }}>Obese: BMI > 30 kg/(m▪m)</Text>
+                    </View>
                 </View>
                 <View style={{ height: 250, flexDirection: "row", width: "100%" }}>
                     <View style={{ height: "100%", width: "100%" }}>
