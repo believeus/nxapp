@@ -170,8 +170,7 @@ android {
 def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 dependencies {
-compile project(':react-native-textinput-multiline')
-     compile project(':react-native-smart-barcode')
+    implementation project(':react-native-textinput-multiline')
     implementation project(':react-native-smart-barcode')
     implementation project(':react-native-paypal-wrapper')
     implementation project(':react-native-paypal-lib')
