@@ -3,8 +3,6 @@ import { Platform, StyleSheet, Text, View, Image, Button, Modal, TouchableOpacit
 import { WebView } from 'react-native-webview'
 import { TextInput } from 'react-native-gesture-handler';
 import GoodsItem from './GoodsItem';
-import Accordion from 'react-native-collapsible/Accordion';
-import { withNavigation } from 'react-navigation';
 export default class MallActivity extends Component<Props> {
 
     constructor(props) {

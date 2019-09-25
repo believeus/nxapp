@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
 import { Platform, StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity} from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation'
-import StackHomeActivity from './StackHomeActivity';
 import Swiper from 'react-native-swiper';
-import Slider from '@react-native-community/slider';
 import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
 import { getLanguages } from 'react-native-i18n';
 import Session from '../storage/Session';
+import data from '../appdata'
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = {
@@ -88,7 +86,7 @@ export default class TabHomeActivity extends Component<Props> {
                         style={{ width: "100%", height: 250 }}
                         paused={true}
                         fullscreen={true}
-                        poster={'http://192.168.0.114:8080/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
+                        poster={data.url+'static/images/ted.jpg'} //poster必须是url从互联网访问的形式
                         source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                         navigator={this.props.navigator}
                     />

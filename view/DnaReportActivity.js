@@ -96,32 +96,33 @@ export default class DnaReportActivity extends Component<Props> {
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
+            fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
+                let v = []
+                for (var i in data) {
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
+                    let biological = window.parseFloat(data[i].biological).toFixed(2)
+                    v.push([naturally, biological])
+                }
+                let option = Object.assign({}, this.state.option);
+                option.series[0].data = v;
+                this.setState({ option });
+                this.echarts.webview.reload();
+    
+            })
+            fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
+                let v = []
+                for (var i in data) {
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
+                    let biological = window.parseFloat(data[i].biological).toFixed(2)
+                    v.push([naturally, biological])
+                }
+                let option = Object.assign({}, this.state.option);
+                option.series[1].data = v;
+                this.setState({ option });
+                this.echarts.webview.reload();
+            })
         });
-        fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
-            let v = []
-            for (var i in data) {
-                let naturally = window.parseFloat(data[i].naturally).toFixed(2);
-                let biological = window.parseFloat(data[i].biological).toFixed(2)
-                v.push([naturally, biological])
-            }
-            let option = Object.assign({}, this.state.option);
-            option.series[0].data = v;
-            this.setState({ option });
-            this.echarts.webview.reload();
-
-        })
-        fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
-            let v = []
-            for (var i in data) {
-                let naturally = window.parseFloat(data[i].naturally).toFixed(2);
-                let biological = window.parseFloat(data[i].biological).toFixed(2)
-                v.push([naturally, biological])
-            }
-            let option = Object.assign({}, this.state.option);
-            option.series[1].data = v;
-            this.setState({ option });
-            this.echarts.webview.reload();
-        })
+       
 
     }
 
