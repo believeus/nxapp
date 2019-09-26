@@ -71,5 +71,8 @@
     },
     "QuestionnaireActivity":{
         "name":"Questionnaires"
+    },
+    "ConsentActivity":{
+        "name":"User consent form"
     }
 }

@@ -22,6 +22,7 @@ import ProfMosheActivity from './ProfMosheActivity';
 import DavidActivity from './DavidActivity';
 import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
+import ConsentActivity from './ConsentActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -42,11 +43,14 @@ export const RootStack = createStackNavigator(
         David: {
             screen: DavidActivity
         },
-        Methylation:{
-            screen:MethylationActivity
+        Methylation: {
+            screen: MethylationActivity
         },
-        Questionnaire:{
-            screen:QuestionnaireActivity
+        Questionnaire: {
+            screen: QuestionnaireActivity
+        },
+        Consent: {
+            screen: ConsentActivity
         },
         Mall: {
             screen: TabMallActivity
