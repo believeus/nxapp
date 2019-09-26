@@ -19,6 +19,9 @@ import MoreProActivity from './MoreProActivity';
 import CheckActivity from './CheckActivity';
 import ScienceteamActivity from './ScienceteamActivity';
 import ProfMosheActivity from './ProfMosheActivity';
+import DavidActivity from './DavidActivity';
+import MethylationActivity from './MethylationActivity';
+import QuestionnaireActivity from './QuestionnaireActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -35,6 +38,15 @@ export const RootStack = createStackNavigator(
         },
         Moshe: {
             screen: ProfMosheActivity
+        },
+        David: {
+            screen: DavidActivity
+        },
+        Methylation:{
+            screen:MethylationActivity
+        },
+        Questionnaire:{
+            screen:QuestionnaireActivity
         },
         Mall: {
             screen: TabMallActivity

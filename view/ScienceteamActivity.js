@@ -15,7 +15,7 @@ export default class ScienceteamActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                <View style={{ width: '90%', alignSelf: 'center',  flexDirection: 'row', }}>
+                <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                     <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/prof1.png")}></Image>
                     <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>Moshe Szyf, Prof.</Text>
@@ -34,7 +34,9 @@ export default class ScienceteamActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>Senior Scientific Adviser</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
                     </View>
-                    <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
+                    <TouchableOpacity onPress={() => this.navigate.push("David")}>
+                        <Text style={{ width: '100%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
@@ -44,7 +46,9 @@ export default class ScienceteamActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>Laboratory Manager(HK)</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
                     </View>
-                    <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
+                    <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
+                        <Text style={{ width: '100%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
+                    </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>

@@ -62,7 +62,7 @@ export default class TabHomeActivity extends Component<Props> {
                     <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='center'  >
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <Text onPress={() => this.navigate.push("Forget")} style={{ height: 128, width: '32%' }}></Text>
+                                <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%' }}></Text>
 
                                 <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={() => { this.navigate.push("LifeStyleChart") }} style={{ height: 56, marginTop: 80 }}></Text>
@@ -75,7 +75,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("DnaReport") }}
                                         style={{ height: 56, marginBottom: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => this.navigate.push("Forget")} style={{ height: 141, width: '32%', }}></Text>
+                                <Text onPress={() => this.navigate.push("Questionnaire")} style={{ height: 141, width: '32%', }}></Text>
                             </View>
                         </View>
                     </ImageBackground>

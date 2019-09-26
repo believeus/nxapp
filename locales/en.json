@@ -62,5 +62,14 @@
     },
     "ProfMosheActivity":{
         "name":"Prof. Moshe"
+    },
+    "DavidActivity":{
+        "name":"David Cheishvili Ph.D."
+    },
+    "MethylationActivity":{
+        "name":"DNA Methylation"
+    },
+    "QuestionnaireActivity":{
+        "name":"Questionnaires"
     }
 }
