@@ -131,23 +131,25 @@ export default class BMIChart extends Component<Props> {
                                 height={25}
                                 max={220}
                                 min={0}
-                                step={1}
+                                precision={1}
+                                step={0.5}
+                                arrows={true}
                                 color={"#a0a0a0"}
                                 value={165}
                                 onChange={(height) => {
                                     this.setState({ height })
                                     let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=height&value=" + height + "&utime=" + new Date().getTime();
-                                    fetch(url).then(res => res.text()).then((data) => {
+                                    fetch(url).then(res => res.text()).then(() => {
                                         console.info(this.state.weight + "--" + this.state.height)
                                         if (this.state.weight && this.state.height) {
-                                            let bmivalue = this.state.weight / (this.state.height * this.state.height * 100)
-                                            let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
-                                            fetch(url).then(res => res.text()).then((data) => {
+                                            let bmivalue = this.state.weight / Math.pow((this.state.height/100),2)
+                                            let uri = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
+                                            console.info(uri)
+                                            fetch(uri).then(res => res.text()).then((data) => {
                                                 if (data == "success") {
                                                     this.load();
                                                 }
                                             })
-
                                         }
                                     }).catch(function (error) {
                                         console.log('There has been a problem with your fetch operation: ' + error.message);
@@ -172,17 +174,19 @@ export default class BMIChart extends Component<Props> {
                                 max={220}
                                 min={1}
                                 step={1}
+                                arrows={true}
                                 color={"#a0a0a0"}
                                 value={50}
                                 onChange={(weight) => {
                                     this.setState({ weight })
                                     let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=weight&value=" + weight + "&utime=" + new Date().getTime();
-                                    fetch(url).then(res => res.text()).then((data) => {
+                                    fetch(url).then(res => res.text()).then(() => {
                                         console.info(this.state.weight + "--" + this.state.height)
                                         if (this.state.weight && this.state.height) {
-                                            let bmivalue = this.state.weight / (this.state.height * this.state.height * 100)
-                                            let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
-                                            fetch(url).then(res => res.text()).then((data) => {
+                                            let bmivalue = this.state.weight / Math.pow((this.state.height/100),2)
+                                            let uri = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
+                                            console.info(uri)
+                                            fetch(uri).then(res => res.text()).then((data) => {
                                                 if (data == "success") {
                                                     this.load();
                                                 }

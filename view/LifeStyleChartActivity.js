@@ -227,11 +227,11 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="sex life"
+                        title="How about your active sex life"
                         max="60"
                         sliderDefualtValue={10}
                         yAxisLabelValue="sexfrequency"
-                        yAxisLabelName="years"
+                        yAxisLabelName="times/day"
                         column="sexfrequency"
                     />
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
