@@ -74,5 +74,8 @@
     },
     "ConsentActivity":{
         "name":"User consent form"
+    },
+    "McGillChartActivity":{
+        "name":"McGill Pain Questionnaires" 
     }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Modal, Button, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
-import StarRatingBar from 'react-native-star-rating-view/StarRatingBar'
+import { Rating, AirbnbRating } from 'react-native-ratings';
 import Session from '../storage/Session';
 import data from '../appdata'
 import moment from 'moment';
@@ -13,7 +13,6 @@ export default class RatingChart extends Component<Props> {
         super(props);
         this.state = {
             display: false,
-            score:0.5,
             option: {
                 tooltip: {
                     trigger: 'axis'
@@ -35,7 +34,7 @@ export default class RatingChart extends Component<Props> {
                     nameTextStyle: { color: "red" },
                     name: null,
                     nameLocation: 'end',
-                    type: "value"
+                    type: "category"
                 },
                 series: [
                     {
@@ -53,17 +52,19 @@ export default class RatingChart extends Component<Props> {
             }
         }
     }
-   
+
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            fetch(data.url + "user/lifestyle/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
+            fetch(data.url + "user/magill/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
                 for (var i in data) {
                     xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
                     yValue.push(data[i][this.props.yAxisLabelValue])
                 }
+                console.info(xValue)
+                console.info(yValue)
                 let option = Object.assign({}, this.state.option);
                 option.xAxis.data = xValue;
                 option.yAxis.name = this.props.yAxisLabelName;
@@ -83,41 +84,54 @@ export default class RatingChart extends Component<Props> {
 
     }
     componentDidMount() {
-        //this.load();
+        this.load();
     }
+
 
     render() {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ width: "100%" }}>
-
-                <View style={{ width: "90%", height: 25, justifyContent: "center" }}>
-                    <Text style={{ fontSize: 18, fontWeight: "bold", width: "80%", textAlign: "center" }}>{this.props.title}</Text>
-                </View>
-                <View style={{ width: "100%", height: 50, alignItems: "center", justifyContent: "center" }}>
-                    <View>
-                        <StarRatingBar
-                            starStyle={{
-                                width: 20,
-                                height: 20,
-                            }}
-                            readOnly={false}
-                            continuous={false}
-                            score={this.state.score}
-                            scoreText=""
-                            allowsHalfStars={true}
-                            accurateHalfStars={true}
-                            onStarValueChanged={(score) => {
-                                let url = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + score + "&utime=" + new Date().getTime();
-                                fetch(url).then(res => res.text()).then((data) => {
-                                    if(data=="success"){
-                                        this.load();
-                                        // 刷新时会将StarRatingBar刷新为默认初始值，所以需重新设置成选定的值
-                                        this.setState({score})
+                <View style={{ width: "100%", flexDirection: "row" }}>
+                    <View style={{ width: "45%", height: 100, alignItems: "center" }}>
+                        <Text style={{ fontSize: 18, fontWeight: "bold", width: "80%", height: "100%", textAlignVertical: "center", textAlign: "right" }}>{this.props.title}</Text>
+                    </View>
+                    <View style={{ width: "45%", height: 100, alignItems: "center", justifyContent: "center" }}>
+                        <View>
+                            <AirbnbRating
+                                count={4}
+                                ratingTextColor={"red"}
+                                reviews={["none", "mild", "moderate", "severe"]}
+                                defaultRating={1}
+                                size={20}
+                                ref={(ref) => { this.rating = ref }}
+                                ratingColor='red'
+                                ratingBackgroundColor='#c8c7c8'
+                                onFinishRating={(value) => {
+                                    switch (value) {
+                                        case 1:
+                                            this.level = "none"
+                                            break;
+                                        case 2:
+                                            this.level = "mild"
+                                            break;
+                                        case 3:
+                                            this.level = "moderate"
+                                            break;
+                                        case 4:
+                                            this.level = "severe"
+                                            break;
                                     }
-                                })
-                            }}
-                        />
+                                    let url = data.url + "user/magill/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + this.level + "&utime=" + new Date().getTime();
+                                    fetch(url).then(res => res.text()).then((data) => {
+                                        if (data == "success") {
+                                            this.load();
+                                        }
+                                    })
+                                }}
+                            />
+
+                        </View>
                     </View>
                 </View>
                 <View style={{ height: 250, flexDirection: "row", width: "100%" }}>

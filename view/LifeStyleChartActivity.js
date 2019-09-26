@@ -7,9 +7,12 @@ import BMIChart from './BMIChart';
 
 type Props = {};
 export default class LifeStyleChartActivity extends Component<Props> {
-    static navigationOptions = {
-        title: I18n.t("LifeStyleChartActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("LifeStyleChartActivity.name"),
+        })
+    }
+   
     constructor(props) {
         super(props);
         this.state = {
