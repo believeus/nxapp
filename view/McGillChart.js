@@ -8,20 +8,22 @@ import moment from 'moment';
 import { I18n } from '../locales/i18n';
 
 type Props = {};
-export default class RatingChart extends Component<Props> {
+export default class McGillChart extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
-            display: false,
             option: {
                 tooltip: {
                     trigger: 'axis'
                 },
-                dataZoom: [{
-                    startValue: '2014-06-01'
-                }, {
-                    type: 'inside'
-                }],
+                dataZoom: [
+                    {
+                        id: 'dataZoomX',
+                        type: 'slider',
+                        xAxisIndex: [0],
+                        filterMode: 'filter'
+                    },
+                ],
                 xAxis: {
                     name: 'data',
                     nameLocation: 'middle',
@@ -34,7 +36,22 @@ export default class RatingChart extends Component<Props> {
                     nameTextStyle: { color: "red" },
                     name: null,
                     nameLocation: 'end',
-                    type: "category"
+                    type: "value",
+                    axisLabel: {
+                        formatter: function (value, index) {
+                            switch (value) {
+                                case 1:
+                                    return "none"
+                                case 2:
+                                    return "middle"
+                                case 3:
+                                    return "moderate"
+                                case 4:
+                                    return "severe"
+                            }
+                        },
+                        margin:-15,
+                    },
                 },
                 series: [
                     {
@@ -56,15 +73,13 @@ export default class RatingChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            fetch(data.url + "user/magill/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
+            fetch(data.url + "user/mcgill/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
                 for (var i in data) {
                     xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
                     yValue.push(data[i][this.props.yAxisLabelValue])
                 }
-                console.info(xValue)
-                console.info(yValue)
                 let option = Object.assign({}, this.state.option);
                 option.xAxis.data = xValue;
                 option.yAxis.name = this.props.yAxisLabelName;
@@ -101,28 +116,14 @@ export default class RatingChart extends Component<Props> {
                             <AirbnbRating
                                 count={4}
                                 ratingTextColor={"red"}
-                                reviews={["none", "mild", "moderate", "severe"]}
+                                reviews={["none", "middle", "moderate", "severe"]}
                                 defaultRating={1}
                                 size={20}
                                 ref={(ref) => { this.rating = ref }}
                                 ratingColor='red'
                                 ratingBackgroundColor='#c8c7c8'
                                 onFinishRating={(value) => {
-                                    switch (value) {
-                                        case 1:
-                                            this.level = "none"
-                                            break;
-                                        case 2:
-                                            this.level = "mild"
-                                            break;
-                                        case 3:
-                                            this.level = "moderate"
-                                            break;
-                                        case 4:
-                                            this.level = "severe"
-                                            break;
-                                    }
-                                    let url = data.url + "user/magill/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + this.level + "&utime=" + new Date().getTime();
+                                    let url = data.url + "user/mcgill/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then((data) => {
                                         if (data == "success") {
                                             this.load();

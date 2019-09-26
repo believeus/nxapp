@@ -43,16 +43,134 @@ export default class McGillChartActivity extends Component<Props> {
                             <Text style={{ fontSize: 14 }}>Statement: Some of the following words below describe your present pain. Circle ONLY those words that best describe it. Leave out any category that is not suitable. Use only a single word in each appropriate category - the one that applies best.</Text>
                         </View>
                     </View>
-                    <View style={{width:"100%",height:300}}>
+                    <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Throbbing?"
-                            yAxisLabelName="Throbbing"
+                            yAxisLabelName="throbbing"
                             yAxisLabelValue="throbbing"
                             column="throbbing"
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Shooting?"
+                            yAxisLabelName="shooting"
+                            yAxisLabelValue="shooting"
+                            column="shooting"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Stabbing?"
+                            yAxisLabelName="stabbing"
+                            yAxisLabelValue="stabbing"
+                            column="stabbing"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Sharp?"
+                            yAxisLabelName="sharp"
+                            yAxisLabelValue="sharp"
+                            column="sharp"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Cramping?"
+                            yAxisLabelName="cramping"
+                            yAxisLabelValue="cramping"
+                            column="cramping"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Gnawing?"
+                            yAxisLabelName="gnawing"
+                            yAxisLabelValue="gnawing"
+                            column="gnawing"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Hot-burning?"
+                            yAxisLabelName="burning"
+                            yAxisLabelValue="burning"
+                            column="burning"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Aching?"
+                            yAxisLabelName="aching"
+                            yAxisLabelValue="aching"
+                            column="aching"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Heavy?"
+                            yAxisLabelName="heavy"
+                            yAxisLabelValue="heavy"
+                            column="heavy"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Tender?"
+                            yAxisLabelName="tender"
+                            yAxisLabelValue="tender"
+                            column="tender"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Splitting?"
+                            yAxisLabelName="split"
+                            yAxisLabelValue="split"
+                            column="split"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Tiring exhausting?"
+                            yAxisLabelName="exhausting"
+                            yAxisLabelValue="exhausting"
+                            column="exhausting"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Sickening?"
+                            yAxisLabelName="sickening"
+                            yAxisLabelValue="sickening"
+                            column="sickening"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{ width: "100%", height: 350 }}>
+                        <McGillChart
+                            title="Fearful?"
+                            yAxisLabelName="fearful"
+                            yAxisLabelValue="fearful"
+                            column="fearful"
+                        />
+                    </View>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 </View>
+
 
             </ScrollView>
 

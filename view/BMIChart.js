@@ -20,11 +20,14 @@ export default class BMIChart extends Component<Props> {
                 tooltip: {
                     trigger: 'axis'
                 },
-                dataZoom: [{
-                    startValue: '2014-06-01'
-                }, {
-                    type: 'inside'
-                }],
+                dataZoom: [
+                    {
+                        id: 'dataZoomX',
+                        type: 'slider',
+                        xAxisIndex: [0],
+                        filterMode: 'filter'
+                    },
+                ],
                 xAxis: {
                     name: 'data',
                     nameLocation: 'middle',
@@ -142,7 +145,7 @@ export default class BMIChart extends Component<Props> {
                                     fetch(url).then(res => res.text()).then(() => {
                                         console.info(this.state.weight + "--" + this.state.height)
                                         if (this.state.weight && this.state.height) {
-                                            let bmivalue = this.state.weight / Math.pow((this.state.height/100),2)
+                                            let bmivalue = this.state.weight / Math.pow((this.state.height / 100), 2)
                                             let uri = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
                                             console.info(uri)
                                             fetch(uri).then(res => res.text()).then((data) => {
@@ -183,7 +186,7 @@ export default class BMIChart extends Component<Props> {
                                     fetch(url).then(res => res.text()).then(() => {
                                         console.info(this.state.weight + "--" + this.state.height)
                                         if (this.state.weight && this.state.height) {
-                                            let bmivalue = this.state.weight / Math.pow((this.state.height/100),2)
+                                            let bmivalue = this.state.weight / Math.pow((this.state.height / 100), 2)
                                             let uri = data.url + "user/lifestyle/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + bmivalue + "&utime=" + new Date().getTime();
                                             console.info(uri)
                                             fetch(uri).then(res => res.text()).then((data) => {

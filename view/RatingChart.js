@@ -18,11 +18,14 @@ export default class RatingChart extends Component<Props> {
                 tooltip: {
                     trigger: 'axis'
                 },
-                dataZoom: [{
-                    startValue: '2014-06-01'
-                }, {
-                    type: 'inside'
-                }],
+                dataZoom: [
+                    {
+                        id: 'dataZoomX',
+                        type: 'slider',
+                        xAxisIndex: [0],
+                        filterMode: 'filter'
+                    },
+                ],
                 xAxis: {
                     name: 'data',
                     nameLocation: 'middle',
@@ -83,7 +86,7 @@ export default class RatingChart extends Component<Props> {
 
     }
     componentDidMount() {
-        //this.load();
+        this.load();
     }
 
     render() {

@@ -22,11 +22,8 @@ import ProfMosheActivity from './ProfMosheActivity';
 import DavidActivity from './DavidActivity';
 import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
-<<<<<<< Updated upstream
 import ConsentActivity from './ConsentActivity';
-=======
 import McGillChartActivity from './McGillChartActivity'
->>>>>>> Stashed changes
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字

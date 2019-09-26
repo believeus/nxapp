@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Platform, StyleSheet, Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import Toast from 'react-native-root-toast';
 import { I18n } from '../locales/i18n';
 import Input from "react-native-input-validation"
@@ -24,9 +24,9 @@ export default class LoginActivity extends Component<Props> {
         this.state = { animating: false };
     }
     async  login() {
-        if (!this.isValid) { Toast.show(I18n.t("LoginActivity.mailboxformatFail"), { duration: 7000, position: Toast.positions.CENTER }); return }
-        if (!this.state.email) { Toast.show(I18n.t("LoginActivity.mailboxNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
-        if (!this.state.password) { Toast.show(I18n.t("LoginActivity.passwordNull"), { duration: 7000, position: Toast.positions.CENTER }); return }
+        if (!this.isValid) { Alert.alert(I18n.t("LoginActivity.mailboxformatFail")) ;return }
+        if (!this.state.email) { Alert.alert(I18n.t("LoginActivity.mailboxNull")); return }
+        if (!this.state.password) { Alert.alert(I18n.t("LoginActivity.passwordNull")); return }
         let url = data.url+"user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
         fetch(url).then(res => res.json())
             .then(sessionuser => {
@@ -46,7 +46,7 @@ export default class LoginActivity extends Component<Props> {
             })
             .catch((e) => {
                 console.info(e)
-                Toast.show(I18n.t("LoginActivity.Invalid.NetFail"), { duration: 5000, position: Toast.positions.CENTER })
+                Alert.alert(I18n.t("LoginActivity.Invalid.NetFail"))
             })
     }
     render() {
