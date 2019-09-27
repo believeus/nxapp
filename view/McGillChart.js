@@ -43,14 +43,21 @@ export default class McGillChart extends Component<Props> {
                                 case 1:
                                     return "none"
                                 case 2:
-                                    return "middle"
+                                    return "light"
                                 case 3:
                                     return "moderate"
                                 case 4:
                                     return "severe"
                             }
                         },
-                        margin:-15,
+                        margin: -18,
+                        fontWeight:'bold',
+                        color: function (value) {
+                            if(value==1)  return "green"
+                            if(value==2) return "green"
+                            if(value==3)  return "#ffb900"
+                            if(value==4) return "#ec2f4d"
+                        }
                     },
                 },
                 series: [
@@ -107,16 +114,19 @@ export default class McGillChart extends Component<Props> {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ width: "100%" }}>
-                <View style={{ width: "100%", flexDirection: "row" }}>
-                    <View style={{ width: "45%", height: 100, alignItems: "center" }}>
-                        <Text style={{ fontSize: 18, fontWeight: "bold", width: "80%", height: "100%", textAlignVertical: "center", textAlign: "right" }}>{this.props.title}</Text>
+                <View style={{ width: "100%", flexDirection: "row"}}>
+                    <View style={{ width: "45%", height: 100}}>
+                        <View style={{width:"100%",height:22}}></View>
+                        <View style={{alignItems:"center"}}><Text  style={{ fontSize: 16, fontWeight: "bold", textAlignVertical: "center", textAlign: "left"}}>How dose your</Text></View>
+                        <View style={{alignItems:"center"}}><Text style={{color:"red",fontSize:18, fontWeight: "bold"}}>{this.props.title}</Text></View>
+                        <View style={{alignItems:"center"}}><Text style={{fontSize:14, fontWeight: "bold"}}>feel like?</Text></View>
                     </View>
-                    <View style={{ width: "45%", height: 100, alignItems: "center", justifyContent: "center" }}>
+                    <View style={{ width: "45%", height: 100, alignItems: "center", justifyContent: "center"}}>
                         <View>
                             <AirbnbRating
                                 count={4}
                                 ratingTextColor={"red"}
-                                reviews={["none", "middle", "moderate", "severe"]}
+                                reviews={["none", "light", "moderate", "severe"]}
                                 defaultRating={1}
                                 size={20}
                                 ref={(ref) => { this.rating = ref }}
