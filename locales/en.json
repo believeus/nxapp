@@ -77,5 +77,8 @@
     },
     "McGillChartActivity":{
         "name":"McGill Pain Questionnaires" 
+    },
+    "MoodChartActivity":{
+        "name":"Mood Questionnaires"
     }
 }

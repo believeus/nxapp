@@ -8,7 +8,7 @@ import moment from 'moment';
 import { I18n } from '../locales/i18n';
 
 type Props = {};
-export default class McGillChart extends Component<Props> {
+export default class MoodChart extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
@@ -41,19 +41,19 @@ export default class McGillChart extends Component<Props> {
                         formatter: function (value, index) {
                             switch (value) {
                                 case 1:
-                                    return "none"
+                                    return "None"
                                 case 2:
-                                    return "light"
+                                    return "Half days"
                                 case 3:
-                                    return "moderate"
+                                    return "Few days"
                                 case 4:
-                                    return "severe"
+                                    return "Every day"
                             }
                         },
-                        margin: -18,
+                        margin: -15,
                         fontWeight:'bold',
                         color: function (value) {
-                            return "green"
+                           return "green"
                         }
                     },
                 },
@@ -77,7 +77,7 @@ export default class McGillChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            fetch(data.url + "user/mcgill/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
+            fetch(data.url + "user/mood/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
                 for (var i in data) {
@@ -111,26 +111,21 @@ export default class McGillChart extends Component<Props> {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ width: "100%" }}>
-                <View style={{ width: "100%", flexDirection: "row"}}>
-                    <View style={{ width: "45%", height: 100}}>
-                        <View style={{width:"100%",height:22}}></View>
-                        <View style={{alignItems:"center"}}><Text  style={{ fontSize: 16, fontWeight: "bold", textAlignVertical: "center", textAlign: "left"}}>How dose your</Text></View>
-                        <View style={{alignItems:"center"}}><Text style={{color:"red",fontSize:18, fontWeight: "bold"}}>{this.props.title}</Text></View>
-                        <View style={{alignItems:"center"}}><Text style={{fontSize:14, fontWeight: "bold"}}>feel like?</Text></View>
-                    </View>
-                    <View style={{ width: "45%", height: 100, alignItems: "center", justifyContent: "center"}}>
+                <View style={{ width: "100%",alignItems:"center"}}>
+                    {this.props.title}
+                    <View style={{ width: "100%", height: 100, alignItems: "center", justifyContent: "center"}}>
                         <View>
                             <AirbnbRating
                                 count={4}
                                 ratingTextColor={"red"}
-                                reviews={["none", "light", "moderate", "severe"]}
+                                reviews={["None", "Half days","Few days", "Every day"]}
                                 defaultRating={1}
                                 size={20}
                                 ref={(ref) => { this.rating = ref }}
                                 ratingColor='red'
                                 ratingBackgroundColor='#c8c7c8'
                                 onFinishRating={(value) => {
-                                    let url = data.url + "user/mcgill/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                    let url = data.url + "user/mood/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then((data) => {
                                         if (data == "success") {
                                             this.load();
@@ -146,7 +141,6 @@ export default class McGillChart extends Component<Props> {
                     <View style={{ height: "100%", width: "100%" }}>
                         <ECharts ref={(ref) => { this.echarts = ref }} option={this.state.option} />
                     </View>
-
                 </View>
             </View>
         );

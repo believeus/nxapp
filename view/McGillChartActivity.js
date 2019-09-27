@@ -46,7 +46,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Throbbing"
-                            yAxisLabelName="throbbing"
+                            yAxisLabelName=""
                             yAxisLabelValue="throbbing"
                             column="throbbing"
                         />
@@ -55,7 +55,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Shooting"
-                            yAxisLabelName="shooting"
+                            yAxisLabelName=""
                             yAxisLabelValue="shooting"
                             column="shooting"
                         />
@@ -64,7 +64,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Stabbing"
-                            yAxisLabelName="stabbing"
+                            yAxisLabelName=""
                             yAxisLabelValue="stabbing"
                             column="stabbing"
                         />
@@ -73,7 +73,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Sharp"
-                            yAxisLabelName="sharp"
+                            yAxisLabelName=""
                             yAxisLabelValue="sharp"
                             column="sharp"
                         />
@@ -82,7 +82,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Cramping"
-                            yAxisLabelName="cramping"
+                            yAxisLabelName=""
                             yAxisLabelValue="cramping"
                             column="cramping"
                         />
@@ -91,7 +91,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Gnawing"
-                            yAxisLabelName="gnawing"
+                            yAxisLabelName=""
                             yAxisLabelValue="gnawing"
                             column="gnawing"
                         />
@@ -100,7 +100,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Hot-burning"
-                            yAxisLabelName="burning"
+                            yAxisLabelName=""
                             yAxisLabelValue="burning"
                             column="burning"
                         />
@@ -109,7 +109,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Aching"
-                            yAxisLabelName="aching"
+                            yAxisLabelName=""
                             yAxisLabelValue="aching"
                             column="aching"
                         />
@@ -118,7 +118,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Heavy"
-                            yAxisLabelName="heavy"
+                            yAxisLabelName=""
                             yAxisLabelValue="heavy"
                             column="heavy"
                         />
@@ -127,7 +127,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Tender"
-                            yAxisLabelName="tender"
+                            yAxisLabelName=""
                             yAxisLabelValue="tender"
                             column="tender"
                         />
@@ -136,7 +136,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Splitting"
-                            yAxisLabelName="split"
+                            yAxisLabelName=""
                             yAxisLabelValue="split"
                             column="split"
                         />
@@ -145,7 +145,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Exhausting"
-                            yAxisLabelName="exhausting"
+                            yAxisLabelName=""
                             yAxisLabelValue="exhausting"
                             column="exhausting"
                         />
@@ -154,7 +154,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Sickening"
-                            yAxisLabelName="sickening"
+                            yAxisLabelName=""
                             yAxisLabelValue="sickening"
                             column="sickening"
                         />
@@ -163,7 +163,7 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
                             title="Fearful?"
-                            yAxisLabelName="fearful"
+                            yAxisLabelName=""
                             yAxisLabelValue="fearful"
                             column="fearful"
                         />

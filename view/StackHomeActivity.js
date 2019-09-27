@@ -24,6 +24,7 @@ import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
 import ConsentActivity from './ConsentActivity';
 import McGillChartActivity from './McGillChartActivity'
+import MoodChartActivity from './MoodChartActivity'
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -88,6 +89,9 @@ export const RootStack = createStackNavigator(
         },
         McGillChart: {
             screen: McGillChartActivity
+        },
+        MoodChart:{
+            screen:MoodChartActivity
         }
     },
     {
