@@ -36,17 +36,20 @@ export default class TabAboutActivity extends Component<Props> {
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au3.png")}></Image>
                     </TouchableOpacity>
                 </View>
+                
+                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
+                <View style={{ width: '90%', alignSelf: 'center', }}>
+                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Biological Age Detection</Text>
+                    <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
+                        <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au5.png")}></Image>
+                    </TouchableOpacity>
+                </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Customer Data Consent Form</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au4.png")}></Image>
                     </TouchableOpacity>
-                </View>
-                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Biological Age Detection</Text>
-                    <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au5.png")}></Image>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>

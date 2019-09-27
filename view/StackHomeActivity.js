@@ -23,12 +23,17 @@ import DavidActivity from './DavidActivity';
 import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
 import ConsentActivity from './ConsentActivity';
-import McGillChartActivity from './McGillChartActivity'
 import MoodChartActivity from './MoodChartActivity'
+import McGillChartActivity from './McGillChartActivity';
+import BiologicalActivity from './BiologicalActivity';
+import TestprocessActivity from './TestprocessActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
             screen: MainActivity //此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
+        },
+        Testprocess: {
+            screen: TestprocessActivity
         },
         About: {
             screen: TabAboutActivity
@@ -53,6 +58,9 @@ export const RootStack = createStackNavigator(
         },
         Consent: {
             screen: ConsentActivity
+        },
+        Biological: {
+            screen: BiologicalActivity
         },
         Mall: {
             screen: TabMallActivity
@@ -90,8 +98,8 @@ export const RootStack = createStackNavigator(
         McGillChart: {
             screen: McGillChartActivity
         },
-        MoodChart:{
-            screen:MoodChartActivity
+        MoodChart: {
+            screen: MoodChartActivity
         }
     },
     {

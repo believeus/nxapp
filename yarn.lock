@@ -2917,10 +2917,10 @@ has@^1.0.1, has@^1.0.3:
   dependencies:
     function-bind "^1.1.1"
 
-hermes-engine@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.npm.taobao.org/hermes-engine/download/hermes-engine-0.1.1.tgz#33d5da1a3b7289667f121dc1aca3566171e86fd8"
-  integrity sha1-M9XaGjtyiWZ/Eh3BrKNWYXHob9g=
+hermes-engine@0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/hermes-engine/-/hermes-engine-0.1.0.tgz#b43229a13f36c34dcb4a797afd1a6109043db674"
+  integrity sha512-XlFZpQeQlbeRBvVzUf+eNhg6mlhihgX/KHFuEhLFTEofxkBYA9FMy+YkIaplG6YuHzML8Vlbmg3YJIu7mFp0Rw==
 
 hermesvm@^0.1.0, hermesvm@^0.1.1:
   version "0.1.1"
@@ -4606,6 +4606,11 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
+moment@^2.24.0:
+  version "2.24.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
+  integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==
+
 morgan@^1.9.0:
   version "1.9.1"
   resolved "http://registry.npm.taobao.org/morgan/download/morgan-1.9.1.tgz#0a8d16734a1d9afbc824b99df87e738e58e2da59"
@@ -5428,21 +5433,41 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
-"react-native-af-video-player@github:JijoBose/react-native-af-video-player#master":
-  version "0.2.1"
-  resolved "https://codeload.github.com/JijoBose/react-native-af-video-player/tar.gz/b18933214b570c74c05aba80e7b432061ff2ef30"
+react-native-animatable@^1.2.4:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.2.tgz#4783ee1a73dc98815aef234ce6b819f80bfe7d80"
+  integrity sha512-rmah3KQ63ft8DxkzFUwJSuZeq+oSYwldoGF4DTOR5WM2WR5wiWLgBAtrAHlI3Di3by323uOR21s+MlqPcHz2Kw==
   dependencies:
-    react-native-keep-awake "^4.0.0"
-    react-native-linear-gradient "^2.5.4"
-    react-native-orientation "^3.1.3"
-    react-native-slider "https://github.com/abbasfreestyle/react-native-slider.git"
-    react-native-vector-icons "^6.6.0"
-    react-native-video "^5.0.0"
+    prop-types "^15.5.10"
+
+react-native-braintree-payments-drop-in@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/react-native-braintree-payments-drop-in/-/react-native-braintree-payments-drop-in-1.0.5.tgz#6321948d9e7213924d08c2bd32548b69ea4013c4"
+  integrity sha512-t0jXDhv2gaAG8uZQbNGq3+fgliDDZDins6uaHwLl/GaX7/GIwbX717EjGWGcwQmgBB0gDqjGqqWyYaZdZfKLrw==
+
+react-native-button@^2.3.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-button/-/react-native-button-2.4.0.tgz#42b487073a7ce7c54ab503f77c6ced1ab95742bf"
+  integrity sha512-4siaJlpOLeL9fAhX8VU3cnUfcGLe3E2zABDWSKxkF+NiYOd+AnKeYY29WXlV8hXhCFo+Ry7E+alrJ6zjZLTSfg==
+  dependencies:
+    prop-types "^15.5.10"
+
+react-native-collapsible@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/react-native-collapsible/-/react-native-collapsible-1.5.1.tgz#da2937b509921b28bf1b0f9eb8e50ad61c3ffb5d"
+  integrity sha512-uQQ2s6l+7+L/pzJroisWsDsyVYVF5bQ+jGbLATNioRh/03SpEL8pcQEVKqVWswcNNR0B9GENixHaLzmuZIwpQg==
+  dependencies:
+    prop-types "^15.6.2"
 
 react-native-device-info@^2.3.2:
   version "2.3.2"
   resolved "https://registry.npm.taobao.org/react-native-device-info/download/react-native-device-info-2.3.2.tgz#db2b8f135aaf2515583e367ab791dcc7d2f0d14c"
   integrity sha1-2yuPE1qvJRVYPjZ6t5Hcx9Lw0Uw=
+
+react-native-dimension@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-dimension/-/react-native-dimension-1.0.6.tgz#049e40746160137f5e1dde89983b04ff8dc288d5"
+  integrity sha1-BJ5AdGFgE39eHd6JmDsE/43CiNU=
 
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
@@ -5521,6 +5546,11 @@ react-native-i18n@^2.0.15:
   dependencies:
     i18n-js "3.0.11"
 
+react-native-input-spinner@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/react-native-input-spinner/-/react-native-input-spinner-1.2.6.tgz#3297671dc4f33a2112f252dfb6938abacc5f5206"
+  integrity sha512-huTondAM6JWbLDDluqqfEOUVs+aFwFXJvcGVi90fVQ0KiVC8vGhT4q/E5dsmceHH+i7/bVAC4pR079/V4p4FGw==
+
 react-native-input-validation@^1.2.2:
   version "1.2.2"
   resolved "https://registry.npm.taobao.org/react-native-input-validation/download/react-native-input-validation-1.2.2.tgz#240eb1667214a18515628b5f16e56d79e0c17051"
@@ -5544,7 +5574,7 @@ react-native-keyboard-aware-scroll-view@0.9.1:
     prop-types "^15.6.2"
     react-native-iphone-x-helper "^1.0.3"
 
-react-native-linear-gradient@^2.5.4, react-native-linear-gradient@^2.5.6:
+react-native-linear-gradient@^2.5.6:
   version "2.5.6"
   resolved "https://registry.npm.taobao.org/react-native-linear-gradient/download/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha1-liFcvF7HoBJHogiQiIqnW4NNRKA=
@@ -5556,8 +5586,8 @@ react-native-md5@^1.0.0:
 
 react-native-modal-dropdown@^0.6.2:
   version "0.6.2"
-  resolved "https://registry.npm.taobao.org/react-native-modal-dropdown/download/react-native-modal-dropdown-0.6.2.tgz#da6027b3546d2031fbce46242bffc95561e13599"
-  integrity sha1-2mAns1RtIDH7zkYkK//JVWHhNZk=
+  resolved "https://registry.yarnpkg.com/react-native-modal-dropdown/-/react-native-modal-dropdown-0.6.2.tgz#da6027b3546d2031fbce46242bffc95561e13599"
+  integrity sha512-1jzByA+ME+q0mZJ2rZrLsf6jVwJhNxNHdg7I50xYZ9oYJsmmKwF9r/ks95tZxxks4Zvd7/FnaveNtyd+uevXAw==
   dependencies:
     prop-types "^15.6.0"
 
@@ -5571,10 +5601,30 @@ react-native-orientation@^3.1.3:
   resolved "https://registry.npm.taobao.org/react-native-orientation/download/react-native-orientation-3.1.3.tgz#d45803841fe94b6cce9acbe904fd5ca191a3711e"
   integrity sha1-1FgDhB/pS2zOmsvpBP1coZGjcR4=
 
+react-native-page-swiper@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-page-swiper/-/react-native-page-swiper-0.4.0.tgz#58f1383c6acc1c3d6d26148490a0421267930f55"
+  integrity sha512-DbSGYR4rNcDiSkoOjYw/Cv0oizF7m/lbwh+xy3XC5d5xfxYe8dEyFon2YdGDYmWgBWdKA6pdFTYIMFuoimLELg==
+
+react-native-paypal-lib@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/react-native-paypal-lib/-/react-native-paypal-lib-1.0.9.tgz#592f8f05308e4fb064e11b487f08db7238583879"
+  integrity sha512-UcpTd2FU2cUdu+PbiDziQvLtqjo/EKPMmH7mIwJ7k8KANIlFpOn6QuDAMKKsQCs1uG511xzlUmQC8HKS3EvKYQ==
+
+react-native-paypal-wrapper@^1.3.2:
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-paypal-wrapper/-/react-native-paypal-wrapper-1.3.2.tgz#9f9d18c0d369bf5bb3e0cdcef342113fce4095d7"
+  integrity sha512-KX/N+OmbJcVOFXkY9t58xPhefAIRz/JuP31MhOrjCHXjjl2J2iBA4ELsVUAhmmNzs/pAYUD+y3FRn08KgPyM6Q==
+
+react-native-paypal@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/react-native-paypal/-/react-native-paypal-2.0.4.tgz#830656dcc7e711fb67430ebc6b54d59cd5b110cd"
+  integrity sha512-p9k6TMu/9ZSIxtrsMrU2JGP3HSdS77GX2dyKnI+7od0Rh+ii+28/3hQZz2+nWA/RlkxN1WnMz6LKVw2C/y67Hw==
+
 react-native-popup-menu@^0.15.6:
   version "0.15.6"
-  resolved "https://registry.npm.taobao.org/react-native-popup-menu/download/react-native-popup-menu-0.15.6.tgz#ebf885c289028e330dd66d887e685a8b0c2de970"
-  integrity sha1-6/iFwokCjjMN1m2Ifmhaiwwt6XA=
+  resolved "https://registry.yarnpkg.com/react-native-popup-menu/-/react-native-popup-menu-0.15.6.tgz#ebf885c289028e330dd66d887e685a8b0c2de970"
+  integrity sha512-ILFbQEofZQThVYAtVcOEgHJ+9wvn8992J+Oy/ByX83PoP88Meq3iw3pG1AwxMOoAPm/LjihtsDBqZ1lxjvosDg==
 
 react-native-ratings@^6.3.0:
   version "6.4.0"
@@ -5632,11 +5682,39 @@ react-native-safe-area-view@^0.14.1:
   dependencies:
     debounce "^1.2.0"
 
-"react-native-slider@https://github.com/abbasfreestyle/react-native-slider.git":
+react-native-slider@^0.11.0:
   version "0.11.0"
-  resolved "https://github.com/abbasfreestyle/react-native-slider.git#c53b4965c5e4c3ec258479417898dece367e603e"
+  resolved "https://registry.yarnpkg.com/react-native-slider/-/react-native-slider-0.11.0.tgz#b68a0bc43c8422b24cd57947cc5ac2bcdb58fadc"
+  integrity sha512-jV9K87eu9uWr0uJIyrSpBLnCKvVlOySC2wynq9TFCdV9oGgjt7Niq8Q1A8R8v+5GHsuBw/s8vEj1AAkkUi+u+w==
   dependencies:
     prop-types "^15.5.6"
+
+react-native-smart-barcode@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/react-native-smart-barcode/-/react-native-smart-barcode-1.0.6.tgz#7411586c687ed25b6adf456f949b39699c63db5e"
+  integrity sha1-dBFYbGh+0ltq30VvlJs5aZxj214=
+
+react-native-smart-timer-enhance@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-smart-timer-enhance/-/react-native-smart-timer-enhance-1.0.3.tgz#47ddc19be5a6c19184449039495f25546bcd94fe"
+  integrity sha1-R93Bm+WmwZGERJA5SV8lVGvNlP4=
+
+react-native-star-rating-view@^0.0.12:
+  version "0.0.12"
+  resolved "https://registry.yarnpkg.com/react-native-star-rating-view/-/react-native-star-rating-view-0.0.12.tgz#85e5bca4f01169b1cf9150f82dd327bd4193eabe"
+  integrity sha512-scxagX5lhzjnm3D35dXtQYNkNrv9ugWWsPWyTFVw3IDYpDsfWW9fYtY7hy9Enl0oOpmPyHVbpGWMktZSivQcwg==
+  dependencies:
+    react-native-vector-icons "^4.0.0"
+
+react-native-star-rating@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-star-rating/-/react-native-star-rating-1.1.0.tgz#57fcd023c63e947427c4dbbd1c8f4cc49e5c48ce"
+  integrity sha512-ocOYx+BKUvfruvXm45MBbQZtpkVO3PQieBDepB0FaLuxE3vUtDTPzHqXuBes3iCM5oRi5umrnmMUMsM0mEq5ZA==
+  dependencies:
+    prop-types "^15.5.10"
+    react-native-animatable "^1.2.4"
+    react-native-button "^2.3.0"
+    react-native-vector-icons "^4.5.0"
 
 react-native-status-bar-height@^2.2.0:
   version "2.4.0"
@@ -5680,6 +5758,27 @@ react-native-tab-view@^1.0.0, react-native-tab-view@^1.2.0, react-native-tab-vie
   dependencies:
     prop-types "^15.6.1"
 
+react-native-textinput-effects@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/react-native-textinput-effects/-/react-native-textinput-effects-0.5.1.tgz#52b54bb56b58a4b67b5d3fa4ffccba3d288cd8c9"
+  integrity sha512-9ywFH1S4WV/IkYcGwFYZrOYx5j84WvbhzWbLO52rN1PxgjI1tfZu8c5Ju8fsA7eLKuXt7YRen4iVTYYahrFq1w==
+
+react-native-textinput-multiline@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-textinput-multiline/-/react-native-textinput-multiline-1.0.1.tgz#ba3deb08ffc8853d49d922607a98d2bd60f6c648"
+  integrity sha512-ci/OtO48QfceNvZKPFiyFgWT6kNxJNGYAok69Qkt/vKIzYd8xUWrUr3g6thMTNNqfwDXDe5FwVxHr+QRtX8x4w==
+  dependencies:
+    invariant "^2.2.4"
+
+react-native-vector-icons@^4.0.0, react-native-vector-icons@^4.5.0:
+  version "4.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-vector-icons/-/react-native-vector-icons-4.6.0.tgz#e4014311ffa6de397d914ffc31b7097a874cc8d5"
+  integrity sha512-rpfhfPiXCK2PX1nrNhdxSMrEGB/Gw/SvKoPM0G2wAkSoqynnes19K0VYI+Up7DqR1rFIpE4hP2erpT1tNx2tfg==
+  dependencies:
+    lodash "^4.0.0"
+    prop-types "^15.5.10"
+    yargs "^8.0.2"
+
 react-native-vector-icons@^6.6.0:
   version "6.6.0"
   resolved "https://registry.npm.taobao.org/react-native-vector-icons/download/react-native-vector-icons-6.6.0.tgz#66cf004918eb05d90778d64bd42077c1800d481b"
@@ -5710,7 +5809,7 @@ react-native-video@^5.0.0:
     prop-types "^15.5.10"
     shaka-player "^2.4.4"
 
-react-native-webview@5.12.1, react-native-webview@^5.7.0:
+react-native-webview@5, react-native-webview@^5.7.0:
   version "5.12.1"
   resolved "https://registry.npm.taobao.org/react-native-webview/download/react-native-webview-5.12.1.tgz#5e2b124e9087d64fc40040d911c10ee5744b5d4d"
   integrity sha1-XisSTpCH1k/EAEDZEcEO5XRLXU0=
@@ -5841,6 +5940,11 @@ react-proxy@^1.1.7:
   dependencies:
     lodash "^4.6.1"
     react-deep-force-update "^1.0.0"
+
+react-responsive-accordion@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-responsive-accordion/-/react-responsive-accordion-1.0.0.tgz#e2c39ee13e18daa40d9d78486beccd27f4988cba"
+  integrity sha1-4sOe4T4Y2qQNnXhIa+zNJ/SYjLo=
 
 react-test-renderer@16.8.3:
   version "16.8.3"
@@ -7263,6 +7367,25 @@ yargs@^13.2.2:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^13.1.1"
+
+yargs@^8.0.2:
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/yargs/-/yargs-8.0.2.tgz#6299a9055b1cefc969ff7e79c1d918dceb22c360"
+  integrity sha1-YpmpBVsc78lp/355wdkY3Osiw2A=
+  dependencies:
+    camelcase "^4.1.0"
+    cliui "^3.2.0"
+    decamelize "^1.1.1"
+    get-caller-file "^1.0.1"
+    os-locale "^2.0.0"
+    read-pkg-up "^2.0.0"
+    require-directory "^2.1.1"
+    require-main-filename "^1.0.1"
+    set-blocking "^2.0.0"
+    string-width "^2.0.0"
+    which-module "^2.0.0"
+    y18n "^3.2.1"
+    yargs-parser "^7.0.0"
 
 yargs@^9.0.0:
   version "9.0.1"

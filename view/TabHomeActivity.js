@@ -41,7 +41,7 @@ export default class TabHomeActivity extends Component<Props> {
                         showsButtons={true}
                         loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                         autoplay={true}>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                             <View style={{ width: '100%', height: 310 }}>
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index1.jpg')} resizeMode="center" />
                             </View>
@@ -51,11 +51,9 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode="center" />
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("DnaReport")}>
                             <View style={{ width: '100%', height: 310 }}>
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
                             </View>
-                        </TouchableOpacity>
                     </Swiper >
                 </View>
                 <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
@@ -67,10 +65,10 @@ export default class TabHomeActivity extends Component<Props> {
                                 <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={() => { this.navigate.push("LifeStyleChart") }} style={{ height: 56, marginTop: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => { }} style={{ height: 128, width: '32%', }}></Text>
+                                <Text onPress={() => { this.navigate.push("Testprocess") }} style={{ height: 128, width: '32%', }}></Text>
                             </View>
                             <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <Text onPress={() => { }} style={{ height: 141, width: '32%' }}></Text>
+                                <Text onPress={() =>  this.navigate.push("Mall")} style={{ height: 141, width: '32%' }}></Text>
                                 <View style={{ height: 141, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("DnaReport") }}
                                         style={{ height: 56, marginBottom: 80 }}></Text>

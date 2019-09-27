@@ -1,84 +1,86 @@
 {
-    "LoginIcon":{
-        "message":"Hi:Guest"
+    "LoginIcon": {
+        "message": "Hi:Guest"
     },
     "TabHomeActivity": {
         "name": "Home"
-
-
     },
-    "AboutActivity":{
+    "TestprocessActivity": {
+        "name": "Test process"
+    },
+    "AboutActivity": {
         "name": "About us"
     },
     "LoginActivity": {
         "name": "User login",
-        "email":"Email",
-        "passowrd":"Password",
-        "mailboxformatFail":"The mailbox format is incorrect",
-        "mailboxNull":"Please enter your mailbox",
-        "passwordNull":"Please enter your password",
-        "login":"Login",
-        "register":"Register",
-        "Invalid":{
-            "Email":"Email invalid",
-            "PWD":"Password invalid",
-            "NetFail":"Network unlinkable",
-            "unactive":"Email not active"
-        },   
-        "ForgetPwd":"Forget Password?"
-       
+        "email": "Email",
+        "passowrd": "Password",
+        "mailboxformatFail": "The mailbox format is incorrect",
+        "mailboxNull": "Please enter your mailbox",
+        "passwordNull": "Please enter your password",
+        "login": "Login",
+        "register": "Register",
+        "Invalid": {
+            "Email": "Email invalid",
+            "PWD": "Password invalid",
+            "NetFail": "Network unlinkable",
+            "unactive": "Email not active"
+        },
+        "ForgetPwd": "Forget Password?"
     },
-    "RegisterActivity":{
+    "RegisterActivity": {
         "name": "User register",
     },
     "ForgetActivity": {
-        "name":"Reset Password",
+        "name": "Reset Password",
         "resetPwd": "Reset Password",
-        "link":"By clicking the button below, A link to reset your password will be sent to your email.",
-        "btn":"Reset password",
-        "link2":"Login to your account",
-        "email":"Email",
+        "link": "By clicking the button below, A link to reset your password will be sent to your email.",
+        "btn": "Reset password",
+        "link2": "Login to your account",
+        "email": "Email",
         "password": "Password",
         "login": "login",
-        
     },
-    "LifeStyleChartActivity":{
-        "name":"Life Style Questionnaire"
+    "LifeStyleChartActivity": {
+        "name": "Life Style Questionnaire"
     },
-    "DnaReportActivity":{
-        "name":"Chronological age"
+    "DnaReportActivity": {
+        "name": "Chronological age"
     },
     "user_profile": {
         "title": "Your Profile"
     },
-    "CompanyActivity":{
-        "name":"Company Introduction"
+    "CompanyActivity": {
+        "name": "Company Introduction"
     },
-    "TabAboutActivity":{
-        "name":"About us"
+    "TabAboutActivity": {
+        "name": "About us"
     },
-    "ScienceteamActivity":{
-        "name":"Our Science team"
+    "ScienceteamActivity": {
+        "name": "Our Science team"
     },
-    "ProfMosheActivity":{
-        "name":"Prof. Moshe"
+    "ProfMosheActivity": {
+        "name": "Prof. Moshe"
     },
-    "DavidActivity":{
-        "name":"David Cheishvili Ph.D."
+    "DavidActivity": {
+        "name": "David Cheishvili Ph.D."
     },
-    "MethylationActivity":{
-        "name":"DNA Methylation"
+    "MethylationActivity": {
+        "name": "DNA Methylation"
     },
-    "QuestionnaireActivity":{
-        "name":"Questionnaires"
+    "QuestionnaireActivity": {
+        "name": "Questionnaires"
     },
-    "ConsentActivity":{
-        "name":"User consent form"
+    "ConsentActivity": {
+        "name": "User consent form"
     },
-    "McGillChartActivity":{
-        "name":"McGill Pain Questionnaires" 
+    "McGillChartActivity": {
+        "name": "McGill Pain Questionnaires"
     },
-    "MoodChartActivity":{
-        "name":"Mood Questionnaires"
+    "MoodChartActivity": {
+        "name": "Mood Questionnaires"
+    },
+    "BiologicalActivity": {
+        "name": "Biological Age"
     }
 }
