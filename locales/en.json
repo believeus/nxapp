@@ -82,5 +82,8 @@
     },
     "BiologicalActivity": {
         "name": "Biological Age"
+    },
+    "SleepChartActivity":{
+        "name":"Sleep Questionnaires"
     }
 }

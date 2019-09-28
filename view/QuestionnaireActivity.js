@@ -43,7 +43,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <TouchableOpacity onPress={() => {this.state.user == null ? this.navigate.push("Login") :this.navigate.push("LifeStyleChart")}}>
+                <TouchableOpacity onPress={() => {this.state.user == null ? this.navigate.push("Login") :this.navigate.push("SleepChart")}}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon4.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Sleep Self-Assessment</Text>

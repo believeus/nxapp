@@ -27,6 +27,7 @@ import MoodChartActivity from './MoodChartActivity'
 import McGillChartActivity from './McGillChartActivity';
 import BiologicalActivity from './BiologicalActivity';
 import TestprocessActivity from './TestprocessActivity';
+import SleepChartActivity from "./SleepChartActivity"
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -100,6 +101,9 @@ export const RootStack = createStackNavigator(
         },
         MoodChart: {
             screen: MoodChartActivity
+        },
+        SleepChart:{
+            screen:SleepChartActivity
         }
     },
     {
