@@ -87,6 +87,8 @@
         "name":"Sleep Questionnaires"
     },
     "DietChartActivity":{
-        "name":"Diet Recommendation"
+        "name":"Diet Recommendation",
+        "confirmText":"Confirm",
+        "chooseBreakfast":"Choose  Breakfast..."
     }
 }
