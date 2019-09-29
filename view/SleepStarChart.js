@@ -11,93 +11,50 @@ type Props = {};
 export default class SleepStarChart extends Component<Props> {
     constructor(props) {
         super(props);
-        let option = {
-            tooltip: {
-                trigger: 'axis'
-            },
-            dataZoom: [
-                {
-                    id: 'dataZoomX',
-                    type: 'slider',
-                    xAxisIndex: [0],
-                    filterMode: 'filter'
+        this.state = {
+            option: {
+                tooltip: {
+                    trigger: 'axis'
                 },
-            ],
-            xAxis: {
-                name: 'data',
-                nameLocation: 'middle',
-                nameGap: 20,
-                type: "category",
-                nameTextStyle: { color: "#0071BC" },
-                data: null
-            },
-            yAxis: {
-                nameTextStyle: { color: "black" },
-                name: null,
-                nameLocation: 'end',
-                type: "value",
-                axisLabel: {
-                    // formatter: function (value, index) {
-                    //     switch (value) {
-                    //         case 1:
-                    //             return "good"
-                    //         case 2:
-                    //             return "Average"
-                    //         case 3:
-                    //             return "Poor"
-                    //     }
-                    // },
-                    margin: -15,
-                    fontWeight: 'bold',
-                    color: function (value) {
-                        return "green"
-                    }
-                },
-            },
-            series: [
-                {
+                dataZoom: [
+                    {
+                        id: 'dataZoomX',
+                        type: 'slider',
+                        xAxisIndex: [0],
+                        filterMode: 'filter'
+                    },
+                ],
+                xAxis: {
+                    name: 'data',
+                    nameLocation: 'middle',
+                    nameGap: 20,
+                    type: "category",
+                    nameTextStyle: { color: "black" },
                     data: null,
-                    type: "line",
-                    markLine: {
-                        silent: true,
-                        data: [
-                            // { yAxis: 2000 },
-                            // { yAxis: 2500 }
-                        ]
+                    
+                },
+                yAxis: {
+                    nameTextStyle: { color: "black" },
+                    name: null,
+                    nameLocation: 'end',
+                    type: "value"
+                },
+                series: [
+                    {
+                        data: null,
+                        type: "line",
+                        markLine: {
+                            silent: true,
+                            data: [
+                                // { yAxis: 2000 },
+                                // { yAxis: 2500 }
+                            ]
+                        }
                     }
-                }
-            ]
-        };
-        let othis = this;
-        if (this.props.count == 3) {
-            option.yAxis.axisLabel.formatter = function (value, index) {
-                let v = "";
-                switch (value) {
-                    case 1:
-                        return "Good"
-                    case 2:
-                        return "Average"
-                    case 3:
-                        return "Poor"
-                }
-            }
-        } else {
-            option.yAxis.axisLabel.formatter = function (value, index) {
-                let v = "";
-                switch (value) {
-                    case 1:
-                        return "Noney"
-                    case 2:
-                        return "Little"
-                    case 3:
-                        return "Somewhat"
-                    case 4:
-                        return "Much"
-                }
+                ]
             }
         }
 
-        this.state = { option: option }
     }
 
     load = () => {
@@ -129,7 +86,6 @@ export default class SleepStarChart extends Component<Props> {
 
     }
     componentDidMount() {
-        console.info("componentDidMount")
         this.load();
     }
 

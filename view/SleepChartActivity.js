@@ -82,7 +82,7 @@ export default class SleepChartActivity extends Component<Props> {
                             }
                             count={3}
                             reviews={["Good", "Average", "Poor"]}
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="sleepquality"
                             column="sleepquality"
                         />
@@ -100,7 +100,7 @@ export default class SleepChartActivity extends Component<Props> {
                             }
                             count={4}
                             reviews={["None", "Little", "Somewhat", "Much"]}
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="affectmood"
                             column="affectmood"
                         />
@@ -118,7 +118,7 @@ export default class SleepChartActivity extends Component<Props> {
                             }
                             count={4}
                             reviews={["None", "Little", "Somewhat", "Much"]}
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="affectability"
                             column="affectability"
                         />
@@ -136,7 +136,7 @@ export default class SleepChartActivity extends Component<Props> {
                             }
                             count={4}
                             reviews={["None", "Little", "Somewhat", "Much"]}
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="troubleyou"
                             column="troubleyou"
                         />
