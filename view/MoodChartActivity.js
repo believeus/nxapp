@@ -51,7 +51,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="pleasure"
                             column="pleasure"
                         />
@@ -67,7 +67,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="depressed"
                             column="depressed"
                         />
@@ -84,7 +84,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="asleep"
                             column="asleep"
                         />
@@ -100,7 +100,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="energy"
                             column="energy"
                         />
@@ -116,7 +116,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="overeating"
                             column="overeating"
                         />
@@ -132,7 +132,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="failure"
                             column="failure"
                         />
@@ -148,7 +148,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="focus"
                             column="focus"
                         />
@@ -164,7 +164,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="slow"
                             column="slow"
                         />
@@ -180,7 +180,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="anxiety"
                             column="anxiety"
                         />
@@ -196,7 +196,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="nervous"
                             column="nervous"
                         />
@@ -212,7 +212,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="losecontrol"
                             column="losecontrol"
                         />
@@ -229,7 +229,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="worry"
                             column="worry"
                         />
@@ -245,7 +245,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="loserelax"
                             column="loserelax"
                         />
@@ -261,7 +261,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="restless"
                             column="restless"
                         />
@@ -278,7 +278,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="irritable"
                             column="irritable"
                         />
@@ -294,7 +294,7 @@ export default class MoodChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName=""
+                            yAxisLabelName="score"
                             yAxisLabelValue="afraid"
                             column="afraid"
                         />

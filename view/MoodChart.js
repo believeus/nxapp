@@ -37,25 +37,6 @@ export default class MoodChart extends Component<Props> {
                     name: null,
                     nameLocation: 'end',
                     type: "value",
-                    axisLabel: {
-                        formatter: function (value, index) {
-                            switch (value) {
-                                case 1:
-                                    return "None"
-                                case 2:
-                                    return "Half days"
-                                case 3:
-                                    return "Few days"
-                                case 4:
-                                    return "Every day"
-                            }
-                        },
-                        margin: -15,
-                        fontWeight:'bold',
-                        color: function (value) {
-                           return "green"
-                        }
-                    },
                 },
                 series: [
                     {

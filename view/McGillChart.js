@@ -33,29 +33,10 @@ export default class McGillChart extends Component<Props> {
                     data: null
                 },
                 yAxis: {
-                    nameTextStyle: { color: "red" },
+                    nameTextStyle: { color: "black",fontWeight:"blod" },
                     name: null,
                     nameLocation: 'end',
                     type: "value",
-                    axisLabel: {
-                        formatter: function (value, index) {
-                            switch (value) {
-                                case 1:
-                                    return "none"
-                                case 2:
-                                    return "light"
-                                case 3:
-                                    return "moderate"
-                                case 4:
-                                    return "severe"
-                            }
-                        },
-                        margin: -18,
-                        fontWeight:'bold',
-                        color: function (value) {
-                            return "green"
-                        }
-                    },
                 },
                 series: [
                     {
