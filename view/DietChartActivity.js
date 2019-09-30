@@ -87,7 +87,7 @@ export default class DietChartActivity extends Component<Props> {
                                                 let dietview =
                                                     <View key={(new Date()).valueOf()} style={{ width: "100%", alignItems: "center" }}>
                                                         <View style={{ width: "90%", flexDirection: "row" }}>
-                                                            <Text style={{ width: "40%", color: "#0071BC", fontSize: 14, fontWeight: "bold", height: 20 }}>{diet.description}</Text>
+                                                            <Text style={{ width: "40%", color: "#0071BC", fontSize: 14, fontWeight: "bold", height: 20 }}>{diet.description?(diet.description.length > 5 ? diet.description.substr(0, 18) + "..." : diet.description):""}</Text>
                                                             <View style={{ width: "30%", height: 20, alignItems: "center" }}>
                                                                 <InputSpinner
                                                                     inputStyle={{ paddingVertical: 0 }}
