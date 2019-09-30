@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, TouchableOpacity, Button, ScrollView, Modal, Alert } from 'react-native'
+import { Platform, StyleSheet, Text, View, TouchableOpacity, Button, ScrollView, Modal, Alert, TextInput } from 'react-native'
 import { I18n } from '../locales/i18n'
 import { WebView } from 'react-native-webview'
+import InputSpinner from "react-native-input-spinner";
 import Search from 'react-native-search-box';
 
 type Props = {};
@@ -15,10 +16,14 @@ export default class DietChartActivity extends Component<Props> {
     constructor(props) {
         super(props);
         this.state = {
+            dietbox: [],
             items: [],
             display: false,
             curpage: 1,
+            size: 1,
             isshow: false,
+            itembox: [],
+            index: -1
         };
 
     }
@@ -44,7 +49,6 @@ export default class DietChartActivity extends Component<Props> {
                                 onPress={() => {
                                     let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                     fetch(url).then(res => res.json()).then((data) => {
-                                        console.info(data)
                                         Alert.alert("detail", "Saturated Fat:" + data.nutrient_data[0].value + " g\nCalories:" + data.nutrient_data[1].value + " kcal")
                                     })
                                 }} >
@@ -66,7 +70,74 @@ export default class DietChartActivity extends Component<Props> {
                                     </View>
                                 </View>
                             </TouchableOpacity>
-                            <View style={{ width: "15%" }}><TouchableOpacity><Button title="add"></Button></TouchableOpacity></View>
+                            <View style={{ width: "15%" }}>
+                                <TouchableOpacity>
+                                    <Button title="add" onPress={() => {
+                                        let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
+                                        if (this.state.itembox.indexOf(item[i].id) == -1) {
+                                            this.state.itembox.push(item[i].id)
+                                            this.setState({ itembox: this.state.itembox })
+                                            fetch(url).then(res => res.json()).then((data) => {
+                                                let itemid = this.state.index + 1
+                                                this.setState({ index, itemid })
+                                                let diet = {};
+                                                diet.quantity = data.quantity + ""
+                                                diet.description = data.description
+                                                diet.calories = data.nutrient_data[1].value
+                                                let dietview =
+                                                    <View key={(new Date()).valueOf()} style={{ width: "100%", alignItems: "center" }}>
+                                                        <View style={{ width: "90%", flexDirection: "row" }}>
+                                                            <Text style={{ width: "40%", color: "#0071BC", fontSize: 14, fontWeight: "bold", height: 20 }}>{diet.description}</Text>
+                                                            <View style={{ width: "30%", height: 20, alignItems: "center" }}>
+                                                                <InputSpinner
+                                                                    inputStyle={{ paddingVertical: 0 }}
+                                                                    showBorder={true}
+                                                                    fontSize={16}
+                                                                    rounded={false}
+                                                                    height={20}
+                                                                    width={70}
+                                                                    max={100}
+                                                                    min={1}
+                                                                    precision={1}
+                                                                    step={1}
+                                                                    arrows={true}
+                                                                    color={"#a0a0a0"}
+                                                                    value={1}
+                                                                    onChange={(value) => {
+                                                                        // let url = data.url + "user/sleep/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                                                        // fetch(url).then(res => res.text()).then(() => {
+                                                                        //     this.load();
+                                                                        // }).catch(function (error) {
+                                                                        //     console.log('There has been a problem with your fetch operation: ' + error.message);
+                                                                        // });
+
+                                                                    }}
+                                                                />
+                                                            </View>
+                                                            <View style={{ width: "30%" }}>
+                                                                <TouchableOpacity itemid={itemid} ref={(ref) => { this.obj = ref }} onPress={() => {
+                                                                    console.info(this.obj)
+                                                                    // let index=this.state.index-1
+                                                                    // this.setState({index})
+                                                                    // console.info(this.state.index)
+                                                                    //this.setState({ dietbox: this.state.dietbox.splice(j,1) })
+                                                                }}>
+                                                                    <Text style={{ fontWeight: "bold", textAlign: "right", width: "100%" }}>Remove</Text>
+                                                                </TouchableOpacity>
+                                                            </View>
+                                                        </View>
+                                                        <View style={{ width: "100%", height: 5, alignItems: "center" }}><View style={{ width: "90%", height: "100%", borderBottomColor: "#efefef", borderBottomWidth: 1 }}></View></View>
+                                                    </View>
+
+                                                this.state.dietbox.push(dietview)
+                                                this.setState({ dietbox: this.state.dietbox })
+                                            })
+                                        } else {
+                                            Alert.alert("Items have been added to the list")
+                                        }
+                                    }} />
+                                </TouchableOpacity>
+                            </View>
                         </View>
 
                     </View>
@@ -106,9 +177,19 @@ export default class DietChartActivity extends Component<Props> {
                         </View>
                     </View>
                     <View style={{ width: "100%", height: 20 }}></View>
+                    <View style={{ width: "100%", alignItems: "center" }}>
+                        <View style={{ width: "90%", flexDirection: "row", borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
+                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Food</Text></View>
+                            <View style={{ width: "30%" }}><Text style={{ textAlign: "center" }}>Each</Text></View>
+                            <View style={{ width: "30%" }}><Text style={{ textAlign: "right" }}>Edit</Text></View>
+                        </View>
+                        <View style={{ width: "100%", height: 5 }}></View>
+                    </View>
+                    {this.state.dietbox.length == 0 ? null : this.state.dietbox.map((value) => { console.info(value); return value })}
+                    <View style={{ width: "100%", height: 10 }}></View>
                     <View>
                         <View style={{ width: "100%", alignItems: "center" }}>
-                            <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>Breakfast</Text></View>
+                            <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>Select your diet</Text></View>
                         </View>
                         <View>
                             <Search
@@ -119,35 +200,38 @@ export default class DietChartActivity extends Component<Props> {
                                 }}
                             />
                         </View>
-                        <ScrollView keyboardShouldPersistTaps="always" style={{ backgroundColor: '#f8f8f8', width: "100%" }}>
+                        <ScrollView keyboardShouldPersistTaps="always" style={{ backgroundColor: '#f8f8f8', width: "100%", height: 600 }}>
                             {this.state.items}
                             {this.state.isshow == true ?
                                 <View style={{ width: "100%", height: 30, flexDirection: "row" }}>
-                                    <View style={{ width: "70%" }}>
+                                    <View style={{ width: "30%", height: 30 }}>
+                                        <Text style={{ width: "100%", textAlignVertical: "center", height: 30, textAlign: "right" }}>Total:{this.state.allpage} page</Text>
+                                    </View>
+                                    <View style={{ width: "40%" }}>
                                         <TouchableOpacity onPress={() => {
-                                            if (this.state.curpage == 1) {return;}
+                                            if (this.state.curpage == 1) { return; }
                                             let curpage = this.state.curpage - 1
                                             this.setState({ curpage })
                                             let index = this.state.index - 5
                                             this.setState({ index })
                                             this.load(this.state.text, index)
                                         }}>
-                                            <Text style={{ color:"#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "right" }}>prev</Text>
+                                            <Text style={{ color: "#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "right" }}>prev</Text>
                                         </TouchableOpacity>
                                     </View>
-                                    <View style={{ width: "10%", height: 30 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold", width: "100%", height: "100%", textAlign: "center" }}>{this.state.curpage}</Text></View>
-                                    <View style={{ width: "20%" }}>
+                                    <View style={{ width: "5%", height: 30 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold", width: "100%", height: "100%", textAlign: "center" }}>{this.state.curpage}</Text></View>
+                                    <View style={{ width: "10%" }}>
                                         <TouchableOpacity onPress={() => {
-                                            if(curpage==this.state.total){return;}
+                                            if (curpage == this.state.total) { return; }
                                             let curpage = this.state.curpage + 1
                                             this.setState({ curpage })
                                             let index = this.state.index + 5
                                             this.setState({ index })
                                             this.load(this.state.text, index)
-                                            this.setState({greycolor:"#0071BC"})
+                                            this.setState({ greycolor: "#0071BC" })
 
                                         }}>
-                                            <Text style={{ color:"#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "left" }}>next</Text>
+                                            <Text style={{ color: "#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "left" }}>next</Text>
                                         </TouchableOpacity>
                                     </View>
                                 </View> : null}
