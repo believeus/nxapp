@@ -21,7 +21,7 @@ export default class BiologicalActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>Biological Age Detection 2.0 &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
                     </View>
                     <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
                             <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
                         </TouchableOpacity>
                     </View>

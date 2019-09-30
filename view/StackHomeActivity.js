@@ -28,7 +28,9 @@ import McGillChartActivity from './McGillChartActivity';
 import BiologicalActivity from './BiologicalActivity';
 import TestprocessActivity from './TestprocessActivity';
 import SleepChartActivity from "./SleepChartActivity"
-import DietChartActivity from "./DietChartActivity"
+import DietChartActivity from "./DietChartActivity";
+import SameActivity from './SameActivity';
+import DataActivity from './DataActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -63,6 +65,9 @@ export const RootStack = createStackNavigator(
         },
         Biological: {
             screen: BiologicalActivity
+        },
+        Same: {
+            screen: SameActivity
         },
         Mall: {
             screen: TabMallActivity
@@ -103,11 +108,14 @@ export const RootStack = createStackNavigator(
         MoodChart: {
             screen: MoodChartActivity
         },
-        SleepChart:{
-            screen:SleepChartActivity
+        SleepChart: {
+            screen: SleepChartActivity
         },
-        DietChart:{
-            screen:DietChartActivity
+        DietChart: {
+            screen: DietChartActivity
+        },
+        DataSecurity:{
+            screen:DataActivity
         }
     },
     {

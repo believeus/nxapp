@@ -65,6 +65,15 @@
     "DavidActivity": {
         "name": "David Cheishvili Ph.D."
     },
+    "HuiliActivity": {
+        "name": "Hui li Ph.D."
+    },
+    "ChifatActivity": {
+        "name": "Chifat Wong Ph.D."
+    },
+    "ZhiyuanActivity": {
+        "name": "Zhiyuan Lv Ph.D."
+    },
     "MethylationActivity": {
         "name": "DNA Methylation"
     },
@@ -83,12 +92,18 @@
     "BiologicalActivity": {
         "name": "Biological Age"
     },
-    "SleepChartActivity":{
-        "name":"Sleep Questionnaires"
+    "SleepChartActivity": {
+        "name": "Sleep Questionnaires"
     },
-    "DietChartActivity":{
-        "name":"Diet Recommendation",
-        "confirmText":"Confirm",
-        "chooseBreakfast":"Choose  Breakfast..."
+    "DietChartActivity": {
+        "name": "Diet Recommendation",
+        "confirmText": "Confirm",
+        "chooseBreakfast": "Choose  Breakfast..."
+    },
+    "SameActivity": {
+        "name": "Sam-e introduction"
+    },
+    "DataActivity": {
+        "name": "Data Security"
     }
 }

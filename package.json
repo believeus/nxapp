@@ -18,6 +18,7 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-native": "^0.60.0",
+    "react-native-awesome-alerts": "^1.2.0",
     "react-native-braintree-payments-drop-in": "^1.0.5",
     "react-native-collapsible": "^1.5.1",
     "react-native-device-info": "^2.3.2",

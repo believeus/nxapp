@@ -46,7 +46,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index1.jpg')} resizeMode="center" />
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("DnaReport")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Same")}>
                             <View style={{ width: '100%', height: 310 }}>
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode="center" />
                             </View>
@@ -122,13 +122,13 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                                <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
                                 </TouchableOpacity>
                             </View>
 
                         </View>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                             <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>Learn  More &gt;</Text>
                         </TouchableOpacity>
                     </View>
@@ -181,13 +181,13 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                                <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
                                 </TouchableOpacity>
                             </View>
 
                         </View>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Same")}>
                             <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>Learn  More &gt;</Text>
                         </TouchableOpacity>
                     </View>
@@ -195,7 +195,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                 <View style={{ backgroundColor: '#ffffff', }}>
                     <View style={{ width: '90%', height: 567, marginTop: 56, alignSelf: 'center' }}>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChar")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc4.png')} resizeMode='center' />
@@ -208,7 +208,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Questionnaire")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc3.png')} resizeMode='center' />
@@ -221,7 +221,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Testprocess")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc10.png')} resizeMode='center' />
@@ -234,7 +234,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Check")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc5.png')} resizeMode='center' />
@@ -247,7 +247,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push(" ")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc1.png')} resizeMode='center' />
@@ -260,7 +260,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("DataSecurity")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc9.png')} resizeMode='center' />
@@ -273,7 +273,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc2.png')} resizeMode='center' />
