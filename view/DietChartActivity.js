@@ -20,10 +20,11 @@ export default class DietChartActivity extends Component<Props> {
             items: [],
             display: false,
             curpage: 1,
-            size: 1,
             isshow: false,
             itembox: [],
-            index: -1
+            calories: 0,
+            fat: 0,
+            position: -1
         };
 
     }
@@ -34,7 +35,6 @@ export default class DietChartActivity extends Component<Props> {
         this.setState({ text })
         let url = "https://esha-nutrition-demo.azurewebsites.net/api/foods?query=" + text + "&count=5&start=" + index + "&spell=true&"
         fetch(url).then(res => res.json()).then((data) => {
-            console.info(data)
             this.setState({ isshow: true })
             this.setState({ total: data.total })
             let allpage = data.total / 5.0
@@ -73,21 +73,28 @@ export default class DietChartActivity extends Component<Props> {
                             <View style={{ width: "15%" }}>
                                 <TouchableOpacity>
                                     <Button title="add" onPress={() => {
-                                        let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                         if (this.state.itembox.indexOf(item[i].id) == -1) {
+
+                                            this.setState({ position: ++this.state.position })
                                             this.state.itembox.push(item[i].id)
                                             this.setState({ itembox: this.state.itembox })
+                                            let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                             fetch(url).then(res => res.json()).then((data) => {
-                                                let itemid = this.state.index + 1
-                                                this.setState({ index, itemid })
                                                 let diet = {};
                                                 diet.quantity = data.quantity + ""
                                                 diet.description = data.description
-                                                diet.calories = data.nutrient_data[1].value
+                                                diet.calories =Number(parseFloat(data.nutrient_data[1].value).toFixed(3))
+                                                diet.fat =Number(parseFloat(data.nutrient_data[0].value).toFixed(3))
+                                                this.state.calories = Number(parseFloat(diet.calories+this.state.calories).toFixed(3))
+                                                this.state.fat=Number(parseFloat(diet.fat+this.state.fat).toFixed(3))
+                                                this.setState({ calories: this.state.calories })
+                                                this.setState({ fat: this.state.fat })
+                                                let id=(new Date()).valueOf();
                                                 let dietview =
-                                                    <View key={(new Date()).valueOf()} style={{ width: "100%", alignItems: "center" }}>
+                                                    <View key={id} style={{ width: "100%", alignItems: "center" }}>
+                                                        <View style={{ width: "100%", height: 5 }}></View>
                                                         <View style={{ width: "90%", flexDirection: "row" }}>
-                                                            <Text style={{ width: "40%", color: "#0071BC", fontSize: 14, fontWeight: "bold", height: 20 }}>{diet.description?(diet.description.length > 5 ? diet.description.substr(0, 18) + "..." : diet.description):""}</Text>
+                                                            <Text style={{ width: "40%", color: "#0071BC", fontSize: 14, fontWeight: "bold", height: 20 }}>{diet.description ? (diet.description.length > 5 ? diet.description.substr(0, 18) + "..." : diet.description) : ""}</Text>
                                                             <View style={{ width: "30%", height: 20, alignItems: "center" }}>
                                                                 <InputSpinner
                                                                     inputStyle={{ paddingVertical: 0 }}
@@ -115,14 +122,24 @@ export default class DietChartActivity extends Component<Props> {
                                                                 />
                                                             </View>
                                                             <View style={{ width: "30%" }}>
-                                                                <TouchableOpacity itemid={itemid} ref={(ref) => { this.obj = ref }} onPress={() => {
-                                                                    console.info(this.obj)
-                                                                    // let index=this.state.index-1
-                                                                    // this.setState({index})
-                                                                    // console.info(this.state.index)
-                                                                    //this.setState({ dietbox: this.state.dietbox.splice(j,1) })
-                                                                }}>
-                                                                    <Text style={{ fontWeight: "bold", textAlign: "right", width: "100%" }}>Remove</Text>
+                                                                <TouchableOpacity itemid={item[i].id} dataid={this.state.position} ref={(ref) => { this["type$$" + item[i].id] = ref }}
+                                                                    onPress={() => {
+                                                                        let itemid = this["type$$" + item[i].id].props.itemid
+                                                                        let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + itemid + "?"
+                                                                        fetch(url).then(res => res.json()).then((data) => {
+                                                                            let calories = Number(parseFloat(data.nutrient_data[1].value).toFixed(3))
+                                                                            let fat = Number(parseFloat(data.nutrient_data[0].value).toFixed(3))
+                                                                            this.state.calories=Number(parseFloat(this.state.calories-calories).toFixed(3))
+                                                                            this.state.fat =Number(parseFloat(this.state.fat-fat).toFixed(3))
+                                                                            this.setState({ calories: this.state.calories })
+                                                                            this.setState({ fat: this.state.fat })
+                                                                            let position = this["type$$" + item[i].id].props.dataid
+                                                                            this.state.dietbox.splice(position, 1, undefined)
+                                                                            this.state.itembox.splice(position, 1, undefined)
+                                                                            this.setState({ dietbox: this.state.dietbox })
+                                                                        })
+                                                                    }} >
+                                                                    <Text style={{ fontWeight: "bold", textAlign: "right", width: "100%" }}>Remove-{this.state.position}</Text>
                                                                 </TouchableOpacity>
                                                             </View>
                                                         </View>
@@ -185,8 +202,19 @@ export default class DietChartActivity extends Component<Props> {
                         </View>
                         <View style={{ width: "100%", height: 5 }}></View>
                     </View>
-                    {this.state.dietbox.length == 0 ? null : this.state.dietbox.map((value) => { console.info(value); return value })}
-                    <View style={{ width: "100%", height: 10 }}></View>
+                    {this.state.dietbox.length == 0 ? null : this.state.dietbox.map((value) => { return value })}
+                    <View style={{ width: "100%", alignItems: "center" }}>
+                        <View style={{ width: "90%", flexDirection: "row", borderTopColor: "#efefef", borderTopWidth: 1, borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
+                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Calories:</Text></View>
+                            <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.calories} kcal</Text></View>
+                        </View>
+                    </View>
+                    <View style={{ width: "100%", alignItems: "center" }}>
+                        <View style={{ width: "90%", flexDirection: "row", borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
+                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Staturated Fat:</Text></View>
+                            <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.fat} g</Text></View>
+                        </View>
+                    </View>
                     <View>
                         <View style={{ width: "100%", alignItems: "center" }}>
                             <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>Select your diet</Text></View>
