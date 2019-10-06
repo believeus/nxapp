@@ -4,7 +4,8 @@ import { I18n } from '../locales/i18n'
 import { WebView } from 'react-native-webview'
 import InputSpinner from "react-native-input-spinner"
 import Session from '../storage/Session'
-import Search from 'react-native-search-box';
+import Search from 'react-native-search-box'
+import DietSliderChart from './DietSliderChart'
 import data from '../appdata'
 type Props = {};
 export default class DietChartActivity extends Component<Props> {
@@ -213,31 +214,28 @@ export default class DietChartActivity extends Component<Props> {
         return (
             <ScrollView>
                 <View style={{ width: "100%" }}>
-                    {this.state.display == true ?
-                        <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                            <WebView ref={(ref) => { this.brower = ref }} source={{ uri: "https://www.nhlbi.nih.gov/health/educational/lose_wt/eat/calories.htm" }} />
-                            <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
-                                <TouchableOpacity style={{ width: "100%", height: "100%" }}>
-                                    <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
-                                </TouchableOpacity>
-                            </View>
-                        </Modal> : null
-                    }
-                    <View style={{ width: "100%", alignItems: "center" }}>
-                        <View style={{ width: "90%", height: 45 }}><Text style={{ fontSize: 18, fontWeight: "bold", textAlignVertical: "center", height: "100%" }}>Food Consumption (calories/day)</Text></View>
-                        <View style={{ width: "90%" }}>
-                            <TouchableOpacity onPress={() => { this.setState({ display: true }) }}>
-                                <Text style={{ fontSize: 12, fontWeight: "bold", textAlignVertical: "center", color: "#0071BC" }}>
-                                    Source: National Heart, Lung, and Blood Institute
-                                </Text>
-                            </TouchableOpacity>
-                            <Text style={{ fontSize: 12, fontWeight: "bold" }}>
-                                Recommendation:
-                            </Text>
-                            <Text>Eating plans that contain 1,200–1,500 calories each day will help most women lose weight safely. Eating plans that contain 1,500–1,800 calories each day are suitable for men and for women who weigh more or who exercise regularly.</Text>
-                        </View>
-                    </View>
                     <View style={{ width: "100%", height: 20 }}></View>
+                    <DietSliderChart
+                        title="Food Consumption (calories/day)"
+                        refTitle="Source: Healthline"
+                        refUrl="https://www.healthline.com/nutrition/how-many-calories-per-day#section5"
+                        max="4000"
+                        sliderDefualtValue={1500}
+                        yAxisLabelValue="calories"
+                        yAxisLabelName="calories"
+                        yAxisLine="2000@2500"
+                        column="calories"
+                        ref={(ref) => { this.dietchart = ref }}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>An average woman needs to eat about 2000 calories per day to maintain, and 1500 calories to lose one pound of weight per week. An average man needs 2500 calories to maintain, and 2000 to lose one pound of weight per week.
+                                </Text>
+                            </View>
+                        }
+                    />
+                    
+                    <View style={{ width: "100%", height: 15 }}></View>
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ width: "90%", flexDirection: "row", borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
                             <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Food</Text></View>
@@ -271,9 +269,9 @@ export default class DietChartActivity extends Component<Props> {
                                             'Content-Type': 'application/x-www-form-urlencoded'
                                         },
                                         body: "uuid=" + this.state.user.uuid + "&foodname=" + this.state.foodbox.join('|') + "&calories=" + this.state.calories + "&updateTime=" + new Date().getTime()
-                                    }).then(function (response) {
-                                        // do sth
-                                    });
+                                    }).then(res => res.text()).then((data) => {
+                                        this.dietchart.load()
+                                    })
                                 }} title="save"></Button>
                             </TouchableOpacity>
                         </View>
@@ -292,42 +290,43 @@ export default class DietChartActivity extends Component<Props> {
                                 }}
                             />
                         </View>
-                        <ScrollView keyboardShouldPersistTaps="always" style={{ backgroundColor: '#f8f8f8', width: "100%", height: 600 }}>
-                            {this.state.items}
-                            {this.state.isshow == true ?
-                                <View style={{ width: "100%", height: 30, flexDirection: "row" }}>
-                                    <View style={{ width: "30%", height: 30 }}>
-                                        <Text style={{ width: "100%", textAlignVertical: "center", height: 30, textAlign: "right" }}>Total:{this.state.allpage} page</Text>
-                                    </View>
-                                    <View style={{ width: "40%" }}>
-                                        <TouchableOpacity onPress={() => {
-                                            if (this.state.curpage == 1) { return; }
-                                            let curpage = this.state.curpage - 1
-                                            this.setState({ curpage })
-                                            let index = this.state.index - 5
-                                            this.setState({ index })
-                                            this.load(this.state.text, index)
-                                        }}>
-                                            <Text style={{ color: "#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "right" }}>prev</Text>
-                                        </TouchableOpacity>
-                                    </View>
-                                    <View style={{ width: "5%", height: 30 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold", width: "100%", height: "100%", textAlign: "center" }}>{this.state.curpage}</Text></View>
-                                    <View style={{ width: "10%" }}>
-                                        <TouchableOpacity onPress={() => {
-                                            if (curpage == this.state.total) { return; }
-                                            let curpage = this.state.curpage + 1
-                                            this.setState({ curpage })
-                                            let index = this.state.index + 5
-                                            this.setState({ index })
-                                            this.load(this.state.text, index)
-                                            this.setState({ greycolor: "#0071BC" })
+                        {this.state.items.length == 0 ? null :
+                            <ScrollView keyboardShouldPersistTaps="always" style={{ backgroundColor: '#f8f8f8', width: "100%", height: 600 }}>
+                                {this.state.items}
+                                {this.state.isshow == true ?
+                                    <View style={{ width: "100%", height: 30, flexDirection: "row" }}>
+                                        <View style={{ width: "30%", height: 30 }}>
+                                            <Text style={{ width: "100%", textAlignVertical: "center", height: 30, textAlign: "right" }}>Total:{this.state.allpage} page</Text>
+                                        </View>
+                                        <View style={{ width: "40%" }}>
+                                            <TouchableOpacity onPress={() => {
+                                                if (this.state.curpage == 1) { return; }
+                                                let curpage = this.state.curpage - 1
+                                                this.setState({ curpage })
+                                                let index = this.state.index - 5
+                                                this.setState({ index })
+                                                this.load(this.state.text, index)
+                                            }}>
+                                                <Text style={{ color: "#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "right" }}>prev</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                        <View style={{ width: "5%", height: 30 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold", width: "100%", height: "100%", textAlign: "center" }}>{this.state.curpage}</Text></View>
+                                        <View style={{ width: "10%" }}>
+                                            <TouchableOpacity onPress={() => {
+                                                if (curpage == this.state.total) { return; }
+                                                let curpage = this.state.curpage + 1
+                                                this.setState({ curpage })
+                                                let index = this.state.index + 5
+                                                this.setState({ index })
+                                                this.load(this.state.text, index)
+                                                this.setState({ greycolor: "#0071BC" })
 
-                                        }}>
-                                            <Text style={{ color: "#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "left" }}>next</Text>
-                                        </TouchableOpacity>
-                                    </View>
-                                </View> : null}
-                        </ScrollView>
+                                            }}>
+                                                <Text style={{ color: "#0071BC", fontWeight: "bold", textAlignVertical: "center", height: "100%", textAlign: "left" }}>next</Text>
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View> : null}
+                            </ScrollView>}
                     </View>
 
                 </View>

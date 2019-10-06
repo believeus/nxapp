@@ -41,24 +41,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         </View>
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <SliderLineChart
-                        title="Foodconsumption (calories/day)"
-                        refTitle="Source: Healthline"
-                        refUrl="https://www.healthline.com/nutrition/how-many-calories-per-day#section5"
-                        max="4000"
-                        sliderDefualtValue={1500}
-                        yAxisLabelValue="calories"
-                        yAxisLabelName="calories"
-                        yAxisLine="2000@2500"
-                        column="calories"
-                        desc={
-                            <View style={{ width: "90%" }}>
-                                <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>An average woman needs to eat about 2000 calories per day to maintain, and 1500 calories to lose one pound of weight per week. An average man needs 2500 calories to maintain, and 2000 to lose one pound of weight per week.
-                                </Text>
-                            </View>
-                        }
-                    />
+                   
                 </View>
                 <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 <View>
