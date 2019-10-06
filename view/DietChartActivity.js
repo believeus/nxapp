@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, TouchableOpacity, Button, ScrollView, Modal, Alert, TextInput } from 'react-native'
 import { I18n } from '../locales/i18n'
 import { WebView } from 'react-native-webview'
-import InputSpinner from "react-native-input-spinner";
+import InputSpinner from "react-native-input-spinner"
+import Session from '../storage/Session'
 import Search from 'react-native-search-box';
-
+import data from '../appdata'
 type Props = {};
 export default class DietChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -15,6 +16,7 @@ export default class DietChartActivity extends Component<Props> {
 
     constructor(props) {
         super(props);
+        this.position = -1
         this.state = {
             dietbox: [],
             items: [],
@@ -29,7 +31,11 @@ export default class DietChartActivity extends Component<Props> {
         };
 
     }
-
+    componentDidMount() {
+        Session.load("sessionuser").then((user) => {
+            this.setState({ user: user });
+        })
+    }
     load = (text, index) => {
         this.setState({ items: [] })
         this.setState({ index })
@@ -75,18 +81,21 @@ export default class DietChartActivity extends Component<Props> {
                                 <TouchableOpacity>
                                     <Button title="add" onPress={() => {
                                         if (this.state.itembox.indexOf(item[i].id) == -1) {
-                                            this.setState({ position: ++this.state.position })
+                                            this.position += 1
+                                            let point = this.position
                                             this.state.itembox.push(item[i].id)
                                             this.setState({ itembox: this.state.itembox })
                                             let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                             fetch(url).then(res => res.json()).then((data) => {
+                                                let foodstatus = "{\"foodname\":\"" + data.description + "\",\"calories\":" + data.nutrient_data[1].value + ",\"size\":1}"
+                                                this.state.foodbox.splice(point, 1, foodstatus)
+
                                                 let diet = {};
                                                 diet.quantity = data.quantity + ""
                                                 diet.description = data.description
                                                 diet.calories = Number(parseFloat(data.nutrient_data[1].value).toFixed(3))
                                                 diet.fat = Number(parseFloat(data.nutrient_data[0].value).toFixed(3))
-                                                this.state.foodbox.splice(this.state.position, 1, diet)
-                                                console.info(this.state.foodbox)
+
 
                                                 this.state.calories = Number(parseFloat(diet.calories + this.state.calories).toFixed(3))
                                                 this.state.fat = Number(parseFloat(diet.fat + this.state.fat).toFixed(3))
@@ -126,17 +135,15 @@ export default class DietChartActivity extends Component<Props> {
                                                                             this.state.fat = Number(parseFloat(this.state.fat + fat).toFixed(3))
                                                                             this.setState({ calories: this.state.calories })
                                                                             this.setState({ fat: this.state.fat })
-                                                                            let diet = {}
-                                                                            diet.foodname = data.description
-                                                                            diet.calories = calories
-                                                                            diet.size = value
-                                                                            this.state.foodbox.splice(this.state.position, 1, diet)
+                                                                            let foodstatus = "{\"foodname\":\"" + data.description + "\",\"calories\":" + calories + ",\"size\":" + value + "}"
+                                                                            this.state.foodbox.splice(point, 1, foodstatus)
                                                                             console.info(this.state.foodbox)
 
                                                                         })
                                                                     }}
                                                                     onDecrease={(value) => { //value 已经点击之后的值
-                                                                        let size = this["type$$" + item[i].id].size == undefined ? 1 : this["type$$" + item[i].id].size
+                                                                        console.info(point)
+                                                                        this["type$$" + item[i].id].size = this["type$$" + item[i].id].size == undefined ? 1 : this["type$$" + item[i].id].size
                                                                         let itemid = this["type$$" + item[i].id].props.itemid
                                                                         let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + itemid + "?"
                                                                         fetch(url).then(res => res.json()).then((data) => {
@@ -146,18 +153,16 @@ export default class DietChartActivity extends Component<Props> {
                                                                             this.state.fat = Number(parseFloat(this.state.fat - fat).toFixed(3))
                                                                             this.setState({ calories: this.state.calories })
                                                                             this.setState({ fat: this.state.fat })
-                                                                            let diet = {}
-                                                                            diet.foodname = data.description
-                                                                            diet.calories = calories
-                                                                            diet.size = value
-                                                                            this.state.foodbox.splice(this.state.position, 1, diet)
+
+                                                                            let foodstatus = "{\"foodname\":\"" + data.description + "\",\"calories\":" + calories + ",\"size\":" + value + "}"
+                                                                            this.state.foodbox.splice(point, 1, foodstatus)
                                                                             console.info(this.state.foodbox)
                                                                         })
                                                                     }}
                                                                 />
                                                             </View>
                                                             <View style={{ width: "30%" }}>
-                                                                <TouchableOpacity itemid={item[i].id} dataid={this.state.position} ref={(ref) => { this["type$$" + item[i].id] = ref }}
+                                                                <TouchableOpacity itemid={item[i].id} dataid={point} ref={(ref) => { this["type$$" + item[i].id] = ref }}
                                                                     onPress={() => {
                                                                         let size = this["type$$" + item[i].id].size == undefined ? 1 : this["type$$" + item[i].id].size
                                                                         let itemid = this["type$$" + item[i].id].props.itemid
@@ -172,7 +177,9 @@ export default class DietChartActivity extends Component<Props> {
                                                                             let position = this["type$$" + item[i].id].props.dataid
                                                                             this.state.dietbox.splice(position, 1, undefined)
                                                                             this.state.itembox.splice(position, 1, undefined)
+                                                                            this.state.foodbox.splice(position, 1, undefined)
                                                                             this.setState({ dietbox: this.state.dietbox })
+
 
                                                                         })
                                                                     }} >
@@ -254,16 +261,20 @@ export default class DietChartActivity extends Component<Props> {
                     </View>
                     <View style={{ width: "100%", alignItems: "center", height: 15 }}>
                         <View style={{ width: "90%", height: "100%" }}>
-                            <TouchableOpacity onPress={() => {
-                                xx
-                                let url = data.url + "user/mood/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
-                                fetch(url).then(res => res.text()).then((data) => {
-                                    if (data == "success") {
-                                        this.load();
-                                    }
-                                })
-                            }}>
-                                <Button title="save"></Button>
+                            <TouchableOpacity>
+                                <Button onPress={() => {
+                                    console.info(this.state.foodbox.join('|'))
+                                    // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
+                                    fetch(data.url + "user/diet/update.jhtml", {
+                                        method: "POST",
+                                        headers: {
+                                            'Content-Type': 'application/x-www-form-urlencoded'
+                                        },
+                                        body: "uuid=" + this.state.user.uuid + "&foodname=" + this.state.foodbox.join('|') + "&calories=" + this.state.calories + "&updateTime=" + new Date().getTime()
+                                    }).then(function (response) {
+                                        // do sth
+                                    });
+                                }} title="save"></Button>
                             </TouchableOpacity>
                         </View>
                     </View>
