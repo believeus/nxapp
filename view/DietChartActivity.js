@@ -234,8 +234,20 @@ export default class DietChartActivity extends Component<Props> {
                             </View>
                         }
                     />
-                    
+
                     <View style={{ width: "100%", height: 15 }}></View>
+                    <View style={{ width: "100%", alignItems: "center" }}>
+                        <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>Input your diet</Text></View>
+                    </View>
+                    <View>
+                        <Search
+                            ref={(ref) => { this.searchbox = ref }}
+                            onCancel={() => { this.setState({ items: [] }) }}
+                            onSearch={(text) => {
+                                this.load(text, 0)
+                            }}
+                        />
+                    </View>
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ width: "90%", flexDirection: "row", borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
                             <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Food</Text></View>
@@ -278,18 +290,7 @@ export default class DietChartActivity extends Component<Props> {
                     </View>
                     <View style={{ width: "100%", height: 30 }}></View>
                     <View>
-                        <View style={{ width: "100%", alignItems: "center" }}>
-                            <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>Select your diet</Text></View>
-                        </View>
-                        <View>
-                            <Search
-                                ref={(ref) => { this.searchbox = ref }}
-                                onCancel={() => { this.setState({ items: [] }) }}
-                                onSearch={(text) => {
-                                    this.load(text, 0)
-                                }}
-                            />
-                        </View>
+
                         {this.state.items.length == 0 ? null :
                             <ScrollView keyboardShouldPersistTaps="always" style={{ backgroundColor: '#f8f8f8', width: "100%", height: 600 }}>
                                 {this.state.items}
