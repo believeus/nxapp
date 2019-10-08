@@ -108,5 +108,11 @@
     },
     "RasEncryptionActivity":{
         "name":"Set Private key"
+    },
+    "QAActivity": {
+        "name": "Q&A"
+    },
+    "ContactActivity": {
+        "name": "Contact Us"
     }
 }

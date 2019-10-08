@@ -195,7 +195,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                 <View style={{ backgroundColor: '#ffffff', }}>
                     <View style={{ width: '90%', height: 567, marginTop: 56, alignSelf: 'center' }}>
-                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChar")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("LifeStyleChart")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc4.png')} resizeMode='center' />

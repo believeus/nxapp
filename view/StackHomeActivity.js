@@ -20,6 +20,9 @@ import CheckActivity from './CheckActivity';
 import ScienceteamActivity from './ScienceteamActivity';
 import ProfMosheActivity from './ProfMosheActivity';
 import DavidActivity from './DavidActivity';
+import HuiliActivity from './HuiliActivity';
+import ChifatActivity from './ChifatActivity';
+import ZhiyuanActivity from './ZhiyuanActivity';
 import MethylationActivity from './MethylationActivity';
 import QuestionnaireActivity from './QuestionnaireActivity';
 import ConsentActivity from './ConsentActivity';
@@ -31,7 +34,12 @@ import SleepChartActivity from "./SleepChartActivity"
 import DietChartActivity from "./DietChartActivity";
 import SameActivity from './SameActivity';
 import DataActivity from './DataActivity';
+<<<<<<< Updated upstream
 import RasEncryptionActivity from "./RasEncryptionActivity"
+=======
+import ContactActivity from './ContactActivity';
+import QAActivity from './QAActivity';
+>>>>>>> Stashed changes
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -54,6 +62,15 @@ export const RootStack = createStackNavigator(
         },
         David: {
             screen: DavidActivity
+        },
+        Huili: {
+            screen: HuiliActivity
+        },
+        Chifat: {
+            screen: ChifatActivity
+        },
+        Zhiyuan: {
+            screen: ZhiyuanActivity
         },
         Methylation: {
             screen: MethylationActivity
@@ -120,7 +137,11 @@ export const RootStack = createStackNavigator(
         },
         RasEncryptionActivity: {
             screen: RasEncryptionActivity
-        }
+        },
+        QA:{
+            screen:QAActivity
+        },
+        Contact:ContactActivity
     },
     {
         initialRouteName: 'Main',
