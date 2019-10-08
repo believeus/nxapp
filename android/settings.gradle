@@ -1,4 +1,8 @@
 rootProject.name = 'nxapp'
+include ':react-native-aes-kit'
+project(':react-native-aes-kit').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-aes-kit/android/app')
+include ':react-native-rsa-native'
+project(':react-native-rsa-native').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-rsa-native/android')
 include ':react-native-smart-barcode'
 project(':react-native-smart-barcode').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-smart-barcode/android')
 include ':react-native-paypal-wrapper'

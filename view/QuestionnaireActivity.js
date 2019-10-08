@@ -4,9 +4,12 @@ import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 type Props = {};
 export default class QuestionnaireActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("QuestionnaireActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("QuestionnaireActivity.name")
+        })
+    }
+
     constructor(props) {
         super(props);
     }

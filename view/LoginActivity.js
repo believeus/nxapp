@@ -23,11 +23,11 @@ export default class LoginActivity extends Component<Props> {
         super(props);
         this.state = { animating: false };
     }
-    async  login() {
-        if (!this.isValid) { Alert.alert(I18n.t("LoginActivity.mailboxformatFail")) ;return }
+    login = () => {
+        if (!this.isValid) { Alert.alert(I18n.t("LoginActivity.mailboxformatFail")); return }
         if (!this.state.email) { Alert.alert(I18n.t("LoginActivity.mailboxNull")); return }
         if (!this.state.password) { Alert.alert(I18n.t("LoginActivity.passwordNull")); return }
-        let url = data.url+"user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
+        let url = data.url + "user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
         fetch(url).then(res => res.json())
             .then(sessionuser => {
                 if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
@@ -35,12 +35,18 @@ export default class LoginActivity extends Component<Props> {
                     if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     Session.save("sessionuser", sessionuser);
-                    //React-Navigation跳转并清除路由记录（重置）
-                    const resetAction = StackActions.reset({
-                        index: 0,
-                        actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                    });
-                    this.props.navigation.dispatch(resetAction);
+                    console.info(Session.load("privatekey"))
+                    Session.load("privatekey").then((privatekey) => {
+                        //React-Navigation跳转并清除路由记录（重置）
+                        const resetAction = StackActions.reset({
+                            index: 0,
+                            actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                        });
+                        this.props.navigation.dispatch(resetAction);
+                    }).catch((error) => {
+                        this.props.navigation.push("RasEncryptionActivity")
+                    })
+
 
                 }
             })
@@ -82,7 +88,7 @@ export default class LoginActivity extends Component<Props> {
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />
                         </View>
-                        <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 20 }}>
+                        <View style={{ alignItems: 'center', height: 30, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,

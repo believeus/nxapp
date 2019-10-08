@@ -3,6 +3,8 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import cc.rocwang.aescrypto.AesCryptoPackage;
+import com.RNRSA.RNRSAPackage;
 import com.reactnativecomponent.barcode.RCTCapturePackage;
 import com.taessina.paypal.RNPaypalWrapperPackage;
 import com.reactlibrary.RNPaypalPackage;
@@ -41,6 +43,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new AesCryptoPackage(),
+            new RNRSAPackage(),
             new RCTCapturePackage(),
             new RNPaypalWrapperPackage(),
             new RNPaypalPackage(),

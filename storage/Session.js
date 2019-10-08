@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-community/async-storage';
 import Storage from 'react-native-storage';
-
+import data from '../appdata'
 export default class Session {
 
     static init = () => {
@@ -12,7 +12,7 @@ export default class Session {
             storageBackend: AsyncStorage,
 
             // 数据过期时间，默认一整天（1000 * 3600 * 24 毫秒），设为null则永不过期
-            defaultExpires: 1000 * 3600 * 24 * 30,
+            defaultExpires: null,
             // 读写时在内存中缓存数据。默认启用。
             enableCache: true,
 
@@ -29,7 +29,7 @@ export default class Session {
                 sessionuser(params) {
                     let { id, resolve, reject, syncParams: { extraFetchOptions, someFlag } } = params;
                     console.info(params)
-                    fetch("http://192.168.0.113:8080/user/login.jhtml", {
+                    fetch(data.url+"user/login.jhtml", {
                         method: 'GET',
                         // body: 'id=' + id,
                         ...extraFetchOptions,

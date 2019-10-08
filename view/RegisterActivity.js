@@ -357,6 +357,7 @@ export default class RegisterActivity extends Component<Props> {
                                 onChangeText={(text) => { this.setState({ userName: text }); }}
                                 placeholder="Confirm Password" />
                         </View>
+
                         <View style={{ flexDirection: 'row', height: 60 }}>
                             <View style={{height: 30, width: '10%',alignSelf:'center', justifyContent: 'center'}}>
                                 <CheckBox

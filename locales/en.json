@@ -105,5 +105,8 @@
     },
     "DataActivity": {
         "name": "Data Security"
+    },
+    "RasEncryptionActivity":{
+        "name":"Set Private key"
     }
 }

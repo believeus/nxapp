@@ -31,6 +31,7 @@ import SleepChartActivity from "./SleepChartActivity"
 import DietChartActivity from "./DietChartActivity";
 import SameActivity from './SameActivity';
 import DataActivity from './DataActivity';
+import RasEncryptionActivity from "./RasEncryptionActivity"
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -114,8 +115,11 @@ export const RootStack = createStackNavigator(
         DietChart: {
             screen: DietChartActivity
         },
-        DataSecurity:{
-            screen:DataActivity
+        DataSecurity: {
+            screen: DataActivity
+        },
+        RasEncryptionActivity: {
+            screen: RasEncryptionActivity
         }
     },
     {

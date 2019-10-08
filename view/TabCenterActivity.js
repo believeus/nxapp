@@ -50,8 +50,9 @@ export default class CenterActivity extends Component {
                                 </View>
 
                                 :
-                                <View style={{ width: '100%', height: 25, justifyContent: 'center', alignItems: "center" }}>
+                                <View style={{ width: '100%', height: 65, justifyContent: 'center', alignItems: "center" }}>
                                     <Text style={{ color: "#fff", fontSize: 22 }}>{this.state.user.nickname}</Text>
+                                    <TouchableOpacity onPress={()=>{navigate.push("RasEncryptionActivity")}}><Text style={{ color: "#fff", fontSize: 18 }}>Secret key</Text></TouchableOpacity>
                                 </View>
                             }
                         </View>
@@ -170,7 +171,7 @@ export default class CenterActivity extends Component {
                         : null
                     }
                 </View>
-            </ScrollView>
+            </ScrollView >
         );
     }
 }
