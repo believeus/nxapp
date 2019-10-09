@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity } from 'react-native';
-import { ECharts } from "react-native-echarts-wrapper";
+import { ECharts } from "react-native-echarts-wrapper"
+import AesCrypto from 'react-native-aes-kit'
 import data from '../appdata'
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
@@ -96,6 +97,7 @@ export default class DnaReportActivity extends Component<Props> {
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
+
             fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
@@ -160,40 +162,43 @@ export default class DnaReportActivity extends Component<Props> {
                                 <View style={{ width: "15%", height: 35 }} >
 
                                     <TouchableOpacity onPress={() => {
-                                        console.info(data.url + "user/report/upbarcode.jhtml?userid=" + this.state.user.id + "&barcode=" + this.state.barcode)
-                                        fetch(data.url + "user/report/upbarcode.jhtml?userid=" + this.state.user.id + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
-                                            switch (data.status) {
-                                                case "invalid":
-                                                    Alert.alert('Message', 'Invalid barcode');
-                                                    break;
-                                                case "pending":
-                                                    Alert.alert('Message', 'Your report will be available in 21 working days.Please wait……');
-                                                    break;
-                                                case "processing":
-                                                    Alert.alert('Message', "Detection is being processed.\nPlease wait……");
-                                                    break;
-                                                case "finished":
-                                                    let option = Object.assign({}, this.state.option);
-                                                    let biological = window.parseFloat(data.biological).toFixed(2);
-                                                    let naturally = window.parseFloat(data.naturally).toFixed(2)
-                                                    this.setState({ biological })
-                                                    this.setState({ naturally })
-                                                    let i = biological > naturally ? 0 : 1;
-                                                    option.series[i].markPoint.data[0].value = biological
-                                                    option.series[i].markPoint.data[0].xAxis = naturally
-                                                    option.series[i].markPoint.data[0].yAxis = biological
-                                                    this.setState({ option })
-                                                    this.setState({ visual: true })
-                                                    {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                                                    {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                                                    {/* 从而重新刷新webview数据 */ }
-                                                    this.echarts.webview.reload();
-                                                    break;
-
-
-                                            }
-
-                                        })
+                                        const iv = 'iiibelieveususus'
+                                        let privatekey = this.state.user.privatekey
+                                        let uuid = this.state.user.uuid
+                                        //解密
+                                            console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode)
+                                            fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
+                                                switch (data.status) {
+                                                    case "invalid":
+                                                        Alert.alert('Message', 'Invalid barcode');
+                                                        break;
+                                                    case "pending":
+                                                        Alert.alert('Message', 'Your report will be available in 21 working days.Please wait……');
+                                                        break;
+                                                    case "processing":
+                                                        Alert.alert('Message', "Detection is being processed.\nPlease wait……");
+                                                        break;
+                                                    case "finished":
+                                                        let option = Object.assign({}, this.state.option);
+                                                        let biological = window.parseFloat(data.biological).toFixed(2);
+                                                        let naturally = window.parseFloat(data.naturally).toFixed(2)
+                                                        this.setState({ biological })
+                                                        this.setState({ naturally })
+                                                        let i = biological > naturally ? 0 : 1;
+                                                        option.series[i].markPoint.data[0].value = biological
+                                                        option.series[i].markPoint.data[0].xAxis = naturally
+                                                        option.series[i].markPoint.data[0].yAxis = biological
+                                                        this.setState({ option })
+                                                        this.setState({ visual: true })
+                                                        {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
+                                                        {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
+                                                        {/* 从而重新刷新webview数据 */ }
+                                                        this.echarts.webview.reload();
+                                                        break;
+                                                }
+    
+                                            })
+                                        
                                     }}>
                                         <Image style={{ width: "100%", height: "100%" }} resizeMode="center" source={require("../image/report.png")}></Image>
                                     </TouchableOpacity>

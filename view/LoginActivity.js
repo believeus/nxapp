@@ -34,20 +34,9 @@ export default class LoginActivity extends Component<Props> {
                 else {
                     if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                    sessionuser.privatekey=""
                     Session.save("sessionuser", sessionuser);
-                    console.info(Session.load("privatekey"))
-                    Session.load("privatekey").then((privatekey) => {
-                        //React-Navigation跳转并清除路由记录（重置）
-                        const resetAction = StackActions.reset({
-                            index: 0,
-                            actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                        });
-                        this.props.navigation.dispatch(resetAction);
-                    }).catch((error) => {
-                        this.props.navigation.push("RasEncryptionActivity")
-                    })
-
-
+                    this.props.navigation.push("RasEncryptionActivity")
                 }
             })
             .catch((e) => {

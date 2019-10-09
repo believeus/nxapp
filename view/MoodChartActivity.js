@@ -3,6 +3,7 @@ import { Platform, StyleSheet, Text, View, Image, Button, ScrollView } from 'rea
 import { I18n } from '../locales/i18n';
 import MoodChart from "./MoodChart"
 
+
 type Props = {};
 export default class MoodChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {

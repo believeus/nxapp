@@ -5,6 +5,7 @@ import { WebView } from 'react-native-webview'
 import InputSpinner from "react-native-input-spinner"
 import Session from '../storage/Session'
 import Search from 'react-native-search-box'
+import AesCrypto from 'react-native-aes-kit'
 import DietSliderChart from './DietSliderChart'
 import data from '../appdata'
 type Props = {};
@@ -273,17 +274,23 @@ export default class DietChartActivity extends Component<Props> {
                         <View style={{ width: "90%", height: "100%" }}>
                             <TouchableOpacity>
                                 <Button onPress={() => {
-                                    console.info(this.state.foodbox.join('|'))
-                                    // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
-                                    fetch(data.url + "user/diet/update.jhtml", {
-                                        method: "POST",
-                                        headers: {
-                                            'Content-Type': 'application/x-www-form-urlencoded'
-                                        },
-                                        body: "uuid=" + this.state.user.uuid + "&foodname=" + this.state.foodbox.join('|') + "&calories=" + this.state.calories + "&updateTime=" + new Date().getTime()
-                                    }).then(res => res.text()).then((data) => {
-                                        this.dietchart.load()
+                                    const iv = 'iiibelieveususus'
+                                    let privatekey = this.state.user.privatekey
+                                    let uuid = this.state.user.uuid
+                                    //解密
+                                    AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
+                                        // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
+                                        fetch(data.url + "user/diet/update.jhtml", {
+                                            method: "POST",
+                                            headers: {
+                                                'Content-Type': 'application/x-www-form-urlencoded'
+                                            },
+                                            body: "uuid=" + plaintxt + "&foodname=" + this.state.foodbox.join('|') + "&calories=" + this.state.calories + "&updateTime=" + new Date().getTime()
+                                        }).then(res => res.text()).then((data) => {
+                                            this.dietchart.load()
+                                        })
                                     })
+
                                 }} title="save"></Button>
                             </TouchableOpacity>
                         </View>

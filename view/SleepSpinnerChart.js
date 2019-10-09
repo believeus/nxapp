@@ -4,7 +4,8 @@ import { ECharts } from "react-native-echarts-wrapper";
 import InputSpinner from "react-native-input-spinner";
 import Session from '../storage/Session';
 import data from '../appdata'
-import moment from 'moment';
+import moment from 'moment'
+import AesCrypto from 'react-native-aes-kit'
 import { I18n } from '../locales/i18n';
 
 type Props = {};
@@ -31,7 +32,7 @@ export default class SleepSpinnerChart extends Component<Props> {
                     type: "category",
                     nameTextStyle: { color: "black" },
                     data: null,
-                    
+
                 },
                 yAxis: {
                     nameTextStyle: { color: "black" },
@@ -58,29 +59,36 @@ export default class SleepSpinnerChart extends Component<Props> {
 
     load = () => {
         Session.load("sessionuser").then((user) => {
-            this.setState({ user: user });
-            fetch(data.url + "user/sleep/data.jhtml?uuid=" + user.uuid).then(res => res.json()).then((data) => {
-                let xValue = []
-                let yValue = []
-                for (var i in data) {
-                    xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
-                    yValue.push(data[i][this.props.yAxisLabelValue])
-                }
-                let option = Object.assign({}, this.state.option);
-                option.xAxis.data = xValue;
-                option.yAxis.name = this.props.yAxisLabelName;
-                option.series[0].data = yValue
-                //如果this.props.yAxisLine有定义
-                if (this.props.yAxisLine) {
-                    let lines = this.props.yAxisLine.split("@")
-                    for (let i = 0; i < lines.length; i++) {
-                        option.series[0].markLine.data[i] = {};
-                        option.series[0].markLine.data[i].yAxis = window.parseFloat(lines[i]);
+            this.setState({ user: user })
+            const iv = 'iiibelieveususus'
+            let privatekey = user.privatekey
+            let uuid = user.uuid
+            //解密
+            AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
+                fetch(data.url + "user/sleep/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
+                    let xValue = []
+                    let yValue = []
+                    for (var i in data) {
+                        xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'))
+                        yValue.push(data[i][this.props.yAxisLabelValue])
                     }
-                }
-                this.setState({ option });
-                this.echarts.webview.reload();
+                    let option = Object.assign({}, this.state.option)
+                    option.xAxis.data = xValue;
+                    option.yAxis.name = this.props.yAxisLabelName;
+                    option.series[0].data = yValue
+                    //如果this.props.yAxisLine有定义
+                    if (this.props.yAxisLine) {
+                        let lines = this.props.yAxisLine.split("@")
+                        for (let i = 0; i < lines.length; i++) {
+                            option.series[0].markLine.data[i] = {};
+                            option.series[0].markLine.data[i].yAxis = window.parseFloat(lines[i]);
+                        }
+                    }
+                    this.setState({ option });
+                    this.echarts.webview.reload();
+                })
             })
+
         });
 
     }
@@ -92,7 +100,7 @@ export default class SleepSpinnerChart extends Component<Props> {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ width: "100%" }}>
-                <View style={{width:"100%",alignItems:"center"}}>
+                <View style={{ width: "100%", alignItems: "center" }}>
                     {this.props.title}
                 </View>
                 <View style={{ width: "100%", height: 80, alignItems: "center" }}>
@@ -114,12 +122,19 @@ export default class SleepSpinnerChart extends Component<Props> {
                                 color={"#a0a0a0"}
                                 value={0}
                                 onChange={(value) => {
-                                    let url = data.url + "user/sleep/update.jhtml?uuid=" + this.state.user.uuid + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
-                                    fetch(url).then(res => res.text()).then(() => {
-                                        this.load();
-                                    }).catch(function (error) {
-                                        console.log('There has been a problem with your fetch operation: ' + error.message);
-                                    });
+                                    const iv = 'iiibelieveususus'
+                                    let privatekey = this.state.user.privatekey
+                                    let uuid = this.state.user.uuid
+                                    //解密
+                                    AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
+                                        let url = data.url + "user/sleep/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                        fetch(url).then(res => res.text()).then(() => {
+                                            this.load();
+                                        }).catch(function (error) {
+                                            console.log('There has been a problem with your fetch operation: ' + error.message);
+                                        });
+                                    })
+                                   
 
                                 }}
                             />

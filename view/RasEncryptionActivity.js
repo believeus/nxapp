@@ -17,27 +17,12 @@ export default class RasEncryptionActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.state = { disabled: true, privatekey: "" }
+        this.state = { disabled: true, editable: true, privatekey: "" }
     }
-    // //公钥加密,私钥解密
-    // RSA.encrypt(message, keys.public)
-    // .then(encodedMessage => {
-    //     console.log(`the encoded message is ${encodedMessage}`);
-    //     RSA.decrypt(encodedMessage, keys.private)
-    //         .then(decryptedMessage => {
-    //             console.log(`The original message was ${decryptedMessage}`);
-    //         });
-    // });
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
-            this.setState({ user: user });
-        })
-        Session.load("privatekey").then((privatekey) => {
-            this.setState({ privatekey: privatekey })
-            this.setState({ disabled: false })
-        }).catch((error) => {
-            console.info(error)
-            this.setState({ privatekey: null })
+            this.setState({ user })
+            this.setState({ privatekey: user.privatekey })
         })
     }
 
@@ -47,7 +32,7 @@ export default class RasEncryptionActivity extends Component<Props> {
             <ScrollView>
                 <View>
                     <View style={{ width: "100%", height: 60 }}>
-                        <Text style={{ width: "100%", textAlign: "center", textAlignVertical: "center", fontSize: 24, fontWeight: "bold", height: "100%" }}>Private key</Text>
+                        <Text style={{ width: "100%", textAlign: "center", textAlignVertical: "center", fontSize: 24, fontWeight: "bold", height: "100%" }}>Secret key</Text>
                     </View>
                     {/* <TouchableOpacity>
                         <Button title="generation" onPress={() => {
@@ -72,12 +57,17 @@ export default class RasEncryptionActivity extends Component<Props> {
                     <View style={{ width: "100%", alignItems: 'center' }}>
                         <View style={{ width: "95%" }}>
                             <View>
-                                <Text>1.Please set the private key, which is used to encrypt and decrypt the user's health data.</Text>
+                                <Text>1.Please set the secret key, which is used to encrypt and decrypt the user's health data.</Text>
+                                <View style={{ width: "100%", height: 3 }}></View>
                                 <Text>2.Once the private key is set, no changes are allowed.</Text>
-                                <Text>3.If the secret key is changed, all previously saved health data will be lost, so it can only be set once.</Text>
-                                <Text>4.If the user logs out and logs in again, enter the same private key again.</Text>
-                                <Text>5.Our company will not save the user's private key to decrypt user data, so please save your only private key.</Text>
-                                <Text>6.The private key must be 16 characters.</Text>
+                                <View style={{ width: "100%", height: 3 }}></View>
+                                <Text>3.If the secret key is changed, all previously saved health data will be lost,New health data will be encrypted using a modified secret key, so it can only be set once.</Text>
+                                <View style={{ width: "100%", height: 3 }}></View>
+                                <Text>4.If the user logs out and logs in again, enter the same secret key again.</Text>
+                                <View style={{ width: "100%", height: 3 }}></View>
+                                <Text>5.Our company will not save the user's secret key to decrypt user data, so please save your only secret key.</Text>
+                                <View style={{ width: "100%", height: 3 }}></View>
+                                <Text>6.Every time health data is acquired, it will be encrypted and decrypted using the secret key on the user's mobile phone.</Text>
                             </View>
                             <View style={{ width: "100%", height: 20 }}></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
@@ -92,31 +82,30 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         fontSize: 16,
                                         paddingVertical: 0
                                     }}
-                                        value={this.state.privatekey}
-                                        onChangeText={(text) => {
-                                            this.setState({ privatekey: text })
-                                            if (String(text).length == 16) {
+                                        onChangeText={(privatekey) => {
+                                            this.setState({ privatekey })
+                                            privatekey.length == 16 ?
                                                 this.setState({ disabled: false })
-                                            } else {
+                                                :
                                                 this.setState({ disabled: true })
-                                            }
                                         }
                                         }
-                                        placeholder="private key" />
+
+                                        value={this.state.privatekey}
+                                        placeholder="secret key:must be 16 characters" />
                                 </View>
                                 <View style={{ width: "25%", height: 40 }}>
                                     <Button disabled={this.state.disabled} onPress={() => {
                                         if (this.state.privatekey != null) {
-                                            console.info(this.state.privatekey.length)
                                             let id = this.state.user.id
-                                            let uuid = md5.hex_md5(id).substring(0,10)
+                                            let uuid = md5.hex_md5(this.state.user.uuid).substring(0, 10)
                                             //秘钥长度必须和iv长度一致
                                             const iv = 'iiibelieveususus';
                                             //将加密的uuid发送到服务端
                                             AesCrypto.encrypt(uuid, this.state.privatekey, iv).then(cipher => {
-                                                console.info(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher)
-                                                fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then((data) => { data.text() }).then((data) => {
-                                                    Session.save("privatekey", this.state.privatekey)
+                                                fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then(user => user.json()).then((user) => {
+                                                    user.privatekey = this.state.privatekey
+                                                    Session.save("sessionuser", user)
                                                     const resetAction = StackActions.reset({
                                                         index: 0,
                                                         actions: [NavigationActions.navigate({ routeName: 'Main' })],
