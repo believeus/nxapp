@@ -34,12 +34,9 @@ import SleepChartActivity from "./SleepChartActivity"
 import DietChartActivity from "./DietChartActivity";
 import SameActivity from './SameActivity';
 import DataActivity from './DataActivity';
-<<<<<<< Updated upstream
 import RasEncryptionActivity from "./RasEncryptionActivity"
-=======
 import ContactActivity from './ContactActivity';
 import QAActivity from './QAActivity';
->>>>>>> Stashed changes
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
