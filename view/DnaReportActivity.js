@@ -385,12 +385,12 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                                 {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 34, }} resizeMode="center" source={require("../image/smail.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23,margin:5 }} resizeMode="center" source={require("../image/smail.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#3e9c9c", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years younger than your chronological age.</Text></View>
                                     </View>
                                     :
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 34, }} resizeMode="center" source={require("../image/cry.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23,margin:5 }} resizeMode="center" source={require("../image/cry.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years older than your chronological age.</Text></View>
                                     </View>
                                 }

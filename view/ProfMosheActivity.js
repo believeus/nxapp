@@ -1,19 +1,212 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import { Platform, StyleSheet, Text, View, Dimensions, Image, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
 import VideoPlayer from 'react-native-video-controls';
 
-type Props = {};
+const FirstRoute = () => (
+    <View style={{ marginTop: 20, marginBottom: 20 }}>
+        <View style={{ flexDirection: 'row' }}>
+            <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2018
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Pharmacology of GlaxoSmithKline</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>-Canadian Institute of Health <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Chairman</Text> </Text>
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2003-2018
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Jemes McGill</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}> <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Professor</Text> </Text>
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2000-now
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
+
+            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGill</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Professor</Text>
+            </View>
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1993-2000
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
+            </View>
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
+            </View>
+
+        </View>
+    </View>
+);
+
+const SecondRoute = () => (
+    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Member of the Royal Society of Canada</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2011 -- CCNP Neuropsychopharmacology &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovation Award</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2009 -- Radio Canada Annual Scientist Award</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Carolinska Speech at the Nobel Forum</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2007 -- GlaxoSmithKline Pharmacology</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2001 -- Medical College Teaching Honors List</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Carrie Derek Graduate Teaching Guidance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Award</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Israel Cancer Research Foundation "Eliot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Osseman Outstanding Contribution Award" </Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1989-1995 --  Canadian National Cancer Institute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Outstanding Young Professor Award" </Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1987 -- American Cancer Society Scholarship</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1984 -- Rothschild Scholarship</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Medical Scholarship of Hebrew University</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Distinguished master</Text>
+    </View>
+);
+const ThirddRoute = () => (
+    <View style={{ marginTop: 20, marginBottom: 20 }}>
+        <View style={{ flexDirection: 'row' }}>
+            <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010-2013
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Health Research</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute- Canadian Health research Cooperative Team in China</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$166,666</Text>
+            </View>
+
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2012
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian National Cancer</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute-Demethylase Analysis</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$141,000</Text>
+            </View>
+
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2005-2010
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Institute of health-DNA </Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Methyltransferase I Inhibitor and its Therapeutic Prospect</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$168,158</Text>
+            </View>
+
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1997-2000
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian council for Natural</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>science and engineering research</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$145,500</Text>
+            </View>
+
+        </View>
+        <View style={{ width: '100%', flexDirection: 'row' }} >
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
+                        </Text>
+            <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+        </View>
+        <View style={{ flexDirection: 'row', }}>
+            <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            </Text>
+            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
+            </View>
+
+        </View>
+    </View>
+);
+const styles = StyleSheet.create({
+    scene: {
+        flex: 1,
+    },
+});
 export default class ProfMosheActivity extends Component<Props> {
     static navigationOptions = {
         name: I18n.t("ProfMosheActivity.name"),
     };
     constructor(props) {
         super(props);
-        this.state = { display: false }
+        this.state = {
+            display: false,
+            index: 0,
+            routes: [
+                { key: 'first', title: 'Career' },
+                { key: 'second', title: 'Honors' },
+                { key: 'Third', title: 'Sponsored' },
+            ],
+        }
     }
+    _handleIndexChange = index => this.setState({ index });
 
+    _renderHeader = props => <TabBar {...props} />;
+
+    _renderScene = SceneMap({
+        first: FirstRoute,
+        second: SecondRoute,
+        Third: ThirddRoute,
+    });
     render() {
         this.navigate = this.props.navigation;
         return (
@@ -70,7 +263,7 @@ export default class ProfMosheActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ height: 20 }}></View>
-                <View style={{ backgroundColor: '#f0f0f0' }}>
+                <View style={{ backgroundColor: '#f0f0f0', marginTop: 20, marginBottom: 20 }}>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>Related Videos</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4</Text>
@@ -111,181 +304,29 @@ export default class ProfMosheActivity extends Component<Props> {
                         />
                     </View>
                 </View>
-                <View style={{ marginTop: 20, marginBottom: 20 }}>
-                    <View style={{ height: 34, flexDirection: 'row', backgroundColor: '#f4f4f4' }}>
-                        <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', borderRightWidth: 1, borderRightColor: '#989898', fontSize: 16, lineHeight: 41 }}> Career</Text>
-                        <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', borderRightWidth: 1, borderRightColor: '#989898', fontSize: 16, lineHeight: 41 }}> Honors</Text>
-                        <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16, lineHeight: 41 }}> Sponsored</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2018
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Pharmacology of GlaxoSmithKline</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>-Canadian Institute of Health <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Chairman</Text> </Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2003-2018
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Jemes McGill</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}> <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Professor</Text> </Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2000-now
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
+                <TabView
+                    navigationState={this.state}
+                    renderScene={SceneMap({
+                        first: FirstRoute,
+                        second: SecondRoute,
+                        Third: ThirddRoute,
+                    })}
+                    onIndexChange={index => this.setState({ index })}
 
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGill</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Professor</Text>
-                        </View>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1993-2000
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
-                        </View>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
-                        </View>
+                    initialLayout={{ width: Dimensions.get('window').width }}
+                    style={{ height: 589, }}
+                />
 
-                    </View>
+
+
+
+
+
+
+                <View style={{ backgroundColor: '#f0f0f0' }}>
+                    <Text style={{ width: '90%',height:56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', color: '#27809d', fontSize: 22,fontWeight:'bold',lineHeight:45 }} >| Published papers</Text>
                 </View>
-
-                <View style={{ width: '90%', alignSelf: 'center' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Member of the Royal Society of Canada</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2011 -- CCNP Neuropsychopharmacology &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovation Award</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2009 -- Radio Canada Annual Scientist Award</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Carolinska Speech at the Nobel Forum</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2007 -- GlaxoSmithKline Pharmacology</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2001 -- Medical College Teaching Honors List</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Carrie Derek Graduate Teaching Guidance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Award</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Israel Cancer Research Foundation "Eliot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Osseman Outstanding Contribution Award" </Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1989-1995-- Canadian National Cancer Institute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Outstanding Young Professor Award" </Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1987 -- American Cancer Society Scholarship</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1984 -- Rothschild Scholarship</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Medical Scholarship of Hebrew University</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Distinguished master</Text>
-                </View>
-
-                <View style={{ marginTop: 20, marginBottom: 20 }}>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010-2013
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Health Research</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute- Canadian Health research Cooperative Team in China</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$166,666</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2012
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian National Cancer</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute-Demethylase Analysis</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$141,000</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2005-2010
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Institute of health-DNA </Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Methyltransferase I Inhibitor and its Therapeutic Prospect</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$168,158</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1997-2000
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian council for Natural</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>science and engineering research</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$145,500</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
-                        </View>
-
-                    </View>
-                </View>
-
-                <Text style={{ width: '90%', alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 22, }} >| Published papers</Text>
-                <View style={{ backgroundColor: '#27809d' }}>
+                <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
                         <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic programming by maternal behavior.Aug 1st 2004  Nature Neuroscience volume 7 issue 8 pp 847-854</Text>
@@ -299,35 +340,35 @@ export default class ProfMosheActivity extends Component<Props> {
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>2892 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
                         <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>A mammalian protein with specific
                             demethylase activity for mCpG DNA.  Nature .1999 Feb 18</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>528 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
                         <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Promoter-wide hypermethylation of
                             the ribosomal RNA gene promoter in the suicide brain.  PLoS One . 2008 May 7</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>351 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
                         <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Broad epigenetic signature of
                             maternal care in the brain of adult rats.  PLoS One .2011 Feb 28</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>347 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
                         <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Expression of antisense to DNA
                             demethylation and inhibits tumorigenesis. J Biol Chem. 1995 Apr 7</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>256 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
                         <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetics, DNA methylation,
                             and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</Text>

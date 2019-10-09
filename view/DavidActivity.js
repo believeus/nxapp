@@ -1,18 +1,49 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import { Platform, StyleSheet, Dimensions, Text, View, Image, ScrollView, TouchableOpacity, Modal } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
 
-type Props = {};
+const FirstRoute = () => (
+    <View style={[styles.scene, { backgroundColor: '#ff4081', height: 456,width:'100%' }]} />
+);
+
+const SecondRoute = () => (
+    <View style={[styles.scene, { backgroundColor: '#673ab7', height: 456 }]} />
+);
+const ThirddRoute = () => (
+    <View style={[styles.scene, { backgroundColor: 'pink', height: 456 }]} />
+);
+const styles = StyleSheet.create({
+    scene: {
+        flex: 1,
+    },
+});
 export default class DavidActivity extends Component<Props> {
     static navigationOptions = {
         name: I18n.t("DavidActivity.name"),
     };
     constructor(props) {
         super(props);
-        this.state = { display: false }
+        this.state = {
+            display: false,
+            index: 0,
+            routes: [
+                { key: 'first', title: 'First' },
+                { key: 'second', title: 'Second' },
+                { key: 'Third', title: 'Third' },
+            ],
+        }
     }
+    _handleIndexChange = index => this.setState({ index });
 
+    _renderHeader = props => <TabBar {...props} />;
+
+    _renderScene = SceneMap({
+        first: FirstRoute,
+        second: SecondRoute,
+        Third:ThirddRoute,
+    });
     render() {
         this.navigate = this.props.navigation;
         return (
@@ -34,41 +65,93 @@ export default class DavidActivity extends Component<Props> {
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
                 </View>
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center' }}>
-                        <Text style={{ height: 67, fontFamily: 'NotoSansHans-Light', fontSize: 22, borderBottomColor: '#0071bc', borderBottomWidth: 1 }}>Professional Experiences</Text>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Pioneer of the field of epigenetics</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16, }}>Inventor of the first broad patents in the field</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Inventor of the first patents on DNA methylation </Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Founder of the field of behavioral and psychiatry epigenetics</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Thought leader, published 295 papers in the area</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Fellow of the Royal Society of Canada</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Fellow of the Canadian Academy of Health Sciences</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Professor Department of Pharmacology and Therapeutics McGill University Montreal Canada</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Resident chief scientist of Beijing epidial medical diagnostic technology co., LTD.</Text>
-                        </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Director of epigenetic institute, Beijing yizhuang innovation institute</Text>
-                        </View>
+                    <Text style={{ width: '90%', alignSelf: 'center', height: 67, fontFamily: 'NotoSansHans-Light', fontSize: 22, }}>Professional Experiences</Text>
+                </View>
+                <View style={{ flexDirection: 'row' }}>
+                    <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
+                </View>
+                <View style={{ width: '100%', flexDirection: 'row' }} >
+                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2017-now
+                        </Text>
+                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>HKG Epitherapeutics, Hong Kong</Text>
+                </View>
+                <View style={{ flexDirection: 'row', }}>
+                    <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                    </Text>
+                    <Text style={{ width: '70%', height: 56, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}><Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Senior scientific consultant</Text> </Text>
+                </View>
+                <View style={{ width: '100%', flexDirection: 'row' }} >
+                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2016-now
+                        </Text>
+                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Montreal EpiTerapia Inc Montreal</Text>
+                </View>
+                <View style={{ flexDirection: 'row', }}>
+                    <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                    </Text>
+                    <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Canada</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Co-Founder</Text>
                     </View>
                 </View>
+                <View style={{ width: '100%', flexDirection: 'row' }} >
+                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2016-2017
+                        </Text>
+                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+                </View>
+                <View style={{ flexDirection: 'row', }}>
+                    <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
+
+                    <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGill University</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Research Associate</Text>
+                    </View>
+                </View>
+                <View style={{ width: '100%', flexDirection: 'row' }} >
+                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2011-2016
+                        </Text>
+                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+                </View>
+                <View style={{ flexDirection: 'row', }}>
+                    <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                    </Text>
+                    <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGil University</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Postdoctoral Fellow</Text>
+                    </View>
+                </View>
+                <View style={{ width: '100%', flexDirection: 'row' }} >
+                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2004-2011
+                        </Text>
+                    <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Hebrew University Hadassah </Text>
+                </View>
+                <View style={{ flexDirection: 'row', }}>
+                    <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                    </Text>
+                    <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Medical School</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Research Assistant</Text>
+                    </View>
+                </View>
+
                 <View style={{ height: 20 }}></View>
+                <TabView
+                    navigationState={this.state}
+                    renderScene={SceneMap({
+                        first: FirstRoute,
+                        second: SecondRoute,
+                        Third:ThirddRoute,
+                    })}
+                    onIndexChange={index => this.setState({ index })}
+                    
+                    initialLayout={{ width: Dimensions.get('window').width }}
+                    style={{height:456,backgroundColor:'pink'}}
+                />
+
                 <View style={{ marginTop: 20, marginBottom: 20 }}>
                     <View style={{ height: 34, flexDirection: 'row', backgroundColor: '#f4f4f4' }}>
                         <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', borderRightWidth: 1, borderRightColor: '#989898', fontSize: 16, lineHeight: 41 }}> Career</Text>

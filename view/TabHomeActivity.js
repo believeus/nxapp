@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
-import { Platform, StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity} from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
+import AwesomeAlert from 'react-native-awesome-alerts';
 import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
 import { getLanguages } from 'react-native-i18n';
@@ -20,8 +21,22 @@ export default class TabHomeActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.state = { user: null };
+        this.state = {
+            user: null,
+            showAlert: false
+        };
     }
+    showAlert = () => {
+        this.setState({
+            showAlert: true
+        });
+    };
+
+    hideAlert = () => {
+        this.setState({
+            showAlert: false
+        });
+    };
     //因为Session.load方法异步的,所以可以给sate设置值，设置之后，页面渲染会根据sata中的值变化而变化
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
@@ -30,6 +45,7 @@ export default class TabHomeActivity extends Component<Props> {
     }
     render() {
         this.navigate = this.props.navigation;
+        const { showAlert } = this.state;
         return (
             <ScrollView>
 
@@ -51,9 +67,9 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode="center" />
                             </View>
                         </TouchableOpacity>
-                            <View style={{ width: '100%', height: 310 }}>
-                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
-                            </View>
+                        <View style={{ width: '100%', height: 310 }}>
+                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
+                        </View>
                     </Swiper >
                 </View>
                 <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
@@ -68,12 +84,33 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Text onPress={() => { this.navigate.push("Testprocess") }} style={{ height: 128, width: '32%', }}></Text>
                             </View>
                             <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <Text onPress={() =>  this.navigate.push("Mall")} style={{ height: 141, width: '32%' }}></Text>
+                                <Text onPress={() => this.navigate.push("Mall")} style={{ height: 141, width: '32%' }}></Text>
                                 <View style={{ height: 141, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("DnaReport") }}
                                         style={{ height: 56, marginBottom: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => this.navigate.push("Questionnaire")} style={{ height: 141, width: '32%', }}></Text>
+                                <Text onPress={this.showAlert.bind(this)} style={{ height: 141, width: '32%', }}></Text>
+                                <AwesomeAlert
+                                    show={showAlert}
+                                    showProgress={false}
+                                    title="About Questionnaires"
+                                    message="The questionnaires are optional to fill up. However,epigenetic is affected by life style as well as environment. Our philosophy is that EpiAging tests make sense only within a dynamic life-long
+                                    life style,environmental and health management system. A personalized evaluation including intervention will be generated based on the health and lifestyle information you provided. Updates on your health and lifestyle parameters periodically will activate the life-long personalized analysis report."
+                                    closeOnTouchOutside={true}
+                                    closeOnHardwareBackPress={true}
+                                    showCancelButton={true}
+                                    showConfirmButton={true}
+                                    cancelText="No, Cancel"
+                                    confirmText="Yes,I agree"
+                                    confirmButtonColor="#DD6B55"
+                                    onCancelPressed={() => {
+                                        this.hideAlert();
+                                    }}
+                                    onConfirmPressed={() => {
+                                        this.hideAlert();
+                                        this.navigate.push("Questionnaire")
+                                    }}
+                                />
                             </View>
                         </View>
                     </ImageBackground>
@@ -84,7 +121,7 @@ export default class TabHomeActivity extends Component<Props> {
                         style={{ width: "100%", height: 250 }}
                         paused={true}
                         fullscreen={true}
-                        poster={data.url+'static/images/ted.jpg'} //poster必须是url从互联网访问的形式
+                        poster={data.url + 'static/images/ted.jpg'} //poster必须是url从互联网访问的形式
                         source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                         navigator={this.props.navigator}
                     />
@@ -287,11 +324,11 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                     </View>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 16,textDecorationLine:'underline', }}>Disclaimer</Text>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 14,lineHeight:16 }}>The epiAging test is not intended to be health 
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 16, textDecorationLine: 'underline', }}>Disclaimer</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>The epiAging test is not intended to be health
                     information or medical data or to be used to screen, diagnose, treat, prevent or assess risk of any disease or condition. The epiAging service is an epigenetic age determination based on assessment of DNA methylation in your DNA. We are not collecting genetic data. The test is available for individuals 21 years of age or older. This service has not been cleared or approved by U. S. Food and Drug Administration.
                      </Text>
-                     <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}> @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}> @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
                 </View>
             </ScrollView >
 
