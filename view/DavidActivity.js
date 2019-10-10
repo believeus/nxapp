@@ -1,18 +1,40 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Dimensions, Text, View, Image, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import { Platform, StyleSheet, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import { WebView } from 'react-native-webview';
 import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
 
 const FirstRoute = () => (
-    <View style={[styles.scene, { backgroundColor: '#ff4081', height: 456,width:'100%' }]} />
+    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+        <View style={{ height: 30 }}></View>
+        <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>US patent 62/774,</Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
+            994 DNA Methylation Markers for Early Detection of Cervical Cancer (Filed 04-Dec-2018)</Text>
+
+        <View style={{ height: 30 }}></View>
+        <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>US patent 62/695,</Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
+            429 DNA Methylation Markers for Noninvasive Detection of Cancer (Filed 07-Sept-2018)</Text>
+     <View style={{ height: 45 }}></View>
+     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>2011-- <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Postdoctoral fellow </Text>of the Israel Cancer Research Foundation</Text>
+     <Text style={{ fontFamily: 'FontAwesomet', height: 56, lineHeight: 21, }}>2010--Toronto Alumni and Alumni Medical <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> Excellence Award</Text></Text>
+     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>2009--Toronto Alumni and Friends Medical<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> Excellence Award</Text></Text>
+ </View>
 );
 
 const SecondRoute = () => (
-    <View style={[styles.scene, { backgroundColor: '#673ab7', height: 456 }]} />
-);
-const ThirddRoute = () => (
-    <View style={[styles.scene, { backgroundColor: 'pink', height: 456 }]} />
+    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+    <View style={{ height: 20 }}></View>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>2017 Sixth Asian Chromatin and Chromosome Forum <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Hyderabad, India)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>2016 3rd Canadian Conference on Epigenetics of Development and Diseases <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>(Canada)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>2011 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Hyderabad, India)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>2010 First Scientific Conference of the Medical Research Institute of Hebrew University in Israel-Hadassah Medical College, Canada <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Erat, Israel)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>Twenty-first European Union for Cancer Research Conference, 2010 <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Oslo, Norway)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>The 8th European Conference on Glial Cell Health and Diseases, 2009  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Paris, France)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>2008 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(New York, USA)</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>The 8th European Conference on Gliocyte Health and Diseases, 2007 <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(London, UK) </Text></Text>
+</View>
 );
 const styles = StyleSheet.create({
     scene: {
@@ -29,9 +51,8 @@ export default class DavidActivity extends Component<Props> {
             display: false,
             index: 0,
             routes: [
-                { key: 'first', title: 'First' },
-                { key: 'second', title: 'Second' },
-                { key: 'Third', title: 'Third' },
+                { key: 'first', title: 'HONORS&PATENTS' },
+                { key: 'second', title: 'CONFERENCES' },
             ],
         }
     }
@@ -42,15 +63,14 @@ export default class DavidActivity extends Component<Props> {
     _renderScene = SceneMap({
         first: FirstRoute,
         second: SecondRoute,
-        Third:ThirddRoute,
     });
     render() {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                {this.state.display == true ?
+                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: 'https://www.ncbi.nlm.nih.gov/pubmed/15220929' }} />
+                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
                             <TouchableOpacity style={{ width: "100%", height: "100%" }}>
                                 <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
@@ -65,7 +85,7 @@ export default class DavidActivity extends Component<Props> {
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
                 </View>
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', alignSelf: 'center', height: 67, fontFamily: 'NotoSansHans-Light', fontSize: 22, }}>Professional Experiences</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
@@ -144,247 +164,60 @@ export default class DavidActivity extends Component<Props> {
                     renderScene={SceneMap({
                         first: FirstRoute,
                         second: SecondRoute,
-                        Third:ThirddRoute,
                     })}
                     onIndexChange={index => this.setState({ index })}
-                    
+
                     initialLayout={{ width: Dimensions.get('window').width }}
-                    style={{height:456,backgroundColor:'pink'}}
+                    style={{ height: 678, }}
                 />
 
-                <View style={{ marginTop: 20, marginBottom: 20 }}>
-                    <View style={{ height: 34, flexDirection: 'row', backgroundColor: '#f4f4f4' }}>
-                        <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', borderRightWidth: 1, borderRightColor: '#989898', fontSize: 16, lineHeight: 41 }}> Career</Text>
-                        <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', borderRightWidth: 1, borderRightColor: '#989898', fontSize: 16, lineHeight: 41 }}> Honors</Text>
-                        <Text style={{ width: '33%', fontFamily: 'NotoSansHans-Light', textAlign: 'center', fontSize: 16, lineHeight: 41 }}> Sponsored</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2018
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Pharmacology of GlaxoSmithKline</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>-Canadian Institute of Health <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Chairman</Text> </Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2003-2018
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Jemes McGill</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}> <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Professor</Text> </Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2000-now
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
-
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGill</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Professor</Text>
-                        </View>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1993-2000
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
-                        </View>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
-                        </View>
-
-                    </View>
+                <View style={{ backgroundColor: '#f0f0f0' }}>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light',  fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
                 </View>
-
-                <View style={{ width: '90%', alignSelf: 'center' }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Member of the Royal Society of Canada</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2011 -- CCNP Neuropsychopharmacology &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovation Award</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2009 -- Radio Canada Annual Scientist Award</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Carolinska Speech at the Nobel Forum</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2007 -- GlaxoSmithKline Pharmacology</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2001 -- Medical College Teaching Honors List</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Carrie Derek Graduate Teaching Guidance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Award</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Israel Cancer Research Foundation "Eliot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Osseman Outstanding Contribution Award" </Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1989-1995-- Canadian National Cancer Institute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Outstanding Young Professor Award" </Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1987 -- American Cancer Society Scholarship</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1984 -- Rothschild Scholarship</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Medical Scholarship of Hebrew University</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Distinguished master</Text>
-                </View>
-
-                <View style={{ marginTop: 20, marginBottom: 20 }}>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010-2013
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Health Research</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute- Canadian Health research Cooperative Team in China</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$166,666</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2012
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian National Cancer</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute-Demethylase Analysis</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$141,000</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2005-2010
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Institute of health-DNA </Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Methyltransferase I Inhibitor and its Therapeutic Prospect</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$168,158</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1997-2000
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian council for Natural</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>science and engineering research</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$145,500</Text>
-                        </View>
-
-                    </View>
-                    <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
-                        </Text>
-                        <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                        <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
-                    </View>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
-                        </Text>
-                        <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                            <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
-                        </View>
-
-                    </View>
-                </View>
-
-                <Text style={{ width: '90%', alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 22, }} >| Published papers</Text>
-                <View style={{ backgroundColor: '#27809d' }}>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic programming by maternal behavior.Aug 1st 2004  Nature Neuroscience volume 7 issue 8 pp 847-854</Text>
+                <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
+                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29924424" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Identification of an Epigenetic Signature of Osteoporosis in Blood DNA of Postmenopausal Women. JBMR. 2018;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>5530 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic regulation of the
-                            glucocorticoid receptor in human brain associates with childhood abuse. Nat Neurosci .2009 Mar; 12(3): 342–348.</Text>
+                    <View style={{  width: '90%', height: 67, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://bmccancer.biomedcentral.com/articles/10.1186/s12885-018-4482-7" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>DNA methylation signatures of breast cancer in peripheral T-cells. BMC  Cancer.2018;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>2892 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>A mammalian protein with specific
-                            demethylase activity for mCpG DNA.  Nature .1999 Feb 18</Text>
+                    <View style={{  width: '90%', height: 67, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://clinicalepigeneticsjournal.biomedcentral.com/articles/10.1186/s13148-017-0436-1" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>The signature of liver cancer in immune cells DNA methylation. Clin Epigenetics.2018;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>528 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Promoter-wide hypermethylation of
-                            the ribosomal RNA gene promoter in the suicide brain.  PLoS One . 2008 May 7</Text>
+                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://www.onlinelibrary.wiley.com/doi/full/10.1002/mnfr.201701008" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Personalized cardio-metabolic responses to an anti-inflammatory nutrition intervention in obese adolescents: a randomized controlled crossover trial.</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>351 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Broad epigenetic signature of
-                            maternal care in the brain of adult rats.  PLoS One .2011 Feb 28</Text>
+                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://www.sciencedirect.com/science/article/abs/pii/S1094695016301780" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Genetic polymorphisms in ESR1 and VDR genes do not correlate with osteoporosis with familial dysautonomia.  J Clin Densitom.2018;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>347 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Expression of antisense to DNA
-                            demethylation and inhibits tumorigenesis. J Biol Chem. 1995 Apr 7</Text>
+                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://www.greenmedinfo.health/article/methyl-donor-s-adenosylmethionine-sam-supplementation-attenuates-breast-cancer" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Methyl donor S-adenosylmethionine (SAM) supplementation attenuates breast cancer growth, invasion, and metastasis in vivo; therapeutic and chemopreventive applications.Oncotarget. 2017;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>256 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetics, DNA methylation,
-                            and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</Text>
+                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://academic.oup.com/nar/article/45/22/12681/4259028" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic mechanisms underlie the crosstalk between growth factors and a steroid hormone.Nucleic Acids Res. 2017;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>432 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Maternal care effects on the
-                            hippocampal transcriptome and anxiety-mediated behaviors in the offspring that are reversible in adulthood. Proc Natl </Text>
+                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity onPress={() => { this.setState({ url: "https://www.researchgate.net/publication/316689941_DNA_methylation_controls_unmethylated_transcription_start_sites_in_the_genome_in_trans" }); this.setState({ display: true }) }}>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}> DNA methylation controls unmethylated transcription start sites in the genome in trans”. Epigenomics . 2017;</Text>
                         </TouchableOpacity>
-                        <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>786 Citations</Text>
                     </View>
                 </View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
-            </ScrollView>
+            </ScrollView >
 
         );
     }

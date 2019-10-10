@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Dimensions, Image, ScrollView, TouchableOpacity, Modal } from 'react-native';
+import { Platform, StyleSheet, Text, View, Dimensions, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
+import { WebView } from 'react-native-webview'
 import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
 import VideoPlayer from 'react-native-video-controls';
@@ -190,6 +191,7 @@ export default class ProfMosheActivity extends Component<Props> {
         super(props);
         this.state = {
             display: false,
+            url: "",
             index: 0,
             routes: [
                 { key: 'first', title: 'Career' },
@@ -213,7 +215,7 @@ export default class ProfMosheActivity extends Component<Props> {
             <ScrollView>
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: 'https://www.ncbi.nlm.nih.gov/pubmed/15220929' }} />
+                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
                             <TouchableOpacity style={{ width: "100%", height: "100%" }}>
                                 <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
@@ -227,9 +229,11 @@ export default class ProfMosheActivity extends Component<Props> {
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Chairman & CEO</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
                 </View>
-                <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center' }}>
-                        <Text style={{ height: 67, fontFamily: 'NotoSansHans-Light', fontSize: 22, borderBottomColor: '#0071bc', borderBottomWidth: 1 }}>Professional Experiences</Text>
+                <View style={{   paddingBottom: 20 }}>
+                    <View style={{ backgroundColor: '#f0f0f0', }}>
+                        <Text style={{ width: '90%', height: 67,alignSelf:'center', fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
+                    </View>
+                    <View style={{ width: '90%', alignSelf: 'center',paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Pioneer of the field of epigenetics</Text>
                         </View>
@@ -263,9 +267,9 @@ export default class ProfMosheActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ height: 20 }}></View>
-                <View style={{ backgroundColor: '#f0f0f0', marginTop: 20, marginBottom: 20 }}>
+                <View style={{ paddingTop: 20, paddingBottom: 20, backgroundColor: '#f0f0f0' }}>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>Related Videos</Text>
+                        <Text style={{ width: '90%', height: 67,fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>RELATED VIDEOS</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
@@ -275,7 +279,7 @@ export default class ProfMosheActivity extends Component<Props> {
                             source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Dr. Moshe Szyf , Science of Hope Conference 2017.mp4</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -284,7 +288,7 @@ export default class ProfMosheActivity extends Component<Props> {
                             source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Dr. Moshe Szyf, What is epigenetic and why knowing it will change your life .mp4</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -293,7 +297,7 @@ export default class ProfMosheActivity extends Component<Props> {
                             source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}> Moshe Szyf, Behavioral Epigenetics.mp4</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -314,69 +318,65 @@ export default class ProfMosheActivity extends Component<Props> {
                     onIndexChange={index => this.setState({ index })}
 
                     initialLayout={{ width: Dimensions.get('window').width }}
-                    style={{ height: 589, }}
+                    style={{ height: 667, }}
                 />
 
-
-
-
-
-
-
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%',height:56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', color: '#27809d', fontSize: 22,fontWeight:'bold',lineHeight:45 }} >| Published papers</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
-                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic programming by maternal behavior.Aug 1st 2004  Nature Neuroscience volume 7 issue 8 pp 847-854</Text>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/15220929" }); this.setState({ display: true }) }}>
+                            <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic programming by
+                            maternal behavior.Aug 1st 2004  Nature Neuroscience volume 7 issue 8 pp 847-854</Text>
                         </TouchableOpacity>
+
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>5530 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 77, alignSelf: 'center' }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/19234457" }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic regulation of the
                             glucocorticoid receptor in human brain associates with childhood abuse. Nat Neurosci .2009 Mar; 12(3): 342–348.</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>2892 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/10050851' });this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>A mammalian protein with specific
                             demethylase activity for mCpG DNA.  Nature .1999 Feb 18</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>528 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/18461137' });this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Promoter-wide hypermethylation of
                             the ribosomal RNA gene promoter in the suicide brain.  PLoS One . 2008 May 7</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>351 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/21386994' });this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Broad epigenetic signature of
                             maternal care in the brain of adult rats.  PLoS One .2011 Feb 28</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>347 Citations</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                    <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/7713905' });this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Expression of antisense to DNA
                             demethylation and inhibits tumorigenesis. J Biol Chem. 1995 Apr 7</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>256 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/18851683' });this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetics, DNA methylation,
                             and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>432 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/16484373' });this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Maternal care effects on the
                             hippocampal transcriptome and anxiety-mediated behaviors in the offspring that are reversible in adulthood. Proc Natl </Text>
                         </TouchableOpacity>
