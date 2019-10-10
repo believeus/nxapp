@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Button, fontFamily, TextInput, ScrollView, TouchableOpacity, Alert, FetchResult, AppRegistry } from 'react-native';
-import ModalDropdown from 'react-native-modal-dropdown';
+import ModalDropdown from 'react-native-modal-dropdown'
+import Input from "react-native-input-validation"
 import { CheckBox } from 'native-base';
 import { I18n } from '../locales/i18n';
 
@@ -9,9 +10,9 @@ type Props = {};
 export default class RegisterActivity extends Component<Props> {
     constructor(props) {
         super(props);
-        this.state = { checked: true,disable:true };
+        this.state = { checked: true, disable: true };
     }
-    static navigationOptions= ({ navigation, screenProps }) => {
+    static navigationOptions = ({ navigation, screenProps }) => {
         return ({
             title: I18n.t("RegisterActivity.name"),
             headerRight: null
@@ -32,7 +33,7 @@ export default class RegisterActivity extends Component<Props> {
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14 }}>Select your region:</Text>
                             </View>
                             <View style={{ width: '30%', height: 20, justifyContent: 'flex-end', }}>
-                                <ModalDropdown style={{ height: 20, fontFamily: 'NotoSansHans-Light', justifyContent: 'flex-end', borderRadius: 5, paddingLeft: 6, borderColor: '#b3b3b3', borderWidth: 1 }}
+                                <ModalDropdown onSelect={(index, option) => { this.setState({ region: option }) }} style={{ height: 20, fontFamily: 'NotoSansHans-Light', justifyContent: 'flex-end', borderRadius: 5, paddingLeft: 6, borderColor: '#b3b3b3', borderWidth: 1 }}
                                     options={['Afghanistan (‫افغانستان‬‎)',
                                         'Åland Islands (Åland)',
                                         'Albania (Shqipëria)',
@@ -303,7 +304,7 @@ export default class RegisterActivity extends Component<Props> {
                                 paddingLeft: 10
 
                             }}
-                                onChangeText={(text) => { this.setState({ userName: text }); }}
+                                onChangeText={(text) => { this.setState({ fname: text }); }}
                                 placeholder="First Name" />
                         </View>
                         <View style={{ alignItems: 'center', height: 40, alignContent: 'center', marginTop: 10 }}>
@@ -316,21 +317,24 @@ export default class RegisterActivity extends Component<Props> {
                                 fontSize: 16,
                                 paddingLeft: 10
                             }}
-                                onChangeText={(text) => { this.setState({ userName: text }); }}
+                                onChangeText={(text) => { this.setState({ lname: text }); }}
                                 placeholder="Last Name" />
                         </View>
-                        <View style={{ alignItems: 'center', height: 40, alignContent: 'center', marginTop: 10 }}>
-                            <TextInput style={{
-                                height: 40, width: '100%',
+                        <View style={{ height: 40, marginTop: 10, marginBottom: 10 }}>
+                            <Input style={{
+                                height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
-                                marginBottom: 5,
                                 fontSize: 16,
-                                paddingLeft: 10
                             }}
-                                onChangeText={(text) => { this.setState({ userName: text }); }}
-                                placeholder="Email" />
+                                errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
+                                errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
+                                placeholder="Email" validator="email"
+                                onValidatorExecuted={(isvalid) => { this.setState({ isvalid: isvalid }) }}
+                                validatorExecutionDelay={100}
+                                onChangeText={(email) => { this.setState({ email: email }) }}
+                            />
                         </View>
                         <View style={{ alignItems: 'center', height: 40, alignContent: 'center', marginTop: 10 }}>
                             <TextInput style={{
@@ -342,7 +346,7 @@ export default class RegisterActivity extends Component<Props> {
                                 fontSize: 16,
                                 paddingLeft: 10
                             }}
-                                onChangeText={(text) => { this.setState({ userName: text }); }}
+                                onChangeText={(text) => { this.setState({ password: text }); }}
                                 placeholder="Create a Password" />
                         </View>
                         <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 20 }}>
@@ -355,12 +359,12 @@ export default class RegisterActivity extends Component<Props> {
                                 fontSize: 16,
                                 paddingLeft: 10
                             }}
-                                onChangeText={(text) => { this.setState({ userName: text }); }}
+                                onChangeText={(comfirmpwd) => { this.setState({ comfirmpwd: comfirmpwd }); }}
                                 placeholder="Confirm Password" />
                         </View>
 
                         <View style={{ flexDirection: 'row', height: 60 }}>
-                            <View style={{height: 30, width: '10%',alignSelf:'center', justifyContent: 'center'}}>
+                            <View style={{ height: 30, width: '10%', alignSelf: 'center', justifyContent: 'center' }}>
                                 <CheckBox
                                     onPress={() => this.setState({
                                         checked: !this.state.checked
@@ -368,15 +372,56 @@ export default class RegisterActivity extends Component<Props> {
                                     checked={this.state.checked}
                                 />
                             </View>
-                            <View style={{height: 30, width: '90%', alignSelf:'center', justifyContent: 'center'}}>
-                                <Text style={{  width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, color: '#007186' }}>I have read and agree to <Text style={{color:'#f05a25'}}>the Terms of Service and Privacy Statement.</Text></Text>
+                            <View style={{ height: 30, width: '90%', alignSelf: 'center', justifyContent: 'center' }}>
+                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, color: '#007186' }}>I have read and agree to <Text style={{ color: '#f05a25' }}>the Terms of Service and Privacy Statement.</Text></Text>
                             </View>
                         </View>
                         <View>
                             <TouchableOpacity >
-                                <Button disabled={this.state.disable} title="Register" onPress={()=>{
-                                    if(!this.state.email){}
-                                }}/> 
+                                <Button title="Register" onPress={() => {
+                                    if (!this.state.email) {
+                                        Alert.alert("Mailbox must be filled in")
+                                        return
+                                    }
+                                    if (!this.state.isvalid) {
+                                        Alert.alert("The mailbox format is incorrect")
+                                        return
+                                    }
+                                    if (!this.state.password) {
+                                        Alert.alert("Password must be filled in")
+                                        return
+                                    }
+                                    if ((this.state.password != this.state.comfirmpwd)) {
+                                        Alert.alert("Confirm password and password are inconsistent")
+                                        return
+                                    }
+                                    if (!this.state.checked) {
+                                        Alert.alert("Consent must be checked")
+                                        return
+                                    }
+                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
+                                     fetch(data.url + "/user/register.jhtml", {
+                                        method: "POST",
+                                        headers: {
+                                            'Content-Type': 'application/x-www-form-urlencoded'
+                                        },
+                                        body: "mail=" + this.state.email + "&password=" + this.state.password + "&nickname=" + this.state.fname+"."+this.state.lname
+                                    }).then(res => res.text()).then((data) => {
+                                        if(data=="error"){
+                                            Alert.alert("Mailbox has been registered")
+                                            return
+                                        }
+                                        if(data=="success"){
+                                            Alert.alert("The registration was successful and the user activation link\n has been sent to your mailbox")
+                                            return
+                                        }
+                                        if(data="network-error"){
+                                            Alert.alert("Network error!try again")
+                                            return
+
+                                        }
+                                    })
+                                }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >
