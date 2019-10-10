@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 
-import { Platform, StyleSheet, Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Button, Alert } from 'react-native';
 import Toast from 'react-native-root-toast';
 import { I18n } from '../locales/i18n';
 import Input from "react-native-input-validation"
 import md5 from "react-native-md5";
-import { NavigationActions, StackActions } from 'react-navigation';
 import Session from '../storage/Session';
 import data from '../appdata'
 
@@ -21,12 +20,11 @@ export default class LoginActivity extends Component<Props> {
 
     constructor(props) {
         super(props);
-        this.state = { animating: false };
+        this.state = { animating: false, disabled: true };
     }
     login = () => {
-        if (!this.isValid) { Alert.alert(I18n.t("LoginActivity.mailboxformatFail")); return }
-        if (!this.state.email) { Alert.alert(I18n.t("LoginActivity.mailboxNull")); return }
-        if (!this.state.password) { Alert.alert(I18n.t("LoginActivity.passwordNull")); return }
+        if (!this.state.email) { this.setState({ disabled: true }); return }
+        if (!this.state.password) { this.setState({ disabled: true });  return }
         let url = data.url + "user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
         fetch(url).then(res => res.json())
             .then(sessionuser => {
@@ -34,7 +32,7 @@ export default class LoginActivity extends Component<Props> {
                 else {
                     if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                    sessionuser.privatekey=""
+                    sessionuser.privatekey = ""
                     Session.save("sessionuser", sessionuser);
                     this.props.navigation.push("RasEncryptionActivity")
                 }
@@ -72,7 +70,7 @@ export default class LoginActivity extends Component<Props> {
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
                                 placeholder="Email" validator="email"
-                                onValidatorExecuted={(isValid) => this.isValid = isValid}
+                                onValidatorExecuted={(disabled) => this.setState({ disabled: !disabled })}
                                 validatorExecutionDelay={100}
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />
@@ -88,7 +86,7 @@ export default class LoginActivity extends Component<Props> {
                                 paddingLeft: 10
                             }}
                                 secureTextEntry={true}
-                                onChangeText={(password) => { this.setState({ password: password }); }}
+                                onChangeText={(password) => { this.setState({ disabled: false }); this.setState({ password: password }); }}
                                 placeholder="Password" />
                         </View>
                         <View style={{ height: 60, alignItems: 'center', justifyContent: 'center' }}>
@@ -97,8 +95,8 @@ export default class LoginActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
                         <View>
-                            <TouchableOpacity onPress={this.login.bind(this)}>
-                                <Text style={{ height: 45, borderRadius: 20, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 50 }}>{I18n.t('LoginActivity.login')}</Text>
+                            <TouchableOpacity >
+                                <Button disabled={this.state.disabled} onPress={this.login.bind(this)} title={I18n.t('LoginActivity.login')} ></Button>
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >

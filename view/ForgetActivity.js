@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-import { I18n } from '../locales/i18n';
-import { Platform, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView } from 'react-native';
+import { I18n } from '../locales/i18n'
+import data from '../appdata'
+import Input from "react-native-input-validation"
+import { Platform, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollView, Alert, Button } from 'react-native';
 
 
 type Props = {};
@@ -10,10 +12,11 @@ export default class ForgetActivity extends Component<Props> {
     };
     constructor(props) {
         super(props);
+        this.state = { disabled: false }
     }
 
     render() {
-        const navigate =this.props.navigation;
+        const navigate = this.props.navigation;
         return (
             <ScrollView>
                 <View>
@@ -26,23 +29,31 @@ export default class ForgetActivity extends Component<Props> {
                         <View style={{ height: 40, alignItems: 'flex-start', fontSize: 14, justifyContent: 'flex-start' }} >
                             <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#f05a25', lineHeight: 20 }}>{I18n.t('ForgetActivity.link')}</Text>
                         </View>
-                        <View style={{ alignItems: 'center', height: 70, alignContent: 'center', marginTop: 20 }}>
-                            <TextInput style={{
+                        <View style={{ height: 70, marginTop: 20, width: "100%" }}>
+                            <Input style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
-                                marginBottom: 10,
                                 fontSize: 16,
-                                paddingLeft: 10
                             }}
-                                onChangeText={(text) => { this.setState({ userName: text }); }}
-                                placeholder="Email" />
+                                errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
+                                errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
+                                placeholder="Email" validator="email"
+                                onValidatorExecuted={(isValid) => { this.setState({ disabled: !isValid }) }}
+                                validatorExecutionDelay={100}
+                                onChangeText={(email) => { this.setState({ email: email }) }}
+                            />
                         </View>
 
                         <View>
                             <TouchableOpacity >
-                                <Text style={{ height: 45, borderRadius: 50, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 50 }}>{I18n.t('ForgetActivity.btn')}</Text>
+                                <Button title={I18n.t("ForgetActivity.name")} disabled={this.state.disabled} onPress={() => {
+                                    if (!this.state.email) { this.setState({ disabled: true }); return }
+                                    fetch(data.url + "user/sendpaswd.jhtml?email=" + this.state.email).then((data) => { data.text() }).then((data) => {
+                                        Alert.alert("The reset password link has been\n sent to your designated mailbox")
+                                    })
+                                }} style={{ height: 45, borderRadius: 50 }} />
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', justifyContent: 'center' }}>
@@ -52,6 +63,7 @@ export default class ForgetActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
+
             </ScrollView>
         );
     }

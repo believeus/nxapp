@@ -79,38 +79,35 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%' }}></Text>
 
                                 <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
-                                    <Text onPress={() => { this.navigate.push("LifeStyleChart") }} style={{ height: 56, marginTop: 80 }}></Text>
+                                    <Text onPress={() => {
+                                        this.state.user == null ?
+                                            this.navigate.push("Login")
+                                            :
+                                            this.state.user.privatekey ?
+                                                this.navigate.push("LifeStyleChart")
+                                                :
+                                                this.navigate.push("RasEncryptionActivity")
+
+                                    }} style={{ height: 56, marginTop: 80 }}></Text>
                                 </View>
                                 <Text onPress={() => { this.navigate.push("Testprocess") }} style={{ height: 128, width: '32%', }}></Text>
                             </View>
                             <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <Text onPress={() => this.navigate.push("Mall")} style={{ height: 141, width: '32%' }}></Text>
                                 <View style={{ height: 141, width: '36%', alignSelf: 'center' }}>
-                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("DnaReport") }}
+                                    <Text onPress={() => {
+                                        this.state.user == null ?
+                                            this.navigate.push("Login")
+                                            :
+                                            this.state.user.privatekey ?
+                                                this.navigate.push("DnaReport")
+                                                :
+                                                this.navigate.push("RasEncryptionActivity")
+                                    }}
                                         style={{ height: 56, marginBottom: 80 }}></Text>
                                 </View>
-                                <Text onPress={this.showAlert.bind(this)} style={{ height: 141, width: '32%', }}></Text>
-                                <AwesomeAlert
-                                    show={showAlert}
-                                    showProgress={false}
-                                    title="About Questionnaires"
-                                    message="The questionnaires are optional to fill up. However,epigenetic is affected by life style as well as environment. Our philosophy is that EpiAging tests make sense only within a dynamic life-long
-                                    life style,environmental and health management system. A personalized evaluation including intervention will be generated based on the health and lifestyle information you provided. Updates on your health and lifestyle parameters periodically will activate the life-long personalized analysis report."
-                                    closeOnTouchOutside={true}
-                                    closeOnHardwareBackPress={true}
-                                    showCancelButton={true}
-                                    showConfirmButton={true}
-                                    cancelText="No, Cancel"
-                                    confirmText="Yes,I agree"
-                                    confirmButtonColor="#DD6B55"
-                                    onCancelPressed={() => {
-                                        this.hideAlert();
-                                    }}
-                                    onConfirmPressed={() => {
-                                        this.hideAlert();
-                                        this.navigate.push("Questionnaire")
-                                    }}
-                                />
+                                <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Questionnaire") }} style={{ height: 141, width: '32%' }}></Text>
+
                             </View>
                         </View>
                     </ImageBackground>

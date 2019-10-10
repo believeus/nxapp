@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, fontFamily, TextInput, ScrollView, TouchableOpacity, Alert, FetchResult, AppRegistry } from 'react-native';
+import { Platform, StyleSheet, Text, View, Button, fontFamily, TextInput, ScrollView, TouchableOpacity, Alert, FetchResult, AppRegistry } from 'react-native';
 import ModalDropdown from 'react-native-modal-dropdown';
 import { CheckBox } from 'native-base';
 import { I18n } from '../locales/i18n';
+
 
 type Props = {};
 export default class RegisterActivity extends Component<Props> {
     constructor(props) {
         super(props);
-        this.state = { checked: true };
+        this.state = { checked: true,disable:true };
     }
     static navigationOptions= ({ navigation, screenProps }) => {
         return ({
@@ -373,7 +374,9 @@ export default class RegisterActivity extends Component<Props> {
                         </View>
                         <View>
                             <TouchableOpacity >
-                                <Text style={{ height: 45, borderRadius: 20, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 50 }}> Register</Text>
+                                <Button disabled={this.state.disable} title="Register" onPress={()=>{
+                                    if(!this.state.email){}
+                                }}/> 
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >

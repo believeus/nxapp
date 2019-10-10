@@ -22,7 +22,16 @@ export default class QuestionnaireActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-                <TouchableOpacity onPress={() => {this.state.user == null ? this.navigate.push("Login"):this.navigate.push("LifeStyleChart")}}>
+                <TouchableOpacity onPress={() => {
+                    this.state.user == null ?
+                        this.navigate.push("Login")
+                        :
+                        this.state.user.privatekey ?
+                            this.navigate.push("LifeStyleChart")
+                            :
+                            this.navigate.push("RasEncryptionActivity")
+                }
+                }>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon1.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Lifestyle Questionnaire</Text>
@@ -30,7 +39,15 @@ export default class QuestionnaireActivity extends Component<Props> {
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <TouchableOpacity onPress={() => { this.state.user == null ? this.navigate.push("Login") :this.navigate.push("MoodChart")}}>
+                <TouchableOpacity onPress={() => {
+                    this.state.user == null ?
+                        this.navigate.push("Login")
+                        :
+                        this.state.user.privatekey ?
+                            this.navigate.push("MoodChart")
+                            :
+                            this.navigate.push("RasEncryptionActivity")
+                }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon2.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Mood Self-Assessment</Text>
@@ -38,7 +55,15 @@ export default class QuestionnaireActivity extends Component<Props> {
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <TouchableOpacity onPress={() => {this.state.user == null ? this.navigate.push("Login") :this.navigate.push("McGillChart")}}>
+                <TouchableOpacity onPress={() => {
+                    this.state.user == null ?
+                        this.navigate.push("Login")
+                        :
+                        this.state.user.privatekey ?
+                            this.navigate.push("McGillChart")
+                            :
+                            this.navigate.push("RasEncryptionActivity")
+                }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon3.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>McGill Pain Questionnaire</Text>
@@ -46,7 +71,15 @@ export default class QuestionnaireActivity extends Component<Props> {
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <TouchableOpacity onPress={() => {this.state.user == null ? this.navigate.push("Login") :this.navigate.push("SleepChart")}}>
+                <TouchableOpacity onPress={() => {
+                    this.state.user == null ?
+                        this.navigate.push("Login")
+                        :
+                        this.state.user.privatekey ?
+                            this.navigate.push("SleepChart")
+                            :
+                            this.navigate.push("RasEncryptionActivity")
+                }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon4.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Sleep Self-Assessment</Text>
@@ -54,7 +87,15 @@ export default class QuestionnaireActivity extends Component<Props> {
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <TouchableOpacity onPress={() =>{this.state.user == null ? this.navigate.push("Login"):this.navigate.push("DietChart")}}>
+                <TouchableOpacity onPress={() => {
+                    this.state.user == null ?
+                        this.navigate.push("Login")
+                        :
+                        this.state.user.privatekey ?
+                            this.navigate.push("DietChart")
+                            :
+                            this.navigate.push("RasEncryptionActivity")
+                }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon5.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Diet Recommendation</Text>
