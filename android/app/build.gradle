@@ -142,7 +142,10 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
-             signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
+            //aaptOptions.cruncherEnabled=false 来禁止 Gradle 检查png的文件格式的正确性
+            aaptOptions.cruncherEnabled=false 
+     
         }
     }
     // applicationVariants are e.g. debug, release

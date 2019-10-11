@@ -4,7 +4,8 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import { WebView } from 'react-native-webview'
 import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
-import VideoPlayer from 'react-native-video-controls';
+import VideoPlayer from 'react-native-video-controls'
+import data from '../appdata'
 
 const FirstRoute = () => (
     <View style={{ marginTop: 20, marginBottom: 20 }}>
@@ -277,8 +278,8 @@ export default class ProfMosheActivity extends Component<Props> {
                             style={{ width: "100%", height: 250 }}
                             paused={true}
                             fullscreen={true}
-                            poster={'http://192.168.0.114:8080/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                            source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
+                            poster={'https://app.beijingepidial.com/static/images/vid1.png'} //poster必须是url从互联网访问的形式
+                            source={{ uri: 'https://app.beijingepidial.com/Healthtech_O2O_Summit_Dr_Moshe_Szyf_HKG_Epitherapeutics.mp4' }}
                             navigator={this.props.navigator}
                         />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Dr. Moshe Szyf , Science of Hope Conference 2017.mp4</Text>
@@ -286,8 +287,8 @@ export default class ProfMosheActivity extends Component<Props> {
                             style={{ width: "100%", height: 250 }}
                             paused={true}
                             fullscreen={true}
-                            poster={'http://192.168.0.114:8080/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                            source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
+                            poster={'https://app.beijingepidial.com/static/images/vid2.png'} //poster必须是url从互联网访问的形式
+                            source={{ uri: 'https://app.beijingepidial.com/Keynote_Dr_Moshe_Szyf_Science_of_Hope_Conference_2017.mp4' }}
                             navigator={this.props.navigator}
                         />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Dr. Moshe Szyf, What is epigenetic and why knowing it will change your life .mp4</Text>
@@ -295,8 +296,8 @@ export default class ProfMosheActivity extends Component<Props> {
                             style={{ width: "100%", height: 250 }}
                             paused={true}
                             fullscreen={true}
-                            poster={'http://192.168.0.114:8080/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                            source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
+                            poster={'https://app.beijingepidial.com/static/images/vid3.png'} //poster必须是url从互联网访问的形式
+                            source={{ uri: 'https://app.beijingepidial.com/What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}> Moshe Szyf, Behavioral Epigenetics.mp4</Text>
@@ -304,8 +305,8 @@ export default class ProfMosheActivity extends Component<Props> {
                             style={{ width: "100%", height: 250 }}
                             paused={true}
                             fullscreen={true}
-                            poster={'http://192.168.0.114:8080/static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                            source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
+                            poster={'https://app.beijingepidial.com/static/images/vid4.png'} //poster必须是url从互联网访问的形式
+                            source={{ uri: 'https://app.beijingepidial.com/Moshe_Szyf_Behavioral_Epigenetics.mp4' }}
                             navigator={this.props.navigator}
                         />
                     </View>
