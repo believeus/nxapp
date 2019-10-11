@@ -98,7 +98,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     <Button disabled={this.state.disabled} onPress={() => {
                                         if (this.state.privatekey != null) {
                                             let id = this.state.user.id
-                                            let uuid = md5.hex_md5(this.state.user.uuid).substring(0, 10)
+                                            let uuid = md5.hex_md5(id).substring(0, 10)
                                             //秘钥长度必须和iv长度一致
                                             const iv = 'iiibelieveususus';
                                             //将加密的uuid发送到服务端

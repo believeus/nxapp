@@ -4,13 +4,17 @@ import ModalDropdown from 'react-native-modal-dropdown'
 import Input from "react-native-input-validation"
 import { CheckBox } from 'native-base';
 import { I18n } from '../locales/i18n';
-
+import data from '../appdata'
 
 type Props = {};
 export default class RegisterActivity extends Component<Props> {
     constructor(props) {
         super(props);
-        this.state = { checked: true, disable: true };
+        this.state = {
+            checked: false,
+            disable: true,
+            region: ""
+        };
     }
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -190,7 +194,7 @@ export default class RegisterActivity extends Component<Props> {
                                         'Montserrat',
                                         'Morocco (‫المغرب‬‎)',
                                         'Mozambique (Moçambique)',
-                                        'Myanmar [Burma] (မြန်မာ)',
+                                        'Myanmar [Burma] ',
                                         'Namibia',
                                         'Nauru',
                                         'Nepal (नेपाल)',
@@ -302,23 +306,24 @@ export default class RegisterActivity extends Component<Props> {
                                 marginBottom: 5,
                                 fontSize: 16,
                                 paddingLeft: 10
-
                             }}
-                                onChangeText={(text) => { this.setState({ fname: text }); }}
-                                placeholder="First Name" />
-                        </View>
-                        <View style={{ alignItems: 'center', height: 40, alignContent: 'center', marginTop: 10 }}>
-                            <TextInput style={{
-                                height: 40, width: '100%',
-                                borderRadius: 10,
-                                borderWidth: 1,
-                                borderColor: '#b3b3b3',
-                                marginBottom: 5,
-                                fontSize: 16,
-                                paddingLeft: 10
-                            }}
-                                onChangeText={(text) => { this.setState({ lname: text }); }}
-                                placeholder="Last Name" />
+                                onChangeText={(nickname) => {
+                                    this.setState({ nickname })
+                                    if (nickname && this.state.email && this.state.isvalid && this.state.checked) {
+                                        if (this.state.password && this.state.comfirmpwd) {
+                                            if (this.state.password == this.state.comfirmpwd) {
+                                                this.setState({ disable: false })
+                                            } else {
+                                                this.setState({ disable: true })
+                                            }
+                                        } else {
+                                            this.setState({ disable: true })
+                                        }
+                                    } else {
+                                        this.setState({ disable: true })
+                                    }
+                                }}
+                                placeholder="Nick name" />
                         </View>
                         <View style={{ height: 40, marginTop: 10, marginBottom: 10 }}>
                             <Input style={{
@@ -331,7 +336,22 @@ export default class RegisterActivity extends Component<Props> {
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
                                 placeholder="Email" validator="email"
-                                onValidatorExecuted={(isvalid) => { this.setState({ isvalid: isvalid }) }}
+                                onValidatorExecuted={(isvalid) => {
+                                    this.setState({ isvalid: isvalid })
+                                    if (this.state.email && isvalid && this.state.checked) {
+                                        if (this.state.password && this.state.comfirmpwd && this.state.nickname) {
+                                            if (this.state.password == this.state.comfirmpwd) {
+                                                this.setState({ disable: false })
+                                            } else {
+                                                this.setState({ disable: true })
+                                            }
+                                        } else {
+                                            this.setState({ disable: true })
+                                        }
+                                    } else {
+                                        this.setState({ disable: true })
+                                    }
+                                }}
                                 validatorExecutionDelay={100}
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />
@@ -346,7 +366,22 @@ export default class RegisterActivity extends Component<Props> {
                                 fontSize: 16,
                                 paddingLeft: 10
                             }}
-                                onChangeText={(text) => { this.setState({ password: text }); }}
+                                onChangeText={(password) => {
+                                    this.setState({ password })
+                                    if (this.state.email && this.state.isvalid && this.state.checked) {
+                                        if (this.state.comfirmpwd && this.state.nickname) {
+                                            if (password == this.state.comfirmpwd) {
+                                                this.setState({ disable: false })
+                                            } else {
+                                                this.setState({ disable: true })
+                                            }
+                                        } else {
+                                            this.setState({ disable: true })
+                                        }
+                                    } else {
+                                        this.setState({ disable: true })
+                                    }
+                                }}
                                 placeholder="Create a Password" />
                         </View>
                         <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 20 }}>
@@ -359,16 +394,46 @@ export default class RegisterActivity extends Component<Props> {
                                 fontSize: 16,
                                 paddingLeft: 10
                             }}
-                                onChangeText={(comfirmpwd) => { this.setState({ comfirmpwd: comfirmpwd }); }}
+                                onChangeText={(comfirmpwd) => {
+                                    this.setState({ comfirmpwd: comfirmpwd })
+                                    if (this.state.email && this.state.isvalid && this.state.checked) {
+                                        if (this.state.password && this.state.nickname) {
+                                            if (this.state.password == comfirmpwd) {
+                                                this.setState({ disable: false })
+                                            } else {
+                                                this.setState({ disable: true })
+                                            }
+                                        } else {
+                                            this.setState({ disable: true })
+                                        }
+                                    } else {
+                                        this.setState({ disable: true })
+                                    }
+                                }}
                                 placeholder="Confirm Password" />
                         </View>
 
                         <View style={{ flexDirection: 'row', height: 60 }}>
                             <View style={{ height: 30, width: '10%', alignSelf: 'center', justifyContent: 'center' }}>
                                 <CheckBox
-                                    onPress={() => this.setState({
-                                        checked: !this.state.checked
-                                    })}
+                                    onPress={() => {
+                                        let checked = !this.state.checked
+                                        this.setState({ checked })
+                                        if (this.state.email && this.state.isvalid && checked) {
+                                            if (this.state.password && this.state.comfirmpwd && this.state.nickname) {
+                                                if (this.state.password == this.state.comfirmpwd) {
+                                                    this.setState({ disable: false })
+                                                } else {
+                                                    this.setState({ disable: true })
+                                                }
+                                            } else {
+                                                this.setState({ disable: true })
+                                            }
+                                        } else {
+                                            this.setState({ disable: true })
+                                        }
+                                        console.info(this.state.checked)
+                                    }}
                                     checked={this.state.checked}
                                 />
                             </View>
@@ -377,46 +442,26 @@ export default class RegisterActivity extends Component<Props> {
                             </View>
                         </View>
                         <View>
-                            <TouchableOpacity >
-                                <Button title="Register" onPress={() => {
-                                    if (!this.state.email) {
-                                        Alert.alert("Mailbox must be filled in")
-                                        return
-                                    }
-                                    if (!this.state.isvalid) {
-                                        Alert.alert("The mailbox format is incorrect")
-                                        return
-                                    }
-                                    if (!this.state.password) {
-                                        Alert.alert("Password must be filled in")
-                                        return
-                                    }
-                                    if ((this.state.password != this.state.comfirmpwd)) {
-                                        Alert.alert("Confirm password and password are inconsistent")
-                                        return
-                                    }
-                                    if (!this.state.checked) {
-                                        Alert.alert("Consent must be checked")
-                                        return
-                                    }
-                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
-                                     fetch(data.url + "/user/register.jhtml", {
+                            <TouchableOpacity disabled={this.state.disable}>
+                                <Button disabled={this.state.disable} title="Register" onPress={() => {
+                                    // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
+                                    fetch(data.url + "/user/register.jhtml", {
                                         method: "POST",
                                         headers: {
                                             'Content-Type': 'application/x-www-form-urlencoded'
                                         },
-                                        body: "mail=" + this.state.email + "&password=" + this.state.password + "&nickname=" + this.state.fname+"."+this.state.lname
+                                        body: "mail=" + this.state.email + "&password=" + this.state.password + "&nickname=" + this.state.nickname + "&region=" + this.state.region
                                     }).then(res => res.text()).then((data) => {
-                                        if(data=="error"){
-                                            Alert.alert("Mailbox has been registered")
+                                        if (data == "error") {
+                                            Alert.alert("message", "Mailbox has been registered")
                                             return
                                         }
-                                        if(data=="success"){
-                                            Alert.alert("The registration was successful and the user activation link\n has been sent to your mailbox")
+                                        if (data == "success") {
+                                            Alert.alert("message", "The registration was successful and the user activation link  has been sent to your mailbox")
                                             return
                                         }
-                                        if(data="network-error"){
-                                            Alert.alert("Network error!try again")
+                                        if (data = "network-error") {
+                                            Alert.alert("message", "Network error!try again")
                                             return
 
                                         }
