@@ -13,7 +13,7 @@ type Props = {};
 export default class LoginActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("LoginActivity.name"),
+            title: I18n.t("LoginActivity.title"),
             headerRight: null
         })
     }

@@ -6,7 +6,7 @@ type Props = {};
 export default class CompanyActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("CompanyActivity.name"),
+            title: I18n.t("CompanyActivity.title"),
         })
     }
 

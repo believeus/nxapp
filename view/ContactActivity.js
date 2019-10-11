@@ -6,7 +6,7 @@ type Props = {};
 export default class ContactActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("ContactActivity.name"),
+            title: I18n.t("ContactActivity.title"),
         })
     }
     constructor(props) {

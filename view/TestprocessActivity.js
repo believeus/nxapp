@@ -7,7 +7,7 @@ type Props = {};
 export default class TestprocessActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("TestprocessActivity.name"),
+            title: I18n.t("TestprocessActivity.title"),
         })
     }
     constructor(props) {

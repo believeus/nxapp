@@ -6,7 +6,7 @@ type Props = {};
 export default class DataActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("DataActivity.name"),
+            title: I18n.t("DataActivity.title"),
         })
     }
     constructor(props) {

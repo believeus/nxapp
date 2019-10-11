@@ -6,7 +6,7 @@ type Props = {};
 export default class QuesnoteActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("QuesnoteActivity.name"),
+            title: I18n.t("QuesnoteActivity.title"),
         })
     }
     constructor(props) {

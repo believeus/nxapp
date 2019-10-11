@@ -11,7 +11,7 @@ type Props = {};
 export default class RasEncryptionActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("RasEncryptionActivity.name"),
+            title: I18n.t("RasEncryptionActivity.title"),
             headerRight: null
         })
     }

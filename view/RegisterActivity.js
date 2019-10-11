@@ -18,11 +18,12 @@ export default class RegisterActivity extends Component<Props> {
     }
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("RegisterActivity.name"),
+            title: I18n.t("RegisterActivity.title"),
             headerRight: null
         })
     }
     render() {
+        this.navigate = this.props.navigation;
         //const navigator=this.props.navitation;//此处可以自定义跳转属性
         return (
             <ScrollView>
@@ -437,8 +438,10 @@ export default class RegisterActivity extends Component<Props> {
                                     checked={this.state.checked}
                                 />
                             </View>
-                            <View style={{ height: 30, width: '90%', alignSelf: 'center', justifyContent: 'center' }}>
-                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, color: '#007186' }}>I have read and agree to <Text style={{ color: '#f05a25' }}>the Terms of Service and Privacy Statement.</Text></Text>
+                            <View style={{ height: 30, width: '90%', alignSelf: 'center', marginLeft: 5, justifyContent: 'center' }}>
+                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, }}>I have read and agree to
+                                        <Text onPress={() => this.navigate.push("Consent")} style={{ color: '#0071bc' }}> the Terms of Service and Privacy Statement.</Text>
+                                </Text>
                             </View>
                         </View>
                         <View>
@@ -471,7 +474,9 @@ export default class RegisterActivity extends Component<Props> {
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >
                             <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#b3b3b3', lineHeight: 20 }}>Already have an account?</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 20 }}>Login</Text>
+                            <TouchableOpacity onPress={() => this.navigate.push("Login")}>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 20 }}>Login</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
                 </View>

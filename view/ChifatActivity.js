@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
 export default class ChifatActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title:  I18n.t("ChifatActivity.name"),
+            title:  I18n.t("ChifatActivity.title"),
         })
     }
     constructor(props) {

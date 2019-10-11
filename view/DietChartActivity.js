@@ -12,7 +12,7 @@ type Props = {};
 export default class DietChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("DietChartActivity.name"),
+            title: I18n.t("DietChartActivity.title"),
         })
     }
 

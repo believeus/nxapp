@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
 export default class DavidActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("DavidActivity.name"),
+            title: I18n.t("DavidActivity.title"),
         })
     }
     constructor(props) {

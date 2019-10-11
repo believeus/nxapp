@@ -9,7 +9,7 @@ type Props = {};
 export default class ForgetActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("ForgetActivity.name"),
+            title: I18n.t("ForgetActivity.title"),
         })
     }
     constructor(props) {
@@ -50,7 +50,7 @@ export default class ForgetActivity extends Component<Props> {
 
                         <View>
                             <TouchableOpacity >
-                                <Button title={I18n.t("ForgetActivity.name")} disabled={this.state.disabled} onPress={() => {
+                                <Button title={I18n.t("ForgetActivity.title")} disabled={this.state.disabled} onPress={() => {
                                     if (!this.state.email) { this.setState({ disabled: true }); return }
                                     fetch(data.url + "user/sendpaswd.jhtml?email=" + this.state.email).then((data) => { data.text() }).then((data) => {
                                         Alert.alert("The reset password link has been\n sent to your designated mailbox")

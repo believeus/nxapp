@@ -6,7 +6,7 @@ type Props = {};
 export default class MethylationActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("MethylationActivity.name"),
+            title: I18n.t("MethylationActivity.title"),
         })
     }
     constructor(props) {

@@ -5,7 +5,7 @@ import Session from '../storage/Session';
 export default class ConsentActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("ConsentActivity.name"),
+            title: I18n.t("ConsentActivity.title"),
         })
     }
     constructor(props) {

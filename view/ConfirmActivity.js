@@ -6,7 +6,7 @@ type Props = {};
 export default class ConfirmActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("ConfirmActivity.name"),
+            title: I18n.t("ConfirmActivity.title"),
         })
     }
     constructor(props) {

@@ -7,7 +7,7 @@ type Props = {};
 export default class McGillChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("McGillChartActivity.name"),
+            title: I18n.t("McGillChartActivity.title"),
         })
     }
 

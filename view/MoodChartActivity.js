@@ -8,7 +8,7 @@ type Props = {};
 export default class MoodChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("MoodChartActivity.name"),
+            title: I18n.t("MoodChartActivity.title"),
         })
     }
 

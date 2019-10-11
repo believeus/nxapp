@@ -4,9 +4,11 @@ import { I18n } from '../locales/i18n';
 
 type Props = {};
 export default class BiologicalActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("BiologicalActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("BiologicalActivity.title"),
+        })
+    }
     constructor(props) {
         super(props);
     }

@@ -6,7 +6,7 @@ type Props = {};
 export default class QAActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("QAActivity.name"),
+            title: I18n.t("QAActivity.title"),
         })
     }
     constructor(props) {

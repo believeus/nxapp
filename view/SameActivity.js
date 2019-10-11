@@ -6,7 +6,7 @@ type Props = {};
 export default class SameActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("SameActivity.name"),
+            title: I18n.t("SameActivity.title"),
         })
     }
     constructor(props) {
