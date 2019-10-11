@@ -4,9 +4,6 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
 type Props = {};
 export default class TabAboutActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("TabAboutActivity.name"),
-    };
     constructor(props) {
         super(props);
     }

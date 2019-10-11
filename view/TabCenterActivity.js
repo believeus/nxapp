@@ -5,9 +5,6 @@ import Session from '../storage/Session';
 
 
 export default class CenterActivity extends Component {
-    static navigationOptions = ({ navigation }) => {
-
-    };
     constructor(props) {
         super(props);
         let _oThis = this

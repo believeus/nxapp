@@ -42,9 +42,11 @@ const styles = StyleSheet.create({
     },
 });
 export default class DavidActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("DavidActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("DavidActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

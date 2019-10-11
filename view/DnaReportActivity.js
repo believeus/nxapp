@@ -8,9 +8,11 @@ import { I18n } from '../locales/i18n';
 
 
 export default class DnaReportActivity extends Component<Props> {
-    static navigationOptions = {
-        title: I18n.t("DnaReportActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("DnaReportActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

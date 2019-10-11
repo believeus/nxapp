@@ -74,7 +74,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 86, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
-                                    <Text style={{ height: 86, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>We will not have or save user's private key to decrypt user data according to our <Text onPress={() => this.navigate.push("Data")} style={{ fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>data security statement</Text> , please save your only private key.</Text>
+                                    <Text style={{ height: 86, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>We will not have or save user's private key to decrypt user data according to our <Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>data security statement</Text> , please save your only private key.</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>6.</Text>

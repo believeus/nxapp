@@ -5,9 +5,11 @@ import Session from '../storage/Session';
 
 type Props = {};
 export default class TestprocessActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("TestprocessActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("TestprocessActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
     }
@@ -37,14 +39,14 @@ export default class TestprocessActivity extends Component<Props> {
 
                 <View style={{ flexDirection: 'row' }} >
                     <View style={{ width: '70%', flexDirection: 'column', marginTop: 20 }}>
-                        <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Malls") }}>
+                        <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Mall") }}>
                             <View style={{ width: '88%', height: 123, justifyContent: 'flex-end' }}>
                                 <Image style={{ height: 59, width: '100%' }} resizeMode='center' source={require("../image/icons/tp3.png")}></Image>
                                 <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>2.Purchase the kit </Text>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: 23, width: '77%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                        <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Questionnaire") }}>
+                        <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Quesnote") }}>
                             <View style={{ width: '100%', height: 145, justifyContent: 'flex-end', paddingLeft: 56 }}>
                                 <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp4.png")}></Image>
                                 <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>3.Fill up the question-</Text>
@@ -88,7 +90,7 @@ export default class TestprocessActivity extends Component<Props> {
                     <View style={{ width: '20%', height: 145, }}></View>
                 </View>
                 <View style={{ height: 23, width: '66%', alignSelf: 'flex-end', borderTopLeftRadius: 10, borderBottomLeftRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                <TouchableOpacity style={{ width: "100%", }} onPress={() => { this.state.user == null ? this.navigate.push("Login"):navigate.push("Report") }}>
+                <TouchableOpacity style={{ width: "100%", }} onPress={() => { this.state.user == null ? this.navigate.push("Login"):navigate.push("DnaReport") }}>
                     <View style={{ width: '88%', height: 145, justifyContent: 'flex-end' }}>
                         <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp8.png")}></Image>
                         <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>7.View the report </Text>

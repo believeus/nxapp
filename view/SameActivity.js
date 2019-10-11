@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity ,Modal,Button} from 'react-native';
 import { I18n } from '../locales/i18n';
-
+import { WebView } from 'react-native-webview';
 type Props = {};
 export default class SameActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("SameActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("SameActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
+        this.state={ display: false}
     }
 
     render() {
         this.navigate = this.props.navigation;
+       
         return (
             <ScrollView>
+                {this.state.display == true ?
+                    <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
+                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
+                        <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
+                            <TouchableOpacity style={{ width: "100%", height: "100%" }}>
+                                <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
+                            </TouchableOpacity>
+                        </View>
+                    </Modal> : null
+                }
                 <Image style={{ height: 195, width: '100%' }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")}></Image>
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
@@ -26,7 +40,7 @@ export default class SameActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Image style={{ height: 367, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/enpic/sam2.png")}></Image>
+                <Image style={{ height: 367, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")}></Image>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
 
                     <View style={{ flexDirection: 'row' }}>
@@ -60,9 +74,11 @@ export default class SameActivity extends Component<Props> {
                         <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/enpic/sam3.png")}></Image>
                         <View style={{ width: '96%', height: 123, backgroundColor: '#C1E1E8', borderRadius: 10, alignSelf: 'center', marginBottom: 34 }}>
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>In March of 2003, the AHRQ (Agency for Healthcare Research and Quality) a division of the United States Health and Human Services, released the findings of a major study on SAM-e.</Text>
-                            <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10 }}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
-                            <Text style={{ height: 47, width: '10%', alignSelf: 'baseline', fontSize: 34, color: '#c1e1e8' }}>▼</Text>
-                            </Text>
+                            <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }); this.setState({ display: true }) }}>
+                                <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10 }}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
+                                <Text style={{ height: 47, width: '10%', alignSelf: 'baseline', fontSize: 34, color: '#c1e1e8' }}>▼</Text>
+                                </Text>
+                            </TouchableOpacity>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -119,7 +135,9 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '28%', height: 158, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
                         <Text style={{ width: '70%', height: 158, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>General Hospital demonstrated that SAM-e combined with antidepressants significantly increased remission rates in patients with major depression who failed conventional therapy.
+                        
                         <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
+                        
                         </Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
@@ -233,15 +251,15 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                    <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>Caution when taking SAM-e</Text>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e should not be used in conjunction or in place of treatment recommended by your doctor. </Text>
-                    </View>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 119, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 119, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>If you're taking medication and considering taking SAM-e as supplementary, consulate your doctor to make sure that SAM-e has no interaction with the medication that you are taking.</Text>
-                    </View>
+                        <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>Caution when taking SAM-e</Text>
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e should not be used in conjunction or in place of treatment recommended by your doctor. </Text>
+                        </View>
+                        <View style={{ flexDirection: 'row' }}>
+                            <Text style={{ height: 119, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ height: 119, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>If you're taking medication and considering taking SAM-e as supplementary, consulate your doctor to make sure that SAM-e has no interaction with the medication that you are taking.</Text>
+                        </View>
                     </View>
                 </View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>

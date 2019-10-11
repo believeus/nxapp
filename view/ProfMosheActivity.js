@@ -184,9 +184,11 @@ const styles = StyleSheet.create({
     },
 });
 export default class ProfMosheActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("ProfMosheActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("ProfMosheActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

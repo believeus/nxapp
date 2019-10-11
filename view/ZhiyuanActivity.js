@@ -62,9 +62,11 @@ const styles = StyleSheet.create({
     },
 });
 export default class ZhiyuanActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("ZhiyuanActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("ZhiyuanActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

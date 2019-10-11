@@ -7,9 +7,11 @@ import { Platform, StyleSheet, Text, View, TextInput, TouchableOpacity, ScrollVi
 
 type Props = {};
 export default class ForgetActivity extends Component<Props> {
-    static navigationOptions = {
-        title: I18n.t("ForgetActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("ForgetActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = { disabled: false }

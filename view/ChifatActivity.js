@@ -41,9 +41,11 @@ const styles = StyleSheet.create({
     },
 });
 export default class ChifatActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("ChifatActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title:  I18n.t("ChifatActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

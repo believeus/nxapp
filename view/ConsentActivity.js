@@ -3,9 +3,11 @@ import { Platform, StyleSheet, Text, View, ScrollView, TouchableOpacity } from '
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 export default class ConsentActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("ConsentActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("ConsentActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

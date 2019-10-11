@@ -13,6 +13,7 @@ import { I18n } from '../locales/i18n'
 
 type Props = {};
 export default class LoginIcon extends Component<Props> {
+   
     constructor(props) {
         super(props);
         console.info(props)
@@ -43,6 +44,7 @@ export default class LoginIcon extends Component<Props> {
         //要强调的是navigation属性并不是所有的组件里都有，只有screen组件才自动接收该属性（被screen属性声明过的组件）
         //例如：如果你定义了一个MyBackButton组件，并且将其在一个screen组件中作为子组件渲染，那么就不会接收到navigation属性
         const navigate = this.props.navigation;
+        
         return (
             <View>
                 <View style={{ width: 100, height: 50, justifyContent: "center", alignItems: "center" }}>

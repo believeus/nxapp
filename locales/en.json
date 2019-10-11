@@ -3,16 +3,16 @@
         "message": "Hi:Guest"
     },
     "TabHomeActivity": {
-        "name": "Home"
+        "title": "Home"
     },
     "TestprocessActivity": {
-        "name": "Test process"
+        "title": "Test Process"
     },
     "AboutActivity": {
-        "name": "About us"
+        "title": "About Us"
     },
     "LoginActivity": {
-        "name": "User login",
+        "title": "User Login",
         "email": "Email",
         "passowrd": "Password",
         "mailboxformatFail": "The mailbox format is incorrect",
@@ -29,94 +29,94 @@
         "ForgetPwd": "Forget Password?"
     },
     "RegisterActivity": {
-        "name": "User register",
+        "title": "User register"
     },
     "ForgetActivity": {
-        "name": "Reset Password",
+        "title": "Reset Password",
         "resetPwd": "Reset Password",
         "link": "By clicking the button below, A link to reset your password will be sent to your email.",
         "btn": "Reset password",
         "link2": "Login to your account",
         "email": "Email",
         "password": "Password",
-        "login": "login",
+        "login": "login"
     },
     "LifeStyleChartActivity": {
-        "name": "Life Style Questionnaire"
+        "title": "Life Style Questionnaire"
     },
     "DnaReportActivity": {
-        "name": "Chronological age"
+        "title": "Chronological Age"
     },
     "user_profile": {
         "title": "Your Profile"
     },
     "CompanyActivity": {
-        "name": "Company Introduction"
+        "title": "Company Introduction"
     },
     "TabAboutActivity": {
-        "name": "About us"
+        "title": "About Us"
     },
     "ScienceteamActivity": {
-        "name": "Our Science team"
+        "title": "Science Team"
     },
     "ProfMosheActivity": {
-        "name": "Prof. Moshe"
+        "title": "Prof. Moshe"
     },
     "DavidActivity": {
-        "name": "David Cheishvili Ph.D."
+        "title": "David Cheishvili Ph.D."
     },
     "HuiliActivity": {
-        "name": "Hui li Ph.D."
+        "title": "Hui li Ph.D."
     },
     "ChifatActivity": {
-        "name": "Chifat Wong Ph.D."
+        "title": "Chifat Wong Ph.D."
     },
     "ZhiyuanActivity": {
-        "name": "Zhiyuan Lv Ph.D."
+        "title": "Zhiyuan Lv Ph.D."
     },
     "MethylationActivity": {
-        "name": "DNA Methylation"
+        "title": "DNA Methylation"
     },
     "QuestionnaireActivity": {
-        "name": "Questionnaires"
+        "title": "Questionnaires"
     },
     "ConsentActivity": {
-        "name": "User consent form"
+        "title": "User consent form"
     },
     "McGillChartActivity": {
-        "name": "McGill Pain Questionnaires"
+        "title": "McGill Pain Questionnaires"
     },
     "MoodChartActivity": {
-        "name": "Mood Questionnaires"
+        "title": "Mood Questionnaires"
     },
     "BiologicalActivity": {
-        "name": "Biological Age"
+        "title": "Biological Age"
     },
     "SleepChartActivity": {
-        "name": "Sleep Questionnaires"
+        "title": "Sleep Questionnaires"
     },
     "DietChartActivity": {
-        "name": "Diet Recommendation",
+        "title": "Diet Recommendation",
         "confirmText": "Confirm",
         "chooseBreakfast": "Choose  Breakfast..."
     },
     "SameActivity": {
-        "name": "Sam-e introduction"
+        "title": "Sam-e introduction"
     },
     "DataActivity": {
-        "name": "Data Security"
+        "title": "Data Security"
     },
     "RasEncryptionActivity":{
-        "name":"Private key Setting"
+        "title":"Private key Setting"
     },
     "QAActivity": {
-        "name": "Q&A"
+        "title": "Q&A"
     },
     "ContactActivity": {
-        "name": "Contact Us"
+        "title": "Contact Us"
     },
     "QuesnoteActivity":{
-        "name":"Notification",
+        "title":"Notification",
         "ques":"Continue",
         "back":"Cancel"
     }

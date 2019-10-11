@@ -123,9 +123,11 @@ const styles = StyleSheet.create({
     },
 });
 export default class HuiliActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("HuiliActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("HuiliActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
         this.state = {

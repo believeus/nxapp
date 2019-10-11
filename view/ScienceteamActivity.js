@@ -4,9 +4,11 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
 type Props = {};
 export default class ScienceteamActivity extends Component<Props> {
-    static navigationOptions = {
-        name: I18n.t("ScienceteamActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("ScienceteamActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
     }

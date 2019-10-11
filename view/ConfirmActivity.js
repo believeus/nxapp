@@ -4,13 +4,15 @@ import { I18n } from '../locales/i18n';
 
 type Props = {};
 export default class ConfirmActivity extends Component<Props> {
-    static navigationOptions = {
-        title: I18n.t("ConfirmActivity.name"),
-    };
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("ConfirmActivity.name"),
+        })
+    }
     constructor(props) {
         super(props);
     }
-   
+
     render() {
         return (
             <ScrollView>
