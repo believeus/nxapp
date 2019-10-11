@@ -68,24 +68,50 @@ export default class MethylationActivity extends Component<Props> {
                     <Image style={{ height: 99, width: '35%' }} resizeMode='center' source={require("../image/icons/methy7.jpg")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Text style={{ height: 77, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> Studies suggest that different environmental changes can change or reverse DNA methylation events.</Text>
-                    <Text style={{ height: 77, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> Thus, the potential is there that we might be able to change DNA methylation by lifestyle changes.</Text>
-                    <Text style={{ height: 77, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> Our optimism about DNA methylation derives from the fact that DNA methylation in difference from genetics is reversible.</Text>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 77, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Studies suggest that different environmental changes can change or reverse DNA methylation events.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 77, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Thus, the potential is there that we might be able to change DNA methylation by lifestyle changes.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 77, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Our optimism about DNA methylation derives from the fact that DNA methylation in difference from genetics is reversible.</Text>
+                    </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20, flexDirection: 'row', }}>
                     <Text style={{ height: 99, width: '65%', alignSelf: 'center', fontFamily: 'FontAwesome5_Brands', fontWeight: '700', color: '#0071bc', lineHeight: 23, paddingTop: 19 }}>DNA methylation and the epigenetic clock</Text>
                     <Image style={{ height: 99, width: '35%' }} resizeMode='center' source={require("../image/icons/methy8.jpg")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Text style={{ height: 66, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> A paradigm shift in the search for biological age markers has happened with the discovery of the "epigenetic clock" by Horvath.</Text>
-                    <Text style={{ height: 66, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> It was discovered that the level of methylation of certain genes in our DNA changes as we age.</Text>
-                    <Text style={{ height: 66, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> By measuring methylation in these genes it is possible to determine our biological age.</Text>
-                    <Text style={{ height: 66, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> Our biological age is a better measure of our health and well being than chronological age.</Text>
-                    <Text style={{ height: 66, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> Studies show that acceleration of " DNA methylation age" is a predictor of early death and chronic disease.</Text>
-                    <Text style={{ height: 66, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}><Text style={{ color: '#0071bc' }}>● </Text> Experiments in animals show that it is possible to reverse the biological clock bydietary changes.</Text>
-
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 77, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>A paradigm shift in the search for biological age markers has happened with the discovery of the "epigenetic clock" by Horvath.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 66, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 66, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>It was discovered that the level of methylation of certain genes in our DNA changes as we age.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 66, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 66, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>By measuring methylation in these genes it is possible to determine our biological age.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 66, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 66, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Our biological age is a better measure of our health and well being than chronological age.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 66, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 66, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Studies show that acceleration of " DNA methylation age" is a predictor of early death and chronic disease.</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row' }}>
+                        <Text style={{ height: 66, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 66, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Experiments in animals show that it is possible to reverse the biological clock bydietary changes.</Text>
+                    </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center',marginTop:20 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>
         );
     }

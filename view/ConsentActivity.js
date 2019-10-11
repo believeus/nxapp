@@ -1,23 +1,28 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
-import { Button } from 'react-native-elements';
-
-type Props = {};
+import Session from '../storage/Session';
 export default class ConsentActivity extends Component<Props> {
     static navigationOptions = {
         name: I18n.t("ConsentActivity.name"),
     };
     constructor(props) {
         super(props);
+        this.state = {
+            dispaly: true,
+        }
     }
-
+    componentDidMount() {
+        Session.load("sessionuser").then((user) => {
+            this.setState({ dispaly: false })
+        })
+    }
     render() {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
 
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
                     <Text style={{ height: 34, width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>HKG epitherapeutics Customer Data Consent</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
@@ -37,7 +42,7 @@ export default class ConsentActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ height: 33, width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>How to enrich health data</Text>
-                    <Text style={{ height: 199, width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>You are not obligated to answer the questions on this app and it is your decision what information to provide. Similarly, it is your decision to make or avoid life style changes and to attend or ignore the recommendations of the different medical associations
+                    <Text style={{ height: 228, width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>You are not obligated to answer the questions on this app and it is your decision what information to provide. Similarly, it is your decision to make or avoid life style changes and to attend or ignore the recommendations of the different medical associations
 				that we are providing you with. However, the richer the data, the better and more helpful the analysis will be to you and others in the<Text style={{ fontStyle: 'italic' }}> "epiaging app community". </Text> By analyzing data streaming from many other app users with “machine learning”, we will derive combinations of life style
 				alterations that may have a positive impact on reducing the speed of aging.</Text>
                 </View>
@@ -53,9 +58,13 @@ export default class ConsentActivity extends Component<Props> {
                     <Text style={{ height: 199, width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>In accordance with the Data Protection Regulations with regards to data protection, you have the right to request access to and rectification or erasure of your personal data or restriction of processing concerning your data or to object
 				to processing as well as the right to data portability. You can exercise this right by contacting (info@hkgepitherapeutics.com).Your name and identity will be encrypted and firewalled. Following your signature you will receive a blinded ID that will allow you to provide data and remain anonymous to the system.</Text>
                 </View>
-                <TouchableOpacity onPress={() => this.navigate.push("Login")}>
-                    <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 47 }}>Agree</Text>
-                </TouchableOpacity>
+                {this.state.dispaly == true ?
+                    <TouchableOpacity onPress={() => this.navigate.push("Login")}>
+                        <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 47 }}>Agree</Text>
+                    </TouchableOpacity>
+                    :
+                   null
+                }
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, marginTop: 20, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>
         );

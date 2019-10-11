@@ -40,25 +40,27 @@ export default class CenterActivity extends Component {
                                 <Image style={{ height: '100%', width: '100%' }} resizeMode="center" source={require("../image/ic_login.png")}></Image>
                             }
                             {this.state.user == null ?
-                                <View style={{ alignSelf: "center"}}>
-                                    <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf:'center' }}>
-                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
+                                <View style={{ alignSelf: "center", flexDirection: 'row' }}>
+                                    <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
+                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "right", fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
                                     </View>
-                                    <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf:'center' }}>
-                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "center", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
+                                    <View style={{ width: '10%', height: 25, justifyContent: 'center', alignSelf: 'center', }}>
+                                        <Text style={{ color: '#fff',textAlign:'center' }}>|</Text></View>
+                                    <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
+                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "left", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
                                     </View>
                                 </View>
 
                                 :
                                 <View style={{ width: '100%', height: 65, justifyContent: 'center', alignItems: "center" }}>
                                     <Text style={{ color: "#fff", fontSize: 22 }}>{this.state.user.nickname}</Text>
-                                    <TouchableOpacity onPress={()=>{navigate.push("RasEncryptionActivity")}}><Text style={{ color: "#fff", fontSize: 18 }}>Secret key</Text></TouchableOpacity>
+                                    <TouchableOpacity onPress={() => { navigate.push("RasEncryptionActivity") }}><Text style={{ color: "#fff", fontSize: 18 }}>Secret key</Text></TouchableOpacity>
                                 </View>
                             }
                         </View>
                     </View>
                     {this.state.user != null ?
-                        <TouchableOpacity onPress={() => navigate.push("Questionnaire")}>
+                        <TouchableOpacity onPress={() => navigate.push("Quesnote")}>
                             <View style={{ width: '90%', height: 75, alignItem: 'center', width: "100%", borderBottomColor: '#efefef', borderBottomWidth: 1 }}>
                                 <View style={{ width: "100%", height: 20 }}></View>
                                 <View style={{ width: "100%", height: 20, flex: 1, flexDirection: 'row', alignSelf: 'center' }}>

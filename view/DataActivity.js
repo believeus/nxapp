@@ -123,7 +123,7 @@ export default class DataActivity extends Component<Props> {
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 145, width: '7%', fontSize: 14, color: '#0071bc' }}>☞</Text>
-                            <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}> Information is in the "hosted" state. If you do not modify data through your mobile phone, your health data will become "locked" and automatically become "free". At this time, the system will send a "unlock code" to let you confirm that your authorized authentication is a third-party mobile phone that can modify personal health information data.</Text>
+                            <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Information is in the "hosted" state. If you do not modify data through your mobile phone, your health data will become "locked" and automatically become "free". At this time, the system will send a "unlock code" to let you confirm that your authorized authentication is a third-party mobile phone that can modify personal health information data.</Text>
                         </View>
                     </View>
                 </View>

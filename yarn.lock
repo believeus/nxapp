@@ -5582,6 +5582,11 @@ react-lifecycles-compat@^3, react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-aes-kit@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-aes-kit/-/react-native-aes-kit-1.0.2.tgz#0f07024bec87659ff1032f4d7cbf6b2c3620f126"
+  integrity sha1-DwcCS+yHZZ/xAy9NfL9rLDYg8SY=
+
 react-native-animatable@^1.2.4:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.2.tgz#4783ee1a73dc98815aef234ce6b819f80bfe7d80"
@@ -5687,8 +5692,8 @@ react-native-f2chart@^1.1.0:
 
 react-native-gesture-handler@^1.4.1:
   version "1.4.1"
-  resolved "https://registry.npm.taobao.org/react-native-gesture-handler/download/react-native-gesture-handler-1.4.1.tgz#c38d9e57637b95e221722a79f2bafac62e3aeb21"
-  integrity sha1-w42eV2N7leIhcip58rr6xi466yE=
+  resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-1.4.1.tgz#c38d9e57637b95e221722a79f2bafac62e3aeb21"
+  integrity sha512-Ffcs+SbEbkGaal0CClYL+v7A9y4OA5G5lW01qrzjxaqASp5C8BfnWSKuqYKE00s6bLwE5L4xnlHkG0yIxAtbrQ==
   dependencies:
     hammerjs "^2.0.8"
     hoist-non-react-statics "^2.3.1"
@@ -5701,6 +5706,13 @@ react-native-i18n@^2.0.15:
   integrity sha1-CbWpg2EW+n29AFTEbi0QFMHvPGU=
   dependencies:
     i18n-js "3.0.11"
+
+react-native-input-scroll-view@^1.9.3:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/react-native-input-scroll-view/-/react-native-input-scroll-view-1.9.3.tgz#064eb1c5208445eeba0dde97b0bee4b67910fd45"
+  integrity sha512-7NMWeW/jhnQmmbyB4rv4KQJ2ydAL3tMqQA/4PpjL6ozlirU1gglvSQrHTCbgOHYULaQPtjdHwcYU9ZYGukbsNQ==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-native-input-spinner@^1.2.6:
   version "1.2.6"
@@ -5798,6 +5810,11 @@ react-native-ratings@^6.5.0:
     lodash "^4.17.4"
     prop-types "^15.5.10"
 
+react-native-reanimated@^1.3.0:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-reanimated/-/react-native-reanimated-1.3.0.tgz#581cdb0bd1ff05e7304b116af712ded0c7665ede"
+  integrity sha512-KFno6D0q09kx71IDuPa4qeC1t1msALsCMuli3/EN3YDf8XoM2CG53yzhVHMFtmcW0IUCySugHgxQiuT5BzwOPA==
+
 react-native-rheostat@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/react-native-rheostat/-/react-native-rheostat-0.1.0.tgz#7cec3f0c51271a60af6b4969f1aba85b9826b698"
@@ -5834,6 +5851,11 @@ react-native-router-flux@^4.0.6:
     path-to-regexp "^2.4.0"
     prop-types "^15.6.2"
     react-navigation "2.x"
+
+react-native-rsa-native@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/react-native-rsa-native/-/react-native-rsa-native-1.1.2.tgz#5c500046661379e51651680a4da5873e3883af9b"
+  integrity sha512-r6njBkfktKA+nd8bV2CO/xe+5/OM8zQjcwRodvEHQTtoG193BmLFLTu9q/XFWuTAOVnxbpBWgob+0+vO4EguNA==
 
 react-native-safe-area-view@0.11.0:
   version "0.11.0"

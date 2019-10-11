@@ -56,19 +56,30 @@ export default class RasEncryptionActivity extends Component<Props> {
                     </TouchableOpacity> */}
                     <View style={{ width: "100%", alignItems: 'center' }}>
                         <View style={{ width: "95%" }}>
-                            <View>
-                                <Text>1.Please set the secret key, which is used to encrypt and decrypt the user's health data.</Text>
-                                <View style={{ width: "100%", height: 3 }}></View>
-                                <Text>2.Once the private key is set, no changes are allowed.</Text>
-                                <View style={{ width: "100%", height: 3 }}></View>
-                                <Text>3.If the secret key is changed, all previously saved health data will be lost,New health data will be encrypted using a modified secret key, so it can only be set once.</Text>
-                                <View style={{ width: "100%", height: 3 }}></View>
-                                <Text>4.If the user logs out and logs in again, enter the same secret key again.</Text>
-                                <View style={{ width: "100%", height: 3 }}></View>
-                                <Text>5.Our company will not save the user's secret key to decrypt user data, so please save your only secret key.</Text>
-                                <View style={{ width: "100%", height: 3 }}></View>
-                                <Text>6.Every time health data is acquired, it will be encrypted and decrypted using the secret key on the user's mobile phone.</Text>
-                            </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 45, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
+                                    <Text style={{ height: 45, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please set the secret key, which is used to encrypt and decrypt the user's health data.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 45, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
+                                    <Text style={{ height: 45, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 89, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
+                                    <Text style={{ height: 89, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new secret key,<Text style={{ color: '#0071bc' }}>and it can only be set once</Text>.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 45, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
+                                    <Text style={{ height: 45, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the user logs out and logs in again, enter the same Private key again.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 86, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
+                                    <Text style={{ height: 86, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>We will not have or save user's private key to decrypt user data according to our <Text onPress={() => this.navigate.push("Data")} style={{ fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>data security statement</Text> , please save your only private key.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 77, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>6.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>When you are not logged into the system, your healthy information and personal user information will be in a'free'state, and no one can find your related information.</Text>
+                                </View>
                             <View style={{ width: "100%", height: 20 }}></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
                                 <View style={{ width: "75%" }}>

@@ -106,7 +106,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     }}
                                         style={{ height: 56, marginBottom: 80 }}></Text>
                                 </View>
-                                <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Questionnaire") }} style={{ height: 141, width: '32%' }}></Text>
+                                <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{ height: 141, width: '32%' }}></Text>
 
                             </View>
                         </View>
@@ -242,7 +242,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Questionnaire")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("Quesnote")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc3.png')} resizeMode='center' />
@@ -268,7 +268,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress={() => this.navigate.push("Check")}>
+                        {/* <TouchableOpacity onPress={() => this.navigate.push("Check")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc5.png')} resizeMode='center' />
@@ -280,7 +280,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
                                 </View>
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
                         <TouchableOpacity onPress={() => this.navigate.push(" ")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>

@@ -37,6 +37,7 @@ import DataActivity from './DataActivity';
 import RasEncryptionActivity from "./RasEncryptionActivity"
 import ContactActivity from './ContactActivity';
 import QAActivity from './QAActivity';
+import QuesnoteActivity from './QuesnoteActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -137,6 +138,9 @@ export const RootStack = createStackNavigator(
         },
         QA:{
             screen:QAActivity
+        },
+        Quesnote:{
+            screen:QuesnoteActivity
         },
         Contact:ContactActivity
     },

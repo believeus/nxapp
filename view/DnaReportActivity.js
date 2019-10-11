@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity } from 'react-native';
-import { ECharts } from "react-native-echarts-wrapper"
-import AesCrypto from 'react-native-aes-kit'
-import data from '../appdata'
+import { ECharts } from "react-native-echarts-wrapper";
+import AesCrypto from 'react-native-aes-kit';
+import data from '../appdata';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
 
 
-type Props = {};
 export default class DnaReportActivity extends Component<Props> {
     static navigationOptions = {
         title: I18n.t("DnaReportActivity.name"),

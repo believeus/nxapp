@@ -107,12 +107,17 @@
         "name": "Data Security"
     },
     "RasEncryptionActivity":{
-        "name":"Set Private key"
+        "name":"Private key Setting"
     },
     "QAActivity": {
         "name": "Q&A"
     },
     "ContactActivity": {
         "name": "Contact Us"
+    },
+    "QuesnoteActivity":{
+        "name":"Notification",
+        "ques":"Continue",
+        "back":"Cancel"
     }
 }
