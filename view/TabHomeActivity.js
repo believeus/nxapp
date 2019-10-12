@@ -59,16 +59,22 @@ export default class TabHomeActivity extends Component<Props> {
                         autoplay={true}>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                             <View style={{ width: '100%', height: 310 }}>
-                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index1.jpg')} resizeMode="center" />
+                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index1.jpg')} resizeMode="cover" />
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
                             <View style={{ width: '100%', height: 310 }}>
-                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode="center" />
+                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' />
                             </View>
                         </TouchableOpacity>
                         <View style={{ width: '100%', height: 310 }}>
-                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="center" />
+                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
+                        </View>
+                        <View style={{ width: '100%', height: 310 }}>
+                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
+                        </View>
+                        <View style={{ width: '100%', height: 310 }}>
+                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" />
                         </View>
                     </Swiper >
                 </View>
@@ -140,7 +146,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 <Text style={{ marginRight: 5, fontSize: 18, textAlign: 'right', fontFamily: 'NotoSansHans-Light', color: '#b2b2b2', textDecorationLine: 'line-through' }}>$189</Text>
                             </View>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                <Text style={{ marginLeft: 5, fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#333333' }}>￥99</Text>
+                                <Text style={{ marginLeft: 5, fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#333333' }}>$99</Text>
                             </View>
                         </View>
                     </View>

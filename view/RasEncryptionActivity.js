@@ -38,7 +38,7 @@ export default class RasEncryptionActivity extends Component<Props> {
     }
 
     render() {
-        const navigate = this.props.navigation;//此处可以自定义跳转属性
+        this.navigate = this.props.navigation;
         return (
             <ScrollView>
                 <View>
@@ -47,31 +47,27 @@ export default class RasEncryptionActivity extends Component<Props> {
                     </View>
                     <View style={{ width: "100%", alignItems: 'center' }}>
                         <View style={{ width: "95%" }}>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 45, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
-                                <Text style={{ height: 45, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please set the secret key, which is used to encrypt and decrypt the user's health data.</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 45, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
-                                <Text style={{ height: 45, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed.</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 89, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
-                                <Text style={{ height: 89, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new secret key,<Text style={{ color: '#0071bc' }}>and it can only be set once</Text>.</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 45, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
-                                <Text style={{ height: 45, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the user logs out and logs in again, enter the same Private key again.</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 75, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
-                                <Text style={{ height: 75, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>We will not have or save user's private key to decrypt user data according to our <Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>data security statement</Text> , please save your only private key.</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 70, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>6.</Text>
-                                <Text style={{ height: 70, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>When you are not logged into the system, your healthy information and personal user information will be in a'free'state, and no one can find your related information.</Text>
-                            </View>
-                            <View style={{ width: "100%", height: 10 }}></View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 88, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
+                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please press the "GENERATE" button to generate your unique private key. Then, by pressing "SAVE", the unique private key will be sent to your registered email.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 107, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
+                                    <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new secret key,<Text style={{ color: '#0071bc' }}> and it can only be set once</Text>.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 56, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the user logs out and logs in again, enter the unique Private key again.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 79, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
+                                    <Text style={{ height: 79, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>We will not have or save user's private key to decrypt user data according to our <Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>Data Security Statement</Text> , please save your only private key.</Text>
+                                </View>
+                                <View style={{ flexDirection: 'row' }}>
+                                    <Text style={{ height: 77, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>When you are not logged into the system, your healthy information and personal user information will be in a'free'state, and no one can find your related information.</Text>
+                                </View>
+                            <View style={{ width: "100%", height: 20 }}></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
 
                                 <View style={{ width: "75%" }}>

@@ -112,7 +112,7 @@ export default class DataActivity extends Component<Props> {
                     </View>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 34, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 34, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Learn more about our privacy clauses</Text>
+                        <Text style={{ height: 34, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Learn more about our privacy clauses.</Text>
                     </View>
                     <View style={{ width: '96%', alignSelf: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
@@ -121,11 +121,11 @@ export default class DataActivity extends Component<Props> {
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 99, width: '7%', fontSize: 14, color: '#0071bc' }}>☞</Text>
-                            <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Only by scanning the code on your mobile phone can the health information in the "free" state be changed into the "hosted" state, and the data in the "hosted" state be monitored by the system.</Text>
+                            <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We will not have or save user's private key to decrypt user data according to our Data Security Statement , please save your only private key.</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 145, width: '7%', fontSize: 14, color: '#0071bc' }}>☞</Text>
-                            <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Information is in the "hosted" state. If you do not modify data through your mobile phone, your health data will become "locked" and automatically become "free". At this time, the system will send a "unlock code" to let you confirm that your authorized authentication is a third-party mobile phone that can modify personal health information data.</Text>
+                            <Text style={{ height: 99, width: '7%', fontSize: 14, color: '#0071bc' }}>☞</Text>
+                            <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>When you are not logged into the system, your healthy information and personal user information will be in a'free'state, and no one can find your related information.</Text>
                         </View>
                     </View>
                 </View>

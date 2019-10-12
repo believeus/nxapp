@@ -69,6 +69,7 @@
     "react-native-webview": "5",
     "react-navigation": "^3.12.1",
     "react-responsive-accordion": "^1.0.0",
+    "rn-app-intro-screen": "^1.0.2",
     "rn-vertical-slider-gradient": "^1.0.3"
   },
   "devDependencies": {
