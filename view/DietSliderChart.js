@@ -62,9 +62,10 @@ export default class DietSliderChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user })
-            const iv = 'iiibelieveususus'
+            const iv = '1010101010101010'
             let privatekey = this.state.user.privatekey
             let uuid = this.state.user.uuid
+           
             //解密
             AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
                 fetch(data.url + "user/diet/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
@@ -132,7 +133,7 @@ export default class DietSliderChart extends Component<Props> {
                                 // console.log("CHANGE", value);
                             }}
                             onComplete={(value) => {
-                                const iv = 'iiibelieveususus'
+                                const iv = '1010101010101010'
                                 let privatekey = this.state.user.privatekey
                                 let uuid = this.state.user.uuid
                                 //解密

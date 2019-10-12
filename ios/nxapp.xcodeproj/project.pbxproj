@@ -83,6 +83,7 @@
 		FE33386980B541E7B2783DBD /* libRCTBarcode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EB95C82516B48DDABB784A4 /* libRCTBarcode.a */; };
 		C707D69275754BB3ACB06CB3 /* libRNRSA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19444CF1D25C47A19BC785C4 /* libRNRSA.a */; };
 		36B9533148F949F4A4437189 /* libRCTAesCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC91500F6D74406383DFC663 /* libRCTAesCrypto.a */; };
+		C48A6174FEEA4FFA861DB5F7 /* libRNUUIDGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2298E93B765749C0978C21C3 /* libRNUUIDGenerator.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -451,6 +452,8 @@
 		19444CF1D25C47A19BC785C4 /* libRNRSA.a */ = {isa = PBXFileReference; name = "libRNRSA.a"; path = "libRNRSA.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		B4C0FB7FF11C4E2EB2772402 /* RCTAesCrypto.xcodeproj */ = {isa = PBXFileReference; name = "RCTAesCrypto.xcodeproj"; path = "../node_modules/react-native-aes-kit/ios/RCTAesCrypto.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		AC91500F6D74406383DFC663 /* libRCTAesCrypto.a */ = {isa = PBXFileReference; name = "libRCTAesCrypto.a"; path = "libRCTAesCrypto.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6E1E9059D95646BEB89E4715 /* RNUUIDGenerator.xcodeproj */ = {isa = PBXFileReference; name = "RNUUIDGenerator.xcodeproj"; path = "../node_modules/react-native-uuid-generator/ios/RNUUIDGenerator.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		2298E93B765749C0978C21C3 /* libRNUUIDGenerator.a */ = {isa = PBXFileReference; name = "libRNUUIDGenerator.a"; path = "libRNUUIDGenerator.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,6 +499,7 @@
 				FE33386980B541E7B2783DBD /* libRCTBarcode.a in Frameworks */,
 				C707D69275754BB3ACB06CB3 /* libRNRSA.a in Frameworks */,
 				36B9533148F949F4A4437189 /* libRCTAesCrypto.a in Frameworks */,
+				C48A6174FEEA4FFA861DB5F7 /* libRNUUIDGenerator.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -707,6 +711,7 @@
 				3F42DF89083F4EBFB32431A3 /* RCTBarCode.xcodeproj */,
 				4167022A1A4C44A09660F1FB /* RNRSA.xcodeproj */,
 				B4C0FB7FF11C4E2EB2772402 /* RCTAesCrypto.xcodeproj */,
+				6E1E9059D95646BEB89E4715 /* RNUUIDGenerator.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1394,6 +1399,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1415,6 +1421,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Debug;
@@ -1441,6 +1448,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1462,6 +1470,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Release;
@@ -1502,6 +1511,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Debug;
@@ -1541,6 +1551,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Release;
@@ -1575,6 +1586,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1596,6 +1608,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Debug;
@@ -1630,6 +1643,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1651,6 +1665,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Release;
@@ -1684,6 +1699,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1705,6 +1721,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Debug;
@@ -1738,6 +1755,7 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1759,6 +1777,7 @@
 					"$(SRCROOT)/..\node_modules\react-native-smart-barcode\ios\RCTBarcode\RCTBarcode",
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
 				);
 			};
 			name = Release;

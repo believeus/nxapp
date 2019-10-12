@@ -163,7 +163,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 <View style={{ width: "15%", height: 35 }} >
 
                                     <TouchableOpacity onPress={() => {
-                                        const iv = 'iiibelieveususus'
+                                        const iv = '1010101010101010'
                                         let privatekey = this.state.user.privatekey
                                         let uuid = this.state.user.uuid
                                         //解密

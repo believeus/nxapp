@@ -61,7 +61,7 @@ export default class RatingChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            const iv = 'iiibelieveususus'
+            const iv = '1010101010101010'
             let privatekey = user.privatekey
             let uuid = user.uuid
             //解密
@@ -119,7 +119,7 @@ export default class RatingChart extends Component<Props> {
                             allowsHalfStars={true}
                             accurateHalfStars={true}
                             onStarValueChanged={(score) => {
-                                const iv = 'iiibelieveususus'
+                                const iv = '1010101010101010'
                                 let privatekey = this.state.user.privatekey
                                 let uuid = this.state.user.uuid
                                 //解密
