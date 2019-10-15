@@ -163,7 +163,7 @@ export default class HuiliActivity extends Component<Props> {
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/huili.png")}></Image>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Huili Ph.D.</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Hui Li Ph.D.</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Lab Manager (HK)</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
                 </View>

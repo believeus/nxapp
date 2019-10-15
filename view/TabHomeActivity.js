@@ -10,6 +10,11 @@ import Session from '../storage/Session';
 import data from '../appdata'
 type Props = {};
 export default class TabHomeActivity extends Component<Props> {
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("TabHomeActivity.title"),
+        })
+    }
     static navigationOptions = {
         headerRight: (
             <View style={{ width: 100, height: 50, justifyContent: "center", alignItems: "center" }}>
@@ -119,7 +124,7 @@ export default class TabHomeActivity extends Component<Props> {
                     </ImageBackground>
                 </View>
                 <View style={{ flex: 1, justifyContent: 'center', backgroundColor: '#f0f0f0', paddingBottom: 30 }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#333333', fontSize: 26, marginLeft: 20, marginBottom: 15 }}>Related Video</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#333333', fontSize: 26, marginLeft: 20, marginBottom: 15 }}>{I18n.t('TabHomeActivity.video')}</Text>
                     <VideoPlayer
                         style={{ width: "100%", height: 250 }}
                         paused={true}
@@ -131,9 +136,9 @@ export default class TabHomeActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#ffffff', width: '100%', height: 267, marginTop: 20 }}>
                     <View style={{ width: '90%', height: 278, alignSelf: 'center' }}>
-                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 56 }}>Biological Age Detection by DNA Methylation </Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'NotoSansHans-Light' }}>Only 1ml saliva sample is needed for detection, which is convinient and safe.</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'NotoSansHans-Light' }}>The sample will be sent to the laboratory for testing, the test results will be sent to your APP.</Text>
+                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 56 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabHomeActivity.1ml')}</Text>
+                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
@@ -154,11 +159,11 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#ffffff' }}>
                     <View style={{ width: '90%', height: 456, alignSelf: 'center', marginTop: 20 }}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="center" />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 45, color: '#333333' }}>Biological Age Detection 2.0</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#4d4d4d', lineHeight: 39 }}>Biological age can be measured with Only 1ml saliva sample.</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#4d4d4d', lineHeight: 39 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                         <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>Biological Age Detection 2.0 &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
@@ -169,16 +174,16 @@ export default class TabHomeActivity extends Component<Props> {
 
                         </View>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>Learn  More &gt;</Text>
+                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>{I18n.t('TabHomeActivity.learnmore')}&gt;</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#0071bc' }}>
                     <View style={{ width: '90%', height: 156, alignSelf: 'center', marginTop: 34 }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, color: '#ffffff', textAlign: 'center', lineHeight: 45, fontWeight: '600' }}>Our APP System</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- Dynamic personal reporting -</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- Comprehensive questionnaires -</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29, marginBottom: 34 }}>- Follow-up -</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, color: '#ffffff', textAlign: 'center', lineHeight: 45, fontWeight: '600' }}>{I18n.t('TabHomeActivity.appsystem')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.personalrep')} -</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.question')} -</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29, marginBottom: 34 }}>- {I18n.t('TabHomeActivity.follow')} -</Text>
                     </View>
                     <View style={{ backgroundColor: '#0071bc' }}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index8.jpg')} resizeMode='cover' />
@@ -187,21 +192,21 @@ export default class TabHomeActivity extends Component<Props> {
                                 <View style={{ heigh: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap1.png')} resizeMode='center' />
-                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Links to international reputable medical associations recommendations</Text>
+                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap2.png')} resizeMode='center' />
-                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>personalized dynamic report</Text>
+                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
                                     </View>
                                 </View>
                                 <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap3.png')} resizeMode='center' />
-                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Life style questionnaires</Text>
+                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap4.png')} resizeMode='center' />
-                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>APP linked to a mechine learning System</Text>
+                                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
                                     </View>
                                 </View>
                             </View>
@@ -210,14 +215,14 @@ export default class TabHomeActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0' }}>
                     <View style={{ height: 599, width: '90%', alignSelf: 'center', marginTop: 34 }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, textAlign: 'center', color: '#333333' }}>What is SAM-e?</Text>
-                        <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#4d4d4d' }}>SAM-e is a natural product in the human body, which can affect human health.</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, textAlign: 'center', color: '#333333' }}>{I18n.t('TabHomeActivity.whatsame')}</Text>
+                        <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#4d4d4d' }}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
                         <Image style={{ width: '100%', height: 245, justifyContent: 'center' }} source={require('../image/enpic/index9.jpg')} resizeMode='center' />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 45, color: '#333333' }}>SAM-e</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#4d4d4d', lineHeight: 39 }}>SAM-e is a natural nutrition supplement in the human body.</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.same')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#4d4d4d', lineHeight: 39 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
                         <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>SAM-e &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.same')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
@@ -228,7 +233,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                         </View>
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
-                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>Learn  More &gt;</Text>
+                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -241,7 +246,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc4.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>My Report</Text>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.myreport')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -254,7 +259,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc3.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Questionnaires</Text>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -267,7 +272,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc10.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Test Process</Text>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.testprocess')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -293,7 +298,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc1.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Q&A</Text>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.qa')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -306,7 +311,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc9.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>Data Security</Text>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.datasequrity')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -319,7 +324,7 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc2.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>User Informed Consent</Text>
+                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.consent')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -327,11 +332,9 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
                         </TouchableOpacity>
                     </View>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 16, textDecorationLine: 'underline', }}>Disclaimer</Text>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>The epiAging test is not intended to be health
-                    information or medical data or to be used to screen, diagnose, treat, prevent or assess risk of any disease or condition. The epiAging service is an epigenetic age determination based on assessment of DNA methylation in your DNA. We are not collecting genetic data. The test is available for individuals 21 years of age or older. This service has not been cleared or approved by U. S. Food and Drug Administration.
-                     </Text>
-                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}> @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 16, textDecorationLine: 'underline', }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
+                    <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </View>
             </ScrollView >
 

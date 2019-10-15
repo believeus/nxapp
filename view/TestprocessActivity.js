@@ -23,13 +23,13 @@ export default class TestprocessActivity extends Component<Props> {
         return (
             <ScrollView>
                 <ImageBackground style={{ width: '100%', height: 199 }} source={require('../image/icons/tp1.png')} resizeMode='center'  >
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', marginLeft: 19, marginTop: 99, fontSize: 34, color: '#ffffff' }}>TEST RPOCESS </Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', marginLeft: 19, marginTop: 99, fontSize: 34, color: '#ffffff' }}>{I18n.t('TestprocessActivity.testprocess')}</Text>
                 </ImageBackground>
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>
                     <View style={{ width: '20%', height: 145, }}></View>
                     <View style={{ width: '50%', height: 145, justifyContent: 'flex-end' }}>
                         <Image style={{ height: 59, width: '100%' }} resizeMode='center' source={require("../image/icons/tp2.png")}></Image>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>1.Download the APP </Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.downloadapp')}</Text>
                     </View>
                     <View style={{ width: '30%', height: 145 }}>
                         <Image style={{ height: 105, width: '100%', }} resizeMode='contain' source={require("../image/icons/tpa.png")}></Image>
@@ -42,15 +42,15 @@ export default class TestprocessActivity extends Component<Props> {
                         <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Mall") }}>
                             <View style={{ width: '88%', height: 123, justifyContent: 'flex-end' }}>
                                 <Image style={{ height: 59, width: '100%' }} resizeMode='center' source={require("../image/icons/tp3.png")}></Image>
-                                <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>2.Purchase the kit </Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.purchasekit')}</Text>
                             </View>
                         </TouchableOpacity>
                         <View style={{ height: 23, width: '77%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
                         <TouchableOpacity style={{ width: "100%", }} onPress={() => { navigate.push("Quesnote") }}>
                             <View style={{ width: '100%', height: 145, justifyContent: 'flex-end', paddingLeft: 56 }}>
                                 <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp4.png")}></Image>
-                                <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>3.Fill up the question-</Text>
-                                <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>naire(Optional) </Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.fillques')}</Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.fillques2')}</Text>
                             </View>
                         </TouchableOpacity>
                     </View>
@@ -63,14 +63,14 @@ export default class TestprocessActivity extends Component<Props> {
                     <View style={{ width: '70%', flexDirection: 'column', marginTop: 20 }}>
                         <View style={{ width: '88%', height: 123, justifyContent: 'flex-end', paddingLeft: 67 }}>
                             <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp5.png")}></Image>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>4.Collect your </Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>saliva sample</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.collect')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.collect2')}</Text>
                         </View>
                         <View style={{ height: 23, width: '77%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
                         <View style={{ width: '77%', height: 145, justifyContent: 'flex-end', }}>
                             <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp6.png")}></Image>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>5.Ship the sample </Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>back to us </Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.sample')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.sample2')} </Text>
                         </View>
                     </View>
                     <View style={{ width: '33%', height: 143, marginTop: 67, paddingRight: 28 }}>
@@ -84,8 +84,8 @@ export default class TestprocessActivity extends Component<Props> {
                     </View>
                     <View style={{ width: '50%', height: 145, justifyContent: 'flex-end' }}>
                         <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp7.png")}></Image>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>6.DNA extraction </Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>and analysis </Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.extraction')}  </Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.extraction2')}  </Text>
                     </View>
                     <View style={{ width: '20%', height: 145, }}></View>
                 </View>
@@ -93,13 +93,13 @@ export default class TestprocessActivity extends Component<Props> {
                 <TouchableOpacity style={{ width: "100%", }} onPress={() => { this.state.user == null ? this.navigate.push("Login"):navigate.push("DnaReport") }}>
                     <View style={{ width: '88%', height: 145, justifyContent: 'flex-end' }}>
                         <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='center' source={require("../image/icons/tp8.png")}></Image>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>7.View the report </Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>through the App</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.report')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.report2')}</Text>
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 23, width: '66%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
 
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView>
         );
     }

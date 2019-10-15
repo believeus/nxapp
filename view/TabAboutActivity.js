@@ -13,14 +13,14 @@ export default class TabAboutActivity extends Component<Props> {
         return (
             <ScrollView>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20 }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Company Introduction</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.company')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Company")}>
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au1.png")}></Image>
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Science Team</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.science')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au2.png")}></Image>
                     </TouchableOpacity>
@@ -28,7 +28,7 @@ export default class TabAboutActivity extends Component<Props> {
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| DNA Methylation</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.methylation')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au3.png")}></Image>
                     </TouchableOpacity>
@@ -36,20 +36,20 @@ export default class TabAboutActivity extends Component<Props> {
                 
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Biological Age Detection</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.biological')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au5.png")}></Image>
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>| Customer Data Consent Form</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.consentform')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
                         <Image style={{ height: 123, width: '100%' }} resizeMode="center" source={require("../image/enpic/au4.png")}></Image>
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView>
 
         );

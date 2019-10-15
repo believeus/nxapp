@@ -3,13 +3,59 @@
         "message": "Hi:Guest"
     },
     "TabHomeActivity": {
-        "title": "Home"
+        "title": "Home",
+        "video": "Related Video",
+        "biotitle": "Biological Age Detection by DNA Methylation ",
+        "1ml": "Only 1ml saliva sample is needed for detection, which is convinient and safe.",
+        "testresult": "The sample will be sent to the laboratory for testing, the test results will be sent to your APP.",
+        "bio2": "Biological Age Detection 2.0",
+        "1ml2": "Biological age can be measured with Only 1ml saliva sample.",
+        "learnmore": "Learn  More",
+        "appsystem": "Our APP System",
+        "personalrep": "Dynamic personal reporting",
+        "question": "Comprehensive questionnaires",
+        "follow": "Follow-up",
+        "international": "Links to international reputable medical associations recommendations",
+        "dynrep": "personalized dynamic repor",
+        "question2": "Life style questionnaires",
+        "machinelearn": "APP linked to a mechine learning System",
+        "whatsame": "What is SAM-e?",
+        "same": "SAM-e",
+        "affacthealth": "SAM-e is a natural product in the human body, which can affect human health.",
+        "supplement": "SAM-e is a natural nutrition supplement in the human body.",
+        "myreport": "My Report",
+        "questionnaires": "Questionnaires",
+        "testprocess": "Test Process",
+        "qa": "Q&A",
+        "datasequrity": "Data Security",
+        "consent": "User Informed Consent",
+        "disclaimer": "Disclaimer",
+        "disclaimertext": "The epiAging test is not intended to be health information or medical data or to be used to screen, diagnose, treat, prevent or assess risk of any disease or condition. The epiAging service is an epigenetic age determination based on assessment of DNA methylation in your DNA. We are not collecting genetic data. The test is available for individuals 21 years of age or older. This service has not been cleared or approved by U. S. Food and Drug Administration.",
+        "allright": " @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "TestprocessActivity": {
-        "title": "Test Process"
+        "title": "Test Process",
+        "testprocess": "TEST RPOCESS ",
+        "downloadapp": "1.Download the APP ",
+        "purchasekit": "2.Purchase the kit ",
+        "fillques": "3.Fill up the question-",
+        "fillques2": "naire(Optional) ",
+        "collect": "4.Collect your ",
+        "collect2": "saliva sample",
+        "sample": "5.Ship the sample ",
+        "sample2": "back to us",
+        "extraction": "6.DNA extraction",
+        "extraction2": "and analysis",
+        "report": "7.View the report ",
+        "report2": "through the App"
     },
     "AboutActivity": {
-        "title": "About Us"
+        "title": "About Us",
+        "company": "| Company Introduction",
+        "science": "| Science Team",
+        "methylation": "| DNA Methylation",
+        "biological": "| Biological Age Detection",
+        "consentform": "| Customer Data Consent Form"
     },
     "LoginActivity": {
         "title": "User Login",
@@ -51,13 +97,28 @@
         "title": "Your Profile"
     },
     "CompanyActivity": {
-        "title": "Company Introduction"
+        "title": "Company Introduction",
+        "nextgeneration": "We are developing next generation DNA methylation biomarkers for early cancer detection and healthy aging.",
+        "ecosystem": "We are working on building a new health ecosystem that will guide personalized management of healthy life.",
+        "ittechnology": "We believe that with the help of IT technology and DNA methylation testing people should be able to take ownership of their health."
     },
     "TabAboutActivity": {
         "title": "About Us"
     },
     "ScienceteamActivity": {
-        "title": "Science Team"
+        "title": "Science Team",
+        "moshe": "Moshe Szyf, Prof.",
+        "ceo": "Chairman & CEO",
+        "hkg": "HKG epiTHERAPEUTICS Ltd.",
+        "david": "David Cheishvili Ph.D.",
+        "davidtitle": "Senior Scientific Adviser",
+        "huili":"Hui Li  Ph.D.",
+        "huilititle":"Laboratory Manager(HK)",
+        "chifat":"Chi Fat Wong Ph.D.",
+        "chifattitle":"Senior Research Scientist",
+        "zhiyuan":"Zhiyuan Lv  Ph.D.",
+        "zhiyuantitle":"Laboratory Manager（GZ)",
+        "manager":"Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
     },
     "ProfMosheActivity": {
         "title": "Moshe Szyf, Prof."
@@ -106,8 +167,8 @@
     "DataActivity": {
         "title": "Data Security"
     },
-    "RasEncryptionActivity":{
-        "title":"Private key Setting"
+    "RasEncryptionActivity": {
+        "title": "Private key Setting"
     },
     "QAActivity": {
         "title": "Q&A"
@@ -115,9 +176,9 @@
     "ContactActivity": {
         "title": "Contact Us"
     },
-    "QuesnoteActivity":{
-        "title":"Notification",
-        "ques":"Continue",
-        "back":"Cancel"
+    "QuesnoteActivity": {
+        "title": "Notification",
+        "ques": "Continue",
+        "back": "Cancel"
     }
 }

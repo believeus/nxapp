@@ -18,6 +18,7 @@ const slides = [
   {
     image: require('./image/enpic/nav1.jpg'),
     imageStyle: styles.image,
+    backgroundColor: 'transparent',
   },
   {
     image: require('./image/enpic/nav2.jpg'),

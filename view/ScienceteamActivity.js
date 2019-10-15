@@ -21,9 +21,9 @@ export default class ScienceteamActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                         <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/prof1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>Moshe Szyf, Prof.</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>Chairman & CEO</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.moshe')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.ceo')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                         </View>
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
                     </View>
@@ -33,9 +33,9 @@ export default class ScienceteamActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                         <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/david1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>David Cheishvili</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>Senior Scientific Adviser</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.david')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.davidtitle')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                         </View>
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
                     </View>
@@ -45,9 +45,9 @@ export default class ScienceteamActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                         <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/huili1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>Hui Li</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>Laboratory Manager(HK)</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.huili')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.huili')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                         </View>
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
                     </View>
@@ -57,9 +57,9 @@ export default class ScienceteamActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                         <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="center" source={require("../image/icons/chifat1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>Chi Fat Wong</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 14 }}>Senior Research Scientist</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.chifat')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 14 }}>{I18n.t('ScienceteamActivity.chifattitle')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                         </View>
                         <Text style={{ width: '100%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
                     </View>
@@ -69,7 +69,7 @@ export default class ScienceteamActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                         <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="center" source={require("../image/icons/jason1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>Zhiyuan Lv</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>Zhiyuan Lv  Ph.D.</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>Laboratory Manager（GZ)</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>Beijing Epidial Medical Diagnostic Technology Co.,Ltd.</Text>
                         </View>

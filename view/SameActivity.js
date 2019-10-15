@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity ,Modal,Button} from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Modal, Button } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { WebView } from 'react-native-webview';
 type Props = {};
@@ -11,12 +11,12 @@ export default class SameActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        this.state={ display: false}
+        this.state = { display: false }
     }
 
     render() {
         this.navigate = this.props.navigation;
-       
+
         return (
             <ScrollView>
                 {this.state.display == true ?
@@ -135,9 +135,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '28%', height: 158, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
                         <Text style={{ width: '70%', height: 158, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>General Hospital demonstrated that SAM-e combined with antidepressants significantly increased remission rates in patients with major depression who failed conventional therapy.
-                        
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
-                        
+                                    <Text  onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" })}} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
                         </Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >

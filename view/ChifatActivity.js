@@ -94,7 +94,7 @@ export default class ChifatActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
-                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010,2016-2017
+                    <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light',fontSize:12, textAlign: 'center' }}>2010,2016-2017
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
                     <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>The University of Hong Kong</Text>
