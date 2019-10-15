@@ -33,15 +33,8 @@ export default class MallActivity extends Component<Props> {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{width:"100%",height:"100%"}}>
-                 {/* <Modal  animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: false }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.ca/product/epiaging-kit/" }} />
-                        <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
-                            <TouchableOpacity style={{ width: "100%", height: "100%" }}>
-                                <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
-                            </TouchableOpacity>
-                        </View>
-                    </Modal> */}
-                      <WebView style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.ca/product/epiaging-kit/" }} />
+               
+                      <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.ca/product/epiaging-kit/" }} />
             </View>
             // <ScrollView>
             //     <View>

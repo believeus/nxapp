@@ -106,7 +106,7 @@ export default class DietSliderChart extends Component<Props> {
             <View style={{ width: "100%" }}>
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.props.refUrl }} />
+                        <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.props.refUrl }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
                             <TouchableOpacity style={{ width: "100%", height: "100%" }}>
                                 <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />

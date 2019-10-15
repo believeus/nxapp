@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, TabNavigator, navigate } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, TabNavigator, Dimensions } from 'react-native';
 import RootStack from './view/StackHomeActivity';
 import { MenuProvider } from 'react-native-popup-menu';
 import AppIntro from 'rn-app-intro-screen';
@@ -8,7 +8,7 @@ import AppIntro from 'rn-app-intro-screen';
 const styles = StyleSheet.create({
   image: {
     width: '100%',
-    height: 585,
+    height: Dimensions.get('window').height,
     resizeMode: 'cover',
 
   }
