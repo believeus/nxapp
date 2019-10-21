@@ -23,6 +23,7 @@
     "react-native-aes-kit": "^1.0.2",
     "react-native-awesome-alerts": "^1.2.0",
     "react-native-braintree-payments-drop-in": "^1.0.5",
+    "react-native-cli": "^2.0.1",
     "react-native-collapsible": "^1.5.1",
     "react-native-device-info": "^2.3.2",
     "react-native-dimension": "^1.0.6",

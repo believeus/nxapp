@@ -55,7 +55,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                         <View style={{ width: "95%" }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 88, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
-                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please press the "GENERATE PRIVATE KEY" button to generate your unique private key. Then, by pressing "SAVE", the unique private key will be sent to your registered email.</Text>
+                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please press the "GENERATE PRIVATE KEY" button to generate your Unique Private key. Then, by pressing "SAVE",<Text style={{color:'#0071bc',fontSize:16}}>the Unique Private key will be sent to your registered mailbox.</Text> </Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 107, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
@@ -63,7 +63,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the user logs out and logs in again, enter the Unique Private key again.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18,color:'#0071bc' }}>The Unique Private key is required to enter again if the user logs in again after log out.</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 79, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
@@ -71,7 +71,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>When you are not logged into the system, your healthy information and personal user information will be in a'free'state, and no one can find your related information.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>When you are not logged into the system, your healthy information and personal user information will be in a 'free' state, and no one can find your related information.</Text>
                                 </View>
                             <View style={{ width: "100%", height: 20 }}></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
