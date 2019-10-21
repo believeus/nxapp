@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
 export default class ZhiyuanActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("ZhiyuanActivity.name"),
+            title: I18n.t("ZhiyuanActivity.title"),
         })
     }
     constructor(props) {

@@ -217,7 +217,7 @@ export default class DnaReportActivity extends Component<Props> {
                     <View style={{ height: 34, width: "100%" }}></View>
                     {this.state.visual == true ?
                         <View style={{ width: "100%", alignItems: "center" }}>
-                            <Image style={{ width: '100%', height: 234, }} resizeMode='contain' source={require("../image/enpic/rep1.png")}></Image>
+                            <Image style={{ width: '100%', height: 289, }} resizeMode='cover' source={require("../image/enpic/rep1.png")}></Image>
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
@@ -307,7 +307,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                             </View>
                             <View style={{ height: 10, width: '100%', backgroundColor: '#f0f0f0' }}></View>
-                            <Image style={{ width: '100%', height: 234, }} resizeMode='contain' source={require("../image/enpic/rep6.png")}></Image>
+                            <Image style={{ width: '100%', height: 289, }} resizeMode='cover' source={require("../image/enpic/rep6.png")}></Image>
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 99, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
@@ -323,7 +323,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                             </View>
                             <View style={{ height: 10, width: '100%', backgroundColor: '#f0f0f0' }}></View>
-                            <Image style={{ width: '100%', height: 221, }} resizeMode='contain' source={require("../image/enpic/rep7.png")}></Image>
+                            <Image style={{ width: '100%', height: 289, }} resizeMode='cover' source={require("../image/enpic/rep7.png")}></Image>
                             <View style={{ height: 88, width: '80%', alignSelf: 'flex-end', }}>
                                 <Text style={{ height: 24, fontSize: 16, }}>A dynamic long-term partnership </Text>
                                 <Text style={{ height: 67, fontSize: 24, lineHeight: 28, color: '#0071bc' }}>to achieve "Healthy Aging"</Text>

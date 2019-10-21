@@ -29,7 +29,7 @@ export default class TestprocessActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <ImageBackground style={{ width: '100%', height: 199 }} source={require('../image/icons/tp1.png')} resizeMode='center'  >
+                <ImageBackground style={{ width: '100%', height: 223 }} source={require('../image/icons/tp1.png')} resizeMode='cover'  >
                     <Text style={{ fontFamily: 'NotoSansHans-Light', marginLeft: 19, marginTop: 99, fontSize: 34, color: '#ffffff' }}>{I18n.t('TestprocessActivity.testprocess')}</Text>
                 </ImageBackground>
                 <View style={{ flexDirection: 'row', marginTop: 20 }}>

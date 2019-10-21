@@ -25,7 +25,7 @@ export default class CompanyActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <Image style={{ height: 189, width: '100%' }} resizeMode='cover' source={require("../image/enpic/company.jpg")}></Image>
+                <Image style={{ height: 245, width: '100%' }} resizeMode='cover' source={require("../image/enpic/company.jpg")}></Image>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
                     <Text style={{ height: 123, width: '70%', fontSize: 14, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.nextgeneration')}</Text>
                     <Image style={{ height: 99, width: '30%' }} resizeMode='center' source={require("../image/enpic/company1.jpg")}></Image>
