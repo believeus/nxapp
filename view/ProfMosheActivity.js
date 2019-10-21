@@ -16,23 +16,23 @@ const FirstRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2018
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Pharmacology of GlaxoSmithKline</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.pharmacology')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
-            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>-Canadian Institute of Health <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Chairman</Text> </Text>
+            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('ProfMosheActivity.pharmacology2')}<Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>{I18n.t('ProfMosheActivity.chairman')}</Text> </Text>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2003-2018
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Jemes McGill</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}> {I18n.t('ProfMosheActivity.mcgill')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
-            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}> <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Professor</Text> </Text>
+            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}> <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}> {I18n.t('ProfMosheActivity.professor2')}</Text> </Text>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2000-now
@@ -228,52 +228,52 @@ export default class ProfMosheActivity extends Component<Props> {
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/prof.png")}></Image>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Moshe Szyf, Prof.</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Chairman & CEO</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('ScienceteamActivity.moshe')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ScienceteamActivity.ceo')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                 </View>
                 <View style={{   paddingBottom: 20 }}>
                     <View style={{ backgroundColor: '#f0f0f0', }}>
-                        <Text style={{ width: '90%', height: 67,alignSelf:'center', fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
+                        <Text style={{ width: '90%', height: 67,alignSelf:'center', fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>{I18n.t('ProfMosheActivity.experiences')}</Text>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center',paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Pioneer of the field of epigenetics</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.pioneer')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16, }}>Inventor of the first broad patents in the field</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16, }}>{I18n.t('ProfMosheActivity.inventor')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Inventor of the first patents on DNA methylation </Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.patent')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Founder of the field of behavioral and psychiatry epigenetics</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.founder')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Thought leader, published 295 papers in the area</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.thought')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Fellow of the Royal Society of Canada</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.fellow')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Fellow of the Canadian Academy of Health Sciences</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.canadian')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Professor Department of Pharmacology and Therapeutics McGill University Montreal Canada</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.professor')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Resident chief scientist of Beijing epidial medical diagnostic technology co., LTD.</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.resident')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Director of epigenetic institute, Beijing yizhuang innovation institute</Text>
+                            <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.director')}</Text>
                         </View>
                     </View>
                 </View>
                 <View style={{ height: 20 }}></View>
                 <View style={{ paddingTop: 20, paddingBottom: 20, backgroundColor: '#f0f0f0' }}>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <Text style={{ width: '90%', height: 67,fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>RELATED VIDEOS</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4</Text>
+                        <Text style={{ width: '90%', height: 67,fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.o2o')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -282,7 +282,7 @@ export default class ProfMosheActivity extends Component<Props> {
                             source={{ uri: 'https://app.beijingepidial.com/Healthtech_O2O_Summit_Dr_Moshe_Szyf_HKG_Epitherapeutics.mp4' }}
                             navigator={this.props.navigator}
                         />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Dr. Moshe Szyf , Science of Hope Conference 2017.mp4</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.hope')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -291,7 +291,7 @@ export default class ProfMosheActivity extends Component<Props> {
                             source={{ uri: 'https://app.beijingepidial.com/Keynote_Dr_Moshe_Szyf_Science_of_Hope_Conference_2017.mp4' }}
                             navigator={this.props.navigator}
                         />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>Dr. Moshe Szyf, What is epigenetic and why knowing it will change your life .mp4</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.epigenetic')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}
@@ -300,7 +300,7 @@ export default class ProfMosheActivity extends Component<Props> {
                             source={{ uri: 'https://app.beijingepidial.com/What_is_epigenetic_and_why_knowing_it_will_change_your_life_Dr_Moshe_Szyf.mp4' }}
                             navigator={this.props.navigator}
                         />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}> Moshe Szyf, Behavioral Epigenetics.mp4</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.behavioral')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
                             paused={true}

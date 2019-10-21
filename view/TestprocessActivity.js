@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity, } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity, } from 'react-native';
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 
@@ -22,6 +22,13 @@ export default class TestprocessActivity extends Component<Props> {
         const navigate = this.props.navigation;
         return (
             <ScrollView>
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <ImageBackground style={{ width: '100%', height: 199 }} source={require('../image/icons/tp1.png')} resizeMode='center'  >
                     <Text style={{ fontFamily: 'NotoSansHans-Light', marginLeft: 19, marginTop: 99, fontSize: 34, color: '#ffffff' }}>{I18n.t('TestprocessActivity.testprocess')}</Text>
                 </ImageBackground>

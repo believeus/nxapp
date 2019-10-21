@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 
-import { Platform, StyleSheet, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
 import AwesomeAlert from 'react-native-awesome-alerts';
 import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
-import { getLanguages } from 'react-native-i18n';
 import Session from '../storage/Session';
 import data from '../appdata'
-type Props = {};
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -26,6 +24,7 @@ export default class TabHomeActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
+        Session.save("launchershow", true);
         this.state = {
             user: null,
             showAlert: false
@@ -53,7 +52,13 @@ export default class TabHomeActivity extends Component<Props> {
         const { showAlert } = this.state;
         return (
             <ScrollView>
-
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <View style={{ width: "100%", height: 310 }}>
                     <Swiper
                         height={340}//组件高度

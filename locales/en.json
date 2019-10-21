@@ -118,10 +118,31 @@
         "chifattitle":"Senior Research Scientist",
         "zhiyuan":"Zhiyuan Lv  Ph.D.",
         "zhiyuantitle":"Laboratory Manager（GZ)",
-        "manager":"Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
+        "epidial":"Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
     },
     "ProfMosheActivity": {
-        "title": "Moshe Szyf, Prof."
+        "title": "Moshe Szyf, Prof.",
+        "experiences":"| PROFESSIONAL EXPERIENCES",
+        "pioneer":"Pioneer of the field of epigenetics",
+        "inventor":"Inventor of the first broad patents in the field",
+        "patent":"Inventor of the first patents on DNA methylation ",
+        "founder":"Founder of the field of behavioral and psychiatry epigenetics",
+        "thought":"Thought leader, published 295 papers in the area",
+        "fellow":"Fellow of the Royal Society of Canada",
+        "canadian":"Fellow of the Canadian Academy of Health Sciences",
+        "professor":"Professor Department of Pharmacology and Therapeutics McGill University Montreal Canada",
+        "resident":"Resident chief scientist of Beijing epidial medical diagnostic technology co., LTD.",
+        "director":"Director of epigenetic institute, Beijing yizhuang innovation institute",
+        "video":"RELATED VIDEOS",
+        "o2o":"Healthtech O2O Summit Dr. Moshe Szyf, HKG Epitherapeutics.mp4",
+        "hope":"Dr. Moshe Szyf , Science of Hope Conference 2017.mp4",
+        "epigenetic":"Dr. Moshe Szyf, What is epigenetic and why knowing it will change your life .mp4",
+        "behavioral":" Moshe Szyf, Behavioral Epigenetics.mp4",
+        "pharmacology":"Pharmacology of GlaxoSmithKline",
+        "pharmacology2":"-Canadian Institute of Health ",
+        "chairman":"Chairman",
+        "mcgill":"Jemes McGill",
+        "professor2":"Professor"
     },
     "DavidActivity": {
         "title": "David Cheishvili Ph.D."

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, ScrollView, TouchableOpacity, Modal, Button } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, ScrollView, TouchableOpacity, Modal, Button } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { WebView } from 'react-native-webview';
 type Props = {};
@@ -19,6 +19,13 @@ export default class SameActivity extends Component<Props> {
 
         return (
             <ScrollView>
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
@@ -29,7 +36,7 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <Image style={{ height: 195, width: '100%' }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")}></Image>
+                <Image style={{ height: 234, width: '100%' }} resizeMode='cover' source={require("../image/enpic/sam1.jpg")}></Image>
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>SAM-e &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
@@ -40,7 +47,7 @@ export default class SameActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Image style={{ height: 367, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")}></Image>
+                <Image style={{ height: 497, width: '100%', marginBottom: 20 }} resizeMode='cover' source={require("../image/enpic/sam2.png")}></Image>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
 
                     <View style={{ flexDirection: 'row' }}>

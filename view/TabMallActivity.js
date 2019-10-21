@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, Modal, TouchableOpacity, ScrollView } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, Button, Modal, TouchableOpacity, ScrollView } from 'react-native';
 import { WebView } from 'react-native-webview'
 import { TextInput } from 'react-native-gesture-handler';
 import GoodsItem from './GoodsItem';
@@ -33,7 +33,13 @@ export default class MallActivity extends Component<Props> {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{width:"100%",height:"100%"}}>
-               
+               <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                       <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.ca/product/epiaging-kit/" }} />
             </View>
             // <ScrollView>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import { Platform, StatusBar, Text, View } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import { Rating, AirbnbRating } from 'react-native-ratings';
 import Session from '../storage/Session';
@@ -102,6 +102,13 @@ export default class SleepStarChart extends Component<Props> {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <View style={{ width: "100%" }}>
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <View style={{ width: "100%", alignItems: "center" }}>
                     {this.props.title}
                     <View style={{ width: "100%", height: 100, alignItems: "center", justifyContent: "center" }}>

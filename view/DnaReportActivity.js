@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import AesCrypto from 'react-native-aes-kit';
 import data from '../appdata';
@@ -134,7 +134,13 @@ export default class DnaReportActivity extends Component<Props> {
         return (
 
             <ScrollView>
-
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <View style={{ width: "100%" }}>
                     <View style={{ width: "100%", height: 23 }}></View>
                     <View style={{ width: "100%", alignItems: "center" }}>
@@ -167,39 +173,39 @@ export default class DnaReportActivity extends Component<Props> {
                                         let privatekey = this.state.user.privatekey
                                         let uuid = this.state.user.uuid
                                         //解密
-                                            console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode)
-                                            fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
-                                                switch (data.status) {
-                                                    case "invalid":
-                                                        Alert.alert('Message', 'Invalid barcode');
-                                                        break;
-                                                    case "pending":
-                                                        Alert.alert('Message', 'Your report will be available in 21 working days.Please wait……');
-                                                        break;
-                                                    case "processing":
-                                                        Alert.alert('Message', "Detection is being processed.\nPlease wait……");
-                                                        break;
-                                                    case "finished":
-                                                        let option = Object.assign({}, this.state.option);
-                                                        let biological = window.parseFloat(data.biological).toFixed(2);
-                                                        let naturally = window.parseFloat(data.naturally).toFixed(2)
-                                                        this.setState({ biological })
-                                                        this.setState({ naturally })
-                                                        let i = biological > naturally ? 0 : 1;
-                                                        option.series[i].markPoint.data[0].value = biological
-                                                        option.series[i].markPoint.data[0].xAxis = naturally
-                                                        option.series[i].markPoint.data[0].yAxis = biological
-                                                        this.setState({ option })
-                                                        this.setState({ visual: true })
-                                                        {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                                                        {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                                                        {/* 从而重新刷新webview数据 */ }
-                                                        this.echarts.webview.reload();
-                                                        break;
-                                                }
-    
-                                            })
-                                        
+                                        console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode)
+                                        fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
+                                            switch (data.status) {
+                                                case "invalid":
+                                                    Alert.alert('Message', 'Invalid barcode');
+                                                    break;
+                                                case "pending":
+                                                    Alert.alert('Message', 'Your report will be available in 21 working days.Please wait……');
+                                                    break;
+                                                case "processing":
+                                                    Alert.alert('Message', "Detection is being processed.\nPlease wait……");
+                                                    break;
+                                                case "finished":
+                                                    let option = Object.assign({}, this.state.option);
+                                                    let biological = window.parseFloat(data.biological).toFixed(2);
+                                                    let naturally = window.parseFloat(data.naturally).toFixed(2)
+                                                    this.setState({ biological })
+                                                    this.setState({ naturally })
+                                                    let i = biological > naturally ? 0 : 1;
+                                                    option.series[i].markPoint.data[0].value = biological
+                                                    option.series[i].markPoint.data[0].xAxis = naturally
+                                                    option.series[i].markPoint.data[0].yAxis = biological
+                                                    this.setState({ option })
+                                                    this.setState({ visual: true })
+                                                    {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
+                                                    {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
+                                                    {/* 从而重新刷新webview数据 */ }
+                                                    this.echarts.webview.reload();
+                                                    break;
+                                            }
+
+                                        })
+
                                     }}>
                                         <Image style={{ width: "100%", height: "100%" }} resizeMode="center" source={require("../image/report.png")}></Image>
                                     </TouchableOpacity>
@@ -386,12 +392,12 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                                 {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 23,margin:5 }} resizeMode="center" source={require("../image/smail.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/smail.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#3e9c9c", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years younger than your chronological age.</Text></View>
                                     </View>
                                     :
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 23,margin:5 }} resizeMode="center" source={require("../image/cry.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/cry.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years older than your chronological age.</Text></View>
                                     </View>
                                 }
@@ -407,7 +413,8 @@ export default class DnaReportActivity extends Component<Props> {
                     </View>
                     <View style={{ width: '90%', height: 123, alignSelf: 'center', marginTop: 20, marginBottom: 20, }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image style={{ height: 18, width: '12%' }} resizeMode="center" source={require("../image/icons/rep-green.png")}></Image>
+                            <Image style={{ height: 18, width: '6%' }} resizeMode="center" source={require("../image/icons/rep-green.png")}></Image>
+                            <Image style={{ height: 18, width: '6%' }} resizeMode="center" source={require("../image/icons/rep-red.png")}></Image>
                             <Text style={{ height: 27, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>(with a number in it)Your biological age </Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>

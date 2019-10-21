@@ -1,5 +1,4 @@
 apply plugin: "com.android.application"
-
 import com.android.build.OutputFile
 
 /**
@@ -173,6 +172,8 @@ android {
 def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
 dependencies {
+    implementation project(':@react-native-community_viewpager')
+    implementation project(':react-native-firebase')
     implementation project(':react-native-uuid-generator')
     implementation project(':react-native-aes-kit')
     implementation project(':react-native-rsa-native')
@@ -199,6 +200,8 @@ dependencies {
     implementation "com.facebook.react:react-native:0.60.5"  // From node_modules
     implementation "com.braintreepayments.api:braintree:2.17.0" //for paypal payment
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
+    implementation "com.google.android.gms:play-services-base:16.1.0"
+     implementation "com.google.firebase:firebase-core:16.0.9"
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
         debugImplementation files(hermesPath + "hermes-debug.aar")
@@ -214,3 +217,4 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+// apply plugin: 'com.google.gms.google-services'

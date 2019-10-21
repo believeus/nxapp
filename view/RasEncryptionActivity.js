@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Alert, Button, ScrollView, ActivityIndicator, TouchableOpacity, TextInput } from 'react-native'
+import { Platform, StatusBar, StyleSheet, Text, View, Alert, Button, ScrollView, ActivityIndicator, TouchableOpacity, TextInput } from 'react-native'
 import { NavigationActions, StackActions } from 'react-navigation';
 import AesCrypto from 'react-native-aes-kit'
 import { I18n } from '../locales/i18n'
@@ -8,7 +8,6 @@ import md5 from "react-native-md5"
 import UUIDGenerator from 'react-native-uuid-generator'
 import data from '../appdata'
 
-type Props = {};
 export default class RasEncryptionActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -41,23 +40,30 @@ export default class RasEncryptionActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <View>
                     <View style={{ width: "100%", height: 60 }}>
-                        <Text style={{ width: "100%", textAlign: "center", textAlignVertical: "center", fontSize: 24, fontWeight: "bold", height: "100%" }}>Secret key</Text>
+                        <Text style={{ width: "100%", textAlign: "center", textAlignVertical: "center", fontSize: 24, fontWeight: "bold", height: "100%" }}>Private key</Text>
                     </View>
                     <View style={{ width: "100%", alignItems: 'center' }}>
                         <View style={{ width: "95%" }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 88, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
-                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please press the "GENERATE" button to generate your unique private key. Then, by pressing "SAVE", the unique private key will be sent to your registered email.</Text>
+                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please press the "GENERATE PRIVATE KEY" button to generate your unique private key. Then, by pressing "SAVE", the unique private key will be sent to your registered email.</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 107, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
-                                    <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new secret key,<Text style={{ color: '#0071bc' }}> and it can only be set once</Text>.</Text>
+                                    <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new private key,<Text style={{ color: '#0071bc' }}> and it can only be set once</Text>.</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the user logs out and logs in again, enter the unique Private key again.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>If the user logs out and logs in again, enter the Unique Private key again.</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 79, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>

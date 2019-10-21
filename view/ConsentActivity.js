@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 export default class ConsentActivity extends Component<Props> {
@@ -23,7 +23,13 @@ export default class ConsentActivity extends Component<Props> {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
-
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
                     <Text style={{ height: 34, width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>HKG epitherapeutics Customer Data Consent</Text>
                 </View>
@@ -65,7 +71,7 @@ export default class ConsentActivity extends Component<Props> {
                         <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 47 }}>Agree</Text>
                     </TouchableOpacity>
                     :
-                   null
+                    null
                 }
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, marginTop: 20, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
             </ScrollView>

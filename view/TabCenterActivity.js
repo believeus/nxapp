@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, fontFamil, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, Text, View, Image, StatusBar, fontFamil, ScrollView, TouchableOpacity } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import Session from '../storage/Session';
 
@@ -27,6 +27,13 @@ export default class CenterActivity extends Component {
             //borderColor:"grey",borderWidth:1
             //alignItems:'center' 左右居中
             <ScrollView>
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 <View>
                     <View style={{ backgroundColor: '#0071bc', height: 180, alignItems: 'center', fontWeight: 'bold' }}>
                         <View style={{ width: "100%", height: 20 }}></View>
@@ -42,7 +49,7 @@ export default class CenterActivity extends Component {
                                         <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "right", fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
                                     </View>
                                     <View style={{ width: '10%', height: 25, justifyContent: 'center', alignSelf: 'center', }}>
-                                        <Text style={{ color: '#fff',textAlign:'center' }}>|</Text></View>
+                                        <Text style={{ color: '#fff', textAlign: 'center' }}>|</Text></View>
                                     <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
                                         <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "left", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
                                     </View>
@@ -51,7 +58,7 @@ export default class CenterActivity extends Component {
                                 :
                                 <View style={{ width: '100%', height: 65, justifyContent: 'center', alignItems: "center" }}>
                                     <Text style={{ color: "#fff", fontSize: 22 }}>{this.state.user.nickname}</Text>
-                                    <TouchableOpacity onPress={() => { navigate.push("RasEncryptionActivity") }}><Text style={{ color: "#fff", fontSize: 18 }}>Secret key</Text></TouchableOpacity>
+                                    <TouchableOpacity onPress={() => { navigate.push("RasEncryptionActivity") }}><Text style={{ color: "#fff", fontSize: 18 }}>Private key</Text></TouchableOpacity>
                                 </View>
                             }
                         </View>

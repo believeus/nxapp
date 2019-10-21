@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Modal, Button, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, Modal, Button, TouchableOpacity } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import InputSpinner from "react-native-input-spinner";
 import Session from '../storage/Session';

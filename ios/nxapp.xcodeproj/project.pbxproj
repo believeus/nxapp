@@ -84,6 +84,8 @@
 		C707D69275754BB3ACB06CB3 /* libRNRSA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19444CF1D25C47A19BC785C4 /* libRNRSA.a */; };
 		36B9533148F949F4A4437189 /* libRCTAesCrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AC91500F6D74406383DFC663 /* libRCTAesCrypto.a */; };
 		C48A6174FEEA4FFA861DB5F7 /* libRNUUIDGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2298E93B765749C0978C21C3 /* libRNUUIDGenerator.a */; };
+		7E86E80C373D4814885C8E70 /* libRNFirebase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F5BBC4B17D94D4A86379333 /* libRNFirebase.a */; };
+		C4472465E7554A85801B03F1 /* libRNCViewpager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F98F9B03A9428C8DFDAEE5 /* libRNCViewpager.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -454,6 +456,10 @@
 		AC91500F6D74406383DFC663 /* libRCTAesCrypto.a */ = {isa = PBXFileReference; name = "libRCTAesCrypto.a"; path = "libRCTAesCrypto.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 		6E1E9059D95646BEB89E4715 /* RNUUIDGenerator.xcodeproj */ = {isa = PBXFileReference; name = "RNUUIDGenerator.xcodeproj"; path = "../node_modules/react-native-uuid-generator/ios/RNUUIDGenerator.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
 		2298E93B765749C0978C21C3 /* libRNUUIDGenerator.a */ = {isa = PBXFileReference; name = "libRNUUIDGenerator.a"; path = "libRNUUIDGenerator.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		9E35A577C3D649A7A3BE44C1 /* RNFirebase.xcodeproj */ = {isa = PBXFileReference; name = "RNFirebase.xcodeproj"; path = "../node_modules/react-native-firebase/ios/RNFirebase.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		1F5BBC4B17D94D4A86379333 /* libRNFirebase.a */ = {isa = PBXFileReference; name = "libRNFirebase.a"; path = "libRNFirebase.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		BCC5C9E59AB24911AAA51446 /* RNCViewpager.xcodeproj */ = {isa = PBXFileReference; name = "RNCViewpager.xcodeproj"; path = "../node_modules/@react-native-community/viewpager/ios/RNCViewpager.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		28F98F9B03A9428C8DFDAEE5 /* libRNCViewpager.a */ = {isa = PBXFileReference; name = "libRNCViewpager.a"; path = "libRNCViewpager.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -500,6 +506,8 @@
 				C707D69275754BB3ACB06CB3 /* libRNRSA.a in Frameworks */,
 				36B9533148F949F4A4437189 /* libRCTAesCrypto.a in Frameworks */,
 				C48A6174FEEA4FFA861DB5F7 /* libRNUUIDGenerator.a in Frameworks */,
+				7E86E80C373D4814885C8E70 /* libRNFirebase.a in Frameworks */,
+				C4472465E7554A85801B03F1 /* libRNCViewpager.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -712,6 +720,8 @@
 				4167022A1A4C44A09660F1FB /* RNRSA.xcodeproj */,
 				B4C0FB7FF11C4E2EB2772402 /* RCTAesCrypto.xcodeproj */,
 				6E1E9059D95646BEB89E4715 /* RNUUIDGenerator.xcodeproj */,
+				9E35A577C3D649A7A3BE44C1 /* RNFirebase.xcodeproj */,
+				BCC5C9E59AB24911AAA51446 /* RNCViewpager.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1400,6 +1410,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1422,6 +1434,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Debug;
@@ -1449,6 +1463,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1471,6 +1487,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Release;
@@ -1512,6 +1530,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Debug;
@@ -1552,6 +1572,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Release;
@@ -1587,6 +1609,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1609,6 +1633,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Debug;
@@ -1644,6 +1670,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1666,6 +1694,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Release;
@@ -1700,6 +1730,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1722,6 +1754,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Debug;
@@ -1756,6 +1790,8 @@
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1778,6 +1814,8 @@
 					"$(SRCROOT)/..\node_modules\react-native-rsa-native\ios",
 					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\react-native-uuid-generator\ios",
+					"$(SRCROOT)/../**",
+					"$(SRCROOT)/..\node_modules\@react-native-community\viewpager\ios",
 				);
 			};
 			name = Release;

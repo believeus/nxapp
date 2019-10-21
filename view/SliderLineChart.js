@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Modal, Button, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, Modal, Button, ScrollView, TouchableOpacity } from 'react-native';
 import Slider from "rn-vertical-slider-gradient";
 import { ECharts } from "react-native-echarts-wrapper";
 import { WebView } from 'react-native-webview'
@@ -106,6 +106,13 @@ export default class SliderLineChart extends Component<Props> {
 
         return (
             <View style={{ width: "100%" }}>
+                <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={true}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                >
+                </StatusBar>
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.props.refUrl }} />
