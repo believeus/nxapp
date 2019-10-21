@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import AesCrypto from 'react-native-aes-kit';
 import data from '../appdata';
@@ -17,6 +17,7 @@ export default class DnaReportActivity extends Component<Props> {
         super(props);
         this.state = {
             barcode: '',
+            display: false,
             option: {
                 legend: {
                     data: ['Chronological Age<Biological Age', 'Chronological Age>Biological Age']
@@ -172,6 +173,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         const iv = '1010101010101010'
                                         let privatekey = this.state.user.privatekey
                                         let uuid = this.state.user.uuid
+                                        this.setState({ display: true })
                                         //解密
                                         console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode)
                                         fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
@@ -203,7 +205,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                     this.echarts.webview.reload();
                                                     break;
                                             }
-
+                                            this.setState({ display: true })
                                         })
 
                                     }}>
@@ -405,6 +407,9 @@ export default class DnaReportActivity extends Component<Props> {
                         </View> : null
                     }
                     <View style={{ height: 34, width: "100%" }}></View>
+                    {this.state.display ?
+                        <ActivityIndicator size="large" color="#0071BC" />
+                        : null}
                     <View style={{ height: 300, width: "100%", backgroundColor: 'pink', alignSelf: 'center' }}>
                         {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */}
                         {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */}
