@@ -59,7 +59,7 @@ export default class TabHomeActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: "100%", height: 310 }}>
+                <View style={{ width: "100%", height: 399 }}>
                     <Swiper
                         height={340}//组件高度
                         horizontal={true}//水平轮播
@@ -68,23 +68,23 @@ export default class TabHomeActivity extends Component<Props> {
                         loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                         autoplay={true}>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <View style={{ width: '100%', height: 310 }}>
-                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index1.jpg')} resizeMode="cover" />
+                            <View style={{ width: '100%', height: 399 }}>
+                                <Image style={{ width: '100%', height:399 }} source={require('../image/enpic/index1.jpg')} resizeMode="cover" />
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
-                            <View style={{ width: '100%', height: 310 }}>
-                                <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' />
+                            <View style={{ width: '100%', height: 399 }}>
+                                <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' />
                             </View>
                         </TouchableOpacity>
-                        <View style={{ width: '100%', height: 310 }}>
-                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
+                        <View style={{ width: '100%', height: 399 }}>
+                            <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
                         </View>
-                        <View style={{ width: '100%', height: 310 }}>
-                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
+                        <View style={{ width: '100%', height: 399 }}>
+                            <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
                         </View>
-                        <View style={{ width: '100%', height: 310 }}>
-                            <Image style={{ width: '100%', height: 310 }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" />
+                        <View style={{ width: '100%', height: 399 }}>
+                            <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" />
                         </View>
                     </Swiper >
                 </View>

@@ -148,7 +148,7 @@ People age at different rates. Some “look” and “feel” older than their c
                     </View>
                     <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                         <View style={{ width: '45%', borderRadius: 20 }}>
-                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio3.png')} resizeMode='center' />
+                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/biolo3.png')} resizeMode='center' />
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Imporve Your Quality Of Life</Text>
                         </View>
                         <View style={{ width: '45%', borderRadius: 20 }}>

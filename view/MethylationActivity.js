@@ -34,7 +34,7 @@ export default class MethylationActivity extends Component<Props> {
                 </View>
 
                 <Text style={{ width: '90%', alignSelf: 'center', fontFamily: 'NotoSansHans-Medium', lineHeight: 49, fontSize: 22, color: '#0071bc', marginTop: 20, }}>DNA methylation; the genome software</Text>
-                <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/methy4.jpg")}></Image>
+                <Image style={{ height: 189, width: '90%',alignSelf:'center', marginBottom: 20 }} resizeMode='cover' source={require("../image/icons/methy4.jpg")}></Image>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                     <Text style={{ height: 56, fontSize: 14, marginBottom: 8, fontFamily: 'NotoSansHans-Medium', lineHeight: 34 }}>If we imagine that our DNA is a minicomputer running our cells then:</Text>
                     <Text style={{ height: 23, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>DNA - is the Hardware.</Text>
@@ -58,7 +58,7 @@ export default class MethylationActivity extends Component<Props> {
                     <Text style={{ height: 67, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>More recently Szyf has shown that by examining DNA methylation in white blood cells, it is possible to detect liver cancer early.</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Image style={{ height: 239, width: '100%' }} resizeMode='center' source={require("../image/icons/methy5.jpg")}></Image>
+                    <Image style={{ height: 189, width: '100%' }} resizeMode='cover' source={require("../image/icons/methy5.jpg")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ height: 89, alignSelf: 'center', fontFamily: 'FontAwesome5_Brands', lineHeight: 27, fontSize: 22, color: '#0071bc', marginTop: 20, }}>The environment can cause changes in DNA methylation</Text>
@@ -70,7 +70,7 @@ export default class MethylationActivity extends Component<Props> {
             </Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Image style={{ height: 239, width: '100%' }} resizeMode='center' source={require("../image/icons/methy6.jpg")}></Image>
+                    <Image style={{ height: 189, width: '100%' }} resizeMode='cover' source={require("../image/icons/methy6.jpg")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20, flexDirection: 'row', }}>
                     <Text style={{ height: 99, width: '65%', alignSelf: 'center', fontFamily: 'FontAwesome5_Brands', fontWeight: '700', color: '#0071bc', lineHeight: 18, paddingTop: 19 }}>DNA methylation is potentially reversible by both physical and behavioral interventions</Text>
