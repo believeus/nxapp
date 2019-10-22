@@ -38,11 +38,11 @@ export default class RegisterActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center' }}>
                         <View style={{ height: 10 }}></View>
                         <View style={{ alignItems: 'flex-start', justifyContent: 'flex-start' }}>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>Register</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>{I18n.t('RegisterActivity.register')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
                             <View style={{ width: '38%', height: 20, justifyContent: 'center' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14 }}>Select your region:</Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14 }}>{I18n.t('RegisterActivity.region')}</Text>
                             </View>
                             <View style={{ width: '30%', height: 20, justifyContent: 'flex-end', }}>
                                 <ModalDropdown onSelect={(index, option) => { this.setState({ region: option }) }} style={{ height: 20, fontFamily: 'NotoSansHans-Light', justifyContent: 'flex-end', borderRadius: 5, paddingLeft: 6, borderColor: '#b3b3b3', borderWidth: 1 }}
@@ -331,7 +331,7 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder="Nick name" />
+                                placeholder={I18n.t("RegisterActivity.nickname")}/>
                         </View>
                         <View style={{ height: 40, marginTop: 10, marginBottom: 10 }}>
                             <Input style={{
@@ -343,7 +343,7 @@ export default class RegisterActivity extends Component<Props> {
                             }}
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
-                                placeholder="Email" validator="email"
+                                placeholder={I18n.t("RegisterActivity.email")} validator="email"
                                 onValidatorExecuted={(isvalid) => {
                                     this.setState({ isvalid: isvalid })
                                     if (this.state.email && isvalid && this.state.checked) {
@@ -390,7 +390,7 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder="Create a Password" />
+                                placeholder={I18n.t('RegisterActivity.password')} />
                         </View>
                         <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
@@ -418,7 +418,7 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder="Confirm Password" />
+                                placeholder={I18n.t('RegisterActivity.confirm')} />
                         </View>
 
                         <View style={{ flexDirection: 'row', height: 60 }}>
@@ -446,14 +446,14 @@ export default class RegisterActivity extends Component<Props> {
                                 />
                             </View>
                             <View style={{ height: 30, width: '90%', alignSelf: 'center', marginLeft: 5, justifyContent: 'center' }}>
-                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, }}>I have read and agree to
-                                        <Text onPress={() => this.navigate.push("Consent")} style={{ color: '#0071bc' }}> the Terms of Service and Privacy Statement.</Text>
+                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, }}> {I18n.t('RegisterActivity.agree')}
+                                        <Text onPress={() => this.navigate.push("Consent")} style={{ color: '#0071bc' }}> {I18n.t('RegisterActivity.privacy')}</Text>
                                 </Text>
                             </View>
                         </View>
                         <View>
                             <TouchableOpacity disabled={this.state.disable}>
-                                <Button disabled={this.state.disable} title="Register" onPress={() => {
+                                <Button disabled={this.state.disable} title={I18n.t('RegisterActivity.register')} onPress={() => {
                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
                                     fetch(data.url + "/user/register.jhtml", {
                                         method: "POST",
@@ -463,15 +463,15 @@ export default class RegisterActivity extends Component<Props> {
                                         body: "mail=" + this.state.email + "&password=" + this.state.password + "&nickname=" + this.state.nickname + "&region=" + this.state.region
                                     }).then(res => res.text()).then((data) => {
                                         if (data == "error") {
-                                            Alert.alert("message", "Mailbox has been registered")
+                                            Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.registered'))
                                             return
                                         }
                                         if (data == "success") {
-                                            Alert.alert("message", "The registration was successful and the user activation link  has been sent to your mailbox")
+                                            Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.activation'))
                                             return
                                         }
                                         if (data = "network-error") {
-                                            Alert.alert("message", "Network error!try again")
+                                            Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.again'))
                                             return
 
                                         }
@@ -480,9 +480,9 @@ export default class RegisterActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#b3b3b3', lineHeight: 20 }}>Already have an account?</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#b3b3b3', lineHeight: 20 }}>{I18n.t('RegisterActivity.account')}</Text>
                             <TouchableOpacity onPress={() => this.navigate.push("Login")}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 20 }}>Login</Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 20 }}>{I18n.t('RegisterActivity.login')}</Text>
                             </TouchableOpacity>
                         </View>
                     </View>

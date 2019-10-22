@@ -27,16 +27,16 @@ export default class LifeStyleChartActivity extends Component<Props> {
         return (
             <ScrollView>
                 <View>
-                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>Lifestyle Questionnaire</Text></View>
+                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
                         <View style={{ width: "92%" }}>
-                            <Text style={{}}>A healthy or unhealthy lifestyle will most likely be transmitted across generations. According to the study done by Case et al.</Text>
+                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
                             <View style={{ width: "100%", height: 10 }}></View>
-                            <Text style={{}}>"(2002), when a 0-3-year-old child has a mother who practices a healthy lifestyle, this child will be 27% more likely to become healthy and adopt the same lifestyle.</Text>
+                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
                             <View style={{ width: "100%", height: 10 }}></View>
-                            <Text style={{}}>For instance, high-income parents are more likely to eat organic food, have time to exercise and provide the best living condition to their children.On the other hand, low-income parents are more likely to participate in unhealthy activities such as smoking to help them release poverty-related stress and depression.</Text>
+                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
                             <View style={{ width: "100%", height: 10 }}></View>
-                            <Text style={{}}>Parents are the first teacher for every child. Everything that parents do will be very likely transferred to their children through the learning process.</Text>
+                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                         </View>
                     </View>
@@ -46,21 +46,21 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 <View>
                     <BMIChart
-                        title="Weight & Height"
-                        refTitle="Source: Centers for Disease……"
+                        title={I18n.t('LifeStyleChartActivity.height')}
+                        refTitle={I18n.t('LifeStyleChartActivity.source')}
                         refUrl="https://www.cdc.gov/healthyweight/index.html"
-                        yAxisLabelValue="bmi"
-                        yAxisLabelName="bmi"
+                        yAxisLabelValue={I18n.t('LifeStyleChartActivity.bmii')}
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.bmii')}
                         yAxisLine="60@100"
-                        column="bmi"
+                        column={I18n.t('LifeStyleChartActivity.bmii')}
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
-                                    <Text>If your BMI is less than 18.5, it falls within the underweight range.</Text>
-                                    <Text>If your BMI is 18.5 to 24.9, it falls within the normal or Healthy Weight range.</Text>
-                                    <Text>If your BMI is 25.0 to 29.9, it falls within the overweight range.</Text>
-                                    <Text>If your BMI is 30.0 or higher, it falls within the obese range.</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    <Text>{I18n.t('LifeStyleChartActivity.range')}</Text>
+                                    <Text>{I18n.t('LifeStyleChartActivity.bmi')}</Text>
+                                    <Text>{I18n.t('LifeStyleChartActivity.falls')}</Text>
+                                    <Text>{I18n.t('LifeStyleChartActivity.your')}</Text>
                                 </Text>
                             </View>
                         }
@@ -69,19 +69,19 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Heart rate (beats/min)"
-                        refTitle="Source:American Heart Association"
+                        title={I18n.t('LifeStyleChartActivity.heart')}
+                        refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/health-topics/high-blood-pressure/the-facts-about-high-blood-pressure/all-about-heart-rate-pulse"
                         max="220"
                         sliderDefualtValue={60}
                         yAxisLabelValue="heartrate"
-                        yAxisLabelName="beats/min"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.beats')}
                         yAxisLine="60@100"
                         column="heartrate"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     Your resting heart rate is the heart pumping the lowest amount of blood
                                     you need because you’re not exercising. If you’re sitting or lying and you’re calm, relaxed and aren’t ill,
                                     your heart rate is normally between 60 (beats per minute) and 100 (beats per minute).
@@ -93,19 +93,19 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Blood pressure (mmHG)"
-                        refTitle="Source:American Heart Association"
+                        title={I18n.t('LifeStyleChartActivity.blood')}
+                        refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings"
                         max="270"
                         sliderDefualtValue={80}
                         yAxisLabelValue="systolicBP"
-                        yAxisLabelName="mmHg"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mmhg')}
                         yAxisLine="60@100"
                         column="systolicBP"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     Blood pressure numbers of less than 120/80 mm Hg are considered within thenormal range.
                                 </Text>
                             </View>
@@ -115,11 +115,11 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Diastolic BP"
+                        title={I18n.t('LifeStyleChartActivity.diastolic')}
                         max="180"
                         sliderDefualtValue={80}
                         yAxisLabelValue="diastolicBP"
-                        yAxisLabelName="mmHg"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mmhg')}
                         yAxisLine="80@180"
                         column="diastolicBP"
                     />
@@ -127,18 +127,18 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Cholesterol (mg/dL)"
-                        refTitle="Source:American Heart Association"
+                        title={I18n.t('LifeStyleChartActivity.cholesterol')}
+                        refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/health-topics/cholesterol/about-cholesterol/what-your-cholesterol-levels-mean"
                         max="360"
                         sliderDefualtValue={80}
                         yAxisLabelValue="cholesterol"
-                        yAxisLabelName="mg/dl"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg')}
                         column="cholesterol"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     All adults age 20 or older should have their cholesterol (and other risk factors) checked every four to six years.
                                 </Text>
                             </View>
@@ -148,18 +148,18 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Meditation"
-                        refTitle="Source:Mayo Clinic"
+                        title={I18n.t('LifeStyleChartActivity.meditation')}
+                        refTitle={I18n.t('LifeStyleChartActivity.mayo')}
                         refUrl="https://www.mayoclinic.org/tests-procedures/meditation/in-depth/meditation/art-20045858"
                         max="24"
                         sliderDefualtValue={5}
-                        yAxisLabelValue="meditation"
-                        yAxisLabelName="h/day"
-                        column="meditation"
+                        yAxisLabelValue={I18n.t('LifeStyleChartActivity.meditation')}
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.unit')}
+                        column={I18n.t('LifeStyleChartActivity.meditation')}
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     Meditation can wipe away the day's stress, bringing with it inner peace. See how you can easily learn to practice meditation whenever you need it most.
                                 </Text>
                             </View>
@@ -169,8 +169,8 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Cardio Vascular Health"
-                        refTitle="Source:American Heart Association"
+                        title={I18n.t('LifeStyleChartActivity.cvh')}
+                        refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/healthy-living/fitness/fitness-basics/aha-recs-for-physical-activity-in-adults"
                         max="200"
                         sliderDefualtValue={80}
@@ -181,7 +181,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     Get at least 150 minutes per week of moderate-intensity aerobic activity or 75 minutes per week of vigorous aerobic activity, or a combination of both, preferably spread throughout the week
                                     </Text>
                             </View>
@@ -191,19 +191,19 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Sleep"
-                        refTitle="Source: National Sleep Foundation"
+                        title={I18n.t('LifeStyleChartActivity.sleep')}
+                        refTitle={I18n.t('LifeStyleChartActivity.foundation')}
                         refUrl="https://www.sleepfoundation.org/"
                         max="24"
                         sliderDefualtValue={8}
                         yAxisLabelValue="sleep"
-                        yAxisLabelName="hours/day"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.unit')}
                         column="sleep"
                         yAxisLine="5@8@10"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     NATIONAL SLEEP FOUNDATION recommonds 7-9 hours for 18-64 years, and doesn't recommend less than 6 and more than 11 hours for 8-25 years and less than 6 and more than 10 hours for 26-64 years.
                                     </Text>
                             </View>
@@ -213,39 +213,39 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="How about your active sex life"
+                        title={I18n.t('LifeStyleChartActivity.active')}
                         max="60"
                         sliderDefualtValue={10}
                         yAxisLabelValue="sexfrequency"
-                        yAxisLabelName="times/day"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.timesday')}
                         column="sexfrequency"
                     />
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 </View>
                 <View>
                     <RatingChart
-                        title="Satisfaction with sexual Life"
+                        title={I18n.t('LifeStyleChartActivity.sexual')}
                         column="sexscore"
                         yAxisLabelValue="sexscore"
-                        yAxisLabelName="score"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.score')}
                         max="5"
                     />
                 </View>
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Alcohol"
-                        refTitle="Source: American Cancer Society"
+                        title={I18n.t('LifeStyleChartActivity.alcohol')}
+                        refTitle={I18n.t('LifeStyleChartActivity.society')}
                         refUrl="https://www.cancer.org/"
                         max="100"
                         sliderDefualtValue={20}
                         yAxisLabelValue="alcohol"
-                        yAxisLabelName="gram/day"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.gramday')}
                         column="alcohol"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     Drink no more than 1 drink per day for women or 2 per day for men.
                                     </Text>
                             </View>
@@ -255,16 +255,16 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Smoking"
+                        title={I18n.t('LifeStyleChartActivity.smoking')}
                         max="100"
                         sliderDefualtValue={20}
                         yAxisLabelValue="smoking"
-                        yAxisLabelName="sticks/day"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.sticksday')}
                         column="smoking"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     Stop Smoking
                                     </Text>
                             </View>
@@ -274,19 +274,19 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Vitamin D"
-                        refTitle="Source: Mayo Clinic"
+                        title={I18n.t('LifeStyleChartActivity.vitamin')}
+                        refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                         refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-d/art-20363792"
                         max="1000"
                         sliderDefualtValue={200}
                         yAxisLabelValue="vitaminD"
-                        yAxisLabelName="IU/day"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.iuday')}
                         column="vitaminD"
                         yAxisLine="400@600@800"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     The recommended daily amount of vitamin D is 400 international units (IU) for children up to age 12 months, 600 IU for ages 1 to 70 years, and 800 IU for people over 70 years.
                                     </Text>
                             </View>
@@ -296,8 +296,8 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Vitamin C"
-                        refTitle="Source: Mayo Clinic"
+                        title={I18n.t('LifeStyleChartActivity.vitaminc')}
+                        refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                         refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-c/art-20363932"
                         max="150"
                         sliderDefualtValue={80}
@@ -308,7 +308,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     The recommended daily amount of vitamin C for adult men is 90 milligrams and for adult women is 75 milligrams.
                                     </Text>
                             </View>
@@ -318,19 +318,19 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <SliderLineChart
-                        title="Vitamin A"
-                        refTitle="Source: Mayo Clinic"
+                        title={I18n.t('LifeStyleChartActivity.vitamina')}
+                        refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                         refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-a/art-20365945"
                         max="1500"
                         sliderDefualtValue={80}
                         yAxisLabelValue="vitaminA"
-                        yAxisLabelName="mcg/day"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mcgday')}
                         column="vitaminA"
                         yAxisLine="700@900"
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     The recommended daily amount of vitamin A is 900 micrograms (mcg) for adult men and 700 mcg for adult women.
                                     </Text>
                             </View>
