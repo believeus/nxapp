@@ -258,5 +258,8 @@
         "title": "Notification",
         "ques": "Continue",
         "back": "Cancel"
+    },
+    "Manual1Activity":{
+        "title":"How to get epiAging test report"
     }
 }

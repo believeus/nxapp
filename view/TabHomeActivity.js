@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity } from 'react-native';
+import {StyleSheet, Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, Dimensions, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
 import AwesomeAlert from 'react-native-awesome-alerts';
 import VideoPlayer from 'react-native-video-controls';
@@ -50,6 +50,14 @@ export default class TabHomeActivity extends Component<Props> {
     render() {
         this.navigate = this.props.navigation;
         const { showAlert } = this.state;
+        const styles = StyleSheet.create({
+            image: {
+                width: Dimensions.get('window').width,
+                height: Dimensions.get('window').height,
+                resizeMode: 'cover',
+
+            }
+        });
         return (
             <ScrollView>
                 <StatusBar
@@ -59,7 +67,7 @@ export default class TabHomeActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: "100%", height: 399 }}>
+                <View style={{ width: "100%", height: 345 }}>
                     <Swiper
                         height={340}//组件高度
                         horizontal={true}//水平轮播
@@ -68,23 +76,23 @@ export default class TabHomeActivity extends Component<Props> {
                         loop={true}                    //如果设置为false，那么滑动到最后一张时，再次滑动将不会滑到第一张图片。
                         autoplay={true}>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <View style={{ width: '100%', height: 399 }}>
-                                <Image style={{ width: '100%', height:399 }} source={require('../image/enpic/index1.jpg')} resizeMode="cover" />
+                            <View style={{ width: '100%', }}>
+                                <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover' />
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
-                            <View style={{ width: '100%', height: 399 }}>
-                                <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' />
+                            <View style={{ width: '100%', height: 345 }}>
+                                <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' />
                             </View>
                         </TouchableOpacity>
-                        <View style={{ width: '100%', height: 399 }}>
-                            <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
+                        <View style={{ width: '100%', height: 345 }}>
+                            <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
                         </View>
-                        <View style={{ width: '100%', height: 399 }}>
-                            <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
+                        <View style={{ width: '100%', height: 345 }}>
+                            <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
                         </View>
-                        <View style={{ width: '100%', height: 399 }}>
-                            <Image style={{ width: '100%', height: 399 }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" />
+                        <View style={{ width: '100%', height: 345 }}>
+                            <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" />
                         </View>
                     </Swiper >
                 </View>
@@ -297,7 +305,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </View>
                             </View>
                         </TouchableOpacity> */}
-                        <TouchableOpacity onPress={() => this.navigate.push(" ")}>
+                        <TouchableOpacity onPress={() => this.navigate.push("QA")}>
                             <View style={{ backgroundColor: '#f0f0f0', borderRadius: 10, height: 56, flexDirection: 'row', marginBottom: 20 }}>
                                 <View style={{ width: '20%', justifyContent: 'center' }}>
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc1.png')} resizeMode='center' />
