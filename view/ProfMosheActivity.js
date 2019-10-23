@@ -38,7 +38,7 @@ const FirstRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2000-now
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.department')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
@@ -52,28 +52,28 @@ const FirstRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1993-2000
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.department')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.department')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
             </View>
 
         </View>
@@ -173,7 +173,7 @@ const ThirddRoute = () => (
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Associate Professor</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
             </View>
 
         </View>
@@ -325,7 +325,7 @@ export default class ProfMosheActivity extends Component<Props> {
                 />
 
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('ProfMosheActivity.papers')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>

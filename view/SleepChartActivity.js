@@ -29,16 +29,16 @@ export default class SleepChartActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View>
-                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>Sleep Self Assessment</Text></View>
+                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('SleepChartActivity.assessment')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
                         <View style={{ width: "92%" }}>
                             <Text style={{}}>
-                                Most people experience problems with sleep in their life. In fact, it’s thought that a third of Brits will have episodes of insomnia at some point.
+                            {I18n.t('SleepChartActivity.people')}
 					        </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                             <Text style={{}}>
-                                The causes can include psychological conditions (Such as depression or anxiety) or a combination of both. This short test from Sleepio will give you a’sleep score ' plus practical tips and advice for improving your sleep.
-                        </Text>
+                            {I18n.t('SleepChartActivity.include')}                        
+                            </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                         </View>
                     </View>
@@ -49,12 +49,12 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 75 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Thinking about a typical night in the last month, if you wake up, how long are you awake for in total?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.total')}</Text>
                                     </View>
                                 </View>
                             }
-                            unit="minute"
-                            yAxisLabelName="minute"
+                            unit={I18n.t('SleepChartActivity.util')}
+                            yAxisLabelName={I18n.t('SleepChartActivity.util')}
                             yAxisLabelValue="awake"
                             column="awake"
                         />
@@ -66,12 +66,12 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 75 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Thinking about a typical night in the last month, how long does it take you to fall asleep?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.asleep')}</Text>
                                     </View>
                                 </View>
                             }
-                            unit="night"
-                            yAxisLabelName="night"
+                            unit={I18n.t('SleepChartActivity.night')}
+                            yAxisLabelName={I18n.t('SleepChartActivity.night')}
                             yAxisLabelValue="fallasleep"
                             column="fallasleep"
                         />
@@ -83,13 +83,13 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Thinking about a typical night in the last month, how would you rate your sleep quality?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.quality')}</Text>
                                     </View>
                                 </View>
                             }
                             count={3}
                             reviews={["Good", "Average", "Poor"]}
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('SleepChartActivity.score')}
                             yAxisLabelValue="sleepquality"
                             column="sleepquality"
                         />
@@ -101,13 +101,13 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 60 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Thinking about the past month, to what extent has poor sleep affected your mood, energy, or relationships?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.mood')}</Text>
                                     </View>
                                 </View>
                             }
                             count={4}
                             reviews={["None", "Little", "Somewhat", "Much"]}
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('SleepChartActivity.score')}
                             yAxisLabelValue="affectmood"
                             column="affectmood"
                         />
@@ -119,13 +119,13 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 80 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Thinking about the past month, to what extent has poor sleep affected your concentration, productivity, or ability to stay awake?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.productivity')}</Text>
                                     </View>
                                 </View>
                             }
                             count={4}
                             reviews={["None", "Little", "Somewhat", "Much"]}
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('SleepChartActivity.score')}
                             yAxisLabelValue="affectability"
                             column="affectability"
                         />
@@ -137,13 +137,13 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 60 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Thinking about the past month, to what extent has poor sleep troubled you in general?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.general')}</Text>
                                     </View>
                                 </View>
                             }
                             count={4}
                             reviews={["None", "Little", "Somewhat", "Much"]}
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('SleepChartActivity.score')}
                             yAxisLabelValue="troubleyou"
                             column="troubleyou"
                         />
@@ -155,12 +155,12 @@ export default class SleepChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 75 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>8.How long have you had a problem with your sleep?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('SleepChartActivity.problem')}</Text>
                                     </View>
                                 </View>
                             }
-                            unit="month"
-                            yAxisLabelName="month"
+                            unit={I18n.t('SleepChartActivity.month')}
+                            yAxisLabelName={I18n.t('SleepChartActivity.month')}
                             yAxisLabelValue="wheneffect"
                             column="wheneffect"
                         />

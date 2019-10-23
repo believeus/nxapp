@@ -14,74 +14,74 @@ const FirstRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2015
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Experimental Medicine Productivity Award</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.medicine')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 56, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill University</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> Grand Excellence Award</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.award')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.grand')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>The Research Institute of the </Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.the')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill University Health Center</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> Studentship</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.studentship')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2012
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>The Research Institute of the</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 134, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
             <View style={{ width: '70%', height: 134, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> McGill University Health Center</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>Studentship</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>McGill Endocrine Retreat Poster Award</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>McGill University Graduate Excel Fellowship</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.center')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.studentship')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.poster')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.excel')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2011
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>The Research Institute of the</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill University Health Center </Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Studdent</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.studentt')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>The Research Institute of the</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 145, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 145, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill University Health Center </Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Studentship</Text>
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill University Claude J.P. Giroud</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight:28 , }}>Fellowship McGill University Principal's Graduate Fellowship</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('HuiliActivity.studentship')}</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.jp')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight:28 , }}>{I18n.t('HuiliActivity.fellowship')}</Text>
             </View>
         </View>
     </View>
@@ -91,29 +91,29 @@ const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
         <View style={{ height: 20 }}></View>
         <Text style={{ fontFamily: 'FontAwesome', height: 99, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Hui Li</Text>
-            , Bing Li and Louise Larose. Silencing Nck1 prevents activation of the IRE1α-JNK-miR-122 pathway that controls PTP1B expression. 2015.
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>McGill Endocrine Retreat (Montreal, Canada)</Text>
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+            {I18n.t('HuiliActivity.bing')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 99, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Hui Li</Text>
-            and Louise Larose. The adaptor protein Nck1 negatively regulates the PI3K/Akt pathway through protein tyrosine phosphatase 1B. 2014. 
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>McGill Endocrine Retreat (Montreal, Canada)</Text>
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+            {I18n.t('HuiliActivity.larose')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 123, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Hui Li</Text>
-            and Louise Larose. Identification of the adaptor protein Nck1 as a negative regulator of the PI3K/Akt pathway through PTP1B and IRE1α. 2013. 
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Canadian Diabetes Association Professional Conference (Montreal, Canada)</Text>
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+            {I18n.t('HuiliActivity.louise')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.diabetes')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 145, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Hui Li</Text>
-            and Louise Larose. Akt phosphorylation/activation is modulated by the adaptor protein Nck1 through its ability to regulate the Endoplasmic Reticulum (ER) stress sensor IRE1α. 2012. 
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>McGill Endocrine Retreat Montreal, Canada ( Poster Award)</Text>
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
+            {I18n.t('HuiliActivity.laroseakt')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ForgetActivity.resetPwd')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 123, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Hui Li</Text>
-            and Louise Larose. Nck1—an adaptor protein modulating expression of the Endoplasmic Reticulum (ER) stress sensor IRE1α. 2012.
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> Experimental Biology 2012 (San Diego, USA)</Text>
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.canada')}</Text>
+            {I18n.t('HuiliActivity.nck')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('HuiliActivity.biology')}</Text>
         </Text>
     </View>
 );
@@ -134,8 +134,8 @@ export default class HuiliActivity extends Component<Props> {
             display: false,
             index: 0,
             routes: [
-                { key: 'first', title: 'HONORS' },
-                { key: 'second', title: 'CONFERENCES' },
+                { key: 'first', title: I18n.t('HuiliActivity.honors') },
+                { key: 'second', title: I18n.t('HuiliActivity.comferences') },
             ],
         }
     }
@@ -170,12 +170,12 @@ export default class HuiliActivity extends Component<Props> {
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/huili.png")}></Image>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Hui Li Ph.D.</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Lab Manager (HK)</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('HuiliActivity.title')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('HuiliActivity.lab')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('HuiliActivity.ltb')}</Text>
                 </View>
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('HuiliActivity.exper')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
@@ -184,55 +184,55 @@ export default class HuiliActivity extends Component<Props> {
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2017-now
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>HKG Epitherapeutics, Hong Kong</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.kong')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 56, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>SRC,China</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Lab Manager</Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.src')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('HuiliActivity.manage')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2009-2016
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>McGill University, Canada</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.university')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Ph.D. and Research</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('HuiliActivity.research')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013-2014
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>McGill Chinese Graduate Student </Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.student')} </Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Association-McGill University Montreal, Canada</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>President</Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.montreal')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('HuiliActivity.president')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2012-2013
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>McGill Chinese Graduate Student</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.student')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Association McGill University Montreal, Canada</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Vice President Event</Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.montreal')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.vice')}</Text>
                     </View>
                 </View>
 
@@ -250,7 +250,7 @@ export default class HuiliActivity extends Component<Props> {
                 />
 
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('HuiliActivity.papers')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ width: '90%', height: 56, alignSelf: 'center' }}>
@@ -284,7 +284,7 @@ export default class HuiliActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('DavidActivity.all')}</Text>
             </ScrollView >
 
         );

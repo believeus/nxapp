@@ -29,21 +29,21 @@ export default class MoodChartActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View>
-                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>Mood Self Assessment</Text></View>
+                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('MoodChartActivity.assessment')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
                         <View style={{ width: "92%" }}>
                             <Text style={{}}>
-                                When it comes to emotions, it can sometimes be hard to recognise or admit that we're not feeling 100%
+                            {I18n.t('MoodChartActivity.emotions')}
                             </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                             <Text style={{}}>
-                                If you are 16 or over, take this short questionnaire to
+                            {I18n.t('MoodChartActivity.short')}
                             </Text>
                             <Text style={{}}>
-                                (1) Help you better understand how you've been feeling over the last fortnight
+                            {I18n.t('MoodChartActivity.fortnight')}
                             </Text>
                             <Text style={{}}>
-                                (2) Point you in the right direction for helpful advice and information
+                            {I18n.t('MoodChartActivity.advice')}   
                             </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                         </View>
@@ -55,11 +55,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you had little interest or pleasure in doing things?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.things')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="pleasure"
                             column="pleasure"
                         />
@@ -71,11 +71,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by feeling down, depressed or hopeless?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.hopeless')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="depressed"
                             column="depressed"
                         />
@@ -88,11 +88,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by trouble falling or staying asleep, or sleeping too much?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.asleep')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="asleep"
                             column="asleep"
                         />
@@ -104,11 +104,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by feeling tired or having little energy?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.energy')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="energy"
                             column="energy"
                         />
@@ -120,11 +120,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by poor appetite or overeating?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.appetite')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="overeating"
                             column="overeating"
                         />
@@ -136,11 +136,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 85 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by feeling bad about yourself, or that you are a failure, or have let yourself or your family down?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.family')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="failure"
                             column="failure"
                         />
@@ -152,11 +152,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 80 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by trouble concentrating on things, such as reading the newspaper or watching television?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.reading')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="focus"
                             column="focus"
                         />
@@ -168,11 +168,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 125 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by moving or speaking so slowly that other people could have noticed,or the opposite - being so fidgety or restless that you have been moving around a lot more than usual?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.usual')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="slow"
                             column="slow"
                         />
@@ -184,11 +184,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>Have you had an anxiety attack (suddenly feeling fear or panic)?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.attack')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="anxiety"
                             column="anxiety"
                         />
@@ -200,11 +200,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by feeling nervous, anxious or on edge?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.anxious')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="nervous"
                             column="nervous"
                         />
@@ -216,11 +216,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by not being able to stop or control worrying?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.worrying')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="losecontrol"
                             column="losecontrol"
                         />
@@ -233,11 +233,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by worrying too much about different things?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.different')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="worry"
                             column="worry"
                         />
@@ -249,11 +249,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by having trouble relaxing?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.relaxing')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="loserelax"
                             column="loserelax"
                         />
@@ -265,11 +265,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by being so restless that it is hard to sit still?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.still')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="restless"
                             column="restless"
                         />
@@ -282,11 +282,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by becoming easily annoyed or irritable?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.irritable')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="irritable"
                             column="irritable"
                         />
@@ -298,11 +298,11 @@ export default class MoodChartActivity extends Component<Props> {
                                 <View style={{ width: "90%", height: 45 }}>
                                     <View style={{ width: "100%", height: 10 }}></View>
                                     <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>How often have you been bothered by becoming easily annoyed or irritable?</Text>
+                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.easily')}</Text>
                                     </View>
                                 </View>
                             }
-                            yAxisLabelName="score"
+                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
                             yAxisLabelValue="afraid"
                             column="afraid"
                         />

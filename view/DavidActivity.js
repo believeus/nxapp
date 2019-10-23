@@ -8,18 +8,18 @@ import { I18n } from '../locales/i18n';
 const FirstRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
         <View style={{ height: 30 }}></View>
-        <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>US patent 62/774,</Text>
+        <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>{I18n.t('DavidActivity.us')}</Text>
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
-            994 DNA Methylation Markers for Early Detection of Cervical Cancer (Filed 04-Dec-2018)</Text>
+        {I18n.t('DavidActivity.cancer')}</Text>
 
         <View style={{ height: 30 }}></View>
-        <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>US patent 62/695,</Text>
+        <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>{I18n.t('DavidActivity.uspa')}</Text>
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
-            429 DNA Methylation Markers for Noninvasive Detection of Cancer (Filed 07-Sept-2018)</Text>
+        {I18n.t('DavidActivity.dna')}</Text>
      <View style={{ height: 45 }}></View>
-     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>2011-- <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Postdoctoral fellow </Text>of the Israel Cancer Research Foundation</Text>
-     <Text style={{ fontFamily: 'FontAwesomet', height: 56, lineHeight: 21, }}>2010--Toronto Alumni and Alumni Medical <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> Excellence Award</Text></Text>
-     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>2009--Toronto Alumni and Friends Medical<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> Excellence Award</Text></Text>
+     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>{I18n.t('DavidActivity.day')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text>{I18n.t('DavidActivity.israel')}</Text>
+     <Text style={{ fontFamily: 'FontAwesomet', height: 56, lineHeight: 21, }}>{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
+     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>{I18n.t('DavidActivity.medical')}<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.excellence')}</Text></Text>
  </View>
 );
 
@@ -53,8 +53,8 @@ export default class DavidActivity extends Component<Props> {
             display: false,
             index: 0,
             routes: [
-                { key: 'first', title: 'HONORS&PATENTS' },
-                { key: 'second', title: 'CONFERENCES' },
+                { key: 'first', title: I18n.t('DavidActivity.honor') },
+                { key: 'second', title: I18n.t('DavidActivity.conferences') },
             ],
         }
     }
@@ -89,12 +89,12 @@ export default class DavidActivity extends Component<Props> {
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/david.png")}></Image>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>David Cheishvili Ph.D.</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Senior Scientific Consultant</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t("DavidActivity.title")}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t("DavidActivity.senior")}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t("DavidActivity.hkg")}</Text>
                 </View>
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('DavidActivity.professional')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
@@ -103,46 +103,46 @@ export default class DavidActivity extends Component<Props> {
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2017-now
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>HKG Epitherapeutics, Hong Kong</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('DavidActivity.hong')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
-                    <Text style={{ width: '70%', height: 56, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}><Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>Senior scientific consultant</Text> </Text>
+                    <Text style={{ width: '70%', height: 56, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}><Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>{I18n.t("DavidActivity.senior")}</Text> </Text>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2016-now
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Montreal EpiTerapia Inc Montreal</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('DavidActivity.montreal')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Canada</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Co-Founder</Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('DavidActivity.canada')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('DavidActivity.founder')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2016-2017
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('DavidActivity.department')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGill University</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Research Associate</Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('DavidActivity.mcgill')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('DavidActivity.research')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2011-2016
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('DavidActivity.department')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
@@ -156,14 +156,14 @@ export default class DavidActivity extends Component<Props> {
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2004-2011
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Hebrew University Hadassah </Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('DavidActivity.hebrew')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                         <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Medical School</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Research Assistant</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('DavidActivity.assistant')}</Text>
                     </View>
                 </View>
 
@@ -181,7 +181,7 @@ export default class DavidActivity extends Component<Props> {
                 />
 
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light',  fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light',  fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('DavidActivity.publshed')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
@@ -225,7 +225,7 @@ export default class DavidActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('DavidActivity.all')}</Text>
             </ScrollView >
 
         );

@@ -28,32 +28,28 @@ export default class McGillChartActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View>
-                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>The McGill Pain Questionnaire</Text></View>
+                    <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('McGillChartActivity.pain')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
                         <View style={{ width: "92%" }}>
                             <Text style={{}}>
-                                Introduction: The Mcgill Pain Questionnaire(MPQ)(] has become one of the most wideused tests for the
-                                measurement of pain.
-                                It provides valuable information on thesensory, affective and evaluative dimensions of pain
-                                experience and is capablediscriminating among differentproblems [7].
-                                The MPQ is not a perfect tooland several variants have been developed [2, 4,7]. Yet despite the
-                                usefulness ofspecialized alternative forms,
-                                the original MPQ is still commonly used in diagnosisand research on a wide variety of pain problems
-                                [7]
+                                {I18n.t('McGillChartActivity.wideused')}
+                                {I18n.t('McGillChartActivity.provides')}
+                                {I18n.t('McGillChartActivity.several')}
+                                {I18n.t('McGillChartActivity.research')}
                             </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                         </View>
                     </View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
                         <View style={{ width: "92%" }}>
-                            <Text style={{ fontWeight: "bold", fontSize: 20 }}>What Does Your Pain Feel Like?</Text>
-                            <Text style={{ fontSize: 14 }}>Statement: Some of the following words below describe your present pain. Circle ONLY those words that best describe it. Leave out any category that is not suitable. Use only a single word in each appropriate category - the one that applies best.</Text>
+                            <Text style={{ fontWeight: "bold", fontSize: 20 }}>{I18n.t('McGillChartActivity.feel')}</Text>
+                            <Text style={{ fontSize: 14 }}>{I18n.t('McGillChartActivity.following')}</Text>
                         </View>
                     </View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Throbbing"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.throbbing')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="throbbing"
                             column="throbbing"
                         />
@@ -61,8 +57,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Shooting"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.shooting')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="shooting"
                             column="shooting"
                         />
@@ -70,8 +66,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Stabbing"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.stabbing')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="stabbing"
                             column="stabbing"
                         />
@@ -79,8 +75,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Sharp"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.sharp')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="sharp"
                             column="sharp"
                         />
@@ -88,8 +84,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Cramping"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.cramping')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="cramping"
                             column="cramping"
                         />
@@ -97,8 +93,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Gnawing"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.gnawing')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="gnawing"
                             column="gnawing"
                         />
@@ -106,8 +102,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Hot-burning"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.hotburning')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="burning"
                             column="burning"
                         />
@@ -115,8 +111,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Aching"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.aching')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="aching"
                             column="aching"
                         />
@@ -124,8 +120,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Heavy"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.heavy')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="heavy"
                             column="heavy"
                         />
@@ -133,8 +129,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Tender"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.tender')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="tender"
                             column="tender"
                         />
@@ -142,8 +138,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Splitting"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.splitting')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="split"
                             column="split"
                         />
@@ -151,8 +147,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Exhausting"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.exhausting')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="exhausting"
                             column="exhausting"
                         />
@@ -160,8 +156,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Sickening"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.sickening')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="sickening"
                             column="sickening"
                         />
@@ -169,8 +165,8 @@ export default class McGillChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
-                            title="Fearful?"
-                            yAxisLabelName="score"
+                            title={I18n.t('McGillChartActivity.fearful')}
+                            yAxisLabelName={I18n.t('McGillChartActivity.score')}
                             yAxisLabelValue="fearful"
                             column="fearful"
                         />

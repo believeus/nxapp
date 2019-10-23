@@ -103,9 +103,9 @@ export default class McGillChart extends Component<Props> {
                 <View style={{ width: "100%", flexDirection: "row" }}>
                     <View style={{ width: "45%", height: 100 }}>
                         <View style={{ width: "100%", height: 22 }}></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: 16, fontWeight: "bold", textAlignVertical: "center", textAlign: "left" }}>How dose your</Text></View>
+                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: 16, fontWeight: "bold", textAlignVertical: "center", textAlign: "left" }}>{I18n.t('McGillChartActivity.how')}</Text></View>
                         <View style={{ alignItems: "center" }}><Text style={{ color: "red", fontSize: 18, fontWeight: "bold" }}>{this.props.title}</Text></View>
-                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: 14, fontWeight: "bold" }}>feel like?</Text></View>
+                        <View style={{ alignItems: "center" }}><Text style={{ fontSize: 14, fontWeight: "bold" }}>{I18n.t('McGillChartActivity.like')}</Text></View>
                     </View>
                     <View style={{ width: "45%", height: 100, alignItems: "center", justifyContent: "center" }}>
                         <View>

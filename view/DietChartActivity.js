@@ -224,8 +224,8 @@ export default class DietChartActivity extends Component<Props> {
                 <View style={{ width: "100%" }}>
                     <View style={{ width: "100%", height: 20 }}></View>
                     <DietSliderChart
-                        title="Food Consumption (calories/day)"
-                        refTitle="Source: Healthline"
+                        title={I18n.t('DietChartActivity.food')}
+                        refTitle={I18n.t('DietChartActivity.source')}
                         refUrl="https://www.healthline.com/nutrition/how-many-calories-per-day#section5"
                         max="4000"
                         sliderDefualtValue={1500}
@@ -237,7 +237,7 @@ export default class DietChartActivity extends Component<Props> {
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
-                                    <Text style={{ fontWeight: "bold" }}>Recommendation:</Text>An average woman needs to eat about 2000 calories per day to maintain, and 1500 calories to lose one pound of weight per week. An average man needs 2500 calories to maintain, and 2000 to lose one pound of weight per week.
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('DietChartActivity.recommen')}</Text>{I18n.t('DietChartActivity.calories')}
                                 </Text>
                             </View>
                         }
@@ -245,7 +245,7 @@ export default class DietChartActivity extends Component<Props> {
 
                     <View style={{ width: "100%", height: 15 }}></View>
                     <View style={{ width: "100%", alignItems: "center" }}>
-                        <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>Input your diet</Text></View>
+                        <View style={{ width: "90%" }}><Text style={{ fontWeight: "bold" }}>{I18n.t('DietChartActivity.diet')}</Text></View>
                     </View>
                     <View>
                         <Search
@@ -258,23 +258,23 @@ export default class DietChartActivity extends Component<Props> {
                     </View>
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ width: "90%", flexDirection: "row", borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
-                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Food</Text></View>
-                            <View style={{ width: "30%" }}><Text style={{ textAlign: "center" }}>Each</Text></View>
-                            <View style={{ width: "30%" }}><Text style={{ textAlign: "right" }}>Edit</Text></View>
+                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>{I18n.t('DietChartActivity.foodd')}</Text></View>
+                            <View style={{ width: "30%" }}><Text style={{ textAlign: "center" }}>{I18n.t('DietChartActivity.each')}</Text></View>
+                            <View style={{ width: "30%" }}><Text style={{ textAlign: "right" }}>{I18n.t('DietChartActivity.edit')}</Text></View>
                         </View>
                         <View style={{ width: "100%", height: 5 }}></View>
                     </View>
                     {this.state.dietbox.length == 0 ? null : this.state.dietbox.map((value) => { return value })}
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ width: "90%", flexDirection: "row", borderTopColor: "#efefef", borderTopWidth: 1, borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
-                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Calories:</Text></View>
-                            <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.calories} kcal</Text></View>
+                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>{I18n.t('DietChartActivity.caloriess')}</Text></View>
+                            <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.calories} {I18n.t('DietChartActivity.kcal')}</Text></View>
                         </View>
                     </View>
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ width: "90%", flexDirection: "row", borderBottomColor: "#efefef", borderBottomWidth: 1 }}>
-                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>Staturated Fat:</Text></View>
-                            <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.fat} g</Text></View>
+                            <View style={{ width: "40%" }}><Text style={{ textAlign: "center" }}>{I18n.t('DietChartActivity.fat')}</Text></View>
+                            <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.fat} {I18n.t('DietChartActivity.g')}</Text></View>
                         </View>
                     </View>
                     <View style={{ width: "100%", alignItems: "center", height: 15 }}>
