@@ -96,8 +96,10 @@ export default class TabHomeActivity extends Component<Props> {
                         </View>
                     </Swiper >
                 </View>
-                <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
-                    <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='cover'  >
+
+                <View style={{ width: '90%',height:459, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
+                    <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'>
+
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%' }}></Text>
