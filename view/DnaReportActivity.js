@@ -205,7 +205,8 @@ export default class DnaReportActivity extends Component<Props> {
                                                     this.echarts.webview.reload();
                                                     break;
                                             }
-                                            this.setState({ display: true })
+                                            this.setState({ display: false
+                                             })
                                         })
 
                                     }}>
@@ -399,7 +400,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     </View>
                                     :
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/cry.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/sad.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years older than your chronological age.</Text></View>
                                     </View>
                                 }

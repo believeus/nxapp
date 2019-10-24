@@ -61,7 +61,6 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     <Text style={{ height: 107, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
                                     <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new private key,<Text style={{ color: '#0071bc',fontWeight:'bold' }}> and it can only be set once</Text>.</Text>
                                 </View>
-                                <Text>Go to “EPICENTER”, your username will appear after you log in.</Text>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
                                     <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18,color:'#0071bc',fontWeight:'bold' }}>The Unique Private key is required to enter again if the user logs in again after log out.</Text>

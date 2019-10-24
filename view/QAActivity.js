@@ -18,14 +18,13 @@ export default class QAActivity extends Component<Props> {
         return (
             <ScrollView>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                    <TouchableOpacity onPress={() => this.navigate.push("")}>
+                    <TouchableOpacity onPress={() => this.navigate.push("Manual2")}>
                         <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 56, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>1. How does the epiAging test work?</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => this.navigate.push("Manual1")}>
                         <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 56, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>2. How to get my epiAging test report?</Text>
                     </TouchableOpacity>
-
                     
                 </View>
             </ScrollView >

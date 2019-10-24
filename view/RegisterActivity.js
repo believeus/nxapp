@@ -6,7 +6,6 @@ import { CheckBox } from 'native-base';
 import { I18n } from '../locales/i18n';
 import data from '../appdata'
 
-type Props = {};
 export default class RegisterActivity extends Component<Props> {
     constructor(props) {
         super(props);
@@ -473,7 +472,6 @@ export default class RegisterActivity extends Component<Props> {
                                         if (data = "network-error") {
                                             Alert.alert(I18n.t('RegisterActivity.message'), I18n.t('RegisterActivity.again'))
                                             return
-
                                         }
                                     })
                                 }} />

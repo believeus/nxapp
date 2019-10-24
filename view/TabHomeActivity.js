@@ -97,7 +97,7 @@ export default class TabHomeActivity extends Component<Props> {
                     </Swiper >
                 </View>
                 <View style={{ width: '100%', flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
-                    <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='center'  >
+                    <ImageBackground style={{ width: '100%', heigh: '100%' }} source={require('../image/enpic/home-bg.png')} resizeMode='cover'  >
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%' }}></Text>
@@ -156,7 +156,7 @@ export default class TabHomeActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
                     <View style={{ width: '90%', height: 389, alignSelf: 'center' }}>
-                        <Image style={{ width: '100%', height: 278 }} source={require('../image/enpic/index6.jpg')} resizeMode="center" />
+                        <Image style={{ width: '100%', height: 278,marginTop:12}} source={require('../image/enpic/index6.jpg')} resizeMode="center" />
                         <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>Epiaging Kit</Text>
                         <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
                         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>

@@ -75,7 +75,7 @@
         "ForgetPwd": "Forget Password?"
     },
     "RegisterActivity": {
-        "title": "User register",
+        "title": "Registration",
         "register":"Register",
         "region":"Select your region:",
         "nickname":"Nick name",
@@ -84,9 +84,9 @@
         "confirm":"Confirm Password",
         "agree":"I haveread and agree to",
         "privacy":"the Terms of Service and Privacy Statement.",
-        "message":"message",
+        "message":"Message",
         "registered":"Mailbox has been registered",
-        "activation":"The registration was successful and the user activation link  has been sent to your mailbox",
+        "activation":"The user activation link has been sent to your registered mailbox, please go to activate it by clicking the link there.",
         "again":"Network error!try again",
         "account":"Already have an account?",
         "login":"Login"
@@ -401,5 +401,8 @@
     },
     "Manual1Activity":{
         "title":"How to get epiAging test report"
+    },
+    "Manual2Activity":{
+        "title":"EpiAging App User Manual"
     }
 }

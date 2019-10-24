@@ -56,7 +56,7 @@ export default class Manual1Activity extends Component<Props> {
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man3.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:34 }}>
                         <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>When the report's available, scroll down to the bottom of the report to see the epiAging test result.</Text>
+                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Your epiAging test result will be at the bottom of the page.</Text>
                     </View>
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man5.png')} resizeMode='contain' />
                 </View>

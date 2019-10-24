@@ -3,10 +3,10 @@ import { Platform, StyleSheet, StatusBar, Text, View, Image, ScrollView, Touchab
 import { I18n } from '../locales/i18n';
 
 type Props = {};
-export default class Manual1Activity extends Component<Props> {
+export default class Manual2Activity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("Manual1Activity.title"),
+            title: I18n.t("Manual2Activity.title"),
         })
     }
     constructor(props) {
@@ -29,40 +29,46 @@ export default class Manual1Activity extends Component<Props> {
                     <Text style={{ height: 123, textAlign: 'center', fontSize: 22, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>EpiAging App User Manual</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Download the IOS App from Apple Store or Android App from Google Play Store.</Text>
+                        <Text style={{ height: 67, width: '95%', fontSize: 18,  fontFamily: 'FontAwesome', lineHeight: 21 }}>Download the IOS App from Apple Store or Android App from Google Play Store.</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Make sure to login with the account that has been used to purchase the epiAging product.</Text>
+                        <Text style={{ height: 34, width: '7%', fontSize: 18,textAlignVertical:'center', fontWeight: 'bold' }}>2.</Text>
+                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>Click here to register an account.</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/man6.png')} resizeMode='contain' />
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get1.png')} resizeMode='contain' />
+                    <View style={{ flexDirection: 'row',marginTop:23 }}>
+                        <Text style={{ height: 34, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
+                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>Fill in the registration information.</Text>
+                    </View>
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get2.png')} resizeMode='contain' />
+
+                    {/*  */}
+                    <View style={{ flexDirection: 'row',marginTop:23 }}>
+                        <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
+                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome'}}>Go to the registration mailbox to activate your account.</Text>
+                    </View>
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get3.png')} resizeMode='contain' />
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 34, width: '7%', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
-                        <Text style={{ fontSize: 16, height: 34 }}>Your username will appear after you log in.</Text>
+                        <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
+                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18,fontFamily: 'FontAwesome'}}>Login with the account you just registered.</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/man7.png')} resizeMode='contain' />
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get4.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Go to “HOME” or “EPICENTER” and click “My report”.</Text>
+                        <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>6.</Text>
+                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome',  }}>Set your unique private key.</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/man0.png')} resizeMode='contain' />
-
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get5.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Enter(Scan) the barcode on your test tube and get your epiAging report.</Text>
+                        <Text style={{ height: 34, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
+                        <Text style={{ fontSize: 16, height: 34 ,textAlignVertical:'center',}}>The unique private key well be sent to your mailbox</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man2.png')} resizeMode='contain' />
-                    <View style={{ flexDirection: 'row',marginTop:34 }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>After entered your barcode, by clicking here to get your epiAging test report.</Text>
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get6.png')} resizeMode='contain' />
+                    <View style={{ flexDirection: 'row',marginTop:23 }}>
+                        <Text style={{ height: 67, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>7.</Text>
+                        <Text style={{ height: 67, width: '95%', textAlignVertical:'center',fontSize: 18, fontFamily: 'FontAwesome' }}>Go to "SHOPPING" to purchase the EpiAging test kit.</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man3.png')} resizeMode='contain' />
-                    <View style={{ flexDirection: 'row',marginTop:34 }}>
-                        <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>When the report's available, scroll down to the bottom of the report to see the epiAging test result.</Text>
-                    </View>
-                    <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man5.png')} resizeMode='contain' />
+                    <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get7.png')} resizeMode='contain' />
                 </View>
                 <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>{I18n.t('TabHomeActivity.allright')}</Text>
 
