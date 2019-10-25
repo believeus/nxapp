@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Platform, StatusBar, Text, View, Image, ScrollView, TouchableOpacity, Modal, Button } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { WebView } from 'react-native-webview';
+import FitImage from 'react-native-fit-image';
 type Props = {};
 export default class SameActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -36,7 +37,7 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <Image style={{ height: 234, width: '100%' }} resizeMode='cover' source={require("../image/enpic/sam1.jpg")}></Image>
+                <FitImage style={{ height: 234, width: '100%' }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")} />
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>SAM-e &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
@@ -47,68 +48,69 @@ export default class SameActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Image style={{ height: 497, width: '100%', marginBottom: 20 }} resizeMode='cover' source={require("../image/enpic/sam2.png")}></Image>
+                <FitImage style={{ height: 456, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")} />
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
 
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 34, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 34, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is a nutritional supplement not a drug.</Text>
+                        <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is a nutritional supplement not a drug.</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e (S-Adenosyl Methionine) is a chemical found naturally in the body.</Text>
+                        <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e (S-Adenosyl Methionine) is a chemical found naturally in the body.</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is considered the most important methyl donor in the body.</Text>
+                        <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is considered the most important methyl donor in the body.</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 102, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 102, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>The level of SAM-e decreases as the body ages. Concomitantly, a number of health issues,including mood, joint, and liver disorders are likely to occur.</Text>
+                        <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>The level of SAM-e decreases as the body ages. Concomitantly, a number of health issues,including mood, joint, and liver disorders are likely to occur.</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 66, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>All SAM-e molecules have two forms: the SS (active) isomer and the RS (inactive) isomer.</Text>
+                        <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>All SAM-e molecules have two forms: the SS (active) isomer and the RS (inactive) isomer.</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 119, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 119, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>While SAM-e comes in two stable salt forms; tosylate  and butane disulphanate, only the tosylate form is  backed by twenty years of research for safety and effectiveness.</Text>
+                        <Text style={{ height: 119, width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ height: 119, width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>While SAM-e comes in two stable salt forms; tosylate  and butane disulphanate, only the tosylate form is  backed by twenty years of research for safety and effectiveness.</Text>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6' }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                        <Text style={{ height: 77, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>According to clinical studies,sam-e can improve emotional health, joint relaxation and liver function</Text>
+                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>According to clinical studies,sam-e can improve emotional health, joint relaxation and liver function</Text>
                         <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/enpic/sam3.png")}></Image>
                         <View style={{ width: '96%', height: 123, backgroundColor: '#C1E1E8', borderRadius: 10, alignSelf: 'center', marginBottom: 34 }}>
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>In March of 2003, the AHRQ (Agency for Healthcare Research and Quality) a division of the United States Health and Human Services, released the findings of a major study on SAM-e.</Text>
                             <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }); this.setState({ display: true }) }}>
-                                <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10 }}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
-                                <Text style={{ height: 47, width: '10%', alignSelf: 'baseline', fontSize: 34, color: '#c1e1e8' }}>▼</Text>
+                                <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10 ,textDecorationLine:'underline'}}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
+                               
                                 </Text>
                             </TouchableOpacity>
+                            <Text style={{ height: 47, width: '10%', alignSelf: 'baseline',fontStyle:'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is as effective as conventional prescription medications in the treatment of depression</Text>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is as effective as conventional prescription medications in the treatment of depression</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is as effective as standard prescription medications (NSAIDs) in the treatment of osteoarthritis</Text>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e is as effective as standard prescription medications (NSAIDs) in the treatment of osteoarthritis</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <Text style={{ height: 56, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e has significant benefits for patients suffering from various liver diseases.</Text>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>SAM-e has significant benefits for patients suffering from various liver diseases.</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Natural SAM-e was not found to have any noticeable side effects.</Text>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Natural SAM-e was not found to have any noticeable side effects.</Text>
                         </View>
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ height: 77, fontSize: 21, fontFamily: 'FontAwesome', lineHeight: 22, }}> SAM-e in spotlight</Text>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
+                        <Text style={{ width: '28%',  fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
                         <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
@@ -142,7 +144,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '28%', height: 158, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
                         <Text style={{ width: '70%', height: 158, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>General Hospital demonstrated that SAM-e combined with antidepressants significantly increased remission rates in patients with major depression who failed conventional therapy.
-                                    <Text  onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" })}} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
+                                    <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }) }} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
                         </Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
