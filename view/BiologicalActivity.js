@@ -24,7 +24,9 @@ export default class BiologicalActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <Image style={{ height: 234, width: '100%' }} resizeMode='cover' source={require("../image/enpic/bio1.jpg")}></Image>
+                <View style={{ height: 198, width: '100%' }}>
+                    <Image style={{ height: '100%', width: '100%' }} resizeMode='contain' source={require("../image/enpic/bio1.jpg")}></Image>
+                </View>
                 <View style={{ backgroundColor: '#0071bc', height: 45, flexDirection: 'row', }}>
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('BiologicalActivity.biological')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>{I18n.t('BiologicalActivity.nice')}</Text></Text>
@@ -97,7 +99,7 @@ export default class BiologicalActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
                         <Text style={{ height: 123, fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 27, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.life')}</Text>
                         <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', fontWeight: '700' }}>{I18n.t('BiologicalActivity.know')}</Text>
-                        <Text style={{ height: 189, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.identifying')}</Text>
+                        <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.identifying')}</Text>
 
                     </View>
                 </View>
@@ -107,112 +109,109 @@ export default class BiologicalActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, marginBottom: 34 }}>
-                        <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', textAlign: 'center', lineHeight: 27, color: '#0071bc', textAlignVertical: 'center', }}>Biological age detection method</Text>
+                        <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', textAlign: 'center', lineHeight: 27, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.method')}</Text>
                         <View style={{ height: 34 }}></View>
                         <Image style={{ height: 67, width: '100%', }} resizeMode='center' source={require("../image/enpic/bio10.png")}></Image>
-                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#7E934E', textAlignVertical: 'center', }}>Telomere Length</Text>
-                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>Low correlation</Text>
-                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>High technical requirements</Text>
-                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>Small technical errors may have a decisive</Text>
-                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>impact on the results.</Text>
+                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#7E934E', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.length')}</Text>
+                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.correlation')}</Text>
+                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.requirements')}</Text>
+                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.small')}</Text>
+                        <Text style={{ height: 23, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.results')}</Text>
                         <View style={{ height: 34 }}></View>
                         <Image style={{ height: 67, width: '100%', }} resizeMode='center' source={require("../image/enpic/bio11.png")}></Image>
-                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#EB962C', }}>Metabolic age scores</Text>
-                        <Text style={{ height: 89, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', lineHeight: 27 }}>Sampling and detection methods are complex and have not been verified in a large number of population samples</Text>
+                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#EB962C', }}>{I18n.t('BiologicalActivity.scores')}</Text>
+                        <Text style={{ height: 89, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', lineHeight: 27 }}>{I18n.t('BiologicalActivity.sampling')}</Text>
                         <View style={{ backgroundColor: '#2AA9E0', borderRadius: 10, marginTop: 20 }}>
                             <Image style={{ height: 67, width: '100%', }} resizeMode='center' source={require("../image/enpic/bio12.png")}></Image>
-                            <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#ffffff' }}>Epigenetic clock</Text>
-                            <Text style={{ height: 123, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', lineHeight: 27, color: '#ffffff' }}>is closely related to the biological function of human body, and the acceleration of epigenetic clock is related to the risk of neurodegenerative diseases and cancer.</Text>
+                            <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#ffffff' }}>{I18n.t('BiologicalActivity.epigenetic')}</Text>
+                            <Text style={{ height: 123, fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', lineHeight: 27, color: '#ffffff' }}>{I18n.t('BiologicalActivity.closely')}</Text>
 
                         </View>
                     </View>
                 </View>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                    <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>epiAging</Text>
-                    <Text style={{ height: 199, fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 27, }}>epiAging uses a method called DNA methylation to determine your true age — which might, as science is thinking at this time and age, reveal some important information on your true health, and possibly the quality and even span of your life.</Text>
-                    <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>HKG epi THERAPEUTICS</Text>
-                    <Text style={{ height: 199, fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 27, }}>HKG epi THERAPEUTICS already has three decades of pioneering research in this exciting area of DNA methylation. With our unique method of diagnosing the DNA methylation stored in your cells in saliva, we reveal your actual age, which may encourage you to make lifestyle changes that some evidence suggetss might lead to the following:</Text>
+                    <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.epiagings')}</Text>
+                    <Text style={{ height: 199, fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 27, }}>{I18n.t('BiologicalActivity.methylation')}</Text>
+                    <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.hkepi')}</Text>
+                    <Text style={{ height: 199, fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 27, }}>{I18n.t('BiologicalActivity.already')}</Text>
                 </View>
                 <View style={{ height: 278, width: '90%', alignSelf: 'center', borderRadius: 10, justifyContent: 'space-around', backgroundColor: '#f0f0f0', }}>
                     <View style={{ heigh: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                         <View style={{ width: '45%', borderRadius: 20 }}>
                             <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio1.png')} resizeMode='center' />
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Slow Down The Aging Process</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.slow')}</Text>
                         </View>
                         <View style={{ width: '45%', borderRadius: 20 }}>
                             <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio2.png')} resizeMode='center' />
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Prevent Disease Before Onset</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.onset')}</Text>
                         </View>
                     </View>
                     <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                         <View style={{ width: '45%', borderRadius: 20 }}>
                             <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/biolo3.png')} resizeMode='center' />
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Imporve Your Quality Of Life</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.quality')}</Text>
                         </View>
                         <View style={{ width: '45%', borderRadius: 20 }}>
                             <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio4.png')} resizeMode='center' />
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>Extend The Lenght Of Your Life</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.extend')}</Text>
                         </View>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', marginTop: 34, }}>
                     <View style={{ width: '90%', alignSelf: 'center', }}>
-                        <Text style={{ height: 93, fontSize: 22, fontFamily: 'FontAwesome', textAlignVertical: 'center', color: '#0071bc' }}>Making Science Simple</Text>
-                        <Text style={{ height: 34, fontSize: 16, fontWeight: '800', marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>How Fast Is Your Biological Clock Ticking?</Text>
-                        <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>If your chronological age is 50 and your biological age is 35, excellent! But if your chronological age is 35 and your biological age says that you’re 50 years old — it might be the alarm calling on you to make life style changes.</Text>
-                        <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>Advanced aging is possibly associated with increased risk of serious illness. Epigenetics may not be The Fountain of Youth but it is The Fountain of Life.</Text>
-                        <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>So grab the key and learn how old you are, really!</Text>
+                        <Text style={{ height: 93, fontSize: 22, fontFamily: 'FontAwesome', textAlignVertical: 'center', color: '#0071bc' }}>{I18n.t('BiologicalActivity.making')}</Text>
+                        <Text style={{ height: 34, fontSize: 16, fontWeight: '800', marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.fast')}</Text>
+                        <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.chronologicaled')}</Text>
+                        <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.possibly')}</Text>
+                        <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.really')}</Text>
                         <Image style={{ height: 289, width: '100%' }} resizeMode='cover' source={require("../image/enpic/bio9.png")}></Image>
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                    <Text style={{ height: 93, fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>The Epiaging test</Text>
-                    <Text style={{ height: 67, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>We developed and introduced a convenient and efficient Epiaging detection test.</Text>
-                    <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>Scientists at HKG epitherapeutics have mined a large number of age-related CG methylation sites in hundreds of published DNA methylation data, and selected a region containing 13 methylation sites from which saliva samples can accurately predict biological age.</Text>
-                    <Text style={{ height: 123, fontSize: 22,lineHeight:28, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>Discover Your Biological Age in 5 Simple Steps,change your lifestyle and improve your health</Text>
+                    <Text style={{ height: 93, fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.test')}</Text>
+                    <Text style={{ height: 67, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.developed')}</Text>
+                    <Text style={{ height: 99, fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.epitherapeutics')}</Text>
+                    <Text style={{ height: 123, fontSize: 22, lineHeight: 28, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.steps')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <View style={{ borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ height: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>STEP 1: DOWNLOAD THE APP</Text>
+                            <Text style={{ height: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.download')}</Text>
                             <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio5.png")}></Image>
                         </View>
-                        <Text style={{ height: 77, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>Download the app, register and request your EpiAging Test You will then receive your saliva collection tube in the mail.</Text>
+                        <Text style={{ height: 77, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.register')}</Text>
                     </View>
-                    <View style={{marginTop:24,  borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
+                    <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>STEP 2: SPIT. SEAL. SHIP</Text>
+                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step2')}</Text>
                             <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio6.png")}></Image>
                         </View>
-                        <Text style={{ height: 77, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>Expel your saliva(spit)into the tube, close and seal the envelope and send your test packet to our lab with its self-addressed postage.</Text>
+                        <Text style={{ height: 77, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.saliva')}</Text>
                     </View>
-                    <View style={{marginTop:24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
+                    <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>STEP 3: ANSWER THE QUESTIONS AND ENTER THE DATA</Text>
+                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step3')}</Text>
                             <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio7.png")}></Image>
                         </View>
-                        <Text style={{ height: 256, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>Open the questionnaire button. Enter your data. Save the data Compare your data with the recommendations and make changes or order nutritional supplements. Report the changes frequently. Higher quality of reporting will enable high quality analysis and a more accurate"personalized recommendation to you. You will get a continuous report on your
-App describing your progress. Once data accumutates, a personalized report of possible changes will be provided in your App.</Text>
+                        <Text style={{ height: 256, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.questionnaire')}</Text>
                     </View>
-                    <View style={{marginTop:24,  borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
+                    <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>STEP 4: DISCOVER YOUR AGE</Text>
+                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step4')}</Text>
                             <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio8.png")}></Image>
                         </View>
-                        <Text style={{ height: 89, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>Our state-of-the-art lab will analyze your epi-genetic data to calculate your biological age,and you can view personalized reports
-through the APP.</Text>
+                        <Text style={{ height: 89, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.analyze')}</Text>
                     </View>
-                    <View style={{marginTop:24,  borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
+                    <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>STEP 5: MAKE LIFESTYLE CHANGES IMPROVE YOUR HEALTH</Text>
+                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step5')}</Text>
                             <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio9.png")}></Image>
                         </View>
-                        <Text style={{ height: 169, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>We will also analyze your lifestyle data. You keep making changes in lifestyle and report. You get personalized reports on your 
-Progress Order periodically new epiAging tests to assess your progress. A new analysis will be provided with some suggestions. Keep improving and testing your epiAge.</Text>
+                        <Text style={{ height: 169, margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.lifestyle')}</Text>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('BiologicalActivity.foot')}</Text>
             </ScrollView >
         );
     }
