@@ -31,11 +31,11 @@ export default class ConsentActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
-                    <Text style={{ height: 34, width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.consent')}</Text>
+                    <Text style={{ height: 34, width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}></Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ height: 33, width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.user')}</Text>
-                    <Text style={{ height: 66, width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.welcome')} <Text style={{ fontStyle: 'italic' }}> {I18n.t('ConsentActivity.epi')}</Text>
+                    <Text style={{ height: 66, width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}><Text style={{ fontStyle: 'italic' }}></Text></Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ height: 33, width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>About  <Text style={{ fontStyle: 'italic' }}> EPIAGING APP</Text></Text>
