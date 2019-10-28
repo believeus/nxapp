@@ -100,8 +100,9 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                    <Text style={{  fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 28, color: '#0071bc', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.longevity')}</Text>
-                    <FitImage style={{ height: 289, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/bio-3.png")}/>
+
+                    <Text style={{ height: 123, fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 27, color: '#0071bc', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.longevity')}</Text>
+                    <Image style={{ height: 289, width: '100%', marginBottom: 34 }} resizeMode='cover' source={require("../image/enpic/bio3.jpg")}></Image>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, marginBottom: 34 }}>
@@ -145,7 +146,7 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                     <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                         <View style={{ width: '45%', borderRadius: 20 }}>
-                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/biolo3.png')} resizeMode='center' />
+                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/sun.png')} resizeMode='center' />
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.quality')}</Text>
                         </View>
                         <View style={{ width: '45%', borderRadius: 20 }}>

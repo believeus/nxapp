@@ -8,7 +8,7 @@ import data from '../appdata'
 import moment from 'moment'
 import AesCrypto from 'react-native-aes-kit'
 import { I18n } from '../locales/i18n';
-
+import ISlider from '../component/ISlider';
 type Props = {};
 export default class SliderLineChart extends Component<Props> {
     constructor(props) {
@@ -115,7 +115,7 @@ export default class SliderLineChart extends Component<Props> {
                 </StatusBar>
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.props.refUrl }} />
+                        <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.props.refUrl }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
                             <TouchableOpacity style={{ width: "100%", height: "100%" }}>
                                 <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
@@ -128,11 +128,36 @@ export default class SliderLineChart extends Component<Props> {
                     {this.props.refTitle ? <View style={{ width: "90%", height: 25 }}><TouchableOpacity onPress={() => { this.setState({ display: true }) }}><Text style={{ fontSize: 14, color: "#0071BC", textDecorationLine: "underline" }}>{this.props.refTitle}</Text></TouchableOpacity></View> : null}
                     {this.props.desc ? this.props.desc : null}
                 </View>
-                <View style={{ height: 250, flexDirection: "row", width: "100%" }}>
-                    <View style={{ height: "100%", width: "96%" }}>
+                <View style={{ height: 250, width: "100%", alignItems: "center" }}>
+                    <View style={{ height: "100%", width: "100%" }}>
                         <ECharts ref={(ref) => { this.echarts = ref }} option={this.state.option} />
                     </View>
-                    <View style={{ height: "100%", width: "4%" }}>
+                    <View style={{ width: "90%", height: 300, alignItems: "center" }}>
+                        <ISlider
+                            height={30}
+                            min={this.props.min}
+                            max={this.props.max}
+                            defaultValue={0}
+                            step={1}
+                            onAfterChange={(value) => {
+                                const iv = '1010101010101010'
+                                let privatekey = this.state.user.privatekey
+                                let uuid = this.state.user.uuid
+                                //解密
+                                AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
+                                    let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                    fetch(url).then(res => res.text()).then((data) => {
+                                        this.load();
+                                    })
+                                })
+                            }}
+                            maximumTrackTintColor="#dcdbdb"
+                            minimumTrackTintColor="#577bff"
+                            processHeight={30}
+                            gradient={this.props.gradient}
+                        />
+                    </View>
+                    {/* <View style={{ height: "100%", width: "4%" }}>
                         <Slider
                             value={this.props.sliderDefualtValue}
                             disabled={false}
@@ -172,7 +197,7 @@ export default class SliderLineChart extends Component<Props> {
                             ballIndicatorColor={"#0071BC"}
                             ballIndicatorTextColor={"white"}
                         />
-                    </View>
+                    </View> */}
                 </View>
             </View>
         );

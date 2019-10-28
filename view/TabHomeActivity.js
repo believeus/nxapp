@@ -4,6 +4,7 @@ import { StyleSheet, Platform, StatusBar, Text, View, Image, ScrollView, ImageBa
 import Swiper from 'react-native-swiper';
 import AwesomeAlert from 'react-native-awesome-alerts';
 import VideoPlayer from 'react-native-video-controls';
+
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 import data from '../appdata'
@@ -68,6 +69,7 @@ export default class TabHomeActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: "100%", height: 345 }}>
+                  
                     <Swiper
                         height={340}//组件高度
                         horizontal={true}//水平轮播
@@ -98,6 +100,7 @@ export default class TabHomeActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '90%',marginTop:34,marginBottom:34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
                         <ImageBackground style={{ width: '100%', heigh: '100%', alignSelf: 'center' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'  >
+
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%' }}></Text>

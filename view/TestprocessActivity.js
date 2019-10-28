@@ -12,6 +12,7 @@ export default class TestprocessActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
+        this.state={user: null}
     }
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
