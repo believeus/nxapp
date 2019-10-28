@@ -31,7 +31,7 @@ export default class ConsentActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
-                    <Text style={{ height: 34, width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}></Text>
+                    <Text style={{ height: 34, width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.customer')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ height: 33, width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.users')}</Text>

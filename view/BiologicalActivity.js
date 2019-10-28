@@ -46,13 +46,13 @@ export default class BiologicalActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                         <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.hardware')}</Text>
                         <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.paradigm')}</Text>
-                        <Text style={{ height: 156, fontSize: 14, marginBottom: 15, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.suggest')} <Text style={{ fontStyle: 'italic', color: '#0071bc' }}>{I18n.t('BiologicalActivity.ncbi')}</Text>{I18n.t('BiologicalActivity.still')}</Text>
+                        <Text style={{ height: 156, fontSize: 14, marginBottom: 15, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.suggest')} <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#0071bc' }}>https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease</Text>{I18n.t('BiologicalActivity.still')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 45, }}>
                     <Image style={{ height: 199, width: '100%', marginBottom: 34 }} resizeMode='cover' source={require("../image/enpic/bio3.jpg")}></Image>
                     <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.epigenetics')}</Text>
-                    <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.studies')} <Text style={{ fontStyle: 'italic', color: '#0071bc' }}>{I18n.t('BiologicalActivity.pubmed')}</Text>)</Text>
+                    <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.studies')} <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/30350398" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#0071bc' }}>https://www.ncbi.nlm.nih.gov/pubmed/30350398</Text>)</Text>
                     <Image style={{ height: 199, width: '100%', marginBottom: 34 }} resizeMode='cover' source={require("../image/enpic/bio4.jpg")}></Image>
                     <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.including')}</Text>
                     <Text style={{  fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.learn')} </Text>
