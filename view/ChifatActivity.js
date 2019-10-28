@@ -76,12 +76,12 @@ export default class ChifatActivity extends Component<Props> {
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/chifat.png")}></Image>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Chi Fat Wong Ph.D.</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Senior Scientist</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>HKG epiTHERAPEUTICS Ltd.</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('ChifatActivity.title')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ChifatActivity.senior')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ChifatActivity.ltb')}</Text>
                 </View>
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ChifatActivity.experiences')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
@@ -90,34 +90,34 @@ export default class ChifatActivity extends Component<Props> {
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2017-now
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>HKG Epitherapeutics, Hong Kong</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ChifatActivity.hongkong')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 56, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>SRC,China</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Senior Scientist </Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ChifatActivity.src')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ChifatActivity.scientist')} </Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light',fontSize:12, textAlign: 'center' }}>2010,2016-2017
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>The University of Hong Kong</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ChifatActivity.university')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Research Assistant</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ChifatActivity.assistaant')}</Text>
                     </View>
                 </View>
 
 
                 <View style={{ height: 20 }}></View>
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('ChifatActivity.papers')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ width: '90%', height: 88, alignSelf: 'center' }}>
@@ -157,7 +157,7 @@ export default class ChifatActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('ChifatActivity.rights')}</Text>
             </ScrollView >
 
         );

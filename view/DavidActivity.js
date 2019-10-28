@@ -26,14 +26,14 @@ const FirstRoute = () => (
 const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
     <View style={{ height: 20 }}></View>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>2017 Sixth Asian Chromatin and Chromosome Forum <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Hyderabad, India)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>2016 3rd Canadian Conference on Epigenetics of Development and Diseases <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>(Canada)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>2011 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Hyderabad, India)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>2010 First Scientific Conference of the Medical Research Institute of Hebrew University in Israel-Hadassah Medical College, Canada <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Erat, Israel)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>Twenty-first European Union for Cancer Research Conference, 2010 <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Oslo, Norway)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>The 8th European Conference on Glial Cell Health and Diseases, 2009  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Paris, France)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>2008 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(New York, USA)</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>The 8th European Conference on Gliocyte Health and Diseases, 2007 <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(London, UK) </Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.Hyindia')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.new')}</Text></Text>
+    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')} </Text></Text>
 </View>
 );
 const styles = StyleSheet.create({

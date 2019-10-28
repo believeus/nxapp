@@ -82,19 +82,19 @@ const FirstRoute = () => (
 
 const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Member of the Royal Society of Canada</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2011 -- CCNP Neuropsychopharmacology &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Innovation Award</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2009 -- Radio Canada Annual Scientist Award</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2013 -- Carolinska Speech at the Nobel Forum</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2007 -- GlaxoSmithKline Pharmacology</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>2001 -- Medical College Teaching Honors List</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Carrie Derek Graduate Teaching Guidance &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Award</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1999 -- Israel Cancer Research Foundation "Eliot &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Osseman Outstanding Contribution Award" </Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1989-1995 --  Canadian National Cancer Institute &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Outstanding Young Professor Award" </Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1987 -- American Cancer Society Scholarship</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1984 -- Rothschild Scholarship</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Medical Scholarship of Hebrew University</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>1980 -- Distinguished master</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.member')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.ccnp')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{I18n.t('ProfMosheActivity.award')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.radio')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.forum')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.pharma')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.list')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.carrie')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {I18n.t('ProfMosheActivity.awardd')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.foundation')} "{I18n.t('ProfMosheActivity.eliot')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {I18n.t('ProfMosheActivity.osseman')}" </Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.institute')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "{I18n.t('ProfMosheActivity.young')}" </Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.scholarship')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.rothshiild')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.university')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.masteer')}</Text>
     </View>
 );
 const ThirddRoute = () => (
@@ -106,14 +106,14 @@ const ThirddRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010-2013
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Health Research</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.halth')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute- Canadian Health research Cooperative Team in China</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$166,666</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.team')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.c')}</Text>
             </View>
 
         </View>
@@ -121,14 +121,14 @@ const ThirddRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2007-2012
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian National Cancer</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.cancer')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute-Demethylase Analysis</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$141,000</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.cc')}</Text>
             </View>
 
         </View>
@@ -136,14 +136,14 @@ const ThirddRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2005-2010
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian Institute of health-DNA </Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.health')} </Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Methyltransferase I Inhibitor and its Therapeutic Prospect</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$168,158</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.cccc')}</Text>
             </View>
 
         </View>
@@ -151,14 +151,14 @@ const ThirddRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1997-2000
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Canadian council for Natural</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.natural')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>science and engineering research</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$145,500</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.ccc')}</Text>
             </View>
 
         </View>
@@ -166,13 +166,13 @@ const ThirddRoute = () => (
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Department of Pharmacology and</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.departmentof')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('ProfMosheActivity.school')}</Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
             </View>
 

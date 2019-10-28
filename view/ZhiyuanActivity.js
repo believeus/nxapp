@@ -9,24 +9,24 @@ const FirstRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
         <View style={{ height: 20 }}></View>
         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>2015.05 Trainee Abstract Award,</Text>
-            The American Association Immunologists (AAI) Annual Meeting;
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.trainee')}</Text>
+            {I18n.t('ZhiyuanActivity.american')}
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>2010.09 National Scholarship,</Text>
-            China Scholarship Council;
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.scholarship')}</Text>
+            {I18n.t('ZhiyuanActivity.council')}
         </Text>
         <View style={{ paddingTop: 20, paddingBottom: 20 }}>
-            <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Ad Hoc Reviewer for Journals</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, ontStyle: 'italic', lineHeight: 21 }}>Molecular and Cellular Biochemistry</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>Annuals of Clinical Biochemistry </Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>Cellular and Molecular Biology</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>Journal of Immunoassay and Immunochemistry </Text>
+            <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.journals')}</Text>
+            <Text style={{ fontFamily: 'FontAwesome', height: 23, ontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.biochemistry')}</Text>
+            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.annuals')} </Text>
+            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.cellular')}</Text>
+            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.journal')} </Text>
 
         </View>
         <View style={{ paddingTop: 20, paddingBottom: 20 }}>
-            <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>Editorial Board of Journal</Text>
-            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>Journal of Immunoassay and Immunochemistry</Text>
+            <Text style={{ fontWeight: '700', height: 34, fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.board')}</Text>
+            <Text style={{ fontFamily: 'FontAwesome', height: 23, fontStyle: 'italic', lineHeight: 21 }}>{I18n.t('ZhiyuanActivity.journal')}</Text>
         </View>
     </View>
 );
@@ -35,24 +35,24 @@ const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
         <View style={{ height: 20 }}></View>
         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            2015 Annual Meeting of the American Society of Immunologists
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(New Orleans, USA)</Text>
+        {I18n.t('ZhiyuanActivity.society')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.newusa')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>
-            Third Annual Conference of the 2014 Southeast American Symposium on Immunology
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Atlanta, USA)</Text>
+        {I18n.t('ZhiyuanActivity.third')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            2014 Georgia State University Biotechnology Seminar
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Atlanta, USA)</Text>
+        {I18n.t('ZhiyuanActivity.seminar')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            2013 Georgia State University-Nanjing University Biotechnology Seminar
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Atlanta, USA)</Text>
+        {I18n.t('ZhiyuanActivity.georgina')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.atlanta')}</Text>
         </Text>
         <Text style={{ fontFamily: 'FontAwesome', height: 67, lineHeight: 21 }}>
-            Third Asia-Pacific Diabetes Symposium 2009
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>(Nanjing, China)</Text>
+        {I18n.t('ZhiyuanActivity.symposium')}
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ZhiyuanActivity.china')}</Text>
         </Text>
     </View>
 );
@@ -73,8 +73,8 @@ export default class ZhiyuanActivity extends Component<Props> {
             display: false,
             index: 0,
             routes: [
-                { key: 'first', title: 'HONORS' },
-                { key: 'second', title: 'CONFERENCES' },
+                { key: 'first', title: I18n.t('ZhiyuanActivity.honors') },
+                { key: 'second', title: I18n.t('ZhiyuanActivity.conferences') },
             ],
         }
     }
@@ -103,11 +103,11 @@ export default class ZhiyuanActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/jason.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Zhiyuan Lv Ph.D.</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>Lab Manager (GZ)</Text>
-                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>Beijing Epidial Medical Diagnostic Technology Co., Ltd.</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ZhiyuanActivity.manager')}</Text>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ZhiyuanActivity.beijing')}</Text>
                 </View>
                 <View style={{ marginBottom: 20, backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>| PROFESSIONAL EXPERIENCES</Text>
+                    <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ZhiyuanActivity.professional')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row' }}>
                     <Text style={{ width: '28%', height: 48, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
@@ -116,55 +116,55 @@ export default class ZhiyuanActivity extends Component<Props> {
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2017-now
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 14, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Beijing Epidial Medicine Diagnosis Co.,</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 14, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ZhiyuanActivity.epidial')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 31, fontFamily: 'NotoSansHans-Light' }}>ltd, China, HongKong HKG epiTHERAPEUTICS Co., ltd;</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Lab Manager</Text>
+                        <Text style={{ lineHeight: 31, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ZhiyuanActivity.ltd')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ZhiyuanActivity.lab')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2012 –2015
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Georgia State University, Atlanta, USA.</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ZhiyuanActivity.usa')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Postdoctoral fellow</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ZhiyuanActivity.fellow')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010 – 2012
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>Nanjing University & Georgia State</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ZhiyuanActivity.state')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>University.</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>Joint PhD student </Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ZhiyuanActivity.university')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ZhiyuanActivity.phd')} </Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >
                     <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2006 - 2012
                         </Text>
                     <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}> State Key Laboratory of Pharmaceutical</Text>
+                    <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}> {I18n.t('ZhiyuanActivity.key')}</Text>
                 </View>
                 <View style={{ flexDirection: 'row', }}>
                     <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Biotechnology, School of Lifescience, Nanjing University.</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Ph.D. Candidate</Text>
+                        <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ZhiyuanActivity.nanjing')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ZhiyuanActivity.candidate')}</Text>
                     </View>
                 </View>
 
@@ -182,7 +182,7 @@ export default class ZhiyuanActivity extends Component<Props> {
                 />
 
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >| PUBLISHED PAPERS</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('ZhiyuanActivity.papers')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ width: '90%', height: 67, alignSelf: 'center' }}>
@@ -258,7 +258,7 @@ export default class ZhiyuanActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('ZhiyuanActivity.reserved')}</Text>
             </ScrollView >
 
         );
