@@ -5,7 +5,7 @@ import AesCrypto from 'react-native-aes-kit';
 import data from '../appdata';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
-
+import FitImage from 'react-native-fit-image';
 
 export default class DnaReportActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -220,150 +220,150 @@ export default class DnaReportActivity extends Component<Props> {
                     <View style={{ height: 34, width: "100%" }}></View>
                     {this.state.visual == true ?
                         <View style={{ width: "100%", alignItems: "center" }}>
-                            <Image style={{ width: '100%', height: 289, }} resizeMode='cover' source={require("../image/enpic/rep1.png")}></Image>
+                            <FitImage style={{ width: '100%', height: 289, }} resizeMode='contain' source={require("../image/enpic/rep1.png")}/>
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>People age at different rates. Some “look” and “feel” older than their chronological age while other look younger than their chronological age.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.look')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Our biological age is a better parameter of our health well being and life span than our chronological age.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.parameter')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>DNA is the hard ware, genetics is the operating system and DNA methylation and other epigenetic factors are the software that programs the genome.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.hardware')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 145, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>A paradigm shift in the search for biological age markers occurred with the discovery of the “epigenetic clock” by Horvath, which is based on measurement of DNA methylation status at hundreds of strategic positions in DNA. This "epigenetic clock" is a measure of our biological ages.</Text>
+                                    <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.shift')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 123, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>In most people the "epigenetic age" measured by the epigenetic clock and the "chronological age" measured by the calendar are very similar. The correlation between the two measures across the population is close to 0.9 when 1 is a perfect correlation.</Text>
+                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.clock')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 145, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>However in some people the "epigenetic age" is different from the "chronological age". Sometimes the "epigenetic clock" moves faster than the "chronological clock".We consider a difference that is larger than the standard deviation (or the normal distribution in the population) as a significant change.</Text>
+                                    <Text style={{ height: 145, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.different')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 167, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 167, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Studies suggest that accelerated “epigenetic clock” might be associated with increased risk for several age related chronic disease such as cardiovascular disease and cancer at later age. (link: https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease). This is however still an open field and more studies are needed.</Text>
+                                    <Text style={{ height: 167, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.studies')}</Text>
                                 </View>
                             </View>
                             <View style={{ height: 10, width: '100%', backgroundColor: '#f0f0f0' }}></View>
                             <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                                 <View style={{ flexDirection: 'row' }}>
-                                    <Text style={{ height: 99, width: '70%', fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 23, lineHeight: 26, }}>What is the<Text style={{ color: '#0071bc', fontSize: 21 }}> epiAging test?</Text><Text style={{ color: '#0071bc' }}> What does it mean?</Text></Text>
+                                    <Text style={{ height: 99, width: '70%', fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 23, lineHeight: 26, }}>{I18n.t('DnaReportActivity.what')}<Text style={{ color: '#0071bc', fontSize: 21 }}>{I18n.t('DnaReportActivity.epiage')}</Text><Text style={{ color: '#0071bc' }}>{I18n.t('DnaReportActivity.mean')}</Text></Text>
                                     <Image style={{ height: 99, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/rep2.png")}></Image>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 99, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>After extensive data mining, we have discovered a single age-related CG methylation region that was sufficient to accurately predict biological age using saliva.</Text>
+                                    <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.cg')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 156, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 156, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We prepare DNA from your saliva and then measure the level of DNA methylation in several positions in a fragment of your genome using next generation sequencing and bisulfite mapping. Your states of DNA methylation are inserted into a methematical equation that calculates the "epigenetic age" as a function of the level of DNA methylation.</Text>
+                                    <Text style={{ height: 156, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.dna')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 223, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 223, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We consider it as a “red flag” when your “epigenetic age” deviates from your "chronological age" by one standard deviation. Standard deviation provides an idea about the distribution of difference from the mean in the normal population, which at this point of analysis is 5 years.At this stage, if your "epigenetic age" is 5 years older than your "chronological age" you might consider the result as a "red flag". As more tests are accumulated we will get a more accurate number of the “normal distribution”.</Text>
+                                    <Text style={{ height: 223, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.redflag')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 134, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 134, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Although it is still not clear how one can decelerate his "epigenetic clock" , lifestyle changes recommended by most national medical associations are perhaps a starting point. An older age is a “red flag” not more that suggest that perhaps it is time to make some life style changes.</Text>
+                                    <Text style={{ height: 134, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.changes')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>A "red flag" might prompt you to act on your lifestyle or consult your physician for a check up.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.act')}</Text>
                                 </View>
-                                <Image style={{ height: 113, width: '50%', alignSelf: 'flex-end' }} resizeMode='cover' source={require("../image/enpic/rep3.png")}></Image>
+                                <Image style={{ height: 113, width: '50%', alignSelf: 'flex-end' }} resizeMode='contain' source={require("../image/enpic/rep3.png")}></Image>
                             </View>
                             <View style={{ height: 10, width: '100%', backgroundColor: '#f0f0f0' }}></View>
                             <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ flexDirection: 'column', width: '45%' }}>
-                                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, }}>What can i do if my </Text>
+                                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('DnaReportActivity.do')} </Text>
                                         <Image style={{ height: 123, }} resizeMode='contain' source={require("../image/enpic/rep4.png")}></Image>
                                     </View>
-                                    <Text style={{ height: 99, width: '55%', fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 26, }}><Text style={{ color: '#0071bc', fontSize: 22 }}>"epigenetic Age" is Older?</Text></Text>
+                                    <Text style={{ height: 99, width: '55%', fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 26, }}><Text style={{ color: '#0071bc', fontSize: 22 }}>{I18n.t('DnaReportActivity.older')}</Text></Text>
                                 </View>
 
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 99, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>"Epigenetics" is different from "genetics" in a substantial way that epigenetics is potentially reversible by dietary interventions and lifestyle changes. So, it might be possible to reverse the “epigenetic clock”.</Text>
+                                    <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.genetics')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Preliminary studies show that dietary changes can cause deceleration of epigenetic clock in certain people, however this is still an open question. ( https://www.ncbi.nlm.nih.gov/pubmed/30350398)</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.open')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 67, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 67, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Lifestyle changes including exercise and dietary habits have been recommended by national medical associations for some time, however, we need more data about the most advisable changes and they should be personalized.</Text>
+                                    <Text style={{ height: 67, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.exercise')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ width: '60%', flexDirection: 'row' }}>
                                         <Text style={{ height: 289, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                        <Text style={{ height: 289, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>A way for us to learn about advisable lifestyle changes is sharing our experiences with others and analyzing the impact of differences in lifestyle in a large population. This is now possible using sharing technologies such as Apps as well as artificial intelligence that could determine how different inputs such as “lifestyle” habits affect an outcome--the “epigenetic clock".</Text>
+                                        <Text style={{ height: 289, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.way')}</Text>
                                     </View>
                                     <Image style={{ width: '40%', height: 289, }} resizeMode='contain' source={require("../image/enpic/rep5.png")}></Image>
                                 </View>
                             </View>
                             <View style={{ height: 10, width: '100%', backgroundColor: '#f0f0f0' }}></View>
-                            <Image style={{ width: '100%', height: 289, }} resizeMode='cover' source={require("../image/enpic/rep6.png")}></Image>
+                            <Image style={{ width: '100%', height: 289, }} resizeMode='contain' source={require("../image/enpic/rep6.png")}></Image>
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 99, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Our App links you to information on recommended lifestyle behaviors by important US national medical association as well as possible nutritional supplements such as SAMe, vitamin A, D and C.</Text>
+                                    <Text style={{ height: 99, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.links')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 123, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>These links are updated regularly and we suggest that you keep updating by examining the links periodically. These recommendations are based on what “science” knows today, they are not perfect. With more data and more analysis science is improving.</Text>
+                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.updated')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 123, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Our first report is based on the lifestyle data that you have entered which shows how far your lifestyle parameters deviate from consensus recommendations. You might decide to make changes based on this report.</Text>
+                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.first')}</Text>
                                 </View>
                             </View>
                             <View style={{ height: 10, width: '100%', backgroundColor: '#f0f0f0' }}></View>
-                            <Image style={{ width: '100%', height: 289, }} resizeMode='cover' source={require("../image/enpic/rep7.png")}></Image>
+                            <Image style={{ width: '100%', height: 289, }} resizeMode='contain' source={require("../image/enpic/rep7.png")}></Image>
                             <View style={{ height: 88, width: '80%', alignSelf: 'flex-end', }}>
-                                <Text style={{ height: 24, fontSize: 16, }}>A dynamic long-term partnership </Text>
-                                <Text style={{ height: 67, fontSize: 24, lineHeight: 28, color: '#0071bc' }}>to achieve "Healthy Aging"</Text>
+                                <Text style={{ height: 24, fontSize: 16, }}>{I18n.t('DnaReportActivity.dynamic')}</Text>
+                                <Text style={{ height: 67, fontSize: 24, lineHeight: 28, color: '#0071bc' }}>{I18n.t('DnaReportActivity.achice')}</Text>
                             </View>
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 34, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 34, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We suggest that you keep entering your life style data.</Text>
+                                    <Text style={{ height: 34, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.suggest')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 89, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 89, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>You will update your life style data as regularly as you widh. You might update all questions, some or none. However, we believe that accurate reporting will allows us to provide you with a better analysis.</Text>
+                                    <Text style={{ height: 89, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.update')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We suggest that in 6 months or maximally a year you submit your saliva to a second test.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.second')}</Text>
                                 </View>
 
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 123, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Your data will be anonymized. Your data and data from mamy other anonymoous users will be analyzed by artificial intelligenece to develop a "model",which measures the impact of life style changes on "epigenetic clock".</Text>
+                                    <Text style={{ height: 123, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.anonymized')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Once more data is accumulated, the "model" will examine your life style data and results of the test will be shared with you.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.model')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We will analyze your "epigenetic age" and report on the progress and the lifestyle changes that you have made.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.analyze')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Possible routes for change will be offered based on our "model" and your data.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.routes')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '7%', fontSize: 12, color: '#939598' }}>●</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>We hope that together we will be able to coevolve your well being and our "epiAging" learning environment. </Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.coevolve')}</Text>
                                 </View>
                             </View>
 
@@ -376,8 +376,8 @@ export default class DnaReportActivity extends Component<Props> {
                                     <View style={{ width: '33%', height: 189, flexDirection: 'column', marginTop: 23 }}>
                                         <Image style={{ width: '100%', height: 34, }} resizeMode='contain' source={require("../image/icons/rep-cho.png")}></Image>
                                         <View style={{ height: 67, width: '100%', paddingTop: 12 }}>
-                                            <Text style={{ fontSize: 12, height: 24, fontFamily: 'FontAwesome', textAlign: 'center' }}>Your </Text>
-                                            <Text style={{ fontSize: 12, height: 24, width: 123, fontFamily: 'FontAwesome', }}>/Chronological age/</Text>
+                                            <Text style={{ fontSize: 12, height: 24, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.your')} </Text>
+                                            <Text style={{ fontSize: 12, height: 24, width: 123, fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                         </View>
                                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 34, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{this.state.naturally}</Text>
                                     </View>
@@ -387,8 +387,8 @@ export default class DnaReportActivity extends Component<Props> {
                                     <View style={{ width: '33%', height: 189, flexDirection: 'column', marginTop: 23 }}>
                                         <Image style={{ width: '100%', height: 34, }} resizeMode='contain' source={require("../image/icons/rep-bio.png")}></Image>
                                         <View style={{ height: 67, width: '100%', paddingTop: 12, }}>
-                                            <Text style={{ fontSize: 12, height: 24, fontFamily: 'FontAwesome', textAlign: 'center' }}>Your </Text>
-                                            <Text style={{ fontSize: 12, height: 24, textAlign: 'center', fontFamily: 'FontAwesome', }}>/Biological age/</Text>
+                                            <Text style={{ fontSize: 12, height: 24, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.your')}  </Text>
+                                            <Text style={{ fontSize: 12, height: 24, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.bio')}</Text>
                                         </View>
                                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 34, color: '#f15929', fontWeight: 'bold', textAlign: 'center' }}>{this.state.biological}</Text>
                                     </View>
@@ -396,12 +396,12 @@ export default class DnaReportActivity extends Component<Props> {
                                 {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
                                         <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/smail.png")}></Image>
-                                        <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#3e9c9c", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years younger than your chronological age.</Text></View>
+                                        <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#3e9c9c", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>{I18n.t('DnaReportActivity.is')} {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.younger')} </Text></View>
                                     </View>
                                     :
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
                                         <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/sad.png")}></Image>
-                                        <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>Your biological age is {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)} years older than your chronological age.</Text></View>
+                                        <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>{I18n.t('DnaReportActivity.is')}  {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.old')} </Text></View>
                                     </View>
                                 }
                             </View>
@@ -421,15 +421,15 @@ export default class DnaReportActivity extends Component<Props> {
                         <View style={{ flexDirection: 'row' }}>
                             <Image style={{ height: 18, width: '6%' }} resizeMode="center" source={require("../image/icons/rep-green.png")}></Image>
                             <Image style={{ height: 18, width: '6%' }} resizeMode="center" source={require("../image/icons/rep-red.png")}></Image>
-                            <Text style={{ height: 27, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>(with a number in it)Your biological age </Text>
+                            <Text style={{ height: 27, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.yourbio')} </Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 18, width: '12%', paddingLeft: 12, fontSize: 14, color: 'red' }}>●</Text>
-                            <Text style={{ height: 45, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>Other people, who were tested, whose Biological age is older than Chronological age</Text>
+                            <Text style={{ height: 45, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('DnaReportActivity.otherolder')}</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 18, width: '12%', paddingLeft: 12, fontSize: 14, color: 'green' }}>●</Text>
-                            <Text style={{ height: 45, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>Other people, who were tested, whose Biological age is younger than Chronological age</Text>
+                            <Text style={{ height: 45, width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('DnaReportActivity.otheryounger')}</Text>
                         </View>
                     </View>
                 </View>

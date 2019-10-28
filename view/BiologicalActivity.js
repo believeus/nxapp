@@ -35,7 +35,7 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 34, }}>
-                    <Text style={{  fontSize: 16, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('BiologicalActivity.wrinkles')}</Text>
+                    <Text style={{  fontSize: 16, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}></Text>
                     <Text style={{  fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.old')}</Text>
                     <Text style={{  fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc' }}>{I18n.t('BiologicalActivity.importment')}</Text>
                     <Image style={{ height: 196, width: '100%', marginBottom: 20 }} resizeMode='cover' source={require("../image/enpic/bio2.jpg")}></Image>
