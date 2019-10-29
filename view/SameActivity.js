@@ -40,7 +40,7 @@ export default class SameActivity extends Component<Props> {
                 <FitImage style={{ height: 234, width: '100%' }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")} />
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>{I18n.t('SameActivity.meony')}</Text></Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
                     </View>
                     <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
                         <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
@@ -113,7 +113,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '28%',  fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>{I18n.t('SameActivity.a')}
+                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
                         </Text>
                         <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
                         <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.october')}</Text>
@@ -124,7 +124,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '70%', height: 68, lineHeight: 22, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.lists')}</Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>{I18n.t('SameActivity.a')}
+                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
                         </Text>
                         <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
                         <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.research')} </Text>
@@ -135,7 +135,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.highest')}</Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>{I18n.t('SameActivity.b')}
+                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010
                         </Text>
                         <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
                         <Text style={{ width: '70%', height: 16, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.study')}</Text>
@@ -148,7 +148,7 @@ export default class SameActivity extends Component<Props> {
                         </Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>{I18n.t('SameActivity.c')}
+                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2009
                         </Text>
                         <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
                         <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.korean')}</Text>
@@ -163,7 +163,7 @@ export default class SameActivity extends Component<Props> {
 
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
-                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>{I18n.t('SameActivity.d')}
+                        <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2004
                         </Text>
                         <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
                         <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.university')} </Text>
@@ -235,7 +235,7 @@ export default class SameActivity extends Component<Props> {
                     </View>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 99, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 99, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.consistently')} <Text style={{ color: '#0071bc', fontStyle: 'italic' }}>{I18n.t('SameActivity.ss')} &gt;{I18n.t('SameActivity.rs')} &lt; {I18n.t('SameActivity.e20')}</Text> </Text>
+                        <Text style={{ height: 99, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.consistently')} <Text style={{ color: '#0071bc', fontStyle: 'italic' }}>{I18n.t('SameActivity.ss')} &gt;{I18n.t('SameActivity.rs')} &lt;20%.</Text> </Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>

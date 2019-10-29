@@ -46,12 +46,12 @@ export default class Manual1Activity extends Component<Props> {
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Enter(Scan) the barcode on your test tube and get your epiAging report.</Text>
+                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>Enter(or Scan) the barcode on your test tube and get your epiAging report.</Text>
                     </View>
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man2.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:34 }}>
                         <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>After entered your barcode, by clicking here to get your epiAging test report.</Text>
+                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>After entered your barcode, by clicking the icon to get your epiAging test report.</Text>
                     </View>
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man3.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:34 }}>

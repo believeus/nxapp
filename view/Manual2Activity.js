@@ -33,7 +33,7 @@ export default class Manual2Activity extends Component<Props> {
                     </View>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 34, width: '7%', fontSize: 18,textAlignVertical:'center', fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>Click here to register an account.</Text>
+                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>Go to " EPICENTER" and lick register to register an account.</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get1.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
