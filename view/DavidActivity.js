@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet,StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
+import { Platform, StyleSheet, StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import { WebView } from 'react-native-webview';
 import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
@@ -10,31 +10,31 @@ const FirstRoute = () => (
         <View style={{ height: 30 }}></View>
         <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>{I18n.t('DavidActivity.us')}</Text>
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
-        {I18n.t('DavidActivity.cancer')}</Text>
+            {I18n.t('DavidActivity.cancer')}</Text>
 
         <View style={{ height: 30 }}></View>
         <Text style={{ fontStyle: 'italic', lineHeight: 28, fontWeight: '700' }}>{I18n.t('DavidActivity.uspa')}</Text>
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
-        {I18n.t('DavidActivity.dna')}</Text>
-     <View style={{ height: 45 }}></View>
-     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>{I18n.t('DavidActivity.day')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text>{I18n.t('DavidActivity.israel')}</Text>
-     <Text style={{ fontFamily: 'FontAwesomet', height: 56, lineHeight: 21, }}>{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
-     <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21, }}>{I18n.t('DavidActivity.medical')}<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.excellence')}</Text></Text>
- </View>
+            {I18n.t('DavidActivity.dna')}</Text>
+        <View style={{ height: 45 }}></View>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2011-- <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text>{I18n.t('DavidActivity.israel')}</Text>
+        <Text style={{ fontFamily: 'FontAwesomet', lineHeight: 21, }}>2010--{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2009--{I18n.t('DavidActivity.medical')}<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
+    </View>
 );
 
 const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-    <View style={{ height: 20 }}></View>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.Hyindia')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 88, lineHeight: 21 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.new')}</Text></Text>
-    <Text style={{ fontFamily: 'FontAwesome', height: 56, lineHeight: 21 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')} </Text></Text>
-</View>
+        <View style={{ height: 20 }}></View>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.Hyindia')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.new')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')} </Text></Text>
+    </View>
 );
 const styles = StyleSheet.create({
     scene: {
@@ -77,7 +77,7 @@ export default class DavidActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                 {this.state.display == true ?
+                {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
@@ -181,45 +181,45 @@ export default class DavidActivity extends Component<Props> {
                 />
 
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light',  fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('DavidActivity.publshed')}</Text>
+                    <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('DavidActivity.publshed')}</Text>
                 </View>
                 <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
-                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29924424" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Identification of an Epigenetic Signature of Osteoporosis in Blood DNA of Postmenopausal Women. JBMR. 2018;</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 67, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 67, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://bmccancer.biomedcentral.com/articles/10.1186/s12885-018-4482-7" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>DNA methylation signatures of breast cancer in peripheral T-cells. BMC  Cancer.2018;</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 67, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 67, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://clinicalepigeneticsjournal.biomedcentral.com/articles/10.1186/s13148-017-0436-1" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>The signature of liver cancer in immune cells DNA methylation. Clin Epigenetics.2018;</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.onlinelibrary.wiley.com/doi/full/10.1002/mnfr.201701008" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Personalized cardio-metabolic responses to an anti-inflammatory nutrition intervention in obese adolescents: a randomized controlled crossover trial.</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.sciencedirect.com/science/article/abs/pii/S1094695016301780" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Genetic polymorphisms in ESR1 and VDR genes do not correlate with osteoporosis with familial dysautonomia.  J Clin Densitom.2018;</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.greenmedinfo.health/article/methyl-donor-s-adenosylmethionine-sam-supplementation-attenuates-breast-cancer" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Methyl donor S-adenosylmethionine (SAM) supplementation attenuates breast cancer growth, invasion, and metastasis in vivo; therapeutic and chemopreventive applications.Oncotarget. 2017;</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://academic.oup.com/nar/article/45/22/12681/4259028" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetic mechanisms underlie the crosstalk between growth factors and a steroid hormone.Nucleic Acids Res. 2017;</Text>
                         </TouchableOpacity>
                     </View>
-                    <View style={{  width: '90%', height: 77, alignSelf: 'center' }}>
+                    <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.researchgate.net/publication/316689941_DNA_methylation_controls_unmethylated_transcription_start_sites_in_the_genome_in_trans" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}> DNA methylation controls unmethylated transcription start sites in the genome in trans”. Epigenomics . 2017;</Text>
                         </TouchableOpacity>

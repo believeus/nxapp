@@ -17,11 +17,16 @@ const FirstRoute = () => (
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.pharmacology')}</Text>
+
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
-            <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('ProfMosheActivity.pharmacology2')}<Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 27 }}>{I18n.t('ProfMosheActivity.chairman')}</Text> </Text>
+            <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.pharmacology2')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.chairman')}</Text>
+            </View>
+
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
             <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2003-2018
@@ -44,8 +49,8 @@ const FirstRoute = () => (
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Therapeutics McGill</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>Professor</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.themcgill')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.professor2')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
@@ -58,7 +63,7 @@ const FirstRoute = () => (
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.school')}</Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
             </View>
         </View>
@@ -72,7 +77,7 @@ const FirstRoute = () => (
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>McGill Medical School</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.school')}</Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
             </View>
 
@@ -83,14 +88,14 @@ const FirstRoute = () => (
 const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.member')}</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.ccnp')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{I18n.t('ProfMosheActivity.award')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.ccnp')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.radio')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.forum')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.pharma')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.list')}</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.carrie')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {I18n.t('ProfMosheActivity.awardd')}</Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.foundation')} "{I18n.t('ProfMosheActivity.eliot')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {I18n.t('ProfMosheActivity.osseman')}" </Text>
-        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.institute')} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "{I18n.t('ProfMosheActivity.young')}" </Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.carrie')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.foundation')} </Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.institute')} </Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.scholarship')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.rothshiild')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.university')}</Text>
@@ -113,7 +118,7 @@ const ThirddRoute = () => (
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.team')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.c')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$166,666</Text>
             </View>
 
         </View>
@@ -128,7 +133,7 @@ const ThirddRoute = () => (
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute-Demethylase Analysis</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.cc')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$141,000</Text>
             </View>
 
         </View>
@@ -143,7 +148,7 @@ const ThirddRoute = () => (
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Methyltransferase I Inhibitor and its Therapeutic Prospect</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.cccc')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$168,158</Text>
             </View>
 
         </View>
@@ -163,17 +168,17 @@ const ThirddRoute = () => (
 
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
-            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1993
+            <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>1989-1992
                         </Text>
             <Text style={{ alignSelf: 'flex-end', width: '5%', height: 18, backgroundColor: '#0071bc', borderRadius: 30, }}></Text>
-            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.departmentof')}</Text>
+            <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('ProfMosheActivity.inst')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('ProfMosheActivity.school')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.Associate')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$74,592/year</Text>
             </View>
 
         </View>
@@ -232,11 +237,11 @@ export default class ProfMosheActivity extends Component<Props> {
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ScienceteamActivity.ceo')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                 </View>
-                <View style={{   paddingBottom: 20 }}>
+                <View style={{ paddingBottom: 20 }}>
                     <View style={{ backgroundColor: '#f0f0f0', }}>
-                        <Text style={{ width: '90%', height: 67,alignSelf:'center', fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>{I18n.t('ProfMosheActivity.experiences')}</Text>
+                        <Text style={{ width: '90%', height: 67, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.experiences')}</Text>
                     </View>
-                    <View style={{ width: '90%', alignSelf: 'center',paddingTop: 20, justifyContent: 'center' }}>
+                    <View style={{ width: '90%', alignSelf: 'center', paddingTop: 20, justifyContent: 'center' }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '6%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>--</Text><Text style={{ width: '94%', fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.pioneer')}</Text>
                         </View>
@@ -272,7 +277,7 @@ export default class ProfMosheActivity extends Component<Props> {
                 <View style={{ height: 20 }}></View>
                 <View style={{ paddingTop: 20, paddingBottom: 20, backgroundColor: '#f0f0f0' }}>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <Text style={{ width: '90%', height: 67,fontFamily: 'NotoSansHans-Light', fontSize: 18,lineHeight:67, fontWeight:'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text>
+                        <Text style={{ width: '90%', height: 67, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 67, fontWeight: 'bold' }}>{I18n.t('ProfMosheActivity.video')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16 }}>{I18n.t('ProfMosheActivity.o2o')}</Text>
                         <VideoPlayer
                             style={{ width: "100%", height: 250 }}
@@ -344,42 +349,42 @@ export default class ProfMosheActivity extends Component<Props> {
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>2892 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/10050851' });this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/10050851' }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>A mammalian protein with specific
                             demethylase activity for mCpG DNA.  Nature .1999 Feb 18</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>528 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/18461137' });this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/18461137' }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Promoter-wide hypermethylation of
                             the ribosomal RNA gene promoter in the suicide brain.  PLoS One . 2008 May 7</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>351 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/21386994' });this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/21386994' }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Broad epigenetic signature of
                             maternal care in the brain of adult rats.  PLoS One .2011 Feb 28</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>347 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 67, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/7713905' });this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/7713905' }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Expression of antisense to DNA
                             demethylation and inhibits tumorigenesis. J Biol Chem. 1995 Apr 7</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>256 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 78, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/18851683' });this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/18851683' }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Epigenetics, DNA methylation,
                             and chromatin modifying drugs. Annu Rev Pharmacol Toxicol. 2009;49</Text>
                         </TouchableOpacity>
                         <Text style={{ width: '20%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>432 Citations</Text>
                     </View>
                     <View style={{ flexDirection: 'row', width: '90%', height: 88, alignSelf: 'center' }}>
-                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/16484373' });this.setState({ display: true }) }}>
+                        <TouchableOpacity style={{ width: '80%' }} onPress={() => { this.setState({ url: 'https://www.ncbi.nlm.nih.gov/pubmed/16484373' }); this.setState({ display: true }) }}>
                             <Text style={{ width: '100%', fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Maternal care effects on the
                             hippocampal transcriptome and anxiety-mediated behaviors in the offspring that are reversible in adulthood. Proc Natl </Text>
                         </TouchableOpacity>
