@@ -100,7 +100,7 @@ export default class LoginActivity extends Component<Props> {
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#b3b3b3', lineHeight: 20 }}>Don't have an account?</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#b3b3b3', lineHeight: 20 }}>{I18n.t('LoginActivity.noaccount')}</Text>
                             <TouchableOpacity onPress={() => this.navigate.push("Register")}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 20 }}>{I18n.t('LoginActivity.register')}</Text>
                             </TouchableOpacity>

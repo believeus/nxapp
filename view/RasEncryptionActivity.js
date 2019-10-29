@@ -55,23 +55,23 @@ export default class RasEncryptionActivity extends Component<Props> {
                         <View style={{ width: "95%" }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 88, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
-                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Please press the "GENERATE PRIVATE KEY" button to generate your Unique Private key. Then, by pressing "SAVE",<Text style={{color:'#0071bc',fontWeight:'bold',fontSize: 14,}}> the Unique Private key will be sent to your registered mailbox.</Text> </Text>
+                                    <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.press')}<Text style={{color:'#0071bc',fontWeight:'bold',fontSize: 14,}}>{I18n.t('RasEncryptionActivity.press2')} </Text> </Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 107, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
-                                    <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new private key,<Text style={{ color: '#0071bc',fontWeight:'bold' }}> and it can only be set once</Text>.</Text>
+                                    <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.setkey')} <Text style={{ color: '#0071bc',fontWeight:'bold' }}> {I18n.t('RasEncryptionActivity.setkey2')}</Text></Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 56, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
-                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18,color:'#0071bc',fontWeight:'bold' }}>The Unique Private key is required to enter again if the user logs in again after log out.</Text>
+                                    <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18,color:'#0071bc',fontWeight:'bold' }}> {I18n.t('RasEncryptionActivity.unique')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 79, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
-                                    <Text style={{ height: 79, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>We will not have or save user's private key to decrypt user data according to our <Text onPress={() => this.navigate.push("DataSecurity")} style={{fontSize: 14, fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>Data Security Statement</Text> , please save your only private key.</Text>
+                                    <Text style={{ height: 79, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.savekey')}<Text onPress={() => this.navigate.push("DataSecurity")} style={{fontSize: 14, fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>{I18n.t('RasEncryptionActivity.security')}</Text> {I18n.t('RasEncryptionActivity.savekey2')}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row' }}>
                                     <Text style={{ height: 77, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
-                                    <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>When you are not logged into the system, your healthy information and personal user information will be in a 'free' state, and no one can find your related information.</Text>
+                                    <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.freestate')} </Text>
                                 </View>
                             <View style={{ width: "100%", height: 20 }}></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
@@ -112,14 +112,14 @@ export default class RasEncryptionActivity extends Component<Props> {
                                                 this.setState({ btnPrivatekeyDisabled: false })
                                                 this.setState({ btnSaveDisabled: false })
                                                 this.setState({ animating: false })
-                                                Alert.alert("Message", "Private key generation failed, please regenerate")
+                                                Alert.alert (I18n.t("RasEncryptionActivity.failed"))
                                                 return
                                             }
                                             fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher + "&privatekey=" + this.state.privatekey).then(user => user.json()).then((user) => {
                                                 user.privatekey = this.state.privatekey
                                                 Session.save("sessionuser", user)
                                                 this.setState({ animating: false })
-                                                Alert.alert("Success", "The private key has been sent to your mailbox", [{
+                                                Alert.alert(I18n.t("RasEncryptionActivity.success"), [{
                                                     text: "OK", onPress: () => {
                                                         const resetAction = StackActions.reset({
                                                             index: 0,
@@ -142,7 +142,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                             </View>
                             <View style={{ width: "100%", alignItems: "center" }}>
                                 <View style={{ width: "90%", height: 40 }}>
-                                    <Button disabled={this.state.btnPrivatekeyDisabled} title="Generate private key" onPress={() => {
+                                    <Button disabled={this.state.btnPrivatekeyDisabled} title={I18n.t('RasEncryptionActivity.generate')} onPress={() => {
                                         UUIDGenerator.getRandomUUID().then((uuid) => {
                                             let privatekey = uuid.substring(0, 16).toUpperCase()
                                             this.setState({ privatekey })
