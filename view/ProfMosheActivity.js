@@ -132,7 +132,7 @@ const ThirddRoute = () => (
             <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Institute-Demethylase Analysis</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.analysis')}</Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$141,000</Text>
             </View>
 
@@ -147,7 +147,7 @@ const ThirddRoute = () => (
             <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>Methyltransferase I Inhibitor and its Therapeutic Prospect</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.prospect')} </Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$168,158</Text>
             </View>
 
@@ -162,8 +162,8 @@ const ThirddRoute = () => (
             <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>science and engineering research</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('ProfMosheActivity.ccc')}</Text>
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ProfMosheActivity.science')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>C$145,500</Text>
             </View>
 
         </View>

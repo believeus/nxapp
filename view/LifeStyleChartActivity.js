@@ -84,9 +84,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    Your resting heart rate is the heart pumping the lowest amount of blood
-                                    you need because you’re not exercising. If you’re sitting or lying and you’re calm, relaxed and aren’t ill,
-                                    your heart rate is normally between 60 (beats per minute) and 100 (beats per minute).
+                                    {I18n.t('LifeStyleChartActivity.resting')}
+                                    {I18n.t('LifeStyleChartActivity.ill')}   
+                                    {I18n.t('LifeStyleChartActivity.hearting')} 
                                 </Text>
                             </View>
                         }
@@ -110,7 +110,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    Blood pressure numbers of less than 120/80 mm Hg are considered within thenormal range.
+                                    {I18n.t('LifeStyleChartActivity.bloods')}
                                 </Text>
                             </View>
                         }
@@ -148,7 +148,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    All adults age 20 or older should have their cholesterol (and other risk factors) checked every four to six years.
+                                    {I18n.t('LifeStyleChartActivity.adults')}
                                 </Text>
                             </View>
                         }
@@ -171,7 +171,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    Meditation can wipe away the day's stress, bringing with it inner peace. See how you can easily learn to practice meditation whenever you need it most.
+                                    {I18n.t('LifeStyleChartActivity.most')}
                                 </Text>
                             </View>
                         }
@@ -195,7 +195,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    Get at least 150 minutes per week of moderate-intensity aerobic activity or 75 minutes per week of vigorous aerobic activity, or a combination of both, preferably spread throughout the week
+                                    {I18n.t('LifeStyleChartActivity.minutes')}
                                     </Text>
                             </View>
                         }
@@ -219,7 +219,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    NATIONAL SLEEP FOUNDATION recommonds 7-9 hours for 18-64 years, and doesn't recommend less than 6 and more than 11 hours for 8-25 years and less than 6 and more than 10 hours for 26-64 years.
+                                    {I18n.t('LifeStyleChartActivity.morethan')}
                                     </Text>
                             </View>
                         }
@@ -264,7 +264,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    Drink no more than 1 drink per day for women or 2 per day for men.
+                                    {I18n.t('LifeStyleChartActivity.drink')}
                                     </Text>
                             </View>
                         }
@@ -285,7 +285,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    Stop Smoking
+                                    {I18n.t('LifeStyleChartActivity.stop')}
                                     </Text>
                             </View>
                         }
@@ -309,7 +309,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    The recommended daily amount of vitamin D is 400 international units (IU) for children up to age 12 months, 600 IU for ages 1 to 70 years, and 800 IU for people over 70 years.
+                                    {I18n.t('LifeStyleChartActivity.recommended')}
                                     </Text>
                             </View>
                         }
@@ -333,7 +333,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    The recommended daily amount of vitamin C for adult men is 90 milligrams and for adult women is 75 milligrams.
+                                    {I18n.t('LifeStyleChartActivity.daily')}
                                     </Text>
                             </View>
                         }
@@ -357,7 +357,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
-                                    The recommended daily amount of vitamin A is 900 micrograms (mcg) for adult men and 700 mcg for adult women.
+                                    {I18n.t('LifeStyleChartActivity.women')}
                                     </Text>
                             </View>
                         }
