@@ -149,17 +149,17 @@ export default class TabHomeActivity extends Component<Props> {
                         navigator={this.props.navigator}
                     />
                 </View>
-                <View style={{ backgroundColor: '#ffffff', width: '100%', height: 267, marginTop: 20 }}>
-                    <View style={{ width: '90%', height: 278, alignSelf: 'center' }}>
-                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 56 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabHomeActivity.1ml')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabHomeActivity.testresult')}</Text>
+                <View style={{ width: '100%', height: 267, marginTop: 20,}}>
+                    <View style={{ width: '90%', height: 278, alignSelf: 'center',marginBottom:20 }}>
+                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 27,marginBottom:19}}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome',lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
+                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome',lineHeight:23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
                     <View style={{ width: '90%', height: 389, alignSelf: 'center' }}>
                         <Image style={{ width: '100%', height: 278, marginTop: 12 }} source={require('../image/enpic/index6.jpg')} resizeMode="center" />
-                        <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>Epiaging Kit</Text>
+                        <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                         <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
                         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
@@ -177,11 +177,11 @@ export default class TabHomeActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#4d4d4d', lineHeight: 39 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                         <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
-                            <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
+                            <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
                             </View>
 
-                            <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
+                            <View style={{ width: '15%', height: 45, justifyContent: 'center' }}>
                                 <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
                                     <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
                                 </TouchableOpacity>
@@ -196,9 +196,9 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#0071bc' }}>
                     <View style={{ width: '90%', height: 156, alignSelf: 'center', marginTop: 34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, color: '#ffffff', textAlign: 'center', lineHeight: 45, fontWeight: '600' }}>{I18n.t('TabHomeActivity.appsystem')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.personalrep')} -</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.question')} -</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#ffffff', textAlign: 'center', lineHeight: 29, marginBottom: 34 }}>- {I18n.t('TabHomeActivity.follow')} -</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>-{I18n.t('TabHomeActivity.personalrep')}-</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.question')} -</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29, marginBottom: 34 }}>- {I18n.t('TabHomeActivity.follow')} -</Text>
                     </View>
                     <View style={{ backgroundColor: '#0071bc' }}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index8.jpg')} resizeMode='cover' />
