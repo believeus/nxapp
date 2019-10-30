@@ -202,11 +202,11 @@
         "chro": "/Chronological age/",
         "bio": "/Biological age/",
         "is": "Your biological age is ",
-        "younger": " years younger than your chronological age.",
-        "old": " years older than your chronological age.",
-        "yourbio": "(with a number in it)Your biological age ",
-        "otherolder": "Other people, who were tested, whose Biological age is older than Chronological age",
-        "otheryounger": "Other people, who were tested, whose Biological age is younger than Chronological age"
+        "younger": " years lower than your chronological age.",
+        "old": " years higher than your chronological age.",
+        "yourbio": "Your biological age ",
+        "otherolder": "The others, who were tested, whose Biological age is higher than Chronological age",
+        "otheryounger": "The others, who were tested, whose Biological age is lower than Chronological age"
     },
     "user_profile": {
         "title": "Your Profile"
