@@ -66,6 +66,7 @@
         "mailboxNull": "Пожалуйста, введите свой адрес электронной почты",
         "passwordNull": "Пожалуйста, введите пароль",
         "login": "Авторизоваться",
+        "logout":"Выйти",
         "noaccount": "У вас нет аккаунта?",
         "register": "Регистрация",
         "Invalid": {
@@ -91,21 +92,19 @@
         "activation": "Ссылка для активации пользователя была отправлена на ваш зарегистрированный почтовый ящик, перейдите по ссылке, чтобы активировать ее.",
         "again": "Ошибка сети! Пожалуйста, попробуйте еще раз",
         "account": "Уже есть аккаунт?",
-        "login": "Login"
+        "login": "Авторизоваться"
     },
     "ForgetActivity": {
-        "title": "Reset Password",
-        "resetPwd": "Reset Password",
-        "link": "By clicking the button below, A link to reset your password will be sent to your email.",
-        "btn": "Reset password",
-        "link2": "Login to your account",
-        "email": "Email",
-        "password": "Password",
-        "login": "login"
+        "title": "Сброс пароля",
+        "link": "Нажав кнопку ниже, на ваш электронный адрес будет отправлена ссылка для сброса пароля.",
+        "link2": "Вход в свой аккаунт",
+        "email": "Электронное письмо",
+        "password": "пароль",
+        "login": "авторизоваться"
     },
     "LifeStyleChartActivity": {
-        "title": "Life Style Questionnaire",
-        "lifesques": "Lifestyle Questionnaire",
+        "title": "Личная анкета",
+        "lifesques": "Личная анкета",
         "healthy": "A healthy or unhealthy lifestyle will most likely be transmitted across generations. According to the study done by Case et al.",
         "become": "(2002), when a 0-3-year-old child has a mother who practices a healthy lifestyle, this child will be 27% more likely to become healthy and adopt the same lifestyle.",
         "instance": "For instance, high-income parents are more likely to eat organic food, have time to exercise and provide the best living condition to their children.On the other hand, low-income parents are more likely to participate in unhealthy activities such as smoking to help them release poverty-related stress and depression.",

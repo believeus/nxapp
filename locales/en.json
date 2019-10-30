@@ -66,6 +66,7 @@
         "mailboxNull": "Please enter your mailbox",
         "passwordNull": "Please enter your password",
         "login": "Login",
+        "logout":"Logout",
         "noaccount": "Don't have an account?",
         "register": "Register",
         "Invalid": {
@@ -95,9 +96,7 @@
     },
     "ForgetActivity": {
         "title": "Reset Password",
-        "resetPwd": "Reset Password",
         "link": "By clicking the button below, A link to reset your password will be sent to your email.",
-        "btn": "Reset password",
         "link2": "Login to your account",
         "email": "Email",
         "password": "Password",

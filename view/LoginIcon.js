@@ -74,7 +74,7 @@ export default class LoginIcon extends Component<Props> {
                                     });
                                     navigate.dispatch(resetAction);
                                 }} >
-                                    <Text style={{ color: '#333333' }}>Logout</Text>
+                                    <Text style={{ color: '#333333' }}>{I18n.t('LoginActivity.logout')}</Text>
                                 </MenuOption>
                             </MenuOptions>
                             :
