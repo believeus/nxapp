@@ -159,7 +159,7 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
                     <View style={{ width: '90%', height: 389, alignSelf: 'center' }}>
                         <Image style={{ width: '100%', height: 278, marginTop: 12 }} source={require('../image/enpic/index6.jpg')} resizeMode="center" />
-                        <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>{I18n.t('TabHomeActivity.testresult')}</Text>
+                        <Text style={{ fontSize: 23, textAlign: 'center', fontFamily: 'NotoSansHans-Light', lineHeight: 34, marginTop: 0, color: '#333333' }}>{I18n.t('TabHomeActivity.kit')}</Text>
                         <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
                         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
