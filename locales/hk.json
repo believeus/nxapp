@@ -205,7 +205,6 @@
         "yourbio": "（上面有數位）你的生物年齡",
         "otherolder": "其他人與測試者對比，他們的生物年齡比實際年齡大",
         "otheryounger": "其他被測試的人，他們的生物年齡比實際年齡小"
-
     },
     "user_profile": {
         "title": "Your Profile"
@@ -287,12 +286,12 @@
     },
     "DavidActivity": {
         "title": "David Cheishvili Ph.D.",
-        "senior":"Senior Scientific Consultant",
+        "senior":"高級研究顧問",
         "hkg":"HKG epiTHERAPEUTICS Ltd.",
-        "professional":"| PROFESSIONAL EXPERIENCES",
+        "professional":"| 專業履歷",
         "hong":"HKG Epitherapeutics, Hong Kong",
-        "montreal":"Montreal EpiTerapia Inc Montreal",
-        "canada":"Canada",
+        "montreal":"蒙特利爾外延公司",
+        "canada":"加拿大",
         "founder":"Co-Founder",
         "department":"Department of Pharmacology and",
         "mcgill":"Therapeutics McGill University",
@@ -329,7 +328,10 @@
         "basic":"2008 Family Autonomic Neurological Dysfunction Foundation Basic Scientific Research Conference",
         "new":"(New York, USA)",
         "health":"The 8th European Conference on Gliocyte Health and Diseases, 2007",
-        "london":"(London, UK)"
+        "london":"(London, UK)",
+        "university":"Therapeutics McGil University",
+        "fellowed":"Postdoctoral Fellow",
+        "school":"Medical School"
     },
     "HuiliActivity": {
         "title": "Hui li Ph.D.",
