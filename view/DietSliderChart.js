@@ -6,7 +6,7 @@ import { WebView } from 'react-native-webview'
 import Session from '../storage/Session';
 import data from '../appdata'
 import moment from 'moment'
-import AesCrypto from 'react-native-aes-kit'
+import { encrypt, decrypt } from 'react-native-simple-encryption';
 import { I18n } from '../locales/i18n';
 
 type Props = {};
@@ -62,34 +62,28 @@ export default class DietSliderChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user })
-            const iv = '1010101010101010'
-            let privatekey = this.state.user.privatekey
-            let uuid = this.state.user.uuid
-           
-            //解密
-            AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
-                fetch(data.url + "user/diet/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
-                    let xValue = []
-                    let yValue = []
-                    for (var i in data) {
-                        xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
-                        yValue.push(data[i][this.props.yAxisLabelValue])
+            let plaintxt = decrypt(user.privatekey, user.uuid)
+            fetch(data.url + "user/diet/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
+                let xValue = []
+                let yValue = []
+                for (var i in data) {
+                    xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
+                    yValue.push(data[i][this.props.yAxisLabelValue])
+                }
+                let option = Object.assign({}, this.state.option);
+                option.xAxis.data = xValue;
+                option.yAxis.name = this.props.yAxisLabelName;
+                option.series[0].data = yValue
+                //如果this.props.yAxisLine有定义
+                if (this.props.yAxisLine) {
+                    let lines = this.props.yAxisLine.split("@")
+                    for (let i = 0; i < lines.length; i++) {
+                        option.series[0].markLine.data[i] = {};
+                        option.series[0].markLine.data[i].yAxis = window.parseFloat(lines[i]);
                     }
-                    let option = Object.assign({}, this.state.option);
-                    option.xAxis.data = xValue;
-                    option.yAxis.name = this.props.yAxisLabelName;
-                    option.series[0].data = yValue
-                    //如果this.props.yAxisLine有定义
-                    if (this.props.yAxisLine) {
-                        let lines = this.props.yAxisLine.split("@")
-                        for (let i = 0; i < lines.length; i++) {
-                            option.series[0].markLine.data[i] = {};
-                            option.series[0].markLine.data[i].yAxis = window.parseFloat(lines[i]);
-                        }
-                    }
-                    this.setState({ option });
-                    this.echarts.webview.reload();
-                })
+                }
+                this.setState({ option });
+                this.echarts.webview.reload();
             })
 
         });
@@ -133,19 +127,11 @@ export default class DietSliderChart extends Component<Props> {
                                 // console.log("CHANGE", value);
                             }}
                             onComplete={(value) => {
-                                const iv = '1010101010101010'
-                                let privatekey = this.state.user.privatekey
-                                let uuid = this.state.user.uuid
-                                //解密
-                                AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
-                                    let url = data.url + "user/diet/update.jhtml.jhtml?uuid=" + plaintxt + "&foodname=" + value + "&calories=" + value + "&updateTime=" + new Date().getTime()
-                                    fetch(url).then(res => res.text()).then((data) => {
-                                        this.load();
-                                    })
+                                let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                let url = data.url + "user/diet/update.jhtml.jhtml?uuid=" + plaintxt + "&foodname=" + value + "&calories=" + value + "&updateTime=" + new Date().getTime()
+                                fetch(url).then(res => res.text()).then((data) => {
+                                    this.load();
                                 })
-
-
-
                             }}
                             width={30}
                             height={200}

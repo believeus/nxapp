@@ -734,14 +734,17 @@
         "press2": " the Unique Private key will be sent to your registered mailbox.",
         "setkey": "Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new private key,",
         "setkey2": "and it can only be set once.",
-        "savekey":"We will not have or save user's private key to decrypt user data according to our ",
-        "security":"Data Security Statement",
-        "freestate":"When you are not logged into the system, your healthy information and personal user information will be in a 'free' state, and no one can find your related information.",
-        "savekey2":", please save your only private key.",
-        "unique":"The Unique Private key is required to enter again if the user logs in again after log out.",
+        "savekey": "We will not have or save user's private key to decrypt user data according to our ",
+        "security": "Data Security Statement",
+        "freestate": "When you are not logged into the system, your healthy information and personal user information will be in a 'free' state, and no one can find your related information.",
+        "savekey2": ", please save your only private key.",
+        "unique": "The Unique Private key is required to enter again if the user logs in again after log out.",
         "failed": "Message, Private key generation failed, please regenerate,",
         "success": "Success, The private key has been sent to your mailbox.",
-        "generate": "Generate Private Key"
+        "generate": "Generate",
+        "privatekey": "Private key",
+        "publickey": "Public key",
+        "save":"save"
     },
     "QAActivity": {
         "title": "Q&A"

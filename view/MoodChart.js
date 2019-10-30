@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View,StatusBar } from 'react-native';
+import { Platform, StyleSheet, Text, View, StatusBar } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import { Rating, AirbnbRating } from 'react-native-ratings';
+import { encrypt, decrypt } from 'react-native-simple-encryption';
 import Session from '../storage/Session';
 import data from '../appdata'
 import moment from 'moment'
-import AesCrypto from 'react-native-aes-kit'
 import { I18n } from '../locales/i18n';
 
 type Props = {};
@@ -59,36 +59,31 @@ export default class MoodChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            const iv = '1010101010101010'
-            let privatekey = user.privatekey
-            let uuid = user.uuid
-            //解密
-            AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
-                fetch(data.url + "user/mood/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
-                    let xValue = []
-                    let yValue = []
-                    for (var i in data) {
-                        xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
-                        yValue.push(data[i][this.props.yAxisLabelValue])
+            let plaintxt = decrypt(user.privatekey, user.uuid)
+            fetch(data.url + "user/mood/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
+                let xValue = []
+                let yValue = []
+                for (var i in data) {
+                    xValue.push(moment(data[i].updateTime).format('YYYY-MM-DD'));
+                    yValue.push(data[i][this.props.yAxisLabelValue])
+                }
+                let option = Object.assign({}, this.state.option);
+                option.xAxis.data = xValue;
+                option.yAxis.name = this.props.yAxisLabelName;
+                option.series[0].data = yValue
+                //如果this.props.yAxisLine有定义
+                if (this.props.yAxisLine) {
+                    let lines = this.props.yAxisLine.split("@")
+                    for (let i = 0; i < lines.length; i++) {
+                        option.series[0].markLine.data[i] = {};
+                        option.series[0].markLine.data[i].yAxis = window.parseFloat(lines[i]);
                     }
-                    let option = Object.assign({}, this.state.option);
-                    option.xAxis.data = xValue;
-                    option.yAxis.name = this.props.yAxisLabelName;
-                    option.series[0].data = yValue
-                    //如果this.props.yAxisLine有定义
-                    if (this.props.yAxisLine) {
-                        let lines = this.props.yAxisLine.split("@")
-                        for (let i = 0; i < lines.length; i++) {
-                            option.series[0].markLine.data[i] = {};
-                            option.series[0].markLine.data[i].yAxis = window.parseFloat(lines[i]);
-                        }
-                    }
-                    this.setState({ option });
-                    this.echarts.webview.reload();
-                })
+                }
+                this.setState({ option });
+                this.echarts.webview.reload();
             })
-           
-        });
+        })
+
 
     }
     componentDidMount() {
@@ -107,33 +102,29 @@ export default class MoodChart extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: "100%",alignItems:"center"}}>
+                <View style={{ width: "100%", alignItems: "center" }}>
                     {this.props.title}
-                    <View style={{ width: "100%", height: 100, alignItems: "center", justifyContent: "center"}}>
+                    <View style={{ width: "100%", height: 100, alignItems: "center", justifyContent: "center" }}>
                         <View>
                             <AirbnbRating
                                 count={4}
                                 ratingTextColor={"red"}
-                                reviews={["None", "Half days","Few days", "Every day"]}
+                                reviews={["None", "Half days", "Few days", "Every day"]}
                                 defaultRating={1}
                                 size={20}
                                 ref={(ref) => { this.rating = ref }}
                                 ratingColor='red'
                                 ratingBackgroundColor='#c8c7c8'
                                 onFinishRating={(value) => {
-                                    const iv = '1010101010101010'
-                                    let privatekey = this.state.user.privatekey
-                                    let uuid = this.state.user.uuid
                                     //解密
-                                    AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
-                                        let url = data.url + "user/mood/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
-                                        fetch(url).then(res => res.text()).then((data) => {
-                                            if (data == "success") {
-                                                this.load();
-                                            }
-                                        })
+                                    let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                    let url = data.url + "user/mood/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
+                                    fetch(url).then(res => res.text()).then((data) => {
+                                        if (data == "success") {
+                                            this.load();
+                                        }
                                     })
-                                   
+
                                 }}
                             />
 

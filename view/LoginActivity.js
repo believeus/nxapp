@@ -26,6 +26,7 @@ export default class LoginActivity extends Component<Props> {
         if (!this.state.email) { this.setState({ disabled: true }); return }
         if (!this.state.password) { this.setState({ disabled: true });  return }
         let url = data.url + "user/login.jhtml?email=" + this.state.email + "&password=" + md5.hex_md5(this.state.password)
+        console.info(url)
         fetch(url).then(res => res.json())
             .then(sessionuser => {
                 if (sessionuser.mail == null) { Toast.show(I18n.t("LoginActivity.Invalid.Email"), { duration: 7000, position: Toast.positions.CENTER }); return; }
@@ -39,7 +40,7 @@ export default class LoginActivity extends Component<Props> {
             })
             .catch((e) => {
                 console.info(e)
-                Alert.alert(I18n.t("LoginActivity.Invalid.NetFail"))
+                Toast.show(I18n.t("LoginActivity.Invalid.NetFail"))
             })
     }
     render() {

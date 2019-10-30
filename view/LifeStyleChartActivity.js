@@ -4,7 +4,7 @@ import { I18n } from '../locales/i18n';
 import SliderLineChart from './SliderLineChart';
 import RatingChart from './RatingChart';
 import BMIChart from './BMIChart';
-
+import { encrypt, decrypt } from 'react-native-simple-encryption';
 type Props = {};
 export default class LifeStyleChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
