@@ -17,9 +17,9 @@ const FirstRoute = () => (
             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.medicine')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 56, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+            <Text style={{ width: '28%', height: 79, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
             </Text>
-            <View style={{ width: '70%', height: 56, paddingLeft: 19 }} >
+            <View style={{ width: '70%', height: 79, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.award')}</Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}> {I18n.t('HuiliActivity.grand')}</Text>
             </View>
@@ -45,13 +45,14 @@ const FirstRoute = () => (
             <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('HuiliActivity.excel')}</Text>
         </View>
         <View style={{ flexDirection: 'row', }}>
-            <Text style={{ width: '28%', height: 134, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
+            <Text style={{ width: '28%', height: 167, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}></Text>
 
-            <View style={{ width: '70%', height: 134, paddingLeft: 19 }} >
-                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.center')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.studentship')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.poster')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.excel')}</Text>
+            <View style={{ width: '70%', height: 167, paddingLeft: 19 }} >
+                <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.excel2')}</Text>
+                <View style={{height:12}}></View>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.poster1')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.travel2')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('HuiliActivity.graduate3')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
@@ -65,7 +66,7 @@ const FirstRoute = () => (
             </Text>
             <View style={{ width: '70%', height: 68, paddingLeft: 19 }} >
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('HuiliActivity.center')} </Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.studentt')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 45, }}>{I18n.t('HuiliActivity.travel2')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >
