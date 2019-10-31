@@ -764,7 +764,11 @@
         "title": "Q&A"
     },
     "ContactActivity": {
-        "title": "Contact Us"
+        "title": "Contact Us",
+        "phone":"(+852) 2354 8297",
+        "utics":"info@hkgepitherapeutics.com",
+        "http":"https://www.hkgepitherapeutics.com",
+        "hkg":"HKG epitherapeutics Limited Unit 613, Biotech Centre 2,Hong Kong Science Park,Sha Tin,N.T.,Hong Kong"
     },
     "QuesnoteActivity": {
         "title": "Notification",

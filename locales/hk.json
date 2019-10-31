@@ -748,7 +748,12 @@
         "report": "2. 如何獲得我的EpiAging測試報告？"
     },
     "ContactActivity": {
-        "title": "Contact Us"
+        "title": "聯繫我們",
+        "phone":"(+852) 2354 8297",
+        "utics":"信息@hkgepitherapeutics.com",
+        "http":"https://www.hkgepitherapeutics.com",
+        "hkg":"HKG epitherapeutics Limited香港新界沙田香港科學園生物科技中心2號613室"
+    
     },
     "QuesnoteActivity": {
         "title": "通知",
