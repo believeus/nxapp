@@ -92,6 +92,7 @@ const SecondRoute = () => (
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.radio')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.forum')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.pharma')}</Text>
+        <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.honorary')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.list')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.carrie')}</Text>
         <Text style={{ fontFamily: 'NotoSansHans-Light', }}>{I18n.t('ProfMosheActivity.foundation')} </Text>
