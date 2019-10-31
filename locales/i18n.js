@@ -21,6 +21,7 @@ I18n.translations = {
     'pt':pt,
     'zh-Hans': zh,
     'zh-Hant': hk,
+    'zh-TW':hk,
     'es':es
 };
 I18n.localeLanguage = () => {

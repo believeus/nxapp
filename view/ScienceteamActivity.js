@@ -53,7 +53,7 @@ export default class ScienceteamActivity extends Component<Props> {
                         <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/huili1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.huili')}</Text>
-                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.huilititle')}</Text>
+                            <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.huili')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, lineHeight: 18, fontStyle: 'italic' }}>{I18n.t('ScienceteamActivity.hkg')}</Text>
                         </View>
                         <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
