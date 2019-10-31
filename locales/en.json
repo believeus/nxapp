@@ -462,7 +462,13 @@
         "epi": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "QuestionnaireActivity": {
-        "title": "Questionnaires"
+        "title": "Questionnaires",
+        "lifestyle":"Lifestyle Questionnaire",
+        "mood":"Self-Assessment",
+        "mcgill":"McGill Pain Questionnaire",
+        "sleep":"Sleep Self-Assessment",
+        "diet":"Diet Recommendation",
+        "eip":"@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {
         "title": "User consent form",
@@ -726,7 +732,10 @@
         "unless": "Unless we are required to comply with valid court orders, we will not provide information to law enforcement agencies.",
         "learn": "Learn more about our privacy clauses.",
         "logged": "When you are not logged into the system, your health information and personal user information will be in a'free'state, and no one can find your related information.",
-        "not": "We will not have or save user's private key to decrypt user data according to our Data Security Statement , please save your only private key."
+        "not": "We will not have or save user's private key to decrypt user data according to our Data Security Statement , please save your only private key.",
+        "lost":"Once the private key is set, no changes are allowed. If the private key is changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new private key,and it can only be set once.",
+        "save":"We will not have or save user's private key to decrypt user data according to the Data Security Statement and HIPPA Law.",
+        "eip":"@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "RasEncryptionActivity": {
         "title": "Private key Setting",

@@ -42,7 +42,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                 }>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon1.png")}></Image>
-                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Lifestyle Questionnaire</Text>
+                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.lifestyle')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
@@ -58,7 +58,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon2.png")}></Image>
-                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Mood Self-Assessment</Text>
+                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.mood')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
@@ -74,7 +74,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon3.png")}></Image>
-                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>McGill Pain Questionnaire</Text>
+                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.mcgill')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
@@ -90,7 +90,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon4.png")}></Image>
-                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Sleep Self-Assessment</Text>
+                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.sleep')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
@@ -106,12 +106,12 @@ export default class QuestionnaireActivity extends Component<Props> {
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
                         <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon5.png")}></Image>
-                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>Diet Recommendation</Text>
+                        <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.diet')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('QuestionnaireActivity.eip')}</Text>
             </ScrollView >
         );
     }

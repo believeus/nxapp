@@ -25,9 +25,9 @@ export default class QuesnoteActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 19, height: 45, fontWeight: 'bold' }}>About Questionnaires</Text>
-                    <Text style={{ height: 145, fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19 }}>The questionnaires are <Text style={{ color: 'red' }}>optional to fill up</Text>. However, epigenetics affected by lifestyle as well as the environment. Our philosophy is that Epiaging tests make sense only within a dynamic life-long lifestyle, environmental and health management system.</Text>
-                    <Text style={{ height: 145, fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19 }}>personalized evaluation including intervention will be generated based on the health and lifestyle information you provided Updates on your health and lifestyle parameters periodically will activate the life-long personalized analysis report</Text>
+                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 19, height: 45, fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
+                    <Text style={{ height: 145, fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19 }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: 'red' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
+                    <Text style={{ height: 145, fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19 }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
                     <View style={{ flexDirection: 'row',justifyContent:'space-between' }}>
                         <View style={{ width: '45%' }}>
                             <TouchableOpacity >
@@ -41,7 +41,7 @@ export default class QuesnoteActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('QuesnoteActivity.epi')}</Text>
             </ScrollView >
         );
     }
