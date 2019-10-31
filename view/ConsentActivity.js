@@ -30,7 +30,7 @@ export default class ConsentActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
+                <View style={{ width: '98%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
                     <Text style={{  width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.customer')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>

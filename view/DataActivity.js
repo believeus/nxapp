@@ -67,7 +67,7 @@ export default class DataActivity extends Component<Props> {
                         <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DataActivity.access')}</Text>
                     </View>
                 </View>
-                <View style={{ backgroundColor: '#f6f8f9' }}>
+                {/* <View style={{ backgroundColor: '#f6f8f9' }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 77, width: '70%', fontSize: 19, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 22, }}>{I18n.t('DataActivity.how')}?</Text>
@@ -94,11 +94,11 @@ export default class DataActivity extends Component<Props> {
                             <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DataActivity.general')}</Text>
                         </View>
                     </View>
-                </View>
+                </View> */}
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                     <View style={{ flexDirection: 'row' }}>
-                        <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/ques4.png")}></Image>
                         <Text style={{ height: 77, width: '70%', fontSize: 19, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 22, }}>{I18n.t('DataActivity.information')}</Text>
+                        <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/ques4.png")}></Image>
                     </View>
 
                     <View style={{ flexDirection: 'row' }}>
