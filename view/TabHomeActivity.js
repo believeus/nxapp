@@ -24,6 +24,8 @@ export default class TabHomeActivity extends Component<Props> {
 
     }
     constructor(props) {
+        // const {locale} = window.App;
+        // console.info(locale);
         super(props);
         Session.save("launchershow", true);
         this.state = {

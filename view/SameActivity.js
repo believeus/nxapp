@@ -72,13 +72,13 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.molecules')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 119, width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 119, width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.tosylate')}</Text>
+                        <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 16, marginBottom: 12, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.tosylate')}</Text>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6' }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('SameActivity.according')}</Text>
+                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome',  }}>{I18n.t('SameActivity.according')}</Text>
                         <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/enpic/sam3.png")}></Image>
                         <View style={{ width: '96%', height: 123, backgroundColor: '#C1E1E8', borderRadius: 10, alignSelf: 'center', marginBottom: 34 }}>
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>{I18n.t('SameActivity.quality')}</Text>
@@ -130,9 +130,9 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.research')} </Text>
                     </View>
                     <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 68, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                        <Text style={{ width: '28%', height: 99, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
-                        <Text style={{ width: '70%', height: 68, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.highest')}</Text>
+                        <Text style={{ width: '70%', height: 99, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.highest')}</Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
                         <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2010
@@ -141,9 +141,9 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '70%', height: 16, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.study')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 158, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                        <Text style={{ width: '28%', height: 188, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
-                        <Text style={{ width: '70%', height: 158, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.hospital')}
+                        <Text style={{ width: '70%', height: 188, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.hospital')}
                                     <Text onPress={() => { this.setState({ url: "https://ajp.psychiatryonline.org/doi/full/10.1176/" }) }} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
                         </Text>
                     </View>
@@ -154,9 +154,9 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '70%', height: 16, lineHeight: 17, fontFamily: 'NotoSansHans-Light', paddingLeft: 10 }}>{I18n.t('SameActivity.korean')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
+                        <Text style={{ width: '28%', height: 99, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
-                        <View style={{ width: '70%', height: 88, }}>
+                        <View style={{ width: '70%', height: 99, }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, paddingLeft: 19 }}>{I18n.t('SameActivity.as')}</Text>
                             <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/20110025" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, paddingLeft: 19, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/20110025</Text>
                         </View>
