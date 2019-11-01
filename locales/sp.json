@@ -155,10 +155,10 @@
         "minutes":" Realice al menos 150 minutos por semana de actividad aeróbica de intensidad moderada o 75 minutos por semana de actividad aeróbica vigorosa, o una combinación de ambos, preferiblemente durante toda la semana",
         "morethan":" NATIONAL SLEEP FOUNDATION recomienda 7 a 9 horas por 18 a 64 años, y no recomienda menos de 6 y más de 11 horas por 8 a 25 años y menos de 6 y más de 10 horas por 26 a 64 años.",
         "drink":" No tome más de 1 bebida por día para mujeres o 2 por día para hombres.",
-        "stop":"Stop Smoking",
-        "recommended":"The recommended daily amount of vitamin D is 400 international units (IU) for children up to age 12 months, 600 IU for ages 1 to 70 years, and 800 IU for people over 70 years.",
-        "daily":"The recommended daily amount of vitamin C for adult men is 90 milligrams and for adult women is 75 milligrams.",
-        "women":"The recommended daily amount of vitamin A is 900 micrograms (mcg) for adult men and 700 mcg for adult women."
+        "stop":"Deja de fumar",
+        "recommended":"La cantidad diaria recomendada de vitamina D es de 400 unidades internacionales (UI) para niños de hasta 12 meses, 600 UI para edades de 1 a 70 años y 800 UI para personas mayores de 70 años.",
+        "daily":"La cantidad diaria recomendada de vitamina C para hombres adultos es de 90 miligramos y para mujeres adultas es de 75 miligramos.",
+        "women":"Recomendación: la cantidad diaria recomendada de vitamina A es de 900 microgramos (mcg) para hombres adultos y 700 mcg para mujeres adultas."
 
     },
     "DnaReportActivity": {
@@ -771,6 +771,11 @@
         "hkg":"HKG epitherapeutics Limited Unit 613, Biotech Centre 2,Hong Kong Science Park,Sha Tin,N.T.,Hong Kong"
     },
     "QuesnoteActivity": {
+        "about": "About Questionnaires",
+        "are": "The questionnaires are",
+        "optional": "optional to fill up.",
+        "however": "However, epigenetics affected by lifestyle as well as the environment. Our philosophy is that Epiaging tests make sense only within a dynamic life-long life style, environmental and health management system.",
+        "personalized": "A personalized evaluation including intervention will be generated based on the health and lifestyle information you provided Updates on your health and lifestyle parameters periodically will activate the life-long personalized analysis report.",
         "title": "Notification",
         "ques": "Continue",
         "back": "Cancel"

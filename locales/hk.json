@@ -756,15 +756,14 @@
     
     },
     "QuesnoteActivity": {
-        "title": "通知",
         "about": "關於問卷",
         "are": "問卷是",
-        "optional": "可選填寫",
-        "however": ". 然而，表觀遺傳學受到生活方式以及環境的影響。 我們的理念是，Epiaging測試僅在動態的終身生活方式，環境和健康管理系統中才有意義。",
-        "personalized": "個性化評估（包括干預）將根據您提供的健康和生活方式信息生成，有關您的健康和生活方式參數的定期更新將激活終生的個性化分析報告",
+        "optional": "可選填寫。",
+        "however": "然而，表觀遺傳學受到生活方式以及環境的影響。 我們的理念是，Epiaging測試僅在動態的終身生活方式，環境和健康管理系統中才有意義。",
+        "personalized": "將根據您提供的健康和生活方式信息生成包括干預的個性化評估，定期更新健康和生活方式參數將激活終身個性化分析報告。",
+        "title": "通知",
         "ques": "繼續",
-        "back": "取消",
-        "epi": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "back": "取消"
     },
     "Manual1Activity": {
         "title": "How to get epiAging test report"
