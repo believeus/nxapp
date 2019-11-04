@@ -781,9 +781,25 @@
         "back": "取消"
     },
     "Manual1Activity": {
-        "title": "How to get epiAging test report"
+        "title": "獲得EpiAging測試報告",
+        "getmy":"如何獲得我的EpiAging測試報告",
+        "login":"確保使用用於購買EpiAging產品的帳戶登錄。",
+        "username":"您的用戶名將在您登錄後在此顯示。",
+        "gohome":"轉到“ HOME”或“ EPICENTER”，然後單擊“我的報告”。",
+        "barcode":"輸入（或掃描）試管上的條形碼，並獲取EpiAging報告。",
+        "icon":"輸入條形碼後，通過單擊圖標獲取EpiAging測試報告",
+        "result":"划到頁面底部查看您的epiAging測試結果。"
+        
     },
     "Manual2Activity": {
-        "title": "EpiAging App User Manual"
+        "title": "EpiAging App 用戶手冊",
+        "download":"從Apple Store下載IOS App或從Google Play Store下載Android App。",
+        "gocenter":"轉到“ EPICENTER”並單擊“註冊”以註冊帳戶。",
+        "fillregis":"填寫註冊信息",
+        "mailbox":"轉到註冊郵箱以激活您的帳戶。",
+        "accountlogin":"使用您剛註冊的帳戶登錄。",
+        "setkey":"設置唯一的數據安全密鑰。",
+        "sentmail":"唯一密鑰將發送到您的郵箱",
+        "purchase":"轉到“購物”以購買EpiAging測試套件。"
     }
 }

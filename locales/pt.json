@@ -760,9 +760,24 @@
         "back": "Cancelar"
     },
     "Manual1Activity": {
-        "title": "Como obter o relatório de teste epiAging"
+        "title": "Como obter o relatório de teste epiAging",
+        "getmy":"Como obter o meu relatório de teste epiAging",
+        "login":"Certifique-se de fazer login com a conta que foi usada para comprar o produto epiAging.",
+        "username":"Seu nome de usuário aparecerá após o login.",
+        "gohome":"Vá para 'HOME' ou 'EPICENTER' e clique em 'My report'.",
+        "barcode":"Digite (ou Digitalize) o código de barras no seu tubo de ensaio e obtenha seu relatório de epiAging.",
+        "icon":"Depois de inserir seu código de barras, clique no ícone para obter seu relatório de teste de epiAging",
+        "result":"O resultado do seu teste de epiAging estará na parte inferior da página."
     },
     "Manual2Activity": {
-        "title": "Manual do usuário do EpiAging App"
+        "title": "Manual do usuário do EpiAging App",
+        "download":"Faça o download do aplicativo IOS na Apple Store ou Android App na Google Play Store.",
+        "gocenter":"Vá para 'EPICENTER' e clique em registrar para registrar uma conta.",
+        "fillregis":"Preencha as informações de registro.",
+        "mailbox":"Vá para a caixa de correio de registro para ativar sua conta.",
+        "accountlogin":"Entre com a conta que você acabou de registrar.",
+        "setkey":"Defina sua chave de segurança de dados exclusiva.",
+        "sentmail":"Les Clés Uniques Seront Envoyées to Vote Boîte aux Lettres",
+        "purchase":"Vá para 'COMPRAS' para comprar o kit de teste EpiAging."
     }
 }

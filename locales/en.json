@@ -788,13 +788,13 @@
     },
     "Manual2Activity": {
         "title": "EpiAging App User Manual",
-        "download":"Download the IOS App from Apple Store or Android App from Google Play Store.",
+        "download":"Download the IOS App from the Apple Store or Android App from the Google Play Store.",
         "gocenter":"Go to 'EPICENTER' and lick register to register an account.",
         "fillregis":"Fill in the registration information.",
         "mailbox":"Go to the registration mailbox to activate your account.",
-        "accountlogin":"Login with the account you just registered.",
-        "setkey":"Set your unique private key.",
-        "sentmail":"The unique private key well be sent to your mailbox",
+        "accountlogin":"Log in with the account you just registered.",
+        "setkey":"Set your unique data security key.",
+        "sentmail":"Les clés uniques seront envoyées à votre boîte aux lettres",
         "purchase":"Go to 'SHOPPING' to purchase the EpiAging test kit."
     }
 }
