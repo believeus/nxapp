@@ -738,14 +738,14 @@
     },
     "RasEncryptionActivity": {
         "title": "Data security Setting",
-        "press": "Please press the 'GENERATE' button to generate your Unique Public key and PubPrivatelic key. Then, by pressing 'SAVE',",
+        "press": "Please press the 'GENERATE' button to generate your Unique Public key and Privatelic key. Then, by pressing 'SAVE',",
         "press2": " the Unique Public key and Private key will be sent to your registered mailbox.",
         "setkey": "Once the keys are set, no changes are allowed. If the Public key and Private key were changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new key,",
         "setkey2": "and it can only be set once.",
-        "savekey": "We will not have or save user's private key to decrypt user data according to the ",
+        "savekey": "We will not have or save the user's private key to decrypt user data according to the ",
         "security": "Data Security Statement and HIPPA Law",
-        "freestate": "When you are not logged into the system, your health information and personal user information will be in a 'free' state, and no one can find your associated information between them.",
-        "savekey2": ", please save your only private key.",
+        "freestate": "When you are not logged into the system, your health information and personal user information will be in a 'free' state, and no one can find your associated information between them. ",
+        "savekey2": "please save your only private key.",
         "unique": "The Unique Public key and Private key will be required to enter again if the user logs in again.",
         "failed": "Message, Key generation failed, please regenerate,",
         "success": "Success, The Public key and Private key has been sent to your mailbox.",
@@ -755,7 +755,9 @@
         "save": "Save"
     },
     "QAActivity": {
-        "title": "Q&A"
+        "title": "Q&A",
+        "test":"EpiAging App User Manual",
+        "report":"How to get my epiAging test report?"
     },
     "ContactActivity": {
         "title": "Contact Us",
@@ -775,9 +777,24 @@
         "back": "Cancel"
     },
     "Manual1Activity": {
-        "title": "How to get epiAging test report"
+        "title": "How to get my epiAging test report",
+        "getmy":"How to get my epiAging test report",
+        "login":"Make sure to login with the account that has been used to purchase the epiAging product.",
+        "username":"Your username will appear after you log in.",
+        "gohome":"Go to “HOME” or “EPICENTER” and click “My report”.",
+        "barcode":"Enter(or Scan) the barcode on your test tube and get your epiAging report.",
+        "icon":"After entered your barcode, by clicking the icon to get your epiAging test report",
+        "result":"Your epiAging test result will be at the bottom of the page."
     },
     "Manual2Activity": {
-        "title": "EpiAging App User Manual"
+        "title": "EpiAging App User Manual",
+        "download":"Download the IOS App from Apple Store or Android App from Google Play Store.",
+        "gocenter":"Go to 'EPICENTER' and lick register to register an account.",
+        "fillregis":"Fill in the registration information.",
+        "mailbox":"Go to the registration mailbox to activate your account.",
+        "accountlogin":"Login with the account you just registered.",
+        "setkey":"Set your unique private key.",
+        "sentmail":"The unique private key well be sent to your mailbox",
+        "purchase":"Go to 'SHOPPING' to purchase the EpiAging test kit."
     }
 }

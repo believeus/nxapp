@@ -747,7 +747,9 @@
         "save":"Salve"
     },
     "QAActivity": {
-        "title": "Q&A"
+        "title": "Q&A",
+        "test":"Manual do usuário do EpiAging App",
+        "report":"Como obter o meu relatório de teste epiAging?"
     },
     "ContactActivity": {
         "title": "Contate-Nos"

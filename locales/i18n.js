@@ -18,6 +18,8 @@ I18n.translations = {
     'en':en,
     'fr':fr, 
     'ru':ru,
+    'ru-mo':ru,
+    'ru_RU':ru,
     'pt':pt,
     'zh-Hans': zh,
     'zh-Hant': hk,

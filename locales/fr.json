@@ -11,7 +11,7 @@
         "bio2": "Détection biologique de l'âge 2.0",
         "1ml2": "L'âge biologique peut être mesuré avec seulement 1 ml d'échantillon de salive.",
         "kit":"Epiaging Kit",
-        "learnmore": "Plus",
+        "learnmore": "Voir plus",
         "appsystem": "Notre système APP",
         "personalrep": "Rapports personnels dynamiques",
         "question": "Questionnaires complets",
@@ -731,14 +731,14 @@
     },
     "RasEncryptionActivity": {
         "title": "Paramètre de sécurité des données",
-        "press": "Veuillez appuyer sur le bouton «GÉNÉRER» pour générer votre clé publique unique et votre clé PubPrivatelic. Ensuite,",
-        "press2": " en appuyant sur «ENREGISTRER», la clé publique unique et la clé privée seront envoyées à votre boîte aux lettres enregistrée.",
+        "press": "Veuillez appuyer sur le bouton «GÉNÉRER» pour générer votre clé publique unique et votre clé privée. Puis, en appuyant sur 'SAVE',",
+        "press2": " la clé publique unique et la clé privée seront envoyées à votre boîte aux lettres enregistrée.",
         "setkey": "Une fois les clés définies, aucun changement n'est autorisé. Si la clé publique et la clé privée ont été modifiées, toutes les données sauvegardées précédemment sauvegardées seront perdues. Les nouvelles données saines seront cryptées à l'aide d'une nouvelle clé,",
-        "setkey2": "et ne pourront être définies qu'une seule fois.",
-        "savekey": "Nous n'aurons ni ne sauvegardons la clé privée de l'utilisateur pour déchiffrer ses données conformément ",
-        "security": "à la déclaration de sécurité des données et à la loi HIPPA.",
+        "setkey2": "et il ne peut être réglé qu'une seule fois.",
+        "savekey": "Nous n'aurons ni ne sauvegardons la clé privée de l'utilisateur pour déchiffrer les données de l'utilisateur conformément à la déclaration ",
+        "security": "de sécurité des données et à la loi HIPPA.",
         "freestate": "Lorsque vous n'êtes pas connecté au système, vos informations de santé et vos informations d'utilisateur personnelles seront dans un état «libre», et personne ne pourra trouver les informations associées entre elles.",
-        "savekey2": ", s'il vous plaît enregistrer votre seule clé privée.",
+        "savekey2": "veuillez sauvegarder votre seule clé privée.",
         "unique": "La clé publique unique et la clé privée devront être saisies à nouveau si l'utilisateur se connecte à nouveau.",
         "failed": "Message, la génération de clé a échoué, veuillez régénérer,",
         "success": "Succès, la clé publique et la clé privée ont été envoyées à votre boîte aux lettres.",
@@ -748,7 +748,9 @@
         "save": "sauver"
     },
     "QAActivity": {
-        "title": "Q&A"
+        "title": "Q&A",
+        "test":"Manuel d'utilisation de l'application EpiAging",
+        "report":"Comment obtenir mon rapport de test epiAging?"
     },
     "ContactActivity": {
         "title": "Contact Us",
@@ -768,9 +770,24 @@
         "back": "Annuler"
     },
     "Manual1Activity": {
-        "title": "How to get epiAging test report"
+        "title": "Comment obtenir le rapport de test epiAging",
+        "getmy":"Comment obtenir le rapport de test epiAging",
+        "login":"Assurez-vous de vous connecter avec le compte qui a été utilisé pour acheter le produit epiAging.",
+        "username":"Votre nom d'utilisateur apparaîtra après vous être connecté.",
+        "gohome":"Allez sur «HOME» ou «EPICENTER» et cliquez sur «Mon rapport».",
+        "barcode":"Entrez (ou scannez) le code à barres sur votre éprouvette et obtenez votre rapport d'épidémiologie.",
+        "icon":"Après avoir entré votre code à barres, en cliquant sur l’icône pour obtenir votre rapport de test epiAging",
+        "result":"Le résultat de votre test d'épiAging sera au bas de la page."
     },
     "Manual2Activity": {
-        "title": "EpiAging App User Manual"
+        "title": "Manuel d'utilisation de l'application EpiAging",
+        "download":"Téléchargez l'application IOS à partir de l'Apple Store ou de l'application Android à partir du Google Play Store.",
+        "gocenter":"Allez sur 'EPICENTER' et cliquez sur le registre pour créer un compte.",
+        "fillregis":"Fill in the registration information.",
+        "mailbox":"Accédez à la boîte aux lettres d'inscription pour activer votre compte.",
+        "accountlogin":"Connectez-vous avec le compte que vous venez de créer.",
+        "setkey":"Définissez votre clé privée unique.",
+        "sentmail":"La clé privée unique devrait bien être envoyée à votre boîte aux lettres",
+        "purchase":"Allez à «ACHATS» pour acheter le kit de test EpiAging."
     }
 }

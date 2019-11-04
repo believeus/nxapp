@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, StatusBar, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 
-type Props = {};
 export default class Manual2Activity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -26,47 +25,47 @@ export default class Manual2Activity extends Component<Props> {
                 </StatusBar>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 34, }}>
-                    <Text style={{ height: 123, textAlign: 'center', fontSize: 22, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>EpiAging App User Manual</Text>
+                    <Text style={{ height: 123, textAlign: 'center', fontSize: 22, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>{I18n.t('Manual2Activity.title')}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18,  fontFamily: 'FontAwesome', lineHeight: 21 }}>Download the IOS App from Apple Store or Android App from Google Play Store.</Text>
+                        <Text style={{ height: 67, width: '95%', fontSize: 18,  fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual2Activity.download')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 34, width: '7%', fontSize: 18,textAlignVertical:'center', fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>Go to " EPICENTER" and lick register to register an account.</Text>
+                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.gocenter')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get1.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 34, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
-                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>Fill in the registration information.</Text>
+                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.fillregis')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get2.png')} resizeMode='contain' />
 
                     {/*  */}
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
-                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome'}}>Go to the registration mailbox to activate your account.</Text>
+                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome'}}>{I18n.t('Manual2Activity.mailbox')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get3.png')} resizeMode='contain' />
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
-                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18,fontFamily: 'FontAwesome'}}>Login with the account you just registered.</Text>
+                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18,fontFamily: 'FontAwesome'}}>{I18n.t('Manual2Activity.accountlogin')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get4.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>6.</Text>
-                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome',  }}>Set your unique private key.</Text>
+                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.setkey')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get5.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 34, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
-                        <Text style={{ fontSize: 16, height: 34 ,textAlignVertical:'center',}}>The unique private key well be sent to your mailbox</Text>
+                        <Text style={{ fontSize: 16, height: 34 ,textAlignVertical:'center',}}>{I18n.t('Manual2Activity.sentmail')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get6.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
                         <Text style={{ height: 67, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>7.</Text>
-                        <Text style={{ height: 67, width: '95%', textAlignVertical:'center',fontSize: 18, fontFamily: 'FontAwesome' }}>Go to "SHOPPING" to purchase the EpiAging test kit.</Text>
+                        <Text style={{ height: 67, width: '95%', textAlignVertical:'center',fontSize: 18, fontFamily: 'FontAwesome' }}>{I18n.t('Manual2Activity.purchase')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get7.png')} resizeMode='contain' />
                 </View>
