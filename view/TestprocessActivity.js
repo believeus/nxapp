@@ -3,7 +3,6 @@ import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, To
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 
-type Props = {};
 export default class TestprocessActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -81,8 +80,8 @@ export default class TestprocessActivity extends Component<Props> {
                             <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.sample2')} </Text>
                         </View>
                     </View>
-                    <View style={{ width: '33%', height: 143, marginTop: 67, paddingRight: 28 }}>
-                        <Image style={{ height: 123, width: '100%', }} resizeMode='cover' source={require("../image/icons/tpc.png")}></Image>
+                    <View style={{ width: '33%', height: 145, marginTop: 67, paddingRight: 28 }}>
+                        <Image style={{ height: 145, width: '100%', }} resizeMode='cover' source={require("../image/icons/tpc.png")}></Image>
                     </View>
                 </View>
                 <View style={{ height: 23, width: '77%', alignSelf: 'flex-end', borderTopLeftRadius: 10, borderBottomLeftRadius: 10, backgroundColor: '#f2f2f2' }}></View>

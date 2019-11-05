@@ -71,7 +71,7 @@ export default class TabHomeActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: "100%", height: 345 }}>
-                  
+
                     <Swiper
                         height={340}//组件高度
                         horizontal={true}//水平轮播
@@ -100,8 +100,8 @@ export default class TabHomeActivity extends Component<Props> {
                         </View>
                     </Swiper >
                 </View>
-                <View style={{ width: '90%',marginTop:34,marginBottom:34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
-                        <ImageBackground style={{ width: '100%', heigh: '100%', alignSelf: 'center' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'  >
+                <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
+                    <ImageBackground style={{ width: '100%', heigh: '100%', alignSelf: 'center' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'  >
 
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
@@ -151,11 +151,11 @@ export default class TabHomeActivity extends Component<Props> {
                         navigator={this.props.navigator}
                     />
                 </View>
-                <View style={{ width: '100%', height: 267, marginTop: 20,}}>
-                    <View style={{ width: '90%', height: 278, alignSelf: 'center',marginBottom:20 }}>
-                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 27,marginBottom:19}}>{I18n.t('TabHomeActivity.biotitle')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome',lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
-                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome',lineHeight:23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
+                <View style={{ width: '100%', height: 267, marginTop: 20, }}>
+                    <View style={{ width: '90%', height: 278, alignSelf: 'center', marginBottom: 20 }}>
+                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 27, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23, marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
+                        <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', heigh: 389, width: '100%' }}>
@@ -263,7 +263,19 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc4.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.myreport')}</Text>
+                                    <Text onPress={() => {
+                                        this.state.user == null ?
+                                            this.navigate.push("Login")
+                                            :
+                                            this.state.user.privatekey ?
+                                                this.navigate.push("LifeStyleChart")
+                                                :
+                                                this.navigate.push("RasEncryptionActivity")
+
+                                    }}
+                                        style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>
+                                        {I18n.t('TabHomeActivity.myreport')}
+                                    </Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>
@@ -276,7 +288,17 @@ export default class TabHomeActivity extends Component<Props> {
                                     <Image style={{ width: '100%', height: 56 }} source={require('../image/icons/uc3.png')} resizeMode='center' />
                                 </View>
                                 <View style={{ width: '65%', justifyContent: 'center' }}>
-                                    <Text style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
+                                    <Text
+                                        onPress={() => {
+                                            this.state.user == null ?
+                                                this.navigate.push("Login")
+                                                :
+                                                this.state.user.privatekey ?
+                                                    this.navigate.push("DnaReport")
+                                                    :
+                                                    this.navigate.push("RasEncryptionActivity")
+                                        }}
+                                        style={{ fontSize: 18, textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#0071bc' }}>{I18n.t('TabHomeActivity.questionnaires')}</Text>
                                 </View>
                                 <View style={{ width: '15%', height: 56, justifyContent: 'center' }}>
                                     <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center' }}> &gt; </Text>

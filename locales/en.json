@@ -51,6 +51,10 @@
         "report": "7.View the report ",
         "report2": "through the App"
     },
+    "TabCenterActivity":{
+        "title":"EPICENTER",
+        "centerlogin":"Login"
+    },
     "AboutActivity": {
         "title": "About Us",
         "company": "| Company Introduction",
@@ -748,7 +752,7 @@
         "savekey2": "please save your only private key.",
         "unique": "The Unique Public key and Private key will be required to enter again if the user logs in again.",
         "failed": "Message, Key generation failed, please regenerate,",
-        "success": "Success, The Public key and Private key has been sent to your mailbox.",
+        "success": "Success, The Public key and Private key has been saved to this path:",
         "generate": "Generate",
         "privatekey": "Private key",
         "publickey": "Public key",
