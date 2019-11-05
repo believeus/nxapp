@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 import { StyleSheet, Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, Dimensions, TouchableOpacity } from 'react-native';
 import Swiper from 'react-native-swiper';
-import AwesomeAlert from 'react-native-awesome-alerts';
 import VideoPlayer from 'react-native-video-controls';
-
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 import data from '../appdata'

@@ -12,7 +12,6 @@ export default class CenterActivity extends Component {
     }
     constructor(props) {
         super(props);
-        let _oThis = this
         this.state = { user: null };
 
 

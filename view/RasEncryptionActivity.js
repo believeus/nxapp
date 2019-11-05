@@ -4,8 +4,9 @@ import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n'
 import Session from '../storage/Session'
 import md5 from "react-native-md5"
+import RNFS from 'react-native-fs'
 import UUIDGenerator from 'react-native-uuid-generator'
-import { encrypt, decrypt } from 'react-native-simple-encryption';
+import { encrypt, decrypt } from 'react-native-simple-encryption'
 import data from '../appdata'
 
 export default class RasEncryptionActivity extends Component<Props> {
@@ -176,20 +177,29 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         //用public key加密private key生成加密的priavekey
                                         let cipher = encrypt(this.state.publickey, this.state.privatekey)
                                         fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then(user => user.json()).then((user) => {
+                                            let rnfsPath = Platform.OS === 'ios' ? RNFS.LibraryDirectoryPath : RNFS.ExternalDirectoryPath
+                                            const path = rnfsPath + '/' + md5.hex_md5(user.mail) + '.txt';
                                             user.privatekey = this.state.privatekey
                                             user.publickey = this.state.publickey
                                             Session.save("sessionuser", user)
                                             this.setState({ animating: false })
-                                            Alert.alert("message", I18n.t("RasEncryptionActivity.success"), [{
-                                                text: "OK", onPress: () => {
-                                                    const resetAction = StackActions.reset({
-                                                        index: 0,
-                                                        actions: [NavigationActions.navigate({ routeName: 'Main' })],
-                                                    });
-                                                    this.props.navigation.dispatch(resetAction);
-                                                }
-                                            }])
-
+                                            //先将之前的文件删除
+                                            //将私钥和公钥写入文件中
+                                            RNFS.writeFile(path, this.state.publickey + ":" + this.state.privatekey, 'utf8')
+                                                .then((success) => {
+                                                    Alert.alert("Message", I18n.t("RasEncryptionActivity.success") + "\n" + path, [{
+                                                        text: "OK", onPress: () => {
+                                                            const resetAction = StackActions.reset({
+                                                                index: 0,
+                                                                actions: [NavigationActions.navigate({ routeName: 'Main' })],
+                                                            });
+                                                            this.props.navigation.dispatch(resetAction);
+                                                        }
+                                                    }])
+                                                })
+                                                .catch((err) => {
+                                                    Alert.alert("Message", err)
+                                                });
                                         })
                                     }}
                                         style={{ height: "100%", width: "100%" }} title={I18n.t('RasEncryptionActivity.save')} />
