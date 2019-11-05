@@ -756,8 +756,14 @@
     },
     "QuesnoteActivity": {
         "title": "Notificação",
+        "about": "Sobre questionários",
+        "are": "Os questionários são ",
+        "optional": "opcionais para preenchimento.",
+        "however": "No entanto, epigenética afetada pelo estilo de vida e pelo ambiente. Nossa filosofia é que os testes de epiaging só fazem sentido dentro de um sistema de gerenciamento dinâmico de estilo de vida, meio ambiente e saúde.",
+        "personalized": "Uma avaliação personalizada, incluindo a intervenção, será gerada com base nas informações de saúde e estilo de vida que você forneceu. As atualizações dos parâmetros de saúde e estilo de vida periodicamente ativarão o relatório de análise personalizado ao longo da vida.",
         "ques": "Continuar",
-        "back": "Cancelar"
+        "back": "Cancelar",
+        "epi":"@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "Manual1Activity": {
         "title": "Como obter o relatório de teste epiAging",

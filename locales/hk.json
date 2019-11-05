@@ -778,7 +778,8 @@
         "personalized": "將根據您提供的健康和生活方式信息生成包括干預的個性化評估，定期更新健康和生活方式參數將激活終身個性化分析報告。",
         "title": "通知",
         "ques": "繼續",
-        "back": "取消"
+        "back": "取消",
+        "epi":"@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "Manual1Activity": {
         "title": "獲得EpiAging測試報告",

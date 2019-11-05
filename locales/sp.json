@@ -772,7 +772,8 @@
         "personalized": "Se generará una evaluación personalizada que incluirá una intervención basada en la información de salud y estilo de vida que proporcionó. Las actualizaciones de sus parámetros de salud y estilo de vida periódicamente activarán el informe de análisis personalizado de por vida.",
         "title": "Notificación",
         "ques": "Hacer continuación",
-        "back": "Cancelar"
+        "back": "Cancelar",
+        "epi":"@ 2019 HKG epi THERAPEUTICS Ltd. Todos los derechos reservados."
     },
     "Manual1Activity": {
         "title": "How to get epiAging test report"
