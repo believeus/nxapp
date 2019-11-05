@@ -53,7 +53,8 @@
     },
     "TabCenterActivity":{
         "title":"EPICENTER",
-        "centerlogin":"Login"
+        "centerlogin":"Login",
+        "centerregis":"Register"
     },
     "AboutActivity": {
         "title": "About Us",
@@ -471,7 +472,7 @@
     "QuestionnaireActivity": {
         "title": "Questionnaires",
         "lifestyle": "Lifestyle Questionnaire",
-        "mood": "Self-Assessment",
+        "mood": "Mood Self-Assessment",
         "mcgill": "McGill Pain Questionnaire",
         "sleep": "Sleep Self-Assessment",
         "diet": "Diet Recommendation",
