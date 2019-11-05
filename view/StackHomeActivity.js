@@ -14,6 +14,7 @@ import PaymentActivity from './PaymentActivity';
 import ScannerAcitivity from './ScannerAcitivity'
 import ConfirmActivity from './ConfirmActivity';
 import TabMallActivity from './TabMallActivity';
+import TabCenterActivity from './TabCenterActivity';
 import LoginIcon from './LoginIcon';
 import MoreProActivity from './MoreProActivity';
 import CheckActivity from './CheckActivity';
@@ -50,6 +51,9 @@ export const RootStack = createStackNavigator(
         },
         About: {
             screen: TabAboutActivity
+        },
+        epicenter:{
+            screen:TabCenterActivity
         },
         Company: {
             screen: CompanyActivity

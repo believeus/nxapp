@@ -5,6 +5,11 @@ import Session from '../storage/Session';
 
 
 export default class CenterActivity extends Component {
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: I18n.t("TabCenterActivity.title"),
+        })
+    }
     constructor(props) {
         super(props);
         let _oThis = this
@@ -46,12 +51,12 @@ export default class CenterActivity extends Component {
                             {this.state.user == null ?
                                 <View style={{ alignSelf: "center", flexDirection: 'row' }}>
                                     <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
-                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "right", fontFamily: 'NotoSansHans-Light' }}>Login</Text></TouchableOpacity>
+                                        <TouchableOpacity onPress={() => navigate.push("Login")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "right", fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerlogin')}</Text></TouchableOpacity>
                                     </View>
                                     <View style={{ width: '10%', height: 25, justifyContent: 'center', alignSelf: 'center', }}>
                                         <Text style={{ color: '#fff', textAlign: 'center' }}>|</Text></View>
                                     <View style={{ width: '30%', height: 25, justifyContent: 'center', alignSelf: 'center' }}>
-                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "left", fontFamily: 'NotoSansHans-Light' }}>Register</Text></TouchableOpacity>
+                                        <TouchableOpacity onPress={() => navigate.push("Register")}><Text style={{ fontSize: 18, color: "#ffffff", textAlign: "left", fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerregis')}</Text></TouchableOpacity>
                                     </View>
                                 </View>
 
