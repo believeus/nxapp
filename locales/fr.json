@@ -466,7 +466,13 @@
         "epi": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "QuestionnaireActivity": {
-        "title": "Questionnaires"
+        "title": "Questionnaires",
+        "lifestyle": "Questionnaire sur le mode de vie",
+        "mood": "Auto-évaluation",
+        "mcgill": "Questionnaire de McGill sur la douleur",
+        "sleep": "Auto-évaluation du sommeil",
+        "diet": "Recommandation de régime",
+        "eip": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "ConsentActivity": {
         "title": "Formulaire de consentement",
