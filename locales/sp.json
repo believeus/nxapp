@@ -21,7 +21,7 @@
         "question2": "Cuestionarios de estilo de vida",
         "machinelearn": "APP vinculada a un sistema de aprendizaje automático",
         "whatsame": "Qué es SAM-e？",
-        "same": "Más",
+        "same": "SAM-e",
         "affacthealth": "SAM-e es un suplemento nutricional no un medicamento.",
         "supplement": "SAM-e (S-adenosil metionina) es una sustancia química que se encuentra naturalmente en el cuerpo.",
         "myreport": "My Report",
@@ -48,7 +48,7 @@
         "extraction": "6.Extracción y",
         "extraction2": "análisis de ADN.",
         "report": "7.Enviar un informe ",
-        "report2": "Enviar un informe"
+        "report2": "a la aplicación"
     },
     "AboutActivity": {
         "title": "Sobre nosotros",
@@ -119,11 +119,11 @@
         "heart": "Frecuencia cardíaca (latidos / min)",
         "beats": "latidos / min",
         "bmii": "bmi",
-        "american": "Fuente: American Heart Association",
-        "blood": "-Presión arterial (mmHG)",
+        "american": "Fuente: Asociación Americana del Corazón",
+        "blood": "Presión arterial (mmHG)",
         "mmhg": "mmHg",
         "diastolic": "PA diastólica",
-        "cholesterol": "Cholesterol (mg/dL)",
+        "cholesterol": "Colesterol (mg/dL)",
         "mg": "mg/dl",
         "meditation": "Meditación",
         "mayo": "Fuente: Clínica Mayo",
@@ -237,9 +237,9 @@
     "ProfMosheActivity": {
         "title": "Moshe Szyf, Prof.",
         "experiences": "| EXPERIENCIAS PROFESIONALES",
-        "pioneer": "Pionero del campo de la epigenética.",
+        "pioneer": "Pionero en el campo de la epigenética.",
         "inventor": "Inventor de las primeras patentes amplias en el campo.",
-        "patent": "Inventor de las primeras patentes sobre metilación del ADN. ",
+        "patent": "Inventor de primeras patentes sobre metilación del ADN y cáncer. ",
         "founder": "Fundador del campo de la epigenética conductual y psiquiátrica.",
         "thought": "Pensamiento líder, publicó 295 artículos en el área",
         "fellow": "Miembro de la Royal Society of Canada",
@@ -755,7 +755,9 @@
         "save":"Salvar"
     },
     "QAActivity": {
-        "title": "Q&A"
+        "title": "Q&A",
+        "test":"Manual del usuario de la aplicación EpiAging",
+        "report":"¿Cómo obtener mi informe de prueba epiAging?"
     },
     "ContactActivity": {
         "title": "Contáctenos",
@@ -775,9 +777,24 @@
         "back": "Cancelar"
     },
     "Manual1Activity": {
-        "title": "How to get epiAging test report"
+        "title": "Cómo obtener mi informe de prueba epiAging",
+        "getmy":"Cómo obtener mi informe de prueba epiAging",
+        "login":"Asegúrese de iniciar sesión con la cuenta que se ha utilizado para comprar el producto epiAging.",
+        "username":"Su nombre de usuario aparecerá después de iniciar sesión.",
+        "gohome":"Vaya a 'INICIO' o 'EPICENTRO' y haga clic en 'Mi informe'.",
+        "barcode":"Ingrese (o escanee) el código de barras en su tubo de ensayo y obtenga su informe epiAging.",
+        "icon":"Después de ingresar su código de barras, haciendo clic en el icono para obtener su informe de prueba epiAging",
+        "result":"El resultado de su prueba epiAging estará en la parte inferior de la página."
     },
     "Manual2Activity": {
-        "title": "EpiAging App User Manual"
+        "title": "Manual del usuario de la aplicación EpiAging",
+        "download":"Descargue la aplicación IOS de Apple Store o la aplicación de Android de Google Play Store.",
+        "gocenter":"Vaya a 'EPICENTER' y haga clic en registrarse para registrar una cuenta.",
+        "fillregis":"Complete la información de registro.",
+        "mailbox":"Vaya al buzón de registro para activar su cuenta.",
+        "accountlogin":"Inicie sesión con la cuenta que acaba de registrar.",
+        "setkey":"Establezca su clave de seguridad de datos única.",
+        "sentmail":"Se enviarán claves únicas a su buzón",
+        "purchase":"Vaya a 'COMPRAS' para comprar el kit de prueba EpiAging."
     }
 }
