@@ -59,7 +59,7 @@ export default class McGillChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             fetch(data.url + "user/mcgill/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
@@ -114,7 +114,7 @@ export default class McGillChart extends Component<Props> {
                                 ratingColor='red'
                                 ratingBackgroundColor='#c8c7c8'
                                 onFinishRating={(value) => {
-                                    let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let url = data.url + "user/mcgill/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then((data) => {
                                         if (data == "success") {

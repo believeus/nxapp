@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
-import AesCrypto from 'react-native-aes-kit';
+import { encrypt, decrypt } from 'react-native-simple-encryption';
 import data from '../appdata';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
@@ -170,13 +170,11 @@ export default class DnaReportActivity extends Component<Props> {
                                 <View style={{ width: "15%", height: 35 }} >
 
                                     <TouchableOpacity onPress={() => {
-                                        const iv = '1010101010101010'
-                                        let privatekey = this.state.user.privatekey
-                                        let uuid = this.state.user.uuid
                                         this.setState({ display: true })
+                                        let uuid = decrypt(this.state.user.publickey,  this.state.user.uuid)
                                         //解密
-                                        console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode)
-                                        fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + this.state.user.uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
+                                        console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode)
+                                        fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
                                             switch (data.status) {
                                                 case "invalid":
                                                     Alert.alert('Message', 'Invalid barcode');

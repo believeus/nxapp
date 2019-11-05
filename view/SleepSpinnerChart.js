@@ -6,7 +6,6 @@ import Session from '../storage/Session';
 import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
-import { I18n } from '../locales/i18n';
 
 type Props = {};
 export default class SleepSpinnerChart extends Component<Props> {
@@ -60,7 +59,7 @@ export default class SleepSpinnerChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user })
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             fetch(data.url + "user/sleep/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
@@ -117,7 +116,7 @@ export default class SleepSpinnerChart extends Component<Props> {
                                 color={"#a0a0a0"}
                                 value={0}
                                 onChange={(value) => {
-                                    let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let url = data.url + "user/sleep/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then(() => {
                                         this.load();

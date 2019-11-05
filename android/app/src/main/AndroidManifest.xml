@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.nxapp">
     <uses-permission android:name="android.permission.INTERNET" />
+    
     <!--Begin:wuqiwei 2019-9-18 二维码扫描-->
     <uses-permission android:name="android.permission.CAMERA"/>
     <uses-permission android:name="android.permission.VIBRATE"/>

@@ -3,6 +3,7 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import io.github.traviskn.rnuuidgenerator.RNUUIDGeneratorPackage;
 import cc.rocwang.aescrypto.AesCryptoPackage;
@@ -45,6 +46,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new RNFSPackage(),
             new RNCViewPagerPackage(),
             new RNUUIDGeneratorPackage(),
             new AesCryptoPackage(),

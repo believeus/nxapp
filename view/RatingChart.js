@@ -62,7 +62,7 @@ export default class RatingChart extends Component<Props> {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
             //解密
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             fetch(data.url + "user/lifestyle/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
@@ -116,7 +116,7 @@ export default class RatingChart extends Component<Props> {
                             accurateHalfStars={true}
                             onStarValueChanged={(score) => {
                                 //解密
-                                let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                 let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + score + "&utime=" + new Date().getTime();
                                 fetch(url).then(res => res.text()).then((data) => {
                                     if (data == "success") {

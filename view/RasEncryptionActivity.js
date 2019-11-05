@@ -175,7 +175,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         this.setState({ btnSaveDisabled: true })
                                         //用public key加密private key生成加密的priavekey
                                         let cipher = encrypt(this.state.publickey, this.state.privatekey)
-                                        fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher + "&privatekey=" + this.state.privatekey).then(user => user.json()).then((user) => {
+                                        fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then(user => user.json()).then((user) => {
                                             user.privatekey = this.state.privatekey
                                             user.publickey = this.state.publickey
                                             Session.save("sessionuser", user)

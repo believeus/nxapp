@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet,StatusBar, Text, View, TouchableOpacity, Button, ScrollView, Modal, Alert, TextInput } from 'react-native'
+import { Platform, StyleSheet, StatusBar, Text, View, TouchableOpacity, Button, ScrollView, Modal, Alert, TextInput } from 'react-native'
 import { I18n } from '../locales/i18n'
-import { WebView } from 'react-native-webview'
 import InputSpinner from "react-native-input-spinner"
 import Session from '../storage/Session'
 import Search from 'react-native-search-box'
-import AesCrypto from 'react-native-aes-kit'
+import { encrypt, decrypt } from 'react-native-simple-encryption';
 import DietSliderChart from './DietSliderChart'
 import data from '../appdata'
 type Props = {};
@@ -139,12 +138,10 @@ export default class DietChartActivity extends Component<Props> {
                                                                             this.setState({ fat: this.state.fat })
                                                                             let foodstatus = "{\"foodname\":\"" + data.description + "\",\"calories\":" + calories + ",\"size\":" + value + "}"
                                                                             this.state.foodbox.splice(point, 1, foodstatus)
-                                                                            console.info(this.state.foodbox)
 
                                                                         })
                                                                     }}
                                                                     onDecrease={(value) => { //value 已经点击之后的值
-                                                                        console.info(point)
                                                                         this["type$$" + item[i].id].size = this["type$$" + item[i].id].size == undefined ? 1 : this["type$$" + item[i].id].size
                                                                         let itemid = this["type$$" + item[i].id].props.itemid
                                                                         let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + itemid + "?"
@@ -196,7 +193,7 @@ export default class DietChartActivity extends Component<Props> {
                                                 this.setState({ dietbox: this.state.dietbox })
                                             })
                                         } else {
-                                            Alert.alert("Items have been added to the list")
+                                            Alert.alert("Message","Items have been added to the list")
                                         }
                                     }} />
                                 </TouchableOpacity>
@@ -281,23 +278,18 @@ export default class DietChartActivity extends Component<Props> {
                         <View style={{ width: "90%", height: "100%" }}>
                             <TouchableOpacity>
                                 <Button onPress={() => {
-                                    const iv = 'iiibelieveususus'
-                                    let privatekey = this.state.user.privatekey
-                                    let uuid = this.state.user.uuid
+                                    let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     //解密
-                                    AesCrypto.decrypt(uuid, privatekey, iv).then(plaintxt => {
-                                        // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
-                                        fetch(data.url + "user/diet/update.jhtml", {
-                                            method: "POST",
-                                            headers: {
-                                                'Content-Type': 'application/x-www-form-urlencoded'
-                                            },
-                                            body: "uuid=" + plaintxt + "&foodname=" + this.state.foodbox.join('|') + "&calories=" + this.state.calories + "&updateTime=" + new Date().getTime()
-                                        }).then(res => res.text()).then((data) => {
-                                            this.dietchart.load()
-                                        })
+                                    // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
+                                    fetch(data.url + "user/diet/update.jhtml", {
+                                        method: "POST",
+                                        headers: {
+                                            'Content-Type': 'application/x-www-form-urlencoded'
+                                        },
+                                        body: "uuid=" + uuid + "&foodname=" + this.state.foodbox.join('|') + "&calories=" + this.state.calories + "&updateTime=" + new Date().getTime()
+                                    }).then(res => res.text()).then((data) => {
+                                        this.dietchart.load()
                                     })
-
                                 }} title="save"></Button>
                             </TouchableOpacity>
                         </View>

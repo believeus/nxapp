@@ -63,7 +63,7 @@ export default class BMIChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             //解密
             fetch(data.url + "user/lifestyle/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
@@ -146,7 +146,7 @@ export default class BMIChart extends Component<Props> {
                                 onChange={(height) => {
                                     this.setState({ height })
                                     //解密
-                                    let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=height&value=" + height + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then(() => {
                                         console.info(this.state.weight + "--" + this.state.height)
@@ -188,7 +188,7 @@ export default class BMIChart extends Component<Props> {
                                 onChange={(weight) => {
                                     this.setState({ weight })
                                     //解密
-                                    let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=weight&value=" + weight + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then(() => {
                                         console.info(this.state.weight + "--" + this.state.height)

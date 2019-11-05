@@ -62,7 +62,7 @@ export default class DietSliderChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user })
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             fetch(data.url + "user/diet/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
@@ -127,7 +127,7 @@ export default class DietSliderChart extends Component<Props> {
                                 // console.log("CHANGE", value);
                             }}
                             onComplete={(value) => {
-                                let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                 let url = data.url + "user/diet/update.jhtml.jhtml?uuid=" + plaintxt + "&foodname=" + value + "&calories=" + value + "&updateTime=" + new Date().getTime()
                                 fetch(url).then(res => res.text()).then((data) => {
                                     this.load();

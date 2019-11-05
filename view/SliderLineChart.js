@@ -63,7 +63,7 @@ export default class SliderLineChart extends Component<Props> {
             //console.info(decrypt('key123', 'IwAVXV0TPAoLXVY='))
             this.setState({ user: user });
             //解密
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             fetch(data.url + "user/lifestyle/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
@@ -134,7 +134,7 @@ export default class SliderLineChart extends Component<Props> {
                             step={1}
                             onAfterChange={(value) => {
                                 //解密
-                                let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                 let url = data.url + "user/lifestyle/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
                                 fetch(url).then(res => res.text()).then((data) => {
                                     this.load();

@@ -59,7 +59,7 @@ export default class MoodChart extends Component<Props> {
     load = () => {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-            let plaintxt = decrypt(user.privatekey, user.uuid)
+            let plaintxt = decrypt(user.publickey, user.uuid)
             fetch(data.url + "user/mood/data.jhtml?uuid=" + plaintxt).then(res => res.json()).then((data) => {
                 let xValue = []
                 let yValue = []
@@ -117,14 +117,13 @@ export default class MoodChart extends Component<Props> {
                                 ratingBackgroundColor='#c8c7c8'
                                 onFinishRating={(value) => {
                                     //解密
-                                    let plaintxt = decrypt(this.state.user.privatekey, this.state.user.uuid)
+                                    let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let url = data.url + "user/mood/update.jhtml?uuid=" + plaintxt + "&column=" + this.props.column + "&value=" + value + "&utime=" + new Date().getTime();
                                     fetch(url).then(res => res.text()).then((data) => {
                                         if (data == "success") {
                                             this.load();
                                         }
                                     })
-
                                 }}
                             />
 
