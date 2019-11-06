@@ -50,6 +50,17 @@
         "report": "7.Отправьте отчёт ",
         "report2": "через приложение"
     },
+    "TabCenterActivity":{
+        "title":"EPICENTER",
+        "centerlogin":"Авторизоваться",
+        "centerregis":"регистр",
+        "centerkey":"Закрытый ключ",
+        "Questionnaire":"Опросник",
+        "centerreport":"Мой отчет",
+        "centerqa":"Q&A",
+        "centerus":"Свяжитесь с нами",
+        "centerout":"выход"
+    },
     "AboutActivity": {
         "title": "О нас",
         "company": "| Знакомство с компанией",

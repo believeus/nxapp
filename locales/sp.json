@@ -50,6 +50,17 @@
         "report": "7.Enviar un informe ",
         "report2": "a la aplicación"
     },
+    "TabCenterActivity":{
+        "title":"EPICENTER",
+        "centerlogin":"Iniciar sesión",
+        "centerregis":"Registro",
+        "centerkey":"Llave privada",
+        "Questionnaire":"Cuestionario",
+        "centerreport":"Mi reporte",
+        "centerqa":"Q&A",
+        "centerus":"Contáctenos",
+        "centerout":"Salir"
+    },
     "AboutActivity": {
         "title": "Sobre nosotros",
         "company": "| Introducción de la Compañía",

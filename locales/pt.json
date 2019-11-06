@@ -50,6 +50,17 @@
         "report": "7.Enviar relatórios ",
         "report2": " ao App"
     },
+    "TabCenterActivity":{
+        "title":"EPICENTER",
+        "centerlogin":"Conecte-se",
+        "centerregis":"registo",
+        "centerkey":"Chave privada",
+        "Questionnaire":"Questionário",
+        "centerreport":"Meu relatório",
+        "centerqa":"Q&A",
+        "centerus":"Contate-Nos",
+        "centerout":"Sair"
+    },
     "AboutActivity": {
         "title": "Sobre nós",
         "company": "| Company Introduction",

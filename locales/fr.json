@@ -50,6 +50,17 @@
         "report": "7.Voir le rapport",
         "report2": " via l'application"
     },
+    "TabCenterActivity":{
+        "title":"EPICENTER",
+        "centerlogin":"Connexion",
+        "centerregis":"S'inscrire",
+        "centerkey":"Clé privée",
+        "Questionnaire":"Questionnaire",
+        "centerreport":"Mon rapport",
+        "centerqa":"Q&A",
+        "centerus":"Nous contacter",
+        "centerout":"Sortie"
+    },
     "AboutActivity": {
         "title": "About Us",
         "company": "| Introduction de la société",

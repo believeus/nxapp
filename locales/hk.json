@@ -49,6 +49,17 @@
         "report": "7.經由應用程式 ",
         "report2": "發出報告"
     },
+    "TabCenterActivity":{
+        "title":"EPICENTER",
+        "centerlogin":"登入",
+        "centerregis":"注册",
+        "centerkey":"私鑰",
+        "Questionnaire":"問卷調查",
+        "centerreport":"我的報告",
+        "centerqa":"Q&A",
+        "centerus":"聯繫我們",
+        "centerout":"退出"
+    },
     "AboutActivity": {
         "title": "About Us",
         "company": "| 公司介紹",

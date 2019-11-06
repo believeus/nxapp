@@ -17,14 +17,39 @@ I18n.fallbacks = true;
 I18n.translations = {
     'en':en,
     'fr':fr, 
+    'fr-be':fr,
+    'fr-ca':fr,
+    'fr-ch':fr,
+    'fr-lu':fr,
     'ru':ru,
     'ru-mo':ru,
     'ru_RU':ru,
     'pt':pt,
+    'pt-br':pt,
     'zh-Hans': zh,
     'zh-Hant': hk,
     'zh-TW':hk,
-    'es':es
+    'es':es,
+    'es-mx':es,
+    'es-gt':es,
+    'es-cr':es,
+    'es-pa':es,
+    'es-do':es,
+    'es-ve':es,
+    'es-co':es,
+    'es-pe':es,
+    'es-ar':es,
+    'es-ec':es,
+    'es-cl':es,
+    'es-uy':es,
+    'es-py':es,
+    'es-bo':es,
+    'es-sv':es,
+    'es-hn':es,
+    'es-ni':es,
+    'es-pr':es
+  
+    
 };
 I18n.localeLanguage = () => {
     I18n.locale = DeviceInfo.getDeviceLocale();

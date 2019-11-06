@@ -54,7 +54,13 @@
     "TabCenterActivity":{
         "title":"EPICENTER",
         "centerlogin":"Login",
-        "centerregis":"Register"
+        "centerregis":"Register",
+        "centerkey":"Private key",
+        "Questionnaire":"Questionnaire",
+        "centerreport":"My Report",
+        "centerqa":"Q&A",
+        "centerus":"Contact Us",
+        "centerout":"Log Out"
     },
     "AboutActivity": {
         "title": "About Us",
