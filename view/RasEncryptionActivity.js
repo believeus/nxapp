@@ -177,8 +177,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         //用public key加密private key生成加密的priavekey
                                         let cipher = encrypt(this.state.publickey, this.state.privatekey)
                                         fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then(user => user.json()).then((user) => {
-                                            let rnfsPath = Platform.OS === 'ios' ? RNFS.LibraryDirectoryPath : RNFS.ExternalDirectoryPath
-                                            const path = rnfsPath + '/' + md5.hex_md5(user.mail) + '.txt';
+                                            let path = RNFS.DocumentDirectoryPath + '/' + md5.hex_md5(user.mail) + '.txt'
                                             user.privatekey = this.state.privatekey
                                             user.publickey = this.state.publickey
                                             Session.save("sessionuser", user)

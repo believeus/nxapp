@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 
 import { Platform, StyleSheet, Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Button, Alert } from 'react-native';
 import Toast from 'react-native-root-toast';
+import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
 import Input from "react-native-input-validation"
 import md5 from "react-native-md5";
 import Session from '../storage/Session';
 import RNFS from 'react-native-fs'
 import data from '../appdata'
+
 
 
 type Props = {};
@@ -33,20 +35,29 @@ export default class LoginActivity extends Component<Props> {
                 else {
                     if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
-                    let rnfsPath = Platform.OS === 'ios' ? RNFS.LibraryDirectoryPath : RNFS.ExternalDirectoryPath
-                    const path = rnfsPath + '/' + md5.hex_md5(sessionuser.mail) + '.txt';
-                    RNFS.readFile(path).then((result) => {
-                        if (!result) this.props.navigation.push("RasEncryptionActivity")
-                        else {
-                            sessionuser.publickey = result ? result.split(":")[0] : ""
-                            sessionuser.privatekey = result ? result.split(":")[1] : ""
-                            Session.save("sessionuser", sessionuser)
-                            this.props.navigation.push("Main")
+                    Session.save("sessionuser", sessionuser)
+                    let path = RNFS.DocumentDirectoryPath + '/' + md5.hex_md5(sessionuser.mail) + '.txt'
+                    RNFS.exists(path).then((exists) => {
+                        let jumpPage = "Main"
+                        if (exists) {
+                            RNFS.readFile(path).then((result) => {
+                                sessionuser.publickey = result ? result.split(":")[0] : ""
+                                sessionuser.privatekey = result ? result.split(":")[1] : ""
+                                Session.save("sessionuser", sessionuser)
+                            }).catch((e) => {
+                                console.info(e)
+                                Alert.alert("Message", e)
+                            });
+                        } else {
+                            jumpPage = "RasEncryptionActivity"
                         }
+                        const resetAction = StackActions.reset({
+                            index: 0,
+                            actions: [NavigationActions.navigate({ routeName: jumpPage })],
+                        });
+                        this.props.navigation.dispatch(resetAction);
+                    })
 
-                    }).catch((err) => {
-                        Alert.alert("Message", err)
-                    });
 
 
                 }

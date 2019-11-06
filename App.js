@@ -42,12 +42,12 @@ export default class App extends Component<Props> {
     super(props);
     this.state = {
       showRealApp: false,
-  }
-    Session.load("launchershow").then((display) => {
-      this.setState({ showRealApp: display })
-    }).catch((error)=>{
-      this.setState({ showRealApp: false })
-    });
+    }
+    // Session.load("launchershow").then((display) => {
+    //   this.setState({ showRealApp: display })
+    // }).catch((error)=>{
+    //   this.setState({ showRealApp: false })
+    // });
   }
 
 
