@@ -185,7 +185,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </Text>
                             </View>
                             </ImageBackground>
-                        </View>
+    w                        </View>
                     </Swiper >
                 </View>
                 <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
