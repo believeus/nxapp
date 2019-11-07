@@ -82,29 +82,35 @@ export default class TabHomeActivity extends Component<Props> {
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                             <View style={{ width: '100%', }}>
                                 <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover'  >
-                                <View  style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45,}}>
-                                    <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#006DB5',fontFamily: 'Fontawesome',fontWeight:'bold'}}>
-                                       How Old Are You,Really?
+                                <View style={{height:23}}></View>
+                                <View  style={{ width: '90%', alignSelf: 'center',flexDirection:'column'}}>
+                                    <Text style={{  fontSize:34, color: '#006DB5'}}>
+                                       How Old Are
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -10 ,fontSize:25,color:'#5CACEE'}}>
+                                    <Text style={{ fontSize:34,color: '#006DB5'}}>
+                                    You, Really?
+                                    </Text>
+                                    <View style={{height:8}}></View>
+                                    <Text style={{ fontSize:16,lineHeight:15, color:'#5CACEE'}}>
                                        The only age that counts
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:25,color:'#5CACEE'}}>
+                                    <Text style={{ fontSize:16,color:'#5CACEE'}}>
                                        is your biological DNA age.
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -70 ,fontSize:15,color:'#E3E3E3'}}>
+                                    <View style={{height:8}}></View>
+                                    <Text style={{ fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
                                       Stop counting your age by birthdays or can-
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                    <Text style={{  fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
                                       dles on the cake, wrinkkles,crow's feet or the 
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                    <Text style={{  fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
                                       frown lines on your face —— those are only
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                    <Text style={{  fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
                                        numbers.And today,the numbers don't
                                     </Text>
-                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                    <Text style={{ fontSize:12,color:'#E3E3E3'}}>
                                        count.
                                     </Text>
                                     </View>
@@ -185,7 +191,7 @@ export default class TabHomeActivity extends Component<Props> {
                                 </Text>
                             </View>
                             </ImageBackground>
-                        </View>
+                         </View>
                     </Swiper >
                 </View>
                 <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
@@ -193,7 +199,9 @@ export default class TabHomeActivity extends Component<Props> {
 
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <Text onPress={() => this.navigate.push("About")} style={{ height: 128, width: '32%' }}></Text>
+                                <View  style={{ height: 128, width: '32%', }}>
+                                    <Text onPress={() => this.navigate.push("About")}  style={{height:128,lineHeight:128, color: '#ffffff',fontSize:18 }}>About Us</Text>
+                                </View>
                                 <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={() => {
                                         this.state.user == null ?
