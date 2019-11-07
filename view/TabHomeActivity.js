@@ -82,36 +82,37 @@ export default class TabHomeActivity extends Component<Props> {
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                             <View style={{ width: '100%', }}>
                                 <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover'  >
-                                <View style={{height:23}}></View>
-                                <View  style={{ width: '90%', alignSelf: 'center',flexDirection:'column'}}>
-                                    <Text style={{  fontSize:34, color: '#006DB5'}}>
-                                       How Old Are
+                                    <View style={{ height: 23 }}></View>
+                                    <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
+                                        <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>
+                                            How Old Are
                                     </Text>
-                                    <Text style={{ fontSize:34,color: '#006DB5'}}>
-                                    You, Really?
+                                        <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>
+                                            You, Really?
                                     </Text>
-                                    <View style={{height:8}}></View>
-                                    <Text style={{ fontSize:16,lineHeight:15, color:'#5CACEE'}}>
-                                       The only age that counts
+                                        <View style={{ height: 8 }}></View>
+                                        <Text style={{ fontSize: 16, lineHeight: 15, color: '#5CACEE' }}>
+                                            The only age that counts
                                     </Text>
-                                    <Text style={{ fontSize:16,color:'#5CACEE'}}>
-                                       is your biological DNA age.
+                                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>
+                                            is your biological DNA age.
                                     </Text>
-                                    <View style={{height:8}}></View>
-                                    <Text style={{ fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
-                                      Stop counting your age by birthdays or can-
+                                        <View style={{ height: 8 }}></View>
+                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                            Stop counting your age by birthdays or can-
                                     </Text>
-                                    <Text style={{  fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
-                                      dles on the cake, wrinkkles,crow's feet or the 
+                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                            dles on the cake, wrinkkles,crow's feet or the
                                     </Text>
-                                    <Text style={{  fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
-                                      frown lines on your face —— those are only
+                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                            frown lines on your face —— those are only
                                     </Text>
-                                    <Text style={{  fontSize:12,lineHeight:15,color:'#E3E3E3'}}>
-                                       numbers.And today,the numbers don't
+                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                            numbers.And today,the numbers don't
                                     </Text>
-                                    <Text style={{ fontSize:12,color:'#E3E3E3'}}>
-                                       count.
+                                        <Text style={{ fontSize: 12, color: '#E3E3E3' }}>
+
+                                            count.
                                     </Text>
                                     </View>
                                 </ImageBackground>
@@ -121,57 +122,36 @@ export default class TabHomeActivity extends Component<Props> {
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
                             <View style={{ width: '100%', height: 345 }}>
                                 <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' >
-                                   <View  style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45}}>
-                                    <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#E3E3E3',marginLeft:190}}>What is</Text>
-                                    <Text style={{ height: 100, marginTop: -60 ,fontSize:45,color: '#E3E3E3',marginLeft:190}}>SAM-e?</Text>
-                                    <Text style={{ height: 100, marginTop: -40 ,fontSize:20,color:'#E3E3E3',marginLeft:150}}>
-                                       SAM-e is a natural product in
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#E3E3E3',marginLeft:163}}>
-                                       the  human body,which can
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#E3E3E3',marginLeft:180}}>
-                                       affect human health
-                                    </Text>
+                                    <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
+                                        <View style={{ width: '60%' }}></View>
+                                        <View style={{ width: '40%' }}>
+                                            <Text style={{ fontSize: 34, marginTop: 23, color: '#E3E3E3', fontWeight:"bold"}}>What is</Text>
+                                            <Text style={{ fontSize: 34, color: '#E3E3E3',fontWeight:"bold" }}>SAM-e? </Text>
+                                            <View style={{ height: 20 }}></View>
+                                            <Text style={{ fontSize: 17, color: '#E3E3E3', }}>SAM-e is a natural product </Text>
+                                            <Text style={{ fontSize: 17, color: '#E3E3E3' }}>in the  human body,which </Text>
+                                            <Text style={{ fontSize: 17, color: '#E3E3E3', }}>can affect human health </Text>
+                                        </View>
                                     </View>
                                 </ImageBackground>
                             </View>
                         </TouchableOpacity>
                         <View style={{ width: '100%', height: 345 }}>
                             <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" >
-                            <View  style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45}}>
-                                    <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#006DB5',}}>
-                                        What are
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -60 ,fontSize:45,color: '#006DB5',}}>
-                                        Vitamins?
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -50 ,fontSize:20,color:'#5CACEE',}}>
-                                       Nutramins are organic 
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
-                                       substanc- es necessary to 
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
-                                      maintain human left activities,
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
-                                      and also important active
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
-                                      substances to maintain
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
-                                      human health
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -60 ,fontSize:20,color:'#6A6B6A',}}>
-                                      Vitamin content in the body 
-                                    </Text>
-                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#6A6B6A',}}>
-                                      is very small,but indispensable
-                                    </Text>
-
-                            </View>
+                                <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
+                                <View style={{ height: 20 }}></View>
+                                    <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>What are</Text>
+                                    <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>Vitamins?</Text>
+                                    <View style={{ height: 20 }}></View>
+                                    <Text style={{fontSize: 16, color: '#5CACEE', }}>Nutramins are organic substanc-</Text>
+                                    <Text style={{fontSize: 16,color: '#5CACEE', }}>es necessary to maintain human</Text>
+                                    <Text style={{fontSize: 16,color: '#5CACEE', }}>left activities,and also important</Text>
+                                    <Text style={{fontSize: 16,color: '#5CACEE', }}>active substances to maintain</Text>
+                                    <Text style={{fontSize: 16, color: '#5CACEE', }}>human health</Text>
+                                    <View style={{ height: 20 }}></View>
+                                    <Text style={{fontSize: 12, color: '#6A6B6A', }}>Vitamin content in the body is very small,</Text>
+                                    <Text style={{fontSize: 12, color: '#6A6B6A', }}>but indispensable</Text>
+                                </View>
                             </ImageBackground>
                         </View>
                         <View style={{ width: '100%', height: 345 }}>
@@ -179,19 +159,28 @@ export default class TabHomeActivity extends Component<Props> {
                         </View>
                         <View style={{ width: '100%', height: 345 }}>
                             <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" >
-                            <View  style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45}}>
-                                <Text style={{ height: 100, marginTop: 75 ,fontSize:20,color: '#E3E3E3',marginLeft:86}}>
-                                Chronological Age
-                                </Text>
-                                <Text style={{ height: 100, marginTop: -100 ,fontSize:20,color: '#E3E3E3',marginLeft:250}}>
-                                Biological Age
-                                </Text>
-                                <Text style={{ height: 100, marginTop: -30 ,fontSize:20,color: '#E3E3E3',marginLeft:155}}>
-                                Health Management
-                                </Text>
-                            </View>
+                                <View style={{  width: '90%', alignSelf: 'center', flexDirection:"column",}}>
+                                <View style={{ height: '38%',}}></View>
+                                <View style={{ height: '22%',}}>
+                                <View style={{  width: '90%', alignSelf: 'center', flexDirection:"row",}}>
+                                <View style={{ width: '22%',}}></View>
+                                <View style={{ width: '35%',alignSelf:"center"}}>
+                                    <Text style={{ fontSize: 12, color: '#E3E3E3',alignSelf:"center"}}>Chronological Age</Text>
+                               </View>
+                               <View style={{ width: '40%',}}>
+                                    <Text style={{ fontSize: 12, color: '#E3E3E3',textAlign:"right"}}>Biological Age</Text>
+                                    </View>
+                               </View>
+                               </View>
+                                <View style={{ height: '34%' }}>
+                                <View style={{  width: '90%', alignSelf: 'center', flexDirection:"row",}}>
+                                <View style={{ width: '50%',}}></View>
+                                    <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"center"}}>Health Management</Text>
+                                </View>
+                                </View>
+                                </View>
                             </ImageBackground>
-                         </View>
+                        </View>
                     </Swiper >
                 </View>
                 <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
@@ -199,8 +188,8 @@ export default class TabHomeActivity extends Component<Props> {
 
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
                             <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <View  style={{ height: 128, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("About")}  style={{height:128,lineHeight:128, color: '#ffffff',fontSize:18 }}>About Us</Text>
+                                <View style={{ height: 128, width: '32%', }}>
+                                    <Text onPress={() => this.navigate.push("About")} style={{ height: 128, lineHeight: 128, color: '#ffffff', fontSize: 18 }}>About Us</Text>
                                 </View>
                                 <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
                                     <Text onPress={() => {

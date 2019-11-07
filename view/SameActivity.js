@@ -37,21 +37,18 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <View style={{ width: '100%', height: 213 }}>
+                <View style={{ width: '100%'}}>
                     <ImageBackground style={{ width: '100%', height: 213 }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")} >
-                        <View style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45, marginRight: 20 }}>
-                            <Text style={{ height: 100, marginTop: -30, fontSize: 45, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 210 }}>
-                                What is SAM-e?
-                 </Text>
-                            <Text style={{ height: 100, marginTop: 0, fontSize: 20, color: '#E3E3E3', marginLeft: 172 }}>
-                                SAM-e is a natural product
-                 </Text>
-                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 179 }}>
-                                in the  human body,which
-                  </Text>
-                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 190 }}>
-                                can affect human health
-                  </Text>
+                        <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
+                            <View style={{ width: '50%'}}></View>
+                            <View style={{ width: '50%' }}>
+                                <Text style={{ fontSize: 34,marginTop:23, color: '#E3E3E3', }}>What is</Text>
+                                <Text style={{ fontSize: 34, color: '#E3E3E3', }}>SAM-e? </Text>
+                                <View style={{ height: 20 }}></View>
+                                <Text style={{ fontSize: 17, color: '#E3E3E3', }}>SAM-e is a natural product </Text>
+                                <Text style={{ fontSize: 17, color: '#E3E3E3' }}>in the  human body,which </Text>
+                                <Text style={{ fontSize: 17, color: '#E3E3E3',  }}>can affect human health </Text>
+                            </View>
                         </View>
                     </ImageBackground>
                 </View>
@@ -68,11 +65,31 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '100%', }}>
                     <ImageBackground style={{ height: 456, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")} >
-                        <View style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45, }}>
-                            <Text style={{ height: 100, marginTop: -20, fontSize: 45, color: '#006DB5', fontFamily: 'Fontawesome', fontWeight: 'bold' }}>
-                                Naturall occurr
+                        {/* <View style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45, }}>
+                            <Text style={{ height: 100, marginTop: -18, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 127 }}>
+                                Naturall
                              </Text>
-                        </View>
+                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 123 }}>
+                                occurring
+                             </Text>
+                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 121 }}>
+                                compound
+                             </Text>
+                            <Text style={{ height: 100, marginTop: -58, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 20 }}>
+                                Nutritional
+                             </Text>
+                            <Text style={{ height: 100, marginTop: -78, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 20 }}>
+                                supplement
+                             </Text>
+                            <Text style={{ height: 100, marginTop: -78, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 27 }}>
+                                non-drug
+                             </Text>
+                            <Text style={{ height: 100, marginTop: -24, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 5 }}>
+                                The most
+                             </Text>
+                           
+
+                        </View> */}
                     </ImageBackground>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
