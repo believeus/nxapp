@@ -43,13 +43,13 @@ export default class SameActivity extends Component<Props> {
                             <Text style={{ height: 100, marginTop: -30, fontSize: 45, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 210 }}>
                                 What is SAM-e?
                  </Text>
-                            <Text style={{ height: 100, marginTop: 0, fontSize: 20, color: '#E3E3E3', marginLeft: 160 }}>
-                                SAM-e is a natural product 
+                            <Text style={{ height: 100, marginTop: 0, fontSize: 20, color: '#E3E3E3', marginLeft: 172 }}>
+                                SAM-e is a natural product
                  </Text>
-                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 170 }}>
-                                in the  human body,which 
+                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 179 }}>
+                                in the  human body,which
                   </Text>
-                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 180 }}>
+                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 190 }}>
                                 can affect human health
                   </Text>
                         </View>
@@ -66,7 +66,15 @@ export default class SameActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <FitImage style={{ height: 456, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")} />
+                <View style={{ width: '100%', }}>
+                    <ImageBackground style={{ height: 456, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")} >
+                        <View style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45, }}>
+                            <Text style={{ height: 100, marginTop: -20, fontSize: 45, color: '#006DB5', fontFamily: 'Fontawesome', fontWeight: 'bold' }}>
+                                Naturall occurr
+                             </Text>
+                        </View>
+                    </ImageBackground>
+                </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
 
                     <View style={{ flexDirection: 'row' }}>
