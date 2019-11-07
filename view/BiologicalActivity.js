@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, Image,ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 import FitImage from 'react-native-fit-image';
+
 export default class BiologicalActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -24,7 +25,24 @@ export default class BiologicalActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <FitImage originalWidth={400} originalHeight={218} resizeMode='contain' source={require("../image/enpic/bio1.jpg")} />
+                <View style={{ width: '100%', height:213}}>
+                <ImageBackground style={{width:'100%',height:213}} resizeMode='contain' source={require("../image/enpic/bio1.jpg")} >
+                <View  style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45,marginRight:20}}>
+                <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#006DB5',fontFamily: 'Fontawesome',fontWeight:'bold'}}>
+                   How Old Are You,Really?
+                 </Text>
+                 <Text style={{ height: 100, marginTop: 0 ,fontSize:25,color:'#5CACEE'}}>
+                   The only age that counts
+                  </Text>
+                  <Text style={{ height: 100, marginTop: -80 ,fontSize:25,color:'#5CACEE'}}>
+                   is your biological DNA 
+                  </Text>
+                  <Text style={{ height: 100, marginTop: -80 ,fontSize:25,color:'#5CACEE'}}>
+                   age.
+                  </Text>
+                </View>
+                </ImageBackground>
+                </View>
                 <View style={{ backgroundColor: '#0071bc', height: 45, flexDirection: 'row', }}>
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('BiologicalActivity.biological')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>{I18n.t('BiologicalActivity.nice')}</Text></Text>

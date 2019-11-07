@@ -6,6 +6,8 @@ import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 import data from '../appdata'
+import { bold } from 'ansi-colors';
+import { Right } from 'native-base';
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -79,22 +81,110 @@ export default class TabHomeActivity extends Component<Props> {
                         autoplay={true}>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                             <View style={{ width: '100%', }}>
-                                <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover' />
+                                <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index1.jpg')} resizeMode='cover'  >
+                                <View  style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45,}}>
+                                    <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#006DB5',fontFamily: 'Fontawesome',fontWeight:'bold'}}>
+                                       How Old Are You,Really?
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -10 ,fontSize:25,color:'#5CACEE'}}>
+                                       The only age that counts
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:25,color:'#5CACEE'}}>
+                                       is your biological DNA age.
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -70 ,fontSize:15,color:'#E3E3E3'}}>
+                                      Stop counting your age by birthdays or can-
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                      dles on the cake, wrinkkles,crow's feet or the 
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                      frown lines on your face —— those are only
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                       numbers.And today,the numbers don't
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -90 ,fontSize:15,color:'#E3E3E3'}}>
+                                       count.
+                                    </Text>
+                                    </View>
+                                </ImageBackground>
+
                             </View>
                         </TouchableOpacity>
                         <TouchableOpacity onPress={() => this.navigate.push("Same")}>
                             <View style={{ width: '100%', height: 345 }}>
-                                <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' />
+                                <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' >
+                                   <View  style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45}}>
+                                    <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#E3E3E3',marginLeft:190}}>What is</Text>
+                                    <Text style={{ height: 100, marginTop: -60 ,fontSize:45,color: '#E3E3E3',marginLeft:190}}>SAM-e?</Text>
+                                    <Text style={{ height: 100, marginTop: -40 ,fontSize:20,color:'#E3E3E3',marginLeft:150}}>
+                                       SAM-e is a natural product in
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#E3E3E3',marginLeft:163}}>
+                                       the  human body,which can
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#E3E3E3',marginLeft:180}}>
+                                       affect human health
+                                    </Text>
+                                    </View>
+                                </ImageBackground>
                             </View>
                         </TouchableOpacity>
                         <View style={{ width: '100%', height: 345 }}>
-                            <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" />
+                            <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" >
+                            <View  style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45}}>
+                                    <Text style={{ height: 100, marginTop: -20 ,fontSize:45,color: '#006DB5',}}>
+                                        What are
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -60 ,fontSize:45,color: '#006DB5',}}>
+                                        Vitamins?
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -50 ,fontSize:20,color:'#5CACEE',}}>
+                                       Nutramins are organic 
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
+                                       substanc- es necessary to 
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
+                                      maintain human left activities,
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
+                                      and also important active
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
+                                      substances to maintain
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#5CACEE',}}>
+                                      human health
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -60 ,fontSize:20,color:'#6A6B6A',}}>
+                                      Vitamin content in the body 
+                                    </Text>
+                                    <Text style={{ height: 100, marginTop: -80 ,fontSize:20,color:'#6A6B6A',}}>
+                                      is very small,but indispensable
+                                    </Text>
+
+                            </View>
+                            </ImageBackground>
                         </View>
                         <View style={{ width: '100%', height: 345 }}>
                             <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index4.jpg')} resizeMode="cover" />
                         </View>
                         <View style={{ width: '100%', height: 345 }}>
-                            <Image style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" />
+                            <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index5.jpg')} resizeMode="cover" >
+                            <View  style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45}}>
+                                <Text style={{ height: 100, marginTop: 75 ,fontSize:20,color: '#E3E3E3',marginLeft:86}}>
+                                Chronological Age
+                                </Text>
+                                <Text style={{ height: 100, marginTop: -100 ,fontSize:20,color: '#E3E3E3',marginLeft:250}}>
+                                Biological Age
+                                </Text>
+                                <Text style={{ height: 100, marginTop: -30 ,fontSize:20,color: '#E3E3E3',marginLeft:155}}>
+                                Health Management
+                                </Text>
+                            </View>
+                            </ImageBackground>
                         </View>
                     </Swiper >
                 </View>

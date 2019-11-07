@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image, ScrollView, TouchableOpacity, Modal, Button } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, TouchableOpacity, Modal, Button } from 'react-native';
 import { I18n } from '../locales/i18n';
 import { WebView } from 'react-native-webview';
 import FitImage from 'react-native-fit-image';
@@ -37,8 +37,26 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <FitImage style={{ height: 234, width: '100%' }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")} />
+                <View style={{ width: '100%', height: 213 }}>
+                    <ImageBackground style={{ width: '100%', height: 213 }} resizeMode='contain' source={require("../image/enpic/sam1.jpg")} >
+                        <View style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45, marginRight: 20 }}>
+                            <Text style={{ height: 100, marginTop: -30, fontSize: 45, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 210 }}>
+                                What is SAM-e?
+                 </Text>
+                            <Text style={{ height: 100, marginTop: 0, fontSize: 20, color: '#E3E3E3', marginLeft: 160 }}>
+                                SAM-e is a natural product 
+                 </Text>
+                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 170 }}>
+                                in the  human body,which 
+                  </Text>
+                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', marginLeft: 180 }}>
+                                can affect human health
+                  </Text>
+                        </View>
+                    </ImageBackground>
+                </View>
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
+
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
                     </View>
@@ -78,16 +96,16 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6' }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome',  }}>{I18n.t('SameActivity.according')}</Text>
+                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', }}>{I18n.t('SameActivity.according')}</Text>
                         <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/enpic/sam3.png")}></Image>
                         <View style={{ width: '96%', height: 123, backgroundColor: '#C1E1E8', borderRadius: 10, alignSelf: 'center', marginBottom: 34 }}>
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>{I18n.t('SameActivity.quality')}</Text>
                             <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }); this.setState({ display: true }) }}>
-                                <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10 ,textDecorationLine:'underline'}}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
-                               
+                                <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10, textDecorationLine: 'underline' }}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
+
                                 </Text>
                             </TouchableOpacity>
-                            <Text style={{ height: 47, width: '10%', alignSelf: 'baseline',fontStyle:'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
+                            <Text style={{ height: 47, width: '10%', alignSelf: 'baseline', fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -110,7 +128,7 @@ export default class SameActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ height: 77, fontSize: 21, fontFamily: 'FontAwesome', lineHeight: 22, }}> {I18n.t('SameActivity.spotlight')}</Text>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ width: '28%',  fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
+                        <Text style={{ width: '28%', fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
                         <Text style={{ width: '25%', height: 17, lineHeight: 19, fontFamily: 'NotoSansHans-Light', textAlign: 'center' }}>2013
@@ -144,7 +162,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '28%', height: 188, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
                         <Text style={{ width: '70%', height: 188, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.hospital')}
-                                    <Text onPress={() => { this.setState({ url: "https://ajp.psychiatryonline.org/doi/full/10.1176/" }) }} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
+                            <Text onPress={() => { this.setState({ url: "https://ajp.psychiatryonline.org/doi/full/10.1176/" }) }} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
                         </Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
@@ -185,9 +203,9 @@ export default class SameActivity extends Component<Props> {
                             <Text style={{ height: 123, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
                             <View style={{ height: 123, width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.animals')}</Text>
-                               <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29435170" }); this.setState({ display: true }) }} >
-                                <Text  style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/29435170</Text>
-                                </TouchableOpacity> 
+                                <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29435170" }); this.setState({ display: true }) }} >
+                                    <Text style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/29435170</Text>
+                                </TouchableOpacity>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/15150277" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/15150277</Text>
                             </View>
                         </View>
@@ -220,8 +238,8 @@ export default class SameActivity extends Component<Props> {
                             <Text style={{ height: 123, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
                             <View style={{ height: 123, width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.was')}</Text>
-                                <Text  onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/27681803" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/27681803</Text>
-                                <Text  onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/22221883" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/22221883</Text>
+                                <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/27681803" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/27681803</Text>
+                                <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/22221883" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/22221883</Text>
                             </View>
                         </View>
                     </View>
