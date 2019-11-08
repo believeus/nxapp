@@ -25,8 +25,8 @@ export default class BiologicalActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: '100%', height: 213 }}>
-                    <ImageBackground style={{ width: '100%', height: 213 }} resizeMode='contain' source={require("../image/enpic/bio1.jpg")} >
+                <View style={{ width: '100%', }}>
+                    <ImageBackground style={{ width: '100%', height: 213 }} resizeMode='cover' source={require("../image/enpic/bio1.jpg")} >
                         <View style={{ height: 27 }}></View>
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
                         <Text style={{ fontSize: 34, color: '#006DB5' ,fontWeight:"bold"}}>How Old Are</Text>

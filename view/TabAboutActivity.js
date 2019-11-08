@@ -20,14 +20,14 @@ export default class TabAboutActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20 }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20,borderRadius:10 }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.company')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Company")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au1.png")}>
+                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 10 }} resizeMode="cover" source={require("../image/enpic/au1.png")}>
                             <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
                             <View style={{height:'10%'}}></View>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Company</Text>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Introduction</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Company</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Introduction</Text>
                             </View>
                         </ImageBackground>
                     </TouchableOpacity>
@@ -39,8 +39,8 @@ export default class TabAboutActivity extends Component<Props> {
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au2.png")}>
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
                             <View style={{height:'10%'}}></View>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Our Science</Text>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Team</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Our Science</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Team</Text>
                             </View>
                         </ImageBackground>
                     </TouchableOpacity>
@@ -53,8 +53,8 @@ export default class TabAboutActivity extends Component<Props> {
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au3.png")}>
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
                             <View style={{height:'10%'}}></View>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>DNA</Text>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Methylation</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>DNA</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Methylation</Text>
                             </View>
                         </ImageBackground>
                     </TouchableOpacity>
@@ -67,8 +67,8 @@ export default class TabAboutActivity extends Component<Props> {
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au5.png")}>
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
                             <View style={{height:'10%'}}></View>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Biological</Text>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Age</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Biological</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Age</Text>
                             </View>
                         </ImageBackground>
                     </TouchableOpacity>
@@ -80,8 +80,8 @@ export default class TabAboutActivity extends Component<Props> {
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au4.png")}>
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
                             <View style={{height:'10%'}}></View>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Consent</Text>
-                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Form</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Consent</Text>
+                            <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>Form</Text>
                             </View>
                         </ImageBackground>
                     </TouchableOpacity>

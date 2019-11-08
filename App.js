@@ -33,11 +33,12 @@ const slides = [
     imageStyle: styles.image,
   }
 ];
+
 export default class App extends Component<Props> {
-  static navigationOptions = ({ navigation, screenProps }) => {
-    return ({
-    })
-  }
+  // static navigationOptions = ({ navigation, screenProps }) => {
+  //   return ({
+  //   })
+  // }
   constructor(props) {
     super(props);
     this.state = {

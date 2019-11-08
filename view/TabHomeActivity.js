@@ -6,7 +6,7 @@ import VideoPlayer from 'react-native-video-controls';
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session';
 import data from '../appdata'
-import { bold } from 'ansi-colors';
+import  bold  from 'ansi-colors';
 import { Right } from 'native-base';
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -111,7 +111,6 @@ export default class TabHomeActivity extends Component<Props> {
                                             numbers.And today,the numbers don't
                                     </Text>
                                         <Text style={{ fontSize: 12, color: '#E3E3E3' }}>
-
                                             count.
                                     </Text>
                                     </View>
@@ -128,26 +127,26 @@ export default class TabHomeActivity extends Component<Props> {
                                             <Text style={{ fontSize: 34, marginTop: 23, color: '#E3E3E3', fontWeight:"bold"}}>What is</Text>
                                             <Text style={{ fontSize: 34, color: '#E3E3E3',fontWeight:"bold" }}>SAM-e? </Text>
                                             <View style={{ height: 20 }}></View>
-                                            <Text style={{ fontSize: 17, color: '#E3E3E3', }}>SAM-e is a natural product </Text>
-                                            <Text style={{ fontSize: 17, color: '#E3E3E3' }}>in the  human body,which </Text>
-                                            <Text style={{ fontSize: 17, color: '#E3E3E3', }}>can affect human health </Text>
+                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>SAM-e is a natural product </Text>
+                                            <Text style={{ fontSize: 14, color: '#E3E3E3' }}>in the human body,which </Text>
+                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>can affect human health </Text>
                                         </View>
                                     </View>
                                 </ImageBackground>
                             </View>
                         </TouchableOpacity>
-                        <View style={{ width: '100%', height: 345 }}>
+                        <View style={{ width: '100%', }}>
                             <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" >
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
                                 <View style={{ height: 20 }}></View>
                                     <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>What are</Text>
                                     <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>Vitamins?</Text>
                                     <View style={{ height: 20 }}></View>
-                                    <Text style={{fontSize: 16, color: '#5CACEE', }}>Nutramins are organic substanc-</Text>
-                                    <Text style={{fontSize: 16,color: '#5CACEE', }}>es necessary to maintain human</Text>
-                                    <Text style={{fontSize: 16,color: '#5CACEE', }}>left activities,and also important</Text>
-                                    <Text style={{fontSize: 16,color: '#5CACEE', }}>active substances to maintain</Text>
-                                    <Text style={{fontSize: 16, color: '#5CACEE', }}>human health</Text>
+                                    <Text style={{fontSize: 14, color: '#5CACEE', }}>Nutramins are organic substanc-</Text>
+                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>es necessary to maintain human</Text>
+                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>left activities,and also important</Text>
+                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>active substances to maintain</Text>
+                                    <Text style={{fontSize: 14, color: '#5CACEE', }}>human health</Text>
                                     <View style={{ height: 20 }}></View>
                                     <Text style={{fontSize: 12, color: '#6A6B6A', }}>Vitamin content in the body is very small,</Text>
                                     <Text style={{fontSize: 12, color: '#6A6B6A', }}>but indispensable</Text>
@@ -186,12 +185,12 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ width: '90%', marginTop: 34, marginBottom: 34, flex: 1, justifyContent: 'center', alignSelf: 'center', justifyContent: 'space-around' }}>
                     <ImageBackground style={{ width: '100%', heigh: '100%', alignSelf: 'center' }} source={require('../image/enpic/home-bg.png')} resizeMode='contain'  >
 
-                        <View style={{ width: '90%', alignSelf: 'center', height: 314, marginTop: 45, zIndex: 999 }}>
-                            <View style={{ heigh: 128, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <View style={{ height: 128, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("About")} style={{ height: 128, lineHeight: 128, color: '#ffffff', fontSize: 18 }}>About Us</Text>
+                        <View style={{ width: '90%', alignSelf: 'center', height: 314, zIndex: 999 }}>
+                            <View style={{ heigh: 145, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
+                                <View style={{ height: 145, width: '32%', }}>
+                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>About Us</Text>
                                 </View>
-                                <View style={{ height: 128, width: '36%', alignSelf: 'center' }}>
+                                <View style={{ height: 156, width: '36%', alignSelf: 'center' ,}}>
                                     <Text onPress={() => {
                                         this.state.user == null ?
                                             this.navigate.push("Login")
@@ -201,13 +200,19 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
-                                    }} style={{ height: 56, marginTop: 80 }}></Text>
+                                    }} style={{height: 67,marginTop:88, textAlign:'right',paddingTop:34, color:'#ffffff', fontFamily: 'NotoSansHans-Light',}}>Lifestyle</Text>
                                 </View>
-                                <Text onPress={() => { this.navigate.push("Testprocess") }} style={{ height: 128, width: '32%', }}></Text>
+                                <View style={{ height: 145, width: '32%', }}>
+                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>Testprocess</Text>
+                                </View>
                             </View>
-                            <View style={{ heigh: 141, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
-                                <Text onPress={() => this.navigate.push("Mall")} style={{ height: 141, width: '32%' }}></Text>
-                                <View style={{ height: 141, width: '36%', alignSelf: 'center' }}>
+                            {/* <View style={{height:67,width:'100%'}}></View> */}
+                            <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
+                                
+                                <View style={{ height: 112, width: '38%',}}>
+                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18,paddingLeft:12, fontFamily: 'NotoSansHans-Light', }}>Health Market</Text>
+                                </View>
+                                <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
                                     <Text onPress={() => {
                                         this.state.user == null ?
                                             this.navigate.push("Login")
@@ -217,10 +222,11 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
                                     }}
-                                        style={{ height: 56, marginBottom: 80 }}></Text>
+                                        style={{ height: 67,color:'#1e1e1e',lineHeight:15, fontFamily: 'NotoSansHans-Light',}}>My Report</Text>
                                 </View>
-                                <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{ height: 141, width: '32%' }}></Text>
-
+                                <View style={{ height: 112, width: '38%',}}>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18, fontFamily: 'NotoSansHans-Light', }}>Questionnaires</Text>
+                                </View>
                             </View>
                         </View>
                     </ImageBackground>
@@ -259,7 +265,7 @@ export default class TabHomeActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#ffffff' }}>
-                    <View style={{ width: '90%', height: 456, alignSelf: 'center', marginTop: 20 }}>
+                    <View style={{ width: '90%',  alignSelf: 'center', marginTop: 23 ,marginBottom:23}}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="center" />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, color: '#4d4d4d', lineHeight: 39 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
@@ -281,7 +287,7 @@ export default class TabHomeActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#0071bc' }}>
-                    <View style={{ width: '90%', height: 156, alignSelf: 'center', marginTop: 34 }}>
+                    <View style={{ width: '90%',  alignSelf: 'center', marginTop: 34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, color: '#ffffff', textAlign: 'center', lineHeight: 45, fontWeight: '600' }}>{I18n.t('TabHomeActivity.appsystem')}</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>-{I18n.t('TabHomeActivity.personalrep')}-</Text>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 17, color: '#ffffff', textAlign: 'center', lineHeight: 29 }}>- {I18n.t('TabHomeActivity.question')} -</Text>
@@ -316,7 +322,7 @@ export default class TabHomeActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0' }}>
-                    <View style={{ height: 599, width: '90%', alignSelf: 'center', marginTop: 34 }}>
+                    <View style={{width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22, textAlign: 'center', color: '#333333' }}>{I18n.t('TabHomeActivity.whatsame')}</Text>
                         <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#4d4d4d' }}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
                         <Image style={{ width: '100%', height: 245, justifyContent: 'center' }} source={require('../image/enpic/index9.jpg')} resizeMode='center' />
