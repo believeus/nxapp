@@ -65,31 +65,34 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '100%', }}>
                     <ImageBackground style={{ height: 456, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")} >
-                        {/* <View style={{ width: '90%', alignSelf: 'center', height: 800, marginTop: 45, }}>
-                            <Text style={{ height: 100, marginTop: -18, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 127 }}>
-                                Naturall
-                             </Text>
-                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 123 }}>
-                                occurring
-                             </Text>
-                            <Text style={{ height: 100, marginTop: -80, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 121 }}>
-                                compound
-                             </Text>
-                            <Text style={{ height: 100, marginTop: -58, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 20 }}>
-                                Nutritional
-                             </Text>
-                            <Text style={{ height: 100, marginTop: -78, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 20 }}>
-                                supplement
-                             </Text>
-                            <Text style={{ height: 100, marginTop: -78, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 27 }}>
-                                non-drug
-                             </Text>
-                            <Text style={{ height: 100, marginTop: -24, fontSize: 20, color: '#E3E3E3', fontFamily: 'Fontawesome', marginLeft: 5 }}>
-                                The most
-                             </Text>
-                           
-
-                        </View> */}
+                        <View style={{ width: '100%', alignSelf: 'center', flexDirection:"column",}}>
+                        <View style={{ height: '9%'}}></View>
+                        <View style={{ width: '20%',alignSelf:"center"}}>
+                            <Text style={{ fontSize: 12, color: '#E3E3E3',}}>Naturall</Text>
+                            <Text style={{ fontSize: 12, color: '#E3E3E3', lineHeight: 20,}}>occurring</Text>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',}}>compound</Text>
+                            </View>
+                            <View style={{ height: '6%'}}></View>
+                            <View style={{ width: '40%',}}>
+                            <View style={{ height: '11%',}}></View>
+                            <Text style={{ fontSize: 12, color: '#E3E3E3',textAlign:"center"}}>Nutritional</Text>
+                            <Text style={{ fontSize: 12, color: '#E3E3E3',textAlign:"center",lineHeight: 25,}}> Supplement</Text>
+                            <Text style={{ fontSize: 12, color: '#E3E3E3',textAlign:"center"}}>non-drug</Text>
+                            </View>
+                            <View style={{ height: '10%'}}></View>
+                            <View style={{ width: '28%' ,}}>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',alignSelf:"center"}}>The most</Text>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',alignSelf:"center",lineHeight: 25,}}>important</Text>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',alignSelf:"center"}}>methyl donor</Text>
+                            </View>
+                            <View style={{ height: '14%'}}></View>
+                            <View style={{width:"32%",}}>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"right"}}>Low SAMe</Text>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"right",lineHeight: 17,}}>level might be</Text>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"right"}}>associated with</Text>
+                            <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"right"}}>health issues</Text>
+                            </View>
+                        </View>
                     </ImageBackground>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
@@ -127,7 +130,7 @@ export default class SameActivity extends Component<Props> {
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>{I18n.t('SameActivity.quality')}</Text>
                             <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }); this.setState({ display: true }) }}>
                                 <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10, textDecorationLine: 'underline' }}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
-
+                                 
                                 </Text>
                             </TouchableOpacity>
                             <Text style={{ height: 47, width: '10%', alignSelf: 'baseline', fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
@@ -269,7 +272,81 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <Image style={{ height: 569, width: '100%', marginBottom: 34 }} resizeMode='center' source={require("../image/enpic/sam4.png")}></Image>
+                <ImageBackground style={{ height: 569, width: '100%', marginBottom: 34 }} resizeMode='center' source={require("../image/enpic/sam4.png")}>
+                <View style={{ width: '67%', alignSelf: 'center', flexDirection: "column", }}>
+                <View style={{ height: '11%',}}></View>
+                
+                <View style={{ width: '100%', alignSelf: 'center', flexDirection: "row", }}>
+                <View style={{ height: '45%',width:'35%'}}>
+                <View style={{height:"26%"}}></View>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>&nbsp;&nbsp;Our SAMe is</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>manufactured to the</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>&nbsp;highest standards,</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>&nbsp;using the original</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>&nbsp;&nbsp; ltalian method</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>&nbsp;&nbsp; (salt - tosylate</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"left"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;disulfate)</Text>
+                </View>
+                <View style={{width:'55%',height:"60%"}}>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>&nbsp;&nbsp;Our SAMe products'</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>starting raw materlals</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>consistently test at the&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center",lineHeight: 15}}>highest SS to RS isomer&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>ratio on the market&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>&nbsp;&nbsp;SSisomer >80%</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RS isomer >20%.</Text>
+                </View>
+                </View>
+                
+                <View style={{ width: '100%', alignSelf: 'center', flexDirection: "row", }}>
+                <View style={{height:"10%"}}></View>
+                <View style={{ height: '100%',width:"50%"}}>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>Our SAMe tablets</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>are enteric coated&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right",lineHeight: 15}}>for optimum&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>absorption by&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>the body&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                </View>
+                <View style={{width:'70%',height:"100%"}}>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>Our SAMe tablets&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center",lineHeight: 15}}>are sealed in&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>blister packs to&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center",lineHeight: 15}}>ensure freshness&nbsp;&nbsp;&nbsp;</Text>
+                </View>
+                </View>
+                
+                <View style={{height:"8%"}}></View>
+                <View style={{ width: '100%', alignSelf: 'center', flexDirection: "row", }}>
+                <View style={{ height: '90%',width:"30%"}}>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>Our SAMe is made</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>to guaranteed&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right",lineHeight: 15}}>purity and&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>potency&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>standards&nbsp;nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                </View>
+                <View style={{width:'70%',height:"100%"}}>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>NO Artifical&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center",lineHeight: 15}}>Flavors,airy Free,&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>No Preservatives&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>Allergen Free&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center"}}>No Yeast or Gluten,&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"center",lineHeight: 15}}>Kosher Certified&nbsp;&nbsp;&nbsp;</Text>
+                </View>
+                </View>
+                
+                <View style={{height:"4%"}}></View>
+                <View style={{ width: '100%', alignSelf: 'center', flexDirection: "row", }}>
+                <View style={{ height: '50%',width:"56%"}}>
+                <View style={{height:"35%"}}></View>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right",lineHeight: 15}}>Our SAMe is tables&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>have been tested for&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right",lineHeight: 15}}>a minimum full two&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                <Text style={{ fontSize: 10, color: '#E3E3E3',textAlign:"right"}}>year stability rating&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</Text>
+                </View>
+                </View> 
+                </View>
+                </ImageBackground>
+                
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('SameActivity.why')}</Text>
                     <View style={{ flexDirection: 'row' }}>

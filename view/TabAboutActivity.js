@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Platform, StatusBar, Text, View, Image, ScrollView, TouchableOpacity, navigate } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, ScrollView,ImageBackground, TouchableOpacity, navigate } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';
 type Props = {};
@@ -23,14 +23,26 @@ export default class TabAboutActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20 }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.company')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Company")}>
-                        <Image style={{ height: 123, width: '100%',borderRadius:5 }} resizeMode="cover" source={require("../image/enpic/au1.png")}></Image>
+                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au1.png")}>
+                            <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                            <View style={{height:'10%'}}></View>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Company</Text>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Introduction</Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.science')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                        <Image style={{ height: 123, width: '100%',borderRadius:5  }} resizeMode="cover" source={require("../image/enpic/au2.png")}></Image>
+                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au2.png")}>
+                        <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                            <View style={{height:'10%'}}></View>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Our Science</Text>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Team</Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
 
                 </View>
@@ -38,7 +50,13 @@ export default class TabAboutActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.methylation')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
-                        <Image style={{ height: 123, width: '100%',borderRadius:5  }} resizeMode="cover" source={require("../image/enpic/au3.png")}></Image>
+                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au3.png")}>
+                        <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                            <View style={{height:'10%'}}></View>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>DNA</Text>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Methylation</Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
                 </View>
 
@@ -46,14 +64,26 @@ export default class TabAboutActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.biological')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                        <Image style={{ height: 123, width: '100%' ,borderRadius:5 }} resizeMode="cover" source={require("../image/enpic/au5.png")}></Image>
+                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au5.png")}>
+                        <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                            <View style={{height:'10%'}}></View>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Biological</Text>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Age</Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.consentform')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
-                        <Image style={{ height: 123, width: '100%' ,borderRadius:5 }} resizeMode="cover" source={require("../image/enpic/au4.png")}></Image>
+                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au4.png")}>
+                        <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                            <View style={{height:'10%'}}></View>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Consent</Text>
+                            <Text style={{ fontSize: 34,color: '#99E5FF', fontWeight:"bold"}}>Form</Text>
+                            </View>
+                        </ImageBackground>
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
