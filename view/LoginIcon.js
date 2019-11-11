@@ -53,12 +53,12 @@ export default class LoginIcon extends Component<Props> {
                             <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
                                 {this.state.user != null ?
                                     <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
-                                        <Image style={{ height: 30, width: 30 }} resizeMode="center" source={require("../image/ic_login.png")} />
+                                        <Image style={{ height: 30, width: 30 }} resizeMode="contain" source={require("../image/ic_login.png")} />
                                         <Text style={{ color: 'white' }}>{this.state.user.nickname}</Text>
                                     </View>
                                     :
                                     <View style={{ width: 100, justifyContent: "center", alignItems: "center" }}>
-                                        <Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/icons/user-logo.png")} />
+                                        <Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
                                         <Text style={{ color: 'white' }}>{I18n.t('LoginIcon.message')}</Text>
                                     </View>
                                 }
@@ -81,13 +81,13 @@ export default class LoginIcon extends Component<Props> {
                             <MenuOptions customStyles={optionsStyles}>
                                 <MenuOption onSelect={() => {navigate.push("Login")}}>
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/login.png")} /></View>
+                                        <View><Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/login.png")} /></View>
                                         <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.login')}</Text></View>
                                     </View>
                                 </MenuOption>
                                 <MenuOption onSelect={() => {navigate.push("Register")}}>
                                     <View style={{ flexDirection: "row" }}>
-                                        <View><Image style={{ height: 25, width: 25 }} resizeMode="center" source={require("../image/reg.png")} /></View>
+                                        <View><Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/reg.png")} /></View>
                                         <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.register')}</Text></View>
                                     </View>
                                 </MenuOption>
