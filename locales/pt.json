@@ -32,7 +32,39 @@
         "consent": "Consentimento informado pelo usuário",
         "disclaimer": "aviso Legal",
         "disclaimertext": "O teste epiAging não se destina a ser informações de saúde ou dados médicos ou para ser usado para rastrear, diagnosticar, tratar, prevenir ou avaliar o risco de qualquer doença ou condição. O serviço epiAging é uma determinação da idade epigenética com base na avaliação da metilação do DNA no seu DNA. Não estamos coletando dados genéticos. O teste está disponível para indivíduos de 21 anos de idade ou mais. Este serviço não tenha sido apagado ou aprovado pela U. S. Food and Drug Administration.",
-        "allright": " @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "allright": " @2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "old":"Quantos anos",
+        "you":" você tem?",
+        "only":"A única idade importante é ",
+        "dnaage":" a sua idade biológica no DNA.",
+        "stop":" Já não faz aniversário ou pode calcular a idade -",
+        "dles":"As linhas franzidas no rosto -",
+        "frown":"são apenas números. ",
+        "numbers":"Hoje, os números não são ",
+        "count":" contados.",
+        "aboutus":"Sobre nós",
+        "lifestyle":"Estilo de vida",
+        "test":"Processo de teste",
+        "mark":"Mercado da saúde",
+        "quest":"Questionário",
+        "report":"Meu relatório",
+        "whatis":"O que é",
+        "sam":"SAM-e?",
+        "natural":"SAM-e é um produto natural",
+        "human":"No corpo humano ",
+        "health":"Afetará a saúde humana",
+        "whatare":"什麼是",
+        "vitaamins":"O que é ",
+        "organic":"vitamina",
+        "necessary":"As substâncias orgânicas necessárias ",
+        "left":"para manter o lado esquerdo do corpo",
+        "active":"humano também são importantes substâncias",
+        "healthman":" ativas para manter a saúde humana.",
+        "vitamin":"O conteúdo de vitaminas do corpo é muito pequeno,",
+        "indispensable":"Mas essencial",
+        "chronological":"Tempo",
+        "biological":"Idade biológica",
+        "management":"Gestão em saúde"
     },
     "TestprocessActivity": {
         "title": "Processo de teste",
@@ -67,7 +99,17 @@
         "science": "| introdução da empresa",
         "methylation": "| Metilação do DNA",
         "biological": "| Detecção de idade biológica",
-        "consentform": "| Formulário de consentimento de dados do cliente"
+        "consentform": "| Formulário de consentimento de dados do cliente",
+        "company1":"Companhia",
+        "introduction1":"1. Introdução",
+        "science1":"Nossa ciência",
+        "team1":"Equipa",
+        "dna1":"DNA",
+        "methylation1":"Metilação",
+        "biological1":"orgânico",
+        "age1":"Idade",
+        "consent1":"De acordo",
+        "form1":"Forma"
     },
     "LoginActivity": {
         "title": "Login de usuário",
@@ -473,7 +515,13 @@
         "epi": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "QuestionnaireActivity": {
-        "title": "Questionários"
+        "title": "Questionários",
+        "lifestyle":"Lifestyle Questionnaire",
+        "mood":"Auto-avaliação",
+        "mcgill":"McGill Pain Questionnaire",
+        "sleep":"Auto-avaliação do sono",
+        "diet":"Recomendação de dieta",
+        "eip":"@ 2019 HKG epi THERAPEUTICS Ltd. Todos os direitos reservados"
     },
     "ConsentActivity": {
         "title": "Formulário de consentimento do usuário",
@@ -631,7 +679,9 @@
         "analyze": "Nosso laboratório de ponta analisará seus dados epigenéticos para calcular sua idade biológica e você poderá visualizar relatórios personalizados através do aplicativo.",
         "step5": "STEP 5: MAKE LIFESTYLE CHANGES IMPROVE YOUR HEALTH",
         "lifestyle": "Também analisaremos seus dados de estilo de vida. Você continua fazendo mudanças no estilo de vida e nos relatórios. Você recebe relatórios personalizados sobre sua Ordem de Progresso periodicamente, novos testes de avaliação para avaliar seu progresso. Uma nova análise será fornecida com algumas sugestões. Continue melhorando e testando seu epiAge.",
-        "foot": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "foot": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "counts":"A única idade que conta é",
+        "danage":"A idade do seu DNA biológico."
     },
     "SleepChartActivity": {
         "title": "Questionários do sono",

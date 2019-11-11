@@ -93,12 +93,22 @@
         "centerout":"退出"
     },
     "AboutActivity": {
-        "title": "About Us",
+        "title": "關於我們",
         "company": "| 公司介紹",
         "science": "| 科學團隊",
         "methylation": "| DNA 甲基化",
         "biological": "| 生物年齡檢測",
-        "consentform": "| 客戶資料同意書"
+        "consentform": "| 客戶資料同意書",
+        "company1":"公司",
+        "introduction1":"介紹",
+        "science1":"我們的科學",
+        "team1":"團隊",
+        "dna1":"DNA",
+        "methylation1":"甲基化",
+        "biological1":"生物",
+        "age1":"年齡",
+        "consent1":"同意",
+        "form1":"形成"
     },
     "LoginActivity": {
         "title": "帳戶登入",

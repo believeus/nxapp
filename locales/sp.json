@@ -99,7 +99,17 @@
         "science": "| Equipo ciéntifico",
         "methylation": "| Metilación del ADN",
         "biological": "| Detección de la edad biológica",
-        "consentform": "| Formulario de consentimiento de datos del cliente"
+        "consentform": "| Formulario de consentimiento de datos del cliente",
+        "company1":"Empresa",
+        "introduction1":"Introduccion",
+        "science1":"Nuestra ciencia",
+        "team1":"Equipo",
+        "dna1":"DNA",
+        "methylation1":"Metilación",
+        "biological1":"Biologico",
+        "age1":"Edad",
+        "consent1":"De acuerdo",
+        "form1":"Forma"
     },
     "LoginActivity": {
         "title": "Iniciar sesión",
@@ -260,7 +270,22 @@
         "ittechnology": "Creemos que con la ayuda de la tecnología de TI y las pruebas de metilación del ADN, las personas deberían poder tomar posesión de su salud."
     },
     "TabAboutActivity": {
-        "title": "About Us"
+        "title": "Sobre nosotros",
+        "company": "| Introducción de la empresa",
+        "science": "| Equipo de ciencia",
+        "methylation": "| Metilación del ADN",
+        "biological": "| Detección de edad biológica",
+        "consentform": "| Formulario de consentimiento de información del cliente",
+        "company1":"Empresa",
+        "introduction1":"Introduccion",
+        "science1":"Nuestra ciencia",
+        "team1":"Equipo",
+        "dna1":"DNA",
+        "methylation1":"Metilación",
+        "biological1":"Biologico",
+        "age1":"Edad",
+        "consent1":"De acuerdo",
+        "form1":"Forma"
     },
     "ScienceteamActivity": {
         "title": "Equipo de Ciencia",

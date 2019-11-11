@@ -260,7 +260,17 @@
         "ittechnology": "We believe that with the help of IT technology and DNA methylation testing people should be able to take ownership of their health."
     },
     "TabAboutActivity": {
-        "title": "About Us"
+        "title": "About Us",
+        "company1":"Company",
+        "introduction1":"Introduction",
+        "science1":"Our Science",
+        "team1":"Team",
+        "dna1":"DNA",
+        "methylation1":"Methylation",
+        "biological1":"Biological",
+        "age1":"Age",
+        "consent1":"Consent",
+        "form1":"Form"
     },
     "ScienceteamActivity": {
         "title": "Science Team",
