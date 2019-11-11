@@ -198,7 +198,7 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
-                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:34, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
+                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:38, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '32%', }}>
                                     <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 16,}}>{I18n.t('TabHomeActivity.test')}</Text>
