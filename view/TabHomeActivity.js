@@ -297,21 +297,21 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ height: 278, justifyContent: 'space-around' }}>
                                 <View style={{ heigh: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap1.png')} resizeMode='center' />
+                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap1.png')} resizeMode='contain' />
                                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap2.png')} resizeMode='center' />
+                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap2.png')} resizeMode='contain' />
                                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
                                     </View>
                                 </View>
                                 <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap3.png')} resizeMode='center' />
+                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap3.png')} resizeMode='contain' />
                                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
-                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap4.png')} resizeMode='center' />
+                                        <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/ap4.png')} resizeMode='contain' />
                                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
                                     </View>
                                 </View>
