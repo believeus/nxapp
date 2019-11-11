@@ -261,10 +261,20 @@
         "ittechnology": "Nous pensons qu’avec l’aide des technologies de l’information et des tests de méthylation de l’ADN, les personnes devraient être en mesure de prendre en main leur santé."
     },
     "TabAboutActivity": {
-        "title": "About Us"
+        "title": "À propos de nous",
+         "company1":"Société",
+        "introduction1":"introduction",
+        "science1":"Notre science",
+        "team1":"Équipe",
+        "dna1":"DNA",
+        "methylation1":"Méthylation",
+        "biological1":"Biologique",
+        "age1":"Âge",
+        "consent1":"Consentement",
+        "form1":"Forme"
     },
     "ScienceteamActivity": {
-        "title": "L’équipe scientifique",
+        "title": "L’équipe scientifshiique",
         "moshe": "Moshe Szyf, Prof.",
         "ceo": "Président et PDG",
         "hkg": "HKG epiTHERAPEUTICS Ltd.",
