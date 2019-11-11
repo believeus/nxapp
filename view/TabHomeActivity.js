@@ -274,7 +274,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                             <View style={{ width: '15%', height: 45, justifyContent: 'center' }}>
                                 <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
+                                    <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                                 </TouchableOpacity>
                             </View>
 
@@ -333,7 +333,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
                                 <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
-                                    <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
+                                    <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                                 </TouchableOpacity>
                             </View>
 
