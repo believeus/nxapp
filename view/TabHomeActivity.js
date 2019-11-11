@@ -208,7 +208,7 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 
                                 <View style={{ height: 112, width: '38%',}}>
-                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 16,paddingLeft:12, }}>{I18n.t('TabHomeActivity.mark')}</Text>
+                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:66, textAlignVertical:'center', color: '#ffffff', fontSize: 16,paddingLeft:12, }}>{I18n.t('TabHomeActivity.mark')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
                                     <Text onPress={() => {
@@ -223,7 +223,7 @@ export default class TabHomeActivity extends Component<Props> {
                                         style={{ height: 67,color:'#1e1e1e',lineHeight:15, }}>{I18n.t('TabHomeActivity.report')}</Text>
                                 </View>
                                 <View style={{ height: 112, width: '38%',}}>
-                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:66,  textAlignVertical:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
                                 </View>
                             </View>
                         </View>
