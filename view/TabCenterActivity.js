@@ -75,11 +75,11 @@ export default class CenterActivity extends Component {
                                     <View style={{ height: 40, width: '25%', justifyContent: "center" }}>
                                         <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc3.png")}></Image>
                                     </View>
-                                    <View style={{ height: 20, width: '50%', }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.Questionnaire')} </Text>
+                                    <View style={{  width: '50%', }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 23, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.Questionnaire')} </Text>
                                     </View>
-                                    <View style={{ height: 20, width: '20%', }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    <View style={{ width: '20%', }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 23, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
                                     </View>
                                 </View>
                             </View>
@@ -92,11 +92,11 @@ export default class CenterActivity extends Component {
                                     <View style={{ height: 40, width: '25%', }}>
                                         <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc4.png")}></Image>
                                     </View>
-                                    <View style={{ height: 20, width: '50%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerreport')}</Text>
+                                    <View style={{  width: '50%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 23, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerreport')}</Text>
                                     </View>
-                                    <View style={{ height: 20, width: '20%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    <View style={{ width: '20%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 23, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
                                     </View>
                                 </View>
                             </View>
@@ -127,11 +127,11 @@ export default class CenterActivity extends Component {
                                 <View style={{ height: 40, width: '25%', }}>
                                     <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc1.png")}></Image>
                                 </View>
-                                <View style={{ height: 20, width: '50%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}> {I18n.t('TabCenterActivity.centerqa')}</Text>
+                                <View style={{  width: '50%' }}>
+                                    <Text style={{ textAlign: 'left', lineHeight: 23, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}> {I18n.t('TabCenterActivity.centerqa')}</Text>
                                 </View>
-                                <View style={{ height: 20, width: '20%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt;</Text>
+                                <View style={{  width: '20%' }}>
+                                    <Text style={{ textAlign: 'left', lineHeight: 23, fontFamily: 'NotoSansHans-Light' }}> &gt;</Text>
                                 </View>
                             </View>
                         </View>
@@ -143,11 +143,11 @@ export default class CenterActivity extends Component {
                                 <View style={{ height: 40, width: '25%', }}>
                                     <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc6.png")}></Image>
                                 </View>
-                                <View style={{ height: 20, width: '50%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerus')}</Text>
+                                <View style={{ width: '50%' }}>
+                                    <Text style={{ textAlign: 'left', lineHeight: 23, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerus')}</Text>
                                 </View>
-                                <View style={{ height: 20, width: '20%' }}>
-                                    <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt;</Text>
+                                <View style={{ width: '20%' }}>
+                                    <Text style={{ textAlign: 'left', lineHeight: 23, fontFamily: 'NotoSansHans-Light' }}> &gt;</Text>
                                 </View>
                             </View>
                         </View>
@@ -169,11 +169,11 @@ export default class CenterActivity extends Component {
                                     <View style={{ height: 40, width: '25%', }}>
                                         <Image style={{ height: '100%', width: '100%' }} resizeMode="contain" source={require("../image/icons/uc7.png")}></Image>
                                     </View>
-                                    <View style={{ height: 20, width: '50%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerout')}</Text>
+                                    <View style={{  width: '50%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 23, fontSize: 18, paddingTop: 5, color: '#0071bc', fontFamily: 'NotoSansHans-Light' }}>{I18n.t('TabCenterActivity.centerout')}</Text>
                                     </View>
-                                    <View style={{ height: 20, width: '20%' }}>
-                                        <Text style={{ textAlign: 'left', lineHeight: 40, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
+                                    <View style={{  width: '20%' }}>
+                                        <Text style={{ textAlign: 'left', lineHeight: 23, fontFamily: 'NotoSansHans-Light' }}> &gt; </Text>
                                     </View>
                                 </View>
                             </View>

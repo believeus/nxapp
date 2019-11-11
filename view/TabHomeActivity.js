@@ -186,7 +186,7 @@ export default class TabHomeActivity extends Component<Props> {
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, zIndex: 999 }}>
                             <View style={{ heigh: 145, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <View style={{ height: 145, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.aboutus')}</Text>
+                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 18,}}>{I18n.t('TabHomeActivity.aboutus')}</Text>
                                 </View>
                                 <View style={{ height: 156, width: '36%', alignSelf: 'center' ,}}>
                                     <Text onPress={() => {
@@ -198,17 +198,17 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
-                                    }} style={{height: 67,marginTop:88, textAlign:'right',paddingTop:34, color:'#ffffff', fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
+                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:34, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.test')}</Text>
+                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 16,}}>{I18n.t('TabHomeActivity.test')}</Text>
                                 </View>
                             </View>
                             {/* <View style={{height:67,width:'100%'}}></View> */}
                             <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 
                                 <View style={{ height: 112, width: '38%',}}>
-                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18,paddingLeft:12, fontFamily: 'NotoSansHans-Light', }}>{I18n.t('TabHomeActivity.mark')}</Text>
+                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 16,paddingLeft:12, }}>{I18n.t('TabHomeActivity.mark')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
                                     <Text onPress={() => {
@@ -220,10 +220,10 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
                                     }}
-                                        style={{ height: 67,color:'#1e1e1e',lineHeight:15, fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.report')}</Text>
+                                        style={{ height: 67,color:'#1e1e1e',lineHeight:15, }}>{I18n.t('TabHomeActivity.report')}</Text>
                                 </View>
                                 <View style={{ height: 112, width: '38%',}}>
-                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18, fontFamily: 'NotoSansHans-Light', }}>{I18n.t('TabHomeActivity.quest')}</Text>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
                                 </View>
                             </View>
                         </View>
