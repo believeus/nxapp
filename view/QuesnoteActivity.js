@@ -41,7 +41,7 @@ export default class QuesnoteActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('QuesnoteActivity.epi')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', marginTop: 20 }}>{I18n.t('QuesnoteActivity.eip')}</Text>
             </ScrollView >
         );
     }

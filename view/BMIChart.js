@@ -6,10 +6,8 @@ import { WebView } from 'react-native-webview'
 import Session from '../storage/Session';
 import data from '../appdata'
 import moment from 'moment'
-import { I18n } from '../locales/i18n';
 import { encrypt, decrypt } from 'react-native-simple-encryption';
 
-type Props = {};
 export default class BMIChart extends Component<Props> {
     constructor(props) {
         super(props);

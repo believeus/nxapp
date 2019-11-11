@@ -75,7 +75,7 @@ export default class ChifatActivity extends Component<Props> {
                     </Modal> : null
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                    <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/chifat.png")}></Image>
+                    <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/chifat.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('ChifatActivity.title')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ChifatActivity.senior')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ChifatActivity.ltb')}</Text>

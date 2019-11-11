@@ -28,7 +28,7 @@ export default class DataActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 77, width: '70%', fontSize: 19, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 22, }}>{I18n.t('DataActivity.filling')}</Text>
-                            <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/ques1.png")}></Image>
+                            <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/icons/ques1.png")}></Image>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -46,7 +46,7 @@ export default class DataActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                     <View style={{ flexDirection: 'row' }}>
-                        <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/ques2.png")}></Image>
+                        <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/icons/ques2.png")}></Image>
                         <Text style={{ height: 77, width: '70%', fontSize: 19, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 22, }}>{I18n.t('DataActivity.how')}</Text>
                     </View>
 
@@ -71,7 +71,7 @@ export default class DataActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ height: 77, width: '70%', fontSize: 19, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 22, }}>{I18n.t('DataActivity.how')}?</Text>
-                            <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/ques3.png")}></Image>
+                            <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/icons/ques3.png")}></Image>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -98,7 +98,7 @@ export default class DataActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ height: 77, width: '70%', fontSize: 19, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 22, }}>{I18n.t('DataActivity.information')}</Text>
-                        <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='center' source={require("../image/icons/ques4.png")}></Image>
+                        <Image style={{ height: 77, width: '30%', marginBottom: 20 }} resizeMode='contain' source={require("../image/icons/ques4.png")}></Image>
                     </View>
 
                     <View style={{ flexDirection: 'row' }}>

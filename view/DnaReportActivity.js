@@ -163,7 +163,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             }
                                         })
                                     }}>
-                                        <Image style={{ width: "100%", height: "100%" }} resizeMode="center" source={require("../image/scan.png")}></Image>
+                                        <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/scan.png")}></Image>
                                     </TouchableOpacity>
                                 </View>
                                 :
@@ -208,7 +208,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         })
 
                                     }}>
-                                        <Image style={{ width: "100%", height: "100%" }} resizeMode="center" source={require("../image/report.png")}></Image>
+                                        <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/report.png")}></Image>
                                     </TouchableOpacity>
                                 </View>
                             }
@@ -281,7 +281,7 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                                 <View style={{ flexDirection: 'row' }}>
                                     <View style={{ flexDirection: 'column', width: '45%' }}>
-                                        <Text style={{ height: 34, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('DnaReportActivity.do')} </Text>
+                                        <Text style={{  fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('DnaReportActivity.do')} </Text>
                                         <Image style={{ height: 123, }} resizeMode='contain' source={require("../image/enpic/rep4.png")}></Image>
                                     </View>
                                     <Text style={{  width: '55%', fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 26, }}><Text style={{ color: '#0071bc', fontSize: 22 }}>{I18n.t('DnaReportActivity.older')}</Text></Text>
@@ -393,12 +393,12 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                                 {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/smail.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/smail.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#3e9c9c", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>{I18n.t('DnaReportActivity.is')} {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.younger')} </Text></View>
                                     </View>
                                     :
                                     <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
-                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="center" source={require("../image/sad.png")}></Image>
+                                        <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/sad.png")}></Image>
                                         <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>{I18n.t('DnaReportActivity.is')}  {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.old')} </Text></View>
                                     </View>
                                 }
@@ -417,8 +417,8 @@ export default class DnaReportActivity extends Component<Props> {
                     </View>
                     <View style={{ width: '90%', height: 123, alignSelf: 'center', marginTop: 20, marginBottom: 20, }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image style={{ height: 18, width: '6%' }} resizeMode="center" source={require("../image/icons/rep-green.png")}></Image>
-                            <Image style={{ height: 18, width: '6%' }} resizeMode="center" source={require("../image/icons/rep-red.png")}></Image>
+                            <Image style={{ height: 18, width: '6%' }} resizeMode="contain" source={require("../image/icons/rep-green.png")}></Image>
+                            <Image style={{ height: 18, width: '6%' }} resizeMode="contain" source={require("../image/icons/rep-red.png")}></Image>
                             <Text style={{ width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.yourbio')} </Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>

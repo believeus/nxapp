@@ -26,7 +26,7 @@ export default class ScienceteamActivity extends Component<Props> {
                 </StatusBar>
                 <TouchableOpacity onPress={() => this.navigate.push("Moshe")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                        <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/prof1.png")}></Image>
+                        <Image style={{ height: 123, width: '30%' }} resizeMode="contain" source={require("../image/icons/prof1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.moshe')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.ceo')}</Text>
@@ -38,7 +38,7 @@ export default class ScienceteamActivity extends Component<Props> {
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("David")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                        <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/david1.png")}></Image>
+                        <Image style={{ height: 123, width: '30%' }} resizeMode="contain" source={require("../image/icons/david1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.david')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.davidtitle')}</Text>
@@ -50,7 +50,7 @@ export default class ScienceteamActivity extends Component<Props> {
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("Huili")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                        <Image style={{ height: 123, width: '30%' }} resizeMode="center" source={require("../image/icons/huili1.png")}></Image>
+                        <Image style={{ height: 123, width: '30%' }} resizeMode="contain" source={require("../image/icons/huili1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.huili')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.huili')}</Text>
@@ -62,7 +62,7 @@ export default class ScienceteamActivity extends Component<Props> {
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("Chifat")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                        <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="center" source={require("../image/icons/chifat1.png")}></Image>
+                        <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="contain" source={require("../image/icons/chifat1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.chifat')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 14 }}>{I18n.t('ScienceteamActivity.chifattitle')}</Text>
@@ -74,7 +74,7 @@ export default class ScienceteamActivity extends Component<Props> {
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <TouchableOpacity onPress={() => this.navigate.push("Zhiyuan")}>
                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                        <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="center" source={require("../image/icons/jason1.png")}></Image>
+                        <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="contain" source={require("../image/icons/jason1.png")}></Image>
                         <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.zhiyuan')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 16 }}>{I18n.t('ScienceteamActivity.zhiyuantitle')}</Text>

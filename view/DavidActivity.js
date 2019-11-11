@@ -97,7 +97,7 @@ export default class DavidActivity extends Component<Props> {
                     </Modal> : null
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                    <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/david.png")}></Image>
+                    <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/david.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t("DavidActivity.title")}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t("DavidActivity.senior")}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t("DavidActivity.hkg")}</Text>

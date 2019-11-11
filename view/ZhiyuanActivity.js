@@ -101,7 +101,7 @@ export default class ZhiyuanActivity extends Component<Props> {
                     </Modal> : null
                 }
                 <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
-                    <Image style={{ height: 99, width: '100%' }} resizeMode="center" source={require("../image/icons/jason.png")}></Image>
+                    <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/jason.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Zhiyuan Lv Ph.D.</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ZhiyuanActivity.manager')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, lineHeight: 18, textAlign: 'center', fontStyle: 'italic' }}>{I18n.t('ZhiyuanActivity.beijing')}</Text>
@@ -122,8 +122,8 @@ export default class ZhiyuanActivity extends Component<Props> {
                     <Text style={{ width: '28%', height: 88, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                     </Text>
                     <View style={{ width: '70%', height: 88, paddingLeft: 19 }} >
-                        <Text style={{ lineHeight: 31, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ZhiyuanActivity.ltd')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 34, }}>{I18n.t('ZhiyuanActivity.lab')}</Text>
+                        <Text style={{ lineHeight: 28, fontFamily: 'NotoSansHans-Light' }}>{I18n.t('ZhiyuanActivity.ltd')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 23, }}>{I18n.t('ZhiyuanActivity.lab')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '100%', flexDirection: 'row' }} >

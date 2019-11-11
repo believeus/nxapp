@@ -44,7 +44,7 @@ export default class MethylationActivity extends Component<Props> {
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, color: '#0071bc' }}>{I18n.t('MethylationActivity.silent')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
-                    <Image style={{ height: 189, width: '100%' }} resizeMode='center' source={require("../image/icons/methy2.png")}></Image>
+                    <Image style={{ height: 189, width: '100%' }} resizeMode='contain' source={require("../image/icons/methy2.png")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                     <Text style={{ alignSelf: 'center', fontFamily: 'FontAwesome5_Brands', lineHeight: 27, fontSize: 22, color: '#0071bc', marginTop: 20,marginBottom:23 }}>{I18n.t('MethylationActivity.disease')}</Text>
@@ -68,7 +68,7 @@ export default class MethylationActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20, flexDirection: 'row', }}>
                     <Text style={{ height: 99, width: '65%', alignSelf: 'center', fontFamily: 'FontAwesome5_Brands', fontWeight: '700', color: '#0071bc', lineHeight: 18, paddingTop: 19 }}>{I18n.t('MethylationActivity.ventions')}</Text>
-                    <Image style={{ height: 99, width: '35%' }} resizeMode='center' source={require("../image/icons/methy7.jpg")}></Image>
+                    <Image style={{ height: 99, width: '35%' }} resizeMode='contain' source={require("../image/icons/methy7.jpg")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
                     <View style={{ flexDirection: 'row' }}>
@@ -86,7 +86,7 @@ export default class MethylationActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20, flexDirection: 'row', }}>
                     <Text style={{ height: 99, width: '65%', alignSelf: 'center', fontFamily: 'FontAwesome5_Brands', fontWeight: '700', color: '#0071bc', lineHeight: 23, paddingTop: 19 }}>{I18n.t('MethylationActivity.clock')}</Text>
-                    <Image style={{ height: 99, width: '35%' }} resizeMode='center' source={require("../image/icons/methy8.jpg")}></Image>
+                    <Image style={{ height: 99, width: '35%' }} resizeMode='contain' source={require("../image/icons/methy8.jpg")}></Image>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', paddingBottom: 20, borderBottomColor: '#f0f0f0', borderBottomWidth: 1 }}>
                     <View style={{ flexDirection: 'row' }}>

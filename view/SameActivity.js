@@ -59,7 +59,7 @@ export default class SameActivity extends Component<Props> {
                     </View>
                     <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
                         <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
-                            <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
+                            <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -98,7 +98,7 @@ export default class SameActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f4f4f6' }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                         <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', }}>{I18n.t('SameActivity.according')}</Text>
-                        <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='center' source={require("../image/enpic/sam3.png")}></Image>
+                        <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam3.png")}></Image>
                         <View style={{ width: '96%', height: 123, backgroundColor: '#C1E1E8', borderRadius: 10, alignSelf: 'center', marginBottom: 34 }}>
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>{I18n.t('SameActivity.quality')}</Text>
                             <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }); this.setState({ display: true }) }}>
@@ -106,7 +106,7 @@ export default class SameActivity extends Component<Props> {
 
                                 </Text>
                             </TouchableOpacity>
-                            <Text style={{ height: 47, width: '10%', alignSelf: 'baseline', fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
+                            <Text style={{ height: 47, width: '10%', paddingTop:-4, fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -245,7 +245,7 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <Image style={{ height: 569, width: '100%', marginBottom: 34 }} resizeMode='center' source={require("../image/enpic/sam4.png")}>
+                <Image style={{ height: 569, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/sam4.png")}>
                    
                 </Image>
 

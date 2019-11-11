@@ -109,7 +109,7 @@
         "mailboxformatFail": "The mailbox format is incorrect",
         "mailboxNull": "Please enter your mailbox",
         "passwordNull": "Please enter your password",
-        "login": "Login",
+        "login": "LOGIN",
         "logout": "Logout",
         "noaccount": "Don't have an account?",
         "register": "Register",
@@ -829,7 +829,8 @@
         "personalized": "A personalized evaluation including intervention will be generated based on the health and lifestyle information you provided Updates on your health and lifestyle parameters periodically will activate the life-long personalized analysis report.",
         "title": "Notification",
         "ques": "Continue",
-        "back": "Cancel"
+        "back": "Cancel",
+        "eip": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "Manual1Activity": {
         "title": "How to get my epiAging test report",

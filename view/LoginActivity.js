@@ -75,7 +75,7 @@ export default class LoginActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center' }}>
                         <View style={{ height: 20 }}></View>
                         <View style={{ height: 70, alignItems: 'center' }}>
-                            <Image style={{ width: '20%', height: 70 }} resizeMode='center' source={require("../image/icons/logo.png")}></Image>
+                            <Image style={{ width: '20%', height: 70 }} resizeMode='contain' source={require("../image/icons/logo.png")}></Image>
                         </View>
                         <View style={{ alignItems: 'center', alignContent: 'center' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 22 }}>Login</Text>

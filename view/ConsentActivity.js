@@ -60,7 +60,7 @@ export default class ConsentActivity extends Component<Props> {
                 </View>
                 {this.state.dispaly == true ?
                     <TouchableOpacity onPress={() => this.navigate.push("Login")}>
-                        <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", fontFamily: 'NotoSansHans-Light', color: '#FFFFFF', fontSize: 22, textAlign: 'center', lineHeight: 47 }}>{I18n.t('ConsentActivity.agree')}</Text>
+                        <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", color: '#FFFFFF', fontSize: 22, textAlign: 'center', textAlignVertical:'center' }}>{I18n.t('ConsentActivity.agree')}</Text>
                     </TouchableOpacity>
                     :
                     null

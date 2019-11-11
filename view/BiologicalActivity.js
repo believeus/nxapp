@@ -43,7 +43,7 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                     <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
                         <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
-                            <Image style={{ width: '100%', height: 45 }} source={require('../image/icons/cart.png')} resizeMode="center" />
+                            <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -115,24 +115,24 @@ export default class BiologicalActivity extends Component<Props> {
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
 
                     <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 27, color: '#0071bc', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.longevity')}</Text>
-                    <Image style={{ height: 289, width: '100%', marginBottom: 34 }} resizeMode='cover' source={require("../image/enpic/bio3.jpg")}></Image>
+                    <Image style={{ height: 289, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/bio9.png")}></Image>
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, marginBottom: 34 }}>
                         <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', textAlign: 'center', lineHeight: 25, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.method')}</Text>
                         <View style={{ height: 34 }}></View>
-                        <Image style={{ height: 67, width: '100%', }} resizeMode='center' source={require("../image/enpic/bio10.png")}></Image>
+                        <Image style={{ height: 67, width: '100%', }} resizeMode='contain' source={require("../image/enpic/bio10.png")}></Image>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#7E934E', textAlignVertical: 'center', lineHeight: 25, }}>{I18n.t('BiologicalActivity.length')}</Text>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.correlation')}</Text>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.requirements')}</Text>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.small')}</Text>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.results')}</Text>
                         <View style={{ height: 34 }}></View>
-                        <Image style={{ height: 67, width: '100%', }} resizeMode='center' source={require("../image/enpic/bio11.png")}></Image>
+                        <Image style={{ height: 67, width: '100%', }} resizeMode='contain' source={require("../image/enpic/bio11.png")}></Image>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#EB962C', lineHeight: 25, }}>{I18n.t('BiologicalActivity.scores')}</Text>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.sampling')}</Text>
                         <View style={{ backgroundColor: '#2AA9E0', borderRadius: 10, marginTop: 20, }}>
-                            <Image style={{ height: 67, width: '100%', }} resizeMode='center' source={require("../image/enpic/bio12.png")}></Image>
+                            <Image style={{ height: 67, width: '100%', }} resizeMode='contain' source={require("../image/enpic/bio12.png")}></Image>
                             <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#ffffff', lineHeight: 25, }}>{I18n.t('BiologicalActivity.epigenetic')}</Text>
                             <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlign: 'center', textAlignVertical: 'center', color: '#ffffff', marginBottom: 12 }}>{I18n.t('BiologicalActivity.closely')}</Text>
 
@@ -140,7 +140,7 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                 </View>
 
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:12 }}>
                     <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', lineHeight: 45, }}>{I18n.t('BiologicalActivity.epiagings')}</Text>
                     <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 27, }}>{I18n.t('BiologicalActivity.methylation')}</Text>
                     <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', lineHeight: 56, }}>{I18n.t('BiologicalActivity.hkepi')}</Text>
@@ -149,21 +149,21 @@ export default class BiologicalActivity extends Component<Props> {
                 <View style={{ height: 278, width: '90%', alignSelf: 'center', borderRadius: 10, justifyContent: 'space-around', backgroundColor: '#f0f0f0', }}>
                     <View style={{ heigh: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                         <View style={{ width: '45%', borderRadius: 20 }}>
-                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio1.png')} resizeMode='center' />
+                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio1.png')} resizeMode='contain' />
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.slow')}</Text>
                         </View>
                         <View style={{ width: '45%', borderRadius: 20 }}>
-                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio2.png')} resizeMode='center' />
+                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio2.png')} resizeMode='contain' />
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.onset')}</Text>
                         </View>
                     </View>
                     <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                         <View style={{ width: '45%', borderRadius: 20 }}>
-                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/sun.png')} resizeMode='center' />
+                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/sun.png')} resizeMode='contain' />
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.quality')}</Text>
                         </View>
                         <View style={{ width: '45%', borderRadius: 20 }}>
-                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio4.png')} resizeMode='center' />
+                            <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 5, marginBottom: 5 }} source={require('../image/icons/bio4.png')} resizeMode='contain' />
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('BiologicalActivity.extend')}</Text>
                         </View>
                     </View>
@@ -188,35 +188,35 @@ export default class BiologicalActivity extends Component<Props> {
                     <View style={{ borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
                             <Text style={{ width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.download')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio5.png")}></Image>
+                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio5.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.register')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
                             <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step2')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio6.png")}></Image>
+                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio6.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.saliva')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
                             <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step3')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio7.png")}></Image>
+                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio7.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.questionnaire')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
                             <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step4')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio8.png")}></Image>
+                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio8.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.analyze')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
                         <View style={{ flexDirection: 'row', }}>
                             <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step5')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='center' source={require("../image/icons/bio9.png")}></Image>
+                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio9.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.lifestyle')}</Text>
                     </View>
