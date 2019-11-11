@@ -85,33 +85,33 @@ export default class TabHomeActivity extends Component<Props> {
                                     <View style={{ height: 23 }}></View>
                                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
                                         <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>
-                                            How Old Are
+                                        {I18n.t('TabHomeActivity.old')}
                                     </Text>
                                         <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>
-                                            You, Really?
+                                        {I18n.t('TabHomeActivity.you')}
                                     </Text>
                                         <View style={{ height: 8 }}></View>
                                         <Text style={{ fontSize: 16, lineHeight: 15, color: '#5CACEE' }}>
-                                            The only age that counts
+                                        {I18n.t('TabHomeActivity.only')}
                                     </Text>
                                         <Text style={{ fontSize: 16, color: '#5CACEE' }}>
-                                            is your biological DNA age.
+                                        {I18n.t('TabHomeActivity.dnaage')}
                                     </Text>
                                         <View style={{ height: 8 }}></View>
                                         <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
-                                            Stop counting your age by birthdays or can-
+                                        {I18n.t('TabHomeActivity.stop')}
                                     </Text>
                                         <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
-                                            dles on the cake, wrinkkles,crow's feet or the
+                                        {I18n.t('TabHomeActivity.dles')}
                                     </Text>
                                         <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
-                                            frown lines on your face —— those are only
+                                        {I18n.t('TabHomeActivity.frown')}
                                     </Text>
                                         <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
-                                            numbers.And today,the numbers don't
+                                        {I18n.t('TabHomeActivity.numbers')}
                                     </Text>
                                         <Text style={{ fontSize: 12, color: '#E3E3E3' }}>
-                                            count.
+                                        {I18n.t('TabHomeActivity.count')}
                                     </Text>
                                     </View>
                                 </ImageBackground>
@@ -124,12 +124,12 @@ export default class TabHomeActivity extends Component<Props> {
                                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
                                         <View style={{ width: '60%' }}></View>
                                         <View style={{ width: '40%' }}>
-                                            <Text style={{ fontSize: 34, marginTop: 23, color: '#E3E3E3', fontWeight:"bold"}}>What is</Text>
-                                            <Text style={{ fontSize: 34, color: '#E3E3E3',fontWeight:"bold" }}>SAM-e? </Text>
+                                            <Text style={{ fontSize: 34, marginTop: 23, color: '#E3E3E3', fontWeight:"bold"}}>{I18n.t('TabHomeActivity.whatis')}</Text>
+                                            <Text style={{ fontSize: 34, color: '#E3E3E3',fontWeight:"bold" }}>{I18n.t('TabHomeActivity.sam')} </Text>
                                             <View style={{ height: 20 }}></View>
-                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>SAM-e is a natural product </Text>
-                                            <Text style={{ fontSize: 14, color: '#E3E3E3' }}>in the human body,which </Text>
-                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>can affect human health </Text>
+                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.natural')} </Text>
+                                            <Text style={{ fontSize: 14, color: '#E3E3E3' }}>{I18n.t('TabHomeActivity.human')}</Text>
+                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.health')} </Text>
                                         </View>
                                     </View>
                                 </ImageBackground>
@@ -139,17 +139,17 @@ export default class TabHomeActivity extends Component<Props> {
                             <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index3.jpg')} resizeMode="cover" >
                                 <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
                                 <View style={{ height: 20 }}></View>
-                                    <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>What are</Text>
-                                    <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>Vitamins?</Text>
+                                    <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>{I18n.t('TabHomeActivity.whatare')}</Text>
+                                    <Text style={{ fontSize: 34, color: '#006DB5', fontWeight:"bold"}}>{I18n.t('TabHomeActivity.vitaamins')}</Text>
                                     <View style={{ height: 20 }}></View>
-                                    <Text style={{fontSize: 14, color: '#5CACEE', }}>Nutramins are organic substanc-</Text>
-                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>es necessary to maintain human</Text>
-                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>left activities,and also important</Text>
-                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>active substances to maintain</Text>
-                                    <Text style={{fontSize: 14, color: '#5CACEE', }}>human health</Text>
+                                    <Text style={{fontSize: 14, color: '#5CACEE', }}>{I18n.t('TabHomeActivity.organic')}</Text>
+                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>{I18n.t('TabHomeActivity.necessary')}</Text>
+                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>{I18n.t('TabHomeActivity.left')}</Text>
+                                    <Text style={{fontSize: 14,color: '#5CACEE', }}>{I18n.t('TabHomeActivity.active')}</Text>
+                                    <Text style={{fontSize: 14, color: '#5CACEE', }}>{I18n.t('TabHomeActivity.healthman')}</Text>
                                     <View style={{ height: 20 }}></View>
-                                    <Text style={{fontSize: 12, color: '#6A6B6A', }}>Vitamin content in the body is very small,</Text>
-                                    <Text style={{fontSize: 12, color: '#6A6B6A', }}>but indispensable</Text>
+                                    <Text style={{fontSize: 12, color: '#6A6B6A', }}>{I18n.t('TabHomeActivity.vitamin')}</Text>
+                                    <Text style={{fontSize: 12, color: '#6A6B6A', }}>{I18n.t('TabHomeActivity.indispensable')}</Text>
                                 </View>
                             </ImageBackground>
                         </View>
@@ -164,17 +164,17 @@ export default class TabHomeActivity extends Component<Props> {
                                 <View style={{  width: '90%', alignSelf: 'center', flexDirection:"row",}}>
                                 <View style={{ width: '22%',}}></View>
                                 <View style={{ width: '35%',alignSelf:"center"}}>
-                                    <Text style={{ fontSize: 12, color: '#E3E3E3',alignSelf:"center"}}>Chronological Age</Text>
+                                    <Text style={{ fontSize: 12, color: '#E3E3E3',alignSelf:"center"}}>{I18n.t('TabHomeActivity.chronological')}</Text>
                                </View>
                                <View style={{ width: '40%',}}>
-                                    <Text style={{ fontSize: 12, color: '#E3E3E3',textAlign:"right"}}>Biological Age</Text>
+                                    <Text style={{ fontSize: 12, color: '#E3E3E3',textAlign:"right"}}>{I18n.t('TabHomeActivity.biological')}</Text>
                                     </View>
                                </View>
                                </View>
                                 <View style={{ height: '34%' }}>
                                 <View style={{  width: '90%', alignSelf: 'center', flexDirection:"row",}}>
                                 <View style={{ width: '50%',}}></View>
-                                    <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"center"}}>Health Management</Text>
+                                    <Text style={{ fontSize: 12,color: '#E3E3E3',textAlign:"center"}}>{I18n.t('TabHomeActivity.management')}</Text>
                                 </View>
                                 </View>
                                 </View>
@@ -188,7 +188,7 @@ export default class TabHomeActivity extends Component<Props> {
                         <View style={{ width: '90%', alignSelf: 'center', height: 314, zIndex: 999 }}>
                             <View style={{ heigh: 145, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 <View style={{ height: 145, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>About Us</Text>
+                                    <Text onPress={() => this.navigate.push("About")} style={{height:145, textAlign:'center', color: '#ffffff',paddingTop:77, fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.aboutus')}</Text>
                                 </View>
                                 <View style={{ height: 156, width: '36%', alignSelf: 'center' ,}}>
                                     <Text onPress={() => {
@@ -200,17 +200,17 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
-                                    }} style={{height: 67,marginTop:88, textAlign:'right',paddingTop:34, color:'#ffffff', fontFamily: 'NotoSansHans-Light',}}>Lifestyle</Text>
+                                    }} style={{height: 67,marginTop:88, textAlign:'right',paddingTop:34, color:'#ffffff', fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '32%', }}>
-                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>Testprocess</Text>
+                                    <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 18, fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.test')}</Text>
                                 </View>
                             </View>
                             {/* <View style={{height:67,width:'100%'}}></View> */}
                             <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 
                                 <View style={{ height: 112, width: '38%',}}>
-                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18,paddingLeft:12, fontFamily: 'NotoSansHans-Light', }}>Health Market</Text>
+                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18,paddingLeft:12, fontFamily: 'NotoSansHans-Light', }}>{I18n.t('TabHomeActivity.mark')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
                                     <Text onPress={() => {
@@ -222,10 +222,10 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
                                     }}
-                                        style={{ height: 67,color:'#1e1e1e',lineHeight:15, fontFamily: 'NotoSansHans-Light',}}>My Report</Text>
+                                        style={{ height: 67,color:'#1e1e1e',lineHeight:15, fontFamily: 'NotoSansHans-Light',}}>{I18n.t('TabHomeActivity.report')}</Text>
                                 </View>
                                 <View style={{ height: 112, width: '38%',}}>
-                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18, fontFamily: 'NotoSansHans-Light', }}>Questionnaires</Text>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:56, textAlignVertical:'center', color: '#ffffff', fontSize: 18, fontFamily: 'NotoSansHans-Light', }}>{I18n.t('TabHomeActivity.quest')}</Text>
                                 </View>
                             </View>
                         </View>

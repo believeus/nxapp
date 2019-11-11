@@ -29,11 +29,11 @@ export default class BiologicalActivity extends Component<Props> {
                     <ImageBackground style={{ width: '100%', height: 213 }} resizeMode='cover' source={require("../image/enpic/bio1.jpg")} >
                         <View style={{ height: 27 }}></View>
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'column' }}>
-                        <Text style={{ fontSize: 34, color: '#006DB5' ,fontWeight:"bold"}}>How Old Are</Text>
-                        <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>You, Really?</Text>  
+                        <Text style={{ fontSize: 34, color: '#006DB5' ,fontWeight:"bold"}}>{I18n.t('TabHomeActivity.old')}</Text>
+                        <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>{I18n.t('TabHomeActivity.you')}</Text>  
                         <View style={{ height: 15 }}></View>                          
-                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>The only age that counts is</Text>
-                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>your biological DNA age.</Text>
+                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>{I18n.t('BiologicalActivity.counts')}</Text>
+                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>{I18n.t('BiologicalActivity.danage')}</Text>
                         </View>
                     </ImageBackground>
                 </View>
