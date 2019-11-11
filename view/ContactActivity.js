@@ -25,7 +25,7 @@ export default class ContactActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                    <Image style={{ height: 134, width: '23%', alignSelf: 'center' }} resizeMode='center' source={require("../image/icons/logo.png")}></Image>
+                    <Image style={{ height: 134, width: '23%', alignSelf: 'center' }} resizeMode='contain' source={require("../image/icons/logo.png")}></Image>
                     <Text style={{ height: 45, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, textAlign: 'center' }}>{I18n.t('ContactActivity.phone')}</Text>
                     <Text style={{ height: 45, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, textAlign: 'center' }}>{I18n.t('ContactActivity.utics')}</Text>
                     <Text style={{ height: 45, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22, textAlign: 'center' }}> {I18n.t('ContactActivity.http')}</Text>
