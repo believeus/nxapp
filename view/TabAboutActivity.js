@@ -73,7 +73,7 @@ export default class TabAboutActivity extends Component<Props> {
                         </ImageBackground>
                     </TouchableOpacity>
                 </View>
-                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
+                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View> 
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.consentform')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Consent")}>

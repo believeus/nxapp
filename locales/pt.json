@@ -53,18 +53,18 @@
         "natural":"SAM-e é um produto natural",
         "human":"No corpo humano ",
         "health":"Afetará a saúde humana",
-        "whatare":"什麼是",
-        "vitaamins":"O que é ",
-        "organic":"vitamina",
-        "necessary":"As substâncias orgânicas necessárias ",
-        "left":"para manter o lado esquerdo do corpo",
-        "active":"humano também são importantes substâncias",
-        "healthman":" ativas para manter a saúde humana.",
-        "vitamin":"O conteúdo de vitaminas do corpo é muito pequeno,",
-        "indispensable":"Mas essencial",
-        "chronological":"Tempo",
+        "whatare":"O que é",
+        "vitaamins":"Vitaminas?",
+        "organic":"Nutraminas são substâncias orgânicas",
+        "necessary":" necessárias para manter as ",
+        "left":"atividades da esquerda humana e",
+        "active":" também substâncias ativas importantes ",
+        "healthman":"para manter a saúde humana",
+        "vitamin":"O conteúdo de vitaminas no corpo é muito pequeno, ",
+        "indispensable":"mas indispensável",
+        "chronological":"Idade cronologica",
         "biological":"Idade biológica",
-        "management":"Gestão em saúde"
+        "management":"Gestão de saúde"
     },
     "TestprocessActivity": {
         "title": "Processo de teste",
@@ -271,7 +271,17 @@
         "ittechnology": "Acreditamos que, com a ajuda da tecnologia de TI e dos testes de metilação do DNA, as pessoas devem poder se apropriar de sua saúde."
     },
     "TabAboutActivity": {
-        "title": "Sobre nós"
+        "title": "Sobre nós",
+        "company1":"Companhia",
+        "introduction1":"Introdução",
+        "science1":"Nossa Ciência",
+        "team1":"Equipe",
+        "dna1":"DNA",
+        "methylation1":"Metilação",
+        "biological1":"Biológico",
+        "age1":"Era",
+        "consent1":"Consentimento",
+        "form1":"Formato"
     },
     "ScienceteamActivity": {
         "title": "Equipe Científica",

@@ -269,7 +269,17 @@
         "ittechnology": "在IT技術和基因甲基化檢測的幫助下，我們相信大眾市民能夠掌控自己的健康。"
     },
     "TabAboutActivity": {
-        "title": "About Us"
+        "title": "關於我們",
+        "company1":"公司",
+        "introduction1":"介紹",
+        "science1":"我們的科學",
+        "team1":"球隊",
+        "dna1":"DNA",
+        "methylation1":"甲基化",
+        "biological1":"生物",
+        "age1":"年齡",
+        "consent1":"同意",
+        "form1":"書"
     },
     "ScienceteamActivity": {
         "title": "科學團隊",
