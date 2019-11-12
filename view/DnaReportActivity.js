@@ -375,7 +375,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: 34, }} resizeMode='contain' source={require("../image/icons/rep-cho.png")}></Image>
                                         <View style={{ width: '100%', paddingTop: 12 }}>
                                             <Text style={{ fontSize: 12,  fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.your')} </Text>
-                                            <Text style={{ fontSize: 12,lineHeight:19,  width: 123, fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
+                                            <Text style={{ fontSize: 12,lineHeight:19,  textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                         </View>
                                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 34, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{this.state.naturally}</Text>
                                     </View>

@@ -96,7 +96,7 @@ export default class TabHomeActivity extends Component<Props> {
                                         {I18n.t('TabHomeActivity.dnaage')}
                                     </Text>
                                         <View style={{ height: 8 }}></View>
-                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                        <Text style={{ fontSize: 12, lineHeight: 16, color: '#E3E3E3' }}>
                                         {I18n.t('TabHomeActivity.stop')}
                                     </Text>
                                         <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
