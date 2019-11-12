@@ -168,11 +168,12 @@ export default class RasEncryptionActivity extends Component<Props> {
                             </View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
                                 <View style={{ width: "25%", height: 40 }}>
-                                    {/* 将私钥发送到邮箱 */}
+                                    {/* 将私钥发送到邮箱 */} 
                                     <Button disabled={this.state.btnSaveDisabled} onPress={() => {
                                         let id = this.state.user.id
                                         this.setState({ animating: true })
                                         this.setState({ btnPrivatekeyDisabled: true })
+                                        this.setState({ btnPublickeyDisabled: true })
                                         this.setState({ btnSaveDisabled: true })
                                         //用public key加密private key生成加密的priavekey
                                         let cipher = encrypt(this.state.publickey, this.state.privatekey)
