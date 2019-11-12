@@ -807,22 +807,22 @@
         "eip":"@ 2019 HKG epi THERAPEUTICS Ltd. Todos los derechos reservados." 
     },
     "RasEncryptionActivity": {
-        "title": "Configuración de clave privada",
-        "press": "Presione el botón 'GENERAR CLAVE PRIVADA' para generar su clave privada única. Luego, presionando 'GUARDAR',",
-        "press2": "La clave privada única se enviará a su buzón registrado.",
+        "title": "Configuración de seguridad de datos",
+        "press": "Presione el botón 'GENERAR' para generar su clave pública única y su clave privada. Luego, al presionar 'GUARDAR',",
+        "press2": " la clave pública única y la clave privada se guardarán en su dispositivo móvil",
         "setkey": "Una vez que se establece la clave privada, no se permiten cambios. Si se cambia la clave privada, se perderán todos los datos sanos guardados previamente. Los nuevos datos sanos se cifrarán con una nueva clave privada,",
         "setkey2": "y solo se puede configurar una vez.",
-        "savekey": "No tendremos ni guardaremos la clave privada del usuario para descifrar los datos del usuario de acuerdo con nuestro ",
-        "security": "Declaración de seguridad de datos",
+        "savekey": "No tendremos ni guardaremos la clave privada del usuario para descifrar los datos del usuario de acuerdo con ",
+        "security": "la Declaración de seguridad de datos y la Ley HIPPA",
         "freestate": "Cuando no haya iniciado sesión en el sistema, su información saludable y la información personal del usuario estarán en un estado 'libre', y nadie podrá encontrar su información relacionada.",
-        "savekey2": ",guarde su única clave privada.",
+        "savekey2": ",guarda tu única clave secreta.",
         "unique": "Se requiere la clave privada única para ingresar nuevamente si el usuario inicia sesión nuevamente después de cerrar sesión.",
-        "failed": "Mensaje, Error al generar la clave privada, por favor regenere,",
-        "success": "Correcto, la clave privada se ha enviado a su buzón",
-        "generate": "Generar",
+        "failed": "Сообщение, Генерация ключа не удалась, пожалуйста, восстановите.",
+        "success": "Correcto, la clave pública y la clave privada se guardaron en esta ruta:",
+        "generate": "GENERAR",
         "privatekey": "Llave privada",
         "publickey": "Llave pública",
-        "save":"Salvar"
+        "save":"GUARDAR"
     },
     "QAActivity": {
         "title": "Q&A",

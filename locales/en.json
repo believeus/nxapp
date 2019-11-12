@@ -794,7 +794,7 @@
     "RasEncryptionActivity": {
         "title": "Data security Setting",
         "press": "Please press the 'GENERATE' button to generate your Unique Public key and Privatelic key. Then, by pressing 'SAVE',",
-        "press2": " the Unique Public key and Private key will be sent to your registered mailbox.",
+        "press2": " the Unique Public key and Private key will be saved to your mobile",
         "setkey": "Once the keys are set, no changes are allowed. If the Public key and Private key were changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new key,",
         "setkey2": "and it can only be set once.",
         "savekey": "We will not have or save the user's private key to decrypt user data according to the ",
@@ -802,7 +802,7 @@
         "freestate": "When you are not logged into the system, your health information and personal user information will be in a 'free' state, and no one can find your associated information between them. ",
         "savekey2": "please save your only private key.",
         "unique": "The Unique Public key and Private key will be required to enter again if the user logs in again.",
-        "failed": "Message, Key generation failed, please regenerate,",
+        "failed": "Message, Key generation failed, please regenerate.",
         "success": "Success, The Public key and Private key has been saved to this path:",
         "generate": "Generate",
         "privatekey": "Private key",
