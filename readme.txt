@@ -1,36 +1,42 @@
-修改：
-nxapp\node_modules\react-native-smart-barcode\Barcode.js
+android版本必须安装react-native 0.60.5版本，如果编译ios版本必须安装react-native 0.59.10版本，因为react-native 0.60.5版本在xcode中编译失败
+在android版本必须安装react-native 0.60.5版本必须修改如下代码
+
+修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-smart-barcode
+Barcode.js
 line19:
 delete the PropTypes import at line9
 import PropTypes from 'prop-types';
 
-修改：
-nxapp\node_modules\react-native-smart-barcode\android\src\main\java\com\reactnativecomponent\barcode\RCTCapturePackage.java
+修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-smart-barcode\android\src\main\java\com\reactnativecomponent\barcode
+RCTCapturePackage
 delete all the @override
 
-修改：
-nxapp\node_modules\react-native-swiper\src
-index.js
-delete ViewpagerAndroid
-import ViewPagerAndroid from '@react-native-community/viewpager';
+修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-swiper\src\index.js
+delete: ViewpagerAndroid
+add:import ViewPagerAndroid from '@react-native-community/viewpager';
 
-修改：
-nxapp\node_modules\react-native-viewpager\Viewpager.js
-import ViewPageAndroid from 'react-native-viewpager'
-import PropTypes from 'prop-types';
+修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-viewpager\Viewpager.js
+add: import ViewPageAndroid from 'react-native-viewpager'
+add: import PropTypes from 'prop-types';
 
-修改：
-nxapp\node_modules\react-native-tab-view\src\PagerAndroid.js
-delete ViewPagerAndroid,
-import ViewPagerAndroid from '@react-native-community/viewpager';
+修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-tab-view\src\PagerAndroid.js
+delete: ViewPagerAndroid,
+add:import ViewPagerAndroid from '@react-native-community/viewpager';
 
-修改：
-nxapp\node_modules\react-native-modal-dropdown\components\ModalDropdown.js
-delete ListView
-import PropTypes from 'prop-types';
+修改
+D:\usr\local\workspace\nxapp\node_modules\react-native-modal-dropdown\components
+ModalDropdown.js
+delete: ListView
+add:import ListView from 'deprecated-react-native-listview'
+add:import PropTypes from 'prop-types';
 (如果已经存在就不用再次引入）
 
-
+xcode编译react-native,使用react-native@0.59.10，编译会失败，失败之后按照如下更改即可
 Changing
 #import <React/RCTImageLoaderProtocol.h>
 to
