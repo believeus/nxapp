@@ -3,12 +3,12 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import org.reactnative.camera.RNCameraPackage;
 import com.rnfs.RNFSPackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import io.github.traviskn.rnuuidgenerator.RNUUIDGeneratorPackage;
 import cc.rocwang.aescrypto.AesCryptoPackage;
 import com.RNRSA.RNRSAPackage;
-import com.reactnativecomponent.barcode.RCTCapturePackage;
 import com.taessina.paypal.RNPaypalWrapperPackage;
 import com.reactlibrary.RNPaypalPackage;
 
@@ -46,14 +46,13 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new RNCameraPackage(),
             new RNFSPackage(),
             new RNCViewPagerPackage(),
             new RNUUIDGeneratorPackage(),
             new AesCryptoPackage(),
             new RNRSAPackage(),
-            new RCTCapturePackage(),
             new RNPaypalWrapperPackage(),
-            new RNPaypalPackage(),
             new AsyncStoragePackage(),
             new RNDeviceInfo(),
             new RNI18nPackage(),

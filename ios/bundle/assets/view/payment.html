@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="dmaku.css" />
+</head>
+
+<body style="background-color:#ffffff">
+    <div class="dmaku-container">
+        <div style="width:100%;height:150px"></div>
+		<div style="zoom:0.3;"><img src="paypal.jpg"> </div>
+        <div style="background-color:#ffffff" class="dmaku-content bgcolor-3">
+            <div style="background-color:#ffffff;zoom:0.5;" class="clearfix">
+                <canvas id="canvas" class="loader" width="400" height="300"></canvas>
+            </div>
+        </div>
+        <form id="form" name="form" action="https://app.beijingepidial.com/ixpp/user/paypal/payment.jhtml" method="POST">
+            <input type="hidden" name="userid" id="userid" />
+        </form>
+    </div>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script src="jquery.classyloader.min.js"></script>
+    <script>
+        var c = document.getElementById("canvas");
+        var ctx = c.getContext("2d");
+        ctx.scale(2, 2);
+        ctx.beginPath();
+        ctx.fillStyle = "yellow";
+        ctx.arc(200, 150, 100, 0, 2 * Math.PI);
+        ctx.stroke();
+        ctx.fill();
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            $('.loader').ClassyLoader({
+                speed: 150,
+                fontSize: '36px',
+                fontFamily: 'Georgia',
+                roundedLine: true,
+                diameter: 60,
+                fontColor: 'rgba(73, 125, 164, 0.3)',
+                lineColor: 'rgba(73, 125, 164, 1)',
+                lineWidth: 20,
+                remainingLineColor: 'rgba(73, 125, 164, 0.1)',
+            });
+        });
+    </script>
+</body>
+
+</html>

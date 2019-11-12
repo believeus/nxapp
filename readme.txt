@@ -30,6 +30,13 @@ delete ListView
 import PropTypes from 'prop-types';
 (如果已经存在就不用再次引入）
 
+
+Changing
+#import <React/RCTImageLoaderProtocol.h>
+to
+#import <React/RCTImageLoader.h>
+fixed the build issue for me
+
 替换：
 使用下面的代码替换nxapp\node_modules\react-native\react.gradle文件
 // Copyright (c) Facebook, Inc. and its affiliates.

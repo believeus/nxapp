@@ -153,7 +153,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 placeholder={"Your barcode"}
                                 value={this.state.barcode}
                             />
-                            {this.state.barcode == "" ?
+                            {/* {this.state.barcode == "" ?
                                 <View style={{ width: "15%", height: 35 }} >
                                     <TouchableOpacity onPress={() => {
                                         navigate.push("Scanner", {
@@ -166,7 +166,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/scan.png")}></Image>
                                     </TouchableOpacity>
                                 </View>
-                                :
+                                : */}
                                 <View style={{ width: "15%", height: 35 }} >
 
                                     <TouchableOpacity onPress={() => {
@@ -211,7 +211,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/report.png")}></Image>
                                     </TouchableOpacity>
                                 </View>
-                            }
+                             {/* } */}
                         </View>
                     </View>
 

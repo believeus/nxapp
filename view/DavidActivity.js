@@ -19,7 +19,7 @@ const FirstRoute = () => (
         <View style={{ height: 45 }}></View>
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2011-- <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text>{I18n.t('DavidActivity.israel')}</Text>
         <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesomet', lineHeight: 21, }}>2010--{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2010--{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
         <View style={{ height: 12 }}></View>
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2009--{I18n.t('DavidActivity.medical')}<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
     </View>

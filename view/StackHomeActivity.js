@@ -11,7 +11,6 @@ import RegisterActivity from './RegisterActivity';
 import LifeStyleChartActivity from './LifeStyleChartActivity';
 import DnaReportActivity from './DnaReportActivity';
 import PaymentActivity from './PaymentActivity';
-import ScannerAcitivity from './ScannerAcitivity'
 import ConfirmActivity from './ConfirmActivity';
 import TabMallActivity from './TabMallActivity';
 import TabCenterActivity from './TabCenterActivity';
@@ -120,9 +119,6 @@ export const RootStack = createStackNavigator(
         },
         Payment: {
             screen: PaymentActivity
-        },
-        Scanner: {
-            screen: ScannerAcitivity
         },
         McGillChart: {
             screen: McGillChartActivity
