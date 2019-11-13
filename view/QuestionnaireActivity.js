@@ -41,7 +41,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                 }
                 }>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
-                        <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon1.png")}></Image>
+                        <Image style={{ height: 66, width: '25%' }} resizeMode='contain' source={require("../image/icons/icon1.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.lifestyle')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
@@ -57,7 +57,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                             this.navigate.push("RasEncryptionActivity")
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
-                        <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon2.png")}></Image>
+                        <Image style={{ height: 66, width: '25%' }} resizeMode='contain' source={require("../image/icons/icon2.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.mood')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
@@ -73,7 +73,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                             this.navigate.push("RasEncryptionActivity")
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
-                        <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon3.png")}></Image>
+                        <Image style={{ height: 66, width: '25%' }} resizeMode='contain' source={require("../image/icons/icon3.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.mcgill')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
@@ -89,7 +89,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                             this.navigate.push("RasEncryptionActivity")
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
-                        <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon4.png")}></Image>
+                        <Image style={{ height: 66, width: '25%' }} resizeMode='contain' source={require("../image/icons/icon4.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.sleep')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>
@@ -105,7 +105,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                             this.navigate.push("RasEncryptionActivity")
                 }}>
                     <View style={{ width: '100%', alignSelf: 'center', flexDirection: 'row', marginTop: 20 }}>
-                        <Image style={{ height: 66, width: '25%' }} resizeMode='center' source={require("../image/icons/icon5.png")}></Image>
+                        <Image style={{ height: 66, width: '25%' }} resizeMode='contain' source={require("../image/icons/icon5.png")}></Image>
                         <Text style={{ height: 66, width: '65%', fontFamily: 'NotoSansHans-Medium', fontSize: 16, lineHeight: 66, color: '#0071bc' }}>{I18n.t('QuestionnaireActivity.diet')}</Text>
                         <Text style={{ width: '10%', height: 66, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 66 }}>&gt;</Text>
                     </View>

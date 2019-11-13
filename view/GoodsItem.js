@@ -38,7 +38,7 @@ export default class GoodsItem extends Component<Props> {
                             </TouchableOpacity>
                         </View> */}
                         <View style={{ width: '26%' }}>
-                            <Image style={{ width: 62, height: 67, alignSelf: 'center' }} source={this.props.imgpath} resizeMode='center' />
+                            <Image style={{ width: 62, height: 67, alignSelf: 'center' }} source={this.props.imgpath} resizeMode='contain' />
                         </View>
                         <View style={{ width: '52%' }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', height: 34, width: 200, fontSize: 16, color: '#0071bc' }}>{this.props.title}</Text>
