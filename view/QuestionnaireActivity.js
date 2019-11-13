@@ -29,7 +29,6 @@ export default class QuestionnaireActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <TouchableOpacity onPress={() => {
                     this.state.user == null ?
                         this.navigate.push("Login")

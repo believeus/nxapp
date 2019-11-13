@@ -333,6 +333,7 @@ export default class DietChartActivity extends Component<Props> {
                                             </TouchableOpacity>
                                         </View>
                                     </View> : null}
+                                    
                             </ScrollView>}
                     </View>
 

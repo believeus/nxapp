@@ -7,7 +7,6 @@ import data from '../appdata'
 import moment from 'moment'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
 
-type Props = {};
 export default class SleepStarChart extends Component<Props> {
     constructor(props) {
         super(props);

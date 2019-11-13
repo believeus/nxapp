@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet,StatusBar, Text, View, Image, Button, ScrollView } from 'react-native';
+import { Platform, StyleSheet,StatusBar, Text, View, Image,Alert,TouchableOpacity, Button, ScrollView } from 'react-native';
 import { I18n } from '../locales/i18n';
 import McGillChart from "./McGillChart"
 
@@ -16,7 +16,9 @@ export default class McGillChartActivity extends Component<Props> {
     }
 
     render() {
-
+        const onButtonPress = () => {
+            Alert.alert('Your data has been saved successfully!');
+        };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
@@ -173,8 +175,9 @@ export default class McGillChartActivity extends Component<Props> {
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 </View>
-
-
+                <TouchableOpacity >
+                        <Button title="save" onPress={onButtonPress} color="#d62e2d" />
+                    </TouchableOpacity>
             </ScrollView>
 
         );

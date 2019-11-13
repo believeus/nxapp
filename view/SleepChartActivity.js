@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, StatusBar, Button, ScrollView } from 'react-native'
+import { Platform, StyleSheet, Text, View,Alert, StatusBar, Button, ScrollView, TouchableOpacity } from 'react-native'
 import { I18n } from '../locales/i18n'
 import SleepStarChart from './SleepStarChart'
 import SleepSpinnerChart from './SleepSpinnerChart'
 
-type Props = {};
 export default class SleepChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -14,10 +13,13 @@ export default class SleepChartActivity extends Component<Props> {
 
     constructor(props) {
         super(props);
+       
     }
 
     render() {
-
+        const onButtonPress = () => {
+            Alert.alert('Your data has been saved successfully!');
+        };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
@@ -33,11 +35,11 @@ export default class SleepChartActivity extends Component<Props> {
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
                         <View style={{ width: "92%" }}>
                             <Text style={{}}>
-                            {I18n.t('SleepChartActivity.people')}
-					        </Text>
+                                {I18n.t('SleepChartActivity.people')}
+                            </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                             <Text style={{}}>
-                            {I18n.t('SleepChartActivity.include')}                        
+                                {I18n.t('SleepChartActivity.include')}
                             </Text>
                             <View style={{ width: "100%", height: 10 }}></View>
                         </View>
@@ -166,6 +168,9 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <TouchableOpacity >
+                        <Button title="save" onPress={onButtonPress} color="#ff7668" />
+                    </TouchableOpacity>
                 </View>
             </ScrollView>
 

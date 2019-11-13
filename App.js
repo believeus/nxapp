@@ -67,6 +67,7 @@ export default class App extends Component<Props> {
         onSkip={() => { this.setState({ showRealApp: true }) }}
         showSkipButton={true}
       />
+        
     }
 
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, ScrollView } from 'react-native';
+import { Platform, StyleSheet, Text, View, Alert,TouchableOpacity, Button, ScrollView } from 'react-native';
 import { I18n } from '../locales/i18n';
 import SliderLineChart from './SliderLineChart';
 import RatingChart from './RatingChart';
@@ -22,7 +22,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
     }
 
     render() {
-
+        const onButtonPress = () => {
+            Alert.alert('Your data has been saved successfully!');
+        };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
@@ -363,6 +365,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
+                <TouchableOpacity >
+                        <Button title="save" onPress={onButtonPress} color="#f7871e" />
+                    </TouchableOpacity>
             </ScrollView>
 
         );
