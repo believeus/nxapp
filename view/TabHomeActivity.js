@@ -240,9 +240,9 @@ export default class TabHomeActivity extends Component<Props> {
                         navigator={this.props.navigator}
                     />
                 </View>
-                <View style={{ width: '100%',  marginTop: 20, }}>
+                <View style={{ width: '100%',  marginTop: 20, }}>  
                     <View style={{ width: '90%',  alignSelf: 'center', marginBottom: 20 }}>
-                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 27, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
+                        <Text style={{ fontSize: 26, color: '#333333', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 34, marginBottom: 19 }}>{I18n.t('TabHomeActivity.biotitle')}</Text>
                         <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23, marginBottom: 12 }}>{I18n.t('TabHomeActivity.1ml')}</Text>
                         <Text style={{ fontSize: 18, color: '#808080', textAlign: 'center', fontFamily: 'FontAwesome', lineHeight: 23 }}>{I18n.t('TabHomeActivity.testresult')}</Text>
                     </View>

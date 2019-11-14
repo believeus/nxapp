@@ -3,7 +3,6 @@ import { Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, To
 import { I18n } from '../locales/i18n';
 import { WebView } from 'react-native-webview';
 import FitImage from 'react-native-fit-image';
-type Props = {};
 export default class SameActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -65,10 +64,10 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '100%', }}>
                     <Image style={{ height: 456, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam2.png")} >
-                       
+
                     </Image>
                 </View>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
 
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ width: '7%', fontSize: 16, color: '#0071bc' }}>●</Text>
@@ -96,7 +95,7 @@ export default class SameActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6' }}>
-                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
+                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
                         <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', }}>{I18n.t('SameActivity.according')}</Text>
                         <Image style={{ height: 123, width: '100%', marginBottom: 20 }} resizeMode='contain' source={require("../image/enpic/sam3.png")}></Image>
                         <View style={{ width: '96%', height: 123, backgroundColor: '#C1E1E8', borderRadius: 10, alignSelf: 'center', marginBottom: 34 }}>
@@ -106,7 +105,7 @@ export default class SameActivity extends Component<Props> {
 
                                 </Text>
                             </TouchableOpacity>
-                            <Text style={{ height: 47, width: '10%', paddingTop:-4, fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
+                            <Text style={{ height: 47, width: '10%', paddingTop: -4, fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -126,7 +125,7 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23,marginBottom: 23, }}>
                     <Text style={{ height: 77, fontSize: 21, fontFamily: 'FontAwesome', lineHeight: 22, }}> {I18n.t('SameActivity.spotlight')}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ width: '28%', fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
@@ -197,12 +196,12 @@ export default class SameActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6', }}>
-                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
+                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
                         <Text style={{ height: 99, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('SameActivity.basic')}</Text>
 
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 123, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ height: 123, width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <View style={{ width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.animals')}</Text>
                                 <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29435170" }); this.setState({ display: true }) }} >
                                     <Text style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/29435170</Text>
@@ -211,33 +210,33 @@ export default class SameActivity extends Component<Props> {
                             </View>
                         </View>
 
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 99, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ height: 99, width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <View style={{ width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.shown')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29340097" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/29340097</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 123, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ height: 123, width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <View style={{ width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.prostate')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/25631332" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/25631332</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/16982764" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/16982764</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 123, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ height: 123, width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <View style={{ width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.formation')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/23073625" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/23073625</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/19444874" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/19444874</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/22159228" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/22159228</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 123, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ height: 123, width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <View style={{ width: '95%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.was')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/27681803" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/27681803</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/22221883" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/22221883</Text>
@@ -245,51 +244,51 @@ export default class SameActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <Image style={{ height: 569, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/sam4.png")}>
-                   
+                <Image style={{ height: 729, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/sam4.png")}>
+
                 </Image>
 
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
-                    <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('SameActivity.why')}</Text>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, marginBottom: 23 }}>
+                    <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, marginBottom: 23 }}>{I18n.t('SameActivity.why')}</Text>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.standards')}</Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.standards')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 99, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 99, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.consistently')} <Text style={{ color: '#0071bc', fontStyle: 'italic' }}>{I18n.t('SameActivity.ss')} &gt;{I18n.t('SameActivity.rs')} &lt;20%.</Text> </Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.consistently')} <Text style={{ color: '#0071bc', fontStyle: 'italic' }}>{I18n.t('SameActivity.ss')} &gt;{I18n.t('SameActivity.rs')} &lt;20%.</Text> </Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.tablets')} </Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.tablets')} </Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}> {I18n.t('SameActivity.sealed')}</Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}> {I18n.t('SameActivity.sealed')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.potency')}</Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.potency')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.falvors')} </Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.falvors')} </Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                        <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.minimun')}</Text>
+                        <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                        <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.minimun')}</Text>
                     </View>
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6', }}>
-                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
-                        <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('SameActivity.when')}</Text>
+                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
+                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, marginBottom: 23 }}>{I18n.t('SameActivity.when')}</Text>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 56, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <Text style={{ height: 77, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.should')} </Text>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.should')} </Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
-                            <Text style={{ height: 119, width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <Text style={{ height: 119, width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.taking')}</Text>
+                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
+                            <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.taking')}</Text>
                         </View>
                     </View>
                 </View>

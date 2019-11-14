@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, StatusBar, Text, View, Image, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 
-type Props = {};
 export default class DataActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({

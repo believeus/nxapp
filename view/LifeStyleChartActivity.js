@@ -30,20 +30,14 @@ export default class LifeStyleChartActivity extends Component<Props> {
             <ScrollView>
                 <View>
                     <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text></View>
-                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
+                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef",marginTop:23,marginBottom:23 }}>
                         <View style={{ width: "92%" }}>
-                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
+                            <Text style={{marginBottom:12}}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
                             <Text style={{}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
                             <Text style={{}}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
                             <Text style={{}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
                         </View>
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-
                 </View>
                 <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 <View>

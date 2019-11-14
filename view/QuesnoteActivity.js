@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet,StatusBar, Text, View, Image, Button, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 
-type Props = {};
 export default class QuesnoteActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -26,8 +25,8 @@ export default class QuesnoteActivity extends Component<Props> {
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
                     <Text style={{ fontFamily: 'FontAwesome', fontSize: 19, height: 45, fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
-                    <Text style={{ height: 145, fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19 }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: 'red' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
-                    <Text style={{ height: 145, fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19 }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
+                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19,marginBottom:12 }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: 'red' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
+                    <Text style={{  fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19,marginBottom:34}}>{I18n.t('QuesnoteActivity.personalized')}</Text>
                     <View style={{ flexDirection: 'row',justifyContent:'space-between' }}>
                         <View style={{ width: '45%' }}>
                             <TouchableOpacity >

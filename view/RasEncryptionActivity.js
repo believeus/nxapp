@@ -57,30 +57,30 @@ export default class RasEncryptionActivity extends Component<Props> {
                     </View>
                     <View style={{ width: "100%", alignItems: 'center' }}>
                         <View style={{ width: "95%" }}>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 88, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
-                                <Text style={{ height: 88, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.press')}<Text style={{ color: '#0071bc', fontWeight: 'bold', fontSize: 14, }}>{I18n.t('RasEncryptionActivity.press2')} </Text> </Text>
+                            <View style={{ flexDirection: 'row',marginBottom:12 }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.press')}<Text style={{ color: '#0071bc', fontStyle:'italic', fontSize: 14 }}>{I18n.t('RasEncryptionActivity.press2')} </Text> </Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 107, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
-                                <Text style={{ height: 107, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.setkey')} <Text style={{ color: '#0071bc', fontWeight: 'bold' }}> {I18n.t('RasEncryptionActivity.setkey2')}</Text></Text>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.setkey')} <Text style={{ color: '#0071bc', fontStyle:'italic' }}> {I18n.t('RasEncryptionActivity.setkey2')}</Text></Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 56, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
-                                <Text style={{ height: 56, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18, color: '#0071bc', fontWeight: 'bold' }}> {I18n.t('RasEncryptionActivity.unique')}</Text>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18, color: '#0071bc',fontStyle:'italic' }}> {I18n.t('RasEncryptionActivity.unique')}</Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 79, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
-                                <Text style={{ height: 79, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.savekey')}<Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontSize: 14, fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>{I18n.t('RasEncryptionActivity.security')}</Text> {I18n.t('RasEncryptionActivity.savekey2')}</Text>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.savekey')}<Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontSize: 14, fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>{I18n.t('RasEncryptionActivity.security')}</Text> {I18n.t('RasEncryptionActivity.savekey2')}</Text>
                             </View>
-                            <View style={{ flexDirection: 'row' }}>
-                                <Text style={{ height: 77, width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
-                                <Text style={{ height: 77, width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.freestate')} </Text>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.freestate')} </Text>
                             </View>
                             <View style={{ width: "100%", height: 20 }}></View>
                             <View><Text style={{ fontWeight: "bold" }}>{I18n.t('RasEncryptionActivity.privatekey')}</Text></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
-                                <View style={{ width: "75%" }}>
+                                <View style={{ width: "70%" }}>
                                     <TextInput style={{
                                         width: '100%',
                                         borderRadius: 0,
@@ -110,7 +110,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "25%", height: 40 }}>
+                                <View style={{ width: "30%", height: 40 }}>
                                     {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnPublickeyDisabled} onPress={() => {
                                         UUIDGenerator.getRandomUUID().then((uuid) => {
@@ -124,7 +124,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                             </View>
                             <View><Text style={{ fontWeight: "bold" }}>{I18n.t('RasEncryptionActivity.publickey')}</Text></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
-                                <View style={{ width: "75%" }}>
+                                <View style={{ width: "70%" }}>
                                     <TextInput style={{
                                         width: '100%',
                                         borderRadius: 0,
@@ -154,7 +154,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "25%", height: 40 }}>
+                                <View style={{ width: "30%", height: 40 }}>
                                     {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnPrivatekeyDisabled} onPress={() => {
                                         UUIDGenerator.getRandomUUID().then((uuid) => {
@@ -168,7 +168,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                             </View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
                                 <View style={{ width: "25%", height: 40 }}>
-                                    {/* 将私钥发送到邮箱 */} 
+                                    {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnSaveDisabled} onPress={() => {
                                         let id = this.state.user.id
                                         this.setState({ animating: true })
