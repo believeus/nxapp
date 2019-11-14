@@ -18,7 +18,7 @@ export default class SleepChartActivity extends Component<Props> {
 
     render() {
         const onButtonPress = () => {
-            Alert.alert('Your data has been saved successfully!');
+            Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
@@ -33,19 +33,17 @@ export default class SleepChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('SleepChartActivity.assessment')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
-                        <View style={{ width: "92%" }}>
-                            <Text style={{}}>
+                        <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
+                            <Text style={{marginBottom:12}}>
                                 {I18n.t('SleepChartActivity.people')}
                             </Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
-                            <Text style={{}}>
+                            <Text style={{marginBottom:12}}>
                                 {I18n.t('SleepChartActivity.include')}
                             </Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
                         </View>
                     </View>
 
-                    <View style={{ width: "100%", height: 410 }}>
+                    <View style={{ width: "100%", height: 410 ,marginTop:23,marginBottom:23 }}>
                         <SleepSpinnerChart
                             title={
                                 <View style={{ width: "90%", height: 75 }}>
@@ -62,7 +60,7 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 410 }}>
+                    <View style={{ width: "100%", height: 410,marginTop:23,marginBottom:23  }}>
                         <SleepSpinnerChart
                             title={
                                 <View style={{ width: "90%", height: 75 }}>
@@ -79,7 +77,7 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23  }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -97,7 +95,7 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 415 }}>
+                    <View style={{ width: "100%", height: 415,marginTop:23,marginBottom:23  }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 60 }}>
@@ -115,7 +113,7 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 435 }}>
+                    <View style={{ width: "100%", height: 435,marginTop:23,marginBottom:23  }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 80 }}>
@@ -133,7 +131,7 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 420 }}>
+                    <View style={{ width: "100%", height: 420 ,marginTop:23,marginBottom:23 }}>
                         <SleepStarChart
                             title={
                                 <View style={{ width: "90%", height: 60 }}>
@@ -151,7 +149,7 @@ export default class SleepChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 410 }}>
+                    <View style={{ width: "100%", height: 410,marginTop:23,marginBottom:23  }}>
                         <SleepSpinnerChart
                             title={
                                 <View style={{ width: "90%", height: 75 }}>
@@ -167,7 +165,6 @@ export default class SleepChartActivity extends Component<Props> {
                             column="wheneffect"
                         />
                     </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <TouchableOpacity >
                         <Button title="save" onPress={onButtonPress} color="#ff7668" />
                     </TouchableOpacity>

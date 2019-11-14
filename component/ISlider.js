@@ -20,7 +20,6 @@ const styles = StyleSheet.create({
 
 const ScreenWidth = Dimensions.get('window').width;
 
-type Props = {};
 export default class ISlider extends Component<Props> {
     static propTypes = {
         height: PropTypes.number, // 控件高度
@@ -135,7 +134,7 @@ export default class ISlider extends Component<Props> {
         return (
             <View style={{ width: "100%" }}>
                 <View>
-                    <View style={{ height: 20, width: "100%", flexDirection: "row" }}>
+                    <View style={{borderRadius:10, height: 20, width: "100%", flexDirection: "row" }}>
                         {this.props.gradient ? this.props.gradient.map((item) => {
                             return <View style={{ width: item[0] }}>
                                 <Text style={{ textAlign: "right" }}>{item[2]}</Text>

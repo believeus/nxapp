@@ -9,7 +9,6 @@ import moment from 'moment'
 import { I18n } from '../locales/i18n';
 import ISlider from '../component/ISlider';
 import { encrypt, decrypt } from 'react-native-simple-encryption';
-type Props = {};
 export default class SliderLineChart extends Component<Props> {
     constructor(props) {
         super(props);

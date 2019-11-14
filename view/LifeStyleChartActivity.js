@@ -5,7 +5,6 @@ import SliderLineChart from './SliderLineChart';
 import RatingChart from './RatingChart';
 import BMIChart from './BMIChart';
 import { encrypt, decrypt } from 'react-native-simple-encryption';
-type Props = {};
 export default class LifeStyleChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -23,24 +22,25 @@ export default class LifeStyleChartActivity extends Component<Props> {
 
     render() {
         const onButtonPress = () => {
-            Alert.alert('Your data has been saved successfully!');
+            Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
             <ScrollView>
                 <View>
                     <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.lifesques')}</Text></View>
-                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef",marginTop:23,marginBottom:23 }}>
-                        <View style={{ width: "92%" }}>
+                    <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
+                        <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
                             <Text style={{marginBottom:12}}>{I18n.t('LifeStyleChartActivity.healthy')}</Text>
-                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
-                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
-                            <Text style={{}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
+                            <Text style={{marginBottom:12}}>{I18n.t('LifeStyleChartActivity.become')}</Text>
+                            <Text style={{marginBottom:12}}>{I18n.t('LifeStyleChartActivity.instance')}</Text>
+                            <Text style={{marginBottom:12}}>{I18n.t('LifeStyleChartActivity.teacher')}</Text>
                         </View>
                     </View>
                 </View>
-                <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                <View style={{height:34,width:'100%'}}></View>
                 <View>
+                   
                     <BMIChart
                         title={I18n.t('LifeStyleChartActivity.height')}
                         refTitle={I18n.t('LifeStyleChartActivity.source')}
@@ -50,7 +50,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         yAxisLine="60@100"
                         column={I18n.t('LifeStyleChartActivity.bmii')}
                         desc={
-                            <View style={{ width: "90%" }}>
+                            <View style={{ width: "90%",marginBottom:23 }}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     <Text>{I18n.t('LifeStyleChartActivity.range')}</Text>
@@ -62,8 +62,10 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 480 }}>
+               
+                <View style={{ width: "100%", height: 480,marginTop:23,marginBottom:34 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.heart')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
@@ -77,7 +79,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         column="heartrate"
                         gradient={[["30%", "green", "72"], ["30%", "#FFB233", "144"], ["40%", "red", "240"]]}
                         desc={
-                            <View style={{ width: "90%" }}>
+                            <View style={{ width: "90%",}}>
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
                                     {I18n.t('LifeStyleChartActivity.resting')}
@@ -88,8 +90,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 450 }}>
+                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.blood')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
@@ -112,8 +115,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 400 }}>
+                <View style={{ width: "100%", height: 400 ,marginTop:23,marginBottom:23}}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.diastolic')}
                         max={160}
@@ -127,8 +131,10 @@ export default class LifeStyleChartActivity extends Component<Props> {
 
                     />
                 </View>
-                <View style={{ width: "100%", height: 465 }}>
+                
+                <View style={{ width: "100%", height: 465 ,marginTop:23,marginBottom:23}}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.cholesterol')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
@@ -150,8 +156,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 480 }}>
+                <View style={{ width: "100%", height: 480,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.meditation')}
                         refTitle={I18n.t('LifeStyleChartActivity.mayo')}
@@ -173,8 +180,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 480 }}>
+                <View style={{ width: "100%", height: 480 ,marginTop:23,marginBottom:23}}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.cvh')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
@@ -197,8 +205,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 480 }}>
+                <View style={{ width: "100%", height: 480,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.sleep')}
                         refTitle={I18n.t('LifeStyleChartActivity.foundation')}
@@ -221,8 +230,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 400 }} >
+                <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }} >
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.active')}
                         max={5}
@@ -243,8 +253,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         max="5"
                     />
                 </View>
-                <View style={{ width: "100%", height: 480 }}>
+                <View style={{ width: "100%", height: 480,marginTop:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.alcohol')}
                         refTitle={I18n.t('LifeStyleChartActivity.society')}
@@ -266,8 +277,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 400 }}>
+                <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.smoking')}
                         max={100}
@@ -287,8 +299,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 480 }}>
+                <View style={{ width: "100%", height: 480,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.vitamin')}
                         refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
@@ -311,8 +324,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 450 }}>
+                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.vitaminc')}
                         refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
@@ -335,8 +349,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 450 }}>
+                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
                         title={I18n.t('LifeStyleChartActivity.vitamina')}
                         refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}

@@ -165,6 +165,8 @@
         "height": "-Peso (kg)",
         "source": "Fuente: Centros para el Control y Prevención de Enfermedades.",
         "recommendation": "Recomendación:",
+        "bmicaltulate":"BMI[Body Mass Index=weight(kg)/(height(m)▪height(m))]",
+        "bmisource":"Source: National Heart,Lung,and Blood Institute",
         "range": "Si su IMC es menor a 18.5, se encuentra dentro del rango de bajo peso.",
         "bmi": "Si su IMC es de 18.5 a 24.9, se encuentra dentro del rango de peso normal o saludable.",
         "falls": "Si su IMC es de 25.0 a 29.9, se encuentra dentro del rango de sobrepeso.",

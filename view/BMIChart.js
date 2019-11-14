@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Modal, Button, TouchableOpacity } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper";
 import InputSpinner from "react-native-input-spinner";
-import { WebView } from 'react-native-webview'
+import { WebView } from 'react-native-webview';
 import Session from '../storage/Session';
-import data from '../appdata'
-import moment from 'moment'
+import data from '../appdata';
+import moment from 'moment';
+import { I18n } from '../locales/i18n';
 import { encrypt, decrypt } from 'react-native-simple-encryption';
 
 export default class BMIChart extends Component<Props> {
@@ -126,7 +127,7 @@ export default class BMIChart extends Component<Props> {
                 <View style={{ width: "100%", height: 40, alignItems: "center" }}>
                     <View style={{ width: "100%", height: 10 }}></View>
                     <View style={{ width: "90%", height: "100%", flexDirection: "row" }}>
-                        <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>Height(cm):</Text></View>
+                        <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.heightvalue')}</Text></View>
                         <View style={{ width: "30%", height: 20 }}>
                             <InputSpinner
                                 inputStyle={{ paddingVertical: 0 }}
@@ -169,7 +170,7 @@ export default class BMIChart extends Component<Props> {
                 <View style={{ width: "100%", height: 40, alignItems: "center" }}>
                     <View style={{ width: "100%", height: 10 }}></View>
                     <View style={{ width: "90%", height: "100%", flexDirection: "row" }}>
-                        <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>Weight(kg):</Text></View>
+                        <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.weightvalue')}</Text></View>
                         <View style={{ width: "30%", height: 20 }}>
                             <InputSpinner
                                 inputStyle={{ paddingVertical: 0 }}
@@ -209,14 +210,14 @@ export default class BMIChart extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: "100%", alignItems: "center" }}>
-                    <View style={{ width: "90%" }}>
-                        <Text style={{ fontSize: 12 }}>BMI[Body Mass Index=weight(kg)/(height(m)▪height(m))]</Text>
-                        <TouchableOpacity onPress={() => { this.setState({ bmiwebview: true }) }}><Text style={{ fontSize: 12, color: "#0071BC", textDecorationLine: "underline" }}>Source: National Heart,Lung,and Blood Institute</Text></TouchableOpacity>
-                        <Text style={{ fontSize: 12, fontWeight: "bold" }}>Recommendation: </Text>
-                        <Text style={{ fontSize: 12 }}>Underweight: BMI &gt; 18.5kg/(m▪m)</Text>
-                        <Text style={{ fontSize: 12 }}>Normal weight: BMI 18.5 – 25 kg/(m▪m)</Text>
-                        <Text style={{ fontSize: 12 }}>Overweight: BMI 25 – 30 kg/(m▪m)</Text>
-                        <Text style={{ fontSize: 12 }}>Obese: BMI > 30 kg/(m▪m)</Text>
+                    <View style={{ width: "90%",marginTop:23,marginBottom:23 }}>
+                        <Text style={{ fontSize: 12 }}>{I18n.t('LifeStyleChartActivity.bmicaltulate')}</Text>
+                        <TouchableOpacity onPress={() => { this.setState({ bmiwebview: true }) }}><Text style={{ fontSize: 12, color: "#0071BC", textDecorationLine: "underline" }}>{I18n.t('LifeStyleChartActivity.bmisource')}</Text></TouchableOpacity>
+                        <Text style={{ fontSize: 12, fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                        <Text style={{ fontSize: 12 }}>{I18n.t('LifeStyleChartActivity.range')}</Text>
+                        <Text style={{ fontSize: 12 }}>{I18n.t('LifeStyleChartActivity.bmi')}</Text>
+                        <Text style={{ fontSize: 12 }}>{I18n.t('LifeStyleChartActivity.falls')}</Text>
+                        <Text style={{ fontSize: 12 }}>{I18n.t('LifeStyleChartActivity.your')}</Text>
                     </View>
                 </View>
                 <View style={{ height: 250, flexDirection: "row", width: "100%" }}>

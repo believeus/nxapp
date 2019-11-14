@@ -7,7 +7,6 @@ import Search from 'react-native-search-box'
 import { encrypt, decrypt } from 'react-native-simple-encryption';
 import DietSliderChart from './DietSliderChart'
 import data from '../appdata'
-type Props = {};
 export default class DietChartActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({

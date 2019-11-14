@@ -17,7 +17,7 @@ export default class McGillChartActivity extends Component<Props> {
 
     render() {
         const onButtonPress = () => {
-            Alert.alert('Your data has been saved successfully!');
+            Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
@@ -32,7 +32,7 @@ export default class McGillChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('McGillChartActivity.pain')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
-                        <View style={{ width: "92%" }}>
+                        <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
                             <Text style={{}}>
                                 {I18n.t('McGillChartActivity.wideused')}
                                 {I18n.t('McGillChartActivity.provides')}
@@ -43,7 +43,7 @@ export default class McGillChartActivity extends Component<Props> {
                         </View>
                     </View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center" }}>
-                        <View style={{ width: "92%" }}>
+                        <View style={{ width: "92%",marginTop:23,marginBottom:23 }}>
                             <Text style={{ fontWeight: "bold", fontSize: 20 }}>{I18n.t('McGillChartActivity.feel')}</Text>
                             <Text style={{ fontSize: 14 }}>{I18n.t('McGillChartActivity.following')}</Text>
                         </View>
@@ -56,6 +56,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="throbbing"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -65,6 +66,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="shooting"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -74,6 +76,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="stabbing"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -83,6 +86,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="sharp"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -92,6 +96,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="cramping"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -101,6 +106,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="gnawing"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -110,6 +116,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="burning"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -119,6 +126,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="aching"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -128,6 +136,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="heavy"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -137,6 +146,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="tender"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -146,6 +156,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="split"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -155,6 +166,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="exhausting"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart
@@ -164,6 +176,7 @@ export default class McGillChartActivity extends Component<Props> {
                             column="sickening"
                         />
                     </View>
+                    <View style={{height:34,width:'100%'}}></View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{ width: "100%", height: 350 }}>
                         <McGillChart

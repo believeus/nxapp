@@ -166,6 +166,8 @@
         "height": "Peso altura",
         "source": "Fonte: Centros para Doenças ……",
         "recommendation": "Recomendação:",
+        "bmicaltulate":"BMI[Body Mass Index=weight(kg)/(height(m)▪height(m))]",
+        "bmisource":"Source: National Heart,Lung,and Blood Institute",
         "range": "Se o seu IMC for menor que 18,5, ele estará dentro da faixa de baixo peso.",
         "bmi": "Se o seu IMC é de 18,5 a 24,9, ele está dentro da faixa de Peso Normal ou Saudável.",
         "falls": "Se o seu IMC é de 25,0 a 29,9, ele está dentro da faixa de excesso de peso.",

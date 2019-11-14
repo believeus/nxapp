@@ -17,7 +17,7 @@ export default class MoodChartActivity extends Component<Props> {
 
     render() {
         const onButtonPress = () => {
-            Alert.alert('Your data has been saved successfully!');
+            Alert.alert(I18n.t('LifeStyleChartActivity.savedata'));
         };
         const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
@@ -32,25 +32,23 @@ export default class MoodChartActivity extends Component<Props> {
                 <View>
                     <View style={{ width: "100%", height: 60, justifyContent: "center" }}><Text style={{ textAlign: "center", fontSize: 24, fontWeight: "bold" }}>{I18n.t('MoodChartActivity.assessment')}</Text></View>
                     <View style={{ width: "100%", justifyContent: "center", alignItems: "center", backgroundColor: "#efefef" }}>
-                        <View style={{ width: "92%" }}>
-                            <Text style={{}}>
+                        <View style={{ width: "90%",marginTop:23,marginBottom:23 }}>
+                            <Text style={{marginBottom:12}}>
                             {I18n.t('MoodChartActivity.emotions')}
                             </Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
-                            <Text style={{}}>
+                            <Text style={{marginBottom:12}}>
                             {I18n.t('MoodChartActivity.short')}
                             </Text>
-                            <Text style={{}}>
+                            <Text style={{marginBottom:12}}>
                             {I18n.t('MoodChartActivity.fortnight')}
                             </Text>
-                            <Text style={{}}>
+                            <Text style={{marginBottom:12}}>
                             {I18n.t('MoodChartActivity.advice')}   
                             </Text>
-                            <View style={{ width: "100%", height: 10 }}></View>
                         </View>
                     </View>
 
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -66,7 +64,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400 ,marginTop:23,marginBottom:23}}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -82,7 +80,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400 ,marginTop:23,marginBottom:23}}>
 
                         <MoodChart
                             title={
@@ -99,7 +97,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -115,7 +113,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -131,7 +129,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 450 }}>
+                    <View style={{ width: "100%", height: 450 ,marginTop:23,marginBottom:23}}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 85 }}>
@@ -147,7 +145,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 450 }}>
+                    <View style={{ width: "100%", height: 450 ,marginTop:23,marginBottom:23}}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 80 }}>
@@ -163,7 +161,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 500 }}>
+                    <View style={{ width: "100%", height: 500 ,marginTop:23,marginBottom:23}}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 125 }}>
@@ -179,7 +177,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -195,7 +193,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -211,7 +209,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -227,7 +225,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
 
                         <MoodChart
                             title={
@@ -244,7 +242,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400 ,marginTop:23,marginBottom:23}}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -260,7 +258,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
@@ -276,7 +274,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
 
                         <MoodChart
                             title={
@@ -293,7 +291,7 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400 }}>
+                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
                         <MoodChart
                             title={
                                 <View style={{ width: "90%", height: 45 }}>
