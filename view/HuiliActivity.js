@@ -91,28 +91,28 @@ const FirstRoute = () => (
 const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
         <View style={{ height: 20 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', height: 99, lineHeight: 21 }}>
+        <Text style={{ fontFamily: 'FontAwesome', marginBottom:23, lineHeight: 21 }}>
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
             {I18n.t('HuiliActivity.bing')}
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
         </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 99, lineHeight: 21 }}>
+        <Text style={{ fontFamily: 'FontAwesome', marginBottom:23,lineHeight: 21 }}>
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
             {I18n.t('HuiliActivity.larose')}
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.retreat')}</Text>
         </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 123, lineHeight: 21 }}>
+        <Text style={{ fontFamily: 'FontAwesome', marginBottom:23, lineHeight: 21 }}>
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
             {I18n.t('HuiliActivity.louise')}
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.diabetes')}</Text>
         </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 145, lineHeight: 21 }}>
+        <Text style={{ fontFamily: 'FontAwesome',marginBottom:23, lineHeight: 21 }}>
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
             {I18n.t('HuiliActivity.laroseakt')}
-            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('ForgetActivity.resetPwd')}</Text>
-        </Text>
-        <Text style={{ fontFamily: 'FontAwesome', height: 123, lineHeight: 21 }}>
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.canada')}</Text>
+        </Text>
+        <Text style={{ fontFamily: 'FontAwesome',marginBottom:23, lineHeight: 21 }}>
+            <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('HuiliActivity.name')}</Text>
             {I18n.t('HuiliActivity.nck')}
             <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('HuiliActivity.biology')}</Text>
         </Text>

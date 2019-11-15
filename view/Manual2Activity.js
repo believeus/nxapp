@@ -25,47 +25,47 @@ export default class Manual2Activity extends Component<Props> {
                 </StatusBar>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 34, }}>
-                    <Text style={{ height: 123, textAlign: 'center', fontSize: 22, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>{I18n.t('Manual2Activity.title')}</Text>
-                    <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18,  fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual2Activity.download')}</Text>
+                    <Text style={{  textAlign: 'center', fontSize: 22,marginBottom:34, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>{I18n.t('Manual2Activity.title')}</Text>
+                    <View style={{ flexDirection: 'row',marginBottom:18 }}>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
+                        <Text style={{  width: '95%', fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.download')}</Text>
                     </View>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 34, width: '7%', fontSize: 18,textAlignVertical:'center', fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.gocenter')}</Text>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>2.</Text>
+                        <Text style={{  width: '95%', fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.gocenter')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get1.png')} resizeMode='contain' />
-                    <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 34, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
-                        <Text style={{ height: 34, width: '95%',textAlignVertical:'center', fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.fillregis')}</Text>
+                    <View style={{ flexDirection: 'row',marginTop:23}}>
+                        <Text style={{ width: '7%', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
+                        <Text style={{  width: '95%',fontSize: 18,  fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.fillregis')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get2.png')} resizeMode='contain' />
 
                     {/*  */}
-                    <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
-                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome'}}>{I18n.t('Manual2Activity.mailbox')}</Text>
+                    <View style={{ flexDirection: 'row',marginTop:23,marginBottom:7 }}>
+                        <Text style={{  width: '7%',fontSize: 18, fontWeight: 'bold' }}>4.</Text>
+                        <Text style={{ width: '95%', fontSize: 18, fontFamily: 'FontAwesome'}}>{I18n.t('Manual2Activity.mailbox')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get3.png')} resizeMode='contain' />
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
-                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18,fontFamily: 'FontAwesome'}}>{I18n.t('Manual2Activity.accountlogin')}</Text>
+                        <Text style={{ width: '7%', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
+                        <Text style={{ width: '95%', fontSize: 18,fontFamily: 'FontAwesome'}}>{I18n.t('Manual2Activity.accountlogin')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get4.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>6.</Text>
-                        <Text style={{ height: 56, width: '95%',textAlignVertical:'center', fontSize: 18, fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.setkey')}</Text>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>6.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, fontFamily: 'FontAwesome',  }}>{I18n.t('Manual2Activity.setkey')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get5.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 34, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
-                        <Text style={{ fontSize: 16, height: 34 ,textAlignVertical:'center',}}>{I18n.t('Manual2Activity.sentmail')}</Text>
+                        <Text style={{ width: '7%', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
+                        <Text style={{ fontSize: 16,}}>{I18n.t('Manual2Activity.sentmail')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get6.png')} resizeMode='contain' />
-                    <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 67, width: '7%',textAlignVertical:'center', fontSize: 18, fontWeight: 'bold' }}>7.</Text>
-                        <Text style={{ height: 67, width: '95%', textAlignVertical:'center',fontSize: 18, fontFamily: 'FontAwesome' }}>{I18n.t('Manual2Activity.purchase')}</Text>
+                    <View style={{ flexDirection: 'row',marginTop:23, }}>
+                        <Text style={{ width: '7%', fontSize: 18, fontWeight: 'bold' }}>7.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, fontFamily: 'FontAwesome' }}>{I18n.t('Manual2Activity.purchase')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/get7.png')} resizeMode='contain' />
                 </View>

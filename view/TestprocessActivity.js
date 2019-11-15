@@ -74,7 +74,7 @@ export default class TestprocessActivity extends Component<Props> {
                             <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.collect2')}</Text>
                         </View>
                         <View style={{ height: 23, width: '77%', alignSelf: 'flex-start', borderTopRightRadius: 10, borderBottomRightRadius: 10, backgroundColor: '#f2f2f2' }}></View>
-                        <View style={{ width: '77%', height: 145, justifyContent: 'flex-end', }}>
+                        <View style={{ width: '77%', height: 189, justifyContent: 'flex-end', }}>
                             <Image style={{ height: 59, marginBottom: 9, width: '100%' }} resizeMode='contain' source={require("../image/icons/tp6.png")}></Image>
                             <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 21, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.sample')}</Text>
                             <Text style={{ fontFamily: 'NotoSansHans-Medium', lineHeight: 26, fontSize: 16, textAlign: 'center' }}>{I18n.t('TestprocessActivity.sample2')} </Text>

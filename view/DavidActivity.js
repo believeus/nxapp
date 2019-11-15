@@ -17,32 +17,22 @@ const FirstRoute = () => (
         <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>
             {I18n.t('DavidActivity.dna')}</Text>
         <View style={{ height: 45 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2011-- <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text>{I18n.t('DavidActivity.israel')}</Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2010--{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21, }}>2009--{I18n.t('DavidActivity.medical')}<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>2011-- <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.fellow')}</Text>{I18n.t('DavidActivity.israel')}</Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>2010--{I18n.t('DavidActivity.alumni')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>2009--{I18n.t('DavidActivity.medical')}<Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}> {I18n.t('DavidActivity.award')}</Text></Text>
     </View>
 );
 
 const SecondRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
-        <View style={{ height: 20 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.india')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.usa')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.usa')}</Text></Text>
-        <View style={{ height: 12 }}></View>
-        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')} </Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.forum')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.india')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.diseases')} <Text style={{ fontWeight: '700', fontStyle: 'italic', }}>{I18n.t('DavidActivity.canadaa')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.conference')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.first')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.erat')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.reseach')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.oslo')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.cell')}  <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.france')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.basic')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.newyork')}</Text></Text>
+        <Text style={{ fontFamily: 'FontAwesome', lineHeight: 21,marginBottom:18 }}>{I18n.t('DavidActivity.health')} <Text style={{ fontWeight: '700', fontStyle: 'italic', fontFamily: 'FontAwesome' }}>{I18n.t('DavidActivity.london')} </Text></Text>
     </View>
 );
 const styles = StyleSheet.create({

@@ -25,37 +25,37 @@ export default class Manual1Activity extends Component<Props> {
                 </StatusBar>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 34, }}>
-                    <Text style={{ height: 123, textAlign: 'center', fontSize: 22, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>{I18n.t('Manual1Activity.getmy')}</Text>
+                    <Text style={{ textAlign: 'center', fontSize: 22,marginBottom:34, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>{I18n.t('Manual1Activity.getmy')}</Text>
                     <View style={{ flexDirection: 'row' }}>
-                        <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.login')}</Text>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.login')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/man6.png')} resizeMode='contain' />
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 34, width: '7%', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
-                        <Text style={{ fontSize: 16, height: 34 }}>{I18n.t('Manual1Activity.username')}</Text>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>☞ </Text>
+                        <Text style={{ fontSize: 16, }}>{I18n.t('Manual1Activity.username')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/man7.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.gohome')}</Text>
+                        <Text style={{ width: '7%', fontSize: 18, fontWeight: 'bold' }}>2.</Text>
+                        <Text style={{width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.gohome')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 456 }} source={require('../image/enpic/man0.png')} resizeMode='contain' />
 
                     <View style={{ flexDirection: 'row',marginTop:23 }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.barcode')}</Text>
+                        <Text style={{ width: '7%', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.barcode')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man2.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:34 }}>
-                        <Text style={{ height: 56, width: '7%', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
-                        <Text style={{ height: 56, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.icon')}</Text>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>4.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.icon')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man3.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row',marginTop:34 }}>
-                        <Text style={{ height: 67, width: '7%', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
-                        <Text style={{ height: 67, width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.result')}</Text>
+                        <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>5.</Text>
+                        <Text style={{ width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual1Activity.result')}</Text>
                     </View>
                     <Image style={{ width: '100%', height: 389 }} source={require('../image/enpic/man5.png')} resizeMode='contain' />
                 </View>
