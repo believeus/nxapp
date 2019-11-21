@@ -392,14 +392,14 @@ export default class DnaReportActivity extends Component<Props> {
                                     </View>
                                 </View>
                                 {this.state.biological < this.state.naturally ?
-                                    <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
+                                    <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
                                         <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/smail.png")}></Image>
-                                        <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#3e9c9c", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>{I18n.t('DnaReportActivity.is')} {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.younger')} </Text></View>
+                                        <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#3e9c9c",  fontSize: 16,fontWeight:"bold"  }}>{I18n.t('DnaReportActivity.is')} {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.younger')} </Text></View>
                                     </View>
                                     :
-                                    <View style={{ width: "96%", height: 56, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
+                                    <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
                                         <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/sad.png")}></Image>
-                                        <View style={{ width: "90%", height: 56, }}><Text style={{ color: "#f15929", fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 37 }}>{I18n.t('DnaReportActivity.is')}  {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.old')} </Text></View>
+                                        <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#f15929",  fontSize: 16, fontWeight:"bold"  }}>{I18n.t('DnaReportActivity.is')}  {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.old')} </Text></View>
                                     </View>
                                 }
                             </View>

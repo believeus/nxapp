@@ -31,40 +31,43 @@ export default class ConsentActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: '98%', alignSelf: 'center', marginTop: 20, flexDirection: 'row', }}>
-                    <Text style={{  width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.customer')}</Text>
+                    <Text style={{ width: '100%', fontSize: 14, color: '#ffffff', textAlign: 'center', lineHeight: 34, borderRadius: 30, backgroundColor: '#0071bc', fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.customer')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
-                    <Text style={{  width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.users')}</Text>
-                    <Text style={{  width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.welcome')} <Text style={{ fontStyle: 'italic' }}> {I18n.t('ConsentActivity.epi')}</Text> {I18n.t('ConsentActivity.registering')}</Text>
+                    <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.users')}</Text>
+                    <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.welcome')} <Text style={{ fontStyle: 'italic' }}> {I18n.t('ConsentActivity.epi')}</Text> {I18n.t('ConsentActivity.registering')}</Text>
 
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{  width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.about')}  <Text style={{ fontStyle: 'italic' }}> {I18n.t('ConsentActivity.app')}</Text></Text>
-                    <Text style={{  width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.your')}<Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.blinded')} </Text>{I18n.t('ConsentActivity.personal')}</Text>
+                    <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.about')}  <Text style={{ fontStyle: 'italic' }}> {I18n.t('ConsentActivity.app')}</Text></Text>
+                    <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.your')}<Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.blinded')} </Text>{I18n.t('ConsentActivity.personal')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{  width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}><Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.app')} </Text> {I18n.t('ConsentActivity.purpose')}</Text>
-                    <Text style={{  width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}><Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.app')} </Text> {I18n.t('ConsentActivity.designed')}<Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.anonymously')} </Text> {I18n.t('ConsentActivity.changes')}</Text>
+                    <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}><Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.app')} </Text> {I18n.t('ConsentActivity.purpose')}</Text>
+                    <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}><Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.app')} </Text> {I18n.t('ConsentActivity.designed')}<Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.anonymously')} </Text> {I18n.t('ConsentActivity.changes')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.data')}</Text>
-                    <Text style={{  width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.obligated')}<Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.community')}  </Text>{I18n.t('ConsentActivity.analyzing')} </Text>
+                    <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.obligated')}<Text style={{ fontStyle: 'italic' }}>{I18n.t('ConsentActivity.community')}  </Text>{I18n.t('ConsentActivity.analyzing')} </Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{  width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.sharing')}</Text>
-                    <Text style={{  width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.believe')}</Text>
+                    <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.sharing')}</Text>
+                    <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.believe')}</Text>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
-                    <Text style={{  width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.security')}</Text>
+                    <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.security')}</Text>
                     <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.accordance')}</Text>
                 </View>
                 {this.state.dispaly == true ?
                     <TouchableOpacity onPress={() => this.navigate.push("Login")}>
-                        <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", color: '#FFFFFF', fontSize: 22, textAlign: 'center', textAlignVertical:'center' }}>{I18n.t('ConsentActivity.agree')}</Text>
+                        <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", color: '#FFFFFF', fontSize: 22, textAlign: 'center', textAlignVertical: 'center' }}>{I18n.t('ConsentActivity.agree')}</Text>
                     </TouchableOpacity>
                     :
                     null
                 }
+
+                <Text style={{ textAlign: 'center', fontSize: 16, textDecorationLine: 'underline', lineHeight: 45 }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
+                <Text style={{ width: '90%', alignSelf: 'center', lineHeight: 34, textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, marginTop: 20, textAlign: 'center' }}>{I18n.t('ConsentActivity.ved')}</Text>
             </ScrollView>
         );
