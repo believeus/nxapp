@@ -40,6 +40,9 @@ import QAActivity from './QAActivity';
 import QuesnoteActivity from './QuesnoteActivity';
 import Manual1Activity from './Manual1Activity';
 import Manual2Activity from './Manual2Activity';
+import SavepdfpathActivity from './SavepdfpathActivity'
+import PdfViewActivity from './PdfViewActivity'
+
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -152,6 +155,12 @@ export const RootStack = createStackNavigator(
         },
         Manual2:{
             screen:Manual2Activity
+        },
+        Savepdfpath:{
+            screen:SavepdfpathActivity
+        },
+        PdfViewActivity:{
+            screen:PdfViewActivity
         }
     },
     {

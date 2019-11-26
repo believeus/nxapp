@@ -109,7 +109,7 @@ android {
         applicationId "com.nxapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 11
+        versionCode 13
         versionName "2.0.0"
         missingDimensionStrategy 'react-native-camera', 'general'
         ndk {
@@ -172,7 +172,15 @@ android {
 }
 def jscFlavor = 'org.webkit:android-jsc:+'
 def enableHermes = project.ext.react.get("enableHermes", false);
+
+configurations {
+    all*.exclude group: 'com.madgag.spongycastle',module: 'core'
+    all*.exclude group: 'com.madgag.spongycastle',module: 'prov'
+    all*.exclude group: 'com.madgag.spongycastle',module: 'bcpkix-jdk15on'
+}
 dependencies {
+    implementation project(':react-native-view-pdf')
+    implementation project(':react-native-html-to-pdf')
     implementation project(':react-native-camera')
     implementation project(':react-native-fs')
     implementation project(':@react-native-community_viewpager')

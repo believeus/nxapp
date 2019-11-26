@@ -253,7 +253,14 @@
         "old": " ans plus vieux que l'âge réel.",
         "yourbio": "(avec un numéro dedans) Votre âge biologique ",
         "otherolder": "Autres personnes testées dont l'âge biologique est supérieur à l'âge chronologique",
-        "otheryounger": "Autres personnes testées dont l'âge biologique est inférieur à l'âge chronologique"
+        "otheryounger": "Autres personnes testées dont l'âge biologique est inférieur à l'âge chronologique",
+        "buildPDF":"Génération de PDF",
+        "viewPdf":"Affichage PDF",
+        "pdfsuccess":"Enregistrement PDF réussi, cliquez sur le bouton PDF pour voir les fichiers PDF",
+        "titlemsg":"Message de rappel",
+        "invalid":"Non valide",
+        "wait":"Votre rapport sera disponible dans 21 jours ouvrables.\n Un instant.",
+        "processed":"Le test est en cours."
     },
     "user_profile": {
         "title": "Your Profile"

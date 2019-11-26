@@ -261,7 +261,14 @@
         "old": "歲，高於實際年齡",
         "yourbio": "（上面有數字）你的生物年齡",
         "otherolder": "其他被測試的人，他們的生物年齡比實際年齡大",
-        "otheryounger": "其他被測試的人，他們的生物年齡比實際年齡小"
+        "otheryounger": "其他被測試的人，他們的生物年齡比實際年齡小",
+        "buildPDF":"生成PDF",
+        "viewPdf":"查看PDF",
+        "pdfsuccess":"PDF保存成功，可點擊查看PDF按鈕查看PDF檔案",
+        "titlemsg":"提示消息",
+        "invalid":"無效碼",
+        "wait":"您的報告將在21個工作日內提供。請稍候……",
+        "processed":"正在處理檢測.請稍候……"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -818,7 +825,7 @@
         "savekey2": "請保存好您唯一的公鑰與私鑰對",
         "unique": "如果用戶退出登錄後再次登錄，則需要再次輸入唯一公共密鑰和私有密鑰。",
         "failed": "消息，密鑰生成失敗，請重新生成！",
-        "success": "成功，公鑰和私鑰已保存到您手機",
+        "success": "保存成功！公鑰和私鑰已保存到您手機",
         "generate": "生成",
         "privatekey": "私鑰",
         "publickey": "公鑰",

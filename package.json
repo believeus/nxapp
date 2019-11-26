@@ -7,16 +7,26 @@
     "test": "jest"
   },
   "dependencies": {
+    "@klarna/react-native-zlib": "^1.0.1",
     "@react-native-community/async-storage": "^1.6.2",
     "@react-native-community/slider": "^2.0.0",
     "@react-native-community/viewpager": "^2.0.1",
+    "@react-pdf/renderer": "^1.6.8",
+    "@tradle/react-native-http": "^2.0.1",
+    "assert": "^2.0.0",
     "babel-runtime": "^6.26.0",
+    "browserify-zlib": "^0.2.0",
+    "buffer": "^5.4.3",
     "deprecated-react-native-listview": "0.0.5",
     "firebase": "^7.2.1",
+    "flate": "^1.0.5",
     "hermesvm": "^0.1.1",
+    "http": "^0.0.0",
     "moment": "^2.24.0",
     "native-base": "^2.13.5",
     "native-echarts": "^0.5.0",
+    "node-phantom": "^0.2.5",
+    "pdfkit": "0.10.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
     "react-art": "^16.11.0",
@@ -37,6 +47,7 @@
     "react-native-fit-image": "^1.5.4",
     "react-native-fs": "^2.15.2",
     "react-native-gesture-handler": "^1.4.1",
+    "react-native-html-to-pdf": "^0.8.0",
     "react-native-i18n": "^2.0.15",
     "react-native-input-scroll-view": "^1.9.3",
     "react-native-input-spinner": "^1.2.6",
@@ -75,6 +86,7 @@
     "react-native-video": "^5.0.0",
     "react-native-video-controls": "^2.2.3",
     "react-native-video-player": "^0.10.0",
+    "react-native-view-pdf": "^0.10.1",
     "react-native-viewpager": "^0.2.13",
     "react-native-web": "^0.11.7",
     "react-native-webview": "5",
@@ -83,7 +95,13 @@
     "react-router": "^3.2.0",
     "rn-app-intro-screen": "^1.0.2",
     "rn-vertical-slider-gradient": "^1.0.3",
-    "watchman": "^1.0.0"
+    "stream": "^0.0.2",
+    "util": "^0.12.1",
+    "watchman": "^1.0.0",
+    "zlib": "^1.0.4"
+  },
+  "react-native": {
+    "http": "@tradle/react-native-http"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",

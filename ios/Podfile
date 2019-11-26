@@ -12,4 +12,8 @@ target 'nxapp' do
     ]
   pod 'react-native-camera', :path => '../node_modules/react-native-camera'
 
+  pod 'react-native-html-to-pdf', :path => '../node_modules/react-native-html-to-pdf'
+
+  pod 'RNPDF', :path => '../node_modules/react-native-view-pdf'
+
 end

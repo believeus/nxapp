@@ -35,6 +35,8 @@ export default class LoginActivity extends Component<Props> {
                 else {
                     if (sessionuser.password != md5.hex_md5(this.state.password)) { Toast.show(I18n.t("LoginActivity.Invalid.PWD"), { duration: 7000, position: Toast.positions.CENTER }); return; }
                     if (sessionuser.valid == 0) { Toast.show(I18n.t("LoginActivity.Invalid.unactive"), { duration: 7000, position: Toast.positions.CENTER }); return; }
+                    this.setState({ animating: true })
+                    this.setState({ disabled: true })
                     Session.save("sessionuser", sessionuser)
                     let path = RNFS.DocumentDirectoryPath + '/' + md5.hex_md5(sessionuser.mail) + '.txt'
                     RNFS.exists(path).then((exists) => {
@@ -44,6 +46,7 @@ export default class LoginActivity extends Component<Props> {
                                 sessionuser.publickey = result ? result.split(":")[0] : ""
                                 sessionuser.privatekey = result ? result.split(":")[1] : ""
                                 Session.save("sessionuser", sessionuser)
+                                this.setState({ animating: false })
                             }).catch((e) => {
                                 console.info(e)
                                 Alert.alert("Message", e)

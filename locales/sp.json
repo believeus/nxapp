@@ -262,7 +262,14 @@
         "old": " años mayor que la edad real.",
         "yourbio": "Tu edad biológica ",
         "otherolder": "Los otros, que fueron evaluados, cuya edad biológica es más alta que la edad cronológica.",
-        "otheryounger": "Los otros, que fueron evaluados, cuya edad biológica es menor que la edad cronológica."
+        "otheryounger": "Los otros, que fueron evaluados, cuya edad biológica es menor que la edad cronológica.",
+        "buildPDF":"Generación de PDF",
+        "viewPdf":"Ver PDF",
+        "pdfsuccess":"Archivo PDF guardado con éxito, pulse el botón de ver PDF para ver el archivo PDF",
+        "titlemsg":"Mensaje de pista",
+        "invalid":"Código no válido",
+        "wait":"Su informe estará disponible en 21 días laborables.Un momento...",
+        "processed":"Estoy trabajando en la prueba."
     },
     "user_profile": {
         "title": "Your Profile"

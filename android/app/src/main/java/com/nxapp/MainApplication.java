@@ -3,6 +3,8 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rumax.reactnative.pdfviewer.PDFViewPackage;
+import com.christopherdro.htmltopdf.RNHTMLtoPDFPackage;
 import org.reactnative.camera.RNCameraPackage;
 import com.rnfs.RNFSPackage;
 import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
@@ -46,6 +48,8 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new PDFViewPackage(),
+            new RNHTMLtoPDFPackage(),
             new RNCameraPackage(),
             new RNFSPackage(),
             new RNCViewPagerPackage(),

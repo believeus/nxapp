@@ -253,7 +253,14 @@
         "old": " years higher than your chronological age.",
         "yourbio": "Your biological age ",
         "otherolder": "The others, who were tested, whose Biological age is higher than Chronological age",
-        "otheryounger": "The others, who were tested, whose Biological age is lower than Chronological age"
+        "otheryounger": "The others, who were tested, whose Biological age is lower than Chronological age",
+        "buildPDF":"Build PDF",
+        "viewPdf":"View PDF",
+        "pdfsuccess":"The PDF is saved successfully. Click View PDF to view the PDF file",
+        "titlemsg":"Message",
+        "invalid":"Invalid barcode",
+        "wait":"Your report will be available in 21 working days.Please wait……",
+        "processed":"Detection is being processed.\nPlease wait……"
     },
     "user_profile": {
         "title": "Your Profile"
