@@ -17,6 +17,7 @@ export default class DnaReportActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
+        Session.save("pdfsavepath", [])
         this.state = {
             animating: false,
             barcode: '',
@@ -454,11 +455,10 @@ export default class DnaReportActivity extends Component<Props> {
                                         this.setState({ btnBuildPdfdisabled: true })
                                         let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                         Session.load("pdfsavepath").then((savepathbox) => {
-                                            console.info(savepathbox.indexOf(this.state.barcode + ":" + uuid))
                                             if (savepathbox.indexOf(this.state.barcode + ":" + uuid) == -1) {
-                                                savepathbox.push(this.state.barcode + ":" + uuid)
                                                 //下载pdf
                                                 fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/buildPDF.jhtml").then(res => res.text()).then(() => {
+                                                    savepathbox.push(this.state.barcode + ":" + uuid)
                                                     this.setState({ animating: false })
                                                     Session.save("pdfsavepath", savepathbox)
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
@@ -467,6 +467,8 @@ export default class DnaReportActivity extends Component<Props> {
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
                                                 this.setState({ animating: false })
                                             }
+                                        }).catch(e=>{
+                                            Alert.alert("message","Build PDF Fail")
                                         })
 
                                     }} title={I18n.t("DnaReportActivity.buildPDF")} /> 
