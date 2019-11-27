@@ -400,12 +400,12 @@ export default class DnaReportActivity extends Component<Props> {
                                 {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
                                         <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/smail.png")}></Image>
-                                        <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#3e9c9c",  fontSize: 16,fontWeight:"bold"  }}>{I18n.t('DnaReportActivity.is')} {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.younger')} </Text></View>
+                                        <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#3e9c9c", fontSize: 16, fontWeight: "bold" }}>{I18n.t('DnaReportActivity.is')} {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.younger')} </Text></View>
                                     </View>
                                     :
                                     <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
                                         <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/sad.png")}></Image>
-                                        <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#f15929",  fontSize: 16, fontWeight:"bold"  }}>{I18n.t('DnaReportActivity.is')}  {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.old')} </Text></View>
+                                        <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#f15929", fontSize: 16, fontWeight: "bold" }}>{I18n.t('DnaReportActivity.is')}  {Math.abs((this.state.naturally) - (this.state.biological)).toFixed(2)}{I18n.t('DnaReportActivity.old')} </Text></View>
                                     </View>
                                 }
                             </View>
@@ -455,23 +455,23 @@ export default class DnaReportActivity extends Component<Props> {
                                         this.setState({ btnBuildPdfdisabled: true })
                                         let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                         Session.load("pdfsavepath").then((savepathbox) => {
-                                            if (savepathbox.indexOf(this.state.barcode + ":" + uuid) == -1) {
-                                                //下载pdf
-                                                fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/buildPDF.jhtml").then(res => res.text()).then(() => {
+                                            //下载pdf
+                                            fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/buildPDF.jhtml").then(res => res.text()).then(() => {
+                                                if (savepathbox.indexOf(this.state.barcode + ":" + uuid) == -1) {
                                                     savepathbox.push(this.state.barcode + ":" + uuid)
                                                     this.setState({ animating: false })
                                                     Session.save("pdfsavepath", savepathbox)
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                })
-                                            }else{
-                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                this.setState({ animating: false })
-                                            }
-                                        }).catch(e=>{
-                                            Alert.alert("message","Build PDF Fail")
+                                                } else {
+                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                    this.setState({ animating: false })
+                                                }
+                                            })
+                                        }).catch(e => {
+                                            Alert.alert("message", "Build PDF Fail")
                                         })
 
-                                    }} title={I18n.t("DnaReportActivity.buildPDF")} /> 
+                                    }} title={I18n.t("DnaReportActivity.buildPDF")} />
                                 </TouchableOpacity>
                             </View>
                             <View style={{ width: "5%" }} />

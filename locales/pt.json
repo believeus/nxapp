@@ -867,5 +867,10 @@
         "setkey":"Defina sua chave de segurança de dados exclusiva.",
         "sentmail":"Les Clés Uniques Seront Envoyées to Vote Boîte aux Lettres",
         "purchase":"Vá para 'COMPRAS' para comprar o kit de teste EpiAging."
+    },
+    "SavepdfpathActivity":{
+        "btncp":"Copiar endereço",
+        "titlemsg":"Notícias",
+        "copy":"Copiar com sucesso, por favor copie o endereço do link para o navegador de computador para Download"
     }
 }

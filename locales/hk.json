@@ -876,5 +876,10 @@
         "setkey":"設置唯一的數據安全密鑰。",
         "sentmail":"唯一密鑰將發送到您的郵箱",
         "purchase":"轉到“購物”以購買EpiAging測試套件。"
+    },
+    "SavepdfpathActivity":{
+        "btncp":"複製下載地址",
+        "titlemsg":"消息",
+        "copy":"複製成功，請將連結位址複製到電腦瀏覽器下載"
     }
 }

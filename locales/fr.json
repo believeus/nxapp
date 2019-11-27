@@ -861,5 +861,10 @@
         "setkey":"Définissez votre clé de sécurité de données unique.",
         "sentmail":"La clé privée unique devrait bien être envoyée à votre boîte aux lettres",
         "purchase":"Allez à «ACHATS» pour acheter le kit de test EpiAging."
+    },
+    "SavepdfpathActivity":{
+        "btncp":"Copier un lien",
+        "titlemsg":"Message",
+        "copy":"Copie réussie, vous pouvez coller l 'adresse du lien à un fichier PDF téléchargé dans un navigateur"
     }
 }

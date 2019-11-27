@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Button } from 'react-native';
+import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, Clipboard, TextInput, TouchableOpacity, Button } from 'react-native';
 import Session from '../storage/Session'
-import { encrypt, decrypt } from 'react-native-simple-encryption';
+import { I18n } from '../locales/i18n';
 import data from '../appdata'
 
 export default class SavepdfpathActivity extends Component<Props> {
@@ -16,23 +16,35 @@ export default class SavepdfpathActivity extends Component<Props> {
             pathbox: [],
         }
     }
-
-
     componentDidMount() {
         Session.load("pdfsavepath").then((savepathbox) => {
             for (let i in savepathbox) {
                 let barcode = savepathbox[i].split(":")[0]
                 let uuid = savepathbox[i].split(":")[1]
-                let view = <TouchableOpacity key={i} onPress={() => { this.props.navigation.push("PdfViewActivity", { pdfpath: data.url + "user/report/" + uuid + "/" + barcode + "/dnaview.jhtml" }) }}>
-                    <View style={{ borderBottomColor: "#e0e0e0", borderBottomWidth: 1, height: 50 }}>
+                let view =
+                    <View key={i} style={{ borderBottomColor: "#e0e0e0", borderBottomWidth: 1, height: 50 }}>
                         <View style={{ width: "100%", height: 5 }}></View>
                         <View style={{ width: "95%", flexDirection: "row", height: "100%", height: 40 }}>
-                            <View style={{ width: "20%", height: "100%" }}><Image style={{ width: "90%", height: "90%" }} resizeMode="contain" source={require("../image/pdf.png")}></Image></View>
-                            <View style={{ width: "75%", height: "100%" }}><Text style={{ height: "100%", textAlignVertical: "center" }}>{savepathbox[i]}.pdf</Text></View>
+                            <TouchableOpacity style={{ width: "65%", flexDirection: "row", height: "100%", height: 40 }} key={i} onPress={() => { this.props.navigation.push("PdfViewActivity", { pdfpath: data.url + "user/report/" + uuid + "/" + barcode + "/dnaview.jhtml" }) }}>
+                                <View style={{ width: "100%", flexDirection: "row", height: "100%", height: 40 }}>
+                                    <View style={{ width: "20%", height: "100%" }}><Image style={{ width: "90%", height: "90%" }} resizeMode="contain" source={require("../image/pdf.png")}></Image></View>
+                                    <View style={{ width: "80%", height: "100%" }}><Text style={{ height: "100%", textAlignVertical: "center" }}>{savepathbox[i]}.pdf</Text></View>
+                                </View>
+                            </TouchableOpacity>
+                            <View style={{ width: "35%", height: "100%" }}>
+                                <Button
+                                    title={I18n.t("SavepdfpathActivity.btncp")}
+                                    onPress={() => {
+                                        let url=data.url + "user/report/" + barcode + "/pdf.jhtml"
+                                        Clipboard.setString(url);
+                                        Alert.alert(I18n.t("SavepdfpathActivity.titlemsg"),I18n.t("SavepdfpathActivity.copy"))
+                                    }}
+                                    style={{ height: "80%", textAlignVertical: "center" }} />
+                            </View>
                         </View>
                         <View style={{ width: "100%", height: 5 }}></View>
                     </View>
-                </TouchableOpacity>
+
                 this.state.pathbox.push(view)
             }
             this.setState({ pathbox: this.state.pathbox })

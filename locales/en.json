@@ -863,5 +863,10 @@
         "setkey":"Set your unique data security key.",
         "sentmail":"Les clés uniques seront envoyées à votre boîte aux lettres",
         "purchase":"Go to 'SHOPPING' to purchase the EpiAging test kit."
+    },
+    "SavepdfpathActivity":{
+        "btncp":"copy download link",
+        "titlemsg":"Message",
+        "copy":"Copy successful, You can paste the link in the computer browser to download PDF file"
     }
 }
