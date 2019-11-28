@@ -34,11 +34,11 @@
 {
 #if DEBUG
   
-  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index.ios" fallbackResource:nil];
+  return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
+  //return [NSURL URLWithString: @"http://192.168.0.110:8081/index.ios.bundle?platform=ios&dev=true"];
 #else
   return [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
-  //return  [[NSBundle mainBundle] URLForResource:@"bundle/index.ios" withExtension:@"jsbundle"];
-
+  //return  [[NSBundle mainBundle] URLForResource:@"index.ios" withExtension:@"jsbundle"];
 
 #endif
 }

@@ -880,7 +880,7 @@
         "purchase":"Vaya a 'COMPRAS' para comprar el kit de prueba EpiAging."
     },
     "SavepdfpathActivity":{
-        "btncp":"Copiar dirección",
+        "btncp":"Copiar",
         "titlemsg":"Mensaje",
         "copy":"Copiado. Copiar la dirección de conexión al navegador de la computadora."
     }

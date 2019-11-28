@@ -37,6 +37,7 @@ add:import PropTypes from 'prop-types';
 (如果已经存在就不用再次引入）
 
 xcode编译react-native,使用react-native@0.59.10，编译会失败，失败之后按照如下更改即可
+vim node_modules/react-native-fs/RNFSManager.m
 Changing
 #import <React/RCTImageLoaderProtocol.h>
 to

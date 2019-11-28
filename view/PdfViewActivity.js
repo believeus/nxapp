@@ -6,6 +6,11 @@ import Session from '../storage/Session'
 
 type Props = {};
 export default class PdfViewActivity extends Component<Props> {
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            title: "PDF View"
+        })
+    }
     constructor(props) {
         super(props);
     }

@@ -865,7 +865,7 @@
         "purchase":"Go to 'SHOPPING' to purchase the EpiAging test kit."
     },
     "SavepdfpathActivity":{
-        "btncp":"copy download link",
+        "btncp":"Copy link",
         "titlemsg":"Message",
         "copy":"Copy successful, You can paste the link in the computer browser to download PDF file"
     }
