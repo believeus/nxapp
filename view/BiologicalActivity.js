@@ -99,8 +99,8 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, textAlignVertical: 'center', color: '#0071bc' }}>{I18n.t('BiologicalActivity.questionnaires')}</Text>
-                    <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', fontWeight: '700', lineHeight: 34 }}>{I18n.t('BiologicalActivity.clock')}</Text>
+                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, textAlignVertical: 'center', color: '#0071bc' }}>{I18n.t('BiologicalActivity.clock')}</Text>
+                    {/* <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', fontWeight: '700', lineHeight: 34 }}>{I18n.t('BiologicalActivity.clock')}</Text> */}
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.chronological')}</Text>
                     <FitImage style={{ height: 389, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/bio8.png")} />
                 </View>

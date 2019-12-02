@@ -40,7 +40,7 @@ export default class MallActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                      <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.ca/product/epiaging-kit/" }} />
+                      <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epi-age.com/product/epiaging-kit/" }} />
             </View>
             // <ScrollView>
             //     <View>
