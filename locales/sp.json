@@ -269,7 +269,9 @@
         "titlemsg":"Mensaje de pista",
         "invalid":"Código no válido",
         "wait":"Su informe estará disponible en 21 días laborables.Un momento...",
-        "processed":"Estoy trabajando en la prueba."
+        "processed":"Estoy trabajando en la prueba.",
+        "status":"Estado",
+        "barcode":"Código de barras"
     },
     "user_profile": {
         "title": "Your Profile"

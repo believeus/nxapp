@@ -210,6 +210,7 @@
         "women": "The recommended daily amount of vitamin A is 900 micrograms (mcg) for adult men and 700 mcg for adult women."
     },
     "DnaReportActivity": {
+        "note":" Please enter the barcode below when you received the epiAging test kit. Your biological age test result will be updated on this page as soon as the test is completed.",
         "title": "Chronological Age",
         "look": "People age at different rates. Some “look” and “feel” older than their chronological age while others look younger than their chronological age.",
         "parameter": "Our biological age is a better parameter of our health well being and life span than our chronological age.",
@@ -260,7 +261,9 @@
         "titlemsg":"Message",
         "invalid":"Invalid barcode",
         "wait":"Your report will be available in 21 working days.Please wait……",
-        "processed":"Detection is being processed.\nPlease wait……"
+        "processed":"Detection is being processed.\nPlease wait……",
+        "status":"Status",
+        "barcode":"Barcode"
     },
     "user_profile": {
         "title": "Your Profile"

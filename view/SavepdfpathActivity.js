@@ -28,7 +28,7 @@ export default class SavepdfpathActivity extends Component<Props> {
                             <TouchableOpacity style={{ width: "65%", flexDirection: "row", height: "100%", height: 40 }} key={i} onPress={() => { this.props.navigation.push("PdfViewActivity", { pdfpath: data.url + "user/report/" + uuid + "/" + barcode + "/dnaview.jhtml" }) }}>
                                 <View style={{ width: "100%", flexDirection: "row", height: "100%", height: 40 }}>
                                     <View style={{ width: "20%", height: "100%" }}><Image style={{ width: "90%", height: "90%" }} resizeMode="contain" source={require("../image/pdf.png")}></Image></View>
-                                    <View style={{ width: "80%", height: "100%" }}><Text style={{ height: "100%", textAlignVertical: "center" }}>{savepathbox[i]}.pdf</Text></View>
+                                    <View style={{ width: "80%", height: "100%" }}><Text style={{ height: "100%",lineHeight:40 }}>{savepathbox[i]}.pdf</Text></View>
                                 </View>
                             </TouchableOpacity>
                             <View style={{ width: "35%", height: "100%" }}>

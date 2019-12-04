@@ -6,9 +6,7 @@ import data from '../appdata';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';
 import FitImage from 'react-native-fit-image';
-import md5 from "react-native-md5"
-import RNHTMLtoPDF from 'react-native-html-to-pdf';
-import RNFS from 'react-native-fs'
+
 export default class DnaReportActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -17,8 +15,8 @@ export default class DnaReportActivity extends Component<Props> {
     }
     constructor(props) {
         super(props);
-        Session.save("pdfsavepath", [])
         this.state = {
+            itemBox: [],
             animating: false,
             barcode: '',
             btnBuildPdfdisabled: true,
@@ -100,6 +98,7 @@ export default class DnaReportActivity extends Component<Props> {
                     }]
             }
         };
+
     }
 
     componentDidMount() {
@@ -131,7 +130,23 @@ export default class DnaReportActivity extends Component<Props> {
                 this.setState({ option });
                 this.echarts.webview.reload();
             })
+
+            let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+            console.info(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid)
+            fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
+                for (let i in data) {
+                    let vbarcode = {}
+                    vbarcode.val = data[i].barcode
+                    vbarcode.stat = data[i].status
+                    vbarcode.naturally = data[i].naturally
+                    vbarcode.biological = data[i].biological
+                    this.state.itemBox.push(vbarcode)
+                }
+                this.setState({ itemBox: this.state.itemBox })
+
+            })
         });
+
 
 
     }
@@ -146,8 +161,9 @@ export default class DnaReportActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
+                <Image style={{ width: '100%', height: 220}} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
+
                 <View style={{ width: "100%" }}>
-                    <View style={{ width: "100%", height: 23 }}></View>
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ height: 35, flexDirection: "row", width: "100%" }}>
                             <View style={{ width: "10%", height: 30 }}></View>
@@ -178,13 +194,17 @@ export default class DnaReportActivity extends Component<Props> {
                                     this.setState({ display: true })
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     //解密
-                                    console.info(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode)
                                     fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
                                         switch (data.status) {
                                             case "invalid":
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"));
                                                 break;
                                             case "pending":
+                                                var barcode = {}
+                                                barcode.val = this.state.barcode
+                                                barcode.stat = data.status
+                                                this.state.itemBox.push(barcode)
+                                                this.setState({ itemBox: this.state.itemBox })
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
                                                 break;
                                             case "processing":
@@ -218,7 +238,49 @@ export default class DnaReportActivity extends Component<Props> {
                                     <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/report.png")}></Image>
                                 </TouchableOpacity>
                             </View>
-                            {/* } */}
+                        </View>
+                        <View style={{ width: "100%", height: 5 }}></View>
+                        <View style={{ width: "100%", alignItems: "center" }}>
+                            <View style={{ width: "90%", borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
+                                <View style={{ width: "40%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.barcode')}</Text></View>
+                                <View style={{ width: "60%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.status')}</Text></View>
+                            </View>
+                            {this.state.itemBox ?
+                                this.state.itemBox.map((barcode) => {
+                                    return <TouchableOpacity
+                                        onPress={() => {
+                                            if (barcode.stat == "finished") {
+                                                this.setState({ btnBuildPdfdisabled: false })
+                                                let option = Object.assign({}, this.state.option);
+                                                let biological = window.parseFloat(barcode.biological).toFixed(2);
+                                                let naturally = window.parseFloat(barcode.naturally).toFixed(2)
+                                                this.setState({ biological })
+                                                this.setState({ naturally })
+                                                let i = biological > naturally ? 0 : 1;
+                                                option.series[i].markPoint.data[0].value = biological
+                                                option.series[i].markPoint.data[0].xAxis = naturally
+                                                option.series[i].markPoint.data[0].yAxis = biological
+                                                this.setState({ option })
+                                                this.setState({ visual: true })
+                                                {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
+                                                {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
+                                                {/* 从而重新刷新webview数据 */ }
+                                                this.echarts.webview.reload();
+                                            } else if (barcode.stat == "processing") {
+                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
+                                            } else if (barcode.stat == "pending") {
+                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
+                                            }
+                                        }}>
+                                        <View key={barcode.val} style={{ width: "90%", height: 30, borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
+                                            <View style={{ width: "40%", alignItems: "center", height: "100%", display: "flex" }}><Text style={{ height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30 }}>{barcode.val}</Text></View>
+                                            <View style={{ width: "60%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30, color: barcode.stat == "finished" ? "red" : "green" }}>{barcode.stat}</Text></View>
+                                        </View>
+                                    </TouchableOpacity>
+                                }) :
+                                null
+
+                            }
                         </View>
                     </View>
 
@@ -468,7 +530,15 @@ export default class DnaReportActivity extends Component<Props> {
                                                 }
                                             })
                                         }).catch(e => {
-                                            Alert.alert("message", "Build PDF Fail")
+                                            Session.save("pdfsavepath", [])
+                                            Session.load("pdfsavepath").then((savepathbox) => {
+                                                fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/buildPDF.jhtml").then(res => res.text()).then(() => {
+                                                    savepathbox.push(this.state.barcode + ":" + uuid)
+                                                    this.setState({ animating: false })
+                                                    Session.save("pdfsavepath", savepathbox)
+                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                })
+                                            })
                                         })
 
                                     }} title={I18n.t("DnaReportActivity.buildPDF")} />

@@ -260,7 +260,9 @@
         "titlemsg":"Message de rappel",
         "invalid":"Non valide",
         "wait":"Votre rapport sera disponible dans 21 jours ouvrables.\n Un instant.",
-        "processed":"Le test est en cours."
+        "processed":"Le test est en cours.",
+        "status":"état",
+        "barcode":"Code barre"
     },
     "user_profile": {
         "title": "Your Profile"

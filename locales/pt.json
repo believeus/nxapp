@@ -270,7 +270,9 @@
         "titlemsg":"Mensagem instantânea",
         "invalid":"Código inválido",
         "wait":"O SEU relatório estará disponível Dentro de 21 Dias úteis.Por favor, espere.",
-        "processed":"Detecção de processamento.\n Aguarde por favor."
+        "processed":"Detecção de processamento.\n Aguarde por favor.",
+        "status":"Estado",
+        "barcode":"Código Da Barra"
     },
     "user_profile": {
         "title": "Seu perfil"
