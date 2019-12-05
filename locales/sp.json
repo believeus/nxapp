@@ -270,8 +270,9 @@
         "invalid":"Código no válido",
         "wait":"Su informe estará disponible en 21 días laborables.Un momento...",
         "processed":"Estoy trabajando en la prueba.",
-        "status":"Estado",
-        "barcode":"Código de barras"
+        "status":"Estado de ensayo",
+        "barcode":"Código de barras",
+        "Registerkit":"Código de barras"
     },
     "user_profile": {
         "title": "Your Profile"

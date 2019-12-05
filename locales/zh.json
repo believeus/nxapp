@@ -269,8 +269,9 @@
         "invalid":"無效碼",
         "wait":"您的報告將在21個工作日內提供。請稍候……",
         "processed":"正在處理檢測.請稍候……",
-        "status":"狀態",
-        "barcode":"條碼"
+        "status":"檢測狀態",
+        "barcode":"條碼",
+        "Registerkit":"提交条码"
     },
     "user_profile": {
         "title": "Your Profile"

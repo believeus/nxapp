@@ -261,8 +261,9 @@
         "invalid":"Non valide",
         "wait":"Votre rapport sera disponible dans 21 jours ouvrables.\n Un instant.",
         "processed":"Le test est en cours.",
-        "status":"état",
-        "barcode":"Code barre"
+        "status":"état de détection",
+        "barcode":"Code barre",
+        "Registerkit":"Code barre"
     },
     "user_profile": {
         "title": "Your Profile"

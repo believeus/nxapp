@@ -109,7 +109,7 @@
         "mailboxformatFail": "The mailbox format is incorrect",
         "mailboxNull": "Please enter your mailbox",
         "passwordNull": "Please enter your password",
-        "login": "LOGIN",
+        "login": "Login",
         "logout": "Logout",
         "noaccount": "Don't have an account?",
         "register": "Register",
@@ -262,8 +262,9 @@
         "invalid":"Invalid barcode",
         "wait":"Your report will be available in 21 working days.Please wait……",
         "processed":"Detection is being processed.\nPlease wait……",
-        "status":"Status",
-        "barcode":"Barcode"
+        "status":"Testing Status",
+        "barcode":"Barcode",
+        "Registerkit":"Submit barcode"
     },
     "user_profile": {
         "title": "Your Profile"

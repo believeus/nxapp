@@ -17,6 +17,7 @@ export default class DnaReportActivity extends Component<Props> {
         super(props);
         this.state = {
             itemBox: [],
+            statusbar: false,
             animating: false,
             barcode: '',
             btnBuildPdfdisabled: true,
@@ -132,7 +133,6 @@ export default class DnaReportActivity extends Component<Props> {
             })
 
             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-            console.info(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid)
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
                     let vbarcode = {}
@@ -143,7 +143,7 @@ export default class DnaReportActivity extends Component<Props> {
                     this.state.itemBox.push(vbarcode)
                 }
                 this.setState({ itemBox: this.state.itemBox })
-
+                this.setState({ statusbar: true })
             })
         });
 
@@ -161,14 +161,14 @@ export default class DnaReportActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <Image style={{ width: '100%', height: 220}} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
+                <Image style={{ width: '100%', height: 220 }} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
 
                 <View style={{ width: "100%" }}>
                     <View style={{ width: "100%", alignItems: "center" }}>
                         <View style={{ height: 35, flexDirection: "row", width: "100%" }}>
-                            <View style={{ width: "10%", height: 30 }}></View>
+                            <View style={{ width: "5%", height: 30 }}></View>
                             <TextInput
-                                style={{ width: "70%", height: "100%", borderColor: '#0071BC', borderWidth: 1, borderRadius: 5, paddingVertical: 0 }}
+                                style={{ width: "45%", height: "100%", borderColor: '#0071BC', borderWidth: 1, borderRadius: 5, paddingVertical: 0 }}
                                 onChangeText={(barcode) => this.setState({ barcode })}
                                 placeholder={"Your barcode"}
                                 value={this.state.barcode}
@@ -187,7 +187,8 @@ export default class DnaReportActivity extends Component<Props> {
                                     </TouchableOpacity>
                                 </View>
                                 : */}
-                            <View style={{ width: "15%", height: 35 }} >
+                            <View style={{ width: "1%", height: 30 }}></View>
+                            <View style={{ width: "45%", height: 35, backgroundColor: "#0071BC", borderRadius: 5 }} >
 
                                 <TouchableOpacity onPress={() => {
 
@@ -205,12 +206,15 @@ export default class DnaReportActivity extends Component<Props> {
                                                 barcode.stat = data.status
                                                 this.state.itemBox.push(barcode)
                                                 this.setState({ itemBox: this.state.itemBox })
-                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
+                                                this.setState({ statusbar: true })
+                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"))
                                                 break;
                                             case "processing":
+                                                this.setState({ statusbar: true })
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                                 break;
                                             case "finished":
+                                                this.setState({ statusbar: true })
                                                 this.setState({ btnBuildPdfdisabled: false })
                                                 let option = Object.assign({}, this.state.option);
                                                 let biological = window.parseFloat(data.biological).toFixed(2);
@@ -229,22 +233,23 @@ export default class DnaReportActivity extends Component<Props> {
                                                 this.echarts.webview.reload();
                                                 break;
                                         }
-                                        this.setState({
-                                            display: false
-                                        })
+                                        this.setState({ display: false })
                                     })
 
                                 }}>
-                                    <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/report.png")}></Image>
+                                    <Text style={{ width: "100%", height: "100%", textAlign: "center", lineHeight: 35, color: "white" }}>{I18n.t('DnaReportActivity.Registerkit')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
+
                         <View style={{ width: "100%", height: 5 }}></View>
                         <View style={{ width: "100%", alignItems: "center" }}>
-                            <View style={{ width: "90%", borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
-                                <View style={{ width: "40%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.barcode')}</Text></View>
-                                <View style={{ width: "60%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.status')}</Text></View>
-                            </View>
+                            {this.state.statusbar ?
+                                <View style={{ width: "90%", borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
+                                    <View style={{ width: "40%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.barcode')}</Text></View>
+                                    <View style={{ width: "60%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.status')}</Text></View>
+                                </View>
+                                : null}
                             {this.state.itemBox ?
                                 this.state.itemBox.map((barcode) => {
                                     return <TouchableOpacity
@@ -262,6 +267,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 option.series[i].markPoint.data[0].yAxis = biological
                                                 this.setState({ option })
                                                 this.setState({ visual: true })
+                                                this.setState({barcode:barcode.val})
                                                 {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
                                                 {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
                                                 {/* 从而重新刷新webview数据 */ }
