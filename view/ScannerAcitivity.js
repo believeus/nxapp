@@ -1,56 +1,65 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, Container } from 'react-native';
-import Barcode from 'react-native-smart-barcode'
+import { Platform, StyleSheet, Text, View, Image, Button, Alert, Easing, Animated } from 'react-native';
+import { RNCamera } from "react-native-camera"
+import { I18n } from '../locales/i18n'
+
 
 type Props = {};
 export default class ScannerAcitivity extends Component<Props> {
-    // 构造
+    static navigationOptions = ({ navigation, screenProps }) => {
+        return ({
+            
+        })
+    }
     constructor(props) {
         super(props);
+        this.state = {
+            moveAnim: new Animated.Value(0)
+        };
     }
+
+    componentDidMount() {
+        this.startAnimation();
+    }
+
+    startAnimation = () => {
+        this.state.moveAnim.setValue(0);
+        Animated.timing(
+            this.state.moveAnim,
+            {
+                toValue: -200,
+                duration: 1500,
+                easing: Easing.linear
+            }
+        ).start(() => this.startAnimation());
+    };
+
 
     render() {
-
         return (
-            <Barcode style={{ flex: 1, }}
-                ref={component => this._barCode = component}
-                onBarCodeRead={this._onBarCodeRead} />
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+                <RNCamera style={{ flex: 1, justifyContent: 'flex-end', alignItems: 'center' }}
+                    ref={ref => { this.camera = ref }}
+                    type={RNCamera.Constants.Type.back}
+                    flashMode={RNCamera.Constants.FlashMode.on}
+                    //  识别二维码
+                    onBarCodeRead={(result) => {
+                        const { data } = result;
+                        this.props.navigation.state.params.callback(data)
+                        this.props.navigation.goBack()
+                        this.props.navigation.goBack({ param: { barcode: data } })
+                    }}>
+                    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: 'transparent' }}>
+                        <View style={{ height: 200, width: 200, borderWidth: 1, borderColor: '#00FF00', backgroundColor: 'transparent' }} />
+                        <Animated.View style={[
+                            { flex: 0, width: 200, height: 2, backgroundColor: '#00FF00', },
+                            { transform: [{ translateY: this.state.moveAnim }] }]} />
+                       
+                    </View>
+                </RNCamera>
+            </View>
         )
-    }
-
-   
-
-    _onBarCodeRead = (e) => {
-        console.log(`e.nativeEvent.data.type = ${e.nativeEvent.data.type}, e.nativeEvent.data.code = ${e.nativeEvent.data.code}`)
-        this._stopScan()
-        const {navigate,goBack,state} = this.props.navigation;
-        state.params.callback(e.nativeEvent.data.code);
-        this.props.navigation.goBack();  
-        //this.props.navigation.goBack({param:{barcode:e.nativeEvent.data.code}});  
-        // Alert.alert(e.nativeEvent.data.type, e.nativeEvent.data.code, [
-        //     { text: 'OK', onPress: () => {
-        //         this._startScan()
-        //     } 
-        // },
-        // ])
-    }
-
-    _startScan = (e) => {
-        this._barCode.startScan()
-    }
-
-    _stopScan = (e) => {
-        this._barCode.stopScan()
     }
 
 
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    videoContainer: {
-        margin: 10
-    }
-})

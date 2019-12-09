@@ -133,6 +133,7 @@ export default class DnaReportActivity extends Component<Props> {
             })
 
             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+            console.info(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid)
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
                     let vbarcode = {}
@@ -173,23 +174,8 @@ export default class DnaReportActivity extends Component<Props> {
                                 placeholder={"Your barcode"}
                                 value={this.state.barcode}
                             />
-                            {/* {this.state.barcode == "" ?
-                                <View style={{ width: "15%", height: 35 }} >
-                                    <TouchableOpacity onPress={() => {
-                                        navigate.push("Scanner", {
-                                            barcode: this.state.barcode,
-                                            callback: (data) => {
-                                                this.setState({ barcode: data })
-                                            }
-                                        })
-                                    }}>
-                                        <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/scan.png")}></Image>
-                                    </TouchableOpacity>
-                                </View>
-                                : */}
                             <View style={{ width: "1%", height: 30 }}></View>
-                            <View style={{ width: "45%", height: 35, backgroundColor: "#0071BC", borderRadius: 5 }} >
-
+                            <View style={{ width: "35%", height: 35, backgroundColor: "#0071BC", borderRadius: 5 }} >
                                 <TouchableOpacity onPress={() => {
 
                                     this.setState({ display: true })
@@ -240,6 +226,18 @@ export default class DnaReportActivity extends Component<Props> {
                                     <Text style={{ width: "100%", height: "100%", textAlign: "center", lineHeight: 35, color: "white" }}>{I18n.t('DnaReportActivity.Registerkit')}</Text>
                                 </TouchableOpacity>
                             </View>
+                            <View style={{ width: "10%", height: 35 }} >
+                                <TouchableOpacity onPress={() => {
+                                    navigate.push("Scanner", {
+                                        barcode: this.state.barcode,
+                                        callback: (data) => {
+                                            this.setState({ barcode: data })
+                                        }
+                                    })
+                                }}>
+                                    <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/scan.png")}></Image>
+                                </TouchableOpacity>
+                            </View>
                         </View>
 
                         <View style={{ width: "100%", height: 5 }}></View>
@@ -267,7 +265,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 option.series[i].markPoint.data[0].yAxis = biological
                                                 this.setState({ option })
                                                 this.setState({ visual: true })
-                                                this.setState({barcode:barcode.val})
+                                                this.setState({ barcode: barcode.val })
                                                 {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
                                                 {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
                                                 {/* 从而重新刷新webview数据 */ }

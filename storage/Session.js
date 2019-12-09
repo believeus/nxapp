@@ -76,6 +76,7 @@ export default class Session {
         })
     }
     static logout = () => {
-        this.storage.remove({ key: 'sessionuser' });
+        this.storage.remove({ key: 'sessionuser' })
+        this.storage.remove({key:'pdfsavepath'})
     }
 }

@@ -109,7 +109,7 @@ android {
         applicationId "com.nxapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 15
+        versionCode 17
         versionName "2.0.0"
         missingDimensionStrategy 'react-native-camera', 'general'
         // ndk {

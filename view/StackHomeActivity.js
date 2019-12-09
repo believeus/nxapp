@@ -42,6 +42,7 @@ import Manual1Activity from './Manual1Activity';
 import Manual2Activity from './Manual2Activity';
 import SavepdfpathActivity from './SavepdfpathActivity'
 import PdfViewActivity from './PdfViewActivity'
+import ScannerAcitivity from './ScannerAcitivity'
 
 export const RootStack = createStackNavigator(
     {
@@ -54,8 +55,8 @@ export const RootStack = createStackNavigator(
         About: {
             screen: TabAboutActivity
         },
-        epicenter:{
-            screen:TabCenterActivity
+        epicenter: {
+            screen: TabCenterActivity
         },
         Company: {
             screen: CompanyActivity
@@ -153,14 +154,17 @@ export const RootStack = createStackNavigator(
         Manual1: {
             screen: Manual1Activity
         },
-        Manual2:{
-            screen:Manual2Activity
+        Manual2: {
+            screen: Manual2Activity
         },
-        Savepdfpath:{
-            screen:SavepdfpathActivity
+        Savepdfpath: {
+            screen: SavepdfpathActivity
         },
-        PdfViewActivity:{
-            screen:PdfViewActivity
+        PdfViewActivity: {
+            screen: PdfViewActivity
+        },
+        Scanner: {
+            screen: ScannerAcitivity
         }
     },
     {

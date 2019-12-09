@@ -32,7 +32,7 @@ export default class RasEncryptionActivity extends Component<Props> {
             if (user.privatekey) { this.setState({ btnPrivatekeyDisabled: true }) }
             if (user.publickey) { this.setState({ btnPublickeyDisabled: true }) }
             if (user.privatekey && user.publickey) {
-                this.setState({ btnSaveDisabled: true })
+               // this.setState({ btnSaveDisabled: true })
                 this.setState({ publickey: user.publickey })
                 this.setState({ privatekey: decrypt(user.publickey, user.uuid) })
             }
@@ -168,7 +168,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                             </View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
                                 <View style={{ width: "25%", height: 40 }}>
-                                    {/* 将私钥发送到邮箱 */}
+                                    {/* 将私钥和公钥保存到本地 */}
                                     <Button disabled={this.state.btnSaveDisabled} onPress={() => {
                                         let id = this.state.user.id
                                         this.setState({ animating: true })
