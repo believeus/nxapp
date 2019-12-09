@@ -43,6 +43,8 @@
 	<string>Location Always Usage Description</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Location When In Use Usage Description</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string></string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>NotoSansHans-Black.otf</string>

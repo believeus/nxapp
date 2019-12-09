@@ -872,5 +872,8 @@
         "btncp":"Copy link",
         "titlemsg":"Message",
         "copy":"Copy successful, You can paste the link in the computer browser to download PDF file"
+    },
+    "ScannerAcitivity":{
+        "title":"Scanning"
     }
 }

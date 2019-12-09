@@ -8,7 +8,7 @@ type Props = {};
 export default class ScannerAcitivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            
+            title: I18n.t("ScannerAcitivity.title"),
         })
     }
     constructor(props) {

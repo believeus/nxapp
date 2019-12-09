@@ -869,5 +869,8 @@
         "btncp":"Copier",
         "titlemsg":"Message",
         "copy":"Copie réussie, vous pouvez coller l 'adresse du lien à un fichier PDF téléchargé dans un navigateur"
+    },
+    "ScannerAcitivity":{
+        "title":"Scanner"
     }
 }
