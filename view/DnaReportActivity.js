@@ -176,7 +176,7 @@ export default class DnaReportActivity extends Component<Props> {
                             />
                             <View style={{ width: "1%", height: 30 }}></View>
                             <View style={{ width: "35%", height: 35, backgroundColor: "#0071BC", borderRadius: 5 }} >
-                                <TouchableOpacity onPress={() => {
+                                <TouchableOpacity disabled={this.state.barcode.length != 0 ?  false : true} onPress={() => {
 
                                     this.setState({ display: true })
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
@@ -190,9 +190,11 @@ export default class DnaReportActivity extends Component<Props> {
                                                 var barcode = {}
                                                 barcode.val = this.state.barcode
                                                 barcode.stat = data.status
-                                                this.state.itemBox.push(barcode)
-                                                this.setState({ itemBox: this.state.itemBox })
-                                                this.setState({ statusbar: true })
+                                                if (JSON.stringify(this.state.itemBox).indexOf(barcode.val) == -1) {
+                                                    this.state.itemBox.push(barcode)
+                                                    this.setState({ itemBox: this.state.itemBox })
+                                                    this.setState({ statusbar: true })
+                                                }
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"))
                                                 break;
                                             case "processing":
@@ -250,7 +252,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 : null}
                             {this.state.itemBox ?
                                 this.state.itemBox.map((barcode) => {
-                                    return <TouchableOpacity
+                                    return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
                                             if (barcode.stat == "finished") {
                                                 this.setState({ btnBuildPdfdisabled: false })
