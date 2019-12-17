@@ -257,7 +257,7 @@
         "your": "Tu",
         "chro": "/Edad cronológica/",
         "bio": "/ Edad biológica /",
-        "is": "Tu edad biológica es ",
+        "is": "Tu edad biológica ",
         "younger": " años menor que la edad real.",
         "old": " años mayor que la edad real.",
         "yourbio": "Tu edad biológica ",
@@ -272,7 +272,7 @@
         "processed":"Estoy trabajando en la prueba.",
         "status":"Estado de ensayo",
         "barcode":"Código de barras",
-        "Registerkit":"Código de barras"
+        "Registerkit":"Registro barcode"
     },
     "user_profile": {
         "title": "Your Profile"

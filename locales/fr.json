@@ -248,7 +248,7 @@
         "your": "Votre",
         "chro": "/âge chronologique/",
         "bio": "/âge biologique/",
-        "is": "Votre âge biologique est ",
+        "is": "Votre âge physique ",
         "younger": " ans de moins que l'âge réel.",
         "old": " ans plus vieux que l'âge réel.",
         "yourbio": "(avec un numéro dedans) Votre âge biologique ",
@@ -263,7 +263,7 @@
         "processed":"Le test est en cours.",
         "status":"état de détection",
         "barcode":"Code barre",
-        "Registerkit":"Code barre"
+        "Registerkit":"Registre barcode"
     },
     "user_profile": {
         "title": "Your Profile"

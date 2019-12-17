@@ -256,7 +256,7 @@
         "your": "你的",
         "chro": "/實際年齡/",
         "bio": "/生物年齡(歲)/",
-        "is": "你的生物學年齡與實際年齡差為",
+        "is": "你的生物學年齡為",
         "younger": " 低於實際年齡",
         "old": "歲，高於實際年齡",
         "yourbio": "（上面有數字）你的生物年齡",
@@ -271,7 +271,7 @@
         "processed":"正在處理檢測.請稍候……",
         "status":"檢測狀態",
         "barcode":"條碼",
-        "Registerkit":"提交条码"
+        "Registerkit":"注册条码"
     },
     "user_profile": {
         "title": "Your Profile"

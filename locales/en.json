@@ -264,7 +264,7 @@
         "processed":"Detection is being processed.\nPlease wait……",
         "status":"Testing Status",
         "barcode":"Barcode",
-        "Registerkit":"Submit barcode"
+        "Registerkit":"Register barcode"
     },
     "user_profile": {
         "title": "Your Profile"
