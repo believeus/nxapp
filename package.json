@@ -31,7 +31,7 @@
     "react": "^16.11.0",
     "react-art": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-native": "0.59.10",
+    "react-native": "0.60.5",
     "react-native-aes-kit": "^1.0.2",
     "react-native-awesome-alerts": "^1.2.0",
     "react-native-braintree-payments-drop-in": "^1.0.5",

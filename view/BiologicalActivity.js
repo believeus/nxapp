@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, Text, View, Image, ImageBackground, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StatusBar, Text, View, Image, ImageBackground, ScrollView,Button, TouchableOpacity,Modal } from 'react-native';
 import { I18n } from '../locales/i18n';
 import FitImage from 'react-native-fit-image';
-
+import { WebView } from 'react-native-webview';
 export default class BiologicalActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -25,6 +25,16 @@ export default class BiologicalActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
+                {this.state.display == true ?
+                    <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
+                        <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
+                        <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
+                            <TouchableOpacity style={{ width: "100%", height: "100%" }}>
+                                <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
+                            </TouchableOpacity>
+                        </View>
+                    </Modal> : null
+                }
                 <View style={{ width: '100%', }}>
                     <ImageBackground style={{ width: '100%', height: 213 }} resizeMode='cover' source={require("../image/enpic/bio1.jpg")} >
                         <View style={{ height: 27 }}></View>
@@ -32,8 +42,8 @@ export default class BiologicalActivity extends Component<Props> {
                         <Text style={{ fontSize: 34, color: '#006DB5' ,fontWeight:"bold"}}>{I18n.t('TabHomeActivity.old')}</Text>
                         <Text style={{ fontSize: 34, color: '#006DB5',fontWeight:"bold" }}>{I18n.t('TabHomeActivity.you')}</Text>  
                         <View style={{ height: 15 }}></View>                          
-                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>{I18n.t('BiologicalActivity.counts')}</Text>
-                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>{I18n.t('BiologicalActivity.danage')}</Text>
+                        <Text style={{ fontSize: 16, color: '#006DB5' }}>{I18n.t('BiologicalActivity.counts')}</Text>
+                        <Text style={{ fontSize: 16, color: '#006DB5' }}>{I18n.t('BiologicalActivity.danage')}</Text>
                         </View>
                     </ImageBackground>
                 </View>
@@ -59,7 +69,8 @@ export default class BiologicalActivity extends Component<Props> {
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, }}>
                         <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.hardware')}</Text>
                         <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.paradigm')}</Text>
-                        <Text style={{ fontSize: 14, marginBottom: 15, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.suggest')} <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#0071bc' }}>https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease</Text>{I18n.t('BiologicalActivity.still')}</Text>
+                        <Text style={{ fontSize: 14, marginBottom: 15, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.suggest')}
+                            <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease" }); this.setState({ display: true }) }} style={{ fontStyle: 'italic', color: '#0071bc' }}>https://www.ncbi.nlm.nih.gov/pubmed/?term=epigenetic+clock+disease</Text>{I18n.t('BiologicalActivity.still')}</Text>
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 45, }}>
@@ -186,37 +197,37 @@ export default class BiologicalActivity extends Component<Props> {
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', }}>
                     <View style={{ borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
-                        <View style={{ flexDirection: 'row', }}>
+                        <View style={{ flexDirection: 'row',marginTop:10  }}>
                             <Text style={{ width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.download')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio5.png")}></Image>
+                            <Image style={{ height: 67, width: '30%'}} resizeMode='contain' source={require("../image/icons/bio5.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.register')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
-                        <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step2')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio6.png")}></Image>
+                        <View style={{ flexDirection: 'row',marginTop:10  }}>
+                            <Text style={{  width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step2')}</Text>
+                            <Image style={{ height: 67, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio6.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.saliva')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
-                        <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step3')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio7.png")}></Image>
+                        <View style={{ flexDirection: 'row',marginTop:10  }}>
+                            <Text style={{ width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step3')}</Text>
+                            <Image style={{ height: 67, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio7.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.questionnaire')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
-                        <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step4')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio8.png")}></Image>
+                        <View style={{ flexDirection: 'row',marginTop:10  }}>
+                            <Text style={{  width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step4')}</Text>
+                            <Image style={{ height: 67, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio8.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.analyze')}</Text>
                     </View>
                     <View style={{ marginTop: 24, borderWidth: 1, borderColor: '#0071bc', borderRadius: 10, backgroundColor: '#ebfaff' }}>
-                        <View style={{ flexDirection: 'row', }}>
-                            <Text style={{ heigh: 89, width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step5')}</Text>
-                            <Image style={{ height: 89, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio9.png")}></Image>
+                        <View style={{ flexDirection: 'row', marginTop:10 }}>
+                            <Text style={{  width: '70%', textAlignVertical: 'center', textAlign: 'center', fontSize: 18 }}>{I18n.t('BiologicalActivity.step5')}</Text>
+                            <Image style={{ height: 67, width: '30%' }} resizeMode='contain' source={require("../image/icons/bio9.png")}></Image>
                         </View>
                         <Text style={{ margin: 10, fontSize: 16, fontFamily: 'FontAwesome', lineHeight: 22 }}>{I18n.t('BiologicalActivity.lifestyle')}</Text>
                     </View>

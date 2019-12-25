@@ -38,7 +38,7 @@ export default class CompanyActivity extends Component<Props> {
                     <Text style={{width: '70%', fontSize: 14, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('CompanyActivity.ittechnology')}</Text>
                     <Image style={{ height: 99, width: '30%' }} resizeMode='contain' source={require("../image/enpic/company3.jpg")}></Image>
                 </View>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('TabHomeActivity.allright')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center',marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView>
         );
     }

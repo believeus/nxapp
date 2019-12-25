@@ -94,7 +94,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
-                        title={I18n.t('LifeStyleChartActivity.blood')}
+                        title={I18n.t('LifeStyleChartActivity.systolic')}
                         refTitle={I18n.t('LifeStyleChartActivity.american')}
                         refUrl="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings"
                         max={240}

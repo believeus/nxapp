@@ -162,7 +162,7 @@ export default class DnaReportActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <Image style={{ width: '100%', height: 220 }} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
+                <Image style={{ width: '100%', height: 272 }} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
 
                 <View style={{ width: "100%" }}>
                     <View style={{ width: "100%", alignItems: "center" }}>
@@ -290,10 +290,10 @@ export default class DnaReportActivity extends Component<Props> {
                         </View>
                     </View>
                     {this.state.display ? <ActivityIndicator size="large" color="#0071BC" /> : null}
-                    <View style={{ width: '90%', height: 60, alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+                    <View style={{ width: '90%',  alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image style={{ height: 18, width: '6%' }} resizeMode="contain" source={require("../image/icons/rep-green.png")}></Image>
-                            <Image style={{ height: 18, width: '6%' }} resizeMode="contain" source={require("../image/icons/rep-red.png")}></Image>
+                            <Image style={{ height: 18, width: '3%',marginRight:'2%' }} resizeMode="contain" source={require("../image/icons/rep-green.png")}></Image>
+                            <Image style={{ height: 18, width: '3%',marginRight:'4%' }} resizeMode="contain" source={require("../image/icons/rep-red.png")}></Image>
                             <Text style={{ width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.yourbio')} </Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
@@ -337,9 +337,9 @@ export default class DnaReportActivity extends Component<Props> {
                                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 34, color: '#f15929', fontWeight: 'bold', textAlign: 'center' }}>{this.state.biological}</Text>
                                     </View>
                                 </View>
-                                <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>
+                                <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 23 }}>
                                     <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/smail.png")}></Image>
-                                    <View style={{ width: "90%", height: 67, }}><Text style={{ color: "#3e9c9c", fontSize: 16, fontWeight: "bold" }}>{I18n.t('DnaReportActivity.is')} {this.state.biological} </Text></View>
+                                    <View style={{ width: "90%", height: 67,lineHeight:67 }}><Text style={{ color: "#f15929", fontSize: 16, fontWeight: "bold" }}>{I18n.t('DnaReportActivity.is')} {this.state.biological} </Text></View>
                                 </View>
                                 {/* {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>

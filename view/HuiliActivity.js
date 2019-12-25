@@ -51,8 +51,6 @@ const FirstRoute = () => (
                 <Text style={{ lineHeight: 18, fontFamily: 'NotoSansHans-Light' }}> {I18n.t('HuiliActivity.excel2')}</Text>
                 <View style={{height:12}}></View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 17, }}>{I18n.t('HuiliActivity.poster1')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 17, }}>{I18n.t('HuiliActivity.travel2')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', lineHeight: 17, }}>{I18n.t('HuiliActivity.graduate3')}</Text>
             </View>
         </View>
         <View style={{ width: '100%', flexDirection: 'row' }} >

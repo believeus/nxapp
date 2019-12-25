@@ -58,19 +58,19 @@ export default class ConsentActivity extends Component<Props> {
                     <Text style={{ width: '100%', fontSize: 14, paddingTop: 12, color: '#0071bc', lineHeight: 17, fontFamily: 'NotoSansHans-Medium' }}>{I18n.t('ConsentActivity.security')}</Text>
                     <Text style={{ width: '100%', fontSize: 12, paddingTop: 12, lineHeight: 17, fontFamily: 'FontAwesome' }}>{I18n.t('ConsentActivity.accordance')}</Text>
                 </View>
+                
                 {this.state.dispaly == true ?
-                    <TouchableOpacity onPress={() => this.navigate.push("Login")}>
-                        <Text style={{ height: 34, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", color: '#FFFFFF', fontSize: 22, textAlign: 'center', textAlignVertical: 'center' }}>{I18n.t('ConsentActivity.agree')}</Text>
+                    <TouchableOpacity onPress={() => this.navigate.push("Register")}>
+                        <Text style={{ height: 34, marginTop: 23, width: '34%', alignSelf: 'center', borderRadius: 10, backgroundColor: "#0071bc", color: '#FFFFFF', fontSize: 22, textAlign: 'center' }}>{I18n.t('ConsentActivity.agree')}</Text>
                     </TouchableOpacity>
                     :
                     null
                 }
 
                 <Text style={{ textAlign: 'center', fontSize: 16, textDecorationLine: 'underline', lineHeight: 45 }}>{I18n.t('TabHomeActivity.disclaimer')}</Text>
-                <Text style={{ width: '90%', alignSelf: 'center', lineHeight: 34, textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
-                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, marginTop: 20, textAlign: 'center' }}>{I18n.t('ConsentActivity.ved')}</Text>
+                <Text style={{ width: '90%', alignSelf: 'center', textAlign: 'center', fontSize: 12, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
+                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, marginTop: 34, textAlign: 'center' }}>{I18n.t('ConsentActivity.ved')}</Text>
             </ScrollView>
         );
     }
 }
-

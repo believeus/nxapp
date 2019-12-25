@@ -162,7 +162,7 @@ export default class SameActivity extends Component<Props> {
                         <Text style={{ width: '28%', height: 188, fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1, textAlign: 'center' }}>
                         </Text>
                         <Text style={{ width: '70%', height: 188, lineHeight: 18, fontFamily: 'NotoSansHans-Light', paddingLeft: 19 }}>{I18n.t('SameActivity.hospital')}
-                            <Text onPress={() => { this.setState({ url: "https://ajp.psychiatryonline.org/doi/full/10.1176/" }) }} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
+                            <Text onPress={() => { this.setState({ url: "https://ajp.psychiatryonline.org/doi/full/10.1176/" });     this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', color: '#0071bc', fontStyle: 'italic', lineHeight: 18 }}>https://ajp.psychiatryonline.org/doi/full/10.1176/</Text>
                         </Text>
                     </View>
                     <View style={{ width: '100%', flexDirection: 'row' }} >
