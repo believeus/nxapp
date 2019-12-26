@@ -120,6 +120,7 @@
         "login": "Conecte-se",
         "noaccount": "Não possui uma conta?",
         "register": "registo",
+        "language":"Língua",
         "Invalid": {
             "Email": "Email inválido",
             "PWD": "Senha inválida",
@@ -272,7 +273,9 @@
         "processed":"Detecção de processamento.\n Aguarde por favor.",
         "status":"Estado de detecção",
         "barcode":"Código Da Barra",
-        "Registerkit":"Registar barcode"
+        "Registerkit":"Registar barcode",
+        "yourage":"Entre Na SUA idade.",
+        "ageFormat":"Formato de idade incorrecto"
     },
     "user_profile": {
         "title": "Seu perfil"
@@ -877,5 +880,14 @@
     },
     "ScannerAcitivity":{
         "title":"Digitalização"
+    },
+    "LangActivity":{
+        "title":"Mudança de linguagem",
+        "English":"Inglês(English)",
+        "French":"Francês(French)",
+        "Spanish":"Espanhol(Spanish)",
+        "Russian":"Língua Russa(Russian)",
+        "Portuguese":"Português(Portuguese)",
+        "Chinese":"Chinês(Chinese)"
     }
 }

@@ -121,6 +121,7 @@
         "logout":"Cerrar sesión",
         "noaccount": "¿No tienes una cuenta?",
         "register": "Registro",
+        "language":"Idiomas",
         "Invalid": {
             "Email": "Email inválido",
             "PWD": "contraseña incorrecta",
@@ -271,7 +272,9 @@
         "processed":"Estoy trabajando en la prueba.",
         "status":"Estado de ensayo",
         "barcode":"Código de barras",
-        "Registerkit":"Registro barcode"
+        "Registerkit":"Registro barcode",
+        "yourage":"Introduzca su edad",
+        "ageFormat":"Formato de edad incorrecto"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -888,5 +891,14 @@
     },
     "ScannerAcitivity":{
         "title":"Escanear"
+    },
+    "LangActivity":{
+        "title":"Cambio de idioma",
+        "English":"Inglés(English)",
+        "French":"Francés(French)",
+        "Spanish":"Español(Spanish)",
+        "Russian":"эгуо (язык)(Russian)",
+        "Portuguese":"Portugués язык(Portuguese)",
+        "Chinese":"Chino(Chinese)"
     }
 }

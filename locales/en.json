@@ -113,6 +113,7 @@
         "logout": "Logout",
         "noaccount": "Don't have an account?",
         "register": "Register",
+        "language":"language",
         "Invalid": {
             "Email": "Email invalid",
             "PWD": "Password invalid",
@@ -266,7 +267,9 @@
         "processed":"Detection is being processed.\nPlease wait……",
         "status":"Testing Status",
         "barcode":"Barcode",
-        "Registerkit":"Register barcode"
+        "Registerkit":"Register barcode",
+        "yourage":"Type your age",
+        "ageFormat":"年齡格式不正確"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -877,5 +880,14 @@
     },
     "ScannerAcitivity":{
         "title":"Scanning"
+    },
+    "LangActivity":{
+        "title":"Switch Language",
+        "English":"English",
+        "French":"French",
+        "Spanish":"Spanish",
+        "Russian":"Russian",
+        "Portuguese":"Portuguese",
+        "Chinese":"Chinese"
     }
 }

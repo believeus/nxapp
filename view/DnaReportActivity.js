@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Button } from 'react-native';
-import { ECharts } from "react-native-echarts-wrapper";
-import { encrypt, decrypt } from 'react-native-simple-encryption';
-import data from '../appdata';
-import Session from '../storage/Session';
-import { I18n } from '../locales/i18n';
-import FitImage from 'react-native-fit-image';
+import { StatusBar, StyleSheet, Text, View, Image, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Button } from 'react-native';
+import { ECharts } from "react-native-echarts-wrapper"
+import { decrypt } from 'react-native-simple-encryption'
+import data from '../appdata'
+import Session from '../storage/Session'
+import { I18n } from '../locales/i18n'
+import FitImage from 'react-native-fit-image'
 
 export default class DnaReportActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
@@ -245,13 +245,15 @@ export default class DnaReportActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 5 }}></View>
                         <View style={{ width: "100%", alignItems: "center" }}>
                             {this.state.statusbar ?
-                                <View style={{ width: "90%", borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
+                                <View style={{ width: "100%", borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
                                     <View style={{ width: "40%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.barcode')}</Text></View>
-                                    <View style={{ width: "60%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.status')}</Text></View>
+                                    <View style={{ width: "30%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.status')}</Text></View>
+                                    <View style={{ width: "30%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontWeight: "bold" }}>{I18n.t('DnaReportActivity.yourage')}</Text></View>
                                 </View>
                                 : null}
                             {this.state.itemBox ?
                                 this.state.itemBox.map((barcode) => {
+                                    console.info(barcode)
                                     return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
                                             if (barcode.stat == "finished") {
@@ -278,9 +280,37 @@ export default class DnaReportActivity extends Component<Props> {
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
                                             }
                                         }}>
-                                        <View key={barcode.val} style={{ width: "90%", height: 30, borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
+                                        <View key={barcode.val} style={{ width: "100%", height: 30, borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
                                             <View style={{ width: "40%", alignItems: "center", height: "100%", display: "flex" }}><Text style={{ height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30 }}>{barcode.val}</Text></View>
-                                            <View style={{ width: "60%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30, color: barcode.stat == "finished" ? "red" : "green" }}>{barcode.stat}</Text></View>
+                                            <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30, color: barcode.stat == "finished" ? "red" : "green" }}>{barcode.stat}</Text></View>
+                                            <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: 'center', }}>
+                                                <TextInput style={{
+                                                    height: 20,
+                                                    width: '60%',
+                                                    borderWidth: 1,
+                                                    borderColor: '#b3b3b3',
+                                                    fontSize: 16,
+                                                    paddingVertical: 0,
+                                                    textAlign: "center"
+                                                }}
+                                                    keyboardType ="numeric"
+                                                    defaultValue={barcode.naturally+""}
+                                                    onChangeText={(text) => {
+                                                        if (/^[0-9]+([.]{1}[0-9]+){0,1}$/.test(text)){
+                                                             // let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                                        // //解密
+                                                        // fetch(data.url + "admin/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&myage="+val).then(res => res.json()).then((data) => {
+                                                                
+                                                        // })
+                                                        }else{ 
+                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"),I18n.t("DnaReportActivity.ageFormat"))
+                                                        }
+                                                        
+                                                       
+
+                                                    }}
+                                                />
+                                            </View>
                                         </View>
                                     </TouchableOpacity>
                                 }) :
@@ -290,10 +320,10 @@ export default class DnaReportActivity extends Component<Props> {
                         </View>
                     </View>
                     {this.state.display ? <ActivityIndicator size="large" color="#0071BC" /> : null}
-                    <View style={{ width: '90%',  alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
+                    <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
                         <View style={{ flexDirection: 'row' }}>
-                            <Image style={{ height: 18, width: '3%',marginRight:'2%' }} resizeMode="contain" source={require("../image/icons/rep-green.png")}></Image>
-                            <Image style={{ height: 18, width: '3%',marginRight:'4%' }} resizeMode="contain" source={require("../image/icons/rep-red.png")}></Image>
+                            <Image style={{ height: 18, width: '3%', marginRight: '2%' }} resizeMode="contain" source={require("../image/icons/rep-green.png")}></Image>
+                            <Image style={{ height: 18, width: '3%', marginRight: '4%' }} resizeMode="contain" source={require("../image/icons/rep-red.png")}></Image>
                             <Text style={{ width: '88%', fontSize: 12, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('DnaReportActivity.yourbio')} </Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
@@ -339,7 +369,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                                 <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 23 }}>
                                     <Image style={{ width: "10%", height: 23, margin: 5 }} resizeMode="contain" source={require("../image/smail.png")}></Image>
-                                    <View style={{ width: "90%", height: 67,lineHeight:67 }}><Text style={{ color: "#f15929", fontSize: 16, fontWeight: "bold" }}>{I18n.t('DnaReportActivity.is')} {this.state.biological} </Text></View>
+                                    <View style={{ width: "90%", height: 67, lineHeight: 67 }}><Text style={{ color: "#f15929", fontSize: 16, fontWeight: "bold" }}>{I18n.t('DnaReportActivity.is')} {this.state.biological} </Text></View>
                                 </View>
                                 {/* {this.state.biological < this.state.naturally ?
                                     <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 16 }}>

@@ -262,7 +262,9 @@
         "processed":"Le test est en cours.",
         "status":"état de détection",
         "barcode":"Code barre",
-        "Registerkit":"Registre barcode"
+        "Registerkit":"Registre barcode",
+        "yourage":"Saisissez votre âge",
+        "ageFormat":"Age Format incorrect"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -871,5 +873,14 @@
     },
     "ScannerAcitivity":{
         "title":"Scanner"
+    },
+    "LangActivity":{
+        "title":"Changer de langue",
+        "English":"Anglais(English)",
+        "French":"Français(French)",
+        "Spanish":"Espagne(Spanish)",
+        "Russian":"Russe(Russian)",
+        "Portuguese":"Portugais(Portuguese)",
+        "Chinese":"Chinois(Chinese)"
     }
 }

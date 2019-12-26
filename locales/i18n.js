@@ -1,5 +1,5 @@
 import I18n, { getLanguages } from 'react-native-i18n'
-
+import {Alert } from 'react-native';
 //日志输出当前系统语言的代码
 getLanguages().then(languages => {
     console.log(languages); // ['en-US', 'en']
@@ -53,7 +53,7 @@ I18n.translations = {
 };
 I18n.localeLanguage = () => {
     I18n.locale = DeviceInfo.getDeviceLocale();
-    console.info(I18n.locale)
+    Alert.alert(I18n.locale)
     return I18n.locale;
 };
 export { I18n, getLanguages };

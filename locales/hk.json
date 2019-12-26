@@ -119,6 +119,7 @@
         "login": "登入",
         "noaccount": "沒有帳戶?",
         "register": "帳戶註冊",
+        "language":"語言切換",
         "Invalid": {
             "Email": "電子郵件無效",
             "PWD": "密碼無效",
@@ -270,7 +271,9 @@
         "processed":"正在處理檢測.請稍候……",
         "status":"檢測狀態",
         "barcode":"條碼",
-        "Registerkit":"注册条码"
+        "Registerkit":"注册条码",
+        "yourage":"輸入您的年齡",
+        "ageFormat":"年齡格式不正確"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -886,5 +889,14 @@
     },
     "ScannerAcitivity":{
         "title":"掃描"
+    },
+    "LangActivity":{
+        "title":"語言切換",
+        "English":"英語(English)",
+        "French":"法語(French)",
+        "Spanish":"西班牙語(Spanish)",
+        "Russian":"俄語(Russian)",
+        "Portuguese":"葡萄牙語(Portuguese)",
+        "Chinese":"繁體中文(Chinese)"
     }
 }

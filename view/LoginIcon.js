@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { NavigationActions, StackActions } from 'react-navigation';
-import { Platform, StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import React, { Component } from 'react'
+import { NavigationActions, StackActions } from 'react-navigation'
+import {Text, View, Image,Modal,TouchableOpacity,Button } from 'react-native'
 import {
     Menu,
     MenuOptions,
@@ -15,19 +15,14 @@ type Props = {};
 export default class LoginIcon extends Component<Props> {
    
     constructor(props) {
-        super(props);
-        console.info(props)
-        this.state = { user: null };
-
+        super(props)
+        this.state = {user: null}
     }
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
-        });
-
+        })
     }
-
-
     render() {
         const optionsStyles = {
             optionsContainer: {
@@ -74,7 +69,16 @@ export default class LoginIcon extends Component<Props> {
                                     });
                                     navigate.dispatch(resetAction);
                                 }} >
-                                    <Text style={{ color: '#333333' }}>Logout</Text>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <View><Image style={{ height: 20, width: 20 }} resizeMode="contain" source={require("../image/logout.png")} /></View>
+                                        <View><Text style={{ color: "#333333" }}>Logout</Text></View>
+                                    </View>
+                                </MenuOption>
+                                <MenuOption onSelect={() => {navigate.push("LangActivity")}}>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <View><Image style={{ height: 20, width: 20 }} resizeMode="contain" source={require("../image/lang.png")} /></View>
+                                        <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.language')}</Text></View>
+                                    </View>
                                 </MenuOption>
                             </MenuOptions>
                             :
@@ -91,12 +95,16 @@ export default class LoginIcon extends Component<Props> {
                                         <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.register')}</Text></View>
                                     </View>
                                 </MenuOption>
+                                <MenuOption onSelect={() => {navigate.push("LangActivity")}}>
+                                    <View style={{ flexDirection: "row" }}>
+                                        <View><Image style={{ height: 20, width: 20 }} resizeMode="contain" source={require("../image/lang.png")} /></View>
+                                        <View><Text style={{ color: "#333333" }}>{I18n.t('LoginActivity.language')}</Text></View>
+                                    </View>
+                                </MenuOption>
                             </MenuOptions>
                         }
-
                     </Menu>
                 </View>
-
             </View >
         );
     }

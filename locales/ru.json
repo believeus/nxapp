@@ -111,6 +111,7 @@
         "logout":"Выйти",
         "noaccount": "У вас нет аккаунта?",
         "register": "Регистрация",
+        "language":"язык",
         "Invalid": {
             "Email": "Email недействителен",
             "PWD": "Пароль неверен",
@@ -248,7 +249,9 @@
         "processed":"обработка тестов. подождите...",
         "status":"контрольный режим",
         "barcode":"штрих - код",
-        "Registerkit":"регистрация barcode"
+        "Registerkit":"регистрация barcode",
+        "yourage":"Введите возраст",
+        "ageFormat":"неправильный возрастной формат"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -839,5 +842,14 @@
     },
     "ScannerAcitivity":{
         "title":"сканировать"
+    },
+    "LangActivity":{
+        "title":"переключение речи",
+        "English":"английский(English)",
+        "French":"французский язык(French)",
+        "Spanish":"испанский(Spanish)",
+        "Russian":"эгуо (язык)(Russian)",
+        "Portuguese":"португальский язык(Portuguese)",
+        "Chinese":"китайский язык(Chinese)"
     }
 }

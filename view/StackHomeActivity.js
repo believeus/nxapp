@@ -43,6 +43,7 @@ import Manual2Activity from './Manual2Activity';
 import SavepdfpathActivity from './SavepdfpathActivity'
 import PdfViewActivity from './PdfViewActivity'
 import ScannerAcitivity from './ScannerAcitivity'
+import LangActivity from './LangActivity'
 
 export const RootStack = createStackNavigator(
     {
@@ -165,6 +166,9 @@ export const RootStack = createStackNavigator(
         },
         Scanner: {
             screen: ScannerAcitivity
+        },
+        LangActivity:{
+            screen:LangActivity
         }
     },
     {

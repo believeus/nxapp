@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
-import { NavigationActions, StackActions } from 'react-navigation';
+import {StyleSheet, StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
 import { WebView } from 'react-native-webview';
-import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
+import {TabBar, TabView, SceneMap } from 'react-native-tab-view';
 import { I18n } from '../locales/i18n';
 
 const FirstRoute = () => (

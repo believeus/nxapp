@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Platform, StyleSheet, Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Button, Alert } from 'react-native';
+import {Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Button, Alert } from 'react-native';
 import Toast from 'react-native-root-toast';
 import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n';

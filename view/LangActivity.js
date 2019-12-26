@@ -16,10 +16,8 @@ export default class LangActivity extends Component<Props> {
     }
 
     render() {
-        const navigate = this.props.navigation;//此处可以自定义跳转属性
         return (
-
-            <ScrollView style={styles.container}>
+            <ScrollView style={{flex:1}}>
                 <View>
                     <TouchableOpacity onPress={()=>{
                         I18n.locale = 'en'
@@ -77,12 +75,3 @@ export default class LangActivity extends Component<Props> {
         );
     }
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1
-    },
-    videoContainer: {
-        margin: 10
-    }
-})
