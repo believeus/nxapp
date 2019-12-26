@@ -279,6 +279,7 @@
         "title": "Your Profile"
     },
     "CompanyActivity": {
+        "team":"我們是DNA甲基化團隊",
         "title": "公司簡介",
         "nextgeneration": "我們現正研發新一代DNA甲基化生物標記, 用於早期癌症檢測和維持健康的衰老進程",
         "ecosystem": "我們致力於建設一個全新的健康生態系統，用以提供個性化指導; 方便大眾尋找和管理適合自己的健康生活。",

@@ -39,14 +39,11 @@ export default class SameActivity extends Component<Props> {
                 <View style={{ width: '100%' }}>
                     <ImageBackground style={{ width: '100%', height: 245 }} resizeMode='cover' source={require("../image/enpic/sam1.jpg")} >
                         <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                            <View style={{ width: '50%' }}></View>
-                            <View style={{ width: '50%' }}>
-                                <Text style={{ fontSize: 34, marginTop: 23, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.whatis')}</Text>
-                                <Text style={{ fontSize: 34, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.sam')} </Text>
-                                <View style={{ height: 20 }}></View>
-                                <Text style={{ fontSize: 14, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.natural')}</Text>
-                                <Text style={{ fontSize: 14, color: '#E3E3E3' }}>{I18n.t('TabHomeActivity.human')}</Text>
-                                <Text style={{ fontSize: 14, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.health')}</Text>
+                            <View style={{ width: '55%' }}></View>
+                            <View style={{ width: '45%' }}>
+                                <Text style={{ fontSize: 34, marginTop: 12, color: '#ff9433',fontWeight:'bold',lineHeight:34 }}>{I18n.t('SameActivity.what')}</Text>
+                                <Text style={{ fontSize: 34, color: '#ff9433',fontWeight:'bold' }}>{I18n.t('SameActivity.what2')} </Text>
+                                <Text style={{ fontSize: 14, color: '#ffffff',marginTop:17, fontFamily: 'NotoSansHans-Light', }}>{I18n.t('SameActivity.affacthealth')}</Text>
                             </View>
                         </View>
                     </ImageBackground>

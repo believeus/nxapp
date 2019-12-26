@@ -281,6 +281,7 @@
         "title": "Seu perfil"
     },
     "CompanyActivity": {
+        "team":"Nós somos a equipe de metilação do DNA",
         "title": "introdução da empresa",
         "nextgeneration": "Estamos desenvolvendo biomarcadores de metilação de DNA de próxima geração para detecção precoce do câncer e envelhecimento saudável.",
         "ecosystem": "Estamos trabalhando na construção de um novo ecossistema de saúde que guiará o gerenciamento personalizado da vida saudável.",

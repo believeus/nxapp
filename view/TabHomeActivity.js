@@ -89,26 +89,26 @@ export default class TabHomeActivity extends Component<Props> {
                                         {I18n.t('TabHomeActivity.you')}
                                     </Text>
                                         <View style={{ height: 8 }}></View>
-                                        <Text style={{ fontSize: 16, lineHeight: 15, color: '#5CACEE' }}>
+                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#006DB5' }}>
                                         {I18n.t('TabHomeActivity.only')}
                                     </Text>
-                                        <Text style={{ fontSize: 16, color: '#5CACEE' }}>
+                                        <Text style={{ fontSize: 12, color: '#006DB5' }}>
                                         {I18n.t('TabHomeActivity.dnaage')}
                                     </Text>
                                         <View style={{ height: 8 }}></View>
-                                        <Text style={{ fontSize: 12, lineHeight: 16, color: '#E3E3E3' }}>
+                                        <Text style={{ fontSize: 10, lineHeight: 16, color: '#E3E3E3' }}>
                                         {I18n.t('TabHomeActivity.stop')}
                                     </Text>
-                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                        <Text style={{ fontSize: 10, lineHeight: 15, color: '#E3E3E3' }}>
                                         {I18n.t('TabHomeActivity.dles')}
                                     </Text>
-                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                        <Text style={{ fontSize: 10, lineHeight: 15, color: '#E3E3E3' }}>
                                         {I18n.t('TabHomeActivity.frown')}
                                     </Text>
-                                        <Text style={{ fontSize: 12, lineHeight: 15, color: '#E3E3E3' }}>
+                                        <Text style={{ fontSize: 10, lineHeight: 15, color: '#E3E3E3' }}>
                                         {I18n.t('TabHomeActivity.numbers')}
                                     </Text>
-                                        <Text style={{ fontSize: 12, color: '#E3E3E3' }}>
+                                        <Text style={{ fontSize: 10, color: '#E3E3E3' }}>
                                         {I18n.t('TabHomeActivity.count')}
                                     </Text>
                                     </View>
@@ -120,14 +120,10 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ width: '100%', height: 345 }}>
                                 <ImageBackground style={{ width: '100%', height: '100%' }} source={require('../image/enpic/index2.jpg')} resizeMode='cover' >
                                     <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
-                                        <View style={{ width: '60%' }}></View>
-                                        <View style={{ width: '40%' }}>
-                                            <Text style={{ fontSize: 34, marginTop: 23, color: '#E3E3E3', fontWeight:"bold"}}>{I18n.t('TabHomeActivity.whatis')}</Text>
-                                            <Text style={{ fontSize: 34, color: '#E3E3E3',fontWeight:"bold" }}>{I18n.t('TabHomeActivity.sam')} </Text>
-                                            <View style={{ height: 20 }}></View>
-                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.natural')} </Text>
-                                            <Text style={{ fontSize: 14, color: '#E3E3E3' }}>{I18n.t('TabHomeActivity.human')}</Text>
-                                            <Text style={{ fontSize: 14, color: '#E3E3E3', }}>{I18n.t('TabHomeActivity.health')} </Text>
+                                        <View style={{ width: '100%' }}>
+                                            <Text style={{ fontSize: 34, marginTop: 23,textAlign:'center', color: '#ff9433', fontWeight:"bold",marginBottom:12}}>{I18n.t('TabHomeActivity.whatis')}</Text>
+                                            <Text style={{ fontSize: 14, color: '#3f3f3f',textAlign:'center',fontFamily: 'NotoSansHans-Light',lineHeight:17 }}>{I18n.t('TabHomeActivity.natural')} </Text>
+                                            <Text style={{ fontSize: 14, color: '#3f3f3f',textAlign:'center',fontFamily: 'NotoSansHans-Light',lineHeight:17  }}>{I18n.t('TabHomeActivity.human')}</Text>
                                         </View>
                                     </View>
                                 </ImageBackground>
@@ -220,7 +216,7 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
                                     }}
-                                        style={{ height: 67,color:'#1e1e1e',lineHeight:15, }}>{I18n.t('TabHomeActivity.report')}</Text>
+                                        style={{ height: 67,color:'#1e1e1e',lineHeight:17, }}>{I18n.t('TabHomeActivity.report')}</Text>
                                 </View>
                                 <View style={{ height: 112, width: '32%',}}>
                                     <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:45, paddingTop:45, textAlign:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
@@ -298,21 +294,21 @@ export default class TabHomeActivity extends Component<Props> {
                                 <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap1.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.international')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap2.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.dynrep')}</Text>
                                     </View>
                                 </View>
                                 <View style={{ height: 123, justifyContent: 'space-between', flexDirection: 'row' }}>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap3.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.question2')}</Text>
                                     </View>
                                     <View style={{ width: '45%', backgroundColor: '#ffffff', borderRadius: 20 }}>
                                         <Image style={{ width: '100%', height: 45, justifyContent: 'center', marginTop: 9, marginBottom: 5 }} source={require('../image/icons/ap4.png')} resizeMode='contain' />
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 12,lineHeight:16,  textAlign: 'center', color: '#808080' }}>{I18n.t('TabHomeActivity.machinelearn')}</Text>
                                     </View>
                                 </View>
                             </View>
