@@ -262,7 +262,7 @@ export default class TabHomeActivity extends Component<Props> {
                     <View style={{ width: '90%',  alignSelf: 'center', marginTop: 23 ,marginBottom:23}}>
                         <Image style={{ width: '100%', height: 245 }} source={require('../image/enpic/index7.jpg')} resizeMode="contain" />
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.bio2')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, color: '#4d4d4d', lineHeight: 52 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
+                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                         <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
                                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
@@ -318,13 +318,13 @@ export default class TabHomeActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f0f0f0' }}>
                     <View style={{width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:34 }}>
                         <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, textAlign: 'center', color: '#282828',lineHeight:38 }}>{I18n.t('TabHomeActivity.whatsame')}</Text>
-                        <Text style={{ fontSize: 18, fontFamily: 'NotoSansHans-Light', color: '#4d4d4d',textAlign:'center' ,lineHeight: 38}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
+                        <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', color: '#4d4d4d',textAlign:'center' ,lineHeight: 23,marginBottom:12}}>{I18n.t('TabHomeActivity.affacthealth')}</Text>
                         <Image style={{ width: '100%', height: 245, justifyContent: 'center' }} source={require('../image/enpic/index9.jpg')} resizeMode='contain' />
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.same')}</Text>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 24, color: '#4d4d4d', lineHeight: 52 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 45, color: '#333333' }}>{I18n.t('TabHomeActivity.sam')}</Text>
+                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
                         <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.same')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 16, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 16, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>

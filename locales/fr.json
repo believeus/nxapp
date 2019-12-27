@@ -48,8 +48,7 @@
         "mark":"Marché de la santé",
         "quest":"Questionnaires",
         "report":"Mon rapport",
-        "whatis":"Qu'est-ce que",
-        "sam":"SAMe?",
+        "whatis":"Qu'est-ce que SAMe?",
         "natural":"Le SAMe est un produit naturel présent dans ",
         "human":"le corps humain qui peut avoir  ",
         "health":"des effets sur la santé humaine.",
@@ -735,7 +734,7 @@
         "g": "g"
     },
     "SameActivity": {
-        "title": "La présentation de Sam-e",
+        "title": "La présentation de SAMe",
         "what":"Qu'est-ce",
         "what2": "que SAMe?",
         "affacthealth": "SAMe est un produit naturel dans le corps humain, qui peut affecter la santé humaine.",
@@ -746,7 +745,7 @@
         "level": "Le niveau de SAMe diminue avec le vieillissement de l'organisme. Parallèlement, un certain nombre de problèmes de santé, notamment des troubles de l'humeur, des articulations et du foie, sont susceptibles de se produire.",
         "molecules": "Toutes les molécules SAMe ont deux formes: l'isomère SS (actif) et l'isomère RS (inactif).",
         "tosylate": "Alors que SAMe se présente sous deux formes de sel stables; tosylate et le butane disulfanate, seule la forme tosylate est soutenue par vingt ans de recherche pour la sécurité et l'efficacité.",
-        "according": "Selon des études cliniques, sam-e peut améliorer la santé émotionnelle, la relaxation des articulations et la fonction hépatique",
+        "according": "Selon des études cliniques, SAMe peut améliorer la santé émotionnelle, la relaxation des articulations et la fonction hépatique",
         "quality": "En mars 2003, l’AHRQ (Agence pour la recherche en santé et la qualité des soins de santé), une division des services de santé et des services sociaux des États-Unis, a publié les résultats d’une grande étude sur SAMe.",
         "depression": "SAMe est aussi efficace que les médicaments sur ordonnance conventionnels dans le traitement de la dépression",
         "effective": "SAMe est aussi efficace que les médicaments sur ordonnance classiques (AINS) dans le traitement de l'arthrose",

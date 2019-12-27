@@ -22,6 +22,7 @@
         "question2": "Lifestyle questionnaires",
         "machinelearn": "APP linked to a machine learning System",
         "whatsame": "What is SAMe?",
+        "sam":"SAMe",
         "affacthealth": "SAMe is a natural product in the human body, which can affect human health.",
         "supplement": "SAMe is a natural nutrition supplement in the human body.",
         "myreport": "My Report",
@@ -676,7 +677,7 @@
         "epiagings": "epiAging",
         "methylation": "epiAging uses a method called DNA methylation to determine your true age — which might, as science is thinking at this time and age, reveal some important information on your true health, and possibly the quality and even span of your life.",
         "hkepi": "HKG epi THERAPEUTICS",
-        "already": "HKG epi THERAPEUTICS already has three decades of pioneering research in this exciting area of DNA methylation. With our unique method of diagnosing the DNA methylation stored in your cells in saliva, we reveal your actual age, which may encourage you to make lifestyle changes that some evidence suggetss might lead to the following:",
+        "already": "HKG epi THERAPEUTICS already has three decades of pioneering research in this exciting area of DNA methylation . With our unique method of diagnosing the DNA methylation stored in your cells in saliva, we reveal your actual age, which may encourage you to make lifestyle changes that some evidence suggetss might lead to the following:",
         "slow": "Slow Down The Aging Process",
         "onset": "Prevent Disease Before Onset",
         "quality": "Imporve Your Quality Of Life",
@@ -742,7 +743,7 @@
         "title": "SAMe introduction",
         "what":"What is",
         "what2": "SAMe?",
-        "affacthealth": "SAMe is a natural product in the human body, which can affect human health.",
+        "affacthealth": "Же это натуральный продукт в организме человека, который может повлиять на здоровье человека.",
         "same": "SAMe",
         "sam": "SAMe is a nutritional supplement not a drug.",
         "body": "SAMe (S-Adenosyl Methionine) is a chemical found naturally in the human  body.",
@@ -889,6 +890,6 @@
         "Spanish":"Spanish",
         "Russian":"Russian",
         "Portuguese":"Portuguese",
-        "Chinese":"Chinese"
+        "Chinese":"Chinese(HK)"
     }
 }
