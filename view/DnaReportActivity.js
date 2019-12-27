@@ -17,6 +17,7 @@ export default class DnaReportActivity extends Component<Props> {
         super(props);
         this.state = {
             itemBox: [],
+            ageBox: [],
             statusbar: false,
             animating: false,
             barcode: '',
@@ -142,7 +143,10 @@ export default class DnaReportActivity extends Component<Props> {
                     vbarcode.naturally = data[i].naturally
                     vbarcode.biological = data[i].biological
                     this.state.itemBox.push(vbarcode)
+                    this.state.ageBox[i] = vbarcode.naturally
                 }
+                this.setState({ ageBox: this.state.ageBox })
+                console.info(this.state.ageBox)
                 this.setState({ itemBox: this.state.itemBox })
                 this.setState({ statusbar: true })
             })
@@ -201,7 +205,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 this.setState({ statusbar: true })
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                                 break;
-                                            case "finished":
+                                            case "ready":
                                                 this.setState({ statusbar: true })
                                                 this.setState({ btnBuildPdfdisabled: false })
                                                 let option = Object.assign({}, this.state.option);
@@ -252,28 +256,40 @@ export default class DnaReportActivity extends Component<Props> {
                                 </View>
                                 : null}
                             {this.state.itemBox ?
-                                this.state.itemBox.map((barcode) => {
-                                    console.info(barcode)
+                                this.state.itemBox.map((barcode, i) => {
+                                    let j = i
                                     return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
-                                            if (barcode.stat == "finished") {
-                                                this.setState({ btnBuildPdfdisabled: false })
-                                                let option = Object.assign({}, this.state.option);
-                                                let biological = window.parseFloat(barcode.biological).toFixed(2);
-                                                let naturally = window.parseFloat(barcode.naturally).toFixed(2)
-                                                this.setState({ biological })
-                                                this.setState({ naturally })
-                                                let i = biological > naturally ? 0 : 1;
-                                                option.series[i].markPoint.data[0].value = biological
-                                                option.series[i].markPoint.data[0].xAxis = naturally
-                                                option.series[i].markPoint.data[0].yAxis = biological
-                                                this.setState({ option })
-                                                this.setState({ visual: true })
-                                                this.setState({ barcode: barcode.val })
-                                                {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                                                {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                                                {/* 从而重新刷新webview数据 */ }
-                                                this.echarts.webview.reload();
+                                            if (barcode.stat == "ready") {
+                                                this.state.ageBox[j]=this.state.ageBox[j]==""?0:this.state.ageBox[j]
+                                                this.setState({ ageBox: this.state.ageBox })
+                                                let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                                console.info(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j])
+                                                //更改实际年龄
+                                                fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
+                                                    this.setState({ btnBuildPdfdisabled: false })
+                                                    let option = Object.assign({}, this.state.option);
+                                                    let biological = window.parseFloat(barcode.biological).toFixed(2);
+                                                    //let naturally = window.parseFloat(barcode.naturally).toFixed(2)
+                                                    let naturally= this.state.ageBox[j]
+                                                    this.setState({ biological })
+                                                    this.setState({ naturally })
+                                                    let i = biological > naturally ? 0 : 1;
+                                                    option.series[i].markPoint.data[0].value = biological
+                                                    //自然年龄
+                                                    this.state.ageBox[j]=this.state.ageBox[j]==""?0:this.state.ageBox[j]
+                                                    this.setState({ ageBox: this.state.ageBox })
+                                                    //自然年龄
+                                                    option.series[i].markPoint.data[0].xAxis = this.state.ageBox[j]
+                                                    option.series[i].markPoint.data[0].yAxis = biological
+                                                    this.setState({ option })
+                                                    this.setState({ visual: true })
+                                                    this.setState({ barcode: barcode.val })
+                                                    {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
+                                                    {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
+                                                    {/* 从而重新刷新webview数据 */ }
+                                                    this.echarts.webview.reload();
+                                                })
                                             } else if (barcode.stat == "processing") {
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                             } else if (barcode.stat == "pending") {
@@ -282,7 +298,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         }}>
                                         <View key={barcode.val} style={{ width: "100%", height: 30, borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
                                             <View style={{ width: "40%", alignItems: "center", height: "100%", display: "flex" }}><Text style={{ height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30 }}>{barcode.val}</Text></View>
-                                            <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30, color: barcode.stat == "finished" ? "red" : "green" }}>{barcode.stat}</Text></View>
+                                            <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 30, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View>
                                             <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: 'center', }}>
                                                 <TextInput style={{
                                                     height: 20,
@@ -293,21 +309,13 @@ export default class DnaReportActivity extends Component<Props> {
                                                     paddingVertical: 0,
                                                     textAlign: "center"
                                                 }}
-                                                    keyboardType ="numeric"
-                                                    defaultValue={barcode.naturally+""}
-                                                    onChangeText={(text) => {
-                                                        if (/^[0-9]+([.]{1}[0-9]+){0,1}$/.test(text)){
-                                                             // let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                                        // //解密
-                                                        // fetch(data.url + "admin/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&myage="+val).then(res => res.json()).then((data) => {
-                                                                
-                                                        // })
-                                                        }else{ 
-                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"),I18n.t("DnaReportActivity.ageFormat"))
-                                                        }
-                                                        
-                                                       
-
+                                                    keyboardType="numeric"
+                                                    defaultValue={"0"}
+                                                    value={this.state.ageBox[i] + ""}
+                                                    onChangeText={(val) => {
+                                                        let data = val.replace(/[^\d]+/, '')
+                                                        this.state.ageBox[i] = data
+                                                        this.setState({ ageBox: this.state.ageBox })
                                                     }}
                                                 />
                                             </View>
@@ -353,7 +361,12 @@ export default class DnaReportActivity extends Component<Props> {
                                             <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.your')} </Text>
                                             <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                         </View>
+                                        {parseFloat(this.state.naturally)>0?
                                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 34, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{this.state.naturally}</Text>
+                                                :
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 20, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>NA(non-available)</Text>
+                                        }
+                                        
                                     </View>
                                     <View style={{ width: '34%', height: 189, marginLeft: 9 }}>
                                         <Image style={{ width: '100%', height: 189, }} resizeMode='contain' source={require("../image/icons/rep-man.png")}></Image>

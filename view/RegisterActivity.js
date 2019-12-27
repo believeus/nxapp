@@ -389,7 +389,9 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder={I18n.t('RegisterActivity.password')} />
+                                placeholder={I18n.t('RegisterActivity.password')} 
+                                secureTextEntry={true}
+                                />
                         </View>
                         <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
@@ -417,7 +419,10 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder={I18n.t('RegisterActivity.confirm')} />
+                                placeholder={I18n.t('RegisterActivity.confirm')}
+                                secureTextEntry={true}
+                                />
+                               
                         </View>
 
                         <View style={{ flexDirection: 'row', height: 60 }}>
