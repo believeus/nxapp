@@ -374,6 +374,106 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
+                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.same')}
+                        refTitle={I18n.t('LifeStyleChartActivity.webmd')}
+                        refUrl="https://www.webmd.com/diet/supplement-guide-sam-e#1"
+                        max={5000}
+                        min={0}
+                        sliderDefualtValue={80}
+                        yAxisLabelValue="SAM-e"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
+                        column="SAM-e"
+                        yAxisLine="600@1600"
+                        gradient={[["100%", "green", "5000"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.same-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
+                <View style={{ width: "100%", height: 512,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.resveratrol')}
+                        refTitle={I18n.t('LifeStyleChartActivity.drug')}
+                        refUrl="https://www.drugs.com/npp/resveratrol.html"
+                        max={5000}
+                        min={0}
+                        sliderDefualtValue={80}
+                        yAxisLabelValue="Resveratrol"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
+                        column="resveratrol"
+                        yAxisLine="70@450"
+                        gradient={[["100%", "green", "5000"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.resveraltrol-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
+                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.nmn')}
+                        refTitle={I18n.t('LifeStyleChartActivity.selfhacked')}
+                        refUrl="https://content.selfdecode.com/nicotinamide-mononucleotide/"
+                        max={5000}
+                        min={0}
+                        sliderDefualtValue={80}
+                        yAxisLabelValue="NMN"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
+                        column="NMN"
+                        yAxisLine="125@250"
+                        gradient={[["100%", "green", "5000"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.nmn-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
+                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.dhea')}
+                        refTitle={I18n.t('LifeStyleChartActivity.webmd')}
+                        refUrl="https://www.webmd.com/a-to-z-guides/dhea#1"
+                        max={5000}
+                        min={0}
+                        sliderDefualtValue={80}
+                        yAxisLabelValue="DHEA"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
+                        column="DHEA"
+                        yAxisLine="125@250"
+                        gradient={[["100%", "green", "5000"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.dhea-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
                 <TouchableOpacity >
                         <Button title="save" onPress={onButtonPress} color="#f7871e" />
                     </TouchableOpacity>

@@ -156,6 +156,18 @@
         "login": "Conecte-se"
     },
     "LifeStyleChartActivity": {
+        "same":"SAMe",
+        "same-recommon":"Não existe uma dose ideal estabelecida de SAM-e. Para a depressão, muitos estudos usaram entre 800 e 1.600 miligramas por dia. Para osteoartrite, é comum 600-1.200 miligramas diários de SAM-e divididos em três doses. Pergunte ao seu médico. ",
+        "resveratrol":"Resveratrol",
+        "mg1":"mg/day",
+        "drug":"Drugs.com",
+        "resveraltrol-recommon":"As evidências de estudos clínicos são insuficientes para fornecer diretrizes de dosagem. Estudos de dose única sugerem que uma dose diária segura para uma pessoa com peso de 70 kg pode ser resveratrol 450 mg / dia. Dosagens acima de 1 g / dia parecem ter sido bem toleradas em um estudo de curto prazo (2 semanas), mas foram relatados como causadores de efeitos adversos em outro estudo. ",
+       "nmn":"NMN",
+       "selfhacked":"SELFHACKED",
+        "nmn-recommon":"As doses em suplementos humanos variam em torno de algumas centenas de mg por dia. Por exemplo, em um estudo com 50 mulheres, a dosagem testada é de 125 mg de NMN, duas vezes ao dia, durante 8 semanas.",
+       "dhea":"DHEA",
+        "webmd":"WebMD",
+        "dhea-recommon":"Não existe uma dose padrão de DHEA. Alguns estudos usaram cápsulas dosadas entre 25 e 200 miligramas por dia, ou às vezes até mais, mas isso depende das condições médicas em tratamento. Pergunte ao seu médico.",
         "title": "Questionário de Estilo de Vida",
         "lifesques": "Questionário de Estilo de Vida",
         "healthy": "Um estilo de vida saudável ou insalubre provavelmente será transmitido entre gerações. De acordo com o estudo de Case et al..",

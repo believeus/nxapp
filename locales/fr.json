@@ -145,6 +145,18 @@
         "login": "S'identifier"
     },
     "LifeStyleChartActivity": {
+        "same":"SAMe",
+        "same-recommon":"Il n'y a pas de dose idéale établie de SAM-e. Pour la dépression, de nombreuses études ont utilisé entre 800 et 1 600 milligrammes par jour. Pour l'arthrose, 600 à 1200 milligrammes par jour de SAM-e divisés en trois doses sont courants. Demandez conseil à votre médecin.",
+        "resveratrol":"Resveratrol",
+        "mg1":"mg/day",
+        "drug":"Drugs.com",
+        "resveraltrol-recommon":"Les preuves issues des études cliniques sont insuffisantes pour fournir des recommandations posologiques. Des études à dose unique suggèrent qu'une dose quotidienne sûre pour une personne pesant 70 kg peut être de 450 mg / jour de resvératrol. Des doses supérieures à 1 g / jour semblent avoir été bien tolérées dans un essai à court terme (2 semaines) mais ont été signalées comme provoquant des effets indésirables dans une autre étude.",
+       "nmn":"NMN",
+       "selfhacked":"SELFHACKED",
+        "nmn-recommon":"Les doses dans les suppléments humains varient autour de quelques centaines de mg par jour. Par exemple, dans une étude portant sur 50 femmes, la posologie testée est de 125 mg de NMN deux fois par jour pendant 8 semaines.",
+       "dhea":"DHEA",
+        "webmd":"WebMD",
+        "dhea-recommon":"Il n'y a pas de dosage standard de DHEA. Certaines études ont utilisé des gélules dosées entre 25 et 200 milligrammes par jour, voire parfois plus, mais cela dépend des conditions médicales traitées. Demandez conseil à votre médecin.",
         "title": "Questionnaire à propos du style de vie",
         "lifesques": "Questionnaire à propos du style de vie",
         "healthy": "Un mode de vie sain ou malsain sera probablement transmis de génération en génération. Selon l'étude de Case et al.",

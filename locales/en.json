@@ -146,6 +146,18 @@
         "login": "login"
     },
     "LifeStyleChartActivity": {
+        "same":"SAMe",
+        "same-recommon":"There is no established ideal dose of SAM-e. For depression, many studies have used between 800 -1,600 milligrams daily. For osteoarthritis, 600-1,200 milligrams daily of SAM-e divided into three doses is common. Ask your doctor for advice. ",
+        "resveratrol":"Resveratrol",
+        "mg1":"mg/day",
+        "drug":"Drugs.com",
+        "resveraltrol-recommon":"Evidence from clinical studies is insufficient to provide dosing guidelines. Single-dose studies suggest that a safe daily dosage for a person weighing 70 kg may be resveratrol 450 mg/day. Dosages above 1 g/day appear to have been well tolerated in a short-term (2-week) trial but have been reported to cause adverse effects in another study. ",
+       "nmn":"NMN",
+       "selfhacked":"SELFHACKED",
+        "nmn-recommon":"Doses in human supplements vary around a few hundred mg per day. For example, in a study of 50 women, the dosage being tested is 125 mg NMN twice daily over 8 weeks.",
+       "dhea":"DHEA",
+        "webmd":"WebMD",
+        "dhea-recommon":"There is no standard dosage of DHEA. Some studies have used capsules dosed between 25 and 200 milligrams a day, or sometimes even higher, but it depends on the medical conditions being treated. Ask your doctor for advice.",
         "savedata":"Your data has been saved successfully!",
         "title": "Life Style Questionnaire",
         "lifesques": "Life style Questionnaire",
