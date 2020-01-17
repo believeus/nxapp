@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Platform, StatusBar, Text, View, Image, Button, Modal, TouchableOpacity, ScrollView } from 'react-native';
 import { WebView } from 'react-native-webview'
+import { I18n } from '../locales/i18n'
+import Geolocation from '@react-native-community/geolocation'
+import RNLocation from 'react-native-location'
 import { TextInput } from 'react-native-gesture-handler';
 import GoodsItem from './GoodsItem';
 export default class MallActivity extends Component<Props> {
@@ -9,6 +12,8 @@ export default class MallActivity extends Component<Props> {
         super(props);
         this.state = {
             display: true,
+            latitude:0,
+            longitude:0
         }
         //定义成员变量
         this.mail = "1058633117@qq.com";
@@ -27,9 +32,16 @@ export default class MallActivity extends Component<Props> {
         })
     }
     componentDidMount() {
+        //获取经纬度
+        Geolocation.getCurrentPosition(data =>{ 
+            this.setState({latitude:data.latitude})
+            this.setState({longitude:data.longitude})
+            console.log(data)
+        });
     }
     render() {
         const navigate = this.props.navigation;//此处可以自定义跳转属性
+      
         return (
             <View style={{width:"100%",height:"100%"}}>
                <StatusBar
@@ -39,7 +51,21 @@ export default class MallActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                      <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epi-age.com/shop/" }} />
+                {I18n.locale == 'ru'
+                    ?
+                    <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.kz/product/epiage/" }} />
+                    :
+                    //俄罗斯的经纬度范围
+                    (this.state.longitude>30||this.state.longitude<180)&&(this.state.longitude>50&&this.state.longitude<80)?
+                        <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.kz/product/epiage/" }} />
+                        :
+                        //哈萨克斯坦经纬度范围
+                        (this.state.longitude>50||this.state.longitude<85)&&(this.state.longitude>40&&this.state.longitude<55)?
+                          <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epiage.kz/product/epiage/" }} />
+                           :
+                         <WebView startInLoadingState={true} style={{width:"100%",height:"100%"}} ref={(ref) => { this.brower = ref }} source={{ uri: "https://epi-age.com/shop/" }} />
+                }
+                       
             </View>
             // <ScrollView>
             //     <View>

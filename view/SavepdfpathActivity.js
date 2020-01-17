@@ -21,21 +21,22 @@ export default class SavepdfpathActivity extends Component<Props> {
             for (let i in savepathbox) {
                 let barcode = savepathbox[i].split(":")[0]
                 let uuid = savepathbox[i].split(":")[1]
+                let locale=savepathbox[i].split(":")[2]
                 let view =
                     <View key={i} style={{ borderBottomColor: "#e0e0e0", borderBottomWidth: 1, height: 50 }}>
                         <View style={{ width: "100%", height: 5 }}></View>
                         <View style={{ width: "95%", flexDirection: "row", height: "100%", height: 40 }}>
-                            <TouchableOpacity style={{ width: "65%", flexDirection: "row", height: "100%", height: 40 }} key={i} onPress={() => { this.props.navigation.push("PdfViewActivity", { pdfpath: data.url + "user/report/" + uuid + "/" + barcode + "/dnaview.jhtml" }) }}>
+                            <TouchableOpacity style={{ width: "75%", flexDirection: "row", height: "100%", height: 40 }} key={i} onPress={() => { this.props.navigation.push("PdfViewActivity", { pdfpath: data.url + "user/report/" + uuid + "/" + barcode + "/"+I18n.locale+"/dnaview.jhtml" }) }}>
                                 <View style={{ width: "100%", flexDirection: "row", height: "100%", height: 40 }}>
                                     <View style={{ width: "20%", height: "100%" }}><Image style={{ width: "90%", height: "90%" }} resizeMode="contain" source={require("../image/pdf.png")}></Image></View>
-                                    <View style={{ width: "80%", height: "100%" }}><Text style={{ height: "100%",lineHeight:40 }}>{savepathbox[i]}.pdf</Text></View>
+                                    <View style={{ width: "80%", height: "100%" }}><Text style={{ height: "100%",lineHeight:40 }}>{barcode}:{I18n.locale}.pdf</Text></View>
                                 </View>
                             </TouchableOpacity>
-                            <View style={{ width: "35%", height: "100%" }}>
+                            <View style={{ width: "25%", height: "100%" }}>
                                 <Button
                                     title={I18n.t("SavepdfpathActivity.btncp")}
                                     onPress={() => {
-                                        let url=data.url + "user/report/" + barcode + "/pdf.jhtml"
+                                        let url=data.url + "user/report/" + barcode + "/"+I18n.locale+"/pdf.jhtml"
                                         Clipboard.setString(url);
                                         Alert.alert(I18n.t("SavepdfpathActivity.titlemsg"),I18n.t("SavepdfpathActivity.copy"))
                                     }}

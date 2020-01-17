@@ -261,6 +261,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
                                             if (barcode.stat == "ready") {
+                                                this.setState({ animating: true })
                                                 this.state.ageBox[j]=this.state.ageBox[j]==""?0:this.state.ageBox[j]
                                                 this.setState({ ageBox: this.state.ageBox })
                                                 let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
@@ -288,7 +289,8 @@ export default class DnaReportActivity extends Component<Props> {
                                                     {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
                                                     {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
                                                     {/* 从而重新刷新webview数据 */ }
-                                                    this.echarts.webview.reload();
+                                                    this.echarts.webview.reload()
+                                                    this.setState({ animating: false })
                                                 })
                                             } else if (barcode.stat == "processing") {
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
@@ -568,9 +570,9 @@ export default class DnaReportActivity extends Component<Props> {
                                         let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                         Session.load("pdfsavepath").then((savepathbox) => {
                                             //下载pdf
-                                            fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/buildPDF.jhtml").then(res => res.text()).then(() => {
-                                                if (savepathbox.indexOf(this.state.barcode + ":" + uuid) == -1) {
-                                                    savepathbox.push(this.state.barcode + ":" + uuid)
+                                            fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode +"/"+I18n.locale+"/buildPDF.jhtml").then(res => res.text()).then(() => {
+                                                if (savepathbox.indexOf(this.state.barcode + ":" + uuid+":"+I18n.locale) == -1) {
+                                                    savepathbox.push(this.state.barcode + ":" + uuid+":"+I18n.locale)
                                                     this.setState({ animating: false })
                                                     Session.save("pdfsavepath", savepathbox)
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
@@ -582,8 +584,8 @@ export default class DnaReportActivity extends Component<Props> {
                                         }).catch(e => {
                                             Session.save("pdfsavepath", [])
                                             Session.load("pdfsavepath").then((savepathbox) => {
-                                                fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/buildPDF.jhtml").then(res => res.text()).then(() => {
-                                                    savepathbox.push(this.state.barcode + ":" + uuid)
+                                                fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/"+I18n.locale+"/buildPDF.jhtml").then(res => res.text()).then(() => {
+                                                    savepathbox.push(this.state.barcode + ":" + uuid+":"+I18n.locale)
                                                     this.setState({ animating: false })
                                                     Session.save("pdfsavepath", savepathbox)
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))

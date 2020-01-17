@@ -374,7 +374,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
+                <View style={{ width: "100%", height: 500,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
@@ -384,9 +384,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         max={5000}
                         min={0}
                         sliderDefualtValue={80}
-                        yAxisLabelValue="SAM-e"
+                        yAxisLabelValue="same"
                         yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
-                        column="SAM-e"
+                        column="same"
                         yAxisLine="600@1600"
                         gradient={[["100%", "green", "5000"]]}
                         desc={
@@ -409,7 +409,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         max={5000}
                         min={0}
                         sliderDefualtValue={80}
-                        yAxisLabelValue="Resveratrol"
+                        yAxisLabelValue="resveratrol"
                         yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
                         column="resveratrol"
                         yAxisLine="70@450"
@@ -424,7 +424,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
+                <View style={{ width: "100%", height: 0,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
@@ -434,9 +434,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         max={5000}
                         min={0}
                         sliderDefualtValue={80}
-                        yAxisLabelValue="NMN"
+                        yAxisLabelValue="nmn"
                         yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
-                        column="NMN"
+                        column="nmn"
                         yAxisLine="125@250"
                         gradient={[["100%", "green", "5000"]]}
                         desc={
@@ -449,7 +449,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 450,marginTop:23,marginBottom:23 }}>
+                <View style={{ width: "100%", height: 500,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
@@ -459,9 +459,9 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         max={5000}
                         min={0}
                         sliderDefualtValue={80}
-                        yAxisLabelValue="DHEA"
+                        yAxisLabelValue="dhea"
                         yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
-                        column="DHEA"
+                        column="dhea"
                         yAxisLine="125@250"
                         gradient={[["100%", "green", "5000"]]}
                         desc={

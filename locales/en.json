@@ -124,7 +124,7 @@
         "title": "Registration",
         "register": "Register",
         "region": "Select your region:",
-        "nickname": "Nick name",
+        "nickname": "Username",
         "email": "Email",
         "password": "Create a Password",
         "confirm": "Confirm Password",
