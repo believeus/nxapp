@@ -632,7 +632,6 @@
     "BiologicalActivity": {
         "title": "生物年齡檢測",
         "biological": "Biological Age Detection 2.0 ",
-        "nice": "$99",
         "wrinkles": "別再用生日或生日蛋糕上的蠟燭、皺紋或魚尾紋來計算你的年齡——這些只是數字而已。今天，這些數字都不算數。",
         "old": "你幾歲呢？",
         "importment": "為什麼這是個重要的問題？",

@@ -651,7 +651,6 @@
     "BiologicalActivity": {
         "title": "Edad biológica",
         "biological": "Detección de edad biológica 2.0 ",
-        "nice": "$99",
         "wrinkles": "Deja de contar tu edad por cumpleaños o velas en el pastel, las arrugas, las patas de gallo o las arrugas del ceño en la cara, esos son solo números. Y hoy, los números no cuentan.",
         "old": "¿Cuantos años tienes?",
         "importment": "¿Por qué es importante?",
@@ -863,7 +862,7 @@
     "ContactActivity": {
         "title": "Contáctenos",
         "phone":"(+852) 2354 8297",
-        "utics":"Info @ también ve un pedo therapeutics.com",
+        "utics":"info@hkgepitherapeutics.com",
         "http":"https://www.hkgepitherapeutics.com",
         "hkg":"HKG epitherapeutics Limited Unit 613, Biotech Center 2, Hong Kong Science Park, Sha Tin, N.T., Hong Kong"
     },

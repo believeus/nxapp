@@ -608,7 +608,6 @@
     "BiologicalActivity": {
         "title": "Биологический возраст",
         "biological": "Биологический возраст обнаружения 2.0 ",
-        "nice": "$99",
         "wrinkles": "Прекратите считать свой возраст по дням рождения или свечам на торте, морщинам, гусиным лапкам или морщинам на лице - это только цифры. И сегодня цифры не в счет.",
         "old": "Сколько тебе лет?",
         "importment": "Почему это важно?",
@@ -816,7 +815,11 @@
         "report":"Как получить мой отчет по тестированию в epiAging?"
     },
     "ContactActivity": {
-        "title": "связаться с нами"
+        "title": "связаться с нами",
+        "phone": "(+852) 2354 8297",
+        "utics": "info@hkgepitherapeutics.com",
+        "http": "https://www.hkgepitherapeutics.com",
+        "hkg": "HKG epitherapeutics Limited Unit 613, Biotech Centre 2,Hong Kong Science Park,Sha Tin,N.T.,Hong Kong"
     },
     "QuesnoteActivity": {
         "about": "О Анкеты",

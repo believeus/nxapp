@@ -51,7 +51,7 @@ export default class SameActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
 
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$42</Text></Text>
                     </View>
                     <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
                         <TouchableOpacity onPress={() => this.navigate.push("Mall")}>

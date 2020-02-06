@@ -639,7 +639,6 @@
     "BiologicalActivity": {
         "title": "Biological Age",
         "biological": "Biological Age Detection 2.0 ",
-        "nice": "$99",
         "wrinkles": "Stop counting your age by birthdays or candles on the cake, wrinkles, crow's feet or the frown lines on your face — those are only numbers. And today, the numbers don't count.",
         "old": "How old are you?",
         "importment": "Why is it important?",

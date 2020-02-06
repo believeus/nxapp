@@ -25,7 +25,7 @@
         "supplement": "SAMe是一種營養補充劑，並非藥物。",
         "myreport": "我的報告",
         "questionnaires": "問卷調查",
-        "testprocess": "試驗過程",
+        "testprocess": "試驗流程",
         "qa": "Q&A",
         "datasequrity": "資料安全庫",
         "consent": "用戶知情同意書",
@@ -644,7 +644,6 @@
     "BiologicalActivity": {
         "title": "生物年齡檢測",
         "biological": "Biological Age Detection 2.0 ",
-        "nice": "$99",
         "wrinkles": "別再用生日或生日蛋糕上的蠟燭、皺紋或魚尾紋來計算你的年齡——這些只是數字而已。今天，這些數字都不算數。",
         "old": "你幾歲呢？",
         "importment": "為什麼這是個重要的問題？",
@@ -858,9 +857,9 @@
     "ContactActivity": {
         "title": "聯繫我們",
         "phone":"(+852) 2354 8297",
-        "utics":"信息@hkgepitherapeutics.com",
+        "utics":"info@hkgepitherapeutics.com",
         "http":"https://www.hkgepitherapeutics.com",
-        "hkg":"HKG epitherapeutics Limited香港新界沙田香港科學園生物科技中心2號613室"
+        "hkg":"香港新界沙田香港科學園生物科技中心2號613室HKG epitherapeutics Limited"
     
     },
     "QuesnoteActivity": {

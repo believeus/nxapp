@@ -643,7 +643,6 @@
     "BiologicalActivity": {
         "title": "Idade biológica",
         "biological": "Biological Age Detection 2.0 ",
-        "nice": "$99",
         "wrinkles": "Pare de contar sua idade por aniversários ou velas no bolo, nas rugas, nos pés de galinha ou nas rugas do rosto - esses são apenas números. E hoje, os números não contam.",
         "old": "Quantos anos você tem?",
         "importment": "Por que é importação?",
@@ -854,7 +853,11 @@
         "report":"Como obter o meu relatório de teste epiAging?"
     },
     "ContactActivity": {
-        "title": "Contate-Nos"
+        "title": "Contate-Nos",
+        "phone": "(+852) 2354 8297",
+        "utics": "info@hkgepitherapeutics.com",
+        "http": "https://www.hkgepitherapeutics.com",
+        "hkg": "HKG epitherapeutics Limited Unit 613, Biotech Centre 2,Hong Kong Science Park,Sha Tin,N.T.,Hong Kong"
     },
     "QuesnoteActivity": {
         "title": "Notificação",

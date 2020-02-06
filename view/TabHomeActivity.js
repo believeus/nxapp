@@ -250,10 +250,10 @@ export default class TabHomeActivity extends Component<Props> {
                         <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
                         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                <Text style={{ marginRight: 5, fontSize: 24, textAlign: 'right', fontFamily: 'NotoSansHans-Light', color: '#b2b2b2', textDecorationLine: 'line-through' }}>$189</Text>
+                                <Text style={{ marginRight: 5, fontSize: 24, textAlign: 'right', fontFamily: 'NotoSansHans-Light', color: '#b2b2b2', textDecorationLine: 'line-through' }}>$249</Text>
                             </View>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                <Text style={{ marginLeft: 5, fontSize: 24,fontWeight: '800', textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#f43d2a' }}>$99</Text>
+                                <Text style={{ marginLeft: 5, fontSize: 24,fontWeight: '800', textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#f43d2a' }}>$145</Text>
                             </View>
                         </View>
                     </View>
@@ -265,7 +265,7 @@ export default class TabHomeActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                         <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$99</Text></Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$145</Text></Text>
                             </View>
 
                             <View style={{ width: '15%', height: 45, justifyContent: 'center' }}>
@@ -324,7 +324,7 @@ export default class TabHomeActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
                         <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 16, textAlign: 'center', color: '#f2e421' }}>$60</Text></Text>
+                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 16, textAlign: 'center', color: '#f2e421' }}>$42</Text></Text>
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>

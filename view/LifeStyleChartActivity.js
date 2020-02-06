@@ -424,7 +424,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
-                <View style={{ width: "100%", height: 0,marginTop:23,marginBottom:23 }}>
+                <View style={{ width: "100%", height:500,marginTop:23,marginBottom:23 }}>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                     <View style={{height:34,width:'100%'}}></View>
                     <SliderLineChart
