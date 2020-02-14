@@ -123,7 +123,7 @@ export default class SameActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 23,marginBottom: 23, }}>
-                    <Text style={{ height: 77, fontSize: 21, fontFamily: 'FontAwesome', lineHeight: 22, }}> {I18n.t('SameActivity.spotlight')}</Text>
+                    <Text style={{ height: 77, fontSize: 21, fontFamily: 'FontAwesome', lineHeight: 34, }}> {I18n.t('SameActivity.spotlight')}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ width: '28%', fontFamily: 'NotoSansHans-Light', borderRightColor: '#e4d8d8', borderRightWidth: 1 }}></Text>
                     </View>
@@ -194,7 +194,7 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
-                        <Text style={{ height: 99, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, }}>{I18n.t('SameActivity.basic')}</Text>
+                        <Text style={{ height: 99, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 34, }}>{I18n.t('SameActivity.basic')}</Text>
 
                         <View style={{ flexDirection: 'row', marginBottom: 12 }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -246,7 +246,7 @@ export default class SameActivity extends Component<Props> {
                 </Image>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, marginBottom: 23 }}>
-                    <Text style={{ height: 45, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, marginBottom: 23 }}>{I18n.t('SameActivity.why')}</Text>
+                    <Text style={{ height: 45, fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, marginBottom: 23 }}>{I18n.t('SameActivity.why')}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
                         <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.standards')}</Text>
@@ -278,7 +278,7 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
-                        <Text style={{ fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 22, marginBottom: 23 }}>{I18n.t('SameActivity.when')}</Text>
+                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, marginBottom: 23 }}>{I18n.t('SameActivity.when')}</Text>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
                             <Text style={{ width: '95%', fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.should')} </Text>

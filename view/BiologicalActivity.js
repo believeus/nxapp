@@ -57,10 +57,10 @@ export default class BiologicalActivity extends Component<Props> {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 34, }}>
-                    <Text style={{ fontSize: 16, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}></Text>
-                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.old')}</Text>
-                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 45, color: '#0071bc' }}>{I18n.t('BiologicalActivity.importment')}</Text>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 34 }}>
+                    <Text style={{ fontSize: 16, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('BiologicalActivity.wrinkles')}</Text>
+                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc', textAlignVertical: 'center',paddingTop:34 }}>{I18n.t('BiologicalActivity.old')}</Text>
+                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc' }}>{I18n.t('BiologicalActivity.importment')}</Text>
                     <FitImage style={{ height: 289, width: '100%', }} resizeMode='contain' source={require("../image/enpic/bio2.jpg")} />
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('BiologicalActivity.different')}</Text>
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21, color: '#0071bc' }}>{I18n.t('BiologicalActivity.better')}</Text>
@@ -85,7 +85,7 @@ export default class BiologicalActivity extends Component<Props> {
 
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
                         <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.epiaging')}</Text>
-                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 23, color: '#0071bc' }}>{I18n.t('BiologicalActivity.mean')}</Text>
+                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc' }}>{I18n.t('BiologicalActivity.mean')}</Text>
                         <Image style={{ height: 289, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/bio5.jpg")}></Image>
                         <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.extensive')} </Text>
                         <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.decelerate')} </Text>
@@ -110,14 +110,14 @@ export default class BiologicalActivity extends Component<Props> {
                     </View>
                 </View>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, textAlignVertical: 'center', color: '#0071bc' }}>{I18n.t('BiologicalActivity.clock')}</Text>
+                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34,marginBottom:34, textAlignVertical: 'center', color: '#0071bc' }}>{I18n.t('BiologicalActivity.clock')}</Text>
                     {/* <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', fontWeight: '700', lineHeight: 34 }}>{I18n.t('BiologicalActivity.clock')}</Text> */}
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.chronological')}</Text>
                     <FitImage style={{ height: 389, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/bio8.png")} />
                 </View>
                 <View style={{ backgroundColor: '#f0f0f0', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 25, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.life')}</Text>
+                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34,marginBottom:23, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.life')}</Text>
                         <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', fontWeight: '700', lineHeight: 34 }}>{I18n.t('BiologicalActivity.know')}</Text>
                         <Text style={{ fontSize: 14, marginBottom: 23, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.identifying')}</Text>
 
@@ -179,8 +179,8 @@ export default class BiologicalActivity extends Component<Props> {
                         </View>
                     </View>
                 </View>
-                <View style={{ backgroundColor: '#f0f0f0', marginTop: 34, }}>
-                    <View style={{ width: '90%', alignSelf: 'center', }}>
+                <View style={{ backgroundColor: '#f0f0f0', marginTop: 34,marginBottom:34 }}>
+                    <View style={{ width: '90%',marginTop: 34, alignSelf: 'center', }}>
                         <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', textAlignVertical: 'center', color: '#0071bc', lineHeight: 45 }}>{I18n.t('BiologicalActivity.making')}</Text>
                         <Text style={{ fontSize: 16, fontWeight: '800', marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 23, }}>{I18n.t('BiologicalActivity.fast')}</Text>
                         <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.chronologicaled')}</Text>
@@ -189,8 +189,8 @@ export default class BiologicalActivity extends Component<Props> {
                         <Image style={{ height: 289, width: '100%' }} resizeMode='cover' source={require("../image/enpic/bio9.png")}></Image>
                     </View>
                 </View>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                    <Text style={{ fontSize: 22, lineHeight: 56, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.test')}</Text>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, }}>
+                    <Text style={{ fontSize: 22, lineHeight: 56,marginBottom:23, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.test')}</Text>
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('BiologicalActivity.developed')}</Text>
                     <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 23 }}>{I18n.t('BiologicalActivity.epitherapeutics')}</Text>
                     <Text style={{ fontSize: 22, lineHeight: 28, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', marginTop: 34, marginBottom: 23 }}>{I18n.t('BiologicalActivity.steps')}</Text>
