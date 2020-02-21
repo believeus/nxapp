@@ -110,8 +110,8 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
-                    let biological = window.parseFloat(data[i].biological).toFixed(2)
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(3);
+                    let biological = window.parseFloat(data[i].biological).toFixed(20)
                     v.push([naturally, biological])
                 }
                 let option = Object.assign({}, this.state.option);
@@ -123,8 +123,8 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
-                    let biological = window.parseFloat(data[i].biological).toFixed(2)
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(3);
+                    let biological = window.parseFloat(data[i].biological).toFixed(20)
                     v.push([naturally, biological])
                 }
                 let option = Object.assign({}, this.state.option);
@@ -166,7 +166,7 @@ export default class DnaReportActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <Image style={{ width: '100%', height: 272 }} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
+                <Image style={{ width: '100%', height: 223 }} resizeMode='contain' source={require("../image/enpic/rep1.png")} />
 
                 <View style={{ width: "100%" }}>
                     <View style={{ width: "100%", alignItems: "center" }}>
@@ -209,8 +209,8 @@ export default class DnaReportActivity extends Component<Props> {
                                                 this.setState({ statusbar: true })
                                                 this.setState({ btnBuildPdfdisabled: false })
                                                 let option = Object.assign({}, this.state.option);
-                                                let biological = window.parseFloat(data.biological).toFixed(2);
-                                                let naturally = window.parseFloat(data.naturally).toFixed(2)
+                                                let biological = window.parseFloat(data.biological).toFixed(20);
+                                                let naturally = window.parseFloat(data.naturally).toFixed(3)
                                                 this.setState({ biological })
                                                 this.setState({ naturally })
                                                 let i = biological > naturally ? 0 : 1;
@@ -270,7 +270,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
                                                     this.setState({ btnBuildPdfdisabled: false })
                                                     let option = Object.assign({}, this.state.option);
-                                                    let biological = window.parseFloat(barcode.biological).toFixed(2);
+                                                    let biological = window.parseFloat(barcode.biological).toFixed(20);
                                                     //let naturally = window.parseFloat(barcode.naturally).toFixed(2)
                                                     let naturally= this.state.ageBox[j]
                                                     this.setState({ biological })
@@ -377,9 +377,9 @@ export default class DnaReportActivity extends Component<Props> {
                                         <Image style={{ width: '100%', height: 34, }} resizeMode='contain' source={require("../image/icons/rep-bio.png")}></Image>
                                         <View style={{ width: '100%', paddingTop: 12, }}>
                                             <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.your')}  </Text>
-                                            <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.bio')}</Text>
+                                            <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome',overflow:'hidden', }}numberOfLines={1}>{I18n.t('DnaReportActivity.bio')}</Text>
                                         </View>
-                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 34, color: '#f15929', fontWeight: 'bold', textAlign: 'center' }}>{this.state.biological}</Text>
+                                        <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#f15929', fontWeight: 'bold', textAlign: 'center' }}>{this.state.biological}</Text>
                                     </View>
                                 </View>
                                 <View style={{ width: "96%", height: 67, alignSelf: 'center', flexDirection: "row", marginTop: 23 }}>

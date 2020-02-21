@@ -278,8 +278,8 @@
         "status":"Testing Status",
         "barcode":"Barcode",
         "Registerkit":"Register barcode",
-        "yourage":"Type your age",
-        "ageFormat":"年齡格式不正確"
+        "yourage":"Enter your age",
+        "ageFormat":"Incorrect age format"
     },
     "user_profile": {
         "title": "Your Profile"
