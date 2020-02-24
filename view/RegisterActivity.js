@@ -330,7 +330,7 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder={I18n.t("RegisterActivity.nickname")}/>
+                                placeholder={I18n.t("RegisterActivity.nickname")} placeholderTextColor='#0071bc'/>
                         </View>
                         <View style={{ height: 40, marginTop: 10, marginBottom: 10 }}>
                             <Input style={{
@@ -342,7 +342,7 @@ export default class RegisterActivity extends Component<Props> {
                             }}
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
-                                placeholder={I18n.t("RegisterActivity.email")} validator="email"
+                                placeholder={I18n.t("RegisterActivity.email")} placeholderTextColor='#0071bc' validator="email"
                                 onValidatorExecuted={(isvalid) => {
                                     this.setState({ isvalid: isvalid })
                                     if (this.state.email && isvalid && this.state.checked) {
@@ -389,7 +389,7 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder={I18n.t('RegisterActivity.password')} 
+                                placeholder={I18n.t('RegisterActivity.password')} placeholderTextColor='#0071bc'
                                 secureTextEntry={true}
                                 />
                         </View>
@@ -419,7 +419,7 @@ export default class RegisterActivity extends Component<Props> {
                                         this.setState({ disable: true })
                                     }
                                 }}
-                                placeholder={I18n.t('RegisterActivity.confirm')}
+                                placeholder={I18n.t('RegisterActivity.confirm')} placeholderTextColor='#0071bc'
                                 secureTextEntry={true}
                                 />
                                
@@ -450,14 +450,14 @@ export default class RegisterActivity extends Component<Props> {
                                 />
                             </View>
                             <View style={{ height: 30, width: '90%', alignSelf: 'center', marginLeft: 5, justifyContent: 'center' }}>
-                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, }}> {I18n.t('RegisterActivity.agree')}
+                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, }} numberOfLines={2} > {I18n.t('RegisterActivity.agree')}
                                         <Text onPress={() => this.navigate.push("Consent")} style={{ color: '#0071bc' }}> {I18n.t('RegisterActivity.privacy')}</Text>
                                 </Text>
                             </View>
                         </View>
                         <View>
                             <TouchableOpacity disabled={this.state.disable}>
-                                <Button disabled={this.state.disable} title={I18n.t('RegisterActivity.register')} onPress={() => {
+                                <Button disabled={this.state.disable}backgroundColor="#0071bc" title={I18n.t('RegisterActivity.register')} onPress={() => {
                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
                                     fetch(data.url + "/user/register.jhtml", {
                                         method: "POST",

@@ -16,7 +16,7 @@ export default class TabHomeActivity extends Component<Props> {
         headerRight: (
             <View style={{ width: 100, height: 50, justifyContent: "center", alignItems: "center" }}>
                 <Image style={{ height: 25, width: 25 }} resizeMode="contain" source={require("../image/icons/user-logo.png")} />
-                <Text style={{ color: "#fff" }}>Hello</Text>
+                <Text style={{ color: "#fff" }}numberOfLines={1}>Hello</Text>
             </View>
         )
 
@@ -353,7 +353,7 @@ export default class TabHomeActivity extends Component<Props> {
                                             this.navigate.push("Login")
                                             :
                                             this.state.user.privatekey ?
-                                                this.navigate.push("LifeStyleChart")
+                                                this.navigate.push("DnaReport")
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
@@ -379,7 +379,7 @@ export default class TabHomeActivity extends Component<Props> {
                                                 this.navigate.push("Login")
                                                 :
                                                 this.state.user.privatekey ?
-                                                    this.navigate.push("DnaReport")
+                                                    this.navigate.push("LifeStyleChart")
                                                     :
                                                     this.navigate.push("RasEncryptionActivity")
                                         }}

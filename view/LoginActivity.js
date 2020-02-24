@@ -87,8 +87,8 @@ export default class LoginActivity extends Component<Props> {
                             <ActivityIndicator size="large" color="#0071BC" /> : null
                         }
 
-                        <View style={{ height: 45, alignContent: 'center', marginTop: 20 }}>
-                            <Input style={{
+                        <View style={{ height: 45,flexDirection:'row', alignContent: 'center',height:60, marginTop: 20 }}>
+                            <TextInput style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
@@ -97,13 +97,13 @@ export default class LoginActivity extends Component<Props> {
                             }}
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
-                                placeholder="Email" validator="email"
+                                placeholder="Email" placeholderTextColor='#0071bc' validator="email"
                                 onValidatorExecuted={(disabled) => this.setState({ disabled: !disabled })}
                                 validatorExecutionDelay={100}
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />
                         </View>
-                        <View style={{ alignItems: 'center', height: 30, alignContent: 'center', marginTop: 20 }}>
+                        <View style={{ alignItems: 'center',flexDirection:'row', height: 30, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,
@@ -111,11 +111,12 @@ export default class LoginActivity extends Component<Props> {
                                 borderColor: '#b3b3b3',
                                 marginBottom: 10,
                                 fontSize: 16,
-                                paddingLeft: 10
+                                paddingLeft: 10,
+                               
                             }}
                                 secureTextEntry={true}
                                 onChangeText={(password) => { this.setState({ disabled: false }); this.setState({ password: password }); }}
-                                placeholder="Password" />
+                                placeholder="Password" placeholderTextColor='#0071bc' />
                         </View>
                         <View style={{ height: 60, alignItems: 'center', justifyContent: 'center' }}>
                             <TouchableOpacity onPress={() => this.navigate.push("Forget")}>
@@ -124,7 +125,7 @@ export default class LoginActivity extends Component<Props> {
                         </View>
                         <View>
                             <TouchableOpacity >
-                                <Button disabled={this.state.disabled} onPress={this.login.bind(this)} title={I18n.t('LoginActivity.login')} ></Button>
+                                <Button disabled={this.state.disabled}backgroundColor="#0071bc" onPress={this.login.bind(this)} title={I18n.t('LoginActivity.login')} ></Button>
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >
