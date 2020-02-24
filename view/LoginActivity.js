@@ -87,13 +87,14 @@ export default class LoginActivity extends Component<Props> {
                             <ActivityIndicator size="large" color="#0071BC" /> : null
                         }
 
-                        <View style={{ height: 45,flexDirection:'row', alignContent: 'center',height:60, marginTop: 20 }}>
+                        <View style={{ height: 45,alignItems: 'center',flexDirection:'row', alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
                                 fontSize: 16,
+                                paddingLeft: 10,
                             }}
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
@@ -103,7 +104,7 @@ export default class LoginActivity extends Component<Props> {
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />
                         </View>
-                        <View style={{ alignItems: 'center',flexDirection:'row', height: 30, alignContent: 'center', marginTop: 20 }}>
+                        <View style={{ alignItems: 'center',flexDirection:'row', height: 45, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,

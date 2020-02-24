@@ -304,9 +304,9 @@ export default class RegisterActivity extends Component<Props> {
                                     ]} />
                             </View>
                         </View>
-                        <View style={{ alignItems: 'center', height: 40, alignContent: 'center', marginTop: 10 }}>
+                        <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 23 }}>
                             <TextInput style={{
-                                height: 40, width: '100%',
+                                height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
@@ -332,13 +332,14 @@ export default class RegisterActivity extends Component<Props> {
                                 }}
                                 placeholder={I18n.t("RegisterActivity.nickname")} placeholderTextColor='#0071bc'/>
                         </View>
-                        <View style={{ height: 40, marginTop: 10, marginBottom: 10 }}>
+                        <View style={{ height: 45, marginTop: 10, marginBottom: 10 ,alignContent: 'center'}}>
                             <Input style={{
                                 height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
                                 fontSize: 16,
+                                paddingLeft: 10,
                             }}
                                 errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 2, borderRadius: 10 }}
                                 errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
@@ -363,9 +364,9 @@ export default class RegisterActivity extends Component<Props> {
                                 onChangeText={(email) => { this.setState({ email: email }) }}
                             />
                         </View>
-                        <View style={{ alignItems: 'center', height: 40, alignContent: 'center', marginTop: 10 }}>
+                        <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 10 }}>
                             <TextInput style={{
-                                height: 40, width: '100%',
+                                height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
@@ -395,7 +396,7 @@ export default class RegisterActivity extends Component<Props> {
                         </View>
                         <View style={{ alignItems: 'center', height: 45, alignContent: 'center', marginTop: 20 }}>
                             <TextInput style={{
-                                height: 40, width: '100%',
+                                height: 45, width: '100%',
                                 borderRadius: 10,
                                 borderWidth: 1,
                                 borderColor: '#b3b3b3',
