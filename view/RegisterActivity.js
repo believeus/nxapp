@@ -450,15 +450,15 @@ export default class RegisterActivity extends Component<Props> {
                                     checked={this.state.checked}
                                 />
                             </View>
-                            <View style={{ height: 30, width: '90%', alignSelf: 'center', marginLeft: 5, justifyContent: 'center' }}>
-                                <Text style={{ width: '90%', fontFamily: 'NotoSansHans-Light', fontSize: 12, }} numberOfLines={2} > {I18n.t('RegisterActivity.agree')}
+                            <View style={{ height: 34, width: '90%', alignSelf: 'center', marginLeft: 5, justifyContent: 'center' }}>
+                                <Text style={{ width: '90%',height:34, fontSize: 12, }} > {I18n.t('RegisterActivity.agree')}
                                         <Text onPress={() => this.navigate.push("Consent")} style={{ color: '#0071bc' }}> {I18n.t('RegisterActivity.privacy')}</Text>
                                 </Text>
                             </View>
                         </View>
                         <View>
                             <TouchableOpacity disabled={this.state.disable}>
-                                <Button disabled={this.state.disable}backgroundColor="#0071bc" title={I18n.t('RegisterActivity.register')} onPress={() => {
+                                <Button disabled={this.state.disable} title={I18n.t('RegisterActivity.register')}style={{backgroundColor:'#0071bc'}} onPress={() => {
                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
                                     fetch(data.url + "/user/register.jhtml", {
                                         method: "POST",
