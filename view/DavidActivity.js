@@ -85,7 +85,7 @@ export default class DavidActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20,marginTop:23 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/david.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t("DavidActivity.title")}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t("DavidActivity.senior")}</Text>
@@ -181,7 +181,7 @@ export default class DavidActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('DavidActivity.publshed')}</Text>
                 </View>
-                <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
+                <View style={{ backgroundColor: '#1f96f4', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ width: '90%', height: 77, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29924424" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Identification of an Epigenetic Signature of Osteoporosis in Blood DNA of Postmenopausal Women. JBMR. 2018;</Text>

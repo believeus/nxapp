@@ -6,7 +6,7 @@ import { I18n } from '../locales/i18n';
 export default class TabAboutActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("TabAboutActivity.title"),
+            title: I18n.t("TabHomeActivity.title"),
         })
     }
     constructor(props) {
@@ -24,11 +24,11 @@ export default class TabAboutActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20,borderRadius:10 }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 20 ,borderRadius:10,overflow:'hidden'}}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.company')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Company")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 10 }} resizeMode="cover" source={require("../image/enpic/au1.png")}>
-                            <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                        <ImageBackground style={{ height: 123, width: '100%',backgroundColor:'pink' }} resizeMode="cover" source={require("../image/enpic/au1.png")}>
+                            <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column",  }}>
                             <View style={{height:'10%'}}></View>
                             <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>{I18n.t('TabAboutActivity.company1')}</Text>
                             <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>{I18n.t('TabAboutActivity.introduction1')}</Text>
@@ -37,11 +37,11 @@ export default class TabAboutActivity extends Component<Props> {
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', }}>
+                <View style={{ width: '90%', alignSelf: 'center', borderRadius:10, overflow:'hidden'}}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.science')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Scienceteam")}>
-                        <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au2.png")}>
-                        <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column", }}>
+                        <ImageBackground style={{ height: 123, width: '100%'}} resizeMode="cover" source={require("../image/enpic/au2.png")}>
+                        <View style={{ width: '90%', alignSelf: 'center', flexDirection:"column" }}>
                             <View style={{height:'10%'}}></View>
                             <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>{I18n.t('TabAboutActivity.science1')}</Text>
                             <Text style={{ fontSize: 23,color: '#ffffff',opacity:0.6, fontWeight:"bold",fontStyle:'italic'}}>{I18n.t('TabAboutActivity.team1')}</Text>
@@ -51,7 +51,7 @@ export default class TabAboutActivity extends Component<Props> {
 
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', }}>
+                <View style={{ width: '90%', alignSelf: 'center',borderRadius:10, overflow:'hidden' }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.methylation')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Methylation")}>
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au3.png")}>
@@ -65,7 +65,7 @@ export default class TabAboutActivity extends Component<Props> {
                 </View>
 
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
-                <View style={{ width: '90%', alignSelf: 'center', }}>
+                <View style={{ width: '90%', alignSelf: 'center', borderRadius:10, overflow:'hidden'}}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.biological')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au5.png")}>
@@ -78,7 +78,7 @@ export default class TabAboutActivity extends Component<Props> {
                     </TouchableOpacity>
                 </View>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View> 
-                <View style={{ width: '90%', alignSelf: 'center', }}>
+                <View style={{ width: '90%', alignSelf: 'center',borderRadius:10, overflow:'hidden' }}>
                     <Text style={{ fontFamily: 'NotoSansHans-Medium', fontSize: 18, }}>{I18n.t('AboutActivity.consentform')}</Text>
                     <TouchableOpacity onPress={() => this.navigate.push("Consent")}>
                         <ImageBackground style={{ height: 123, width: '100%', borderRadius: 5 }} resizeMode="cover" source={require("../image/enpic/au4.png")}>

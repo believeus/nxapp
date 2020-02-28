@@ -194,7 +194,7 @@ export default class TabHomeActivity extends Component<Props> {
                                                 :
                                                 this.navigate.push("RasEncryptionActivity")
 
-                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:38, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
+                                    }} style={{height: 61,marginTop:95, textAlign:'right',paddingTop:41, color:'#ffffff',}}>{I18n.t('TabHomeActivity.lifestyle')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '32%', }}>
                                     <Text onPress={() => this.navigate.push("Testprocess")} style={{ height:145,textAlign:'center', color: '#ffffff',paddingTop:77,  fontSize: 16,}}>{I18n.t('TabHomeActivity.test')}</Text>
@@ -204,7 +204,7 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 
                                 <View style={{ height: 112, width: '32%',}}>
-                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:45, paddingTop:45, textAlign:'center', color: '#ffffff', fontSize: 16, }}>{I18n.t('TabHomeActivity.mark')}</Text>
+                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16, }}>{I18n.t('TabHomeActivity.mark')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
                                     <Text onPress={() => {
@@ -219,7 +219,7 @@ export default class TabHomeActivity extends Component<Props> {
                                         style={{ height: 67,color:'#1e1e1e',lineHeight:17, }}>{I18n.t('TabHomeActivity.report')}</Text>
                                 </View>
                                 <View style={{ height: 112, width: '32%',}}>
-                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:45, paddingTop:45, textAlign:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
+                                    <Text onPress={() => { this.state.user == null ? this.navigate.push("Login") : this.navigate.push("Quesnote") }} style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16,  }}>{I18n.t('TabHomeActivity.quest')}</Text>
                                 </View>
                             </View>
                         </View>
@@ -276,7 +276,7 @@ export default class TabHomeActivity extends Component<Props> {
 
                         </View>
                         <TouchableOpacity onPress={() => this.navigate.push("Biological")}>
-                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34 }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
+                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34,marginTop:23 }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -334,8 +334,8 @@ export default class TabHomeActivity extends Component<Props> {
                             </View>
 
                         </View>
-                        <TouchableOpacity onPress={() => this.navigate.push("Same")}>
-                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34 }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
+                        <TouchableOpacity style={{marginTop:23}} onPress={() => this.navigate.push("Same")}>
+                            <Text style={{ fontSize: 14, fontFamily: 'NotoSansHans-Light', color: '#0071bc', textAlign: 'center',lineHeight:34, }}>{I18n.t('TabHomeActivity.learnmore')} &gt;</Text>
                         </TouchableOpacity>
                     </View>
                 </View>

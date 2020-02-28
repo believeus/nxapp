@@ -35,6 +35,7 @@
     "react-native": "0.60.5",
     "react-native-aes-kit": "^1.0.2",
     "react-native-awesome-alerts": "^1.2.0",
+    "react-native-border-radius-image": "^1.0.9",
     "react-native-braintree-payments-drop-in": "^1.0.5",
     "react-native-camera": "git+https://git@github.com/react-native-community/react-native-camera.git",
     "react-native-cli": "^2.0.1",

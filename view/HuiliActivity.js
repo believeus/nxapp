@@ -167,7 +167,7 @@ export default class HuiliActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/huili.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>{I18n.t('HuiliActivity.title')}</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('HuiliActivity.lab')}</Text>
@@ -251,7 +251,7 @@ export default class HuiliActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('HuiliActivity.papers')}</Text>
                 </View>
-                <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
+                <View style={{ backgroundColor: '#1f96f4', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ width: '90%', height: 56, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.sciencedirect.com/science/article/abs/pii/S0898656817301183" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>IRE1α links Nck1 deficiency to attenuated PTP1B expression in HepG2 cells.

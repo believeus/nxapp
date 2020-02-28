@@ -100,7 +100,7 @@ export default class ZhiyuanActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
-                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center', marginBottom: 20 }}>
+                <View style={{ width: '90%', alignSelf: 'center', justifyContent: 'center',paddingTop: 20, marginBottom: 20 }}>
                     <Image style={{ height: 99, width: '100%' }} resizeMode="contain" source={require("../image/icons/jason.png")}></Image>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 44, textAlign: 'center', color: '#0071bc' }}>Zhiyuan Lv Ph.D.</Text>
                     <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 18, textAlign: 'center', }}>{I18n.t('ZhiyuanActivity.manager')}</Text>
@@ -184,7 +184,7 @@ export default class ZhiyuanActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f0f0f0' }}>
                     <Text style={{ width: '90%', height: 56, alignSelf: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 18, fontWeight: 'bold', lineHeight: 56 }} >{I18n.t('ZhiyuanActivity.papers')}</Text>
                 </View>
-                <View style={{ backgroundColor: '#27809d', paddingTop: 20, paddingBottom: 20 }}>
+                <View style={{ backgroundColor: '#1f96f4', paddingTop: 20, paddingBottom: 20 }}>
                     <View style={{ width: '90%', height: 67, alignSelf: 'center' }}>
                         <TouchableOpacity onPress={() => { this.setState({ url: "https://www.pnas.org/content/113/37/E5434" }); this.setState({ display: true }) }}>
                             <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, color: '#ffffff' }}>Cd47-Sirpαinteraction and IL-10

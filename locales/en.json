@@ -827,7 +827,7 @@
     "RasEncryptionActivity": {
         "title": "Data security Setting",
         "press": "Please press the 'GENERATE' button to generate your Unique Public key and Privatelic key. Then, by pressing 'SAVE',",
-        "press2": " the Unique Public key and Private key will be saved to your mobile",
+        "press2": " the Unique Public key and Private key will be saved to your mobile.",
         "setkey": "Once the keys are set, no changes are allowed. If the Public key and Private key were changed, all previously saved healthy data will be lost. New healthy data will be encrypted using a new key,",
         "setkey2": "and it can only be set once.",
         "savekey": "We will not have or save the user's private key to decrypt user data according to the ",
