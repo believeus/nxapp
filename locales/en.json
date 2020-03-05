@@ -266,9 +266,9 @@
         "your": "Your",
         "chro": "/Chronological age/",
         "bio": "/Epigenetic age/",
-        "is": "Your Epigenetic age is ",
-        "younger": " years lower than the population expected average for your chronological age.",
-        "old": " years higher than the population expected average for your chronological age.",
+        "is": "Your Epigenetic age is",
+        "younger": "years lower than the population expected average for your chronological age.",
+        "old": "years higher than the population expected average for your chronological age.",
         "yourbio": "Your Epigenetic age(with number in it) ",
         "otherolder": "The others, who were tested, whose Epigenetic age is higher than Chronological age",
         "otheryounger": "The others, who were tested, whose Epigenetic age is lower than Chronological age",
@@ -282,7 +282,7 @@
         "status": "Testing Status",
         "barcode": "Barcode",
         "Registerkit": "Register barcode",
-        "yourage": "Enter your age",
+        "yourage": "Enter Your Age",
         "ageFormat": "Incorrect age format"
     },
     "user_profile": {
