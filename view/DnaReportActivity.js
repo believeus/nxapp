@@ -420,7 +420,7 @@ export default class DnaReportActivity extends Component<Props> {
                                 
                             </View>
                             <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
-                                <Text style={{ fontSize: 12,marginBottom:23,textDecorationLine:'underline', textAlign: 'center'}}>Expected Chronological age calculator &gt;</Text>
+                                <Text style={{ fontSize: 12,marginBottom:23,textDecorationLine:'underline', textAlign: 'center'}}>{I18n.t('DnaReportActivity.calculate')}&gt;</Text>
                             </TouchableOpacity>
                             <ImageBackground style={{ width: '100%', height: 223, }} resizeMode='cover' source={require("../image/enpic/rep12.jpg")} />
                             <View style={{ width: '90%', alignSelf: 'center', }}>
