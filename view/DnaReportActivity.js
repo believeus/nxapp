@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { StatusBar, StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Button } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper"
 import { decrypt } from 'react-native-simple-encryption'
+import ToggleSwitch from 'toggle-switch-react-native'
+import Input from "react-native-input-validation"
 import data from '../appdata'
 import Session from '../storage/Session'
 import { I18n } from '../locales/i18n'
@@ -17,6 +19,8 @@ export default class DnaReportActivity extends Component<Props> {
         this.state = {
             itemBox: [],
             ageBox: [],
+            notifyEmail:"",
+            switchon:false,
             statusbar: false,
             animating: false,
             barcode: '',
@@ -176,16 +180,24 @@ export default class DnaReportActivity extends Component<Props> {
                                 style={{ width: "45%", height: "100%", borderColor: '#0071BC', borderWidth: 1, borderRadius: 5, paddingVertical: 0 }}
                                 onChangeText={(barcode) => this.setState({ barcode })}
                                 placeholder={"Your barcode"}
+                                placeholderTextColor='#0071bc'
                                 value={this.state.barcode}
                             />
                             <View style={{ width: "1%", height: 30 }}></View>
                             <View style={{ width: "35%", height: 35, backgroundColor: "#0071BC", borderRadius: 5 }} >
                                 <TouchableOpacity disabled={this.state.barcode.length != 0 ? false : true} onPress={() => {
-
                                     this.setState({ display: true })
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                    let email=this.state.notifyEmail
+                                    var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
+                                    if(email!=""&&!reg.test(email)){
+                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), "邮箱格式不正确")
+                                        return
+                                    }
+                                    let allow=(this.state.switchon?1:0)
                                     //解密
-                                    fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
+                                    fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&email="+email+"&allow="+allow).then(res => res.json()).then((data) => {
+                                        
                                         switch (data.status) {
                                             case "invalid":
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"));
@@ -234,7 +246,7 @@ export default class DnaReportActivity extends Component<Props> {
                             </View>
                             <View style={{ width: "10%", height: 35 }} >
                                 <TouchableOpacity onPress={() => {
-                                    navigate.push("Scanner", {
+                                    this.navigate.push("Scanner", {
                                         barcode: this.state.barcode,
                                         callback: (data) => {
                                             this.setState({ barcode: data })
@@ -245,7 +257,63 @@ export default class DnaReportActivity extends Component<Props> {
                                 </TouchableOpacity>
                             </View>
                         </View>
-
+                        <View style={{width:"100%", flexDirection: "row",alignItems: "center"}}>
+                        <View style={{width:"5%"}}></View>
+                            <View style={{width:"55%"}}>
+                                <Input style={{
+                                    height: 30, width: '100%',
+                                    borderRadius: 5,
+                                    borderWidth: 1,
+                                    borderColor: '#b3b3b3',
+                                    fontSize: 16,
+                                    borderColor: '#0071BC', 
+                                    borderWidth: 1,
+                                    paddingVertical: 0
+                                }}
+                                    errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5 }}
+                                    errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
+                                    placeholder={I18n.t("RegisterActivity.email")} placeholderTextColor='#0071bc' validator="email"
+                                    onValidatorExecuted={(isvalid) => {
+                                    
+                                    }}
+                                    validatorExecutionDelay={100}
+                                    onChangeText={(email) => { this.setState({switchon:false}); this.setState({ notifyEmail: email }) }}
+                                    value={this.state.notifyEmail}
+                                />
+                            </View>
+                            <View style={{width:"2%"}}></View>
+                            <View style={{width:"12%"}}>
+                                <ToggleSwitch   
+                                    isOn={this.state.switchon} onColor="green" offColor="grey" 
+                                    labelStyle={{ color: "black", fontWeight: "900" }}
+                                    size="small"
+                                    onToggle={isOn =>{
+                                        let barcode=this.state.barcode
+                                        if(barcode==""){  
+                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"),I18n.t("DnaReportActivity.invalid"))
+                                            return
+                                        }
+                                        let mail=this.state.notifyEmail
+                                        var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
+                                        if(!reg.test(mail)){ 
+                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.emailFormat"))
+                                            return
+                                        }
+                                        let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                        let permit=isOn?1:0;
+                                        let url=data.url+"/user/report/"+uuid+"/"+mail+"/"+barcode+"/"+permit+"/notify.jhtml"
+                                        fetch(url).then(res => res.text()).then((data) => {
+                                            if(data=="error"){
+                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"))
+                                            }else{
+                                                this.setState({switchon:isOn})
+                                            }
+                                        })
+                                    }}
+                                /> 
+                            </View>
+                            <View style={{width:"22%"}}><Text>{I18n.t("DnaReportActivity.allow")}</Text></View>
+                        </View>
                         <View style={{ width: "100%", height: 23 }}></View>
                         <View style={{ width: "90%", alignItems: "center" }}>
                             {this.state.statusbar ?
@@ -260,43 +328,49 @@ export default class DnaReportActivity extends Component<Props> {
                                     let j = i
                                     return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
-                                            if (barcode.stat == "ready") {
-                                                this.setState({ animating: true })
-                                                this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
-                                                this.setState({ ageBox: this.state.ageBox })
-                                                let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                                console.info(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j])
-                                                //更改实际年龄
-                                                fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
-                                                    this.setState({ btnBuildPdfdisabled: false })
-                                                    let option = Object.assign({}, this.state.option);
-                                                    let biological = window.parseFloat(barcode.biological).toFixed(2);
-                                                    //let naturally = window.parseFloat(barcode.naturally).toFixed(2)
-                                                    let naturally = this.state.ageBox[j]
-                                                    this.setState({ biological })
-                                                    this.setState({ naturally })
-                                                    let i = biological > naturally ? 0 : 1;
-                                                    option.series[i].markPoint.data[0].value = biological
-                                                    //自然年龄
+                                            let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                            fetch(data.url+"/user/report/"+uuid+"/"+barcode.val+"/findEmail.jhtml").then(data=>data.json()).then((udata)=>{
+                                                this.setState({notifyEmail:udata.email})
+                                                let isOn=udata.permit==1?true:false
+                                                this.setState({switchon:isOn})
+                                                if (barcode.stat == "ready") {
+                                                    this.setState({ animating: true })
                                                     this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
                                                     this.setState({ ageBox: this.state.ageBox })
-                                                    //自然年龄
-                                                    option.series[i].markPoint.data[0].xAxis = this.state.ageBox[j]
-                                                    option.series[i].markPoint.data[0].yAxis = biological
-                                                    this.setState({ option })
-                                                    this.setState({ visual: true })
-                                                    this.setState({ barcode: barcode.val })
-                                                    {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
-                                                    {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
-                                                    {/* 从而重新刷新webview数据 */ }
-                                                    this.echarts.webview.reload()
-                                                    this.setState({ animating: false })
-                                                })
-                                            } else if (barcode.stat == "processing") {
-                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
-                                            } else if (barcode.stat == "pending") {
-                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
-                                            }
+                                                    console.info(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j])
+                                                    //更改实际年龄
+                                                    fetch(data.url + "user/age/upmyage.jhtml?uuid=" + uuid + "&barcode=" + barcode.val + "&myage=" + this.state.ageBox[j]).then(res => res.text()).then((data) => {
+                                                        this.setState({ btnBuildPdfdisabled: false })
+                                                        let option = Object.assign({}, this.state.option);
+                                                        let biological = window.parseFloat(barcode.biological).toFixed(2);
+                                                        //let naturally = window.parseFloat(barcode.naturally).toFixed(2)
+                                                        let naturally = this.state.ageBox[j]
+                                                        this.setState({ biological })
+                                                        this.setState({ naturally })
+                                                        let i = biological > naturally ? 0 : 1;
+                                                        option.series[i].markPoint.data[0].value = biological
+                                                        //自然年龄
+                                                        this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
+                                                        this.setState({ ageBox: this.state.ageBox })
+                                                        //自然年龄
+                                                        option.series[i].markPoint.data[0].xAxis = this.state.ageBox[j]
+                                                        option.series[i].markPoint.data[0].yAxis = biological
+                                                        this.setState({ option })
+                                                        this.setState({ visual: true })
+                                                        {/* 因为Echarts的内核是封装webview,当动态设置option时,有时候没反应,需要动态刷新一下,所以要获得ECharts的引用 */ }
+                                                        {/* 通过获取ECharts的引用,从而获取webview,获得webview之后可以执行 this.echarts.webview.reload(); */ }
+                                                        {/* 从而重新刷新webview数据 */ }
+                                                        this.echarts.webview.reload()
+                                                        this.setState({ animating: false })
+                                                    })
+                                                } else if (barcode.stat == "processing") {
+                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
+                                                } else if (barcode.stat == "pending") {
+                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
+                                                }
+                                                this.setState({ barcode: barcode.val })
+                                            })
+                                           
                                         }}>
                                         <View key={barcode.val} style={{ width: "100%", height: 39, borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
                                             <View style={{ width: "40%", alignItems: 'flex-start', height: "100%", display: "flex" }}><Text style={{ height: "100%", color: "#808080", textAlign: 'left', fontSize: 12, fontFamily: 'FontAwesome', lineHeight: 39 }}>{barcode.val}</Text></View>
@@ -641,7 +715,7 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{ width: "89%",height:'100%', alignSelf: 'center', borderRadius: 50}}>
                                 <TouchableOpacity >
                                     <Button title={I18n.t("DnaReportActivity.viewPdf")} onPress={() => {
-                                        navigate.push("Savepdfpath")
+                                        this.navigate.push("Savepdfpath")
                                     }} />
                                 </TouchableOpacity>
                             </View>

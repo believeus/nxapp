@@ -282,7 +282,9 @@
         "barcode":"Code barre",
         "Registerkit":"Registre barcode",
         "yourage":"Saisissez votre âge",
-        "ageFormat":"Age Format incorrect"
+        "ageFormat":"Age Format incorrect",
+        "emailFormat":"Boîte aux lettres",
+        "allow":"Notification d 'autorisation"
     },
     "user_profile": {
         "title": "Your Profile"

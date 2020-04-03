@@ -293,7 +293,9 @@
         "barcode":"Código Da Barra",
         "Registerkit":"Registar barcode",
         "yourage":"Entre Na SUA idade.",
-        "ageFormat":"Formato de idade incorrecto"
+        "ageFormat":"Formato de idade incorrecto",
+        "emailFormat":"Formato incorreto Da caixa de correio",
+        "allow":"Notificação autorizada"
     },
     "user_profile": {
         "title": "Seu perfil"

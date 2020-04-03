@@ -292,7 +292,9 @@
         "barcode":"Código de barras",
         "Registerkit":"Registro barcode",
         "yourage":"Introduzca su edad",
-        "ageFormat":"Formato de edad incorrecto"
+        "ageFormat":"Formato de edad incorrecto",
+        "emailFormat":"Formato de correo incorrecto",
+        "allow":"Anuncios permitidos"
     },
     "user_profile": {
         "title": "Your Profile"

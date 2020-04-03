@@ -287,7 +287,9 @@
         "barcode": "Barcode",
         "Registerkit": "Register barcode",
         "yourage": "Enter Your Age",
-        "ageFormat": "Incorrect age format"
+        "ageFormat": "Incorrect age format",
+        "emailFormat":"Incorrect mailbox format",
+        "allow":"Allow Notify"
     },
     "user_profile": {
         "title": "Your Profile"

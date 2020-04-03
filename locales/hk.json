@@ -270,9 +270,9 @@
         "your": "你的",
         "chro": "/實際年齡/",
         "bio": "/生物學年齡/",
-        "is": "你的生物學年齡為",
-        "younger": ",低於预期實際年齡人群的平均值",
-        "old": ",高於预期實際年齡人群的平均值",
+        "is": "你的生物學年齡與",
+        "younger": "低於预期實際年齡人群的平均值",
+        "old": "高於预期實際年齡人群的平均值",
         "yourbio": "（上面有數字）你的生物年齡",
         "otherolder": "其他被測試的人，他們的生物年齡比實際年齡大",
         "otheryounger": "其他被測試的人，他們的生物年齡比實際年齡小",
@@ -291,7 +291,9 @@
         "barcode":"條碼",
         "Registerkit":"注册条码",
         "yourage":"輸入您的年齡",
-        "ageFormat":"年齡格式不正確"
+        "ageFormat":"年齡格式不正確",
+        "emailFormat":"郵箱格式不正確",
+        "allow":"允許通知"
     },
     "user_profile": {
         "title": "Your Profile"

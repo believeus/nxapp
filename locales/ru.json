@@ -269,7 +269,9 @@
         "barcode":"штрих - код",
         "Registerkit":"регистрация barcode",
         "yourage":"Введите возраст",
-        "ageFormat":"неправильный возрастной формат"
+        "ageFormat":"неправильный возрастной формат",
+        "emailFormat":"Неверный формат почтового ящика",
+        "allow":"допустимое извещение"
     },
     "user_profile": {
         "title": "Your Profile"

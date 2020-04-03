@@ -273,7 +273,9 @@
         "barcode":"條碼",
         "Registerkit":"注册条码",
         "yourage":"輸入您的年齡",
-        "ageFormat":"年齡格式不正確"
+        "ageFormat":"年齡格式不正確",
+        "emailFormat":"郵箱格式不正確",
+        "allow":"允許通知"
     },
     "user_profile": {
         "title": "Your Profile"
