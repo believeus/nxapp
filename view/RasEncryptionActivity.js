@@ -55,29 +55,11 @@ export default class RasEncryptionActivity extends Component<Props> {
                     <View style={{ width: "100%", height: 60 }}>
                         <Text style={{ width: "100%", textAlign: "center", textAlignVertical: "center", fontSize: 24, fontWeight: "bold", height: "100%" }}>Private key</Text>
                     </View>
+                    
                     <View style={{ width: "100%", alignItems: 'center' }}>
+                        
                         <View style={{ width: "95%" }}>
-                            <View style={{ flexDirection: 'row',marginBottom:12 }}>
-                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
-                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.press')}<Text style={{ color: '#0071bc', fontStyle:'italic', fontSize: 14 }}>{I18n.t('RasEncryptionActivity.press2')} </Text> </Text>
-                            </View>
-                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
-                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
-                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.setkey')} <Text style={{ color: '#0071bc', fontStyle:'italic' }}> {I18n.t('RasEncryptionActivity.setkey2')}</Text></Text>
-                            </View>
-                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
-                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
-                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18, color: '#0071bc',fontStyle:'italic' }}> {I18n.t('RasEncryptionActivity.unique')}</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
-                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
-                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.savekey')}<Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontSize: 14, fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>{I18n.t('RasEncryptionActivity.security')}</Text> {I18n.t('RasEncryptionActivity.savekey2')}</Text>
-                            </View>
-                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
-                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
-                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.freestate')} </Text>
-                            </View>
-                            <View style={{ width: "100%", height: 20 }}></View>
+                        <View style={{ width: "100%", height: 20 }}></View>
                             <View><Text style={{ fontWeight: "bold" }}>{I18n.t('RasEncryptionActivity.privatekey')}</Text></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
                                 <View style={{ width: "70%" }}>
@@ -214,6 +196,27 @@ export default class RasEncryptionActivity extends Component<Props> {
                                 </View>
 
                             </View>
+                            <View style={{ flexDirection: 'row',marginBottom:12 }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.press')}<Text style={{ color: '#0071bc', fontStyle:'italic', fontSize: 14 }}>{I18n.t('RasEncryptionActivity.press2')} </Text> </Text>
+                            </View>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>2.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.setkey')} <Text style={{ color: '#0071bc', fontStyle:'italic' }}> {I18n.t('RasEncryptionActivity.setkey2')}</Text></Text>
+                            </View>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>3.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18, color: '#0071bc',fontStyle:'italic' }}> {I18n.t('RasEncryptionActivity.unique')}</Text>
+                            </View>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>4.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.savekey')}<Text onPress={() => this.navigate.push("DataSecurity")} style={{ fontSize: 14, fontStyle: 'italic', color: '#0071bc', textDecorationLine: 'underline' }}>{I18n.t('RasEncryptionActivity.security')}</Text> {I18n.t('RasEncryptionActivity.savekey2')}</Text>
+                            </View>
+                            <View style={{ flexDirection: 'row',marginBottom:12  }}>
+                                <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>5.</Text>
+                                <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}> {I18n.t('RasEncryptionActivity.freestate')} </Text>
+                            </View>
+                           
 
                         </View>
                     </View>

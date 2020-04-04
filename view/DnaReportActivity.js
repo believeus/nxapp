@@ -191,7 +191,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     let email=this.state.notifyEmail
                                     var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
                                     if(email!=""&&!reg.test(email)){
-                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), "邮箱格式不正确")
+                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.emailFormat"))
                                         return
                                     }
                                     let allow=(this.state.switchon?1:0)
