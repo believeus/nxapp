@@ -44,6 +44,7 @@ import SavepdfpathActivity from './SavepdfpathActivity'
 import PdfViewActivity from './PdfViewActivity'
 import ScannerAcitivity from './ScannerAcitivity'
 import LangActivity from './LangActivity'
+import ShafaatActivity from './ShafaatActivity'
 
 export const RootStack = createStackNavigator(
     {
@@ -169,6 +170,9 @@ export const RootStack = createStackNavigator(
         },
         LangActivity:{
             screen:LangActivity
+        },
+        ShafaatActivity:{
+            screen:ShafaatActivity
         }
     },
     {

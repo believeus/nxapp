@@ -281,7 +281,7 @@
         "pdfsuccess": "The PDF is saved successfully. Click View PDF to view the PDF file",
         "titlemsg": "Message",
         "invalid": "Invalid barcode",
-        "wait": "Your report will be available in 21 working days.Please wait……",
+        "wait": "Your epi-age results will be ready within 4-5 weeks after the saliva sample arrival to the lab.\n Please wait……",
         "processed": "Detection is being processed.\nPlease wait……",
         "status": "Testing Status",
         "barcode": "Barcode",
@@ -289,7 +289,11 @@
         "yourage": "Enter Your Age",
         "ageFormat": "Incorrect age format",
         "emailFormat":"Incorrect mailbox format",
-        "allow":"Allow Notify"
+        "allow":"Allow Notify",
+        "regtime":"Register Time",
+        "baseinfo":"Basic information",
+        "endtime":" completion time",
+        "yourbarcode":"Type Barcode"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -327,6 +331,8 @@
         "chifattitle": "Senior Research Scientist",
         "zhiyuan": "Zhiyuan Lv  Ph.D.",
         "zhiyuantitle": "Laboratory Manager（GZ)",
+        "Shafaat":"Shafaat A. Rabbani,Prof.",
+        "Shafaatmsg":"Prof. Rabbani published more than 100 manuscripts 5899 citations, h index is 45 and i10 index is 84. Prof. Rabbani has served as expert reviewer for CIHR, CRS, CBCRA,   DOD, US VA, Komen. Over the years Prof. Rabbani has served as a member of the scientific advisory board or consultant for various biotechnology and pharmaceutical companies like (Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).This has led to several collaborations with renowned scientists, initiation of clinical trials and issue of several patent applications as described in my curriculum vitae.",
         "epidial": "Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
     },
     "ProfMosheActivity": {

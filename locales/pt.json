@@ -287,7 +287,7 @@
         "pdfsuccess":"O PDF é gravado com sucesso. Clique EM Ver PDF para ver o arquivo PDF",
         "titlemsg":"Mensagem instantânea",
         "invalid":"Código inválido",
-        "wait":"O SEU relatório estará disponível Dentro de 21 Dias úteis.Por favor, espere.",
+        "wait":"Seus resultados de epi-idade estarão prontos dentro de 4-5 semanas após a chegada da amostra de saliva ao laboratório. \n Por favor aguarde ...",
         "processed":"Detecção de processamento.\n Aguarde por favor.",
         "status":"Estado de detecção",
         "barcode":"Código Da Barra",
@@ -295,7 +295,11 @@
         "yourage":"Entre Na SUA idade.",
         "ageFormat":"Formato de idade incorrecto",
         "emailFormat":"Formato incorreto Da caixa de correio",
-        "allow":"Notificação autorizada"
+        "allow":"Notificação autorizada",
+        "baseinfo":"Informação de base",
+        "regtime":"Register Time",
+        "endtime":"Completo",
+        "yourbarcode":"Type Barcode"
     },
     "user_profile": {
         "title": "Seu perfil"
@@ -333,6 +337,8 @@
         "chifattitle": "Pesquisador Sênior",
         "zhiyuan": "Zhiyuan Lv  Ph.D.",
         "zhiyuantitle": "Gerente de laboratório (GZ)",
+        "Shafaat":"Shafaat A. Rabbani",
+        "Shafaatmsg":"O Prof. Rabbani publicou Mais de 100 manuscritos 5899 citações, h index is 45 e I10 index is 84.O Prof. Rabbani atuou Como Revisor especializado EM CIHR, CRS, CBCRA, DOD, VA, Komen.Ao Longo DOS anos, o Prof. Rabbani TEM servido Como membro do Conselho de aconselhamento científico Ou consultor para várias empresas de biotecnologia e farmacêutica Como Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).Isto levou a várias colaborações com cientistas de renome, início de ensaios clínicos e emissão de várias patentes.Aplicações Como descrito no MEU curriculum vitae.",
         "epidial": "Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
     },
     "ProfMosheActivity": {

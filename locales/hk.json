@@ -285,15 +285,19 @@
         "pdfsuccess":"PDF保存成功，可點擊查看PDF按鈕查看PDF檔案",
         "titlemsg":"提示消息",
         "invalid":"無效碼",
-        "wait":"您的報告將在21個工作日內提供。請稍候……",
+        "wait":"在唾液樣本到達實驗室後的4-5週內，您的Epiage結果將準備就緒。\n 請稍候……",
         "processed":"正在處理檢測.請稍候……",
         "status":"檢測狀態",
-        "barcode":"條碼",
+        "barcode":"註冊條碼",
         "Registerkit":"注册条码",
         "yourage":"輸入您的年齡",
         "ageFormat":"年齡格式不正確",
         "emailFormat":"郵箱格式不正確",
-        "allow":"允許通知"
+        "allow":"允許通知",
+        "regtime":"註冊時間",
+        "baseinfo":"基本資訊",
+        "endtime":"預計完成檢測時間",
+        "yourbarcode":"輸入條碼"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -331,6 +335,8 @@
         "chifattitle": "高級研究員",
         "zhiyuan": "呂志遠博士",
         "zhiyuantitle": "實驗室(廣州)負責人",
+        "Shafaat":"沙法特·拉巴尼 教授",
+        "Shafaatmsg":"拉巴尼教授发表了100多篇手稿5899条引文，h指数为45，i10指数为84。拉巴尼教授曾担任CIHR、CRS、CBCRA、DOD、US VA、Komen的专家评审员。多年来，拉巴尼教授一直担任各种生物技术和制药公司的科学顾问委员会成员或顾问，如安进公司、阿斯利康公司、Axys公司、爱登顿公司、美国诊断公司、普罗乔恩公司。这导致了与著名科学家的几次合作、临床试验的启动和几项专利的发布我的简历中描述的申请。",
         "epidial": "北京埃彼達雅醫學診斷技術有限公司"
     },
     "ProfMosheActivity": {

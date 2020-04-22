@@ -276,15 +276,19 @@
         "pdfsuccess":"Enregistrement PDF réussi, cliquez sur le bouton PDF pour voir les fichiers PDF",
         "titlemsg":"Message de rappel",
         "invalid":"Non valide",
-        "wait":"Votre rapport sera disponible dans 21 jours ouvrables.\n Un instant.",
+        "wait":"Vos résultats d'épi-âge seront prêts dans les 4 à 5 semaines suivant l'arrivée de l'échantillon de salive au laboratoire. \n Veuillez patienter ……",
         "processed":"Le test est en cours.",
         "status":"état de détection",
-        "barcode":"Code barre",
+        "barcode":"Barcode",
         "Registerkit":"Registre barcode",
         "yourage":"Saisissez votre âge",
         "ageFormat":"Age Format incorrect",
         "emailFormat":"Boîte aux lettres",
-        "allow":"Notification d 'autorisation"
+        "allow":"Notification d 'autorisation",
+        "regtime":"Register Time",
+        "baseinfo":"Renseignements de base",
+        "endtime":"Finir",
+        "yourbarcode":"Code à barres"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -322,6 +326,8 @@
         "chifattitle": "Chercheur principal",
         "zhiyuan": "Zhiyuan Lv",
         "zhiyuantitle": "Responsable de laboratoire",
+        "Shafaat":"M. shafaat A. Rabbani",
+        "Shafaatmsg":"Le professeur Rabbani a publié plus de 100 manuscrits de 5 899 citations, l 'indice h 45 et l' indice i10 84.M. Rabbani a exercé les fonctions d'expert juriste auprès de cihr, CRS, cbcra, DoD, US - va et komen.Au fil des ans, M. Rabbani a été membre ou conseiller scientifique de diverses sociétés de biotechnologie et de produits pharmaceutiques, telles que Enterprise, aslicon, AXYS, edden, American diagnostics, projon.Demande décrite dans mon curriculum vitae.",
         "epidial": "Technologie de diagnostic médical Cie., Ltd de Beijing."
     },
     "ProfMosheActivity": {

@@ -85,6 +85,20 @@ export default class ScienceteamActivity extends Component<Props> {
                     </View>
                 </TouchableOpacity>
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
+                <View style={{ height: 45, marginTop: 10, backgroundColor: '#0071BC' }}>
+                    <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: 'white',fontWeight:'bold' }}>&nbsp;&nbsp;Scientific Advisory Board</Text>
+                </View>
+                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
+                <TouchableOpacity onPress={() => this.navigate.push("ShafaatActivity")}>
+                <View style={{ width: '90%', alignSelf: 'center', flexDirection: 'row', }}>
+                    <Image style={{ height: 123, width: '30%', borderRadius: 10 }} resizeMode="contain" source={require("../image/icons/Shafaat-1.jpg")}></Image>
+                    <View style={{ width: '60%', height: 123, fontFamily: 'NotoSansHans-Light', paddingLeft: 17, justifyContent: 'center' }}>
+                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, lineHeight: 44, color: '#0071bc' }}>{I18n.t('ScienceteamActivity.Shafaat')}</Text>
+                    </View>
+                    <Text style={{ width: '10%', height: 123, fontFamily: 'NotoSansHans-Light', fontSize: 18, lineHeight: 123 }}>&gt;</Text>
+                </View>
+                </TouchableOpacity>
+                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView>
         );

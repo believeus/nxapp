@@ -4,6 +4,7 @@ import { ECharts } from "react-native-echarts-wrapper"
 import { decrypt } from 'react-native-simple-encryption'
 import ToggleSwitch from 'toggle-switch-react-native'
 import Input from "react-native-input-validation"
+import ProgressCircle from 'react-native-progress-circle'
 import data from '../appdata'
 import Session from '../storage/Session'
 import { I18n } from '../locales/i18n'
@@ -108,6 +109,7 @@ export default class DnaReportActivity extends Component<Props> {
 
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
+            let curtime=Date.parse(new Date())
             this.setState({ user: user });
 
             fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
@@ -137,19 +139,27 @@ export default class DnaReportActivity extends Component<Props> {
             })
 
             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-            console.info(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid)
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
+                    //离到期时间一共有多少毫秒
+                    let c=(data[i].createTime+(21*24*3600*1000))-data[i].createTime
+                    //当前时间离到期时间还剩多少毫秒到期
+                    let d=(data[i].createTime+(21*24*3600*1000))-curtime
+                    //(离到期时间一共有多少毫秒-当前时间离到期时间还剩多少毫秒到期)/离到期时间一共有多少毫秒
+                    let process=parseFloat(((c-d)/c)*100).toFixed(3)
+                    //console.info((data[i].uploadTime/(data[i].uploadTime+(21*24*3600*1000))))
                     let vbarcode = {}
-                    vbarcode.val = data[i].barcode
+                    vbarcode.val=data[i].barcode
                     vbarcode.stat = data[i].status
                     vbarcode.naturally = data[i].naturally
                     vbarcode.biological = data[i].biological
+                    vbarcode.createTime=new Date(data[i].createTime).toLocaleDateString()
+                    vbarcode.endtime=new Date(data[i].createTime+(21*24*3600*1000)).toLocaleDateString()
+                    vbarcode.processing=(data[i].status=="ready")?100:process
                     this.state.itemBox.push(vbarcode)
                     this.state.ageBox[i] = vbarcode.naturally
                 }
                 this.setState({ ageBox: this.state.ageBox })
-                console.info(this.state.ageBox)
                 this.setState({ itemBox: this.state.itemBox })
                 this.setState({ statusbar: true })
             })
@@ -179,7 +189,7 @@ export default class DnaReportActivity extends Component<Props> {
                             <TextInput
                                 style={{ width: "45%", height: "100%", borderColor: '#0071BC', borderWidth: 1, borderRadius: 5, paddingVertical: 0 }}
                                 onChangeText={(barcode) => this.setState({ barcode })}
-                                placeholder={"Your barcode"}
+                                placeholder={I18n.t("DnaReportActivity.yourbarcode")}
                                 placeholderTextColor='#0071bc'
                                 value={this.state.barcode}
                             />
@@ -187,6 +197,7 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{ width: "35%", height: 35, backgroundColor: "#0071BC", borderRadius: 5 }} >
                                 <TouchableOpacity disabled={this.state.barcode.length != 0 ? false : true} onPress={() => {
                                     this.setState({ display: true })
+                                     //解密
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     let email=this.state.notifyEmail
                                     var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
@@ -195,7 +206,6 @@ export default class DnaReportActivity extends Component<Props> {
                                         return
                                     }
                                     let allow=(this.state.switchon?1:0)
-                                    //解密
                                     fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&email="+email+"&allow="+allow).then(res => res.json()).then((data) => {
                                         
                                         switch (data.status) {
@@ -206,6 +216,10 @@ export default class DnaReportActivity extends Component<Props> {
                                                 var barcode = {}
                                                 barcode.val = this.state.barcode
                                                 barcode.stat = data.status
+                                                barcode.createTime=new Date(data.createTime).toLocaleDateString()
+                                                barcode.endtime=new Date(data.createTime+(21*24*3600*1000)).toLocaleDateString()
+                                                barcode.processing=0
+                                                barcode.naturally = 0
                                                 if (JSON.stringify(this.state.itemBox).indexOf(barcode.val) == -1) {
                                                     this.state.itemBox.push(barcode)
                                                     this.setState({ itemBox: this.state.itemBox })
@@ -261,7 +275,8 @@ export default class DnaReportActivity extends Component<Props> {
                         <View style={{width:"5%"}}></View>
                             <View style={{width:"55%"}}>
                                 <Input style={{
-                                    height: 30, width: '100%',
+                                    height: 30, 
+                                    width: '100%',
                                     borderRadius: 5,
                                     borderWidth: 1,
                                     borderColor: '#b3b3b3',
@@ -284,7 +299,9 @@ export default class DnaReportActivity extends Component<Props> {
                             <View style={{width:"2%"}}></View>
                             <View style={{width:"12%"}}>
                                 <ToggleSwitch   
-                                    isOn={this.state.switchon} onColor="green" offColor="grey" 
+                                    isOn={this.state.switchon} 
+                                    onColor="green" 
+                                    offColor="grey" 
                                     labelStyle={{ color: "black", fontWeight: "900" }}
                                     size="small"
                                     onToggle={isOn =>{
@@ -314,18 +331,18 @@ export default class DnaReportActivity extends Component<Props> {
                             </View>
                             <View style={{width:"22%"}}><Text>{I18n.t("DnaReportActivity.allow")}</Text></View>
                         </View>
-                        <View style={{ width: "100%", height: 23 }}></View>
+                        <View style={{ width: "100%", height: 10 }}></View>
                         <View style={{ width: "90%", alignItems: "center" }}>
-                            {this.state.statusbar ?
-                                <View style={{ width: "100%", borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
-                                    <View style={{ width: "40%" }}><Text style={{ color: "#808080", textAlign: 'left', fontFamily: 'FontAwesome', fontSize: 12, fontWeight: "bold",marginBottom:5 }}>{I18n.t('DnaReportActivity.barcode')}</Text></View>
+                            {this.state.statusbar ? 
+                                <View style={{ width: "100%", borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row" }}>
+                                    <View style={{ width: "70%" }}><Text style={{ color: "#808080", textAlign: 'left', fontFamily: 'FontAwesome', fontSize: 12, fontWeight: "bold",marginBottom:5 }}>{I18n.t('DnaReportActivity.baseinfo')}</Text></View>
                                     <View style={{ width: "30%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 12, fontWeight: "bold",marginBottom:5 }}>{I18n.t('DnaReportActivity.status')}</Text></View>
-                                    <View style={{ width: "30%" }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 12, fontWeight: "bold",marginBottom:5 }}>{I18n.t('DnaReportActivity.yourage')}</Text></View>
                                 </View>
                                 : null}
                             {this.state.itemBox ?
                                 this.state.itemBox.map((barcode, i) => {
                                     let j = i
+                                    console.info(barcode)
                                     return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
                                             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
@@ -372,29 +389,57 @@ export default class DnaReportActivity extends Component<Props> {
                                             })
                                            
                                         }}>
-                                        <View key={barcode.val} style={{ width: "100%", height: 39, borderBottomColor: "#efefef", borderBottomWidth: 1, flexDirection: "row" }}>
-                                            <View style={{ width: "40%", alignItems: 'flex-start', height: "100%", display: "flex" }}><Text style={{ height: "100%", color: "#808080", textAlign: 'left', fontSize: 12, fontFamily: 'FontAwesome', lineHeight: 39 }}>{barcode.val}</Text></View>
-                                            <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View>
-                                            <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: 'center', }}>
-                                                <TextInput style={{
-                                                    height: 20,
-                                                    width: '60%',
-                                                    borderWidth: 1,
-                                                    borderColor: '#b3b3b3',
-                                                    fontSize: 14,
-                                                    paddingVertical: 0,
-                                                    textAlign: "center"
-                                                }}
-                                                    keyboardType="numeric"
-                                                    defaultValue={"0"}
-                                                    value={this.state.ageBox[i] + ""}
-                                                    onChangeText={(val) => {
-                                                        let data = val.replace(/[^\d]+/, '')
-                                                        this.state.ageBox[i] = data
-                                                        this.setState({ ageBox: this.state.ageBox })
+                                        <View key={barcode.val} style={{ width: "100%", height: 110,borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row",borderStyle:"dashed" }}>
+                                            <View style={{width:"70%",borderStyle:"dotted"}}>
+                                                <View style={{width:"100%",height:10}}></View>
+                                                <View style={{ width: "100%", height: 20 }}>
+                                                    <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.barcode')}：{barcode.val}</Text>
+                                                </View>
+
+                                                <View style={{ width: "100%", height: 20 }}>
+                                                    <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.regtime')}：{barcode.createTime}</Text>
+                                                </View>
+                                                <View style={{ width: "100%", height: 20 }}>
+                                                    <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.endtime')}：{barcode.endtime}</Text>
+                                                </View>
+
+                                                <View style={{ width: "100%", height: 70,flexDirection:"row"}}>
+                                                    <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.yourage')}：</Text>
+                                                    <TextInput style={{
+                                                        height: 20,
+                                                        width: '50%',
+                                                        borderWidth: 1,
+                                                        borderColor: '#b3b3b3',
+                                                        fontSize: 14,
+                                                        paddingVertical: 0,
+                                                        textAlign: "center"
                                                     }}
-                                                />
+                                                        keyboardType="numeric"
+                                                        defaultValue={"0"}
+                                                        value={this.state.ageBox[i]?this.state.ageBox[i]:0}
+                                                        onChangeText={(val) => {
+                                                            let data = val.replace(/[^\d]+/, '')
+                                                            this.state.ageBox[i] = data
+                                                            this.setState({ ageBox: this.state.ageBox })
+                                                        }}
+                                                    />
+                                                </View>
                                             </View>
+                                            {/* <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View> */}
+                                            <View style={{ width: "30%", height: "100%",alignItems:"center",justifyContent:"center" }}>
+                                               <ProgressCircle 
+                                                        percent={barcode.processing}
+                                                        radius={50}
+                                                        borderWidth={20}
+                                                        color="#3399FF"
+                                                        shadowColor="#999"
+                                                        bgColor="#fff"
+                                                    >
+                                                    <Text style={{ fontSize: 12,fontWeight:'bold' }}>{barcode.processing}%</Text>
+                                                </ProgressCircle>
+                                            </View> 
+
+                                           
                                         </View>
                                     </TouchableOpacity>
                                 }) :
