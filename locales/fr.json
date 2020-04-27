@@ -63,7 +63,9 @@
         "indispensable":"est très petite,mais indispensable",
         "chronological":"Âge chronologique",
         "biological":"Âge épigénétique",
-        "management":"Gestion de la santé"
+        "management":"Gestion de la santé",
+        "Tips":"Avertissement",
+        "message":"Si vous avez déjà acheté une trousse d 'ADN.Cliquez ici pour enregistrer votre boîte à outils."
     },
     "TestprocessActivity": {
         "title": "Processus de test",
@@ -284,11 +286,12 @@
         "yourage":"Saisissez votre âge",
         "ageFormat":"Age Format incorrect",
         "emailFormat":"Boîte aux lettres",
-        "allow":"Notification d 'autorisation",
+        "allow":"Notification par courrier autorisé",
         "regtime":"Register Time",
         "baseinfo":"Renseignements de base",
         "endtime":"Finir",
-        "yourbarcode":"Code à barres"
+        "yourbarcode":"Code à barres",
+        "done":"Test terminé."
     },
     "user_profile": {
         "title": "Your Profile"

@@ -46,7 +46,7 @@
         "aboutus": "About Us",
         "lifestyle": "Lifestyle",
         "test": "Test Process",
-        "mark": "Health Market",
+        "mark": "Shop",
         "quest": "Questionnaires",
         "report": "My Report",
         "whatis": "What is SAMe?",
@@ -63,7 +63,9 @@
         "indispensable": "but indispensable",
         "chronological": "Chronological Age",
         "biological": "Epigenetic age",
-        "management": "Health Management"
+        "management": "Health Management",
+        "Tips":"Tips",
+        "message":"If you have already purchased the Epigenetic kit. Please click here to go to register your kit."
     },
     "TestprocessActivity": {
         "title": "Test Process",
@@ -285,15 +287,16 @@
         "processed": "Detection is being processed.\nPlease wait……",
         "status": "Testing Status",
         "barcode": "Barcode",
-        "Registerkit": "Register barcode",
+        "Registerkit": "Register Kit",
         "yourage": "Enter Your Age",
         "ageFormat": "Incorrect age format",
         "emailFormat":"Incorrect mailbox format",
-        "allow":"Allow Notify",
+        "allow":"Allow Email notification",
         "regtime":"Register Time",
         "baseinfo":"Basic information",
-        "endtime":" completion time",
-        "yourbarcode":"Type Barcode"
+        "endtime":"Completion time",
+        "yourbarcode":"Type Barcode",
+        "done":"Test completed"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -332,7 +335,7 @@
         "zhiyuan": "Zhiyuan Lv  Ph.D.",
         "zhiyuantitle": "Laboratory Manager（GZ)",
         "Shafaat":"Shafaat A. Rabbani,Prof.",
-        "Shafaatmsg":"Prof. Rabbani published more than 100 manuscripts 5899 citations, h index is 45 and i10 index is 84. Prof. Rabbani has served as expert reviewer for CIHR, CRS, CBCRA,   DOD, US VA, Komen. Over the years Prof. Rabbani has served as a member of the scientific advisory board or consultant for various biotechnology and pharmaceutical companies like (Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).This has led to several collaborations with renowned scientists, initiation of clinical trials and issue of several patent applications as described in my curriculum vitae.",
+        "Shafaatmsg":"Dr. Rabbani is a Professor of Medicine at McGill University Montreal, Canada. He is also associate member of Departments of Physiology at Oncology at McGill University Health Centre. Prof. Rabbani published more than 100 manuscripts 5899 citations, h index is 45 and i10 index is 84. Prof. Rabbani has served as expert reviewer for CIHR, CRS, CBCRA,   DOD, US VA, Komen. Over the years Prof. Rabbani has served as a member of the scientific advisory board or consultant for various biotechnology and pharmaceutical companies like (Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).",
         "epidial": "Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
     },
     "ProfMosheActivity": {

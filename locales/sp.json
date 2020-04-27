@@ -63,7 +63,9 @@
         "indispensable":"pero indispensable",
         "chronological":"Edad cronológica",
         "biological":"Edad epigenética",
-        "management":"Manejo de la salud"
+        "management":"Manejo de la salud",
+        "Tips":"Pista",
+        "message":"Si ya has comprado la Caja de muestras genéticas.Por favor, haga clic en su carpeta."
     },
     "TestprocessActivity": {
         "title": "Proceso de prueba",
@@ -288,17 +290,18 @@
         "invalid":"Código no válido",
         "wait":"Sus resultados de epi-age estarán listos dentro de las 4-5 semanas posteriores a la llegada de la muestra de saliva al laboratorio. \n Por favor espere ......",
         "processed":"Estoy trabajando en la prueba.",
-        "status":"Estado de ensayo",
+        "status":"Estado",
         "barcode":"Código de barras",
         "Registerkit":"Registro barcode",
         "yourage":"Introduzca su edad",
         "ageFormat":"Formato de edad incorrecto",
         "emailFormat":"Formato de correo incorrecto",
-        "allow":"Anuncios permitidos",
+        "allow":"Permitir notificación de correo",
         "baseinfo":"Información básica",
         "regtime":"Registro",
         "endtime":"Completar",
-        "yourbarcode":"Código binario"
+        "yourbarcode":"Código binario",
+        "done":"Detección completada."
     },
     "user_profile": {
         "title": "Your Profile"

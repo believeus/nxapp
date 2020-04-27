@@ -20,6 +20,8 @@ export default class DnaReportActivity extends Component<Props> {
         this.state = {
             itemBox: [],
             ageBox: [],
+            switchonBox:[],
+            emailBox:[],
             notifyEmail:"",
             switchon:false,
             statusbar: false,
@@ -152,15 +154,21 @@ export default class DnaReportActivity extends Component<Props> {
                     vbarcode.val=data[i].barcode
                     vbarcode.stat = data[i].status
                     vbarcode.naturally = data[i].naturally
-                    vbarcode.biological = data[i].biological
+                    vbarcode.biological = data[i].biological 
                     vbarcode.createTime=new Date(data[i].createTime).toLocaleDateString()
-                    vbarcode.endtime=new Date(data[i].createTime+(21*24*3600*1000)).toLocaleDateString()
+                    vbarcode.endtime=(data[i].status=="ready")?I18n.t("DnaReportActivity.done"):new Date(data[i].createTime+(21*24*3600*1000)).toLocaleDateString()
+                    vbarcode.email=data[i].email
                     vbarcode.processing=(data[i].status=="ready")?100:process
+                    vbarcode.switchon=data[i].allow==1?true:false
                     this.state.itemBox.push(vbarcode)
                     this.state.ageBox[i] = vbarcode.naturally
-                }
+                    this.state.switchonBox[i]=vbarcode.switchon
+                    this.state.emailBox[i]=data[i].email
+                }   
                 this.setState({ ageBox: this.state.ageBox })
                 this.setState({ itemBox: this.state.itemBox })
+                this.setState({switchonBox:this.state.switchonBox})
+                this.setState({emailBox:this.state.emailBox})
                 this.setState({ statusbar: true })
             })
         });
@@ -199,15 +207,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     this.setState({ display: true })
                                      //解密
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                    let email=this.state.notifyEmail
-                                    var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
-                                    if(email!=""&&!reg.test(email)){
-                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.emailFormat"))
-                                        return
-                                    }
-                                    let allow=(this.state.switchon?1:0)
-                                    fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&email="+email+"&allow="+allow).then(res => res.json()).then((data) => {
-                                        
+                                    fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&email="+email).then(res => res.json()).then((data) => {
                                         switch (data.status) {
                                             case "invalid":
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"));
@@ -220,6 +220,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 barcode.endtime=new Date(data.createTime+(21*24*3600*1000)).toLocaleDateString()
                                                 barcode.processing=0
                                                 barcode.naturally = 0
+                                                barcode.switchon=false
                                                 if (JSON.stringify(this.state.itemBox).indexOf(barcode.val) == -1) {
                                                     this.state.itemBox.push(barcode)
                                                     this.setState({ itemBox: this.state.itemBox })
@@ -271,66 +272,6 @@ export default class DnaReportActivity extends Component<Props> {
                                 </TouchableOpacity>
                             </View>
                         </View>
-                        <View style={{width:"100%", flexDirection: "row",alignItems: "center"}}>
-                        <View style={{width:"5%"}}></View>
-                            <View style={{width:"55%"}}>
-                                <Input style={{
-                                    height: 30, 
-                                    width: '100%',
-                                    borderRadius: 5,
-                                    borderWidth: 1,
-                                    borderColor: '#b3b3b3',
-                                    fontSize: 16,
-                                    borderColor: '#0071BC', 
-                                    borderWidth: 1,
-                                    paddingVertical: 0
-                                }}
-                                    errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5 }}
-                                    errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
-                                    placeholder={I18n.t("RegisterActivity.email")} placeholderTextColor='#0071bc' validator="email"
-                                    onValidatorExecuted={(isvalid) => {
-                                    
-                                    }}
-                                    validatorExecutionDelay={100}
-                                    onChangeText={(email) => { this.setState({switchon:false}); this.setState({ notifyEmail: email }) }}
-                                    value={this.state.notifyEmail}
-                                />
-                            </View>
-                            <View style={{width:"2%"}}></View>
-                            <View style={{width:"12%"}}>
-                                <ToggleSwitch   
-                                    isOn={this.state.switchon} 
-                                    onColor="green" 
-                                    offColor="grey" 
-                                    labelStyle={{ color: "black", fontWeight: "900" }}
-                                    size="small"
-                                    onToggle={isOn =>{
-                                        let barcode=this.state.barcode
-                                        if(barcode==""){  
-                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"),I18n.t("DnaReportActivity.invalid"))
-                                            return
-                                        }
-                                        let mail=this.state.notifyEmail
-                                        var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/
-                                        if(!reg.test(mail)){ 
-                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.emailFormat"))
-                                            return
-                                        }
-                                        let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                        let permit=isOn?1:0;
-                                        let url=data.url+"/user/report/"+uuid+"/"+mail+"/"+barcode+"/"+permit+"/notify.jhtml"
-                                        fetch(url).then(res => res.text()).then((data) => {
-                                            if(data=="error"){
-                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"))
-                                            }else{
-                                                this.setState({switchon:isOn})
-                                            }
-                                        })
-                                    }}
-                                /> 
-                            </View>
-                            <View style={{width:"22%"}}><Text>{I18n.t("DnaReportActivity.allow")}</Text></View>
-                        </View>
                         <View style={{ width: "100%", height: 10 }}></View>
                         <View style={{ width: "90%", alignItems: "center" }}>
                             {this.state.statusbar ? 
@@ -342,14 +283,10 @@ export default class DnaReportActivity extends Component<Props> {
                             {this.state.itemBox ?
                                 this.state.itemBox.map((barcode, i) => {
                                     let j = i
-                                    console.info(barcode)
                                     return <TouchableOpacity key={barcode.val}
                                         onPress={() => {
                                             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                             fetch(data.url+"/user/report/"+uuid+"/"+barcode.val+"/findEmail.jhtml").then(data=>data.json()).then((udata)=>{
-                                                this.setState({notifyEmail:udata.email})
-                                                let isOn=udata.permit==1?true:false
-                                                this.setState({switchon:isOn})
                                                 if (barcode.stat == "ready") {
                                                     this.setState({ animating: true })
                                                     this.state.ageBox[j] = this.state.ageBox[j] == "" ? 0 : this.state.ageBox[j]
@@ -389,7 +326,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             })
                                            
                                         }}>
-                                        <View key={barcode.val} style={{ width: "100%", height: 110,borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row",borderStyle:"dashed" }}>
+                                        <View key={barcode.val} style={{ width: "100%", height: 145,borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row",borderStyle:"dashed" }}>
                                             <View style={{width:"70%",borderStyle:"dotted"}}>
                                                 <View style={{width:"100%",height:10}}></View>
                                                 <View style={{ width: "100%", height: 20 }}>
@@ -400,10 +337,14 @@ export default class DnaReportActivity extends Component<Props> {
                                                     <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.regtime')}：{barcode.createTime}</Text>
                                                 </View>
                                                 <View style={{ width: "100%", height: 20 }}>
-                                                    <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.endtime')}：{barcode.endtime}</Text>
+                                                    {barcode.stat=="ready"?
+                                                        <Text style={{fontWeight:"bold",color:"red"}}>{I18n.t('DnaReportActivity.status')}：{barcode.endtime}</Text>
+                                                        :          
+                                                        <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.endtime')}：{barcode.endtime}</Text>
+                                                    }
                                                 </View>
 
-                                                <View style={{ width: "100%", height: 70,flexDirection:"row"}}>
+                                                <View style={{ width: "100%",flexDirection:"row"}}>
                                                     <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.yourage')}：</Text>
                                                     <TextInput style={{
                                                         height: 20,
@@ -424,6 +365,69 @@ export default class DnaReportActivity extends Component<Props> {
                                                         }}
                                                     />
                                                 </View>
+
+                                                <View style={{width:"100%", flexDirection: "row"}}>
+                                                    <View style={{width:"80%"}}>
+                                                        <Input style={{
+                                                            height: 30, 
+                                                            width: '100%',
+                                                            borderWidth: 1,
+                                                            borderColor: '#b3b3b3',
+                                                            fontSize: 16,
+                                                            borderColor: '#0071BC', 
+                                                            borderWidth: 1,
+                                                            paddingVertical: 0
+                                                        }}
+                                                            errorInputContainerStyle={{ borderColor: '#FF0000', borderWidth: 0, borderRadius: 5 }}
+                                                            errorMessage={I18n.t("LoginActivity.mailboxformatFail")}
+                                                            placeholder={I18n.t("RegisterActivity.email")} placeholderTextColor='#0071bc' validator="email"
+                                                            onValidatorExecuted={(isvalid) => {
+                                                            
+                                                            }}
+                                                            validatorExecutionDelay={100}
+                                                            onChangeText={(email) => {
+                                                                this.state.switchonBox[j]=false
+                                                                this.setState({switchonBox:this.state.switchonBox}) 
+                                                                this.state.emailBox[j]=email
+                                                                this.setState({emailBox:this.state.emailBox}) 
+                                                             }
+                                                            }
+                                                            defaultValue={barcode.email}
+                                                        />
+                                                    </View>
+                                                    <View style={{width:"2%"}}></View>
+                                                    <View style={{width:"30%"}}>
+                                                            <View style={{width:"100%",height:8}}></View>
+                                                            <ToggleSwitch   
+                                                                isOn={this.state.switchonBox[j]} 
+                                                                onColor="green" 
+                                                                offColor="grey" 
+                                                                labelStyle={{ color: "black", fontWeight: "900" }}
+                                                                size="small"
+                                                                onToggle={isOn =>{
+                                                                    let mail=this.state.emailBox[j]
+                                                                    let pattern=/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}/
+                                                                    if (!pattern.test(mail)) {
+                                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.emailFormat"))
+                                                                        return
+                                                                    } 
+                                                                    let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
+                                                                    let allow=isOn?1:0;
+                                                                    let url=data.url+"/user/report/"+uuid+"/"+mail+"/"+ barcode.val+"/"+allow+"/notify.jhtml"
+                                                                    fetch(url).then(res => res.text()).then((data) => {
+                                                                        if(data=="error"){
+                                                                            Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"))
+                                                                        }else{
+                                                                            this.state.switchonBox[j]=isOn
+                                                                            this.setState({switchonBox:this.state.switchonBox}) 
+                                                                        }
+                                                                    })
+                                                                }}
+                                                            /> 
+                                                            <Text style={{fontSize:10}}>{I18n.t("DnaReportActivity.allow")}</Text>
+                                                        </View>
+                                                    </View>
+                                                        
                                             </View>
                                             {/* <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View> */}
                                             <View style={{ width: "30%", height: "100%",alignItems:"center",justifyContent:"center" }}>

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-
-import { StyleSheet, Platform, StatusBar, Text, View, Image, ScrollView, ImageBackground, Dimensions, TouchableOpacity } from 'react-native';
-import Swiper from 'react-native-swiper';
-import VideoPlayer from 'react-native-video-controls';
-import { I18n } from '../locales/i18n';
-import Session from '../storage/Session';
-import data from '../appdata';
+import { StyleSheet, Modal, StatusBar, Text, View, Image, ScrollView, ImageBackground, Dimensions, TouchableOpacity,Button } from 'react-native';
+import Swiper from 'react-native-swiper'
+import VideoPlayer from 'react-native-video-controls'
+import { I18n } from '../locales/i18n'
+import { WebView } from 'react-native-webview'
+import DropdownAlert from 'react-native-dropdownalert'
+import Session from '../storage/Session'
+import data from '../appdata'
 export default class TabHomeActivity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
@@ -28,7 +29,9 @@ export default class TabHomeActivity extends Component<Props> {
         Session.save("launchershow", true);
         this.state = {
             user: null,
-            showAlert: false
+            display: false,
+            showAlert: false,
+            url:""
         };
     }
     showAlert = () => {
@@ -47,6 +50,7 @@ export default class TabHomeActivity extends Component<Props> {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
         });
+        this.dropDownAlertRef.alertWithType('success', I18n.t('TabHomeActivity.Tips'),I18n.t('TabHomeActivity.message'),{},5000)
     }
     render() {
         this.navigate = this.props.navigation;
@@ -66,8 +70,17 @@ export default class TabHomeActivity extends Component<Props> {
                     hidden={true}  //是否隐藏状态栏。  
                     translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
+                />
+                  {this.state.display == true ?
+                    <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
+                        <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
+                        <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
+                            <TouchableOpacity style={{ width: "100%", height: "100%" }}>
+                                <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
+                            </TouchableOpacity>
+                        </View>
+                    </Modal> : null
+                }
                 <View style={{ width: "100%", height: 345 }}>
 
                     <Swiper
@@ -204,7 +217,7 @@ export default class TabHomeActivity extends Component<Props> {
                             <View style={{ heigh: 89, width: '100%', justifyContent: 'space-around', flexDirection: 'row' }}>
                                 
                                 <View style={{ height: 112, width: '32%',}}>
-                                    <Text onPress={() => this.navigate.push("Mall")} style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16, }}>{I18n.t('TabHomeActivity.mark')}</Text>
+                                    <Text  style={{height:112,marginTop:45, paddingTop:34, textAlign:'center', color: '#ffffff', fontSize: 16, }}>{I18n.t('TabHomeActivity.mark')}</Text>
                                 </View>
                                 <View style={{ height: 145, width: '36%', alignSelf: 'center',}}>
                                     <Text onPress={() => {
@@ -250,10 +263,10 @@ export default class TabHomeActivity extends Component<Props> {
                         <View style={{ borderBottomWidth: 1, borderColor: '#000000', width: '7%', alignSelf: 'center' }}></View>
                         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                <Text style={{ marginRight: 5, fontSize: 24, textAlign: 'right', fontFamily: 'NotoSansHans-Light', color: '#b2b2b2', textDecorationLine: 'line-through' }}>$249</Text>
+                                {/* <Text style={{ marginRight: 5, fontSize: 24, textAlign: 'right', fontFamily: 'NotoSansHans-Light', color: '#b2b2b2', textDecorationLine: 'line-through' }}>$249</Text> */}
                             </View>
                             <View style={{ width: '40%', alignSelf: 'flex-start' }}>
-                                <Text style={{ marginLeft: 5, fontSize: 24,fontWeight: '800', textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#f43d2a' }}>$145</Text>
+                                {/* <Text style={{ marginLeft: 5, fontSize: 24,fontWeight: '800', textAlign: 'left', fontFamily: 'NotoSansHans-Light', color: '#f43d2a' }}>$145</Text> */}
                             </View>
                         </View>
                     </View>
@@ -265,11 +278,11 @@ export default class TabHomeActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight:23,marginBottom:12 }}>{I18n.t('TabHomeActivity.1ml2')}</Text>
                         <View style={{ backgroundColor: '#0071bc', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '85%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$145</Text></Text>
+                                {/* <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.bio2')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$145</Text></Text> */}
                             </View>
 
                             <View style={{ width: '15%', height: 45, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
+                                <TouchableOpacity onPress={() =>{this.setState({ url: "https://epi-age.com/product/epiage/" }); this.setState({ display: true })}}>
                                     <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                                 </TouchableOpacity>
                             </View>
@@ -324,11 +337,11 @@ export default class TabHomeActivity extends Component<Props> {
                         <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, color: '#4d4d4d', lineHeight: 23,marginBottom:12 }}>{I18n.t('TabHomeActivity.supplement')}</Text>
                         <View style={{ backgroundColor: '#662D86', borderRadius: 5, height: 45, flexDirection: 'row', }}>
                             <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                                <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 16, textAlign: 'center', color: '#f2e421' }}>$42</Text></Text>
+                                {/* <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 16, textAlign: 'center', color: '#ffffff' }}>{I18n.t('TabHomeActivity.sam')}&nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 16, textAlign: 'center', color: '#f2e421' }}>$42</Text></Text> */}
                             </View>
 
                             <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
-                                <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
+                                <TouchableOpacity onPress={() =>  {this.setState({ url: "https://epi-age.com/product/episame/" }); this.setState({ display: true })}}>
                                     <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                                 </TouchableOpacity>
                             </View>
@@ -460,6 +473,15 @@ export default class TabHomeActivity extends Component<Props> {
                     <Text style={{width:'90%', fontFamily: 'FontAwesome',alignSelf:'center', textAlign: 'center', fontSize: 14, lineHeight: 16 }}>{I18n.t('TabHomeActivity.disclaimertext')}</Text>
                     <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12,marginTop:34 }}>{I18n.t('TabHomeActivity.allright')}</Text>
                 </View>
+                <DropdownAlert ref={ref => this.dropDownAlertRef = ref}  onTap={()=>{
+                     this.state.user == null ?
+                     this.navigate.push("Login")
+                     :
+                     this.state.user.privatekey ?
+                         this.navigate.push("DnaReport")
+                         :
+                         this.navigate.push("RasEncryptionActivity")
+                }} />
             </ScrollView >
 
         );

@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet,StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
-import { NavigationActions, StackActions } from 'react-navigation';
-import { WebView } from 'react-native-webview';
-import { TabViewAnimated, TabBar, TabView, SceneMap } from 'react-native-tab-view';
-import { I18n } from '../locales/i18n';
+import {StyleSheet,StatusBar, Dimensions, Text, View, Image, ScrollView, Button, TouchableOpacity, Modal } from 'react-native';
+import { WebView } from 'react-native-webview'
+import {TabBar, TabView, SceneMap } from 'react-native-tab-view'
+import { I18n } from '../locales/i18n'
 
 const FirstRoute = () => (
     <View style={{ width: '90%', alignSelf: 'center' }}>
@@ -159,7 +158,7 @@ export default class HuiliActivity extends Component<Props> {
                 </StatusBar>
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
+                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} startInLoadingState={true} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
                             <TouchableOpacity style={{ width: "100%", height: "100%" }}>
                                 <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />

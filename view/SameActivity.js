@@ -24,11 +24,10 @@ export default class SameActivity extends Component<Props> {
                     hidden={true}  //是否隐藏状态栏。  
                     translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
-                >
-                </StatusBar>
+                />
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
-                        <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
+                        <WebView startInLoadingState={true} ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} />
                         <View style={{ width: "100%", height: 35, backgroundColor: "#0071BC" }}>
                             <TouchableOpacity style={{ width: "100%", height: "100%" }}>
                                 <Button style={{ width: "100%", height: "100%", backgroundColor: "#0071BC" }} title="close" onPress={() => { { this.setState({ display: false }) } }} />
@@ -51,10 +50,10 @@ export default class SameActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#662D86', height: 45, flexDirection: 'row', }}>
 
                     <View style={{ width: '80%', height: 45, justifyContent: 'center', borderRightWidth: 1, borderRightColor: '#ffffff' }}>
-                        <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$42</Text></Text>
+                        {/* <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 14, textAlign: 'center', color: '#ffffff' }}>{I18n.t('SameActivity.same')} &nbsp;&nbsp;&nbsp;<Text style={{ fontSize: 14, textAlign: 'center', color: '#f2e421' }}>$42</Text></Text> */}
                     </View>
                     <View style={{ width: '20%', height: 45, justifyContent: 'center' }}>
-                        <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
+                        <TouchableOpacity  onPress={() =>  {this.setState({ url: "https://epi-age.com/product/episame/" }); this.setState({ display: true })}}>
                             <Image style={{ width: '100%', height: 34 }} source={require('../image/icons/cart.png')} resizeMode="contain" />
                         </TouchableOpacity>
                     </View>

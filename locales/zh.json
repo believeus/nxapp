@@ -297,7 +297,8 @@
         "regtime":"註冊時間",
         "baseinfo":"基本資訊",
         "endtime":"預計完成檢測時間",
-        "yourbarcode":"輸入條碼"
+        "yourbarcode":"輸入條碼",
+        "done":"檢測已完成"
     },
     "user_profile": {
         "title": "Your Profile"

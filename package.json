@@ -42,6 +42,7 @@
     "react-native-collapsible": "^1.5.1",
     "react-native-device-info": "^2.3.2",
     "react-native-dimension": "^1.0.6",
+    "react-native-dropdownalert": "^4.2.1",
     "react-native-echarts-wrapper": "^1.4.5",
     "react-native-elements": "^1.1.0",
     "react-native-f2chart": "^1.1.0",
