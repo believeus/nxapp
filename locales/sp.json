@@ -228,7 +228,16 @@
         "stop":"Deja de fumar",
         "recommended":"La cantidad diaria recomendada de vitamina D es de 400 unidades internacionales (UI) para niños de hasta 12 meses, 600 UI para edades de 1 a 70 años y 800 UI para personas mayores de 70 años.",
         "daily":"La cantidad diaria recomendada de vitamina C para hombres adultos es de 90 miligramos y para mujeres adultas es de 75 miligramos.",
-        "women":"Recomendación: la cantidad diaria recomendada de vitamina A es de 900 microgramos (mcg) para hombres adultos y 700 mcg para mujeres adultas."
+        "women":"Recomendación: la cantidad diaria recomendada de vitamina A es de 900 microgramos (mcg) para hombres adultos y 700 mcg para mujeres adultas.",
+        "tmgwebsite":"examine.com",
+        "tmg":"Trimetilglicina",
+        "tmg-recommon":"La betaína (trimetilglicina) es un metabolito activo de colina en el cuerpo y un componente de la remolacha. Sirve un papel vital en la metilación en el cuerpo junto con el folato, y es un osmorregulador como la creatina. La betaína también es una posible ayuda ergogénica.",
+        "lipoicwebsite":"www.drugs.com",
+        "lipoic":"Ácido alfa lipoico",
+        "lipoic-recommon":"El ácido alfa lipoico se ha utilizado en medicina alternativa como una ayuda posiblemente efectiva para perder peso, tratar el dolor del nervio diabético, curar heridas, disminuir el azúcar en la sangre, mejorar la decoloración de la piel causada por el vitiligo y disminuir las complicaciones de la cirugía de revascularización coronaria (CABG) . El ácido alfa lipoico puede haberse combinado con otras plantas o extractos en una preparación específica para tratar estas afecciones.",
+        "vitaminD2website":"lesswrong.com",
+        "vitaminD2":"vitaminD2/vitaminK2",
+        "vitaminD2-recommon":"Personalmente, decidí consumir cada mañana 10 000 UI de vitamina D3 y 200 µg de K2 (all-trans MK7) y creo que probablemente sea beneficioso para muchos compañeros racionalistas que no pasan mucho tiempo exponiendo mucha piel a el sol para tomar los mismos suplementos."
 
     },
     "DnaReportActivity": {
@@ -345,7 +354,7 @@
         "zhiyuan": "Zhiyuan Lv",
         "zhiyuantitle": "Gerente de laboratorio",
         "Shafaat":"Profesor shafaat a. Rabbani.",
-        "Shafaatmsg":"El profesor Rabbani publicó más de 100 manuscritos con 5.899 citas, con un índice H de 45 y un índice I10 de 84.El profesor Rabbani fue jurado experto de CIHR, CRS, cbcra, DoD, US va y komen.A lo largo de los años, el profesor Rabbani ha sido miembro o asesor de consejos científicos de varias empresas farmacéuticas y de biotecnología, como Anglo - Anglican, ASCorp, axys, edenton, American diagnosis, procorn.La solicitud que figura en mi currículum vitae.",
+        "Shafaatmsg":"El Dr. Rabbani es profesor de medicina en la Universidad McGill de Montreal, Canadá. También es miembro asociado de los Departamentos de Fisiología de Oncología en el Centro de Salud de la Universidad McGill. El Prof. Rabbani publicó más de 100 manuscritos, 5899 citas, el índice h es 45 y el índice i10 es 84. El Prof. Rabbani se ha desempeñado como revisor experto para CIHR, CRS, CBCRA, DOD, US VA, Komen. A lo largo de los años, el Prof. Rabbani se ha desempeñado como miembro de la junta asesora científica o consultor de varias compañías biotecnológicas y farmacéuticas como (Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).",
         "epidial": "Beijing Epidial Medical Diagnostic Technology Co., Ltd."
     },
     "ProfMosheActivity": {

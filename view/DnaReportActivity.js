@@ -130,7 +130,8 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(3);
+                    let naturally = window.parseFloat(data[i].naturally).
+                    ed(3);
                     let biological = window.parseFloat(data[i].biological).toFixed(2)
                     v.push([naturally, biological])
                 }
@@ -207,7 +208,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     this.setState({ display: true })
                                      //解密
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
-                                    fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode+"&email="+email).then(res => res.json()).then((data) => {
+                                    fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
                                         switch (data.status) {
                                             case "invalid":
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"));
@@ -493,7 +494,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
                                                     <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
-                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{(-1.6394+(Math.sqrt(2.6876+0.0288*-((parseFloat(this.state.biological))+7.5806))))/(-0.0144)}</Text>
+                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394+(Math.sqrt(2.6876+0.0288*-((parseFloat(this.state.biological))+7.5806))))/(-0.0144)).toFixed(2)}</Text>
                                             </View>
                                             :
                                             <View style={{ width: '100%', height: 34, flexDirection: 'column', }}>
@@ -502,7 +503,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
                                                     <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
-                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{(-1.6394+(Math.sqrt(2.6876+0.0288*-((parseFloat(this.state.biological))+7.5806))))/(-0.0144)}</Text>
+                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394+(Math.sqrt(2.6876+0.0288*-((parseFloat(this.state.biological))+7.5806))))/(-0.0144)).toFixed(2)}</Text>
                                             </View>
                                         }
 

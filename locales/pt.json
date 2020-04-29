@@ -229,7 +229,16 @@
         "stop":"Pare de fumar",
         "recommended":"A quantidade diária recomendada de vitamina D é de 400 unidades internacionais (UI) para crianças até 12 meses, 600 UI para idades de 1 a 70 anos e 800 UI para pessoas acima de 70 anos.",
         "daily":"A quantidade diária recomendada de vitamina C para homens adultos é de 90 miligramas e para mulheres adultas é de 75 miligramas.",
-        "women":"A quantidade diária recomendada de vitamina A é de 900 microgramas (mcg) para homens adultos e 700 mcg para mulheres adultas."
+        "women":"A quantidade diária recomendada de vitamina A é de 900 microgramas (mcg) para homens adultos e 700 mcg para mulheres adultas.",
+        "tmgwebsite":"examine.com",
+        "tmg":"Trimetilglicina",
+        "tmg-recommon":"A betaína (trimetilglicina) é um metabólito ativo da colina no organismo e um componente da beterraba. Ele desempenha um papel vital na metilação do corpo ao lado do folato e é um osmorregulador como a creatina. A betaína também é uma possível ajuda ergogênica.",
+        "lipoicwebsite":"www.drugs.com",
+        "lipoic":"Ácido alfa-lipóico",
+        "lipoic-recommon":"O ácido alfa-lipóico tem sido usado na medicina alternativa como uma ajuda possivelmente eficaz na perda de peso, no tratamento de dores nos nervos diabéticos, na cicatrização de feridas, na redução de açúcar no sangue, na melhora da descoloração da pele causada pelo vitiligo e na redução de complicações da cirurgia de revascularização do miocárdio (CRM) . O ácido alfa-lipóico pode ter sido combinado com outras plantas ou extratos em uma preparação específica para tratar essas condições.",
+        "vitaminD2website":"lesswrong.com",
+        "vitaminD2":"vitaminD2/vitaminK2",
+        "vitaminD2-recommon":"Pessoalmente, decidi consumir todas as manhãs 10.000 UI de vitamina D3 e 200 µg de K2 (all-trans MK7) e acredito que provavelmente seja benéfico para muitos colegas racionalistas que não passam muito tempo expondo muita pele a o sol para tomar os mesmos suplementos.",
 
     },
     "DnaReportActivity": {
@@ -341,7 +350,7 @@
         "zhiyuan": "Zhiyuan Lv  Ph.D.",
         "zhiyuantitle": "Gerente de laboratório (GZ)",
         "Shafaat":"Shafaat A. Rabbani",
-        "Shafaatmsg":"O Prof. Rabbani publicou Mais de 100 manuscritos 5899 citações, h index is 45 e I10 index is 84.O Prof. Rabbani atuou Como Revisor especializado EM CIHR, CRS, CBCRA, DOD, VA, Komen.Ao Longo DOS anos, o Prof. Rabbani TEM servido Como membro do Conselho de aconselhamento científico Ou consultor para várias empresas de biotecnologia e farmacêutica Como Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).Isto levou a várias colaborações com cientistas de renome, início de ensaios clínicos e emissão de várias patentes.Aplicações Como descrito no MEU curriculum vitae.",
+        "Shafaatmsg":"Dr. Rabbani é professor de medicina na McGill University Montreal, Canadá. Ele também é membro associado dos Departamentos de Fisiologia da Oncologia no McGill University Health Center. Rabbani publicou mais de 100 manuscritos, 5899 citações, o índice h é 45 e o índice i10 é 84. O professor Rabbani atuou como revisor especialista para CIHR, CRS, CBCRA, DOD, VA dos EUA, Komen. Ao longo dos anos, o Prof. Rabbani atuou como membro do conselho científico ou consultor de várias empresas de biotecnologia e farmacêuticas como (Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).",
         "epidial": "Beijing Epidial Medical Diagnostic Technology Co.,Ltd."
     },
     "ProfMosheActivity": {

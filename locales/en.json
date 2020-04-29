@@ -221,7 +221,18 @@
         "stop": "Stop Smoking",
         "recommended": "The recommended daily amount of vitamin D is 400 international units (IU) for children up to age 12 months, 600 IU for ages 1 to 70 years, and 800 IU for people over 70 years.",
         "daily": "The recommended daily amount of vitamin C for adult men is 90 milligrams and for adult women is 75 milligrams.",
-        "women": "The recommended daily amount of vitamin A is 900 micrograms (mcg) for adult men and 700 mcg for adult women."
+        "women": "The recommended daily amount of vitamin A is 900 micrograms (mcg) for adult men and 700 mcg for adult women.",
+        "tmgwebsite":"examine.com",
+        "tmg":"Trimethylglycine",
+        "tmg-recommon":"Betaine (trimethylglycine) is an active metabolite of Choline in the body and a component of beetroot. It serves a vital role in methylation in the body alongside folate, and is an osmoregulator like Creatine. Betaine is also a possible ergogenic aid.",
+        "lipoicwebsite":"www.drugs.com",
+        "lipoic":"Alpha Lipoic Acid",
+        "lipoic-recommon":"Alpha-lipoic acid has been used in alternative medicine as a possibly effective aid in weight loss, treating diabetic nerve pain, healing wounds, lowering blood sugar, improving skin discoloration caused by vitiligo, and decreasing complications of coronary artery bypass graft (CABG) surgery. Alpha-lipoic acid may have been combined with other plants or extracts in a specific preparation to treat these conditions.",
+        "vitaminD2website":"lesswrong.com",
+        "vitaminD2":"vitaminD2/vitaminK2",
+        "vitaminD2-recommon":"Personally, I decided to consume every morning 10 000 IU of Vitamin D3 and 200 µg of K2 (all-trans MK7) and believe that it’s likely beneficial for many fellow rationalists who don’t spend a lot of time exposing a lot of skin to the sun to take the same supplements.",
+
+
     },
     "DnaReportActivity": {
         "title": "Chronological Age",
@@ -271,7 +282,7 @@
         "is": "Your Epigenetic age is",
         "younger": "years lower than expected chronological age in the population.",
         "old": "years higher than expected chronological age in the population.",
-        "yourbio": "Your Epigenetic age(with number in it) ",
+        "yourbio": "Your Epigenetic age ",
         "otherolder": "The others, who were tested, whose Epigenetic age is higher than Chronological age",
         "otheryounger": "The others, who were tested, whose Epigenetic age is lower than Chronological age",
         "how":"HOW OLD ARE YOU?",
@@ -291,11 +302,11 @@
         "yourage": "Enter Your Age",
         "ageFormat": "Incorrect age format",
         "emailFormat":"Incorrect mailbox format",
-        "allow":"Allow Email notification",
-        "regtime":"Register Time",
+        "allow":"Allow email notification",
+        "regtime":"Register date",
         "baseinfo":"Basic information",
-        "endtime":"Completion time",
-        "yourbarcode":"Type Barcode",
+        "endtime":"Completion date",
+        "yourbarcode":"Enter Barcode",
         "done":"Test completed"
     },
     "user_profile": {

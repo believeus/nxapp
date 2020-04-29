@@ -51,7 +51,7 @@ export default MainActivity = createBottomTabNavigator({
         screen: TabMallActivity,
         navigationOptions: {
             //tab 的属性
-            tabBarLabel: 'SHOPPING',
+            tabBarLabel: 'SHOP',
             tabBarIcon: ({ tintColor, focused }) => (
                 focused ? <Image source={require("../image/tab/ic2_tab_mall.png")} style={styles.iconStyle} /> : <Image source={require("../image/tab/ic1_tab_mall.png")} style={styles.iconStyle} />
             )

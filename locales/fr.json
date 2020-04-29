@@ -218,8 +218,16 @@
         "stop":"arrêter de fumer",
         "recommended":"La quantité quotidienne recommandée de vitamine D est de 400 unités internationales (UI) pour les enfants jusqu'à 12 mois, 600 UI pour les enfants de 1 à 70 ans et 800 UI pour les personnes de plus de 70 ans.",
         "daily":"La quantité quotidienne recommandée de vitamine C pour les hommes adultes est de 90 milligrammes et pour les femmes adultes, de 75 milligrammes.",
-        "women":"La quantité quotidienne recommandée de vitamine A est de 900 microgrammes (mcg) pour les hommes adultes et de 700 mcg pour les femmes adultes."
-
+        "women":"La quantité quotidienne recommandée de vitamine A est de 900 microgrammes (mcg) pour les hommes adultes et de 700 mcg pour les femmes adultes.",
+        "tmgwebsite":"examine.com",
+        "tmg":"Triméthylglycine",
+        "tmg-recommon":"La bétaïne (triméthylglycine) est un métabolite actif de la choline dans le corps et un composant de la betterave. Il joue un rôle vital dans la méthylation dans le corps aux côtés du folate et est un osmorégulateur comme la créatine. La bétaïne est également une aide ergogène possible.",
+        "lipoicwebsite":"www.drugs.com",
+        "lipoic":"Acide alpha-lipoïque",
+        "lipoic-recommon":"L'acide alpha-lipoïque a été utilisé en médecine alternative comme une aide potentiellement efficace pour la perte de poids, le traitement des douleurs nerveuses diabétiques, la cicatrisation des plaies, la baisse de la glycémie, l'amélioration de la décoloration de la peau causée par le vitiligo et la diminution des complications de la chirurgie du pontage aortocoronarien (CABG) . L'acide alpha-lipoïque peut avoir été combiné avec d'autres plantes ou extraits dans une préparation spécifique pour traiter ces conditions.",
+        "vitaminD2website":"lesswrong.com",
+        "vitaminD2":"vitamine D2/vitamine K2",
+        "vitaminD2-recommon":"Personnellement, j'ai décidé de consommer chaque matin 10 000 UI de vitamine D3 et 200 µg de K2 (tout trans MK7) et je crois que c'est probablement bénéfique pour de nombreux collègues rationalistes qui ne passent pas beaucoup de temps à exposer beaucoup de peau à le soleil pour prendre les mêmes suppléments."
     },
     "DnaReportActivity": {
         "title": "âge chronologique",
@@ -330,7 +338,7 @@
         "zhiyuan": "Zhiyuan Lv",
         "zhiyuantitle": "Responsable de laboratoire",
         "Shafaat":"M. shafaat A. Rabbani",
-        "Shafaatmsg":"Le professeur Rabbani a publié plus de 100 manuscrits de 5 899 citations, l 'indice h 45 et l' indice i10 84.M. Rabbani a exercé les fonctions d'expert juriste auprès de cihr, CRS, cbcra, DoD, US - va et komen.Au fil des ans, M. Rabbani a été membre ou conseiller scientifique de diverses sociétés de biotechnologie et de produits pharmaceutiques, telles que Enterprise, aslicon, AXYS, edden, American diagnostics, projon.Demande décrite dans mon curriculum vitae.",
+        "Shafaatmsg":"Le Dr Rabbani est professeur de médecine à l'Université McGill Montréal, Canada. Il est également membre associé des départements de physiologie en oncologie du Centre universitaire de santé McGill. Le professeur Rabbani a publié plus de 100 manuscrits 5899 citations, l'indice h est 45 et l'indice i10 est 84. Le professeur Rabbani a été examinateur expert pour les IRSC, CRS, CBCRA, DOD, US VA, Komen. Au fil des ans, le professeur Rabbani a été membre du conseil consultatif scientifique ou consultant pour diverses sociétés biotechnologiques et pharmaceutiques comme (Amgen, AstraZeneca, Axys, Attenuon, America Diagnostica, Procyon).",
         "epidial": "Technologie de diagnostic médical Cie., Ltd de Beijing."
     },
     "ProfMosheActivity": {

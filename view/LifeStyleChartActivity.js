@@ -474,6 +474,81 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         }
                     />
                 </View>
+                <View style={{ width: "100%", height: 500,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.tmg')}
+                        refTitle={I18n.t('LifeStyleChartActivity.tmgwebsite')}
+                        refUrl="https://examine.com/supplements/trimethylglycine/"
+                        max={1000}
+                        min={0}
+                        sliderDefualtValue={80}
+                        yAxisLabelValue="tmg"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
+                        column="tmg"
+                        yAxisLine=""
+                        gradient={[["100%", "green", "1000"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.tmg-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
+                <View style={{ width: "100%", height: 550,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.lipoic')}
+                        refTitle={I18n.t('LifeStyleChartActivity.lipoicwebsite')}
+                        refUrl="https://www.drugs.com/mtm/alpha-lipoic-acid.html"
+                        max={600}
+                        min={0}
+                        sliderDefualtValue={80}
+                        yAxisLabelValue="lipoic"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.mg1')}
+                        column="lipoic"
+                        yAxisLine=""
+                        gradient={[["100%", "green", "600"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.lipoic-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
+                <View style={{ width: "100%", height: 550,marginTop:23,marginBottom:23 }}>
+                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
+                    <View style={{height:34,width:'100%'}}></View>
+                    <SliderLineChart
+                        title={I18n.t('LifeStyleChartActivity.vitaminD2')}
+                        refTitle={I18n.t('LifeStyleChartActivity.vitaminD2website')}
+                        refUrl="https://www.lesswrong.com/posts/c5aycbSsSc38XWPEc/taking-vitamin-d3-with-k2-in-the-morning"
+                        max={150000}
+                        min={0}
+                        sliderDefualtValue={280}
+                        yAxisLabelValue="lipoic"
+                        yAxisLabelName={I18n.t('LifeStyleChartActivity.iuday')}
+                        column="lipoic"
+                        yAxisLine=""
+                        gradient={[["100%", "green", "150000"]]}
+                        desc={
+                            <View style={{ width: "90%" }}>
+                                <Text style={{ fontSize: 12 }}>
+                                    <Text style={{ fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.recommendation')}</Text>
+                                    {I18n.t('LifeStyleChartActivity.vitaminD2-recommon')}
+                                    </Text>
+                            </View>
+                        }
+                    />
+                </View>
                 <TouchableOpacity >
                         <Button title="save" onPress={onButtonPress} color="#f7871e" />
                     </TouchableOpacity>
