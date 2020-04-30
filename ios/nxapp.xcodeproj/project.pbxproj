@@ -13,10 +13,9 @@
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* nxappTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* nxappTests.m */; };
 		014A35F12DCC4CEFBE6BE086 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A303D92128E94D2E9C8EFB5D /* Foundation.ttf */; };
-		0644D2B32379311100D5A568 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0644D2B22379311100D5A568 /* assets */; };
-		0644D2B42379311100D5A568 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 0644D2B22379311100D5A568 /* assets */; };
-		0644D2B72379312600D5A568 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0644D2B52379312600D5A568 /* index.ios.jsbundle */; };
-		0644D2B82379312600D5A568 /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0644D2B52379312600D5A568 /* index.ios.jsbundle */; };
+		063128A9245A782A003E044A /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
+		063128AC245A7A93003E044A /* index.ios.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 063128AA245A7A93003E044A /* index.ios.jsbundle */; };
+		063128AD245A7A93003E044A /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 063128AB245A7A93003E044A /* assets */; };
 		0644D2B92379312600D5A568 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0644D2B62379312600D5A568 /* main.jsbundle */; };
 		0644D2BA2379312600D5A568 /* main.jsbundle in Resources */ = {isa = PBXBuildFile; fileRef = 0644D2B62379312600D5A568 /* main.jsbundle */; };
 		06A37EA923753B96007BB5C6 /* libRNCamera.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06A37EA823753B86007BB5C6 /* libRNCamera.a */; };
@@ -570,8 +569,8 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* nxappTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = nxappTests.m; sourceTree = "<group>"; };
 		0428F2A10D4A4627958DD013 /* NotoSansHans-Regular.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansHans-Regular.otf"; path = "../assets/fonts/NotoSansHans-Regular.otf"; sourceTree = "<group>"; };
-		0644D2B22379311100D5A568 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../bundle/assets; sourceTree = "<group>"; };
-		0644D2B52379312600D5A568 /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.jsbundle; path = ../bundle/index.ios.jsbundle; sourceTree = "<group>"; };
+		063128AA245A7A93003E044A /* index.ios.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = index.ios.jsbundle; path = bundle/index.ios.jsbundle; sourceTree = "<group>"; };
+		063128AB245A7A93003E044A /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = bundle/assets; sourceTree = "<group>"; };
 		0644D2B62379312600D5A568 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = main.jsbundle; path = ../bundle/main.jsbundle; sourceTree = "<group>"; };
 		06A37EA323753B85007BB5C6 /* RNCamera.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCamera.xcodeproj; path = "../node_modules/react-native-camera/ios/RNCamera.xcodeproj"; sourceTree = "<group>"; };
 		06A37ECD23754973007BB5C6 /* RNCAsyncStorage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCAsyncStorage.xcodeproj; path = "../node_modules/@react-native-community/async-storage/ios/RNCAsyncStorage.xcodeproj"; sourceTree = "<group>"; };
@@ -682,6 +681,7 @@
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
 				133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */,
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
+				063128A9245A782A003E044A /* libRCTGeolocation.a in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
@@ -1019,9 +1019,9 @@
 		13B07FAE1A68108700A75B9A /* nxapp */ = {
 			isa = PBXGroup;
 			children = (
-				0644D2B52379312600D5A568 /* index.ios.jsbundle */,
+				063128AB245A7A93003E044A /* assets */,
+				063128AA245A7A93003E044A /* index.ios.jsbundle */,
 				0644D2B62379312600D5A568 /* main.jsbundle */,
-				0644D2B22379311100D5A568 /* assets */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -1921,8 +1921,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0644D2BA2379312600D5A568 /* main.jsbundle in Resources */,
-				0644D2B82379312600D5A568 /* index.ios.jsbundle in Resources */,
-				0644D2B42379311100D5A568 /* assets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1933,18 +1931,18 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 				E391BCA85FCE42A5A7043C03 /* NotoSansHans-Black.otf in Resources */,
-				0644D2B72379312600D5A568 /* index.ios.jsbundle in Resources */,
+				063128AC245A7A93003E044A /* index.ios.jsbundle in Resources */,
 				D8243C02E5CA407CB6152979 /* NotoSansHans-Bold.otf in Resources */,
 				15E676932E7D48719A8EAD14 /* NotoSansHans-DemiLight.otf in Resources */,
 				B395555A2DD94F9588FDF52C /* NotoSansHans-Light.otf in Resources */,
 				9754790F688C44B4BA84C95B /* NotoSansHans-Medium.otf in Resources */,
 				D74420DC48944F3EADC1A880 /* NotoSansHans-Regular.otf in Resources */,
+				063128AD245A7A93003E044A /* assets in Resources */,
 				6B605002C9154BE18F0AFAA0 /* NotoSansHans-Thin-Windows.otf in Resources */,
 				4E907DD4FFF2473892C27F00 /* AntDesign.ttf in Resources */,
 				72B2F12DF5434D95A7B11927 /* Entypo.ttf in Resources */,
 				87383308C7EF4F96BE64D965 /* EvilIcons.ttf in Resources */,
 				73F2DBCC9435415F8C06873D /* Feather.ttf in Resources */,
-				0644D2B32379311100D5A568 /* assets in Resources */,
 				F6A5487DE4764A0F85975DD1 /* FontAwesome.ttf in Resources */,
 				4DD59A0E4EB64698B04C695A /* FontAwesome5_Brands.ttf in Resources */,
 				AACF80AC1A014047BDA5E8E6 /* FontAwesome5_Regular.ttf in Resources */,
@@ -2254,7 +2252,7 @@
 				);
 				INFOPLIST_FILE = nxapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 15;
+				MARKETING_VERSION = 16;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -2330,7 +2328,7 @@
 				);
 				INFOPLIST_FILE = nxapp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 15;
+				MARKETING_VERSION = 16;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

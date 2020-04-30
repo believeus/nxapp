@@ -117,7 +117,7 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(3);
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
                     let biological = window.parseFloat(data[i].biological).toFixed(2)
                     v.push([naturally, biological])
                 }
@@ -149,7 +149,7 @@ export default class DnaReportActivity extends Component<Props> {
                     //当前时间离到期时间还剩多少毫秒到期
                     let d=(data[i].createTime+(21*24*3600*1000))-curtime
                     //(离到期时间一共有多少毫秒-当前时间离到期时间还剩多少毫秒到期)/离到期时间一共有多少毫秒
-                    let process=parseFloat(((c-d)/c)*100).toFixed(3)
+                    let process=parseFloat(((c-d)/c)*100).toFixed(2)
                     //console.info((data[i].uploadTime/(data[i].uploadTime+(21*24*3600*1000))))
                     let vbarcode = {}
                     vbarcode.val=data[i].barcode

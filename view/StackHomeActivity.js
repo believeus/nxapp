@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, Button } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation'
-import HomeActivity from './HomeActivity';
 import TabAboutActivity from './TabAboutActivity';
 import CompanyActivity from './CompanyActivity';
 import MainActivity from './MainActivity';
