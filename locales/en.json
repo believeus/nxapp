@@ -307,7 +307,9 @@
         "baseinfo":"Basic information",
         "endtime":"Completion date",
         "yourbarcode":"Enter Barcode",
-        "done":"Test completed"
+        "done":"Test completed",
+        "detectTime":"Detect Date",
+        "intransit":"in-transit"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -866,7 +868,7 @@
         "savekey2": "please save your only private key.",
         "unique": "The Unique Public key and Private key will be required to enter again if the user logs in again.",
         "failed": "Message, Key generation failed, please regenerate.",
-        "success": "Success, The Public key and Private key has been saved to this path:",
+        "success": "he public key and private key are very important to ensure your data security on this app. We will not save or have your public key and private key. Please take a screenshot or copy and paste to save the public key and private key so that you can easily fill in and get your data next time.",
         "generate": "Generate",
         "privatekey": "Private key",
         "publickey": "Public key",

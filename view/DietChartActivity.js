@@ -56,7 +56,7 @@ export default class DietChartActivity extends Component<Props> {
                                 onPress={() => {
                                     let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                     fetch(url).then(res => res.json()).then((data) => {
-                                        Alert.alert("detail", "Saturated Fat:" + data.nutrient_data[0].value + " g\nCalories:" + data.nutrient_data[1].value + " kcal")
+                                        Alert.alert("detail", "Saturated Fat:" + data.nutrient_data[0].value + " g\nCalories:" + data.nutrient_data[2].value + " kcal")
                                     })
                                 }} >
                                 <View style={{ width: "100%", alignItems: "center" }}>
@@ -87,13 +87,13 @@ export default class DietChartActivity extends Component<Props> {
                                             this.setState({ itembox: this.state.itembox })
                                             let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + item[i].id + "?"
                                             fetch(url).then(res => res.json()).then((data) => {
-                                                let foodstatus = "{\"foodname\":\"" + data.description + "\",\"calories\":" + data.nutrient_data[1].value + ",\"size\":1}"
+                                                let foodstatus = "{\"foodname\":\"" + data.description + "\",\"calories\":" + data.nutrient_data[2].value + ",\"size\":1}"
                                                 this.state.foodbox.splice(point, 1, foodstatus)
 
                                                 let diet = {};
                                                 diet.quantity = data.quantity + ""
                                                 diet.description = data.description
-                                                diet.calories = Number(parseFloat(data.nutrient_data[1].value).toFixed(3))
+                                                diet.calories = Number(parseFloat(data.nutrient_data[2].value).toFixed(3))
                                                 diet.fat = Number(parseFloat(data.nutrient_data[0].value).toFixed(3))
 
 
@@ -129,7 +129,7 @@ export default class DietChartActivity extends Component<Props> {
                                                                         let itemid = this["type$$" + item[i].id].props.itemid
                                                                         let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + itemid + "?"
                                                                         fetch(url).then(res => res.json()).then((data) => {
-                                                                            let calories = Number(parseFloat(data.nutrient_data[1].value).toFixed(3))
+                                                                            let calories = Number(parseFloat(data.nutrient_data[2].value).toFixed(3))
                                                                             let fat = Number(parseFloat(data.nutrient_data[0].value).toFixed(3))
                                                                             this.state.calories = Number(parseFloat(this.state.calories + calories).toFixed(3))
                                                                             this.state.fat = Number(parseFloat(this.state.fat + fat).toFixed(3))
@@ -145,7 +145,7 @@ export default class DietChartActivity extends Component<Props> {
                                                                         let itemid = this["type$$" + item[i].id].props.itemid
                                                                         let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + itemid + "?"
                                                                         fetch(url).then(res => res.json()).then((data) => {
-                                                                            let calories = Number(parseFloat(data.nutrient_data[1].value).toFixed(3))
+                                                                            let calories = Number(parseFloat(data.nutrient_data[2].value).toFixed(3))
                                                                             let fat = Number(parseFloat(data.nutrient_data[0].value).toFixed(3))
                                                                             this.state.calories = Number(parseFloat(this.state.calories - calories).toFixed(3))
                                                                             this.state.fat = Number(parseFloat(this.state.fat - fat).toFixed(3))
@@ -166,7 +166,7 @@ export default class DietChartActivity extends Component<Props> {
                                                                         let itemid = this["type$$" + item[i].id].props.itemid
                                                                         let url = "https://esha-nutrition-demo.azurewebsites.net/api/food/" + itemid + "?"
                                                                         fetch(url).then(res => res.json()).then((data) => {
-                                                                            let calories = Number(parseFloat(data.nutrient_data[1].value).toFixed(3)) * size
+                                                                            let calories = Number(parseFloat(data.nutrient_data[2].value).toFixed(3)) * size
                                                                             let fat = Number(parseFloat(data.nutrient_data[0].value).toFixed(3)) * size
                                                                             this.state.calories = Number(parseFloat(this.state.calories - calories).toFixed(3))
                                                                             this.state.fat = Number(parseFloat(this.state.fat - fat).toFixed(3))
@@ -273,10 +273,9 @@ export default class DietChartActivity extends Component<Props> {
                             <View style={{ width: "60%" }}><Text style={{ textAlign: "center" }}>{this.state.fat} {I18n.t('DietChartActivity.g')}</Text></View>
                         </View>
                     </View>
-                    <View style={{ width: "100%", alignItems: "center", height: 15 }}>
+                    <View style={{ width: "100%", alignItems: "center", height: 30 }}>
                         <View style={{ width: "90%", height: "100%" }}>
-                            <TouchableOpacity>
-                                <Button onPress={() => {
+                                <Button style={{width:"100%",height:"100%"}} onPress={() => {
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     //解密
                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
@@ -290,7 +289,6 @@ export default class DietChartActivity extends Component<Props> {
                                         this.dietchart.load()
                                     })
                                 }} title="save"></Button>
-                            </TouchableOpacity>
                         </View>
                     </View>
                     <View style={{ width: "100%", height: 30 }}></View>

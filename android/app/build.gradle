@@ -110,7 +110,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 36
-        versionName "18.0.0"
+        versionName "1.0.0"
         missingDimensionStrategy 'react-native-camera', 'general'
         // ndk {
         //    abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
@@ -161,7 +161,7 @@ android {
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
-                        versionCodes.get(abi) * 126488965 + defaultConfig.versionCode
+                        versionCodes.get(abi) * 126489965 + defaultConfig.versionCode
             }
         }
     }

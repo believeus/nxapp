@@ -117,7 +117,7 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(3);
                     let biological = window.parseFloat(data[i].biological).toFixed(2)
                     v.push([naturally, biological])
                 }
@@ -145,11 +145,11 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
                     //离到期时间一共有多少毫秒
-                    let c=(data[i].createTime+(21*24*3600*1000))-data[i].createTime
+                    let c=(data[i].detectTime+(21*24*3600*1000))-data[i].detectTime
                     //当前时间离到期时间还剩多少毫秒到期
-                    let d=(data[i].createTime+(21*24*3600*1000))-curtime
+                    let d=(data[i].detectTime+(21*24*3600*1000))-curtime
                     //(离到期时间一共有多少毫秒-当前时间离到期时间还剩多少毫秒到期)/离到期时间一共有多少毫秒
-                    let process=parseFloat(((c-d)/c)*100).toFixed(2)
+                    let process=parseFloat(((c-d)/c)*100).toFixed(3)
                     //console.info((data[i].uploadTime/(data[i].uploadTime+(21*24*3600*1000))))
                     let vbarcode = {}
                     vbarcode.val=data[i].barcode
@@ -157,9 +157,13 @@ export default class DnaReportActivity extends Component<Props> {
                     vbarcode.naturally = data[i].naturally
                     vbarcode.biological = data[i].biological 
                     vbarcode.createTime=new Date(data[i].createTime).toLocaleDateString()
-                    vbarcode.endtime=(data[i].status=="ready")?I18n.t("DnaReportActivity.done"):new Date(data[i].createTime+(21*24*3600*1000)).toLocaleDateString()
+                    vbarcode.detectTime=(data[i].status=="in-transit")?I18n.t("DnaReportActivity.intransit"):new Date(data[i].detectTime).toLocaleDateString()
+                    if(data[i].status=="in-transit"){vbarcode.endtime=I18n.t("DnaReportActivity.intransit")}
+                    else {vbarcode.endtime=(data[i].status=="ready")?I18n.t("DnaReportActivity.done"):new Date(data[i].detectTime+(21*24*3600*1000)).toLocaleDateString()}
                     vbarcode.email=data[i].email
-                    vbarcode.processing=(data[i].status=="ready")?100:process
+                    if(data[i].status=="in-transit") vbarcode.processing=0
+                    else if(data[i].status=="ready")  vbarcode.processing=100
+                    else vbarcode.processing=process
                     vbarcode.switchon=data[i].allow==1?true:false
                     this.state.itemBox.push(vbarcode)
                     this.state.ageBox[i] = vbarcode.naturally
@@ -212,7 +216,23 @@ export default class DnaReportActivity extends Component<Props> {
                                         switch (data.status) {
                                             case "invalid":
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.invalid"));
-                                                break;
+                                                break
+                                            case "in-transit":
+                                                var barcode = {}
+                                                barcode.val = this.state.barcode
+                                                barcode.stat = data.status
+                                                barcode.createTime="in-transit"
+                                                barcode.endtime="in-transit"
+                                                barcode.processing=0
+                                                barcode.naturally = 0
+                                                barcode.switchon=false
+                                                if (JSON.stringify(this.state.itemBox).indexOf(barcode.val) == -1) {
+                                                    this.state.itemBox.push(barcode)
+                                                    this.setState({ itemBox: this.state.itemBox })
+                                                    this.setState({ statusbar: true })
+                                                }
+                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"))
+                                                break    
                                             case "pending":
                                                 var barcode = {}
                                                 barcode.val = this.state.barcode
@@ -327,7 +347,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             })
                                            
                                         }}>
-                                        <View key={barcode.val} style={{ width: "100%", height: 145,borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row",borderStyle:"dashed" }}>
+                                        <View key={barcode.val} style={{ width: "100%", height: 155,borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row",borderStyle:"dashed" }}>
                                             <View style={{width:"70%",borderStyle:"dotted"}}>
                                                 <View style={{width:"100%",height:10}}></View>
                                                 <View style={{ width: "100%", height: 20 }}>
@@ -338,13 +358,17 @@ export default class DnaReportActivity extends Component<Props> {
                                                     <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.regtime')}：{barcode.createTime}</Text>
                                                 </View>
                                                 <View style={{ width: "100%", height: 20 }}>
+                                                    <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.detectTime')}：{barcode.detectTime}</Text>
+                                                </View>
+                                                <View style={{ width: "100%", height: 20 }}>
                                                     {barcode.stat=="ready"?
                                                         <Text style={{fontWeight:"bold",color:"red"}}>{I18n.t('DnaReportActivity.status')}：{barcode.endtime}</Text>
                                                         :          
                                                         <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.endtime')}：{barcode.endtime}</Text>
                                                     }
                                                 </View>
-
+                                                {barcode.stat=="in-transit"?
+                                                    null:
                                                 <View style={{ width: "100%",flexDirection:"row"}}>
                                                     <Text style={{fontWeight:"bold",color:"#0071bc"}}>{I18n.t('DnaReportActivity.yourage')}：</Text>
                                                     <TextInput style={{
@@ -365,8 +389,9 @@ export default class DnaReportActivity extends Component<Props> {
                                                             this.setState({ ageBox: this.state.ageBox })
                                                         }}
                                                     />
-                                                </View>
-
+                                                </View>}
+                                                {barcode.stat=="in-transit"?
+                                                    null:
                                                 <View style={{width:"100%", flexDirection: "row"}}>
                                                     <View style={{width:"80%"}}>
                                                         <Input style={{
@@ -428,7 +453,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                             <Text style={{fontSize:10}}>{I18n.t("DnaReportActivity.allow")}</Text>
                                                         </View>
                                                     </View>
-                                                        
+                                                }    
                                             </View>
                                             {/* <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View> */}
                                             <View style={{ width: "30%", height: "100%",alignItems:"center",justifyContent:"center" }}>
@@ -438,9 +463,8 @@ export default class DnaReportActivity extends Component<Props> {
                                                         borderWidth={20}
                                                         color="#3399FF"
                                                         shadowColor="#999"
-                                                        bgColor="#fff"
-                                                    >
-                                                    <Text style={{ fontSize: 12,fontWeight:'bold' }}>{barcode.processing}%</Text>
+                                                        bgColor="#fff">
+                                                        <Text style={{ fontSize: 12,fontWeight:'bold' }}>{barcode.processing}%</Text>
                                                 </ProgressCircle>
                                             </View> 
 

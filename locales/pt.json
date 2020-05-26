@@ -311,7 +311,9 @@
         "regtime":"Register Time",
         "endtime":"Completo",
         "yourbarcode":"Type Barcode",
-        "done":"Ensaio concluído"
+        "done":"Ensaio concluído",
+        "detectTime":"Tempo de Detecção",
+        "intransit":"Enviando"
     },
     "user_profile": {
         "title": "Seu perfil"

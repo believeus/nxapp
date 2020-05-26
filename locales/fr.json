@@ -299,7 +299,10 @@
         "baseinfo":"Renseignements de base",
         "endtime":"Finir",
         "yourbarcode":"Code à barres",
-        "done":"Test terminé."
+        "done":"Test terminé.",
+        "detectTime":"Temps de détection",
+        "intransit":"Envoi postal"
+
     },
     "user_profile": {
         "title": "Your Profile"
@@ -856,7 +859,7 @@
         "savekey2": "Sauvegardez votre paire de clés publique et privée unique.",
         "unique": "Si l'utilisateur se déconnecte et se reconnecte, il devra entrer à nouveau les clés publique et privée uniques.",
         "failed": "Message, la génération de clé a échoué, veuillez régénérer!",
-        "success": "Succès, les clés publique et privée ont été enregistrées sur votre téléphone.",
+        "success": "La clé publique et la clé privée sont très importantes pour assurer la sécurité de vos données sur cette application. Nous ne conserverons ni n'aurons votre clé publique et votre clé privée. Veuillez prendre une capture d'écran ou copier-coller pour enregistrer la clé publique et la clé privée afin que vous puissiez facilement remplir et obtenir vos données la prochaine fois.",
         "generate": "produire",
         "privatekey": "Clé privée",
         "publickey": "Clé publique",

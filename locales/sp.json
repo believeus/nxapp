@@ -310,7 +310,9 @@
         "regtime":"Registro",
         "endtime":"Completar",
         "yourbarcode":"Código binario",
-        "done":"Detección completada."
+        "done":"Detección completada.",
+        "detectTime":"Comience a probar",
+        "intransit":"En tránsito"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -875,7 +877,7 @@
         "savekey2": ",guarda tu única clave secreta.",
         "unique": "Se requiere la clave privada única para ingresar nuevamente si el usuario inicia sesión nuevamente después de cerrar sesión.",
         "failed": "Сообщение, Генерация ключа не удалась, пожалуйста, восстановите.",
-        "success": "Correcto, la clave pública y la clave privada se guardaron en esta ruta:",
+        "success": "La clave pública y la clave privada son muy importantes para garantizar la seguridad de sus datos en esta aplicación. No guardaremos ni tendremos su clave pública y su clave privada. Tome una captura de pantalla o copie y pegue para guardar la clave pública y la clave privada para que pueda completarla fácilmente y obtener sus datos la próxima vez.",
         "generate": "GENERAR",
         "privatekey": "Llave privada",
         "publickey": "Llave pública",
