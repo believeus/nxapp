@@ -29,7 +29,7 @@ export default class BMIChart extends Component<Props> {
                     },
                 ],
                 xAxis: {
-                    name: 'data',
+                    name: 'date',
                     nameLocation: 'middle',
                     nameGap: 20,
                     type: "category",
