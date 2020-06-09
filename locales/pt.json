@@ -870,7 +870,7 @@
         "savekey2": ", salve sua única chave secreta.",
         "unique": "A chave pública exclusiva e a chave privada serão necessárias para entrar novamente se o usuário efetuar login novamente.",
         "failed": "Mensagem, Falha na geração da chave, gere novamente.",
-        "success": "Êxito, A chave pública e a chave privada foram salvas neste caminho:",
+        "success": "A chave pública e a chave privada são muito importantes para garantir sua segurança de dados neste aplicativo. Não salvaremos ou teremos sua chave pública e chave privada. Faça uma captura de tela ou copie e cole para salvar a chave pública e a chave privada, para que você possa preencher e obter seus dados facilmente da próxima vez.",
         "generate": "GERAR",
         "privatekey": "Chave privada",
         "publickey": "Chave pública",

@@ -331,14 +331,14 @@ export default class LifeStyleChartActivity extends Component<Props> {
                         title={I18n.t('LifeStyleChartActivity.vitaminc')}
                         refTitle={I18n.t('LifeStyleChartActivity.mayoclinic')}
                         refUrl="https://www.mayoclinic.org/drugs-supplements-vitamin-c/art-20363932"
-                        max={150}
+                        max={450}
                         min={0}
                         sliderDefualtValue={80}
                         yAxisLabelValue="vitaminC"
                         yAxisLabelName="mg/day"
                         column="vitaminC"
                         yAxisLine="75@90"
-                        gradient={[["100%", "green", "150"]]}
+                        gradient={[["100%", "green", "450"]]}
                         desc={
                             <View style={{ width: "90%" }}>
                                 <Text style={{ fontSize: 12 }}>

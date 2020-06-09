@@ -169,7 +169,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                             //将私钥和公钥写入文件中
                                             RNFS.writeFile(path, this.state.publickey + ":" + this.state.privatekey, 'utf8')
                                                 .then((success) => {
-                                                    Alert.alert("Message", I18n.t("RasEncryptionActivity.success") + "\n" + path, [{
+                                                    Alert.alert("Message", I18n.t("RasEncryptionActivity.success"), [{
                                                         text: "OK", onPress: () => {
                                                             const resetAction = StackActions.reset({
                                                                 index: 0,
