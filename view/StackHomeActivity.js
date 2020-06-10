@@ -38,12 +38,12 @@ import QAActivity from './QAActivity';
 import QuesnoteActivity from './QuesnoteActivity';
 import Manual1Activity from './Manual1Activity';
 import Manual2Activity from './Manual2Activity';
-import SavepdfpathActivity from './SavepdfpathActivity'
-import PdfViewActivity from './PdfViewActivity'
-import ScannerAcitivity from './ScannerAcitivity'
-import LangActivity from './LangActivity'
-import ShafaatActivity from './ShafaatActivity'
-
+import SavepdfpathActivity from './SavepdfpathActivity';
+import PdfViewActivity from './PdfViewActivity';
+import ScannerAcitivity from './ScannerAcitivity';
+import LangActivity from './LangActivity';
+import ShafaatActivity from './ShafaatActivity';
+import AgeAccelerateActivity from './AgeAccelerateActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -171,7 +171,10 @@ export const RootStack = createStackNavigator(
         },
         ShafaatActivity:{
             screen:ShafaatActivity
-        }
+        },
+        AgeAccelerate: {
+            screen: AgeAccelerateActivity
+        },
     },
     {
         initialRouteName: 'Main',

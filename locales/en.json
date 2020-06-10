@@ -280,6 +280,8 @@
         "chro": "/Chronological age/",
         "bio": "/Epigenetic age/",
         "is": "Your Epigenetic age is",
+        "lower":"years lower than chronological age in the population.",
+        "higher":"years higher than chronological age in the population.",
         "younger": "years lower than expected chronological age in the population.",
         "old": "years higher than expected chronological age in the population.",
         "yourbio": "Your Epigenetic age ",
@@ -288,7 +290,8 @@
         "how":"HOW OLD ARE YOU?",
         "why":"Why is your",
         "epigenetic":"'Epigenetic age' important?",
-        "calculate":"Expected Chronological age calculator",
+        "calculate":"Expected Chronological Age Calculator",
+        "acceleration":"Age Acceleration Calculator",
         "buildPDF": "Build PDF",
         "viewPdf": "View PDF",
         "pdfsuccess": "The PDF is saved successfully. Click View PDF to view the PDF file",
@@ -934,5 +937,9 @@
         "Russian": "Russian",
         "Portuguese": "Portuguese",
         "Chinese": "Chinese(HK)"
+    },
+    "AgeAccelerateActivity":{
+        "title":"Age Acceleration"
+
     }
 }

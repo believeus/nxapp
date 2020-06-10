@@ -16,3 +16,9 @@ Changing
 #import <React/RCTImageLoaderProtocol.h>
 to
 #import <React/RCTImageLoader.h>
+
+
+android 需要安装  ios安装不了经纬度定位的组件，需要卸载
+yarn add @react-native-community/geolocation
+react-native link @react-native-community/geolocation
+yarn add react-native-location

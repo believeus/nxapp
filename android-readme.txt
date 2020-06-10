@@ -1,6 +1,12 @@
 一、Android版本必须安装react-native 0.60.5版本
 
 二、在android版本必须安装react-native 0.60.5版本必须修改如下代码
+
+android 需要安装  ios安装不了经纬度定位的组件
+yarn add @react-native-community/geolocation
+react-native link @react-native-community/geolocation
+yarn add react-native-location
+
 修改
 D:\usr\local\workspace\nxapp\node_modules\react-native-swiper\src\index.js
 delete: ViewpagerAndroid
