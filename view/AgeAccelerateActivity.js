@@ -29,8 +29,8 @@ export default class AgeAccelerateActivity extends Component<Props> {
                 >
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 45 }}>
-                    <Text style={{ fontSize: 23,fontWeight:'bold', fontFamily: 'FontAwesome', height: 67, textAlign: 'center' }}>Age acceleration calculator</Text>
-                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, height: 34 }}>Please enter your Chronological age</Text>
+                    <Text style={{ fontSize: 23,fontWeight:'bold', fontFamily: 'FontAwesome', height: 67, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.accecalcul")}</Text>
+                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, height: 34 }}>{I18n.t("AgeAccelerateActivity.enterchro")}</Text>
                     <TextInput style={{
                         width: "45%",
                         height: 34,
@@ -54,7 +54,7 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     />
 
                     <View style={{ height: 23, width: '100%' }}></View>
-                    <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', height: 34 }}>Please enter your Epigenetic age</Text>
+                    <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', height: 34 }}>{I18n.t("AgeAccelerateActivity.enterepi")}</Text>
                     <TextInput style={{
                         width: "45%",
                         height: 34,
@@ -78,12 +78,12 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     />
                     <View style={{ height: 56, width: '100%' }}></View>
 
-                    <Text style={{ fontSize: 23, fontWeight: '600', fontFamily: 'FontAwesome', height: 45, textAlign: 'center' }}>Your age acceleration is:</Text>
+                    <Text style={{ fontSize: 23, fontWeight: '600', fontFamily: 'FontAwesome', height: 45, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.youraccis")}</Text>
                     {this.state.inputValue2 == "" || this.state.inputValue1 == "" ?
                         null
                         :
                         <View style={{height:56,width:'45%', alignItems:'center',alignSelf:'center', backgroundColor:'#2F6FB6',borderRadius:5}}>
-                            <Text style={{ fontSize: 45, fontWeight: '600', fontFamily: 'FontAwesome', lineHeight: 67,color:'#ffffff', textAlign:'center' }}> {Math.abs(this.state.inputValue2 - (0.902 * this.state.inputValue1 + 4.564)).toFixed(2)}</Text>
+                            <Text style={{ fontSize: 45, fontWeight: '600', fontFamily: 'FontAwesome', lineHeight: 67,color:'#ffffff', textAlign:'center' }}> {(this.state.inputValue2 - (0.902 * this.state.inputValue1 + 4.564)).toFixed(2)}</Text>
                         </View>
                     }
 

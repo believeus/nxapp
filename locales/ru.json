@@ -273,6 +273,8 @@
         "chro": "/Ваш хронологический возраст/",
         "bio": "/Ваш эпигенетический возраст/",
         "is": "Ваш Ваш эпигенетический возраст на",
+        "lower":"years lower than chronological age in the population.",
+        "higher":"years higher than chronological age in the population.",
         "younger": "года ниже ожидаемого хронологического возраста в популяции.",
         "old": "года выше ожидаемого хронологического возраста в популяции.",
         "yourbio": "Ваш эпигенетический возраст ",

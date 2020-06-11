@@ -939,7 +939,11 @@
         "Chinese": "Chinese(HK)"
     },
     "AgeAccelerateActivity":{
-        "title":"Age Acceleration"
+        "title":"Age Acceleration",
+        "accecalcul":"Age acceleration calculator",
+        "enterepi":"Please enter your Epigenetic age",
+        "enterchro":"Please enter your Chronological age",
+        "youraccis":"Your age acceleration is:"
 
     }
 }
