@@ -64,7 +64,7 @@
         "biological":"生物年齡",
         "management":"健康管理",
         "Tips":"提示",
-        "message":"如果你已經購買了錶觀遺傳試劑盒。請點擊此處注册您的工具包"
+        "message":"如果你已經購買了生物學年齡檢測套盒。請點擊此處注册您的條形碼"
     },
     "TestprocessActivity": {
         "title": "測試流程",
@@ -281,7 +281,9 @@
         "your": "你的",
         "chro": "/實際年齡/",
         "bio": "/生物學年齡/",
-        "is": "你的生物學年齡與",
+        "is": "你的生物學年齡于",
+        "lower":"歲低於您的實際年齡",
+        "higher":"歲高於您的實際年齡",
         "younger": "低於预期實際年齡人群的平均值",
         "old": "高於预期實際年齡人群的平均值",
         "yourbio": "（上面有數字）你的生物年齡",
@@ -291,6 +293,7 @@
         "why":"為什麼",
         "epigenetic":"你的生物學年齡很重要？",
         "calculate":"預期實際年齡計算器",
+        "acceleration":"年齡加速計算器",
         "buildPDF":"生成PDF",
         "viewPdf":"查看PDF",
         "pdfsuccess":"PDF保存成功，可點擊查看PDF按鈕查看PDF檔案",
@@ -940,5 +943,13 @@
         "Russian":"俄語(Russian)",
         "Portuguese":"葡萄牙語(Portuguese)",
         "Chinese":"繁體中文(Chinese)"
+    },
+    "AgeAccelerateActivity":{
+        "title":"年齡加速",
+        "accecalcul":"年齡加速計算器",
+        "enterepi":"請輸入您的生物學年齡",
+        "enterchro":"請輸入您的實際年齡",
+        "youraccis":"您的年齡加速為："
+
     }
 }

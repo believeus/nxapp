@@ -272,7 +272,7 @@
         "your": "你的",
         "chro": "/實際年齡/",
         "bio": "/生物學年齡/",
-        "is": "你的生物學年齡與",
+        "is": "你的生物學年齡",
         "lower":"低於實際年齡人群的平均值",
         "higher":"高於實際年齡人群的平均值",
         "younger": "低於预期實際年齡人群的平均值",
@@ -931,5 +931,13 @@
         "Russian":"俄語(Russian)",
         "Portuguese":"葡萄牙語(Portuguese)",
         "Chinese":"繁體中文(Chinese)"
+    },
+    "AgeAccelerateActivity":{
+        "title":"年齡加速",
+        "accecalcul":"年齡加速計算器",
+        "enterepi":"請輸入您的實際年齡",
+        "enterchro":"請輸入您的生物學年齡",
+        "youraccis":"您的年齡加速為："
+
     }
 }

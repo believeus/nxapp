@@ -281,6 +281,7 @@
         "why":"Pourquoi votre",
         "epigenetic":"«âge épigénétique» est-il important?",
         "calculate":"Calculateur chronologique de l'âge prévu",
+        "acceleration":"Calculateur d'accélération",
         "buildPDF":"Génération de PDF",
         "viewPdf":"Affichage PDF",
         "pdfsuccess":"Enregistrement PDF réussi, cliquez sur le bouton PDF pour voir les fichiers PDF",
@@ -925,5 +926,13 @@
         "Russian":"Russe(Russian)",
         "Portuguese":"Portugais(Portuguese)",
         "Chinese":"Chinois(Chinese)"
+    },
+    "AgeAccelerateActivity":{
+        "title":"Accélération de l'âge",
+        "accecalcul":"Calculateur d'accélération de l'âge",
+        "enterepi":"Veuillez entrer votre âge épigénétique",
+        "enterchro":"Veuillez entrer votre âge chronologique",
+        "youraccis":"Votre accélération de l'âge est:"
+
     }
 }

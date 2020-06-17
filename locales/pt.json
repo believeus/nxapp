@@ -293,6 +293,7 @@
         "why":"Por que a sua",
         "epigenetic":"'era epigenética' é importante?",
         "calculate":"Calculadora de idade cronológica esperada",
+        "acceleration":"Calculadora de aceleração",
         "buildPDF":"Gerar PDF",
         "viewPdf":"Ver PDF",
         "pdfsuccess":"O PDF é gravado com sucesso. Clique EM Ver PDF para ver o arquivo PDF",
@@ -936,5 +937,13 @@
         "Russian":"Língua Russa(Russian)",
         "Portuguese":"Português(Portuguese)",
         "Chinese":"Chinês(Chinese)"
+    },
+    "AgeAccelerateActivity":{
+        "title":"Aceleração de idade",
+        "accecalcul":"Calculadora de aceleração de idade",
+        "enterepi":"Digite sua idade epigenética",
+        "enterchro":"Digite sua idade cronológica",
+        "youraccis":"A aceleração da sua idade é:"
+
     }
 }

@@ -510,25 +510,25 @@ export default class DnaReportActivity extends Component<Props> {
                                 <View style={{ flexDirection: 'row', width: '96%', height: 189, marginTop: 12, borderBottomColor: '#c7c9cd', borderBottomWidth: 1, alignSelf: 'center' }}>
                                     <View style={{ width: '36%', flexDirection: 'column', marginTop: 12 }}>
                                         <Image style={{ width: '100%', height: 34, }} resizeMode='contain' source={require("../image/icons/rep-cho.png")}></Image>
-                                        <View style={{ width: '100%', paddingTop: 12 }}>
+                                        <View style={{ width: '100%', }}>
                                             <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.your')} </Text>
-                                            <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
+                                            <Text style={{ fontSize: 12, lineHeight: 12, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                         </View>
                                         {parseFloat(this.state.naturally) > 0 ?
-                                            <View style={{ width: '100%', height: 34, flexDirection: 'column', }}>
+                                            <View style={{ width: '100%', height: 23, flexDirection: 'column', }}>
                                                 <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{this.state.naturally}</Text>
-                                                <View style={{ width: '100%', paddingTop: 12 }}>
+                                                <View style={{ width: '100%' }}>
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
-                                                    <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
+                                                    <Text style={{ fontSize: 12, lineHeight: 12, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
                                                 <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
                                             </View>
                                             :
-                                            <View style={{ width: '100%', height: 34, flexDirection: 'column', }}>
+                                            <View style={{ width: '100%', height: 23, flexDirection: 'column', }}>
                                                 <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>NA(non-available)</Text>
-                                                <View style={{ width: '100%', paddingTop: 12 }}>
+                                                <View style={{ width: '100%',paddingTop:12 }}>
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
-                                                    <Text style={{ fontSize: 12, lineHeight: 19, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
+                                                    <Text style={{ fontSize: 12, lineHeight: 12, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
                                                 <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
                                             </View>

@@ -28,23 +28,26 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 45 }}>
-                    <Text style={{ fontSize: 23,fontWeight:'bold', fontFamily: 'FontAwesome', height: 67, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.accecalcul")}</Text>
-                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 18, height: 34 }}>{I18n.t("AgeAccelerateActivity.enterchro")}</Text>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23 }}>
+                    <Text style={{ fontSize: 18,fontWeight:'bold', fontFamily: 'FontAwesome', height: 67, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.accecalcul")}</Text>
+                    <Text style={{
+                        fontFamily: 'FontAwesome',
+                        fontSize: 14,
+                        height: 34,
+                    }}>{I18n.t("AgeAccelerateActivity.enterchro")}</Text>
                     <TextInput style={{
-                        width: "45%",
+                        width: "89%",
                         height: 34,
                         fontSize: 23,
-                        fontFamily: 'FontAwesome',
                         textAlign: 'center',
-                        borderColor: '#0071BC',
                         borderWidth: 1,
                         borderRadius: 5,
-                        paddingVertical: 0
+                        paddingVertical: 0,
+                        borderColor: this.state.inputValue2 =="" ? "#adadad" : "#0071bc",
                     }}
                         keyboardType='numeric'
                         onChangeText={(text1) => {
-                            const realage = text1.replace(/[^\d]+/, '');
+                            const realage = text1.replace(/[^0-9.]/g, '');
                             //可以打印看看是否过滤掉了非数字
                             //console.log(newText)
                             this.setState({ inputValue1: realage })
@@ -54,22 +57,26 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     />
 
                     <View style={{ height: 23, width: '100%' }}></View>
-                    <Text style={{ fontSize: 18, fontFamily: 'FontAwesome', height: 34 }}>{I18n.t("AgeAccelerateActivity.enterepi")}</Text>
+                    <Text style={{
+                        fontSize: 14,
+                        fontFamily: 'FontAwesome',
+                        height: 34,
+                        
+                    }}>{I18n.t("AgeAccelerateActivity.enterepi")}</Text>
                     <TextInput style={{
-                        width: "45%",
+                        width: "89%",
                         height: 34,
                         fontSize: 23,
-                        borderColor: '#0071BC',
                         textAlign: 'center',
                         borderWidth: 1,
                         borderRadius: 5,
-                        paddingVertical: 0
+                        paddingVertical: 0,
+                        borderColor: this.state.inputValue2 =="" ? "#adadad" : "#0071bc",
                     }}
                         // placeholder="Epigenetic age"
-                        placeholderTextColor='#0071bc'
                         keyboardType='numeric'
                         onChangeText={(text2) => {
-                            const epiage = text2.replace(/[^\d]+/, '');
+                            const epiage = text2.replace(/[^0-9.]/g, '');
                             //可以打印看看是否过滤掉了非数字
                             //console.log(newText)
                             this.setState({ inputValue2: epiage })
@@ -78,12 +85,12 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     />
                     <View style={{ height: 56, width: '100%' }}></View>
 
-                    <Text style={{ fontSize: 23, fontWeight: '600', fontFamily: 'FontAwesome', height: 45, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.youraccis")}</Text>
+                    <Text style={{ fontSize: 20, fontWeight: '600', fontFamily: 'FontAwesome', height: 45, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.youraccis")}</Text>
                     {this.state.inputValue2 == "" || this.state.inputValue1 == "" ?
                         null
                         :
-                        <View style={{height:56,width:'45%', alignItems:'center',alignSelf:'center', backgroundColor:'#2F6FB6',borderRadius:5}}>
-                            <Text style={{ fontSize: 45, fontWeight: '600', fontFamily: 'FontAwesome', lineHeight: 67,color:'#ffffff', textAlign:'center' }}> {(this.state.inputValue2 - (0.902 * this.state.inputValue1 + 4.564)).toFixed(2)}</Text>
+                        <View style={{height:56,fontSize:'bold', width:'45%', alignItems:'center',alignSelf:'center', backgroundColor:'#2F6FB6',borderRadius:5}}>
+                            <Text style={{ fontSize: 45, fontWeight: '600', fontFamily: 'FontAwesome', lineHeight: 56,color:'#ffffff', textAlignVertical:'center' }}> {(this.state.inputValue2 - (0.902 * this.state.inputValue1 + 4.564)).toFixed(2)}</Text>
                         </View>
                     }
 
