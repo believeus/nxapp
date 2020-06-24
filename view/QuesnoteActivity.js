@@ -30,12 +30,17 @@ export default class QuesnoteActivity extends Component<Props> {
                     <View style={{ flexDirection: 'row',justifyContent:'space-between' }}>
                         <View style={{ width: '45%' }}>
                             <TouchableOpacity >
-                                <Button onPress={() => this.navigate.pop()} title={I18n.t('QuesnoteActivity.back')}></Button>
+                                <Button onPress={() => this.navigate.pop()}
+                                    title={I18n.t('QuesnoteActivity.back')}
+                                    color="#2196f3"/>
+                                    
                             </TouchableOpacity>
                         </View>
                         <View style={{ width: '45%' }}>
                             <TouchableOpacity >
-                                <Button onPress={() => this.navigate.push("Questionnaire")} title={I18n.t('QuesnoteActivity.ques')}></Button>
+                                <Button onPress={() => this.navigate.push("Questionnaire")}
+                                    title={I18n.t('QuesnoteActivity.ques')}
+                                    color="#2196f3"/>
                             </TouchableOpacity>
                         </View>
                     </View>

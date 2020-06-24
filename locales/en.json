@@ -776,7 +776,7 @@
         "source": "Source: Healthline",
         "recommen": "Recommendation:",
         "calories": "An average woman needs to eat about 2000 calories per day to maintain, and 1500 calories to lose one pound of weight per week. An average man needs 2500 calories to maintain, and 2000 to lose one pound of weight per week.",
-        "diet": "Please enter your daily diet food",
+        "diet": "Please enter the name of your daily food",
         "foodd": "Food",
         "each": "Each",
         "edit": "Edit",
@@ -920,6 +920,9 @@
         "setkey": "Generate unique data security key",
         "sentmail": "Public and private key pairs will be saved to your phone's local folder",
         "purchase": "Go to 'SHOPPING' to purchase the EpiAging test kit."
+    },
+    "Manual3Activity": {
+        "title": "Questionnaire guidance"
     },
     "SavepdfpathActivity": {
         "btncp": "Copy link",

@@ -38,6 +38,7 @@ import QAActivity from './QAActivity';
 import QuesnoteActivity from './QuesnoteActivity';
 import Manual1Activity from './Manual1Activity';
 import Manual2Activity from './Manual2Activity';
+import Manual3Activity from './Manual3Activity';
 import SavepdfpathActivity from './SavepdfpathActivity';
 import PdfViewActivity from './PdfViewActivity';
 import ScannerAcitivity from './ScannerAcitivity';
@@ -156,6 +157,9 @@ export const RootStack = createStackNavigator(
         },
         Manual2: {
             screen: Manual2Activity
+        },
+        Manual3: {
+            screen: Manual3Activity
         },
         Savepdfpath: {
             screen: SavepdfpathActivity
