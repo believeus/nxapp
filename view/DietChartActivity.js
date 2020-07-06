@@ -235,7 +235,11 @@ export default class DietChartActivity extends Component<Props> {
                                 <Text style={{ fontSize: 12 }}>
                                     <Text style={{ fontWeight: "bold" }}>{I18n.t('DietChartActivity.recommen')}</Text>{I18n.t('DietChartActivity.calories')}
                                 </Text>
+                                <TouchableOpacity onPress={() =>navigate.push("Manual4")}>
+                                   <Text style={{textDecorationLine:'underline',color:'#FF0000'}}>How does it work?</Text>
+                                 </TouchableOpacity>
                             </View>
+                            
                         }
                     />
 

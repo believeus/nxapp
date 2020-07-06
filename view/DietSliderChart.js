@@ -31,7 +31,7 @@ export default class DietSliderChart extends Component<Props> {
                     nameLocation: 'middle',
                     nameGap: 20,
                     type: "category",
-                    nameTextStyle: { color: "#0071BC" },
+                    nameTextStyle: {fontSize:10, color: "#0071BC" },
                     data: null
                 },
                 yAxis: {

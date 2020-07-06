@@ -126,7 +126,7 @@ export default class SliderLineChart extends Component<Props> {
                     </View>
                     <View style={{ width: "90%", height: 300, alignItems: "center" }}>
                         <ISlider
-                            height={30}
+                            height={23}
                             min={this.props.min}
                             max={this.props.max}
                             defaultValue={0}

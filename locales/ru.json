@@ -852,12 +852,17 @@
         "generate": "генерировать",
         "privatekey": "закрытый ключ",
         "publickey": "открытый ключ",
-        "save":"Сохранить"
+        "save":"Сохранить",
+        "copykeys":"КОПИЯ КЛЮЧЕЙ",
+        "titlemsg":"Сообщение",
+        "meg":"Открытый ключ и закрытый ключ были скопированы в ваш буфер обмена."
     },
     "QAActivity": {
         "title": "ответ на вопрос",
         "test":"EpiAging App Руководство пользователя",
-        "report":"Как получить мой отчет по тестированию в epiAging?"
+        "report":"Как получить мой отчет по тестированию в epiAging?",
+        "fillques":"Как заполнить анкеты?",
+        "calfoot":"Как рассчитать калории пищи, которую вы потребляете?"
     },
     "ContactActivity": {
         "title": "связаться с нами",
@@ -897,6 +902,20 @@
         "setkey":"Создать уникальный ключ безопасности данных",
         "sentmail":"Пара открытых и закрытых ключей будет сохранена в локальной папке вашего телефона",
         "purchase":"«Перейдите в раздел« ПОКУПКА », чтобы приобрести набор для тестирования EpiAging."
+    },
+    "Manual3Activity": {
+        "title": "Questionnaire guidance",
+        "how":"How to fill out the questionnaire",
+        "slider1":"How to use the slider to fill out the data.",
+        "ratingstart2":"How to use the rating star to fill out the data.",
+        "enteefield3":"How to use the entering field to fill out the data."
+    },
+    "Manual4Activity": {
+        "title": "Диета руководство",
+        "calculate":"Как рассчитать потребление калорий?",
+        "slider":"Как использовать ползунок для заполнения данных",
+        "calfood":"Как использовать калькулятор калорий для расчета калорий пищи, которую вы принимаете.",
+        "entering":"Как использовать поле ввода для заполнения данных."
     },
     "SavepdfpathActivity":{
         "btncp":"Скопировать",

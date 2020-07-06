@@ -39,17 +39,17 @@ export default class ISlider extends Component<Props> {
     };
 
     static defaultProps = {
-        height: 30,
+        height: 20,
         width: ScreenWidth,
         onChange: () => { },
         onAfterChange: () => { },
         defaultValue: 0,
         disabled: false,
-        thumbSize: 30,
+        thumbSize: 20,
         thumbImage: null,
         maximumTrackTintColor: '#dcdbdb',
         minimumTrackTintColor: '#577BFF',
-        processHeight: 7,
+        processHeight: 4,
     };
 
     state = {
@@ -114,6 +114,7 @@ export default class ISlider extends Component<Props> {
         const { process } = this.state;
 
         if (changeProcess >= 0 && changeProcess <= 1) {
+
             onChange(changeProcess);
             // 按步长比例变化刻度
             const v = changeProcess * (max - min);
@@ -125,6 +126,9 @@ export default class ISlider extends Component<Props> {
                     process: newProcess,
                 });
             }
+            if (newProcess) {
+
+            }
         }
     }
 
@@ -132,27 +136,29 @@ export default class ISlider extends Component<Props> {
         const { height, width, thumbSize } = this.props;
         const { process, processWidth } = this.state;
         return (
-            <View style={{ width: "100%" }}>
-                <View>
-                    <View style={{borderRadius:10, height: 20, width: "100%", flexDirection: "row" }}>
+            <View style={{width:"100%"}}>
+                <View style={{ width: "90%", alignSelf: 'center' }}>
+                    <View>
+                        <View style={{ borderRadius: 50, height: 20, width: "100%", flexDirection: "row" }}>
+                            {this.props.gradient ? this.props.gradient.map((item) => {
+                                return <View style={{ width: item[0] }}>
+                                    <Text style={{ textAlign: "right" }}>{item[2]}</Text>
+                                </View>
+                            }) : null}
+                        </View>
+                    </View>
+                    <View style={{ width: "100%", flexDirection: "row", height: 23 }} >
                         {this.props.gradient ? this.props.gradient.map((item) => {
-                            return <View style={{ width: item[0] }}>
-                                <Text style={{ textAlign: "right" }}>{item[2]}</Text>
-                            </View>
+                            return <View style={{ width: item[0], backgroundColor: item[1], }}></View>
                         }) : null}
                     </View>
                 </View>
-                <View style={{ height, width: "100%", flexDirection: "row" }} >
-                    {this.props.gradient ? this.props.gradient.map((item) => {
-                        return <View style={{ width: item[0], backgroundColor: item[1], height: height }}></View>
-                    }) : null}
-                </View>
-                <View {...this.watcher.panHandlers} style={{ left: process * processWidth * 0.9 }}>
-                    <View style={{ width: thumbSize }}>
-                        <Image style={{ width: 30, height: 30 }} resizeMode="contain" source={require("../image/icons/jiantou.png")} />
-                        <Text style={{ textAlign: "center",width:34 }}>{this.state.newValue}</Text>
+                    <View {...this.watcher.panHandlers} style={{ left: process * processWidth * 0.9 }}>
+                        <View style={{ width: thumbSize }}>
+                            <Image style={{ width: 20, height: 20 }} resizeMode="contain" source={require("../image/icons/jiantou.png")} />
+                            <Text style={{ fontSize: 12, textAlign: 'center', width: 30 }}>{this.state.newValue}</Text>
+                        </View>
                     </View>
-                </View>
             </View>
         );
     }

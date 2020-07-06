@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Platform, StyleSheet, StatusBar, Text, View, Image, ScrollView } from 'react-native';
 import { I18n } from '../locales/i18n';
 
-export default class Manual3Activity extends Component<Props> {
+export default class Manual4Activity extends Component<Props> {
     static navigationOptions = ({ navigation, screenProps }) => {
         return ({
-            title: I18n.t("Manual3Activity.title"),
+            title: I18n.t("Manual4Activity.title"),
         })
     }
     constructor(props) {
@@ -25,22 +25,22 @@ export default class Manual3Activity extends Component<Props> {
                 </StatusBar>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 34, }}>
-                    <Text style={{ textAlign: 'center', fontSize: 22,marginBottom:34, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>How to fill out the questionnaire</Text>
+                    <Text style={{ textAlign: 'center', fontSize: 22,marginBottom:34, fontFamily: 'FontAwesome', fontWeight: 'bold', textAlignVertical: 'center' }}>{I18n.t('Manual4Activity.calculate')}</Text>
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>1.</Text>
-                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>How to use the slider to fill out the data.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual4Activity.slider')}</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 234 }} source={require('../image/enpic/ques-guide1.png')} resizeMode='contain' />
+                    <Image style={{ width: '100%', height: 234 }} source={require('../image/enpic/diet.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>2.</Text>
-                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>How to use the rating star to fill out the data.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual4Activity.calfood')}</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 234 }} source={require('../image/enpic/ques-guide2.png')} resizeMode='contain' />
+                    <Image style={{ width: '100%', height: 234 }} source={require('../image/enpic/diet1.png')} resizeMode='contain' />
                     <View style={{ flexDirection: 'row' }}>
                         <Text style={{  width: '7%', fontSize: 18, fontWeight: 'bold' }}>3.</Text>
-                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>How to use the entering field to fill out the data.</Text>
+                        <Text style={{  width: '95%', fontSize: 18, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('Manual4Activity.entering')}</Text>
                     </View>
-                    <Image style={{ width: '100%', height: 234 }} source={require('../image/enpic/ques-guide3.png')} resizeMode='contain' />
+                    <Image style={{ width: '100%', height: 234 }} source={require('../image/enpic/diet2.png')} resizeMode='contain' />
                 </View>
 
                 <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>{I18n.t('TabHomeActivity.allright')}</Text>

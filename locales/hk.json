@@ -879,12 +879,17 @@
         "generate": "生成",
         "privatekey": "私鑰",
         "publickey": "公鑰",
-        "save": "保存"
+        "save": "保存",
+        "copykeys":"複製公鑰私鑰",
+        "titlemsg":"提示",
+        "meg":"公鑰和私鑰已復製到剪貼板。"
     },
     "QAActivity": {
         "title": "Q&A",
         "test": "1. EpiAging測試如何工作？",
-        "report": "2. 如何獲得我的EpiAging測試報告？"
+        "report": "2. 如何獲得我的EpiAging測試報告？",
+        "fillques":"如何填寫問卷",
+        "calfoot":"如何計算你攝入食物的卡路里？"
     },
     "ContactActivity": {
         "title": "聯繫我們",
@@ -926,6 +931,20 @@
         "setkey":"生成唯一的數據安全密鑰。",
         "sentmail":"公鑰與私鑰對將保存到您手機本地文件夾",
         "purchase":"轉到“購物”以購買EpiAging測試套件。"
+    },
+    "Manual3Activity": {
+        "title": "問卷指南",
+        "how":"如何填寫問卷",
+        "slider1":"如何使用滑塊填寫數據。",
+        "ratingstart2":"如何使用星級填寫數據。",
+        "enteefield3":"如何使用輸入字段填寫數據。"
+    },
+    "Manual4Activity": {
+        "title": "飲食指南",
+        "calculate":"如何計算您攝入的卡路里？",
+        "slider":"如何使用滑塊填寫數據",
+        "calfood":"如何使用卡路里計算器來計算您所攝取食物的卡路里。",
+        "entering":"如何使用輸入字段填寫數據。"
     },
     "SavepdfpathActivity":{
         "btncp":"複製",

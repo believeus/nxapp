@@ -875,12 +875,17 @@
         "generate": "Generate",
         "privatekey": "Private key",
         "publickey": "Public key",
-        "save": "Save"
+        "save": "Save",
+        "copykeys":"COPY KEYS",
+        "titlemsg":"Message",
+        "meg":"The public key and private key has been copied to your clipboard."
     },
     "QAActivity": {
         "title": "Q&A",
         "test": "EpiAging App User Manual",
-        "report": "How to get my epiAging test report?"
+        "report": "How to get my epiAging test report?",
+        "fillques":"How to fill out the questionnaires?",
+        "calfoot":"How to calculate the calories of the food you intake?"
     },
     "ContactActivity": {
         "title": "Contact Us",
@@ -922,7 +927,18 @@
         "purchase": "Go to 'SHOPPING' to purchase the EpiAging test kit."
     },
     "Manual3Activity": {
-        "title": "Questionnaire guidance"
+        "title": "Questionnaire guidance",
+        "how":"How to fill out the questionnaire",
+        "slider1":"How to use the slider to fill out the data.",
+        "ratingstart2":"How to use the rating star to fill out the data.",
+        "enteefield3":"How to use the entering field to fill out the data."
+    },
+    "Manual4Activity": {
+        "title": "Diet guidance",
+        "calculate":"How to calculate the calories you intake?",
+        "slider":"How to use the slider to fill out the data",
+        "calfood":"How to use the calorie calculator to calculate the calories of the food you take.",
+        "entering":"How to use the entering field to fill out the data."
     },
     "SavepdfpathActivity": {
         "btncp": "Copy link",

@@ -882,12 +882,17 @@
         "generate": "GENERAR",
         "privatekey": "Llave privada",
         "publickey": "Llave pública",
-        "save":"GUARDAR"
+        "save":"GUARDAR",
+        "copykeys":"COPIA DE CLAVES",
+        "titlemsg":"Mensaje",
+        "meg":"La clave pública y la clave privada se han copiado en su portapapeles."
     },
     "QAActivity": {
         "title": "Q&A",
         "test":"Manual del usuario de la aplicación EpiAging",
-        "report":"¿Cómo obtener mi informe de prueba epiAging?"
+        "report":"¿Cómo obtener mi informe de prueba epiAging?",
+        "fillques":"¿Cómo llenar los cuestionarios?",
+        "calfoot":"¿Cómo calcular las calorías de los alimentos que ingieres?"
     },
     "ContactActivity": {
         "title": "Contáctenos",
@@ -927,6 +932,20 @@
         "setkey":"Generar clave de seguridad de datos única.",
         "sentmail":"La clave pública y el par de claves privadas se guardarán en la carpeta local de su teléfono",
         "purchase":"Vaya a 'COMPRAS' para comprar el kit de prueba EpiAging."
+    },
+    "Manual3Activity": {
+        "title": "Cómo completar el cuestionario",
+        "how":"Cómo completar el cuestionario",
+        "slider1":"Cómo usar el control deslizante para completar los datos.",
+        "ratingstart2":"Cómo usar la estrella de calificación para completar los datos.",
+        "enteefield3":"Cómo usar el campo de entrada para completar los datos."
+    },
+    "Manual4Activity": {
+        "title": "Guía de la dieta",
+        "calculate":"¿Cómo calcular las calorías que ingieres?",
+        "slider":"Cómo usar el control deslizante para completar los datos",
+        "calfood":"Cómo usar la calculadora de calorías para calcular las calorías de los alimentos que tomas.",
+        "entering":"Cómo usar el campo de entrada para completar los datos."
     },
     "SavepdfpathActivity":{
         "btncp":"Copiar",

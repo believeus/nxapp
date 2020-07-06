@@ -179,7 +179,7 @@ export default class BMIChart extends Component<Props> {
                                 rounded={false}
                                 height={25}
                                 max={220}
-                                min={1}
+                                min={0}
                                 step={1}
                                 arrows={true}
                                 color={"#a0a0a0"}

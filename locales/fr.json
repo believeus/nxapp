@@ -864,12 +864,17 @@
         "generate": "produire",
         "privatekey": "Clé privée",
         "publickey": "Clé publique",
-        "save": "sauver"
+        "save": "sauver",
+        "copykeys":"TOUCHES DE COPIE",
+        "titlemsg":"Message",
+        "meg":"La clé publique et la clé privée ont été copiées dans votre presse-papiers."
     },
     "QAActivity": {
         "title": "Q&A",
         "test":"Manuel d'utilisation de l'application EpiAging",
-        "report":"Comment obtenir mon rapport de test epiAging?"
+        "report":"Comment obtenir mon rapport de test epiAging?",
+        "fillques":"Comment remplir les questionnaires?",
+        "calfoot":"Comment calculer les calories des aliments que vous consommez?"
     },
     "ContactActivity": {
         "title": "Contact Us",
@@ -909,6 +914,20 @@
         "setkey":"Génération d 'une clé de sécurité unique de données",
         "sentmail":"Une paire de clés publiques et privées sera enregistrée dans un dossier local d 'un téléphone mobile",
         "purchase":"Allez à «ACHATS» pour acheter le kit de test EpiAging."
+    },
+    "Manual3Activity": {
+        "title": "Orientation du questionnaire",
+        "how":"Comment remplir le questionnaire",
+        "slider1":"Comment utiliser le curseur pour remplir les données.",
+        "ratingstart2":"Comment utiliser l'étoile de notation pour remplir les données.",
+        "enteefield3":"Comment utiliser le champ de saisie pour remplir les données."
+    },
+    "Manual4Activity": {
+        "title": "Conseils diététiques",
+        "calculate":"Comment calculer les calories que vous consommez?",
+        "slider":"Comment utiliser le curseur pour remplir les données",
+        "calfood":"Comment utiliser le calculateur de calories pour calculer les calories des aliments que vous prenez.",
+        "entering":"Comment utiliser le champ de saisie pour remplir les données."
     },
     "SavepdfpathActivity":{
         "btncp":"Copier",

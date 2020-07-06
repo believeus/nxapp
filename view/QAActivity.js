@@ -19,11 +19,17 @@ export default class QAActivity extends Component<Props> {
             <ScrollView>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, paddingBottom: 20, }}>
                     <TouchableOpacity onPress={() => this.navigate.push("Manual2")}>
-                        <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 56, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.test')}</Text>
+                        <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 23, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.test')}</Text>
                     </TouchableOpacity>
 
                     <TouchableOpacity onPress={() => this.navigate.push("Manual1")}>
-                        <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 56, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.report')}</Text>
+                        <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 23, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.report')}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.navigate.push("Manual3")}>
+                        <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 23, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.fillques')}</Text>
+                    </TouchableOpacity>
+                    <TouchableOpacity onPress={() => this.navigate.push("Manual4")}>
+                        <Text numberOfLines={2} style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome',textDecorationLine:"underline", paddingTop: 13,  borderBottomWidth: 1, borderBottomColor: '#efefef', }}>{I18n.t('QAActivity.calfoot')}</Text>
                     </TouchableOpacity>
                     
                 </View>

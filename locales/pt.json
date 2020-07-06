@@ -875,12 +875,17 @@
         "generate": "GERAR",
         "privatekey": "Chave privada",
         "publickey": "Chave pública",
-        "save":"SALVAR"
+        "save":"SALVAR",
+        "copykeys":"COPIAR CHAVES",
+        "titlemsg":"mensagem",
+        "meg":"A chave pública e a chave privada foram copiadas para a área de transferência."
     },
     "QAActivity": {
         "title": "Q&A",
         "test":"Manual do usuário do EpiAging App",
-        "report":"Como obter o meu relatório de teste epiAging?"
+        "report":"Como obter o meu relatório de teste epiAging?",
+        "fillques":"Como preencher os questionários?",
+        "calfoot":"Como calcular as calorias dos alimentos que você ingere?"
     },
     "ContactActivity": {
         "title": "Contate-Nos",
@@ -921,6 +926,21 @@
         "sentmail":"Les Clés Uniques Seront Envoyées to Vote Boîte aux Lettres",
         "purchase":"Vá para 'COMPRAS' para comprar o kit de teste EpiAging."
     },
+    "Manual3Activity": {
+        "title": "Orientação ao questionário",
+        "how":"Como preencher o questionário",
+        "slider1":"Como usar o controle deslizante para preencher os dados.",
+        "ratingstart2":"Como usar a estrela de classificação para preencher os dados.",
+        "enteefield3":"Como usar o campo de entrada para preencher os dados."
+    },
+    "Manual4Activity": {
+        "title": "Orientação da dieta",
+        "calculate":"Como calcular as calorias que você ingere?",
+        "slider":"Como usar o controle deslizante para preencher os dados",
+        "calfood":"Como usar a calculadora de calorias para calcular as calorias dos alimentos que você ingere.",
+        "entering":"Como usar o campo de entrada para preencher os dados."
+    },
+    
     "SavepdfpathActivity":{
         "btncp":"Copiar",
         "titlemsg":"Notícias",

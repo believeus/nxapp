@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StatusBar, StyleSheet, Text, View, Alert, Button, ScrollView, ActivityIndicator, TouchableOpacity, TextInput } from 'react-native'
+import { Platform, StatusBar, StyleSheet, Text, View, Alert,Clipboard, Button, ScrollView, ActivityIndicator, TouchableOpacity, TextInput } from 'react-native'
 import { NavigationActions, StackActions } from 'react-navigation';
 import { I18n } from '../locales/i18n'
 import Session from '../storage/Session'
@@ -20,6 +20,7 @@ export default class RasEncryptionActivity extends Component<Props> {
         super(props);
         this.state = {
             btnSaveDisabled: false,
+            btnCopyDisabled:false,
             editable: true,
             privatekey: "",
             btnPrivatekeyDisabled: false,
@@ -62,7 +63,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                         <View style={{ width: "100%", height: 20 }}></View>
                             <View><Text style={{ fontWeight: "bold" }}>{I18n.t('RasEncryptionActivity.privatekey')}</Text></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
-                                <View style={{ width: "70%" }}>
+                                <View style={{ width: "60%" }}>
                                     <TextInput style={{
                                         width: '100%',
                                         borderRadius: 0,
@@ -83,22 +84,27 @@ export default class RasEncryptionActivity extends Component<Props> {
                                             if (this.state.privatekey && this.state.privatekey.length != 0) {
                                                 if (publickey.length != 0) {
                                                     this.setState({ btnSaveDisabled: false })
+                                                    this.setState({btnCopyDisabled:false})
+                                                   
                                                 } else {
                                                     this.setState({ btnSaveDisabled: true })
+                                                    this.setState({btnCopyDisabled:true})
                                                 }
                                             } else {
                                                 this.setState({ btnSaveDisabled: true })
+                                                this.setState({btnCopyDisabled:true})
                                             }
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "30%", height: 40 }}>
+                                <View style={{ width: "40%", height: 40 }}>
                                     {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnPublickeyDisabled} onPress={() => {
                                         UUIDGenerator.getRandomUUID().then((uuid) => {
                                             let publickey = uuid.substring(0, 18).toUpperCase()
                                             this.setState({ publickey })
                                             this.setState({ btnSaveDisabled: false })
+                                            this.setState({btnCopyDisabled:false})
                                         });
                                     }}
                                         style={{ height: "100%", width: "100%" }} title={I18n.t('RasEncryptionActivity.generate')} />
@@ -106,7 +112,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                             </View>
                             <View><Text style={{ fontWeight: "bold" }}>{I18n.t('RasEncryptionActivity.publickey')}</Text></View>
                             <View style={{ width: "100%", flexDirection: "row" }}>
-                                <View style={{ width: "70%" }}>
+                                <View style={{ width: "60%" }}>
                                     <TextInput style={{
                                         width: '100%',
                                         borderRadius: 0,
@@ -127,29 +133,44 @@ export default class RasEncryptionActivity extends Component<Props> {
                                             if (this.state.publickey && this.state.publickey.length != 0) {
                                                 if (privatekey.length != 0) {
                                                     this.setState({ btnSaveDisabled: false })
+                                                    this.setState({btnCopyDisabled:false})
                                                 } else {
                                                     this.setState({ btnSaveDisabled: true })
+                                                    this.setState({btnCopyDisabled:true})
                                                 }
                                             } else {
                                                 this.setState({ btnSaveDisabled: true })
+                                                this.setState({btnCopyDisabled:true})
                                             }
                                         }}
                                     />
                                 </View>
-                                <View style={{ width: "30%", height: 40 }}>
+                                <View style={{ width: "40%", height: 40 }}>
                                     {/* 将私钥发送到邮箱 */}
                                     <Button disabled={this.state.btnPrivatekeyDisabled} onPress={() => {
                                         UUIDGenerator.getRandomUUID().then((uuid) => {
                                             let privatekey = uuid.substring(0, 7).toUpperCase()
                                             this.setState({ privatekey })
                                             this.setState({ btnSaveDisabled: false })
+                                            this.setState({btnCopyDisabled:false})
                                         });
                                     }}
                                         style={{ height: "100%", width: "100%" }} title={I18n.t('RasEncryptionActivity.generate')} />
                                 </View>
                             </View>
-                            <View style={{ width: "100%", flexDirection: "row" }}>
-                                <View style={{ width: "25%", height: 40 }}>
+                            <View style={{ width: "100%",height:56, flexDirection: "row" }}>
+                             <View style={{ width: "40%", height: 45,alignItems:"flex-start" }}>
+                                    <Button disabled={this.state.btnCopyDisabled}
+                                    title={I18n.t("RasEncryptionActivity.copykeys")}
+                                        onPress={() => {
+                                        // this.state({btnCopyDisabled:true})
+                                        let keys=this.state.publickey+"\n"+this.state.privatekey
+                                        Clipboard.setString(keys);
+                                        Alert.alert(I18n.t("RasEncryptionActivity.titlemsg"),I18n.t("RasEncryptionActivity.meg"))
+                                    }}
+                                    style={{ height: "80%", textAlignVertical: "center" }} />
+                                </View>
+                                <View style={{ width: "30%", height: 45 }}>
                                     {/* 将私钥和公钥保存到本地 */}
                                     <Button disabled={this.state.btnSaveDisabled} onPress={() => {
                                         let id = this.state.user.id
@@ -157,6 +178,7 @@ export default class RasEncryptionActivity extends Component<Props> {
                                         this.setState({ btnPrivatekeyDisabled: true })
                                         this.setState({ btnPublickeyDisabled: true })
                                         this.setState({ btnSaveDisabled: true })
+                                        this.setState({btnCopyDisabled:true})
                                         //用public key加密private key生成加密的priavekey
                                         let cipher = encrypt(this.state.publickey, this.state.privatekey)
                                         fetch(data.url + "user/updatekey.jhtml?id=" + id + "&uuid=" + cipher).then(user => user.json()).then((user) => {
@@ -186,16 +208,17 @@ export default class RasEncryptionActivity extends Component<Props> {
                                     }}
                                         style={{ height: "100%", width: "100%" }} title={I18n.t('RasEncryptionActivity.save')} />
                                 </View>
-                                <View style={{ width: "75%", alignItems: "center" }}>
-                                    <View style={{ width: "90%", height: 100 }}>
+                               
+                               
+                            <View style={{ width: "30%", alignItems: "flex-end" }}>
+                                    <View style={{ width: "90%", height: 45 }}>
                                         {this.state.animating ? <ActivityIndicator
                                             animating={true}
-                                            style={{ height: 80 }}
+                                            style={{ height: 45 }}
                                             size="large" /> : null}
                                     </View>
-                                </View>
-
-                            </View>
+                             </View>
+                         </View>
                             <View style={{ flexDirection: 'row',marginBottom:12 }}>
                                 <Text style={{ width: '4%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>1.</Text>
                                 <Text style={{ width: '95%', fontSize: 14, fontFamily: 'FontAwesome', lineHeight: 18 }}>{I18n.t('RasEncryptionActivity.press')}<Text style={{ color: '#0071bc', fontStyle:'italic', fontSize: 14 }}>{I18n.t('RasEncryptionActivity.press2')} </Text> </Text>

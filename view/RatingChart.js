@@ -112,8 +112,8 @@ export default class RatingChart extends Component<Props> {
                             continuous={false}
                             score={this.state.score}
                             scoreText=""
-                            allowsHalfStars={true}
-                            accurateHalfStars={true}
+                            allowsHalfStars={false}
+                            accurateHalfStars={false}
                             onStarValueChanged={(score) => {
                                 //解密
                                 let plaintxt = decrypt(this.state.user.publickey, this.state.user.uuid)
