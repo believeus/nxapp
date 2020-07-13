@@ -81,7 +81,7 @@ project.ext.react = [
 
 
 apply from: "../../node_modules/react-native/react.gradle"
-
+apply from: "../../node_modules/react-native-code-push/android/codepush.gradle"
 /**
  * Set this to true to create two separate APKs instead of one:
  *   - An APK that only works on ARM devices
@@ -110,7 +110,7 @@ android {
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 36
-        versionName "1.0.0"
+        versionName "2.0.0"
         missingDimensionStrategy 'react-native-camera', 'general'
         // ndk {
         //    abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'
@@ -161,7 +161,7 @@ android {
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
-                        versionCodes.get(abi) * 126499965 + defaultConfig.versionCode
+                        versionCodes.get(abi) * 179499976 + defaultConfig.versionCode
             }
         }
     }
@@ -183,6 +183,7 @@ configurations {
     all*.exclude group: 'com.madgag.spongycastle',module: 'bcpkix-jdk15on'
 }
 dependencies {
+    implementation project(':react-native-code-push')
     implementation project(':@react-native-community_geolocation')
     implementation project(':react-native-location')
     implementation project(':react-native-view-pdf')

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, TabNavigator, Dimensions, StatusBar } from 'react-native';
+import { Dimensions, StyleSheet, Text, View, Image, Alert, ActivityIndicator } from 'react-native';
 import RootStack from './view/StackHomeActivity';
 import { MenuProvider } from 'react-native-popup-menu';
 import AppIntro from 'rn-app-intro-screen';
+import CodePush from "react-native-code-push";
 import Session from './storage/Session';
 
 const styles = StyleSheet.create({
@@ -35,43 +36,86 @@ const slides = [
 ];
 
 export default class App extends Component<Props> {
+  constructor(props) {
+    super(props)
+    this.state = {
+      showapp: false,
+      updateshow:false
+    }
+  }
+
   // static navigationOptions = ({ navigation, screenProps }) => {
   //   return ({
   //   })
   // }
-  constructor(props) {
-    super(props);
-    this.state = {
-      showRealApp: false,
-    }
-    // Session.load("launchershow").then((display) => {
-    //   this.setState({ showRealApp: display })
-    // }).catch((error)=>{
-    //   this.setState({ showRealApp: false })
-    // });
-  }
+
+  componentDidMount() {
+    CodePush.sync(
+      {
+        deploymentKey: '8QRhFDxogSIdzaWKXUEpkwIk04jp5USlrEcooP',
+        updateDialog: false,
+        installMode: CodePush.InstallMode.IMMEDIATE //强制更新
+      },
+      (status) => {
+        switch (status) {
+          case CodePush.SyncStatus.UPDATE_IGNORED:
+            this.setState({updateshow: false})
+            break;
+          case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
+            //console.log('download')
+            this.setState({updateshow: true})
+            break;
+          case CodePush.SyncStatus.INSTALLING_UPDATE:
+            //console.log('installing')
+            this.setState({updateshow: false})
+            break;
+        }
+      },
+      //自动回调
+      ({receivedBytes, totalBytes}) => {
+        this.setState({download: parseInt(receivedBytes * 100 / totalBytes)})
+      }
+    );
+}
 
 
 
   render() {
-
-    if (this.state.showRealApp) {
-      return <MenuProvider>
-        <RootStack />
+    return this.state.updateshow
+    ?
+    <View style={{ 
+      justifyContent:'center',
+      alignItems:'center',
+      position:'absolute',
+      height:Dimensions.get('screen').height,
+      width:Dimensions.get('screen').width,
+      zIndex:10}}>
+      <View style={{ 
+              paddingVertical:12,paddingHorizontal:20,flexDirection:'row',
+              justifyContent:'center',alignItems:'center',
+              backgroundColor:'rgba(0,0,0,0.6)',borderRadius:6
+            }}>
+        <ActivityIndicator 
+          animating={true}
+          color={"#FFFFFF"}
+          size='large'
+        />
+        <Text style={{ marginLeft:20,fontSize:14,color:"#FFFFFF"}}>{this.state.download}%</Text>
+      </View>
+   </View>
+      : 
+      this.state.showapp
+      ?
+        <MenuProvider>
+          <RootStack />
       </MenuProvider>
-    }
-    else {
-      return <AppIntro
+      :
+      <AppIntro
         slides={slides}
-        onDone={() => { this.setState({ showRealApp: true }) }}
-        onSkip={() => { this.setState({ showRealApp: true }) }}
+        onDone={() => { this.setState({ showapp: true }) }}
+        onSkip={() => { this.setState({ showapp: true }) }}
         showSkipButton={true}
       />
-        
-    }
-
-
-
   }
 }
 

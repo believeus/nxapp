@@ -3,6 +3,7 @@ package com.nxapp;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.microsoft.codepush.react.CodePush;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
 import com.github.reactnativecommunity.location.RNLocationPackage;
 import com.rumax.reactnative.pdfviewer.PDFViewPackage;
@@ -36,6 +37,7 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 
 import java.util.Arrays;
 import java.util.List;
+import com.microsoft.codepush.react.CodePush;
 
 
 
@@ -45,11 +47,18 @@ public class MainApplication extends Application implements ReactApplication {
     public boolean getUseDeveloperSupport() {
       return BuildConfig.DEBUG;
     }
-
+    // 2. Override the getJSBundleFile method in order to let
+    // the CodePush runtime determine where to get the JS
+    // bundle location from on each app start
+    @Override
+    protected String getJSBundleFile() {
+      return CodePush.getJSBundleFile();
+    }
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
             new MainReactPackage(),
+            new CodePush(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG),
             new GeolocationPackage(),
             new RNLocationPackage(),
             new PDFViewPackage(),
