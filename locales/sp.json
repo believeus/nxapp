@@ -237,8 +237,8 @@
         "lipoic-recommon":"El ácido alfa lipoico se ha utilizado en medicina alternativa como una ayuda posiblemente efectiva para perder peso, tratar el dolor del nervio diabético, curar heridas, disminuir el azúcar en la sangre, mejorar la decoloración de la piel causada por el vitiligo y disminuir las complicaciones de la cirugía de revascularización coronaria (CABG) . El ácido alfa lipoico puede haberse combinado con otras plantas o extractos en una preparación específica para tratar estas afecciones.",
         "vitaminD2website":"lesswrong.com",
         "vitaminD2":"vitaminD2/vitaminK2",
-        "vitaminD2-recommon":"Personalmente, decidí consumir cada mañana 10 000 UI de vitamina D3 y 200 µg de K2 (all-trans MK7) y creo que probablemente sea beneficioso para muchos compañeros racionalistas que no pasan mucho tiempo exponiendo mucha piel a el sol para tomar los mismos suplementos."
-
+        "vitaminD2-recommon":"Personalmente, decidí consumir cada mañana 10 000 UI de vitamina D3 y 200 µg de K2 (all-trans MK7) y creo que probablemente sea beneficioso para muchos compañeros racionalistas que no pasan mucho tiempo exponiendo mucha piel a el sol para tomar los mismos suplementos.",
+        "Chronological":"Su edad real:"
     },
     "DnaReportActivity": {
         "title": "Edad cronológica",
@@ -291,11 +291,12 @@
         "how":"¿CUANTOS AÑOS TIENES?",
         "why":"¿Por qué es importante",
         "epigenetic":" su 'edad epigenética'?",
-        "calculate":"Calculadora de edad cronológica esperada",
+        "calculate":"Calculadora de edad biológica esperada",
         "acceleration":"Calculadora de aceleración",
         "buildPDF":"Generación de PDF",
         "viewPdf":"Ver PDF",
         "pdfsuccess":"Archivo PDF guardado con éxito, pulse el botón de ver PDF para ver el archivo PDF",
+        "pdffail": "¡Error al crear pdf! Póngase en contacto con el servicio de atención al cliente por correo electrónico: info@epi-age.com",
         "titlemsg":"Mensaje de pista",
         "invalid":"Código no válido",
         "wait":"Sus resultados de epi-age estarán listos dentro de las 4-5 semanas posteriores a la llegada de la muestra de saliva al laboratorio. \n Por favor espere ......",

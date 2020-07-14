@@ -385,7 +385,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                         }}
                                                             keyboardType="numeric"
                                                             defaultValue={"0"}
-                                                            value={this.state.ageBox[i] ? this.state.ageBox[i] : 0}
+                                                            value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : "0"}
                                                             onChangeText={(val) => {
                                                                 let data = val.replace(/[^\d]+/, '')
                                                                 this.state.ageBox[i] = data
@@ -461,7 +461,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             {/* <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View> */}
                                             <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: "center" }}>
                                                 <ProgressCircle
-                                                    percent={barcode.processing}
+                                                    percent={parseFloat(barcode.processing)}
                                                     radius={50}
                                                     borderWidth={20}
                                                     color="#3399FF"
@@ -778,26 +778,40 @@ export default class DnaReportActivity extends Component<Props> {
                                         this.setState({ btnBuildPdfdisabled: true })
                                         let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                         Session.load("pdfsavepath").then((savepathbox) => {
+                                            let url=data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/"+this.state.rage+"/buildPDF.jhtml"
+                                            console.info(url)
                                             //下载pdf
-                                            fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/"+this.state.rage+"/buildPDF.jhtml").then(res => res.text()).then(() => {
-                                                if (savepathbox.indexOf(this.state.barcode + ":" + uuid + ":" + I18n.locale) == -1) {
-                                                    savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
-                                                    this.setState({ animating: false })
-                                                    Session.save("pdfsavepath", savepathbox)
-                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                } else {
-                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                    this.setState({ animating: false })
-                                                }
+                                            fetch(url).then(res => res.text()).then((issuccess) => {
+                                                if(issuccess=="success"){
+                                                    if (savepathbox.indexOf(this.state.barcode + ":" + uuid + ":" + I18n.locale) == -1) {
+                                                        savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
+                                                        this.setState({ animating: false })
+                                                        Session.save("pdfsavepath", savepathbox)
+                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                    } else {
+                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                        this.setState({ animating: false })
+                                                    }
+                                              }else{
+                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
+                                                this.setState({ btnBuildPdfdisabled: true })
+                                                this.setState({ animating: false })
+                                              }
                                             })
                                         }).catch(e => {
                                             Session.save("pdfsavepath", [])
                                             Session.load("pdfsavepath").then((savepathbox) => {
-                                                fetch(data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/buildPDF.jhtml").then(res => res.text()).then(() => {
-                                                    savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
-                                                    this.setState({ animating: false })
-                                                    Session.save("pdfsavepath", savepathbox)
-                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                fetch(url).then(res => res.text()).then((issuccess) => {
+                                                    if(issuccess=="success"){
+                                                        savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
+                                                        this.setState({ animating: false })
+                                                        Session.save("pdfsavepath", savepathbox)
+                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
+                                                    }else{
+                                                        Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
+                                                        this.setState({ btnBuildPdfdisabled: true })
+                                                        this.setState({ animating: false })
+                                                      }
                                                 })
                                             })
                                         })

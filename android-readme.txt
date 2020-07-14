@@ -1,3 +1,10 @@
+熱部署更新
+react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
+
+热部署上传：code-push release-react nxapp  android --d Production --noDuplicateReleaseError
+
+code-push release-react <OurApp> android --deploymentName prod-android --development false --mandatory true --bundleName index.android.bundle
+
 一、Android版本必须安装react-native 0.60.5版本
 
 二、在android版本必须安装react-native 0.60.5版本必须修改如下代码

@@ -237,7 +237,8 @@
         "lipoic-recommon":"α-硫辛酸已被用作替代藥物，可能在減肥，治療糖尿病神經痛，傷口癒合，降低血糖，改善由白癜風引起的皮膚變色以及減少冠狀動脈搭橋術（CABG）手術的並發症方面有效。 α-硫辛酸可能已與其他植物或提取物混合在一起製成特定的製劑，以治療這些疾病。",
         "vitaminD2website":"lesswrong.com",
         "vitaminD2":"维生素D2/维生素K2",
-        "vitaminD2-recommon":"我個人決定每天早晨食用10 000 IU維生素D3和200微克K2（全反式MK7），並認為這對許多不花大量時間暴露於皮膚的理智主義者來說可能是有益的太陽要服用同樣的補品。"
+        "vitaminD2-recommon":"我個人決定每天早晨食用10 000 IU維生素D3和200微克K2（全反式MK7），並認為這對許多不花大量時間暴露於皮膚的理智主義者來說可能是有益的太陽要服用同樣的補品。",
+        "Chronological":"您的實際年齡:"
     },
     "DnaReportActivity": {
         "title": "實際年龄",
@@ -292,11 +293,12 @@
         "how":"你幾歲？",
         "why":"為什麼",
         "epigenetic":"你的生物學年齡很重要？",
-        "calculate":"預期實際年齡計算器",
+        "calculate":"預期生物学年齡計算器",
         "acceleration":"年齡加速計算器",
         "buildPDF":"生成PDF",
         "viewPdf":"查看PDF",
         "pdfsuccess":"PDF保存成功，可點擊查看PDF按鈕查看PDF檔案",
+        "pdffail": "創建pdf失敗！請聯繫客服郵箱：info@epi-age.com",
         "titlemsg":"提示消息",
         "invalid":"無效碼",
         "wait":"在唾液樣本到達實驗室後的4-5週內，您的Epiage結果將準備就緒。\n 請稍候……",

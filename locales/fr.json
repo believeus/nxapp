@@ -227,7 +227,8 @@
         "lipoic-recommon":"L'acide alpha-lipoïque a été utilisé en médecine alternative comme une aide potentiellement efficace pour la perte de poids, le traitement des douleurs nerveuses diabétiques, la cicatrisation des plaies, la baisse de la glycémie, l'amélioration de la décoloration de la peau causée par le vitiligo et la diminution des complications de la chirurgie du pontage aortocoronarien (CABG) . L'acide alpha-lipoïque peut avoir été combiné avec d'autres plantes ou extraits dans une préparation spécifique pour traiter ces conditions.",
         "vitaminD2website":"lesswrong.com",
         "vitaminD2":"vitamine D2/vitamine K2",
-        "vitaminD2-recommon":"Personnellement, j'ai décidé de consommer chaque matin 10 000 UI de vitamine D3 et 200 µg de K2 (tout trans MK7) et je crois que c'est probablement bénéfique pour de nombreux collègues rationalistes qui ne passent pas beaucoup de temps à exposer beaucoup de peau à le soleil pour prendre les mêmes suppléments."
+        "vitaminD2-recommon":"Personnellement, j'ai décidé de consommer chaque matin 10 000 UI de vitamine D3 et 200 µg de K2 (tout trans MK7) et je crois que c'est probablement bénéfique pour de nombreux collègues rationalistes qui ne passent pas beaucoup de temps à exposer beaucoup de peau à le soleil pour prendre les mêmes suppléments.",
+        "Chronological":"Votre âge réel:"
     },
     "DnaReportActivity": {
         "title": "âge chronologique",
@@ -280,7 +281,7 @@
         "how":"QUEL ÂGE AVEZ-VOUS?",
         "why":"Pourquoi votre",
         "epigenetic":"«âge épigénétique» est-il important?",
-        "calculate":"Calculateur chronologique de l'âge prévu",
+        "calculate":"Calculateur Épigénétique de l'âge prévu",
         "acceleration":"Calculateur d'accélération",
         "buildPDF":"Génération de PDF",
         "viewPdf":"Affichage PDF",

@@ -239,6 +239,7 @@
         "vitaminD2website":"lesswrong.com",
         "vitaminD2":"vitaminD2/vitaminK2",
         "vitaminD2-recommon":"Pessoalmente, decidi consumir todas as manhãs 10.000 UI de vitamina D3 e 200 µg de K2 (all-trans MK7) e acredito que provavelmente seja benéfico para muitos colegas racionalistas que não passam muito tempo expondo muita pele a o sol para tomar os mesmos suplementos.",
+        "Chronological":"Sua idade real"
 
     },
     "DnaReportActivity": {
@@ -292,11 +293,12 @@
         "how":"QUANTOS ANOS VOCÊ TEM?",
         "why":"Por que a sua",
         "epigenetic":"'era epigenética' é importante?",
-        "calculate":"Calculadora de idade cronológica esperada",
+        "calculate":"Calculadora de idade Epigenética esperada",
         "acceleration":"Calculadora de aceleração",
         "buildPDF":"Gerar PDF",
         "viewPdf":"Ver PDF",
         "pdfsuccess":"O PDF é gravado com sucesso. Clique EM Ver PDF para ver o arquivo PDF",
+        "pdffail": "Falha ao criar pdf! Entre em contato com o e-mail de atendimento ao cliente: info@epi-age.com",
         "titlemsg":"Mensagem instantânea",
         "invalid":"Código inválido",
         "wait":"Seus resultados de epi-idade estarão prontos dentro de 4-5 semanas após a chegada da amostra de saliva ao laboratório. \n Por favor aguarde ...",

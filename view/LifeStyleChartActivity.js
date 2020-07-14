@@ -43,7 +43,7 @@ export default class LifeStyleChartActivity extends Component<Props> {
                 <View style={{ width: "100%", justifyContent: "center", alignItems: "center", }}>
                     <View style={{ width: "90%", marginTop: 23, marginBottom: 23 }}>
                         <View style={{ width: "100%", height:56, flexDirection: "row" }}>
-                            <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>Your Epigenetic Age:</Text></View>
+                            <View style={{ width: "45%", height: 20 }}><Text style={{ textAlignVertical: "center", fontWeight: "bold" }}>{I18n.t('LifeStyleChartActivity.Chronological')}</Text></View>
                             <View style={{ width: "30%", height: 20 }}>
                                 <InputSpinner
                                     inputStyle={{ paddingVertical: 0 }}
