@@ -291,22 +291,6 @@ export default class MoodChartActivity extends Component<Props> {
                         />
                     </View>
                     <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
-                    <View style={{ width: "100%", height: 400,marginTop:23,marginBottom:23 }}>
-                        <MoodChart
-                            title={
-                                <View style={{ width: "90%", height: 45 }}>
-                                    <View style={{ width: "100%", height: 10 }}></View>
-                                    <View style={{ alignItems: "center" }}>
-                                        <Text style={{ fontSize: 18 }}>{I18n.t('MoodChartActivity.easily')}</Text>
-                                    </View>
-                                </View>
-                            }
-                            yAxisLabelName={I18n.t('MoodChartActivity.score')}
-                            yAxisLabelValue="afraid"
-                            column="afraid"
-                        />
-                    </View>
-                    <View style={{ width: "100%", height: 10, backgroundColor: "#efefef" }}></View>
                 </View>
                 <TouchableOpacity >
                         <Button title="save" onPress={onButtonPress} color="#685cf2" />

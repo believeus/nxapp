@@ -591,6 +591,7 @@
         "mcgill":"McGill Pain Questionnaire",
         "sleep":"Auto-avaliação do sono",
         "diet":"Recomendação de dieta",
+        "how":"Como preencher o questionário?",
         "eip":"@ 2019 HKG epi THERAPEUTICS Ltd. Todos os direitos reservados"
     },
     "ConsentActivity": {

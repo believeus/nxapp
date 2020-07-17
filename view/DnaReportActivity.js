@@ -385,7 +385,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                         }}
                                                             keyboardType="numeric"
                                                             defaultValue={"0"}
-                                                            value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : "0"}
+                                                            value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : ""}
                                                             onChangeText={(val) => {
                                                                 let data = val.replace(/[^\d]+/, '')
                                                                 this.state.ageBox[i] = data

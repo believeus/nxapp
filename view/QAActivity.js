@@ -29,7 +29,7 @@ export default class QAActivity extends Component<Props> {
                         <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 23, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.fillques')}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity onPress={() => this.navigate.push("Manual4")}>
-                        <Text numberOfLines={2} style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome',textDecorationLine:"underline", paddingTop: 13,  borderBottomWidth: 1, borderBottomColor: '#efefef', }}>{I18n.t('QAActivity.calfoot')}</Text>
+                        <Text numberOfLines={2} style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13,  borderBottomWidth: 1, borderBottomColor: '#efefef', }}>{I18n.t('QAActivity.calfoot')}</Text>
                     </TouchableOpacity>
                     
                 </View>

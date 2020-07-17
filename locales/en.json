@@ -1,6 +1,6 @@
 {
     "LoginIcon": {
-        "message": "Hi:Guest"
+        "message": "Welcome"
     },
     "TabHomeActivity": {
         "imgindex": "../image/enpic/index1.jpg",
@@ -591,6 +591,7 @@
         "mcgill": "McGill Pain Questionnaire",
         "sleep": "Sleep Self-Assessment",
         "diet": "Diet Recommendation",
+        "how":"How to fill out the questionnaire?",
         "eip": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {

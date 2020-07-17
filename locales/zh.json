@@ -580,6 +580,7 @@
         "mcgill":"麥吉爾疼痛問卷",
         "sleep":"睡眠自我評估",
         "diet":"飲食推薦",
+        "how":"如何填寫問卷？",
         "eip":"@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {

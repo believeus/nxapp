@@ -113,7 +113,7 @@ export default class QuestionnaireActivity extends Component<Props> {
                 <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <TouchableOpacity onPress={() => {this.navigate.push("Manual3")}}>
                 <View style={{ width: '100%', alignSelf: 'center',}}>
-                    <Text style={{ height: 45, lineHeight: 45, paddingTop: 12, width: '100%', textAlign: 'center', fontFamily: 'NotoSansHans-Medium', fontSize: 14, }}>How to fill out the questionnaire? &gt;</Text>
+                    <Text style={{ height: 45, lineHeight: 45, paddingTop: 12, width: '100%', textAlign: 'center', fontFamily: 'NotoSansHans-Medium', fontSize: 14,textDecorationLine:"underline" }}>{I18n.t('QuestionnaireActivity.how')} &gt;</Text>
                 </View>
                 </TouchableOpacity>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, marginTop: 20 , textAlign: 'center' }}>{I18n.t('QuestionnaireActivity.eip')}</Text>

@@ -582,6 +582,7 @@
         "mcgill": "Questionnaire de McGill sur la douleur",
         "sleep": "Auto-évaluation du sommeil",
         "diet": "Recommandation de régime",
+        "how":"Comment remplir le questionnaire?",
         "eip": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "ConsentActivity": {
