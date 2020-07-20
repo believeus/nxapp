@@ -109,7 +109,7 @@ export default class MoodChart extends Component<Props> {
                             <AirbnbRating
                                 count={4}
                                 ratingTextColor={"red"}
-                                reviews={["None", "Half days", "Few days", "Every day"]}
+                                reviews={["None", "Some days", "Most days", "Every day"]}
                                 defaultRating={1}
                                 size={20}
                                 ref={(ref) => { this.rating = ref }}

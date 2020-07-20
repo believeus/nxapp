@@ -5,7 +5,7 @@
     "TabHomeActivity": {
         "imgindex": "../image/enpic/index1.jpg",
         "title": "HOME",
-        "video": "Related Video",
+        "video": "TEDx Video",
         "biotitle": "Epigenetic age Detection by DNA Methylation ",
         "1ml": "Only 2ml saliva sample is needed for detection, which is convinient and safe.",
         "testresult": "The sample will be sent to the laboratory for testing, the test results will be sent to your APP.",
@@ -767,7 +767,7 @@
         "mood": "Thinking about the past month, to what extent has poor sleep affect your mood, energy, or relationships?",
         "productivity": "Thinking about the past month, to what extent has poor sleep affect your concentration, productivity, or ability to stay awake?",
         "general": "Thinking about the past month, to what extent has poor sleep troubled you in general?",
-        "problem": "8.How long have you had a problem with your sleep?",
+        "problem": "How long have you had a problem with your sleep?",
         "month": "month"
     },
     "DietChartActivity": {
