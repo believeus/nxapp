@@ -911,7 +911,7 @@
         "title": "How to get my epiAging test report",
         "getmy": "How to get my epiAging test report",
         "login": "Make sure to login with the account that has been used to purchase the epiAging product.",
-        "username": "Your username will appear after you log in.",
+        "username": "Your username will be displayed here after you log in.",
         "gohome": "Go to “HOME” or “EPICENTER” and click “My report”.",
         "barcode": "Enter(or Scan) the barcode on your test tube and get your epiAging report.",
         "icon": "After entered your barcode, by clicking the icon to get your epiAging test report",
@@ -924,7 +924,7 @@
         "fillregis": "Fill in the registration information.",
         "mailbox": "Go to the registration mailbox to activate your account.",
         "accountlogin": "Log in with the account you just registered.",
-        "setkey": "Generate unique data security key",
+        "setkey": "5.Generate the unique data security private key and public key. Most importantly, save them by taking a screenshot or copy-paste them in your memo note.",
         "sentmail": "Public and private key pairs will be saved to your phone's local folder",
         "purchase": "Go to 'SHOPPING' to purchase the EpiAging test kit."
     },
