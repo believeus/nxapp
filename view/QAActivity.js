@@ -21,7 +21,6 @@ export default class QAActivity extends Component<Props> {
                     <TouchableOpacity onPress={() => this.navigate.push("Manual2")}>
                         <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 23, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.test')}</Text>
                     </TouchableOpacity>
-
                     <TouchableOpacity onPress={() => this.navigate.push("Manual1")}>
                         <Text style={{ height: 67, fontSize: 16, fontFamily: 'FontAwesome', paddingTop: 13, lineHeight: 23, borderBottomWidth: 1, borderBottomColor: '#efefef' }}>{I18n.t('QAActivity.report')}</Text>
                     </TouchableOpacity>
