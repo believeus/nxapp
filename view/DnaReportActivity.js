@@ -460,10 +460,13 @@ export default class DnaReportActivity extends Component<Props> {
                                             </View>
                                             {/* <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View> */}
                                             <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: "center" }}>
+                                                <Text style={{ fontSize: 12, backgroundColor: "#3399FF", color: '#fff', height: 23, lineHeight: 23, width: "89%", textAlign: 'center', borderRadius: 20, marginBottom: 16 }}>View Report</Text>
+                                                
                                                 <ProgressCircle
                                                     percent={parseFloat(barcode.processing)}
+                                                    marginTop={9}
                                                     radius={50}
-                                                    borderWidth={20}
+                                                    borderWidth={16}
                                                     color="#3399FF"
                                                     shadowColor="#999"
                                                     bgColor="#fff">
