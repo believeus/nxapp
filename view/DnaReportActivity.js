@@ -146,21 +146,24 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
                     //离到期时间一共有多少毫秒
-                    let c = (data[i].detectTime + (21 * 24 * 3600 * 1000)) - data[i].detectTime
+                    let c = (data[i].detectTime + (31 * 24 * 3600 * 1000)) - data[i].detectTime
                     //当前时间离到期时间还剩多少毫秒到期
-                    let d = (data[i].detectTime + (21 * 24 * 3600 * 1000)) - curtime
+                    let d = (data[i].detectTime + (31 * 24 * 3600 * 1000)) - curtime
                     //(离到期时间一共有多少毫秒-当前时间离到期时间还剩多少毫秒到期)/离到期时间一共有多少毫秒
                     let process = parseFloat(((c - d) / c) * 100).toFixed(2)
                     //console.info((data[i].uploadTime/(data[i].uploadTime+(21*24*3600*1000))))
+                    let remain = d / (31 * 24 * 3600 * 1000)
                     let vbarcode = {}
                     vbarcode.val = data[i].barcode
+                    if (remain < 0) { remain = 0 }
+                    else { vbarcode.remain = Math.round(31 - remain) }
                     vbarcode.stat = data[i].status
                     vbarcode.naturally = data[i].naturally
                     vbarcode.biological = data[i].biological
                     vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
                     vbarcode.detectTime = (data[i].status == "in-transit") ? I18n.t("DnaReportActivity.intransit") : new Date(data[i].detectTime).toLocaleDateString()
                     if (data[i].status == "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
-                    else { vbarcode.endtime = (data[i].status == "ready") ? I18n.t("DnaReportActivity.done") : new Date(data[i].detectTime + (21 * 24 * 3600 * 1000)).toLocaleDateString() }
+                    else { vbarcode.endtime = (data[i].status == "ready") ? I18n.t("DnaReportActivity.done") : new Date(data[i].detectTime + (31 * 24 * 3600 * 1000)).toLocaleDateString() }
                     vbarcode.email = data[i].email
                     if (data[i].status == "in-transit") vbarcode.processing = 0
                     else if (data[i].status == "ready") vbarcode.processing = 100
@@ -239,7 +242,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 barcode.val = this.state.barcode
                                                 barcode.stat = data.status
                                                 barcode.createTime = new Date(data.createTime).toLocaleDateString()
-                                                barcode.endtime = new Date(data.createTime + (21 * 24 * 3600 * 1000)).toLocaleDateString()
+                                                barcode.endtime = new Date(data.createTime + (31 * 24 * 3600 * 1000)).toLocaleDateString()
                                                 barcode.processing = 0
                                                 barcode.naturally = 0
                                                 barcode.switchon = false
@@ -350,7 +353,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             })
 
                                         }}>
-                                        <View key={barcode.val} style={{ width: "100%", height: 167, borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row", borderStyle: "dashed" }}>
+                                        <View key={barcode.val} style={{ width: "100%", height: 199, borderBottomColor: "#0071bc", borderBottomWidth: 1, flexDirection: "row", borderStyle: "dashed" }}>
                                             <View style={{ width: "70%", borderStyle: "dotted" }}>
                                                 <View style={{ width: "100%", height: 10 }}></View>
                                                 <View style={{ width: "100%", height: 20 }}>
@@ -372,26 +375,36 @@ export default class DnaReportActivity extends Component<Props> {
                                                 </View>
                                                 {barcode.stat == "in-transit" ?
                                                     null :
-                                                    <View style={{ width: "100%", flexDirection: "row" }}>
-                                                        <Text style={{ fontWeight: "bold", color: "#0071bc" }}>{I18n.t('DnaReportActivity.yourage')}：</Text>
-                                                        <TextInput style={{
-                                                            height: 20,
-                                                            width: '50%',
-                                                            borderWidth: 1,
-                                                            borderColor: '#b3b3b3',
-                                                            fontSize: 14,
-                                                            paddingVertical: 0,
-                                                            textAlign: "center"
-                                                        }}
-                                                            keyboardType="numeric"
-                                                            defaultValue={"0"}
-                                                            value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : ""}
-                                                            onChangeText={(val) => {
-                                                                let data = val.replace(/[^\d]+/, '')
-                                                                this.state.ageBox[i] = data
-                                                                this.setState({ ageBox: this.state.ageBox })
+                                                    <View>
+                                                        {barcode.stat == "ready" ?
+                                                            null :
+                                                            <View style={{ width: '100%', height: 20 }}>
+                                                                <Text style={{ fontWeight: "bold", color: "#0071bc" }}>Remaining days: {barcode.remain}</Text>
+                                                            </View>
+                                                        }
+
+                                                        <View style={{ width: "100%", flexDirection: "row" }}>
+
+                                                            <Text style={{ fontWeight: "bold", color: "#0071bc" }}>{I18n.t('DnaReportActivity.yourage')}：</Text>
+                                                            <TextInput style={{
+                                                                height: 20,
+                                                                width: '50%',
+                                                                borderWidth: 1,
+                                                                borderColor: '#b3b3b3',
+                                                                fontSize: 14,
+                                                                paddingVertical: 0,
+                                                                textAlign: "center"
                                                             }}
-                                                        />
+                                                                keyboardType="numeric"
+                                                                defaultValue={"0"}
+                                                                value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : ""}
+                                                                onChangeText={(val) => {
+                                                                    let data = val.replace(/[^\d]+/, '')
+                                                                    this.state.ageBox[i] = data
+                                                                    this.setState({ ageBox: this.state.ageBox })
+                                                                }}
+                                                            />
+                                                        </View>
                                                     </View>}
                                                 {barcode.stat == "in-transit" ?
                                                     null :
@@ -459,14 +472,14 @@ export default class DnaReportActivity extends Component<Props> {
                                                 }
                                             </View>
                                             {/* <View style={{ width: "30%", height: "100%" }}><Text style={{ fontWeight: "bold", height: "100%", color: "#808080", textAlign: "center", fontFamily: 'FontAwesome', fontSize: 13, lineHeight: 39, color: barcode.stat == "ready" ? "red" : "green" }}>{barcode.stat}</Text></View> */}
-                                            <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: "center" }}>
+                                            <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: "center", marginLeft: 6 }}>
                                                 <Text style={{ fontSize: 12, backgroundColor: "#3399FF", color: '#fff', height: 23, lineHeight: 23, width: "89%", textAlign: 'center', borderRadius: 20, marginBottom: 16 }}>View Report</Text>
-                                                
+
                                                 <ProgressCircle
                                                     percent={parseFloat(barcode.processing)}
                                                     marginTop={9}
                                                     radius={50}
-                                                    borderWidth={16}
+                                                    borderWidth={19}
                                                     color="#3399FF"
                                                     shadowColor="#999"
                                                     bgColor="#fff">
@@ -529,7 +542,7 @@ export default class DnaReportActivity extends Component<Props> {
                                             :
                                             <View style={{ width: '100%', height: 23, flexDirection: 'column', }}>
                                                 <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>NA(non-available)</Text>
-                                                <View style={{ width: '100%',paddingTop:12 }}>
+                                                <View style={{ width: '100%', paddingTop: 12 }}>
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
                                                     <Text style={{ fontSize: 12, lineHeight: 12, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
@@ -590,9 +603,9 @@ export default class DnaReportActivity extends Component<Props> {
                             <TouchableOpacity onPress={() => this.navigate.push("Mall")}>
                                 <Text style={{ fontSize: 12, marginBottom: 23, marginTop: 23, textDecorationLine: 'underline', textAlign: 'center' }}>{I18n.t('DnaReportActivity.calculate')}&gt;</Text>
                             </TouchableOpacity>
-                                <TouchableOpacity onPress={() => this.navigate.push("AgeAccelerate")}>
-                                    <Text style={{ fontSize: 12, marginBottom: 23, textDecorationLine: "underline", textAlign: 'center' }}>{I18n.t('DnaReportActivity.acceleration')}&gt;</Text>
-                                </TouchableOpacity>
+                            <TouchableOpacity onPress={() => this.navigate.push("AgeAccelerate")}>
+                                <Text style={{ fontSize: 12, marginBottom: 23, textDecorationLine: "underline", textAlign: 'center' }}>{I18n.t('DnaReportActivity.acceleration')}&gt;</Text>
+                            </TouchableOpacity>
                             <ImageBackground style={{ width: '100%', height: 223, }} resizeMode='cover' source={require("../image/enpic/rep12.jpg")} />
                             <View style={{ width: '90%', alignSelf: 'center', }}>
                                 <View style={{ width: '100%', alignSelf: 'flex-end', marginTop: -23, marginBottom: 34 }}>
@@ -781,11 +794,11 @@ export default class DnaReportActivity extends Component<Props> {
                                         this.setState({ btnBuildPdfdisabled: true })
                                         let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                         Session.load("pdfsavepath").then((savepathbox) => {
-                                            let url=data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/"+this.state.rage+"/buildPDF.jhtml"
+                                            let url = data.url + "user/report/" + uuid + "/" + this.state.barcode + "/" + I18n.locale + "/" + this.state.rage + "/buildPDF.jhtml"
                                             console.info(url)
                                             //下载pdf
                                             fetch(url).then(res => res.text()).then((issuccess) => {
-                                                if(issuccess=="success"){
+                                                if (issuccess == "success") {
                                                     if (savepathbox.indexOf(this.state.barcode + ":" + uuid + ":" + I18n.locale) == -1) {
                                                         savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
                                                         this.setState({ animating: false })
@@ -795,26 +808,26 @@ export default class DnaReportActivity extends Component<Props> {
                                                         Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
                                                         this.setState({ animating: false })
                                                     }
-                                              }else{
-                                                Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
-                                                this.setState({ btnBuildPdfdisabled: true })
-                                                this.setState({ animating: false })
-                                              }
+                                                } else {
+                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
+                                                    this.setState({ btnBuildPdfdisabled: true })
+                                                    this.setState({ animating: false })
+                                                }
                                             })
                                         }).catch(e => {
                                             Session.save("pdfsavepath", [])
                                             Session.load("pdfsavepath").then((savepathbox) => {
                                                 fetch(url).then(res => res.text()).then((issuccess) => {
-                                                    if(issuccess=="success"){
+                                                    if (issuccess == "success") {
                                                         savepathbox.push(this.state.barcode + ":" + uuid + ":" + I18n.locale)
                                                         this.setState({ animating: false })
                                                         Session.save("pdfsavepath", savepathbox)
                                                         Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdfsuccess"))
-                                                    }else{
+                                                    } else {
                                                         Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pdffail"))
                                                         this.setState({ btnBuildPdfdisabled: true })
                                                         this.setState({ animating: false })
-                                                      }
+                                                    }
                                                 })
                                             })
                                         })
