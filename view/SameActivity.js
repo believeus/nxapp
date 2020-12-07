@@ -98,10 +98,9 @@ export default class SameActivity extends Component<Props> {
                             <Text style={{ paddingTop: 10, paddingLeft: 10, paddingRight: 10 }}>{I18n.t('SameActivity.quality')}</Text>
                             <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/books/NBK11886/" }); this.setState({ display: true }) }}>
                                 <Text style={{ fontStyle: 'italic', fontSize: 14, paddingLeft: 10, textDecorationLine: 'underline' }}>https://www.ncbi.nlm.nih.gov/books/NBK11886/
-
                                 </Text>
                             </TouchableOpacity>
-                            <Text style={{ height: 47, width: '10%', paddingTop: -4, fontStyle: 'italic', fontSize: 45, color: '#c1e1e8' }}>▼</Text>
+                            <Text style={{ height: 47, width: '10%', paddingTop: -2, fontStyle: 'italic', fontSize: 24, color: '#c1e1e8' }}>▼</Text>
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
@@ -193,11 +192,11 @@ export default class SameActivity extends Component<Props> {
                 </View>
                 <View style={{ backgroundColor: '#f4f4f6', }}>
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 23, paddingBottom: 23, }}>
-                        <Text style={{ height: 99, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 34, }}>{I18n.t('SameActivity.basic')}</Text>
+                        <Text style={{ height: 99, fontSize: 19, fontFamily: 'FontAwesome', lineHeight: 23, }}>{I18n.t('SameActivity.basic')}</Text>
 
-                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
-                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12,borderBottomWidth:1,borderBottomColor:'#dedede' }}>
+                            <Image style={{ width: '20%',height:60}} resizeMode='contain' source={require("../image/enpic/same-1.png")}/>
+                            <View style={{ width: '80%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.animals')}</Text>
                                 <TouchableOpacity onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29435170" }); this.setState({ display: true }) }} >
                                     <Text style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/29435170</Text>
@@ -206,33 +205,33 @@ export default class SameActivity extends Component<Props> {
                             </View>
                         </View>
 
-                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
-                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 ,borderBottomWidth:1,borderBottomColor:'#dedede'}}>
+                        <Image style={{ width: '20%',height:60}} resizeMode='contain' source={require("../image/enpic/same-2.png")}/>
+                            <View style={{ width: '80%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.shown')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/29340097" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/29340097</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
-                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12 ,borderBottomWidth:1,borderBottomColor:'#dedede'}}>
+                        <Image style={{ width: '20%',height:60}} resizeMode='contain' source={require("../image/enpic/same-3.png")}/>
+                            <View style={{ width: '80%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.prostate')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/25631332" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/25631332</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/16982764" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/16982764</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
-                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12,borderBottomWidth:1,borderBottomColor:'#dedede' }}>
+                        <Image style={{ width: '20%',height:60}} resizeMode='contain' source={require("../image/enpic/same-4.png")}/>
+                            <View style={{ width: '80%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.formation')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/23073625" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/23073625</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/19444874" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/19444874</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/22159228" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/22159228</Text>
                             </View>
                         </View>
-                        <View style={{ flexDirection: 'row', marginBottom: 12 }}>
-                            <Text style={{ width: '7%', fontSize: 14, color: '#0071bc' }}>●</Text>
-                            <View style={{ width: '95%', }}>
+                        <View style={{ flexDirection: 'row', marginBottom: 12,borderBottomWidth:1,borderBottomColor:'#dedede' }}>
+                        <Image style={{ width: '20%',height:60}} resizeMode='contain' source={require("../image/enpic/same-5.png")}/>
+                            <View style={{ width: '80%', }}>
                                 <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 21 }}>{I18n.t('SameActivity.was')}</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/27681803" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/27681803</Text>
                                 <Text onPress={() => { this.setState({ url: "https://www.ncbi.nlm.nih.gov/pubmed/22221883" }); this.setState({ display: true }) }} style={{ fontFamily: 'NotoSansHans-Light', lineHeight: 18, fontSize: 12, color: '#0071bc', fontStyle: 'italic', }}>https://www.ncbi.nlm.nih.gov/pubmed/22221883</Text>

@@ -50,7 +50,7 @@ export default class TabHomeActivity extends Component<Props> {
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
         });
-        this.dropDownAlertRef.alertWithType('success', I18n.t('TabHomeActivity.Tips'),I18n.t('TabHomeActivity.message'),{},5000)
+        this.dropDownAlertRef.alertWithType('success', I18n.t('TabHomeActivity.Tips'),I18n.t('TabHomeActivity.message'),{},60000*5)
     }
     render() {
         this.navigate = this.props.navigation;
