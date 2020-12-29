@@ -2,6 +2,10 @@ package com.nxapp;
 
 import android.app.Application;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLSession;
+
 import com.facebook.react.ReactApplication;
 import com.microsoft.codepush.react.CodePush;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
@@ -38,7 +42,6 @@ import com.swmansion.gesturehandler.react.RNGestureHandlerPackage;
 import java.util.Arrays;
 import java.util.List;
 import com.microsoft.codepush.react.CodePush;
-
 
 
 public class MainApplication extends Application implements ReactApplication {
@@ -103,6 +106,16 @@ public class MainApplication extends Application implements ReactApplication {
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
-  }
+
+    HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+      public boolean verify(final String hostname, final SSLSession session) {
+          if (hostname.equals("app.epi-age.com")){
+              return true;
+          }else{
+              return false;
+          }
+      }
+      });
+    } 
 
 }

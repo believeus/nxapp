@@ -32,7 +32,7 @@
         "consent": "Consentement éclairé de l'utilisateur",
         "disclaimer": "disclaimer",
         "disclaimertext": "disclaimerLe test d'épidémiologie n'est pas destiné à être une information de santé ou des données médicales, ni à être utilisé pour dépister, diagnostiquer, traiter, prévenir ou évaluer le risque de maladie ou d'affection. Le service epiAging est une détermination de l'âge épigénétique basée sur l'évaluation de la méthylation de l'ADN dans votre ADN. Nous ne recueillons pas de données génétiques. Le test est disponible pour les personnes de 21 ans et plus. Ce service n'a pas été autorisé ni approuvé par la Food and Drug Administration des États-Unis.",
-        "allright": " @2019 HKG epi THERAPEUTICS Ltd.Tous les droits sont réservés",
+        "allright": " @2021 HKG epi THERAPEUTICS Ltd.Tous les droits sont réservés",
         "old":"Quel âge as-tu",
         "you":"vraiment?",
         "only":"Le seul âge qui compte est ",
@@ -425,7 +425,7 @@
         "award": "Excellence Award",
         "medical": "Toronto Alumni and Friends Medical",
         "publshed": "| Les articles cités",
-        "all": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "all": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "forum": "2017 Sixth Asian Chromatin and Chromosome Forum",
         "india": "(Hyderabad, India)",
         "diseases": "2016 3rd Canadian Conference on Epigenetics of Development and Diseases",
@@ -497,7 +497,7 @@
         "university": "Université de Hong Kong",
         "assistaant": "Assistant de recherche",
         "papers": "| Les articles publiés",
-        "rights": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "rights": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ZhiyuanActivity": {
         "title": "Dr. Zhiyuan Lv",
@@ -528,7 +528,7 @@
         "journal": "Journal of Immunoassay and Immunochemistry",
         "board": "Comité de rédaction de la revue",
         "papers": "| Les articles publiés",
-        "reserved": "@2019 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "reserved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "society": "2015 Annual Meeting of the American Society of Immunologists",
         "newusa": "(New Orleans, USA)",
         "third": "Third Annual Conference of the 2014 Southeast American Symposium on Immunology",
@@ -573,7 +573,7 @@
         "biological": "Notre âge épigénétique est une meilleure mesure de notre santé et de notre bien-être que les ageriments chronologiques.",
         "acceleration": "Des études montrent que l'accélération de 'l'âge de méthylation de l'ADN' est un facteur prédictif de décès prématuré et de maladie chronique.",
         "bydietary": "Des expériences sur des animaux montrent qu'il est possible d'inverser l'horloge épigénétique par des changements alimentaires.",
-        "epi": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "epi": "@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "QuestionnaireActivity": {
         "title": "Questionnaires",
@@ -583,7 +583,7 @@
         "sleep": "Auto-évaluation du sommeil",
         "diet": "Recommandation de régime",
         "how":"Comment remplir le questionnaire?",
-        "eip": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "eip": "@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "ConsentActivity": {
         "title": "Formulaire de consentement",
@@ -610,7 +610,7 @@
         "security": "Sécurité des données",
         "accordance": "Conformément à la législation sur la protection des données, vous avez le droit de demander l'accès à vos données personnelles, de les rectifier ou de les effacer, de restreindre le traitement de vos données ou de vous opposer à un traitement ainsi que le droit à la portabilité des données. Vous pouvez exercer ce droit en contactant (info@hkgepitherapeutics.com). Votre nom et votre identité seront cryptés et protégés par un pare-feu. Après votre signature, vous recevrez une identification en aveugle qui vous permettra de fournir des données et de rester anonyme au système.",
         "agree": "Accepter",
-        "ved": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "ved": "@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "McGillChartActivity": {
         "title": "Questionnaire de McGill Pain",
@@ -740,7 +740,7 @@
          "counts":"Le seul âge qui compte est ",
         "danage":"votre âge ADN épigénétique.",
         "lifestyle": "Nous analyserons également vos données de mode de vie. Vous continuez à modifier votre mode de vie et à en faire rapport. Vous obtenez des rapports personnalisés sur votre ordre de progression périodiquement de nouveaux tests epiAging pour évaluer vos progrès. Une nouvelle analyse sera fournie avec quelques suggestions. Continuez à améliorer et à tester votre épiAge.",
-        "foot": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "foot": "@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "SleepChartActivity": {
         "title": "Auto-évaluation du sommeil",
@@ -824,7 +824,7 @@
         "when": "Attention en prenant SAMe",
         "should": "SAMe ne doit pas être utilisé conjointement ou à la place du traitement recommandé par votre médecin.",
         "taking": "Si vous prenez des médicaments et envisagez de prendre SAMe en complément, consultez votre médecin pour vous assurer que SAMe n’a pas d’interaction avec les médicaments que vous prenez.",
-        "ltd": "@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "ltd": "@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "DataActivity": {
         "title": "Sécurité des données",
@@ -847,7 +847,7 @@
         "not": "Nous n'aurons ni ne sauvegardons la clé privée de l'utilisateur pour déchiffrer les données de l'utilisateur conformément à notre déclaration de sécurité des données. Veuillez enregistrer votre seule clé privée.",
         "lost":"Une fois la clé privée définie, les modifications ne seront pas autorisées. Si la clé privée est modifiée, toutes les données d'intégrité précédemment enregistrées seront perdues. Les nouvelles données de santé seront cryptées avec la nouvelle clé privée et ne peuvent être définies qu'une seule fois.",
         "save":"Conformément à la déclaration sur la sécurité des données et à la loi HIPPA, nous ne disposerons ni ne sauvegardons la clé privée de l'utilisateur pour déchiffrer ses données.",
-        "eip":"@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "eip":"@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
 
     },
     "RasEncryptionActivity": {
@@ -873,10 +873,10 @@
     },
     "QAActivity": {
         "title": "Q&A",
-        "test":"Manuel d'utilisation de l'application EpiAging",
-        "report":"Comment obtenir mon rapport de test epiAging?",
-        "fillques":"Comment remplir les questionnaires?",
-        "calfoot":"Comment calculer les calories des aliments que vous consommez?"
+        "test":"1.Manuel d'utilisation de l'application EpiAging",
+        "report":"2.Comment obtenir mon rapport de test epiAging?",
+        "fillques":"3.Comment remplir les questionnaires?",
+        "calfoot":"4.Comment calculer les calories des aliments que vous consommez?"
     },
     "ContactActivity": {
         "title": "Contact Us",
@@ -894,7 +894,7 @@
         "title": "Notification",
         "ques": "Continuez",
         "back": "Annuler",
-        "epi":"@ 2019 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
+        "epi":"@2021 HKG epi THERAPEUTICS Ltd. Tous droits réservés"
     },
     "Manual1Activity": {
         "title": "Comment obtenir le rapport de test epiAging",

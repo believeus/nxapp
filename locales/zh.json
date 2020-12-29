@@ -31,7 +31,7 @@
         "consent": "用戶知情同意書",
         "disclaimer": "免責聲明",
         "disclaimertext": "EpiAging測試並非旨在作為健康信息或醫學數據，也不用於篩選，診斷，治療，預防或評估任何疾病或狀況的風險。 epiAging服務是根據DNA中DNA甲基化的評估確定表觀遺傳的年齡。 我們不收集遺傳數據。 該測試適用於21歲以上的個人。 美國食品藥品監督管理局尚未清除或批准此服務。",
-        "allright": " @2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "allright": " @2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "old":"您",
         "you":"幾歲呢？",
         "only":"唯一重要的年齡",
@@ -423,7 +423,7 @@
         "medical": "2009年-多倫多校友和朋友",
         "excellence": "醫學卓越獎",
         "publshed": "論文著作",
-        "all": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "all": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "forum": "2017第六屆亞洲染色質和染色體論壇",
         "india": "（印度海德拉巴）",
         "diseases": "2016年第三屆加拿大發展與疾病表觀遺傳學會議",
@@ -495,7 +495,7 @@
         "university": "香港大學",
         "assistaant": "研究助理",
         "papers": "論文著作",
-        "rights": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "rights": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ZhiyuanActivity": {
         "title": "呂志遠博士後研究生",
@@ -526,7 +526,7 @@
         "journal": "免疫分析與免疫化學",
         "board": "學術期刊編委",
         "papers": "論文著作",
-        "reserved": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "reserved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "society": "美國免疫學家學會2015年年會",
         "newusa": "（美國新奧爾良）",
         "third": "2014年東南亞免疫學研討會第三屆年會",
@@ -571,7 +571,7 @@
         "biological": "相比於檢測實際年齡，量度生物年齡能更有效衡量我們的健康以及身體情況。",
         "acceleration": "研究顯示，“DNA甲基化年齡”加速是預測早期死亡和慢性疾病的因素。",
         "bydietary": "動物實驗結果反映出，飲食習慣的改變是可能逆轉生物時鐘的。",
-        "epi": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "epi": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "QuestionnaireActivity": {
         "title": "問卷調查",
@@ -581,7 +581,7 @@
         "sleep":"睡眠自我評估",
         "diet":"飲食推薦",
         "how":"如何填寫問卷？",
-        "eip":"@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "ConsentActivity": {
         "title": "客戶同意書",
@@ -608,7 +608,7 @@
         "security": "數據安全",
         "accordance": "根據《數據保護條例》關於數據保護的規定，閣下有權要求訪問、糾正或刪除閣下的個人數據，或限制與閣下數據有關的處理及數據可移動性。閣下可以通過聯繫（info@hkgepitherapeutics.com）行使此權利。閣下的數據會被加密和防火牆保護。同意接受條款之後，閣下將收到一個純粹的ID號碼，通過該ID號你可以進行數據錄入同時對系統保持匿名狀態。",
         "agree": "同意",
-        "ved": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "ved": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "McGillChartActivity": {
         "title": "麥吉爾疼痛問卷",
@@ -736,7 +736,7 @@
         "analyze": "我們最先進的實驗室將分析您的表觀遺傳數據以計算您的生物學年齡，並且您可以通過APP查看個性化報告。",
         "step5": "第5步：改變生活方式，改善您的健康",
         "lifestyle": "我們還將分析您的生活方式數據。 您不斷改變生活方式並進行報告。 您會定期收到有關進度訂單的個性化報告，這些報告會定期進行新的EpiAging測試以評估您的進度。 新的分析將提供一些建議。 不斷改進和測試您的epiAge。",
-        "foot": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
+        "foot": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved",
         "counts":"唯一重要的年齡是",
         "danage":"您的生物DNA年齡"
     },
@@ -827,7 +827,7 @@
         "when": "注意事項",
         "should": "SAMe 不應與醫生處方藥物一同服用。 ",
         "taking": "如果閣下正在服用藥物並考慮使用SAMe作為補充劑，請諮詢醫生SAMe是否與所服用藥物有相沖。",
-        "ltd": "@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "ltd": "@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "DataActivity": {
         "title": "數據安全",
@@ -850,7 +850,7 @@
         "not": "根據我們的數據安全聲明，我們將不會擁有或保存用戶的私鑰來解密用戶數據，請保存您唯一的私鑰。",
         "lost":"設置私鑰後，將不允許更改。 如果更改了私鑰，則所有先前保存的健康數據都將丟失。 新的健康數據將使用新的私鑰加密，並且只能設置一次。",
         "save":"根據數據安全聲明和HIPPA法律，我們將沒有或保存用戶的私鑰來解密用戶數據。",
-        "eip":"@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "eip":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "RasEncryptionActivity": {
         "title": "數據安全設定",
@@ -892,7 +892,7 @@
         "title": "問卷聲明",
         "ques": "繼續",
         "back": "取消",
-        "epi":"@2020 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
+        "epi":"@2021 HKG epi THERAPEUTICS Ltd. All Rights Reserved"
     },
     "Manual1Activity": {
         "title": "獲得EpiAging測試報告",
