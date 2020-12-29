@@ -28,7 +28,7 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
-                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23 }}>
+                <View style={{ width: '90%', alignSelf: 'center', marginTop: 23 ,height:500}}>
                     <Text style={{ fontSize: 18,fontWeight:'bold', fontFamily: 'FontAwesome', height: 67, textAlign: 'center' }}>{I18n.t("AgeAccelerateActivity.accecalcul")}</Text>
                     <Text style={{
                         fontFamily: 'FontAwesome',
@@ -95,7 +95,7 @@ export default class AgeAccelerateActivity extends Component<Props> {
                     }
 
                 </View>
-                <View style={{ height: 20, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
+                <View style={{ height: 10, marginTop: 10, backgroundColor: '#f0f0f0' }}></View>
                 <Text style={{ fontFamily: 'NotoSansHans-Light', fontSize: 12, textAlign: 'center' }}>{I18n.t('TabHomeActivity.allright')}</Text>
             </ScrollView >
         );
