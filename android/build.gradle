@@ -11,7 +11,15 @@ buildscript {
     repositories {
         google()
         jcenter()
-        maven { url "https://maven.google.com" }
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url 'http://maven.oschina.net/content/groups/public/' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url "http://maven.springframework.org/release" }
+        maven { url "http://maven.restlet.org" }
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        ivy { url "http://repo.mycompany.com/repo" }
         
     }
     dependencies {
@@ -26,8 +34,17 @@ buildscript {
 allprojects {
     repositories {
         mavenLocal()
-        google()
+        google()    //since gradle 4.0
         jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "http://maven.aliyun.com/nexus/content/groups/public/" }
+        maven { url 'http://maven.oschina.net/content/groups/public/' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url "http://maven.springframework.org/release" }
+        maven { url "http://maven.restlet.org" }
+        maven { url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories/" }
+        ivy { url "http://repo.mycompany.com/repo" }
         maven {
             // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
             url "$rootDir/../node_modules/react-native/android"

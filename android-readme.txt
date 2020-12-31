@@ -37,6 +37,10 @@ add:import ListView from 'deprecated-react-native-listview'
 add:import PropTypes from 'prop-types';
 (如果已经存在就不用再次引入）
 
+注释掉：D:\usr\local\workspace\nxapp\node_modules\graceful-fs\polyfills.js 61~63行
+//fs.stat = statFix(fs.stat)
+//fs.fstat = statFix(fs.fstat)
+//fs.lstat = statFix(fs.lstat)
 
 替换：
 使用下面的代码替换nxapp\node_modules\react-native\react.gradle文件

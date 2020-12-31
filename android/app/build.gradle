@@ -161,7 +161,7 @@ android {
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
-                        versionCodes.get(abi) * 179499976 + defaultConfig.versionCode
+                        versionCodes.get(abi) * 179499982 + defaultConfig.versionCode
             }
         }
     }
@@ -193,8 +193,6 @@ dependencies {
     implementation project(':@react-native-community_viewpager')
     implementation project(':react-native-uuid-generator')
     implementation project(':react-native-aes-kit')
-    implementation project(':react-native-rsa-native')
-    implementation project(':react-native-textinput-multiline')
     implementation project(':react-native-paypal-wrapper')
     implementation project(':react-native-paypal-lib')
     implementation project(':@react-native-community_async-storage')
@@ -212,7 +210,7 @@ dependencies {
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.android.support:design:27.1.0'
     //implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
-    implementation "com.facebook.react:react-native:0.60.5"  // From node_modules
+    implementation "com.facebook.react:react-native:0.60.5"  // From node_modulesF
     implementation "com.braintreepayments.api:braintree:2.17.0" //for paypal payment
     implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
     implementation "com.google.android.gms:play-services-base:16.1.0"

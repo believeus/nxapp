@@ -245,7 +245,7 @@ export default class TabHomeActivity extends Component<Props> {
                         paused={true}
                         fullscreen={true}
                         poster={data.url + 'static/images/ted.jpg'} //poster必须是url从互联网访问的形式
-                        source={{ uri: 'https://app.beijingepidial.com/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
+                        source={{ uri: data.url+'/How_early_life_experience_is_written_into_DNA _Moshe_Szyf.mp4' }}
                         navigator={this.props.navigator}
                     />
                 </View>
