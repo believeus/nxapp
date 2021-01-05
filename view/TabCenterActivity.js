@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View, Image, StatusBar, fontFamil, ScrollView, TouchableOpacity } from 'react-native';
+import { Text, View, Image, StatusBar, fontFamil, ScrollView, TouchableOpacity } from 'react-native';
 import { NavigationActions, StackActions } from 'react-navigation';
 import Session from '../storage/Session';
 import { I18n } from '../locales/i18n';

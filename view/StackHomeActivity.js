@@ -46,6 +46,7 @@ import LangActivity from './LangActivity';
 import ShafaatActivity from './ShafaatActivity';
 import AgeAccelerateActivity from './AgeAccelerateActivity';
 import Manual4Activity from './Manual4Activity';
+import LaunchActivity from './LaunchActivity';
 export const RootStack = createStackNavigator(
     {
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
@@ -183,9 +184,12 @@ export const RootStack = createStackNavigator(
         AgeAccelerate: {
             screen: AgeAccelerateActivity
         },
+        LaunchActivity: {
+            screen: LaunchActivity
+        },
     },
     {
-        initialRouteName: 'Main',
+        initialRouteName: 'LaunchActivity',
         defaultNavigationOptions: ({ navigation, screenProps }) => {
             return ({
                 headerStyle: {

@@ -76,7 +76,7 @@ export default class LoginActivity extends Component<Props> {
             <ScrollView>
                 <View>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <View style={{ height: 20 }}></View>
+                        <View style={{ height: 100 }}></View>
                         <View style={{ height: 70, alignItems: 'center' }}>
                             <Image style={{ width: '20%', height: 70 }} resizeMode='contain' source={require("../image/icons/logo.png")}></Image>
                         </View>

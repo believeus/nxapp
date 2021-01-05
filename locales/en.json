@@ -65,7 +65,7 @@
         "biological": "Epigenetic age",
         "management": "Health Management",
         "Tips":"Tips",
-        "message":"If you have already purchased the Epigenetic kit.Please click here to Register your kit »"
+        "message":"If you have already purchased the EpiAge kit. Please click here to Register your kit »"
     },
     "TestprocessActivity": {
         "title": "Test Process",
@@ -925,7 +925,7 @@
         "fillregis": "Fill in the registration information.",
         "mailbox": "Go to the registration mailbox to activate your account.",
         "accountlogin": "Log in with the account you just registered.",
-        "setkey": "5.Generate the unique data security private key and public key. Most importantly, save them by taking a screenshot or copy-paste them in your memo note.",
+        "setkey": "Generate the unique data security private key and public key. Most importantly, save them by taking a screenshot or copy-paste them in your memo note.",
         "sentmail": "Public and private key pairs will be saved to your phone's local folder",
         "purchase": "Go to 'SHOPPING' to purchase the EpiAge test kit."
     },
@@ -966,6 +966,14 @@
         "enterepi":"Please enter your Epigenetic age",
         "enterchro":"Please enter your Chronological age",
         "youraccis":"Your age acceleration is:"
+
+    },
+     "LaunchActivity":{
+        "title":"Launch",
+        "registerkit":"REGISTER KIT",
+        "buykit":"BUY EPIAGE KIT",
+        "signin":"SIGN IN WITH EMAIL",
+        "readmore":"READ MORE ABOUT EPIAGE"
 
     }
 }

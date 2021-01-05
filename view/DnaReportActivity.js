@@ -232,7 +232,7 @@ export default class DnaReportActivity extends Component<Props> {
                                         }
                                     })
                                 }}>
-                                    <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/scan.jpg")}></Image>
+                                    <Image style={{ width: "100%", height: "100%" }} resizeMode="contain" source={require("../image/scan.png")}></Image>
                                 </TouchableOpacity>
                             </View>
 

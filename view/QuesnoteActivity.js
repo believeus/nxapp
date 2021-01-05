@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Platform, StyleSheet,StatusBar, Text, View, Image, Button, ScrollView, TouchableOpacity } from 'react-native';
+import { Platform, StyleSheet, StatusBar, Text, View, Image, Button, ScrollView, TouchableOpacity } from 'react-native';
 import { I18n } from '../locales/i18n';
 
 export default class QuesnoteActivity extends Component<Props> {
@@ -25,22 +25,24 @@ export default class QuesnoteActivity extends Component<Props> {
                 </StatusBar>
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 20, marginBottom: 20 }}>
                     <Text style={{ fontFamily: 'FontAwesome', fontSize: 19, height: 45, fontWeight: 'bold' }}>{I18n.t('QuesnoteActivity.about')}</Text>
-                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19,marginBottom:12 }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: 'red' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
-                    <Text style={{  fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19,marginBottom:34}}>{I18n.t('QuesnoteActivity.personalized')}</Text>
-                    <View style={{ flexDirection: 'row',justifyContent:'space-between' }}>
+                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19, marginBottom: 12 }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: 'red' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
+                    <Text style={{ fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19, marginBottom: 34 }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
                         <View style={{ width: '45%' }}>
                             <TouchableOpacity >
-                                <Button onPress={() => this.navigate.pop()}
+                                <Button style={{ backgroundColor: "#2196f3" }}
+                                    onPress={() => this.navigate.pop()}
                                     title={I18n.t('QuesnoteActivity.back')}
-                                    color="#2196f3"/>
-                                    
+                                    color="#2196f3" />
+
                             </TouchableOpacity>
                         </View>
                         <View style={{ width: '45%' }}>
                             <TouchableOpacity >
-                                <Button onPress={() => this.navigate.push("Questionnaire")}
+                                <Button style={{ backgroundColor: "#2196f3" }}
+                                    onPress={() => this.navigate.push("Questionnaire")}
                                     title={I18n.t('QuesnoteActivity.ques')}
-                                    color="#2196f3"/>
+                                    color="#2196f3" />
                             </TouchableOpacity>
                         </View>
                     </View>
