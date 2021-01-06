@@ -10,8 +10,8 @@ import com.facebook.react.ReactApplication;
 import com.microsoft.codepush.react.CodePush;
 import com.reactnativecommunity.geolocation.GeolocationPackage;
 import com.github.reactnativecommunity.location.RNLocationPackage;
-import com.rumax.reactnative.pdfviewer.PDFViewPackage;
-import com.christopherdro.htmltopdf.RNHTMLtoPDFPackage;
+
+
 
 import org.reactnative.camera.RNCameraPackage;
 
@@ -21,8 +21,8 @@ import com.reactnativecommunity.viewpager.RNCViewPagerPackage;
 import io.github.traviskn.rnuuidgenerator.RNUUIDGeneratorPackage;
 import cc.rocwang.aescrypto.AesCryptoPackage;
 
-import com.taessina.paypal.RNPaypalWrapperPackage;
-import com.reactlibrary.RNPaypalPackage;
+
+
 
 
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
@@ -52,7 +52,7 @@ public class MainApplication extends Application implements ReactApplication {
     private ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
-            return BuildConfig.DEBUG;
+            return true;
         }
 
         // 2. Override the getJSBundleFile method in order to let
@@ -67,17 +67,14 @@ public class MainApplication extends Application implements ReactApplication {
         protected List<ReactPackage> getPackages() {
             return Arrays.<ReactPackage>asList(
                     new MainReactPackage(),
-                    new CodePush(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), BuildConfig.DEBUG),
+                    new CodePush(getResources().getString(R.string.CodePushDeploymentKey), getApplicationContext(), true),
                     new GeolocationPackage(),
                     new RNLocationPackage(),
-                    new PDFViewPackage(),
-                    new RNHTMLtoPDFPackage(),
                     new RNCameraPackage(),
                     new RNFSPackage(),
                     new RNCViewPagerPackage(),
                     new RNUUIDGeneratorPackage(),
                     new AesCryptoPackage(),
-                    new RNPaypalWrapperPackage(),
                     new AsyncStoragePackage(),
                     new RNDeviceInfo(),
                     new RNI18nPackage(),
@@ -111,13 +108,7 @@ public class MainApplication extends Application implements ReactApplication {
     public void onCreate() {
         super.onCreate();
         SoLoader.init(this, /* native exopackage */ false);
-        java.util.List<String> urls = Arrays.asList(new String[]{"codepush.azurewebsites.net","app.beijingepidial.com"});
-        HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
-            public boolean verify(final String hostname, final SSLSession session) {
-                System.out.println("hello--->"+urls.contains(hostname));
-                return urls.contains(hostname)? true:false;
-            }
-        });
+        
     }
 
 }
