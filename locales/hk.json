@@ -973,5 +973,13 @@
         "enterchro":"請輸入您的實際年齡",
         "youraccis":"您的年齡加速為："
 
+    }, 
+    "LaunchActivity":{
+        "title":"啟動",
+        "registerkit":"註冊套件",
+        "buykit":"購買套件",
+        "signin":"郵箱登陸",
+        "readmore":"了解更多關於生物學年齡"
+
     }
 }

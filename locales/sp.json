@@ -965,5 +965,13 @@
         "Russian":"эгуо (язык)(Russian)",
         "Portuguese":"Portugués язык(Portuguese)",
         "Chinese":"Chino(Chinese)"
+    }, 
+    "LaunchActivity":{
+        "title":"Launch",
+        "registerkit":"REGISTER KIT",
+        "buykit":"BUY EPIAGE KIT",
+        "signin":"SIGN IN WITH EMAIL",
+        "readmore":"READ MORE ABOUT EPIAGE"
+
     }
 }

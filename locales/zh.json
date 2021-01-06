@@ -940,5 +940,13 @@
         "enterchro":"請輸入您的生物學年齡",
         "youraccis":"您的年齡加速為："
 
+    },
+    "LaunchActivity":{
+        "title":"Launch",
+        "registerkit":"REGISTER KIT",
+        "buykit":"BUY EPIAGE KIT",
+        "signin":"SIGN IN WITH EMAIL",
+        "readmore":"READ MORE ABOUT EPIAGE"
+
     }
 }

@@ -968,5 +968,13 @@
         "enterchro":"Digite sua idade cronológica",
         "youraccis":"A aceleração da sua idade é:"
 
+    },
+    "LaunchActivity":{
+        "title":"Launch",
+        "registerkit":"REGISTER KIT",
+        "buykit":"BUY EPIAGE KIT",
+        "signin":"SIGN IN WITH EMAIL",
+        "readmore":"READ MORE ABOUT EPIAGE"
+
     }
 }
