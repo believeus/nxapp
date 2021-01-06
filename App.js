@@ -40,7 +40,7 @@ export default class App extends Component<Props> {
     super(props)
     this.state = {
       showapp: false,
-      updateshow:false
+      updateshow: false
     }
   }
 
@@ -59,63 +59,67 @@ export default class App extends Component<Props> {
       (status) => {
         switch (status) {
           case CodePush.SyncStatus.UPDATE_IGNORED:
-            this.setState({updateshow: false})
+            this.setState({ updateshow: false })
             break;
           case CodePush.SyncStatus.DOWNLOADING_PACKAGE:
             //console.log('download')
-            this.setState({updateshow: true})
+            this.setState({ updateshow: true })
             break;
           case CodePush.SyncStatus.INSTALLING_UPDATE:
             //console.log('installing')
-            this.setState({updateshow: false})
+            this.setState({ updateshow: false })
+            break;
+          default:
+            this.setState({ updateshow: false })
             break;
         }
       },
       //自动回调
-      ({receivedBytes, totalBytes}) => {
-        this.setState({download: parseInt(receivedBytes * 100 / totalBytes)})
+      ({ receivedBytes, totalBytes }) => {
+        this.setState({ download: parseInt(receivedBytes * 100 / totalBytes) })
       }
     );
-}
+  }
 
 
 
   render() {
     return this.state.updateshow
-    ?
-    <View style={{ 
-      justifyContent:'center',
-      alignItems:'center',
-      position:'absolute',
-      height:Dimensions.get('screen').height,
-      width:Dimensions.get('screen').width,
-      zIndex:10}}>
-      <View style={{ 
-              paddingVertical:12,paddingHorizontal:20,flexDirection:'row',
-              justifyContent:'center',alignItems:'center',
-              backgroundColor:'rgba(0,0,0,0.6)',borderRadius:6
-            }}>
-        <ActivityIndicator 
-          animating={true}
-          color={"#FFFFFF"}
-          size='large'
-        />
-        <Text style={{ marginLeft:20,fontSize:14,color:"#FFFFFF"}}>{this.state.download}%</Text>
-      </View>
-   </View>
-      : 
-      this.state.showapp
       ?
+      <View style={{
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        height: Dimensions.get('screen').height,
+        width: Dimensions.get('screen').width,
+        zIndex: 10
+      }}>
+        <View style={{
+          paddingVertical: 12, paddingHorizontal: 20, flexDirection: 'row',
+          justifyContent: 'center', alignItems: 'center',
+          backgroundColor: 'rgba(0,0,0,0.6)', borderRadius: 6
+        }}>
+          <ActivityIndicator
+            animating={true}
+            color={"#FFFFFF"}
+            size='large'
+          />
+          <Text style={{ marginLeft: 20, fontSize: 14, color: "#FFFFFF" }}>{this.state.download}%</Text>
+        </View>
+      </View>
+      :
+      this.state.showapp
+        ?
         <MenuProvider>
           <RootStack />
-      </MenuProvider>
-      :
-      <AppIntro
-        slides={slides}
-        onDone={() => { this.setState({ showapp: true }) }}
-        onSkip={() => { this.setState({ showapp: true }) }}
-        showSkipButton={true}
-      />
+        </MenuProvider>
+        :
+        <AppIntro
+          slides={slides}
+          onDone={() => { this.setState({ showapp: true }) }}
+          onSkip={() => { this.setState({ showapp: true }) }}
+          showSkipButton={true}
+        />
   }
 }
 

@@ -120,7 +120,10 @@ android {
         }
 
     }
-
+    lintOptions { 
+        abortOnError false
+        checkReleaseBuilds false 
+     }
 
     splits {
         abi {
@@ -132,6 +135,12 @@ android {
     }
       signingConfigs {
         release {
+            storeFile file(MYAPP_RELEASE_STORE_FILE)
+            storePassword MYAPP_RELEASE_STORE_PASSWORD
+            keyAlias MYAPP_RELEASE_KEY_ALIAS
+            keyPassword MYAPP_RELEASE_KEY_PASSWORD
+        }
+         debug {
             storeFile file(MYAPP_RELEASE_STORE_FILE)
             storePassword MYAPP_RELEASE_STORE_PASSWORD
             keyAlias MYAPP_RELEASE_KEY_ALIAS
@@ -149,7 +158,18 @@ android {
             signingConfig signingConfigs.release
             //aaptOptions.cruncherEnabled=false 来禁止 Gradle 检查png的文件格式的正确性
             aaptOptions.cruncherEnabled=false 
-     
+        }
+        debug {
+            debuggable true
+            signingConfig signingConfigs.debug
+        }
+        stagingrelease {
+            initWith release
+            matchingFallbacks = ['release', 'debug']
+        }
+        productionrelease {
+            initWith release
+            matchingFallbacks = ['release']
         }
     }
     // applicationVariants are e.g. debug, release
@@ -186,15 +206,11 @@ dependencies {
     implementation project(':react-native-code-push')
     implementation project(':@react-native-community_geolocation')
     implementation project(':react-native-location')
-    implementation project(':react-native-view-pdf')
-    implementation project(':react-native-html-to-pdf')
     implementation project(':react-native-camera')
     implementation project(':react-native-fs')
     implementation project(':@react-native-community_viewpager')
     implementation project(':react-native-uuid-generator')
     implementation project(':react-native-aes-kit')
-    implementation project(':react-native-paypal-wrapper')
-    implementation project(':react-native-paypal-lib')
     implementation project(':@react-native-community_async-storage')
     implementation project(':react-native-device-info')
     implementation project(':react-native-i18n')
@@ -211,11 +227,7 @@ dependencies {
     implementation 'com.android.support:design:27.1.0'
     //implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:0.60.5"  // From node_modulesF
-    implementation "com.braintreepayments.api:braintree:2.17.0" //for paypal payment
-    implementation 'com.paypal.sdk:paypal-android-sdk:2.16.0'
     implementation "com.google.android.gms:play-services-base:16.1.0"
-    implementation "com.google.firebase:firebase-core:16.0.9"
-    implementation "com.google.android.gms:play-services-base:16.0.1"
     implementation "com.google.android.gms:play-services-location:16.0.0" 
     if (enableHermes) {
         def hermesPath = "../../node_modules/hermes-engine/android/";
