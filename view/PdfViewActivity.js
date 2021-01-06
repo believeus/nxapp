@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View, Image, Button, ScrollView, Container } from 'react-native';
 import { WebView } from 'react-native-webview';
-import PDFView from 'react-native-view-pdf'
 import Session from '../storage/Session'
 
 type Props = {};

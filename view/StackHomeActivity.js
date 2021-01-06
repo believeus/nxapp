@@ -49,6 +49,9 @@ import Manual4Activity from './Manual4Activity';
 import LaunchActivity from './LaunchActivity';
 export const RootStack = createStackNavigator(
     {
+        LaunchActivity: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
+            screen: LaunchActivity //此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
+        },
         Main: {  //此处的HOME名字任意,在跳转页面的时候会用到这个名字
             screen: MainActivity //此处的screen赋值页面,要记得在顶部先import引入，否则找不到页面而报错，第一个代表默认加载的页面
         },
