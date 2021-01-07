@@ -290,7 +290,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 let naturally = window.parseFloat(data.naturally).toFixed(2)
                                                 this.setState({ biological })
                                                 this.setState({ naturally })
-                                                let i = biological < naturally ? 0 : 1;
+                                                let i = biological > naturally ? 0 : 1;
                                                 option.series[i].markPoint.data[0].value = biological
                                                 option.series[i].markPoint.data[0].xAxis = naturally
                                                 option.series[i].markPoint.data[0].yAxis = biological

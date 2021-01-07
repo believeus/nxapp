@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import { Button } from "native-base";
 import { I18n } from '../locales/i18n';
-
+import Session from '../storage/Session'
 
 
 type Props = {};
@@ -17,7 +17,16 @@ export default class LaunchActivity extends Component<Props> {
 
     constructor(props) {
         super(props);
-        this.state = { animating: false, disabled: true };
+        Session.save("launchershow", true);
+        
+        this.state = {
+            user:null,
+            animating: false,
+            disabled: true
+        };
+        Session.load("sessionuser").then((user) => {
+            this.setState({ user: user });
+        });
     }
     render() {
         this.navigate = this.props.navigation;
@@ -33,7 +42,15 @@ export default class LaunchActivity extends Component<Props> {
                                 <View style={{ width: "40%", height: 40, }}>
                                     <TouchableOpacity >
                                         <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#e64d85" }}
-                                            onPress={() => this.navigate.push("Register")}>
+                                             ref={ref => this.reportPage = ref}
+                                            onPress={() => this.state.user == null ?
+                                                this.navigate.push("Register")
+                                                :
+                                                this.state.user.privatekey ?
+                                                    this.navigate.push("DnaReport")
+                                                    :
+                                                    this.navigate.push("RasEncryptionActivity")}
+                                        >
                                             <Text style={{ width: "100%", height: 40, color: "#ffffff", textAlign: "center", textAlignVertical: "center",fontWeight:"700" }}>{I18n.t("LaunchActivity.registerkit")}</Text>
                                         </Button>
                                     </TouchableOpacity>
