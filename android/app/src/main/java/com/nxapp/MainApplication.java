@@ -108,7 +108,12 @@ public class MainApplication extends Application implements ReactApplication {
     public void onCreate() {
         super.onCreate();
         SoLoader.init(this, /* native exopackage */ false);
-        
+        java.util.List<String> urls = Arrays.asList(new String[]{"codepush.azurewebsites.net","app.beijingepidial.com"});
+        HttpsURLConnection.setDefaultHostnameVerifier(new HostnameVerifier() {
+            public boolean verify(final String hostname, final SSLSession session) {
+                return urls.contains(hostname)? true:false;
+            }
+        });
     }
 
 }

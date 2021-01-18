@@ -154,6 +154,7 @@ export default class DnaReportActivity extends Component<Props> {
                     let process = parseFloat(((c - d) / c) * 100).toFixed(2)
                     //console.info((data[i].uploadTime/(data[i].uploadTime+(21*24*3600*1000))))
                     let remain = d / (31 * 24 * 3600 * 1000)
+                    console.log(remain+"剩余天数")
                     let vbarcode = {}
                     vbarcode.val = data[i].barcode
                     if (remain < 0) { remain = 0 }
@@ -266,8 +267,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 var barcode = {}
                                                 barcode.val = this.state.barcode
                                                 barcode.stat = data.status
-                                                barcode.createTime = new Date(data.createTime).toLocaleDateString()
-                                                barcode.endtime = new Date(data.createTime + (31 * 24 * 3600 * 1000)).toLocaleDateString()
+                                                
                                                 barcode.processing = 0
                                                 barcode.naturally = 0
                                                 barcode.switchon = false
@@ -276,13 +276,17 @@ export default class DnaReportActivity extends Component<Props> {
                                                     this.setState({ itemBox: this.state.itemBox })
                                                     this.setState({ statusbar: true })
                                                 }
-                                                Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.wait"))
+                                                Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.pendingwait"))
                                                 break;
                                             case "processing":
                                                 this.setState({ statusbar: true })
+                                                barcode.createTime = "Processing"
+                                                barcode.createTime = new Date(data.createTime).toLocaleDateString()
+                                                barcode.endtime = new Date(data.createTime + (31 * 24 * 3600 * 1000)).toLocaleDateString()
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                                 break;
                                             case "ready":
+                                                barcode.createTime = "Test completed"
                                                 this.setState({ statusbar: true })
                                                 this.setState({ btnBuildPdfdisabled: false })
                                                 let option = Object.assign({}, this.state.option);
@@ -362,7 +366,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 } else if (barcode.stat == "processing") {
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                                 } else if (barcode.stat == "pending") {
-                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.wait"));
+                                                    Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pendingwait"));
                                                 }
                                                 this.setState({ barcode: barcode.val })
                                             })

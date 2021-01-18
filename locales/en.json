@@ -299,7 +299,8 @@
         "titlemsg": "Message",
         "barcodesuccess":"Kit registered successfully",
         "invalid": "Invalid barcode",
-        "wait": "Your epi-age results will be ready within 31 days after the saliva sample has arrived at the lab.\n Thank you for your patience.",
+        "wait": "Your saliva sample is still in transit.\n Thank you for your patience.",
+        "pendingwait":"Your epiage test result will be calculated for a total of 31 days from the day the test starts.",
         "processed": "Detection is being processed.\n Thank you for your patience.",
         "status": "Testing Status",
         "barcode": "Barcode",
@@ -311,7 +312,7 @@
         "regtime":"Register date",
         "baseinfo":"Basic information",
         "endtime":"Completion date",
-        "yourbarcode":"Enter Barcode",
+        "yourbarcode":"Enter Kit barcode",
         "done":"Test completed",
         "detectTime":"Detect Date",
         "intransit":"in-transit"
