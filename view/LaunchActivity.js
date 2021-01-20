@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Text, View, Image, ActivityIndicator, TextInput, TouchableOpacity, ScrollView, Alert } from 'react-native';
+import { Text, View, Image, StatusBar, TouchableOpacity, ScrollView, Alert } from 'react-native';
 import { Button } from "native-base";
 import { I18n } from '../locales/i18n';
 import Session from '../storage/Session'
@@ -22,16 +22,24 @@ export default class LaunchActivity extends Component<Props> {
         this.state = {
             user:null,
             animating: false,
-            disabled: true
+            disabled: true,
+            dispaly:true
         };
         Session.load("sessionuser").then((user) => {
             this.setState({ user: user });
+            this.setState({ dispaly: false })
         });
     }
     render() {
         this.navigate = this.props.navigation;
         return (
             <ScrollView>
+                 <StatusBar
+                    animated={true} //指定状态栏的变化是否应以动画形式呈现。目前支持这几种样式：backgroundColor, barStyle和hidden  
+                    hidden={false}  //是否隐藏状态栏。  
+                    translucent={true}//指定状态栏是否透明。设置为true时，应用会在状态栏之下绘制（即所谓“沉浸式”——被状态栏遮住一部分）。常和带有半透明背景色的状态栏搭配使用。  
+                    barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
+                />
                 <View >
                     <View style={{ width: "100%", height: 400, alignItems: 'center', marginBottom: 20 }}>
                         <Image style={{ width: '100%', height: 400 }} resizeMode='cover' source={require("../image/launch.jpg")}></Image>
@@ -69,12 +77,14 @@ export default class LaunchActivity extends Component<Props> {
                                 <Text style={{ width: "10%", height: 15, textAlign: "center", lineHeight: 15, color: "#a9a9a9" }}>or</Text>
                                 <View style={{ width: "45%", height: 10, borderBottomColor: "#dcdcdc", borderBottomWidth: 1 }}></View>
                             </View> */}
-                            <View style={{ width: "100%", height: 40 }}>
-                                <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#116dbc" }}
-                                    onPress={() => this.navigate.push('Login')}>
-                                    <Text style={{ width: "100%", height: 40, color: "#ffffff", textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.signin")}</Text>
-                                </Button>
-                            </View>
+                            {this.state.dispaly == true ?
+                                <View style={{ width: "100%", height: 40 }}>
+                                    <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#116dbc" }}
+                                        onPress={() => this.navigate.push('Login')}>
+                                        <Text style={{ width: "100%", height: 40, color: "#ffffff", textAlign: "center", textAlignVertical: "center" }}>{I18n.t("LaunchActivity.signin")}</Text>
+                                    </Button>
+                                </View>
+                                : null}
                             <View style={{ width: "100%", height: 60, marginTop: 20 }}>
                                 <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#e35a24" }}
                                     onPress={() => this.navigate.push('Main')}>
