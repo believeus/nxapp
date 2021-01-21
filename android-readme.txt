@@ -1,9 +1,17 @@
-熱部署更新
+先执行 deploy-debug.bat 进行调试编译，这样可以看到一些错误的编译信息，当没问题之后，在执行deploy-release.bat
+
+首先：熱部署更新
 react-native bundle --platform android --dev false --entry-file index.android.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/
 
-热部署上传：code-push release-react nxapp  android --d Production --noDuplicateReleaseError
+之后：热部署上传：code-push release-react nxapp  android --d Production --noDuplicateReleaseError
 
 code-push release-react <OurApp> android --deploymentName prod-android --development false --mandatory true --bundleName index.android.bundle
+在 用户目录/.gradle/创建gradle.properties文件添加如下
+MYAPP_RELEASE_STORE_FILE=my-release-key.keystore
+MYAPP_RELEASE_KEY_ALIAS=my-key-alias
+MYAPP_RELEASE_STORE_PASSWORD=believeus
+MYAPP_RELEASE_KEY_PASSWORD=believeus
+org.gradle.configureondemand=true
 
 一、Android版本必须安装react-native 0.60.5版本
 
@@ -41,6 +49,41 @@ add:import PropTypes from 'prop-types';
 //fs.stat = statFix(fs.stat)
 //fs.fstat = statFix(fs.fstat)
 //fs.lstat = statFix(fs.lstat)
+
+修改源码
+node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\modules\network\OkHttpClientProvider.java 73行添加如下代码
+node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\packagerconnection\ReconnectingWebSocket.java 73行添加如下代码
+node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\devsupport\InspectorPackagerConnection.java 247行添加如下代码
+nxapp\node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\devsupport\JSDebuggerWebSocketClient.java 62行添加如下代码
+node_modules\react-native\ReactAndroid\src\main\java\com\facebook\react\modules\websocket\WebSocketModule.java 91行添加如下代码
+
+.hostnameVerifier(new javax.net.ssl.HostnameVerifier() {
+            @Override
+            public boolean verify(String hostname, javax.net.ssl.SSLSession sslSession) {
+                java.util.List<String> verifyHost=java.util.Arrays.asList(new String[]{"www.beijingepidial.com","app.epi-age.com"});
+                if (verifyHost.contains(hostname))
+                    return true;
+                else return false;
+            }
+});
+
+ndroid-sdk-windows\sources\android-23\android\webkit\WebViewClient.java 的onReceivedSslError方法中添加如下代码
+android-sdk-windows\sources\android-28\android\webkit\WebViewClient.java 的onReceivedSslError方法中添加如下代码
+  public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
+			String message;
+            switch (error.getPrimaryError()){
+                case SslError.SSL_DATE_INVALID:message = "SSL_DATE_INVALID";break;
+                case SslError.SSL_EXPIRED:message = "SSL_EXPIRED";break;
+                case SslError.SSL_IDMISMATCH:message = "SSL_IDMISMATCH";break;
+                case SslError.SSL_INVALID:message = "SSL_INVALID";break;
+                case SslError.SSL_NOTYETVALID:message = "SSL_NOTYETVALID";break;
+                case SslError.SSL_UNTRUSTED:message = "SSL_UNTRUSTED";break;
+                default:message = "SslError unknown";
+            }
+        //handler.cancel();
+    }
+
+
 
 替换：
 使用下面的代码替换nxapp\node_modules\react-native\react.gradle文件

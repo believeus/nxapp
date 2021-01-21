@@ -314,7 +314,9 @@
         "yourbarcode":"Código binario",
         "done":"Detección completada.",
         "detectTime":"Comience a probar",
-        "intransit":"En tránsito"
+        "intransit":"En tránsito",
+        "remaining_days":"El número restante de días",
+        "Pendding":"Pendiente"
     },
     "user_profile": {
         "title": "Your Profile"

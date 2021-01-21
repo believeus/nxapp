@@ -303,7 +303,9 @@
         "yourbarcode":"Code à barres",
         "done":"Test terminé.",
         "detectTime":"Temps de détection",
-        "intransit":"Envoi postal"
+        "intransit":"Envoi postal",
+        "remaining_days":"Le nombre de jours restants",
+        "Pendding":"En attente"
 
     },
     "user_profile": {

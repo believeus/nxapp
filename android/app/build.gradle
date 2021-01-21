@@ -120,11 +120,6 @@ android {
         }
 
     }
-    lintOptions { 
-        abortOnError false
-        checkReleaseBuilds false 
-     }
-
     splits {
         abi {
             reset()
@@ -140,12 +135,7 @@ android {
             keyAlias MYAPP_RELEASE_KEY_ALIAS
             keyPassword MYAPP_RELEASE_KEY_PASSWORD
         }
-         debug {
-            storeFile file(MYAPP_RELEASE_STORE_FILE)
-            storePassword MYAPP_RELEASE_STORE_PASSWORD
-            keyAlias MYAPP_RELEASE_KEY_ALIAS
-            keyPassword MYAPP_RELEASE_KEY_PASSWORD
-        }
+         
     }
     buildTypes {
        
@@ -159,18 +149,7 @@ android {
             //aaptOptions.cruncherEnabled=false 来禁止 Gradle 检查png的文件格式的正确性
             aaptOptions.cruncherEnabled=false 
         }
-        debug {
-            debuggable true
-            signingConfig signingConfigs.debug
-        }
-        stagingrelease {
-            initWith release
-            matchingFallbacks = ['release', 'debug']
-        }
-        productionrelease {
-            initWith release
-            matchingFallbacks = ['release']
-        }
+       
     }
     // applicationVariants are e.g. debug, release
     applicationVariants.all { variant ->
@@ -181,7 +160,7 @@ android {
             def abi = output.getFilter(OutputFile.ABI)
             if (abi != null) {  // null for the universal-debug, universal-release variants
                 output.versionCodeOverride =
-                        versionCodes.get(abi) * 179499982 + defaultConfig.versionCode
+                        versionCodes.get(abi) * 179499983 + defaultConfig.versionCode
             }
         }
     }

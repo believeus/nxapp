@@ -316,7 +316,9 @@
         "yourbarcode":"輸入條碼",
         "done":"檢測已完成",
         "detectTime":"檢測時間",
-        "intransit":"郵寄中"
+        "intransit":"郵寄中",
+        "remaining_days":"剩余天數",
+        "Pendding":"待定"
     },
     "user_profile": {
         "title": "Your Profile"

@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
@@ -35,7 +34,6 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		15E676932E7D48719A8EAD14 /* NotoSansHans-DemiLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7CFCF0884A164005934D87A9 /* NotoSansHans-DemiLight.otf */; };
-		185514E5EC8541C19941F328 /* libRNPaypalWrapper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F6A07579604132BA33F84C /* libRNPaypalWrapper.a */; };
 		2655FC6F62484A82A1196D3A /* libRNGestureHandler.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C16833B7F7E46408CAD55BE /* libRNGestureHandler.a */; };
 		2A77F93341EC45A5AF9D5DED /* libRNCSlider.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DCD06A2C32D5417CBF8F15E3 /* libRNCSlider.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
@@ -79,7 +77,6 @@
 		B3BEC730838E4A8FB2E2551B /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7B4730282DE4DC7BA0AC522 /* libRNI18n.a */; };
 		C4472465E7554A85801B03F1 /* libRNCViewpager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 28F98F9B03A9428C8DFDAEE5 /* libRNCViewpager.a */; };
 		C48A6174FEEA4FFA861DB5F7 /* libRNUUIDGenerator.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2298E93B765749C0978C21C3 /* libRNUUIDGenerator.a */; };
-		C707D69275754BB3ACB06CB3 /* libRNRSA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19444CF1D25C47A19BC785C4 /* libRNRSA.a */; };
 		CBCFC3F487C64171AB9DEE4A /* libRCTVideo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1099C9ABC7524B79B78CBF01 /* libRCTVideo.a */; };
 		D2B643A781E14AF78F81EF99 /* libRNDeviceInfo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 44246A2C4134422483696C2B /* libRNDeviceInfo.a */; };
 		D30DA9ED42A149BCA9ACEFF0 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4157CAD4C564198A011FA5C /* libBVLinearGradient.a */; };
@@ -291,13 +288,6 @@
 			remoteGlobalIDString = 6476C4051EEAA69700B10F51;
 			remoteInfo = "RNI18n-tvOS";
 		};
-		06A37C2C2373F295007BB5C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 134814201AA4EA6300B7C361;
-			remoteInfo = RNPaypalWrapper;
-		};
 		06A37C302373F295007BB5C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 954F74EC69974007AFD83A9F /* RNVectorIcons.xcodeproj */;
@@ -332,13 +322,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 134814201AA4EA6300B7C361;
 			remoteInfo = RNCViewpager;
-		};
-		06A37C4D2373F331007BB5C6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4167022A1A4C44A09660F1FB /* RNRSA.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BF40FFBD1F05EC4000DC4E95;
-			remoteInfo = RNRSA;
 		};
 		06A37C502373F331007BB5C6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -591,7 +574,6 @@
 		177898E908144C0C862C210B /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		178CD35E55D7453CB50C140A /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		18298863328F4EBABD2C2C33 /* RNCSlider.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNCSlider.xcodeproj; path = "../node_modules/@react-native-community/slider/ios/RNCSlider.xcodeproj"; sourceTree = "<group>"; };
-		19444CF1D25C47A19BC785C4 /* libRNRSA.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNRSA.a; sourceTree = "<group>"; };
 		1DEF701763076A4F49C323A1 /* Pods-nxapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nxapp.release.xcconfig"; path = "Target Support Files/Pods-nxapp/Pods-nxapp.release.xcconfig"; sourceTree = "<group>"; };
 		2298E93B765749C0978C21C3 /* libRNUUIDGenerator.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNUUIDGenerator.a; sourceTree = "<group>"; };
 		22BB4E558746475082DFA6FE /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
@@ -605,7 +587,6 @@
 		3E17710FF7E54C69835F6A5E /* NotoSansHans-Light.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "NotoSansHans-Light.otf"; path = "../assets/fonts/NotoSansHans-Light.otf"; sourceTree = "<group>"; };
 		3EA5705F433E4A998F9D8DF9 /* libRNVectorIcons-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVectorIcons-tvOS.a"; sourceTree = "<group>"; };
 		3F3D3518C0E94DBAA477D42D /* libRNCAsyncStorage.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCAsyncStorage.a; sourceTree = "<group>"; };
-		4167022A1A4C44A09660F1FB /* RNRSA.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNRSA.xcodeproj; path = "../node_modules/react-native-rsa-native/ios/RNRSA.xcodeproj"; sourceTree = "<group>"; };
 		44246A2C4134422483696C2B /* libRNDeviceInfo.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNDeviceInfo.a; sourceTree = "<group>"; };
 		46C5C1F0A8E74ABBB9FEF10C /* RCTOrientation.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTOrientation.xcodeproj; path = "../node_modules/react-native-orientation/iOS/RCTOrientation.xcodeproj"; sourceTree = "<group>"; };
 		59875B90691CB0A42D805B4D /* Pods_nxapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nxapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -633,7 +614,6 @@
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		AEEDCE9289B44EA18BFE5195 /* libRNGestureHandler-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNGestureHandler-tvOS.a"; sourceTree = "<group>"; };
 		B20EE088CFA54A8DBCEF74B4 /* libRNCWebView.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNCWebView.a; sourceTree = "<group>"; };
-		B2F6A07579604132BA33F84C /* libRNPaypalWrapper.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPaypalWrapper.a; sourceTree = "<group>"; };
 		B474FA7D89964D5A899E32A5 /* RNGestureHandler.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGestureHandler.xcodeproj; path = "../node_modules/react-native-gesture-handler/ios/RNGestureHandler.xcodeproj"; sourceTree = "<group>"; };
 		B4C0FB7FF11C4E2EB2772402 /* RCTAesCrypto.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RCTAesCrypto.xcodeproj; path = "../node_modules/react-native-aes-kit/ios/RCTAesCrypto.xcodeproj"; sourceTree = "<group>"; };
 		B5CAA5956CFD45F68FEBBE76 /* KCKeepAwake.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = KCKeepAwake.xcodeproj; path = "../node_modules/react-native-keep-awake/ios/KCKeepAwake.xcodeproj"; sourceTree = "<group>"; };
@@ -657,7 +637,6 @@
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		ED59B0E4CD1D4EB284BB0F11 /* libKCKeepAwake.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libKCKeepAwake.a; sourceTree = "<group>"; };
 		EEED9ADDB3E4414897ADC709 /* libRNI18n-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNI18n-tvOS.a"; sourceTree = "<group>"; };
-		FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPaypalWrapper.xcodeproj; path = "../node_modules/react-native-paypal-wrapper/ios/RNPaypalWrapper.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -701,8 +680,6 @@
 				B3BEC730838E4A8FB2E2551B /* libRNI18n.a in Frameworks */,
 				D2B643A781E14AF78F81EF99 /* libRNDeviceInfo.a in Frameworks */,
 				9FB4FDC7CAC146F687D994A2 /* libRNCAsyncStorage.a in Frameworks */,
-				185514E5EC8541C19941F328 /* libRNPaypalWrapper.a in Frameworks */,
-				C707D69275754BB3ACB06CB3 /* libRNRSA.a in Frameworks */,
 				36B9533148F949F4A4437189 /* libRCTAesCrypto.a in Frameworks */,
 				C48A6174FEEA4FFA861DB5F7 /* libRNUUIDGenerator.a in Frameworks */,
 				C4472465E7554A85801B03F1 /* libRNCViewpager.a in Frameworks */,
@@ -931,14 +908,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06A37BF92373F295007BB5C6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				06A37C2D2373F295007BB5C6 /* libRNPaypalWrapper.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		06A37C342373F32A007BB5C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,14 +921,6 @@
 			isa = PBXGroup;
 			children = (
 				06A37C422373F32F007BB5C6 /* libRNCViewpager.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		06A37C432373F331007BB5C6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				06A37C4E2373F331007BB5C6 /* libRNRSA.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1112,8 +1073,6 @@
 				D23D74E74C5F43648BF5C7DD /* RNI18n.xcodeproj */,
 				B669E16AEAB24CF8AD03C31F /* RNDeviceInfo.xcodeproj */,
 				637BB26B85584AD6B90764BB /* RNCAsyncStorage.xcodeproj */,
-				FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */,
-				4167022A1A4C44A09660F1FB /* RNRSA.xcodeproj */,
 				B4C0FB7FF11C4E2EB2772402 /* RCTAesCrypto.xcodeproj */,
 				6E1E9059D95646BEB89E4715 /* RNUUIDGenerator.xcodeproj */,
 				BCC5C9E59AB24911AAA51446 /* RNCViewpager.xcodeproj */,
@@ -1438,14 +1397,6 @@
 					ProjectRef = D23D74E74C5F43648BF5C7DD /* RNI18n.xcodeproj */;
 				},
 				{
-					ProductGroup = 06A37BF92373F295007BB5C6 /* Products */;
-					ProjectRef = FF7186203B694904BE51D142 /* RNPaypalWrapper.xcodeproj */;
-				},
-				{
-					ProductGroup = 06A37C432373F331007BB5C6 /* Products */;
-					ProjectRef = 4167022A1A4C44A09660F1FB /* RNRSA.xcodeproj */;
-				},
-				{
 					ProductGroup = 06A37C472373F331007BB5C6 /* Products */;
 					ProjectRef = 6E1E9059D95646BEB89E4715 /* RNUUIDGenerator.xcodeproj */;
 				},
@@ -1654,13 +1605,6 @@
 			remoteRef = 06A37C262373F295007BB5C6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		06A37C2D2373F295007BB5C6 /* libRNPaypalWrapper.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNPaypalWrapper.a;
-			remoteRef = 06A37C2C2373F295007BB5C6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		06A37C312373F295007BB5C6 /* libRNVectorIcons.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -1694,13 +1638,6 @@
 			fileType = archive.ar;
 			path = libRNCViewpager.a;
 			remoteRef = 06A37C412373F32F007BB5C6 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		06A37C4E2373F331007BB5C6 /* libRNRSA.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libRNRSA.a;
-			remoteRef = 06A37C4D2373F331007BB5C6 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		06A37C512373F331007BB5C6 /* libRNUUIDGenerator.a */ = {
@@ -2106,24 +2043,18 @@
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-webviewios",
 					"$(SRCROOT)..\node_modules\neact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-keep-awakeios",
 					"$(SRCROOT)/..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-linear-gradientBVLinearGradient",
 					"$(SRCROOT)/..\node_modules@react-native-communitysliderios",
 					"$(SRCROOT)/..\node_modules\neact-native-i18nios",
 					"$(SRCROOT)/..\node_modules\neact-native-device-infoiosRNDeviceInfo",
 					"$(SRCROOT)/..\node_modules@react-native-community\async-storageios",
 					"$(SRCROOT)/..\node_modules\neact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..\node_modules\neact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules@react-native-community\viewpagerios",
 					"$(SRCROOT)/..",
 				);
@@ -2152,24 +2083,18 @@
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-webviewios",
 					"$(SRCROOT)..\node_modules\neact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-keep-awakeios",
 					"$(SRCROOT)/..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-linear-gradientBVLinearGradient",
 					"$(SRCROOT)/..\node_modules@react-native-communitysliderios",
 					"$(SRCROOT)/..\node_modules\neact-native-i18nios",
 					"$(SRCROOT)/..\node_modules\neact-native-device-infoiosRNDeviceInfo",
 					"$(SRCROOT)/..\node_modules@react-native-community\async-storageios",
 					"$(SRCROOT)/..\node_modules\neact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..\node_modules\neact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules@react-native-community\viewpagerios",
 					"$(SRCROOT)/..",
 				);
@@ -2205,18 +2130,15 @@
 					"$(SRCROOT)..",
 					ode_modules,
 					"eact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-keep-awakeios",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-linear-gradientBVLinearGradient",
@@ -2233,18 +2155,15 @@
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					"ode_modules@react-native-community",
 					iewpagerios,
@@ -2281,18 +2200,15 @@
 					"$(SRCROOT)..",
 					ode_modules,
 					"eact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-keep-awakeios",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-linear-gradientBVLinearGradient",
@@ -2309,18 +2225,15 @@
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					ode_modules,
 					"eact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..",
 					"ode_modules@react-native-community",
 					iewpagerios,
@@ -2357,24 +2270,18 @@
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-webviewios",
 					"$(SRCROOT)..\node_modules\neact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-keep-awakeios",
 					"$(SRCROOT)/..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-linear-gradientBVLinearGradient",
 					"$(SRCROOT)/..\node_modules@react-native-communitysliderios",
 					"$(SRCROOT)/..\node_modules\neact-native-i18nios",
 					"$(SRCROOT)/..\node_modules\neact-native-device-infoiosRNDeviceInfo",
 					"$(SRCROOT)/..\node_modules@react-native-community\async-storageios",
 					"$(SRCROOT)/..\node_modules\neact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..\node_modules\neact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules@react-native-community\viewpagerios",
 					"$(SRCROOT)/..",
 				);
@@ -2410,24 +2317,18 @@
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-webviewios",
 					"$(SRCROOT)..\node_modules\neact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-keep-awakeios",
 					"$(SRCROOT)/..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-linear-gradientBVLinearGradient",
 					"$(SRCROOT)/..\node_modules@react-native-communitysliderios",
 					"$(SRCROOT)/..\node_modules\neact-native-i18nios",
 					"$(SRCROOT)/..\node_modules\neact-native-device-infoiosRNDeviceInfo",
 					"$(SRCROOT)/..\node_modules@react-native-community\async-storageios",
 					"$(SRCROOT)/..\node_modules\neact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..\node_modules\neact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules@react-native-community\viewpagerios",
 					"$(SRCROOT)/..",
 				);
@@ -2461,24 +2362,18 @@
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-webviewios",
 					"$(SRCROOT)..\node_modules\neact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-keep-awakeios",
 					"$(SRCROOT)/..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-linear-gradientBVLinearGradient",
 					"$(SRCROOT)/..\node_modules@react-native-communitysliderios",
 					"$(SRCROOT)/..\node_modules\neact-native-i18nios",
 					"$(SRCROOT)/..\node_modules\neact-native-device-infoiosRNDeviceInfo",
 					"$(SRCROOT)/..\node_modules@react-native-community\async-storageios",
 					"$(SRCROOT)/..\node_modules\neact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..\node_modules\neact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules@react-native-community\viewpagerios",
 					"$(SRCROOT)/..",
 				);
@@ -2512,24 +2407,18 @@
 					"$(inherited)",
 					"$(SRCROOT)..\node_modules\neact-native-webviewios",
 					"$(SRCROOT)..\node_modules\neact-native-cameraios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-webviewios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-keep-awakeios",
 					"$(SRCROOT)/..\node_modules\neact-native-vector-iconsRNVectorIconsManager",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-linear-gradientBVLinearGradient",
 					"$(SRCROOT)/..\node_modules@react-native-communitysliderios",
 					"$(SRCROOT)/..\node_modules\neact-native-i18nios",
 					"$(SRCROOT)/..\node_modules\neact-native-device-infoiosRNDeviceInfo",
 					"$(SRCROOT)/..\node_modules@react-native-community\async-storageios",
 					"$(SRCROOT)/..\node_modules\neact-native-paypalios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-smart-barcodeiosRCTBarcodeRCTBarcode",
 					"$(SRCROOT)/..\node_modules\neact-native-rsa-nativeios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules\neact-native-uuid-generatorios",
-					"$(SRCROOT)/../**",
 					"$(SRCROOT)/..\node_modules@react-native-community\viewpagerios",
 					"$(SRCROOT)/..",
 				);

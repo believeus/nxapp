@@ -307,7 +307,9 @@
         "yourbarcode":"штриховой код",
         "done":"проверка завершена",
         "detectTime":"начать проверку",
-        "intransit":"в пути"
+        "intransit":"в пути",
+        "remaining_days":"Оставшееся количество дней",
+        "Pendding":"В ожидании"
     },
     "user_profile": {
         "title": "Your Profile"

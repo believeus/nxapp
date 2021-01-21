@@ -1,6 +1,6 @@
 {
     "LoginIcon": {
-        "message": "Hi:Guest"
+        "message": "Hi:遊客"
     },
     "TabHomeActivity": {
         "title": "主頁",
@@ -64,7 +64,7 @@
         "biological":"生物年齡",
         "management":"健康管理",
         "Tips":"提示",
-        "message":"如果你已經購買了生物學年齡檢測試劑盒,請點擊此處注册您的試劑盒條碼 »"
+        "message":"如果你已經購買了生物學年齡檢測試劑盒,請點擊此處注册您的試劑盒條形碼 »"
     },
     "TestprocessActivity": {
         "title": "測試流程",
@@ -202,7 +202,7 @@
         "sleep": "睡眠",
         "foundation": "來源:國家睡眠基金會",
         "active": "性生活",
-        "timesday": "次/天",
+        "timesday": "次/周",
         "sexual": "性生活滿意度",
         "score": "性生活指數評分",
         "alcohol": "酒精攝取量",
@@ -228,7 +228,17 @@
         "stop": "不要吸煙",
         "recommended": "12個月以下兒童每日建議維他命D攝取量為400 IU。年齡介乎1-70歲人仕建議攝取量為600 IU；70歲以上人仕建議攝取量為800IU。",
         "daily": "成年男性每日建議維他命C攝取量為90毫克。成年女性每日建議維他命C攝取量為75毫克",
-        "women": "成年男性每日建議維他命A攝取量為900微克。成年女性每日建議維他命A攝取量為700微克"
+        "women": "成年男性每日建議維他命A攝取量為900微克。成年女性每日建議維他命A攝取量為700微克",
+        "tmgwebsite":"examine.com",
+        "tmg":"三甲基甘氨酸",
+        "tmg-recommon":"甜菜鹼（三甲基甘氨酸）是體內膽鹼的活性代謝產物，是甜菜根的成分。它與葉酸一起在體內甲基化中起著至關重要的作用，並且是像肌酸一樣的滲透調節劑。甜菜鹼也是一種可能的促生劑。",
+        "lipoicwebsite":"www.drugs.com",
+        "lipoic":"硫辛酸",
+        "lipoic-recommon":"α-硫辛酸已被用作替代藥物，可能在減肥，治療糖尿病神經痛，傷口癒合，降低血糖，改善由白癜風引起的皮膚變色以及減少冠狀動脈搭橋術（CABG）手術的並發症方面有效。 α-硫辛酸可能已與其他植物或提取物混合在一起製成特定的製劑，以治療這些疾病。",
+        "vitaminD2website":"lesswrong.com",
+        "vitaminD2":"维生素D2/维生素K2",
+        "vitaminD2-recommon":"我個人決定每天早晨食用10 000 IU維生素D3和200微克K2（全反式MK7），並認為這對許多不花大量時間暴露於皮膚的理智主義者來說可能是有益的太陽要服用同樣的補品。",
+        "Chronological":"您的實際年齡:"
     },
     "DnaReportActivity": {
         "title": "實際年龄",
@@ -272,9 +282,9 @@
         "your": "你的",
         "chro": "/實際年齡/",
         "bio": "/生物學年齡/",
-        "is": "你的生物學年齡",
-        "lower":"低於實際年齡人群的平均值",
-        "higher":"高於實際年齡人群的平均值",
+        "is": "你的生物學年齡于",
+        "lower":"歲低於您的實際年齡",
+        "higher":"歲高於您的實際年齡",
         "younger": "低於预期實際年齡人群的平均值",
         "old": "高於预期實際年齡人群的平均值",
         "yourbio": "（上面有數字）你的生物年齡",
@@ -283,10 +293,12 @@
         "how":"你幾歲？",
         "why":"為什麼",
         "epigenetic":"你的生物學年齡很重要？",
-        "calculate":"預期實際年齡計算器",
+        "calculate":"預期生物学年齡計算器",
+        "acceleration":"年齡加速計算器",
         "buildPDF":"生成PDF",
         "viewPdf":"查看PDF",
         "pdfsuccess":"PDF保存成功，可點擊查看PDF按鈕查看PDF檔案",
+        "pdffail": "創建pdf失敗！請聯繫客服郵箱：info@epi-age.com",
         "titlemsg":"提示消息",
         "invalid":"無效碼",
         "wait":"在唾液樣本到達實驗室後的4-5週內，您的Epiage結果將準備就緒。\n 請稍候……",
@@ -297,12 +309,16 @@
         "yourage":"輸入您的年齡",
         "ageFormat":"年齡格式不正確",
         "emailFormat":"郵箱格式不正確",
-        "allow":"允許邮箱通知",
+        "allow":"通知我",
         "regtime":"註冊時間",
         "baseinfo":"基本資訊",
         "endtime":"預計完成檢測時間",
         "yourbarcode":"輸入條碼",
-        "done":"檢測已完成"
+        "done":"檢測已完成",
+        "detectTime":"檢測時間",
+        "intransit":"郵寄中",
+        "remaining_days":"剩余天數",
+        "Pendding":"待定"
     },
     "user_profile": {
         "title": "Your Profile"
@@ -864,16 +880,21 @@
         "savekey2": "請保存好您唯一的公鑰與私鑰對。",
         "unique": "如果用戶退出登錄後再次登錄，則需要再次輸入唯一公共密鑰和私有密鑰。",
         "failed": "消息，密鑰生成失敗，請重新生成！",
-        "success": "保存成功！公鑰和私鑰已保存到您手機",
+        "success": "公鑰和私鑰對於確保此應用程序上的數據安全非常重要。 我們不會保存或擁有您的公鑰和私鑰。 請截圖或複制並粘貼以保存公鑰和私鑰，以便您下次輕鬆填寫並獲取數據。",
         "generate": "生成",
         "privatekey": "私鑰",
         "publickey": "公鑰",
-        "save": "保存"
+        "save": "保存",
+        "copykeys":"複製公鑰私鑰",
+        "titlemsg":"提示",
+        "meg":"公鑰和私鑰已復製到剪貼板。"
     },
     "QAActivity": {
         "title": "Q&A",
         "test": "1. EpiAging測試如何工作？",
-        "report": "2. 如何獲得我的EpiAging測試報告？"
+        "report": "2. 如何獲得我的EpiAging測試報告？",
+        "fillques":"3.如何填寫問卷",
+        "calfoot":"4.如何計算你攝入食物的卡路里？"
     },
     "ContactActivity": {
         "title": "聯繫我們",
@@ -916,6 +937,20 @@
         "sentmail":"公鑰與私鑰對將保存到您手機本地文件夾",
         "purchase":"轉到“購物”以購買EpiAging測試套件。"
     },
+    "Manual3Activity": {
+        "title": "問卷指南",
+        "how":"如何填寫問卷",
+        "slider1":"如何使用滑塊填寫數據。",
+        "ratingstart2":"如何使用星級填寫數據。",
+        "enteefield3":"如何使用輸入字段填寫數據。"
+    },
+    "Manual4Activity": {
+        "title": "飲食指南",
+        "calculate":"如何計算您攝入的卡路里？",
+        "slider":"如何使用滑塊填寫數據",
+        "calfood":"如何使用卡路里計算器來計算您所攝取食物的卡路里。",
+        "entering":"如何使用輸入字段填寫數據。"
+    },
     "SavepdfpathActivity":{
         "btncp":"複製",
         "titlemsg":"消息",
@@ -936,17 +971,17 @@
     "AgeAccelerateActivity":{
         "title":"年齡加速",
         "accecalcul":"年齡加速計算器",
-        "enterepi":"請輸入您的實際年齡",
-        "enterchro":"請輸入您的生物學年齡",
+        "enterepi":"請輸入您的生物學年齡",
+        "enterchro":"請輸入您的實際年齡",
         "youraccis":"您的年齡加速為："
 
-    },
+    }, 
     "LaunchActivity":{
-        "title":"Launch",
-        "registerkit":"REGISTER KIT",
-        "buykit":"BUY EPIAGE KIT",
-        "signin":"SIGN IN WITH EMAIL",
-        "readmore":"READ MORE ABOUT EPIAGE"
+        "title":"啟動",
+        "registerkit":"註冊套件",
+        "buykit":"購買套件",
+        "signin":"郵箱登陸",
+        "readmore":"了解更多關於生物學年齡"
 
     }
 }

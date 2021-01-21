@@ -316,7 +316,9 @@
         "yourbarcode":"Type Barcode",
         "done":"Ensaio concluído",
         "detectTime":"Tempo de Detecção",
-        "intransit":"Enviando"
+        "intransit":"Enviando",
+        "remaining_days":"O número restante de dias",
+        "Pendding":"Pendente"
     },
     "user_profile": {
         "title": "Seu perfil"

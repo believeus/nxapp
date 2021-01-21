@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { StatusBar, StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Modal, Button } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator,Modal, Button } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper"
 import { decrypt } from 'react-native-simple-encryption'
 import ToggleSwitch from 'toggle-switch-react-native'
 import Input from "react-native-input-validation"
 import ProgressCircle from 'react-native-progress-circle'
 import data from '../appdata'
-import { WebView } from 'react-native-webview'
 import Session from '../storage/Session'
 import { I18n } from '../locales/i18n'
 
@@ -113,13 +112,12 @@ export default class DnaReportActivity extends Component<Props> {
 
     componentDidMount() {
         Session.load("sessionuser").then((user) => {
-            let curtime = Date.parse(new Date())
             this.setState({ user: user });
 
             fetch(data.url + "/user/report/findNtrLtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).toFixed(2);
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2)
                     let biological = window.parseFloat(data[i].biological).toFixed(2)
                     v.push([naturally, biological])
                 }
@@ -132,8 +130,7 @@ export default class DnaReportActivity extends Component<Props> {
             fetch(data.url + "/user/report/findNtrGtBio.jhtml").then(res => res.json()).then((data) => {
                 let v = []
                 for (var i in data) {
-                    let naturally = window.parseFloat(data[i].naturally).
-                        ed(3);
+                    let naturally = window.parseFloat(data[i].naturally).toFixed(2)
                     let biological = window.parseFloat(data[i].biological).toFixed(2)
                     v.push([naturally, biological])
                 }
@@ -142,34 +139,35 @@ export default class DnaReportActivity extends Component<Props> {
                 this.setState({ option });
                 this.echarts.webview.reload();
             })
-
+            // ALTER TABLE epi.udata ADD pendingtime BIGINT DEFAULT 0 NOT NULL;
             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
-                    //离到期时间一共有多少毫秒
-                    let c = (data[i].detectTime + (31 * 24 * 3600 * 1000)) - data[i].detectTime
-                    //当前时间离到期时间还剩多少毫秒到期
-                    let d = (data[i].detectTime + (31 * 24 * 3600 * 1000)) - curtime
-                    //(离到期时间一共有多少毫秒-当前时间离到期时间还剩多少毫秒到期)/离到期时间一共有多少毫秒
-                    let process = parseFloat(((c - d) / c) * 100).toFixed(2)
-                    //console.info((data[i].uploadTime/(data[i].uploadTime+(21*24*3600*1000))))
-                    let remain = d / (31 * 24 * 3600 * 1000)
-                    console.log(remain+"剩余天数")
+                    let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 :data[i].curtime- data[i].pendingTime)
+                    let time = {}
+                    if (data[i].status == "in-transit") time.leftseconds = _31day
+                    //pendding状态下当前时间离到期时间还剩多少毫秒到期
+                    else if (data[i].status == "pending") time.leftseconds = (data[i].detectTime + _31day) - data[i].pendingTime
+                    //processing状态下当前时间离到期时间还剩多少毫秒到期
+                    else if (data[i].status == "processing") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
+                    else if (data[i].status == "ready") { time.leftseconds = 0 }
+                    let process = parseFloat(((_31day - time.leftseconds) / _31day ) * 100).toFixed(2)
                     let vbarcode = {}
                     vbarcode.val = data[i].barcode
-                    if (remain < 0) { remain = 0 }
-                    else { vbarcode.remain = Math.round(31 - remain) }
+                    console.info(data[i].barcode+" allday:"+_31day/(24 * 3600 * 1000)+" move day:"+((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))
+                    vbarcode.remain = parseFloat((_31day/(24 * 3600 * 1000) - ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))).toFixed(2)
                     vbarcode.stat = data[i].status
                     vbarcode.naturally = data[i].naturally
                     vbarcode.biological = data[i].biological
                     vbarcode.createTime = new Date(data[i].createTime).toLocaleDateString()
                     vbarcode.detectTime = (data[i].status == "in-transit") ? I18n.t("DnaReportActivity.intransit") : new Date(data[i].detectTime).toLocaleDateString()
                     if (data[i].status == "in-transit") { vbarcode.endtime = I18n.t("DnaReportActivity.intransit") }
-                    else { vbarcode.endtime = (data[i].status == "ready") ? I18n.t("DnaReportActivity.done") : new Date(data[i].detectTime + (31 * 24 * 3600 * 1000)).toLocaleDateString() }
+                    else if (data[i].status == "pending") { vbarcode.endtime = I18n.t("DnaReportActivity.Pendding") }
+                    else if (data[i].status == "processing") { vbarcode.endtime = new Date(data[i].detectTime + _31day).toLocaleDateString() }
+                    else if (data[i].status == "ready") { vbarcode.endtime = I18n.t("DnaReportActivity.done") }
+
                     vbarcode.email = data[i].email
-                    if (data[i].status == "in-transit") vbarcode.processing = 0
-                    else if (data[i].status == "ready") vbarcode.processing = 100
-                    else vbarcode.processing = process
+                    vbarcode.processing = process
                     vbarcode.switchon = data[i].allow == 1 ? true : false
                     this.state.itemBox.push(vbarcode)
                     this.state.ageBox[i] = vbarcode.naturally ? vbarcode.naturally : 0
@@ -198,6 +196,7 @@ export default class DnaReportActivity extends Component<Props> {
                     barStyle={'light-content'} // enum('default', 'light-content', 'dark-content')   
                 >
                 </StatusBar>
+
                 {this.state.display == true ?
                     <Modal animationType='slide' transparent={false} visible={this.state.display} onRequestClose={() => { this.setState({ display: true }) }}>
                         <WebView ref={(ref) => { this.brower = ref }} source={{ uri: this.state.url }} startInLoadingState={true} />
@@ -208,6 +207,7 @@ export default class DnaReportActivity extends Component<Props> {
                         </View>
                     </Modal> : null
                 }
+
                 {/* <ImageBackground style={{ width: '100%', height: 223 }} resizeMode='cover' source={require("../image/enpic/rep1.png")}>
                 </ImageBackground> */}
 
@@ -239,7 +239,7 @@ export default class DnaReportActivity extends Component<Props> {
 
                             <View style={{ width: "100%", height: 35, backgroundColor: "#e64d85", borderRadius: 5, marginTop: 40, alignSelf: "center" }} >
                                 <TouchableOpacity disabled={this.state.barcode.length != 0 ? false : true} onPress={() => {
-                                    this.setState({ display: true })
+                                    //this.setState({ display: true })
                                     //解密
                                     let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
                                     fetch(data.url + "user/report/upbarcode.jhtml?uuid=" + uuid + "&barcode=" + this.state.barcode).then(res => res.json()).then((data) => {
@@ -256,6 +256,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 barcode.processing = 0
                                                 barcode.naturally = 0
                                                 barcode.switchon = false
+                                                //判断该barcode是否存在
                                                 if (JSON.stringify(this.state.itemBox).indexOf(barcode.val) == -1) {
                                                     this.state.itemBox.push(barcode)
                                                     this.setState({ itemBox: this.state.itemBox })
@@ -264,29 +265,14 @@ export default class DnaReportActivity extends Component<Props> {
                                                 Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.wait"))
                                                 break
                                             case "pending":
-                                                var barcode = {}
-                                                barcode.val = this.state.barcode
-                                                barcode.stat = data.status
-                                                
-                                                barcode.processing = 0
-                                                barcode.naturally = 0
-                                                barcode.switchon = false
-                                                if (JSON.stringify(this.state.itemBox).indexOf(barcode.val) == -1) {
-                                                    this.state.itemBox.push(barcode)
-                                                    this.setState({ itemBox: this.state.itemBox })
-                                                    this.setState({ statusbar: true })
-                                                }
+                                                this.setState({ statusbar: false })
                                                 Alert.alert(I18n.t("DnaReportActivity.barcodesuccess"), I18n.t("DnaReportActivity.pendingwait"))
                                                 break;
                                             case "processing":
-                                                this.setState({ statusbar: true })
-                                                barcode.createTime = "Processing"
-                                                barcode.createTime = new Date(data.createTime).toLocaleDateString()
-                                                barcode.endtime = new Date(data.createTime + (31 * 24 * 3600 * 1000)).toLocaleDateString()
+                                                this.setState({ visual: false })
                                                 Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                                 break;
                                             case "ready":
-                                                barcode.createTime = "Test completed"
                                                 this.setState({ statusbar: true })
                                                 this.setState({ btnBuildPdfdisabled: false })
                                                 let option = Object.assign({}, this.state.option);
@@ -364,8 +350,10 @@ export default class DnaReportActivity extends Component<Props> {
                                                         this.setState({ animating: false })
                                                     })
                                                 } else if (barcode.stat == "processing") {
+                                                    this.setState({ visual: false })
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.processed"));
                                                 } else if (barcode.stat == "pending") {
+                                                    this.setState({ visual: false })
                                                     Alert.alert(I18n.t("DnaReportActivity.titlemsg"), I18n.t("DnaReportActivity.pendingwait"));
                                                 }
                                                 this.setState({ barcode: barcode.val })
@@ -399,7 +387,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                             {barcode.stat == "ready" ?
                                                                 null :
                                                                 <View style={{ width: '100%', height: 29 }}>
-                                                                    <Text>Remaining days: {barcode.remain}</Text>
+                                                                    <Text>{I18n.t('DnaReportActivity.remaining_days')}: {barcode.remain}</Text>
                                                                 </View>
                                                             }
 

@@ -315,7 +315,9 @@
         "yourbarcode":"Enter Kit barcode",
         "done":"Test completed",
         "detectTime":"Detect Date",
-        "intransit":"in-transit"
+        "intransit":"in-transit",
+        "remaining_days":"Remaining days",
+        "Pendding":"Pendding"
     },
     "user_profile": {
         "title": "Your Profile"
