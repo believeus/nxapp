@@ -28,7 +28,7 @@ export default class QuesnoteActivity extends Component<Props> {
                     <Text style={{ fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19, marginBottom: 12 }}>{I18n.t('QuesnoteActivity.are')} <Text style={{ color: 'red' }}>{I18n.t('QuesnoteActivity.optional')}</Text>{I18n.t('QuesnoteActivity.however')}</Text>
                     <Text style={{ fontFamily: 'FontAwesome', fontSize: 16, lineHeight: 19, marginBottom: 34 }}>{I18n.t('QuesnoteActivity.personalized')}</Text>
                     <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                        <View style={{ width: '45%' }}>
+                        <View style={{ width: '45%',borderRadius:10 }}>
                             <TouchableOpacity >
                                 <Button style={{ backgroundColor: "#2196f3" }}
                                     onPress={() => this.navigate.pop()}
@@ -37,7 +37,7 @@ export default class QuesnoteActivity extends Component<Props> {
 
                             </TouchableOpacity>
                         </View>
-                        <View style={{ width: '45%' }}>
+                        <View style={{ width: '45%',borderRadius:10 }}>
                             <TouchableOpacity >
                                 <Button style={{ backgroundColor: "#2196f3" }}
                                     onPress={() => this.navigate.push("Questionnaire")}

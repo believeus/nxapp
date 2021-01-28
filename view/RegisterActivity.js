@@ -458,7 +458,7 @@ export default class RegisterActivity extends Component<Props> {
                         </View>
                         <View>
                             <TouchableOpacity disabled={this.state.disable}>
-                                <Button disabled={this.state.disable} title={I18n.t('RegisterActivity.register')}style={{backgroundColor:'#0071bc'}} onPress={() => {
+                                <Button disabled={this.state.disable} title={I18n.t('RegisterActivity.register')}style={{backgroundColor:'#0071bc'}}color="#0071bc" onPress={() => {
                                     // 关键点在于headers，因为默认Content-Type不是application/x-www-form-urlencoded，所以导致后台无法正确获取到q的值。body的写法也是一个重点
                                     fetch(data.url + "/user/register.jhtml", {
                                         method: "POST",

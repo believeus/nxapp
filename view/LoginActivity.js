@@ -126,7 +126,7 @@ export default class LoginActivity extends Component<Props> {
                         </View>
                         <View>
                             <TouchableOpacity >
-                                <Button disabled={this.state.disabled}style={{backgroundColor:'#0071bc'}} onPress={this.login.bind(this)} title={I18n.t('LoginActivity.login')} ></Button>
+                                <Button disabled={this.state.disabled}style={{backgroundColor:'#0071bc'}} color="#0071bc" onPress={this.login.bind(this)} title={I18n.t('LoginActivity.login')} ></Button>
                             </TouchableOpacity>
                         </View>
                         <View style={{ height: 60, alignItems: 'center', fontSize: 14, justifyContent: 'center' }} >

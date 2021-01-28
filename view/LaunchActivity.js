@@ -59,7 +59,7 @@ export default class LaunchActivity extends Component<Props> {
                                                     :
                                                     this.navigate.push("RasEncryptionActivity")}
                                         >
-                                            <Text style={{ width: "100%", height: 40,lineHeight:40, color: "#ffffff", textAlign: "center", textAlignVertical: "center",fontWeight:"700" }}>{I18n.t("LaunchActivity.registerkit")}</Text>
+                                            <Text style={{ width: "100%", height: 40,lineHeight:40, color: "#ffffff", textAlign: "center", textAlignVertical: "center",fontWeight:"700" }}>{this.state.user==null?I18n.t("LaunchActivity.registerkit"):I18n.t("LaunchActivity.myreport")} </Text>
                                         </Button>
                                     </TouchableOpacity>
                                 </View>
