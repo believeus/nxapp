@@ -27,9 +27,9 @@ export default class LangActivity extends Component<Props> {
                             actions: [NavigationActions.navigate({ routeName: "Main" })],
                         }));
                     }}>
-                        <View style={{marginTop:10, width:'90%',alignSelf: 'center', padding:10,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
+                        <View style={{marginTop:10,height:55, width:'90%',alignSelf: 'center', padding:10,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
                             <Image style={{width: '27%', height: 34, borderRadius:10,marginLeft:-18}} resizeMode='contain' source={require("../image/tab/usa-flag.png")}></Image>
-                            <Text style={{width: '73%', textAlignVertical: "center",fontSize:16 ,fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.English")}</Text>
+                            <Text style={{width: '73%', textAlignVertical: "center",lineHeight:30,fontSize:16 ,fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.English")}</Text>
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
@@ -40,9 +40,11 @@ export default class LangActivity extends Component<Props> {
                                 actions: [NavigationActions.navigate({ routeName: "Main" })],
                             }));
                         }}>
-                        <View style={{width:'90%',alignSelf: 'center',padding:10,marginTop:11,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
+                        <View style={{width:'90%',height:55, alignSelf: 'center',padding:10,marginTop:11,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
                         <Image style={{width: '27%', height: 34, borderRadius:10,marginLeft:-18}} resizeMode='contain' source={require("../image/tab/fr-flag.png")}></Image>
-                            <Text style={{ width: '77%', textAlignVertical: "center",fontSize:16 ,fontFamily: 'FontAwesome',  }}>{I18n.t("LangActivity.French")}</Text></View></TouchableOpacity>
+                            <Text style={{ width: '77%', textAlignVertical: "center",lineHeight:30, fontSize: 16, fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.French")}</Text>
+                        </View>
+                    </TouchableOpacity>
                     <TouchableOpacity
                         onPress={()=>{
                         I18n.locale = 'es'
@@ -50,9 +52,9 @@ export default class LangActivity extends Component<Props> {
                             index: 0,
                             actions: [NavigationActions.navigate({ routeName: "Main" })],
                         }));    
-                        }}><View style={{width:'90%',alignSelf: 'center',padding:10,marginTop:11,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
+                        }}><View style={{width:'90%',height:55,alignSelf: 'center',padding:10,marginTop:11,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
                              <Image style={{width: '27%', height: 34, borderRadius:10,marginLeft:-18}} resizeMode='contain' source={require("../image/tab/sp-flag.jpg")}></Image>
-                            <Text style={{ width: '77%', textAlignVertical: "center",fontSize:16 ,fontFamily: 'FontAwesome',  }}>{I18n.t("LangActivity.Spanish")}</Text></View></TouchableOpacity>
+                            <Text style={{ width: '77%', textAlignVertical: "center",lineHeight:30,fontSize:16 ,fontFamily: 'FontAwesome',  }}>{I18n.t("LangActivity.Spanish")}</Text></View></TouchableOpacity>
                     <TouchableOpacity
                           onPress={()=>{
                             I18n.locale = 'ru'
@@ -60,9 +62,10 @@ export default class LangActivity extends Component<Props> {
                                 index: 0,
                                 actions: [NavigationActions.navigate({ routeName: "Main" })],
                             }));    
-                        }}><View style={{ width:'90%',alignSelf: 'center',padding:10,marginTop:11,borderRadius:10, backgroundColor:'#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
+                        }}>
+                    <View style={{ width: '90%',height:55, alignSelf: 'center', padding: 10, marginTop: 11, borderRadius: 10, backgroundColor: '#f0f0f0', borderColor: "#ffffff", borderWidth: 1, flexDirection: 'row', }}>
                             <Image style={{width: '27%', height: 34, borderRadius:10,marginLeft:-18}} resizeMode='contain' source={require("../image/tab/ru-flag.png")}></Image>
-                            <Text style={{ width: '77%', textAlignVertical: "center",fontSize:16 ,fontFamily: 'FontAwesome',   }}>{I18n.t("LangActivity.Russian")}</Text></View></TouchableOpacity>
+                            <Text style={{ width: '77%', textAlignVertical: "center",lineHeight:30,fontSize:16 ,fontFamily: 'FontAwesome',  lineHeight:34 }}>{I18n.t("LangActivity.Russian")}</Text></View></TouchableOpacity>
                     <TouchableOpacity
                       onPress={()=>{
                         I18n.locale = 'pt'
@@ -70,9 +73,9 @@ export default class LangActivity extends Component<Props> {
                             index: 0,
                             actions: [NavigationActions.navigate({ routeName: "Main" })],
                         }))}}>
-                        <View style={{ width: '90%', alignSelf: 'center', padding: 10,marginTop:11, borderRadius: 10, backgroundColor: '#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
+                        <View style={{ width: '90%',height:55, alignSelf: 'center', padding: 10,marginTop:11, borderRadius: 10, backgroundColor: '#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row', }}>
                         <Image style={{width: '27%', height: 34,alignItems:'center', borderRadius:10,marginLeft:-18}} resizeMode='contain' source={require("../image/tab/por-flag.jpg")}></Image>
-                            <Text style={{ width: '77%',height:36, textAlignVertical: "center",fontSize:16 ,fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.Portuguese")}</Text></View></TouchableOpacity>
+                            <Text style={{ width: '77%',height:36, textAlignVertical: "center",lineHeight:30,fontSize:16 ,fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.Portuguese")}</Text></View></TouchableOpacity>
                     <TouchableOpacity
                         onPress={()=>{
                             I18n.locale = 'zh-TW'
@@ -81,9 +84,9 @@ export default class LangActivity extends Component<Props> {
                                 actions: [NavigationActions.navigate({ routeName: "Main" })],
                             }));
                         }}>
-                        <View style={{width: '90%', alignSelf: 'center', padding: 10,marginTop:11, borderRadius: 10, backgroundColor: '#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row',}}>
+                        <View style={{width: '90%',height:55, alignSelf: 'center', padding: 10,marginTop:11, borderRadius: 10, backgroundColor: '#f0f0f0', borderColor: "#ffffff", borderWidth: 1,flexDirection: 'row',}}>
                         <Image style={{width: '27%', height: 34, borderRadius:10,marginLeft:-18}} resizeMode='contain' source={require("../image/tab/hk-flag.png")}></Image>
-                            <Text style={{ width: '77%', textAlignVertical: "center",fontSize:16 ,fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.Chinese")}</Text></View></TouchableOpacity>
+                            <Text style={{ width: '77%', textAlignVertical: "center",lineHeight:30,fontSize:16 ,fontFamily: 'FontAwesome', }}>{I18n.t("LangActivity.Chinese")}</Text></View></TouchableOpacity>
                 </View>
             </ScrollView>
         );

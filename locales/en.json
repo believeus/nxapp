@@ -302,7 +302,7 @@
         "wait": "Your saliva sample is still in transit.\n Thank you for your patience.",
         "pendingwait":"Your epiage test result will be calculated for a total of 31 days from the day the test starts.",
         "processed": "Detection is being processed.\n Thank you for your patience.",
-        "status": "Testing Status",
+        "status": "Test Status",
         "barcode": "Barcode",
         "Registerkit": "Register Kit",
         "yourage": "Enter Your Age",

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StatusBar, StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator,Modal, Button } from 'react-native';
+import { StatusBar, StyleSheet, Text, View, Image, ImageBackground, Alert, ScrollView, TextInput, TouchableOpacity, ActivityIndicator, Modal, Button } from 'react-native';
 import { ECharts } from "react-native-echarts-wrapper"
 import { decrypt } from 'react-native-simple-encryption'
 import ToggleSwitch from 'toggle-switch-react-native'
@@ -143,7 +143,7 @@ export default class DnaReportActivity extends Component<Props> {
             let uuid = decrypt(this.state.user.publickey, this.state.user.uuid)
             fetch(data.url + "user/report/findDataByUuid.jhtml?uuid=" + uuid).then(res => res.json()).then((data) => {
                 for (let i in data) {
-                    let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 :data[i].curtime- data[i].pendingTime)
+                    let _31day = (31 * 24 * 3600 * 1000) + (data[i].pendingTime == 0 ? 0 : data[i].curtime - data[i].pendingTime)
                     let time = {}
                     if (data[i].status == "in-transit") time.leftseconds = _31day
                     //pendding状态下当前时间离到期时间还剩多少毫秒到期
@@ -151,11 +151,11 @@ export default class DnaReportActivity extends Component<Props> {
                     //processing状态下当前时间离到期时间还剩多少毫秒到期
                     else if (data[i].status == "processing") time.leftseconds = (data[i].detectTime + _31day) - data[i].curtime
                     else if (data[i].status == "ready") { time.leftseconds = 0 }
-                    let process = parseFloat(((_31day - time.leftseconds) / _31day ) * 100).toFixed(2)
+                    let process = parseInt(((_31day - time.leftseconds) / _31day) * 100)
                     let vbarcode = {}
                     vbarcode.val = data[i].barcode
-                    console.info(data[i].barcode+" allday:"+_31day/(24 * 3600 * 1000)+" move day:"+((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))
-                    vbarcode.remain = parseFloat((_31day/(24 * 3600 * 1000) - ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))).toFixed(2)
+                    console.info(data[i].barcode + " allday:" + _31day / (24 * 3600 * 1000) + " move day:" + ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))
+                    vbarcode.remain = parseFloat((_31day / (24 * 3600 * 1000) - ((data[i].curtime - data[i].detectTime) / (24 * 3600 * 1000)))).toFixed(2)
                     vbarcode.stat = data[i].status
                     vbarcode.naturally = data[i].naturally
                     vbarcode.biological = data[i].biological
@@ -223,7 +223,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     value={this.state.barcode}
                                 />
                             </View>
-                            <Text style={{ width: "100%", height: 45, color: "#9b9b9b", textAlign: "center", textAlignVertical: "center", fontSize: 16, fontFamily: 'NotoSansHans-Light' }}>or Scan Your kit ↓</Text>
+                            <Text style={{ width: "100%", height: 45, lineHeight: 45, color: "#9b9b9b", textAlign: "center", textAlignVertical: "center", fontSize: 16, fontFamily: 'NotoSansHans-Light' }}>or Scan Your kit ↓</Text>
                             <View style={{ width: "100%", height: 80, alignSelf: "center", marginTop: 20 }} >
                                 <TouchableOpacity onPress={() => {
                                     this.navigate.push("Scanner", {
@@ -281,6 +281,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 this.setState({ biological })
                                                 this.setState({ naturally })
                                                 let i = biological > naturally ? 0 : 1;
+                                                this.echarts.webview.reload();
                                                 option.series[i].markPoint.data[0].value = biological
                                                 option.series[i].markPoint.data[0].xAxis = naturally
                                                 option.series[i].markPoint.data[0].yAxis = biological
@@ -296,7 +297,7 @@ export default class DnaReportActivity extends Component<Props> {
                                     })
 
                                 }}>
-                                    <Text style={{ width: "100%", height: "100%", textAlign: "center", fontFamily: 'FontAwesome', lineHeight: 35, color: "white" }}>{I18n.t('DnaReportActivity.Registerkit')}</Text>
+                                    <Text style={{ width: "100%", height: 35, textAlign: "center", fontFamily: 'NotoSansHans-Medium', lineHeight: 35, color: "white" }}>{I18n.t('DnaReportActivity.Registerkit')}</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -306,7 +307,7 @@ export default class DnaReportActivity extends Component<Props> {
                             {this.state.statusbar ?
                                 <View style={{ width: "100%", height: 35, borderBottomWidth: 1, borderBottomColor: "#f5f5f5", flexDirection: "row" }}>
                                     <View style={{ width: "70%", height: 35 }}><Text style={{ color: "#808080", textAlign: 'left', fontFamily: 'NotoSansHans-Medium', fontSize: 14, fontWeight: "bold", marginBottom: 10, marginTop: 10 }}>{I18n.t('DnaReportActivity.baseinfo')}</Text></View>
-                                    <View style={{ width: "30%", height: 35 }}><Text style={{ color: "#808080", textAlign: "center", fontFamily: 'NotoSansHans-Medium', fontSize: 14, fontWeight: "bold", marginBottom: 5, marginTop: 10 }}>{I18n.t('DnaReportActivity.status')}</Text></View>
+                                    <View style={{ width: "30%", height: 35 }}><Text style={{ color: "#808080", textAlign: "left", fontFamily: 'NotoSansHans-Medium', fontSize: 14, fontWeight: "bold", marginBottom: 5, marginTop: 10 }}>{I18n.t('DnaReportActivity.status')}</Text></View>
                                 </View>
 
                                 : null}
@@ -360,14 +361,13 @@ export default class DnaReportActivity extends Component<Props> {
                                             })
 
                                         }}>
-                                        <View key={barcode.val} style={{ width: "100%", height: 234, borderBottomWidth: 1, borderBottomColor: "#999999", fontFamily: 'NotoSansHans-Light', }}>
-                                            <View style={{ width: "100%", height: 189, flexDirection: "row", }}>
-                                                <View style={{ width: "70%" }}>
-                                                    <View style={{ width: "100%", height: 10 }}></View>
-                                                    <View style={{ width: "100%", height: 29 }}>
-                                                        <Text>{I18n.t('DnaReportActivity.barcode')}：{barcode.val}</Text>
-                                                    </View>
-
+                                        <View key={barcode.val} style={{ width: "100%", height: 267, borderBottomWidth: 1, borderBottomColor: "#999999", fontFamily: 'NotoSansHans-Light', }}>
+                                            <View style={{ width: "100%", height: 10 }}></View>
+                                            <View style={{ width: "100%", height: 29 }}>
+                                                <Text>{I18n.t('DnaReportActivity.barcode')}：{barcode.val}</Text>
+                                            </View>
+                                            <View style={{ width: "100%", height: 150, flexDirection: "row", }}>
+                                                <View style={{ width: "70%",height:150 }}>
                                                     <View style={{ width: "100%", height: 29 }}>
                                                         <Text >{I18n.t('DnaReportActivity.regtime')}：{barcode.createTime}</Text>
                                                     </View>
@@ -393,11 +393,11 @@ export default class DnaReportActivity extends Component<Props> {
 
                                                             <View style={{ width: "100%", flexDirection: "row" }}>
 
-                                                                <Text>{I18n.t('DnaReportActivity.yourage')}：</Text>
+                                                                <Text style={{height:29, lineHeight:29}}>{I18n.t('DnaReportActivity.yourage')}：</Text>
                                                                 <TextInput style={{
                                                                     height: 29,
-                                                                    width: '50%',
-                                                                    borderWidth: 1,
+                                                                    width: '30%',
+                                                                    borderWidth: 1.5,
                                                                     borderColor: '#c5f3fe',
                                                                     backgroundColor: "#f8f8f8",
                                                                     fontSize: 14,
@@ -420,7 +420,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                 </View>
                                                 <View style={{ width: "30%", height: "100%", alignItems: "center", justifyContent: "center", marginLeft: 6 }}>
                                                     <ProgressCircle
-                                                        percent={parseFloat(barcode.processing)}
+                                                        percent={parseInt(barcode.processing)}
                                                         marginTop={1}
                                                         radius={50}
                                                         borderWidth={16}
@@ -439,7 +439,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                         <Input style={{
                                                             height: 29,
                                                             width: '100%',
-                                                            borderWidth: 1,
+                                                            borderWidth: 1.5,
                                                             borderColor: '#c5f3fe',
                                                             backgroundColor: "#f8f8f8",
                                                             fontSize: 14,
@@ -547,16 +547,16 @@ export default class DnaReportActivity extends Component<Props> {
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
                                                     <Text style={{ fontSize: 12, lineHeight: 14, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
-                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
+                                                <Text style={{ fontFamily: 'FontAwesome', lineHeight:14,fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
                                             </View>
                                             :
                                             <View style={{ width: '100%', height: 23, flexDirection: 'column', }}>
-                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 12, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>NA(non-available)</Text>
+                                                <Text style={{ fontFamily: 'FontAwesome',paddingTop:5, fontSize: 12, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>NA(non-available)</Text>
                                                 <View style={{ width: '100%', paddingTop: 12 }}>
                                                     <Text style={{ fontSize: 12, fontFamily: 'FontAwesome', textAlign: 'center' }}>{I18n.t('DnaReportActivity.expected')} </Text>
                                                     <Text style={{ fontSize: 12, lineHeight: 14, textAlign: 'center', fontFamily: 'FontAwesome', }}>{I18n.t('DnaReportActivity.chro')}</Text>
                                                 </View>
-                                                <Text style={{ fontFamily: 'FontAwesome', fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
+                                                <Text style={{ fontFamily: 'FontAwesome',lineHeight:14,paddingTop:10, fontSize: 14, color: '#3e9c9c', fontWeight: 'bold', textAlign: 'center' }}>{parseFloat((-1.6394 + (Math.sqrt(2.6876 + 0.0288 * -((parseFloat(this.state.biological)) + 7.5806)))) / (-0.0144)).toFixed(2)}</Text>
                                             </View>
                                         }
 
