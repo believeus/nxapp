@@ -83,7 +83,7 @@ export default class BiologicalActivity extends Component<Props> {
                 <View style={{ backgroundColor: '#f0f0f0', }}>
 
                     <View style={{ width: '90%', alignSelf: 'center', marginTop: 34, }}>
-                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.epiaging')}</Text>
+                        <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc', textAlignVertical: 'center', }}>{I18n.t('BiologicalActivity.epiage')}</Text>
                         <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', lineHeight: 34, color: '#0071bc' }}>{I18n.t('BiologicalActivity.mean')}</Text>
                         <Image style={{ height: 289, width: '100%', marginBottom: 34 }} resizeMode='contain' source={require("../image/enpic/bio5.jpg")}></Image>
                         <Text style={{ fontSize: 14, marginBottom: 8, fontFamily: 'FontAwesome', lineHeight: 18, }}>{I18n.t('BiologicalActivity.extensive')} </Text>
@@ -151,7 +151,7 @@ export default class BiologicalActivity extends Component<Props> {
                 </View>
 
                 <View style={{ width: '90%', alignSelf: 'center', marginTop: 34,marginBottom:12 }}>
-                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', lineHeight: 45, }}>{I18n.t('BiologicalActivity.epiagings')}</Text>
+                    <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', lineHeight: 45, }}>{I18n.t('BiologicalActivity.epiages')}</Text>
                     <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 27, }}>{I18n.t('BiologicalActivity.methylation')}</Text>
                     <Text style={{ fontSize: 22, fontFamily: 'FontAwesome', color: '#0071bc', textAlignVertical: 'center', lineHeight: 56, }}>{I18n.t('BiologicalActivity.hkepi')}</Text>
                     <Text style={{ fontSize: 16, fontFamily: 'FontAwesome', textAlignVertical: 'center', lineHeight: 25, }}>{I18n.t('BiologicalActivity.already')}</Text>
