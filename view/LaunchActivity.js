@@ -45,9 +45,8 @@ export default class LaunchActivity extends Component<Props> {
                         <Image style={{ width: '100%', height: 400 }} resizeMode='cover' source={require("../image/launch.jpg")}></Image>
                     </View>
                     <View style={{ width: '90%', alignSelf: 'center' }}>
-                        <View>
-                            <View style={{ width: "100%", height: 40, flexDirection: "row", justifyContent: "space-evenly" ,marginBottom:30}} >
-                                <View style={{ width: "40%", height: 40, }}>
+                            <View style={{ width: "100%", height: 40, flexDirection: "row", justifyContent: "space-between",marginBottom:30}} >
+                                <View style={{ width: "45%", height: 40, }}>
                                     <TouchableOpacity >
                                         <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#e64d85" }}
                                              ref={ref => this.reportPage = ref}
@@ -63,7 +62,7 @@ export default class LaunchActivity extends Component<Props> {
                                         </Button>
                                     </TouchableOpacity>
                                 </View>
-                                <View style={{ width: "40%", height: 40, }}>
+                                <View style={{ width: "45%", height: 40, }}>
                                     <TouchableOpacity >
                                         <Button style={{ width: "100%", height: 40, borderRadius: 30, backgroundColor: "#4381f1" }}
                                             onPress={() => this.navigate.push("Mall")}>
@@ -92,7 +91,6 @@ export default class LaunchActivity extends Component<Props> {
                                 </Button>
                             </View>
                             <Text style={{ textAlign: 'center', fontFamily: 'NotoSansHans-Light', fontSize: 12 }}>{I18n.t('TabHomeActivity.allright')}</Text>
-                        </View>
                     </View>
 
                 </View>
