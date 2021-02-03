@@ -4,6 +4,7 @@ import { ECharts } from "react-native-echarts-wrapper"
 import { decrypt } from 'react-native-simple-encryption'
 import ToggleSwitch from 'toggle-switch-react-native'
 import Input from "react-native-input-validation"
+import { WebView } from 'react-native-webview';
 import ProgressCircle from 'react-native-progress-circle'
 import data from '../appdata'
 import Session from '../storage/Session'
@@ -409,7 +410,7 @@ export default class DnaReportActivity extends Component<Props> {
                                                                     defaultValue={"0"}
                                                                     value={this.state.ageBox[i] ? String(this.state.ageBox[i]) : ""}
                                                                     onChangeText={(val) => {
-                                                                        let data = val.replace(/[^\d]+/, '')
+                                                                        let data = val.replace(/[^\d.]/g, '')
                                                                         this.state.ageBox[i] = data
                                                                         this.setState({ ageBox: this.state.ageBox })
                                                                     }}
